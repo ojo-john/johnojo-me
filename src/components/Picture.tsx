@@ -23,7 +23,6 @@ export function Picture({
     <picture className={className}>
       <source type="image/avif" srcSet={set("avif")} sizes={sizes} />
       <source type="image/webp" srcSet={set("webp")} sizes={sizes} />
-      {/* eslint-disable-next-line @next/next/no-img-element -- images are pre-optimised by scripts/media.ts */}
       <img
         src={fallback.jpg}
         srcSet={set("jpg")}

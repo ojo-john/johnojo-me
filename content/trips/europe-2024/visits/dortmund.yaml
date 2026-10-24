@@ -1,4 +1,16 @@
 destination: dortmund
 order: 9
 kind: match-only
-# matches: added from your photo dates
+arrive: 2024-04-21
+matches:
+  - home: Borussia Dortmund
+    away: Bayer Leverkusen
+    score: 1–1
+    competition: Bundesliga
+    stadium: Signal Iduna Park
+    date: 2024-04-21
+    writeUp: Niclas Füllkrug put Dortmund ahead in the 81st minute, then Josip Stanišić headed in a 97th-minute equaliser to keep Leverkusen's unbeaten season alive.
+cover: photos/img-1110
+mediaMeta:
+  photos/img-1110: { caption: "Signal Iduna Park", alt: "The yellow-trimmed exterior of Signal Iduna Park in Dortmund" }
+  photos/img-1131: { caption: "Dortmund v Leverkusen", alt: "A Dortmund player standing on the pitch" }

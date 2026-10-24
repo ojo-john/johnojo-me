@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Picture } from "@/components/Picture";
 import type { MapGeometry } from "@/lib/geo";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { Lightbox, useLightbox } from "./Lightbox";
 import type { VisitView } from "./types";
 import { ClipPlayer, YouTube } from "./Video";
@@ -16,18 +17,18 @@ const KIND_LABEL = { city: null, "match-only": "Match day", "day-trip": "Day tri
  */
 export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeometry }) {
   const [active, setActive] = useState<string | null>(null);
-  const [drawn, setDrawn] = useState(false);
+  const [seen, setSeen] = useState(false);
+  const reducedMotion = useReducedMotion();
+  const drawn = reducedMotion || seen;
   const mapRef = useRef<HTMLDivElement>(null);
   const lb = useLightbox();
   const pins = new Map(map.points.map((p) => [p.id, p]));
   const route = visits.map((v) => pins.get(v.slug)).filter(Boolean) as MapGeometry["points"];
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const el = mapRef.current;
     if (!el) return;
-    if (reduced) return setDrawn(true);
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setDrawn(true), io.disconnect()), { threshold: 0.3 });
+    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setSeen(true), io.disconnect()), { threshold: 0.3 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
@@ -42,8 +43,8 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
 
   const jump = useCallback((slug: string) => {
     setActive(slug);
-    document.getElementById(slug)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
-  }, []);
+    document.getElementById(slug)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  }, [reducedMotion]);
 
   const focus = active ? pins.get(active) : null;
   const camera = focus ? `translate(${(map.width / 2 - focus.x * ZOOM).toFixed(1)}px, ${(map.height / 2 - focus.y * ZOOM).toFixed(1)}px) scale(${ZOOM})` : undefined;
@@ -183,7 +184,7 @@ function Score({ v }: { v: VisitView }) {
   const c = 2 * Math.PI * 18;
   const total = v.score.total;
   return (
-    <div className="ring">
+    <div className="score-ring">
       <svg viewBox="0 0 46 46" aria-hidden="true">
         <circle className="bgc" cx="23" cy="23" r="18" />
         {total !== null ? <circle className="val" cx="23" cy="23" r="18" strokeDasharray={`${(total / 100) * c} ${c}`} /> : null}

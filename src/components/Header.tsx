@@ -222,7 +222,7 @@ function Palette({ open, onClose, items, onResume }: { open: boolean; onClose: (
             </li>
           ))
         ) : (
-          <li aria-disabled="true">No matches</li>
+          <li role="presentation">No matches</li>
         )}
       </ul>
       <div className="hint">↑ ↓ to move · Enter to open · Esc to close</div>

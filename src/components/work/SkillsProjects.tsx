@@ -32,7 +32,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
   const hitCount = skill ? projects.filter((p) => p.stack.some((t) => uses(t, skill))).length : 0;
   return (
     <>
-      <section className="wrap filter" id="skills" aria-labelledby="sk">
+      <section className="wrap skills-filter" id="skills" aria-labelledby="sk">
         <h2 id="sk" style={{ fontSize: 40 }}>
           Skills{" "}
           <span style={{ fontSize: 15, fontFamily: "var(--f-ui)", fontWeight: 600, color: "var(--ink-2)", letterSpacing: 0 }}>

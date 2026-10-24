@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 const W = 160, H = 56, GX = 40, GY = 60, PAD = 20;
 const COLS = 3;
@@ -17,18 +18,16 @@ export function ArchDiagram({ name, steps }: { name: string; steps: { label: str
     return [PAD + c * (W + GX), PAD + r * (H + GY)] as const;
   });
   const path = "M" + pos.map(([x, y]) => `${x + W / 2} ${y + H / 2}`).join(" L");
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const reduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    setReducedMotion(reduced());
     const t = timers.current;
     return () => t.forEach(clearTimeout);
   }, []);
 
   const play = () => {
     timers.current.forEach(clearTimeout);
-    if (reduced()) return setSel(null);
+    if (reducedMotion) return setSel(null);
     setPlaying(false);
     requestAnimationFrame(() => setPlaying(true));
     timers.current = steps.map((_, i) => window.setTimeout(() => setSel(i), i * 520));

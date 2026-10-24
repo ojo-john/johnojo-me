@@ -1,4 +1,18 @@
 destination: munich
-order: 10
+order: 8
 kind: match-only
-# matches: added from your photo dates
+arrive: 2024-04-17
+matches:
+  - home: Bayern Munich
+    away: Arsenal
+    score: 1–0
+    competition: Champions League quarter-final, second leg
+    stadium: Allianz Arena
+    date: 2024-04-17
+    writeUp: Joshua Kimmich's header just after the hour sent Bayern into the semi-finals, 3–2 on aggregate.
+cover: photos/img-1006
+mediaMeta:
+  photos/img-1006: { caption: "Allianz Arena", alt: "The Allianz Arena pitch with the Champions League logo at the centre circle" }
+  photos/img-1020: { caption: "Pyro at the Allianz Arena", alt: "Red flares lighting up the Bayern fans before kick-off" }
+  photos/img-1066: { caption: "Marienplatz", alt: "John in front of the New Town Hall on Marienplatz" }
+  photos/img-1061: { caption: "New Town Hall, Munich", alt: "The Gothic tower of Munich's New Town Hall" }

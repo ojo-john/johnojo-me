@@ -8,7 +8,6 @@ export function ClipPlayer({ clip, label }: { clip: MediaItem; label: string }) 
   const [live, setLive] = useState(false);
   if (clip.type !== "video") return null;
   return live ? (
-    // eslint-disable-next-line jsx-a11y/media-has-caption -- personal clips have no dialogue; captions are added when they do
     <video className="vf-live" src={clip.src} poster={clip.poster || undefined} controls autoPlay playsInline width={clip.w} height={clip.h} aria-label={label} />
   ) : (
     <button className="vf" type="button" onClick={() => setLive(true)} aria-label={`Play clip: ${label}`}>

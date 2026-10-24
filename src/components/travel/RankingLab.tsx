@@ -67,7 +67,7 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
           {scope === "all" ? (
             <div className="tabs" role="group" aria-label="How repeat visits count" style={{ marginBottom: 14 }}>
               {(Object.keys(AGGREGATION_LABEL) as Aggregation[]).map((m) => (
-                <button key={m} type="button" aria-selected={mode === m} onClick={() => setMode(m)}>
+                <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)}>
                   {AGGREGATION_LABEL[m]}
                 </button>
               ))}

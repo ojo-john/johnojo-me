@@ -43,3 +43,6 @@ next-env.d.ts
 # original photos/videos never live in the repo (see docs/MEDIA.md)
 /media-originals/
 /.cache/
+
+# processed photos/videos are uploaded to Cloudflare R2 at deploy time, not committed (≈500 MB and growing)
+/public/media/

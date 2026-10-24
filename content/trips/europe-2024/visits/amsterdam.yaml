@@ -1,4 +1,17 @@
 destination: amsterdam
-order: 7
+order: 6
 kind: match-only
-# matches: added from your photo dates
+arrive: 2024-04-14
+matches:
+  - home: Ajax
+    away: FC Twente
+    score: 2–1
+    competition: Eredivisie
+    stadium: Johan Cruijff ArenA
+    date: 2024-04-14
+    writeUp: Twente went ahead through Ricky van Wolfswinkel, then Brian Brobbey and a late Steven Bergwijn penalty turned it around.
+cover: photos/img-0645
+mediaMeta:
+  photos/img-0645: { caption: "Johan Cruijff ArenA", alt: "Fans gathering outside the Johan Cruijff ArenA under a giant Cruyff mural" }
+  photos/dd3cf986-6a23-47fe-908e-41848efad7e2: { caption: "Ajax 2–1 Twente", alt: "The ArenA scoreboard showing Ajax 2, Twente 1" }
+  photos/img-0710: { caption: "Ajax", alt: "The Ajax crest on a pillar outside the stadium" }

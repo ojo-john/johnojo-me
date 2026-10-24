@@ -148,7 +148,8 @@ async function main() {
           const ext = path.extname(name).toLowerCase();
           if (!(kind === "photos" ? PHOTO_EXT : VIDEO_EXT).has(ext)) continue;
           const base = slugify(name);
-          const id = `${trip}/${city}/${kind}/${base}`;
+          const citySlug = slugify(city);
+          const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
           const stat = fs.statSync(file);
           const key = `${stat.size}:${stat.mtimeMs}`;
@@ -156,7 +157,7 @@ async function main() {
             skipped++;
           } else {
             try {
-              const outDir = path.join(OUT, trip, city, kind);
+              const outDir = path.join(OUT, trip, citySlug, kind);
               const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp) : await processVideo(file, outDir, base, tmp);
               if (entry) {
                 manifest.items[id] = entry;
@@ -172,7 +173,7 @@ async function main() {
           }
           const e = manifest.items[id];
           if (e) {
-            const c = (counts[`${trip}/${city}`] ??= { photos: 0, videos: 0, first: null, last: null });
+            const c = (counts[`${trip}/${citySlug}`] ??= { photos: 0, videos: 0, first: null, last: null });
             c[kind]++;
             if (e.takenAt) {
               if (!c.first || e.takenAt < c.first) c.first = e.takenAt;

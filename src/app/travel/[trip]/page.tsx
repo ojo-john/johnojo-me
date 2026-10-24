@@ -71,7 +71,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
               {dates ? <span>{dates}</span> : null}
               {days ? <span>{days} days</span> : null}
               {trip.style ? <span>{trip.style}</span> : null}
-              {matchCount ? <span>{matchCount} matches</span> : null}
+              {matchCount ? <span>{matchCount} {matchCount === 1 ? "match" : "matches"}</span> : null}
               {trip.status === "draft" ? <span>Draft · not public</span> : null}
             </div>
           </div>

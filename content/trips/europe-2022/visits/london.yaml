@@ -1,0 +1,17 @@
+destination: london
+order: 1
+kind: match-only
+arrive: 2022-03-13
+matches:
+  - home: Chelsea
+    away: Newcastle United
+    score: 1–0
+    competition: Premier League
+    stadium: Stamford Bridge
+    date: 2022-03-13
+    writeUp: My second time at Stamford Bridge, and my first time watching Chelsea live. It came days after the club was hit by the sanctions on its owner, Roman Abramovich, so it was an emotional afternoon. We won it at the death. Kai Havertz controlled Jorginho's long ball and finished in the 89th minute. An amazing goal.
+cover: photos/img-0398
+mediaMeta:
+  photos/img-0394: { caption: Pitchside before kick-off, alt: "John pitchside at Stamford Bridge with players warming up behind him" }
+  photos/img-0398: { caption: Stamford Bridge before Chelsea v Newcastle, alt: "The Stamford Bridge pitch and stands before kick-off, with TV crews pitchside" }
+  photos/img-0404: { hidden: true }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export interface Milestone {
   date: string;
@@ -14,7 +15,8 @@ export interface Milestone {
 export function CareerTimeline({ milestones, today, currentTitle }: { milestones: Milestone[]; today: string; currentTitle: string }) {
   const [sel, setSel] = useState<number | "now">(milestones.length - 1);
   const ref = useRef<HTMLDivElement>(null);
-  const [drawn, setDrawn] = useState(false);
+  const [seen, setSeen] = useState(false);
+  const drawn = useReducedMotion() || seen;
   const t0 = Date.parse(milestones[0].date.length === 7 ? `${milestones[0].date}-01` : milestones[0].date);
   const t1 = Date.parse(today);
   const pct = (d: string) => (((Date.parse(d.length === 7 ? `${d}-01` : d) - t0) / (t1 - t0)) * 100).toFixed(2);
@@ -22,8 +24,7 @@ export function CareerTimeline({ milestones, today, currentTitle }: { milestones
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return setDrawn(true);
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setDrawn(true), io.disconnect()));
+    const io = new IntersectionObserver(([e]) => e.isIntersecting && (setSeen(true), io.disconnect()));
     io.observe(el);
     return () => io.disconnect();
   }, []);
