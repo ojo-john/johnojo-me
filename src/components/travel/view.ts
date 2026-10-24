@@ -1,0 +1,38 @@
+import "server-only";
+import type { TripEntry, VisitEntry } from "@/lib/content/load";
+import { CATEGORIES } from "@/lib/content/schema";
+import { formatRange } from "@/lib/format";
+import type { VisitView } from "./types";
+
+/** Flatten a loaded visit into the plain data interactive components need. */
+export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitView {
+  return {
+    id: `${trip.slug}/${v.slug}`,
+    slug: v.slug,
+    tripSlug: trip.slug,
+    tripTitle: trip.title,
+    year: trip.year,
+    order: v.order,
+    number,
+    city: v.place.city,
+    country: v.place.country,
+    destination: v.destination,
+    kind: v.kind,
+    dates: formatRange(v.arrive, v.depart),
+    summary: v.summary ?? null,
+    highlights: Object.entries(v.highlights ?? {}),
+    liked: v.liked ?? null,
+    disliked: v.disliked ?? null,
+    wouldReturn: v.wouldReturn ?? null,
+    verdict: v.verdict ?? null,
+    score: v.score,
+    scores: Object.fromEntries(CATEGORIES.map((c) => [c.key, v.rating?.scores[c.key] ?? null])),
+    matches: v.matches,
+    photos: v.photos,
+    videos: v.videos,
+    youtube: v.youtube,
+    cover: v.coverPhoto,
+  };
+}
+
+export const tripViews = (trip: TripEntry) => trip.visits.map((v, i) => toView(v, trip, i + 1));

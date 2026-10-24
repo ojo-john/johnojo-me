@@ -1,0 +1,11 @@
+name: CodeQuest
+order: 2
+status: draft
+kind: project
+stage: In progress
+summary: A personal Java interview-prep game. You write Java in the browser and it runs in an isolated sandbox, then gets graded.
+problem: Running untrusted Java safely and cheaply on a hobby budget.
+approach: Execution in a sandbox from a digest-pinned runner image, JUnit and contract grading, and admission control with job and CPU budgets.
+stack: [Next.js 16, TypeScript, Supabase / PostgreSQL, Vercel Sandbox, Vitest]
+repo: null
+repoNote: Private repository

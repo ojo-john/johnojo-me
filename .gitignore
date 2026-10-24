@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original photos/videos never live in the repo (see docs/MEDIA.md)
+/media-originals/
+/.cache/

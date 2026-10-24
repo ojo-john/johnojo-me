@@ -1,0 +1,11 @@
+# Who you are and how people reach you. Leave a value as null until you're happy to publish it.
+name: John Ojo
+role: Software Development Engineer II
+company: Amazon
+level: L5
+intro: I build distributed, event-driven systems. This site holds my work, a growing archive of trips with honest city rankings, and a journal of scripture, essays and lessons learned.
+github: https://github.com/ojo-john
+linkedin: null # paste your LinkedIn URL here
+email: null # the public contact email you want shown
+resume: null # e.g. /resume.pdf once you drop the approved PDF into /public
+domain: johnojo.me

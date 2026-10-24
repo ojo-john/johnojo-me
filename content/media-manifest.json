@@ -1,0 +1,335 @@
+{
+ "generatedAt": "2026-10-24T21:03:05.436Z",
+ "items": {
+  "europe-2021/london/photos/img-2294": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/london/photos/img-2294-480.avif",
+     "webp": "/media/europe-2021/london/photos/img-2294-480.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2294-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/london/photos/img-2294-960.avif",
+     "webp": "/media/europe-2021/london/photos/img-2294-960.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2294-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/london/photos/img-2294-1600.avif",
+     "webp": "/media/europe-2021/london/photos/img-2294-1600.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2294-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/london/photos/img-2294-2400.avif",
+     "webp": "/media/europe-2021/london/photos/img-2294-2400.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2294-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAALfep+Y9Fw2AernLwA9dx4KcGLh/oHLNc5TeU+ss9am10HchkNj3o7Rrd6NFpoBn486WCknDCAJegDpYmiapw2ZO7O2yRe6/06Zwb+b4CvN/N7JPAlKoAAAA==",
+   "takenAt": "2021-12-20T10:41:05"
+  },
+  "europe-2021/london/photos/img-2312": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/london/photos/img-2312-480.avif",
+     "webp": "/media/europe-2021/london/photos/img-2312-480.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2312-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/london/photos/img-2312-960.avif",
+     "webp": "/media/europe-2021/london/photos/img-2312-960.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2312-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/london/photos/img-2312-1600.avif",
+     "webp": "/media/europe-2021/london/photos/img-2312-1600.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2312-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/london/photos/img-2312-2400.avif",
+     "webp": "/media/europe-2021/london/photos/img-2312-2400.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2312-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAAAwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWoAuzNMQVClgA3cuq1cXz7tHc5dF5wa4AD+fpP1py3AMVR4Pb8g3i62q93eFw5cVcg4VbtpB85nfoj0KpxztmztOWrBYrOuV39AUCJBXOE4myt4jojYKfdT7Hdb3stDWHKDPUGRCoqCYawtqJGFMAr43EmQFk0mg/mwZcmrsw62I/QwTZwzHQ77A5Q6O+zpVZBdgWwpgLDa6JlUoPSFMy5+DTPbm0eqzo6LqtRgGyqywHS96ZoXUAAAAA==",
+   "takenAt": "2021-12-20T11:12:11"
+  },
+  "europe-2021/london/photos/img-2317": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/london/photos/img-2317-480.avif",
+     "webp": "/media/europe-2021/london/photos/img-2317-480.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2317-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/london/photos/img-2317-960.avif",
+     "webp": "/media/europe-2021/london/photos/img-2317-960.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2317-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/london/photos/img-2317-1600.avif",
+     "webp": "/media/europe-2021/london/photos/img-2317-1600.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2317-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/london/photos/img-2317-2400.avif",
+     "webp": "/media/europe-2021/london/photos/img-2317-2400.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2317-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoMYJnAAc1JQBrjGbJFgAMkCD/zCmFMaM3LimLQqVSDLKtzUTtOPuaztiMr0wopdq7XZyzUFN6CfcReeUxVLTLQUzezkr5iwE9Q05P8wMJ1DFWjIJZxDF8Nffv8rVX38rVk4TjQ+9oxoAAAA",
+   "takenAt": "2021-12-20T11:25:24"
+  },
+  "europe-2021/london/photos/img-2319": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/london/photos/img-2319-480.avif",
+     "webp": "/media/europe-2021/london/photos/img-2319-480.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2319-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/london/photos/img-2319-960.avif",
+     "webp": "/media/europe-2021/london/photos/img-2319-960.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2319-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/london/photos/img-2319-1600.avif",
+     "webp": "/media/europe-2021/london/photos/img-2319-1600.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2319-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/london/photos/img-2319-2400.avif",
+     "webp": "/media/europe-2021/london/photos/img-2319-2400.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2319-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoADTUO63lEKHJqILAD+ZXVDbAsFiqBhPN5aCLCo+HI0CNXVTwVh/Y4r8wvdQW0gU7pweXw1y98Z862a/2RBkTYQVVy7y+qSv0LLaRKIOAwPgHhJkJGzGpL15FQCrx6l9IAAAA==",
+   "takenAt": "2021-12-20T11:25:42"
+  },
+  "europe-2021/london/photos/img-2339": {
+   "type": "photo",
+   "w": 2700,
+   "h": 1800,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/london/photos/img-2339-480.avif",
+     "webp": "/media/europe-2021/london/photos/img-2339-480.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2339-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/london/photos/img-2339-960.avif",
+     "webp": "/media/europe-2021/london/photos/img-2339-960.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2339-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/london/photos/img-2339-1600.avif",
+     "webp": "/media/europe-2021/london/photos/img-2339-1600.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2339-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/london/photos/img-2339-2400.avif",
+     "webp": "/media/europe-2021/london/photos/img-2339-2400.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2339-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbAC7AB57U3VQ+nkd0AD+5nuNhChlbijlBiuupIBrQR7IjaaKYZnAAqwaEeqB12JsFSbgVeHzmi7pbAI+rAv59x+mCd2OOiquPKuDvEVWvzPI/3KLeXJ/9+uXDoIyuTbVX0J4nvsLdcNvGdHt+Yvr8NAAAA==",
+   "takenAt": "2021-12-20T11:33:04"
+  },
+  "europe-2021/paris/photos/img-1957": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/paris/photos/img-1957-480.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1957-480.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1957-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/paris/photos/img-1957-960.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1957-960.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1957-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/paris/photos/img-1957-1600.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1957-1600.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1957-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/paris/photos/img-1957-2400.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1957-2400.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1957-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAAAwBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWUAxkA0cCGx4oLVTzjNoIXWq+C9WNyLAAD+6DisOzSFn/s1vJiZSwOsOzDUbSld3CsVb2LigdPWywPVReumDt0phNFDLHplDZNhtRr8auMPa9eBQRqOzaEGsnwmonOmKD2b/Uub6TxVsyc55RaLcWVj+lThQH+BXO+BtZ7FhxAmucDx6vcxJ78kIwAAAAA=",
+   "takenAt": "2021-12-17T09:48:36"
+  },
+  "europe-2021/paris/photos/img-1968": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/paris/photos/img-1968-480.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1968-480.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1968-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/paris/photos/img-1968-960.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1968-960.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1968-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/paris/photos/img-1968-1600.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1968-1600.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1968-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/paris/photos/img-1968-2400.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1968-2400.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1968-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoUABsAPu1qrVCppaQiqAqpMB2JZwDDcBEcsFcKiSiSxf5vflPE4fEAAP7ThIiNOD6N0Mh2UnlRJPvwA++Qq/m4l+8kXvlaVZlBgpbxYrOKf1wvcKyE0dTx58hyo2cM9HETEWgoXGc9EbpJMUTO2oR1FFRY8brXnBt1Wy3V2RLiF0gxN2880trC4qfRFlAA",
+   "takenAt": "2021-12-17T09:54:38"
+  },
+  "europe-2021/paris/photos/img-1969": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/paris/photos/img-1969-480.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1969-480.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1969-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/paris/photos/img-1969-960.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1969-960.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1969-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/paris/photos/img-1969-1600.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1969-1600.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1969-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/paris/photos/img-1969-2400.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1969-2400.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1969-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAwBQCdASoUABsAPu1mq0+ppSOiMBgIATAdiWUAvdAQ8OmPD6GeY0rnWbjvCragY9nvgAD+04S7UQ4RDiE3Qz6MOUPrdGba/AD75CDqh7wrHhtv0J7E4gwkw/P1OuDKW0VwSr3Py7VIQMbBSvEXQocbb+27Zd3D91d87nJgGk6Z3GUZ/T1kJd5a1ZHDpnSn35m0cCeeZ5TT3FqMr5gYtDOtyykv5chPKHButeAA",
+   "takenAt": "2021-12-17T09:54:40"
+  },
+  "europe-2021/paris/photos/img-2100": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/paris/photos/img-2100-480.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2100-480.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2100-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/paris/photos/img-2100-960.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2100-960.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2100-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/paris/photos/img-2100-1600.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2100-1600.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2100-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/paris/photos/img-2100-2400.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2100-2400.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2100-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWgAtRCA8/8A2c7OJYmBqddnO+qk/G2AAPnjDzOXHHMBJ+LxbV2VoOgxGu1lOIoF4d4rg9fyS9dYVaOVe2/dDzy0fu5mcXfMn/Wqp3nwjrC3lVU56TXQB1pbo61BkD6WYWucV2C+/dzbtfEGvNcPauPxW9FLRHdHQ2xGXx1/hYiA/CIrROSH75MY7kM+kOEJAAAA",
+   "takenAt": "2021-12-18T13:00:37"
+  },
+  "europe-2021/paris/photos/img-2101": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 480,
+     "avif": "/media/europe-2021/paris/photos/img-2101-480.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2101-480.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2101-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2021/paris/photos/img-2101-960.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2101-960.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2101-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2021/paris/photos/img-2101-1600.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2101-1600.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2101-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2021/paris/photos/img-2101-2400.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2101-2400.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2101-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBACdASoUABsAPu1orlCppaQiqAqpMB2JagCxH2QBgEMFI8LoWKCVb7ldcfjLEAD56CWfi5pS+Wu5n8z7BcyltEDfA8/wvTsK6+erXdv8zdOcJ8XZko8X6Fa/0KxfYk74m1eLoOHUlggQte9vW99uxAOrP+D8Zc7xlMQEbCKoxikI4P6Zzt5GmhFJysNhggS6IvFmIuCyWQw9JSdd0a9OB/EV0pMymmkMLqAAAAA=",
+   "takenAt": "2021-12-18T13:00:39"
+  }
+ }
+}

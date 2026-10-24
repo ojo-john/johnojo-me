@@ -1,0 +1,19 @@
+milestones:
+  - date: 2023-07
+    label: Jul 2023
+    title: Joined Amazon
+    detail: Software Development Engineer
+  - date: 2025-08
+    label: Aug 2025
+    title: Promoted to SDE II
+    detail: Software Development Engineer II (L5)
+
+# Shown until approved résumé highlights are added. Employer details stay confidential.
+achievementsNote: Approved résumé highlights will appear here. Employer details stay confidential.
+
+skills:
+  Languages: [Java, TypeScript, Python, Kotlin]
+  Frontend: [React, Next.js, GraphQL]
+  AWS & infrastructure: [Lambda, ECS / Fargate, API Gateway, Step Functions, SQS, S3, DynamoDB, Athena, CloudWatch, CDK]
+  Data: [PostgreSQL, DynamoDB]
+  Practice: [Distributed systems, Event-driven architecture, Testing, Observability, CI/CD]
