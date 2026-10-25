@@ -1,7 +1,15 @@
 trip: cabo-2024
 destination: cabo-san-lucas
 order: 1
-summary: "A friend's birthday trip. Dinner, ATV riding and time on the beach."
+arrive: 2024-02-21
+depart: 2024-02-24
+summary: "My friend's 22nd birthday trip. Dinner, ATV riding and time on the beach."
 highlights:
   Activities: ATV riding
-  Food: Birthday dinner
+  Food: The birthday dinner
+cover: photos/img-3809
+mediaMeta:
+  photos/img-3809: { caption: "ATV riding", alt: "John on a red ATV in the desert outside Cabo" }
+  photos/img-3633: { caption: "On the beach", alt: "John standing on a wide sandy beach under a blue sky" }
+  photos/img-2385: { caption: "Lunch", alt: "A plate of fajitas with rice and salad on a bright pink tablecloth" }
+  photos/img-2351: { hidden: true } # a friend's face

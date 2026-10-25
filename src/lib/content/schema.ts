@@ -93,6 +93,8 @@ export type Visit = z.infer<typeof visit>;
 
 export const trip = z.object({
   title: z.string(),
+  /** "match-day" = a one-off game rather than a trip: listed under Match days and on the map, not as a trip card. */
+  kind: z.enum(["trip", "match-day"]).default("trip"),
   year: z.number().int(),
   status: status,
   start: isoDate.optional(),

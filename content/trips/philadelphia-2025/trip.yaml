@@ -1,7 +1,8 @@
-# Hidden until there are photos (same as Cabo). Set status to published to show it.
-title: Philadelphia 2025
+# A one-off match rather than a trip: shown under Travel → Match days and on the map, not as a trip card.
+title: Club World Cup 2025
+kind: match-day
 year: 2025
-status: draft
+status: published
 start: 2025-06-20
 end: 2025-06-20
-style: Match day · Club World Cup
+style: Match day · FIFA Club World Cup

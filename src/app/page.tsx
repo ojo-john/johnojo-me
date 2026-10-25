@@ -4,13 +4,17 @@ import { Picture } from "@/components/Picture";
 import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
 import { getExperience, getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
 
 export default function Home() {
   const site = getSite();
   const exp = getExperience();
-  const trips = getTrips();
+  // Match days (one-off games) aren't trips; they live under Travel → Match days.
+  const allTrips = getTrips();
+  const trips = allTrips.filter((t) => t.kind === "trip");
+  const stats = travelStats(allTrips);
   const posts = getPosts();
   const latestMilestone = exp.milestones[exp.milestones.length - 1];
   const latestTrip = trips.find((t) => t.status === "published") ?? trips[0];
@@ -128,7 +132,7 @@ export default function Home() {
                 ))}
               </svg>
               <p>
-                {trips.length} trips, {places.length} places, with city rankings, match days and photos.
+                {stats.trips} trips, {stats.places} places, with city rankings, match days and photos.
               </p>
             </div>
           </Link>

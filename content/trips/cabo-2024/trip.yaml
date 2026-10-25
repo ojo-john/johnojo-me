@@ -1,7 +1,6 @@
-# Fields you leave out simply don't appear on the site. Nothing is filled in automatically.
 title: Cabo 2024
 year: 2024
-status: draft # hidden until there are photos
-start: 2024-02
-datesNote: February 2024
-style: With friends · a friend's birthday trip
+status: published
+start: 2024-02-21
+end: 2024-02-24
+style: With friends · a friend's 22nd birthday

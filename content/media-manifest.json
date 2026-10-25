@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T08:13:40.269Z",
+ "generatedAt": "2026-10-25T16:49:28.947Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -5208,6 +5208,777 @@
    "takenAt": "2026-10-22T10:17:34",
    "hash": "4000031a19c40c00",
    "bytes": 6338021
+  },
+  "philadelphia-2025/philadelphia/photos/img-3961": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3961-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3961-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3961-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3961-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3961-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3961-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3961-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3961-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3961-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3961-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3961-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3961-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3961-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3961-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3961-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBACdASoUABsAPu1ur1KppiQiqAgBMB2JQBWEJAAxmse2x2j19PSjfwE8zgAA+kvA23G0O8I/UdWpKa+GvLOrMir6OUCuVSo6iF5lG6EUhl6f6JHV2t2wo+gH+/SRkVcg5YcVRaYGy/c34QU0Lzi/qMvYa2p4n6nEMjEQMUFRVDyMnHnpOvQzAGvPtpGhIrVBI7MFOW694KkiTmR13CKCtiM2AnLvK7RtBQ4SwRgAAA==",
+   "takenAt": "2025-06-20T14:18:52",
+   "hash": "db8b0fb1a82ed2b3"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3963": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3963-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3963-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3963-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3963-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3963-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3963-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3963-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3963-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3963-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3963-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3963-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3963-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3963-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3963-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3963-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoUABsAPu1oqk8ppiOiKA1RMB2JQBfntP0FB4/hYshtXZbaoAAA/nGYMBEu3+8dYoN1ruhZCb9sJ8LnVupTbptZ9xwP1w7uyWwoLZMHkVeo9Y03yYoyaeDJE1lr44o0AxIut6KWtzDCsEj0y4C1syqswrpgrbTQJDHb1ZCl7O2o0VE93sztKKiNXOH9q0taYvzjXoAA",
+   "takenAt": "2025-06-20T14:18:58",
+   "hash": "6834c6d63ad39ab6"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3968": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3968-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3968-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3968-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3968-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3968-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3968-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3968-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3968-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3968-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3968-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3968-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3968-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3968-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3968-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3968-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADQBACdASoUABsAPu1oqU+ppaOiKA1RMB2JQBdiP/wDyvKTy531UiDgHfZzc6ufQAD+bwBu/wQGqLIKdRMJ4ZFycPHE6ofoYXV+BIGRa4QiYKExrt8EvSYaqg96UApEIuTUuqdQQrMeT6ww4gki4IUHEsIPQ2TrdD4aT/BDKmv7yLMFlorrH24xHVk+amxj+KFfMPgrAAA=",
+   "takenAt": "2025-06-20T14:19:18",
+   "hash": "35d11485e9c8cae3"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3971": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3971-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3971-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3971-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3971-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3971-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3971-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3971-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3971-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3971-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3971-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3971-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3971-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3971-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3971-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3971-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAAAQBQCdASoUABsAPu1wsFIppiSiqAgBMB2JQBYhkR1IAJz2rN9aaAoL3AULzb/zziAAAP6obSKhMJGGPtndCIBypf7nrZERrPhNKUOA10oUgIW1MnPHRwkVDVu0uMEqjsRpLHLWQtNu+aME/34RVZygOCIHrhRRRKRFO0Wt1zv42BuGoPo7ihzdXNl/CVUgv9wCEitOty9a6YM9qdwnf2Sw6ZhJuUpD4aufZe4jQLIMVAo7vW6Q+vFuogTaow0M/H3isMqpdmBIv/jiG/yeY6yO4AtJDYy1f/loewrIMK9QAAAA",
+   "takenAt": "2025-06-20T14:22:44",
+   "hash": "129d7959db1a04e9"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3973": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3973-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3973-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3973-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3973-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3973-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3973-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3973-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3973-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3973-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3973-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3973-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3973-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3973-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3973-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3973-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABwBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZgCdM2cycnVAbzKIZ048Cd7kKcwAaN7CO5rwAOAGfdJHisMMfHuy/Num1FM+oHK76/xYWoe88K3JfMDFCIyPmrywvj012spg9MzyII50aEXYGRfAsQ4Zi5Gv+Ov8qn7FQaoZV2pqCXFA5mMF3518FS36lxjMvD1AhHiS7FqBTs6sE6KW/KwE8p0/7TTGYvdNcrADjcqkSNJgJ5rSYLwngHyV2/+zKee4vEB4/DrlEtf+eHdKascYXDbU+FcJ7ZieccDS+AA=",
+   "takenAt": "2025-06-20T14:24:26",
+   "hash": "9f3e0ccd314a18ad"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3987": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3987-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3987-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3987-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3987-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3987-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3987-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3987-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3987-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3987-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3987-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3987-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3987-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3987-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3987-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3987-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JagAIFaPL7Qce1OPPAMy08G0iLF4Q6dTQYAD+n+g20/YCqHLG2wUZ9n6dXQ+M9LrShcSsbZvGG+Axfadnc2VKY4keTP6vJ1cGVnKMseQ8JUfrcqpXkJLs9USqpDY1xonZyskvEDONRfD++9CF7wI++1FdG28yjINAbTeW6W7g348rYxiTAxFE8i1STivRt+vPs4UjvIBX4rGa4zLjgAAA",
+   "takenAt": "2025-06-20T14:49:27",
+   "hash": "874462a8686ce8b4"
+  },
+  "philadelphia-2025/philadelphia/photos/img-3992": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3992-160.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3992-160.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3992-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3992-480.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3992-480.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3992-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3992-960.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3992-960.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3992-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3992-1600.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3992-1600.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3992-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/philadelphia-2025/philadelphia/photos/img-3992-2400.avif",
+     "webp": "/media/philadelphia-2025/philadelphia/photos/img-3992-2400.webp",
+     "jpg": "/media/philadelphia-2025/philadelphia/photos/img-3992-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qr1AppaSiqAqpMB2JZgCdOUEKBy/4tmMmeaLTTDA7R9bUUXvC9eemuYVAAPdBzUx9S7xsR20DFnIi72MsxW/oaLo67HZPCVL6gYeMw+ivN8Lsqy5JpIGAfgYlsphxaslRneLFCkDiW05R1IV6fL3mLU1HG0rphyQk0Wd3uTjGyk8R0bNlJmWgkWoMXYUmWXv8AlP0UxePZ8SMHMSXJ9vJkE2As3oWWFbqe0Gg76RoU4QCq4hMR+nzJjPguSbDquBLscqyNoCh73C7WnIe+9PWEhLSzx89GKzVlSjBJOTDtYr/dOlpoAAA",
+   "takenAt": "2025-06-20T14:57:43",
+   "hash": "313b2566a5c0da60"
+  },
+  "philadelphia-2025/philadelphia/videos/img-3960": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/philadelphia-2025/philadelphia/videos/img-3960.mp4",
+   "poster": "/media/philadelphia-2025/philadelphia/videos/img-3960-poster.jpg",
+   "takenAt": "2025-06-20T18:13:46",
+   "hash": "61577e32e9221f8d",
+   "bytes": 13440029
+  },
+  "philadelphia-2025/philadelphia/videos/img-3975": {
+   "type": "video",
+   "w": 960,
+   "h": 540,
+   "src": "/media/philadelphia-2025/philadelphia/videos/img-3975.mp4",
+   "poster": "/media/philadelphia-2025/philadelphia/videos/img-3975-poster.jpg",
+   "takenAt": "2025-06-20T18:39:23",
+   "hash": "e8d9131f448a1293",
+   "bytes": 14615516
+  },
+  "philadelphia-2025/philadelphia/videos/img-3976-2": {
+   "type": "video",
+   "w": 960,
+   "h": 540,
+   "src": "/media/philadelphia-2025/philadelphia/videos/img-3976-2.mp4",
+   "poster": "/media/philadelphia-2025/philadelphia/videos/img-3976-2-poster.jpg",
+   "takenAt": "2025-06-20T18:39:43",
+   "hash": "f9eb1f1dc1821693",
+   "bytes": 6232704,
+   "duplicateOf": "philadelphia-2025/philadelphia/videos/img-3976"
+  },
+  "philadelphia-2025/philadelphia/videos/img-3976": {
+   "type": "video",
+   "w": 960,
+   "h": 540,
+   "src": "/media/philadelphia-2025/philadelphia/videos/img-3976.mp4",
+   "poster": "/media/philadelphia-2025/philadelphia/videos/img-3976-poster.jpg",
+   "takenAt": "2025-06-20T18:39:43",
+   "hash": "f9eb1f1dc1821693",
+   "bytes": 6232704
+  },
+  "philadelphia-2025/philadelphia/videos/img-4016": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/philadelphia-2025/philadelphia/videos/img-4016.mp4",
+   "poster": "/media/philadelphia-2025/philadelphia/videos/img-4016-poster.jpg",
+   "takenAt": "2025-06-20T19:28:09",
+   "hash": "8a643517ac383c44",
+   "bytes": 7953549
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2351": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2351-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JZQDH5Y0qyUrfAbxzBBLX/NVsIV/R/gUeh1EM+BfeAAD+gtxTDJJN/8rkslHap4c/dtgHqaVyEakS3K5NATYtEbcv+qjQj3vlX96HYlLPRQnJQbVVTX9yaNPg3er74Nua/kzigQRxMSD13LCxIeO322jZNPWdDmdqN7fcmkD22fSxvbtgiAbe5aqF1yrBRsl4rE6CWorw8zZd6NNFKXYX3XoxzmZuYX2juvTZNnZLCCQmhPImzUSmjgyf32TZZrlaGB+72vFthY+dXYvl0JFbA+eqiwxMAAA=",
+   "takenAt": "2024-02-21T13:15:13",
+   "hash": "707292b08bcbe4e4"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2372": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2372-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JZgC/OAysqXfF2F7ZR54vCXGPdob+VdVcQAD+rPJM11cpP0n0eQRJRG5nrxEjrLQUnjm4z/thxXAT5Q1aDqW7QmqDSG5EprhvAWr6dwBBlFaj7gjX/cBuwvo6EE55y3gAeeSkimka+yU6CNZkX9XM4c+LaLmfyvqSn+phrF/v5TmXq61SndG+NOmmZ7er2vBkokfmY+Oq1Xm4lXk0TiGesLuvwYm1RP7+zU3zEJlAAA==",
+   "takenAt": "2024-02-22T14:30:36",
+   "hash": "200082dc92b02e23"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2385": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2385-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRi4BAABXRUJQVlA4ICIBAADQBgCdASoUABsAPu1qrlCppaQiqAqpMB2JbACdIHJ896lcCBHuA/fouafqRlMfsukPusBoMcOEmjy3JVue9gAA/sxXKNep4mZJe0nittq2/yCwWRxdl8ddR0EgzXApdEcqie2l78KA9zYCk0A7kmzwNKGiCbicrdDkDAzVHTs0KY4AXQq+sJqguHQo2OrH/ZV+iQwtakDPdot006bZi18rCQpRDQ2cyOI+2SyGsyxiC9XmAQU5YBB4tDcVt9AU977ilNnMM/eQv/Hiofci18ljgzOM/n//zAS89rZyWLYeAi4WOc0WnmzQgJbmBgPf0ENkcsKHdor6m0tyGf/mKuWqhag+pOrnEBQfYpzN9BZsWYAQ1JXcGvE/jqXJX4dgJQEAAA==",
+   "takenAt": "2024-02-22T15:37:01",
+   "hash": "926af244406353c6"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2459": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2459-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADwBACdASoUABsAPu1srVEppiQiqAqpMB2JZACsAYw7RR55SOnNBpr4tJkm1f4dEhAA8d9sbRSiy1Li0FzUl+Pzendciw9Xxd7CH5TbwH1xubXtqNB0OWrEeoRoGXo5c5WYZtF2u6hZwsquWXJ9pAlUcwwi/b+sD2gNr0S9ykRkJ32JmyO0BS5Mrc9XTgNINgQUlTlhUaVSxtaDGHc6FgdCMG12/7WDo+M4O4edsOoxJkVmVHNAAAAA",
+   "takenAt": "2024-02-23T13:35:13",
+   "hash": "f4f3f9fee5eb6b0b"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2553": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2553-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAACQBQCdASoUABsAPu1gq1AppSOisBgIATAdiWIAnTNyjj0z4GQTMOeV43+DCUaNrrtC602dUAD+u+tU7JkiY3uhPVdCUnXPnK3KygT0e5ptmWdjb87eRr4d1gRz0HRQMOOk6XJGK96jEUd4kEOoGHbfFOZbyLZbAgvAbvYyRQP+GEwZjsXwc2hJjnOipvdDjYFyghjYZ/qQN8g/4cOxTIIemn31AT9oVu91meq+geECytUTU1iNqsU/rIGiEauV7NoeCDyRkBcH8p8jyy4+TUJ9fn5z90SGzzGfbEBKt36/EcrPE91FwQZtk+uKnXRF2tFI4rvRTJxsSaPonW3lOd23Io2KvHtR5yGtAAAA",
+   "takenAt": "2024-02-24T18:45:28",
+   "hash": "199b920c08544040"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2579": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2579-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAACwBQCdASoUABsAPu1osFAppaUiqAqpMB2JQBTlIAD8Aqg4xSCwrJDARtlIeRMBYKvWOR1/TUAA/goFG66FArSVtZQM771Bt6QwTggMWIlpF7viqne4B64E3lMgXRydMkl+cy4BzLAI23qnm9ogKz4M9wOvD2rXbQM0ep+eN++4QhqsmiOxOHVyPdZdMV/1pghAizAnqbBARYle5Daa2SatMIOuN9en6OCCcefz0Bg2ySzETZcsSAEB8NcaqJljp+MJXvY8q68P43arGt8BPM3cbAZfYLzSpMNY34/+rs3BbafyARZ18YEOZg+JuFGo4aWtyg71z/JbXA0mRLcvRuKZCmxSvAAA",
+   "takenAt": "2024-02-24T18:46:30",
+   "hash": "7b766256a6262434"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-2995": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-2995-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAAAwBgCdASoUABsAPu1oq08ppiOiMBgIATAdiUAU4zUGMBVCZWtMLmByt7BqB5+LRaAw7rbzZeD4RDMAAP51ozHTD1hmkoYt0Dv+va30O9ZO74XhWQoH9wn+1ks1/Nk7Ag1EX/L1nFkHCyNGGpoQptj+W6hLRCsXuurkXoNHtkZblRhdiaL8FvLb8iB8gcV05WSQLpp9vXzJV1W68CNPrcsb09n2U02eYN5dG5/DxOkKKcZQAJuM4gVlDVgDUqQvMo8y5vX9wUGVNgBNdBB4i0N5AGYN7WqqpbokPL1wzN+PCKnLaeCBsLK6dh+7LAs0AAA=",
+   "takenAt": "2024-02-22T14:33:16",
+   "hash": "72f6c8b7b6c3c7b3"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-3034": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3034-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAABQBgCdASoUABsAPu1qrVEppaQiqAqpMB2JZACdMuu1cQhbdAtoY5sXKroaWphyRJWBoYBCgFxvaHmYQAD+wKLnaoTZxW6CIzvrUQul4nOUCeH4AIsRvzQ7yTpKlt6faeJqeUn1qg/ShBZAqJIrjaxRoz0gOXHdLNjikp4wB2tv2L7n3NR5G7KauIAI+5+j8PHnI4NzOZ0N8aYLrMWT0b6hnAbXoMMqK6R/JvHD/1KCY7mz2BaiP6tVRy1X+R0iILx7aofarW6Mzm7Pte6arMA+EnjtajgKmnrycpQxVwi+Tyz4YZrT2WSGB5IH8kaZUiDt+uhKb8AAAA==",
+   "takenAt": "2024-02-22T14:37:44",
+   "hash": "c6bafce8eb5efbec"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-3633": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3633-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBACdASoUABsAPu1qsVAppiUiqAqpMB2JYwAAKLR+QjyJklh2KYYGz1zuAAD+b8HTDPgmeEwO+L6nbQwSENSmFl4XGsx42lOWrW/glRxAcfckTBrmjOxLD2F7diLAQEu//A59ugUy5dej51Xpr1dzrZPfy7WUM2WGJYMLNzfnON1t24qPoN90W/gAAA==",
+   "takenAt": "2024-02-23T15:33:48",
+   "hash": "8003163231328c49"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-3809": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-3809-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAACwBgCdASoUABsAPu1mqk2ppaQiMAgBMB2JaACdMzL3hKTz8ZdgswbQYg1Jqxx7VTy+/3W0Yi+mFUKVwtLFAAD3BrlZ0Q0vrCFvX/MZELXnW4vsq4PGeWUS6MXRbCZyYwpY7UyzSfWbNdLaG9Uvhqc+oS+5hhj4Ce4hqJawefxPhm7uxEKr+hvoyXeMgnkW0nOA6BNG+ve6+YOxpRgdj5K84aUgAwAFsNip7jADMI9glMOost0p7PNEHzl/ZjXrKyJsSXMQNNYds1nNL/P6tX54rhQE7+g3KbMvE9lbWvjEDG6U7uziXTyfWrWn8z2HF1vFa3hAMQlXQ/ZAJeLhy3YzDwCpuT5kTMc1S8AA",
+   "takenAt": "2024-02-23T15:46:19",
+   "hash": "9a7b39f2d2d95276"
+  },
+  "cabo-2024/cabo-san-lucas/photos/img-4577": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-160.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-160.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-480.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-480.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-960.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-960.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-1600.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-1600.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-2400.avif",
+     "webp": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-2400.webp",
+     "jpg": "/media/cabo-2024/cabo-san-lucas/photos/img-4577-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABsAPu1irVAppSQisBgIATAdiWIArAANpyFlaCNUOOBFlkgpZLDQ/3EAAP5Z7PqpeVDJxayuomroOGOKYDmonVeTslpnoA3xNsbExSVIUxMCVwb19gj7DBlp2Ez9JxiSkC/Ascfi7GEVZMiPoVzTkTAkOT11EZkLujObg++zKzjSX5E5+QiCRAyMwTXDg4JjV1oOiAoWWtX3/gah/v884pIda3+1gGll937GhEEjMqXWVPIXvBg7TVQdpk0AAAA=",
+   "takenAt": "2024-02-23T14:42:49",
+   "hash": "49d3374ce4e390fc"
   }
  }
 }

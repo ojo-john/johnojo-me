@@ -56,13 +56,18 @@ export interface MapGeometry {
   height: number;
   land: string;
   points: MapPoint[];
+  /** Outlines of the visited countries, drawn on top of the land so they can be clicked. */
+  countries: { name: string; d: string }[];
 }
+
+/** Content uses everyday country names; the map data uses Natural Earth's. */
+const ATLAS_NAME: Record<string, string> = { "United States": "United States of America" };
 
 const topology = world as unknown as Topology<{ countries: GeometryCollection }>;
 const countries = feature(topology, topology.objects.countries) as FeatureCollection;
 
 /** Frame the given coordinates with padding, so every trip gets a map centred on where it went. */
-export function mapFor(places: { id: string; label: string; lat?: number; lng?: number }[], width = 800, height = 800, pad = 0.18): MapGeometry {
+export function mapFor(places: { id: string; label: string; lat?: number; lng?: number; country?: string }[], width = 800, height = 800, pad = 0.18): MapGeometry {
   const located = places.filter((p) => typeof p.lat === "number" && typeof p.lng === "number");
   // One pin: frame a region around it. No pins: fall back to a Europe-wide frame.
   const frame =
@@ -84,10 +89,17 @@ export function mapFor(places: { id: string; label: string; lat?: number; lng?: 
   };
   const projection = geoMercator().fitExtent([[0, 0], [width, height]], bbox).clipExtent([[0, 0], [width, height]]);
   const path = geoPath(projection).digits(1);
+  const visited = new Set(located.map((p) => p.country).filter((c): c is string => Boolean(c)));
+  const shapes = [...visited].flatMap((name) => {
+    const f = countries.features.find((c) => c.properties?.name === (ATLAS_NAME[name] ?? name));
+    const d = f ? path(f) : null;
+    return d ? [{ name, d }] : [];
+  });
   return {
     width,
     height,
     land: path(countries) ?? "",
+    countries: shapes,
     points: placeLabels(
       located.map((p) => {
         const [x, y] = projection([p.lng as number, p.lat as number]) ?? [0, 0];

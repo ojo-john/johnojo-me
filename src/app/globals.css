@@ -233,6 +233,18 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .bigmap .pin.act circle, .bigmap .pin:focus-visible circle, .bigmap .pin:hover circle { fill: var(--sun); r: 17; }
 .bigmap .pin.act .lbl, .bigmap .pin:hover .lbl, .bigmap .pin:focus-visible .lbl { opacity: 1; }
 .map-legend { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; padding-top: 10px; font-size: 12.5px; color: var(--ink-2); }
+.tmap .tmap-country { fill: var(--travel); fill-opacity: .12; stroke: var(--travel); stroke-opacity: .35; cursor: pointer; transition: fill-opacity var(--t-quick); }
+.tmap a:hover .tmap-country, .tmap a:focus-visible .tmap-country, .tmap path.tmap-country:hover, .tmap path.tmap-country:focus-visible { fill-opacity: .28; outline: none; }
+.tmap .tmap-pin { cursor: pointer; }
+.tmap .tmap-pin:hover circle:nth-child(2), .tmap .tmap-pin:focus-visible circle:nth-child(2) { fill: var(--sun); stroke: var(--ink); }
+.tmap .tmap-pin:focus-visible, .tmap a:focus-visible { outline: none; }
+.tmap-pick { position: absolute; z-index: 2; width: min(280px, 80%); background: var(--paper); border: 2px solid var(--ink); border-radius: 14px; padding: 12px; box-shadow: 0 12px 32px rgba(18,20,23,.18); }
+.tmap-pick-hd { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.tmap-pick .circ { width: 32px; height: 32px; min-height: 0; color: var(--ink); background: var(--card); border: 2px solid var(--ink); border-radius: 50%; cursor: pointer; }
+.tmap-pick ul { list-style: none; padding: 0; margin: 0; }
+.tmap-pick a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 8px; border-radius: 8px; text-decoration: none; color: var(--ink); font-weight: 600; }
+.tmap-pick a:hover, .tmap-pick a:focus-visible { background: var(--card); outline: 2px solid var(--sun); }
+.tmap-pick .mono { font-size: 12px; color: var(--ink-2); font-weight: 400; }
 .map-legend button { border: 0; background: none; text-decoration: underline; cursor: pointer; padding: 0; font-weight: 600; }
 .cities { display: flex; flex-direction: column; gap: 20px; }
 .ccard { padding: 22px; display: flex; flex-direction: column; gap: 14px; transition: box-shadow 400ms, transform 500ms var(--spring); scroll-margin-top: calc(var(--header-h) + 24px); }
