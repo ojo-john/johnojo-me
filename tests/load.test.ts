@@ -56,3 +56,14 @@ describe("content loader", () => {
     expect(getPosts().map((p) => p.slug)).toEqual(["public"]);
   });
 });
+
+describe("editor list formats", () => {
+  it("visit_highlightsSavedAsList_normalisedToMap", async () => {
+    vi.resetModules();
+    vi.stubEnv("CONTENT_DIR", FIXTURES);
+    vi.stubEnv("NODE_ENV", "development");
+    const { getTrip } = await import("@/lib/content/load");
+    const porto = getTrip("trip-b")?.visits.find((v) => v.slug === "porto");
+    expect([porto?.highlights, porto?.mediaMeta]).toEqual([{ Food: "Bifana" }, { "photos/a": { caption: "Hi" } }]);
+  });
+});

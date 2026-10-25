@@ -13,7 +13,7 @@ const SOURCE = process.env.MEDIA_SOURCE ?? path.join(os.homedir(), "workspace", 
 const ROOT = process.cwd();
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "content", "media-manifest.json"), "utf8")).items as Record<string, { type: string }>;
-const VIDEO = /\.(mov|mp4|m4v)$/i, PHOTO = /\.(jpe?g|png|heic|heif|webp|tiff?)$/i;
+const VIDEO = /\.(mov|mp4|m4v)$/i;
 
 /** Text under a "## Heading" in a notes file, ignoring the template's placeholder lines. */
 function section(md: string, heading: string): string {

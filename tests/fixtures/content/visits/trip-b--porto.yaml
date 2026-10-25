@@ -1,3 +1,7 @@
 trip: trip-b
 destination: porto
 order: 1
+highlights:
+  - { label: Food, text: Bifana }
+mediaMeta:
+  - { file: photos/a, caption: Hi }

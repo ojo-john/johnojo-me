@@ -6,6 +6,7 @@ import type { z } from "zod";
 import { manifest as manifestSchema, type Manifest, type MediaItem } from "./media";
 import { scoreState, type ScoreState } from "./ranking";
 import {
+  destination as destinationSchema,
   destinations as destinationsSchema,
   experience as experienceSchema,
   post as postSchema,
@@ -58,7 +59,10 @@ const list = (d: string, ext: string) => (fs.existsSync(d) ? fs.readdirSync(d).f
 
 export const getSite = memo(() => parseFile(dir("site.yaml"), siteSchema));
 export const getExperience = memo(() => parseFile(dir("experience.yaml"), experienceSchema));
-export const getDestinations = memo(() => parseFile(dir("destinations.yaml"), destinationsSchema));
+/** One file per place in content/destinations; the file name is the place's id (e.g. porto.yaml). */
+export const getDestinations = memo(() =>
+  destinationsSchema.parse(Object.fromEntries(list(dir("destinations"), ".yaml").map((f) => [f.replace(/\.yaml$/, ""), parseFile(dir("destinations", f), destinationSchema)]))),
+);
 
 export const getMediaManifest = memo((): Manifest => {
   const file = dir("media-manifest.json");
@@ -136,7 +140,7 @@ export const getTrips = memo((): TripEntry[] => {
         .filter(({ v }) => v.trip === tripSlug)
         .map(({ file, v, visitSlug }) => {
           const place = places[v.destination];
-          if (!place) throw new ContentError(file, `  - destination: "${v.destination}" is not listed in content/destinations.yaml`);
+          if (!place) throw new ContentError(file, `  - destination: "${v.destination}" has no content/destinations/<id>.yaml`);
           const media = resolveMedia(file, visitSlug, v, trip, place);
           const photos = media.filter((m) => m.type === "photo");
           const coverPhoto = (v.cover && photos.find((p) => p.id.endsWith(v.cover as string))) || photos[0] || null;

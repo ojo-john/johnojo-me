@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# johnojo.me
 
-## Getting Started
+Personal site: **Work** (career, skills, projects), **Travel** (trips, city rankings, match days,
+photos) and **Journal** (Bible studies, essays, notes).
 
-First, run the development server:
+Static Next.js 16 site (TypeScript, App Router, `output: "export"`), built for Cloudflare Pages.
+Content is YAML/MDX in `content/`, validated with Zod at build time; photos are pre-processed by a
+script. No database, no server.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Commands
+
+| | |
+|---|---|
+| `npm run dev` | Local site at http://localhost:3000 (drafts shown). Editor at /admin/index.html |
+| `npm run media` | Process new photos/videos from `~/workspace/johnojo-media` |
+| `npm run status` | What notes, scores, photos and videos are still missing |
+| `npm run build` | Production build into `out/` (drafts hidden) |
+| `npm start` | Serve `out/` locally |
+| `npm run check` | Typecheck, lint and unit tests |
+
+## Guides
+
+- [docs/CONTENT.md](docs/CONTENT.md): adding trips, cities, matches, posts, projects and the résumé
+- [docs/MEDIA.md](docs/MEDIA.md): photo and video workflow, privacy and size limits
+
+## Layout
+
+```
+content/          trips/<trip>/trip.yaml, visits/<trip>--<city>.yaml, destinations/<place>.yaml,
+                  journal/*.mdx, projects/*.yaml, site.yaml, experience.yaml, media-manifest.json
+public/admin/     the editor (Sveltia CMS) and its config
+scripts/          media.ts (photo pipeline), status.ts (content checklist)
+src/app/          pages: / · /work · /travel · /travel/[trip] · /journal · /journal/[slug]
+src/components/   page sections and interactive pieces (map explorer, rankings, lightbox…)
+src/lib/content/  schemas, loader, ranking maths (+ tests)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Rules the code enforces: a city is ranked only when all ten scores exist (a blank is never zero);
+drafts and non-public journal posts never reach a production build; map pins only for places with
+coordinates; scripture is quoted only from public-domain translations.

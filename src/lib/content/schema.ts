@@ -11,6 +11,22 @@ const isoDate = z
   .union([z.string().regex(/^\d{4}-\d{2}(-\d{2})?$/, "use YYYY-MM-DD or YYYY-MM"), z.date()])
   .transform((v) => (typeof v === "string" ? v : v.toISOString().slice(0, 10)));
 
+/** Accept either a YAML map or the list form the editor writes ([{ label, text }]) and return a map. */
+const mapOrList = <V extends z.ZodType>(value: V, keyName: string, valueName?: string) =>
+  z.preprocess((input) => {
+    if (!Array.isArray(input)) return input;
+    return Object.fromEntries(
+      input
+        .filter((row) => row && typeof row === "object" && (row as Record<string, unknown>)[keyName])
+        .map((row) => {
+          const r = row as Record<string, unknown>;
+          if (valueName) return [r[keyName], r[valueName]];
+          const { [keyName]: k, ...rest } = r;
+          return [k, rest];
+        }),
+    );
+  }, z.record(z.string(), value));
+
 const slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "lowercase letters, numbers and hyphens only");
 
 export const STATUS = ["draft", "coming-soon", "published"] as const;
@@ -70,7 +86,7 @@ export const visit = z.object({
   arrive: isoDate.optional(),
   depart: isoDate.optional(),
   summary: z.string().optional(),
-  highlights: z.record(z.string(), z.string()).optional(),
+  highlights: mapOrList(z.string(), "label", "text").optional(),
   liked: z.string().optional(),
   disliked: z.string().optional(),
   wouldReturn: z.object({ answer: z.enum(["yes", "no", "maybe"]), why: z.string().optional() }).optional(),
@@ -79,7 +95,7 @@ export const visit = z.object({
   matches: z.array(match).default([]),
   /** Ordered media ids ("photos/IMG_1234"). Omit to show every processed photo for this city by date. */
   media: z.array(z.string()).optional(),
-  mediaMeta: z.record(z.string(), mediaMeta).default({}),
+  mediaMeta: mapOrList(mediaMeta, "file").default({}),
   cover: z.string().optional(),
   youtube: z.array(z.object({ id: z.string(), title: z.string() })).default([]),
 });
@@ -139,7 +155,7 @@ export const experience = z.object({
     z.object({ date: isoDate, label: z.string(), title: z.string(), detail: z.string(), body: z.string().optional() }),
   ),
   achievementsNote: z.string(),
-  skills: z.record(z.string(), z.array(z.string())),
+  skills: mapOrList(z.array(z.string()), "group", "items"),
 });
 export type Experience = z.infer<typeof experience>;
 

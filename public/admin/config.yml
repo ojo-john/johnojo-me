@@ -1,0 +1,301 @@
+# Editor configuration for johnojo.me (Sveltia CMS).
+# Every form below writes the same YAML / MDX files the site builds from, so nothing here is a separate database.
+# Locally: run `npm run dev`, open http://localhost:3000/admin/index.html in Chrome and choose
+# "Work with Local Repository". Online: sign in with GitHub (or a personal access token).
+
+backend:
+  name: github
+  repo: ojo-john/johnojo-me # GitHub repository holding this site; only people with write access can save
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ---------------------------------------------------------------- Travel
+  - name: trips
+    label: Trips
+    label_singular: Trip
+    description: One entry per journey. Cities are added under "City visits".
+    folder: content/trips
+    path: "{{slug}}/trip"
+    format: yaml
+    extension: yaml
+    identifier_field: title
+    create: true
+    summary: "{{title}} · {{status}}"
+    sortable_fields: [year, title]
+    fields:
+      - { name: title, label: Title, hint: "e.g. Europe 2027. The web address is made from this." }
+      - { name: year, label: Year, widget: number, value_type: int }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options:
+          - { label: "Draft (hidden)", value: draft }
+          - { label: Coming soon, value: coming-soon }
+          - { label: Published, value: published }
+      - { name: start, label: Start date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: end, label: End date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: datesNote, label: Dates note, required: false, hint: "Shown when exact dates aren't known, e.g. Early April 2024" }
+      - { name: style, label: Travel style, required: false, hint: "e.g. Solo · birthday trip" }
+      - { name: theme, label: One-line theme, widget: text, required: false }
+      - { name: intro, label: Introduction, widget: text, required: false }
+      - { name: cover, label: Cover photo, required: false, hint: "city/photos/img-1234 (see npm run status for names)" }
+      - name: awards
+        label: Personal awards
+        widget: list
+        required: false
+        fields:
+          - { name: award, label: Award, hint: "e.g. Best food" }
+          - { name: visit, label: City visit id, required: false, hint: "the part after -- in the visit name, e.g. porto" }
+      - name: verdict
+        label: Final verdict
+        widget: object
+        required: false
+        fields:
+          - { name: bestMoment, label: Best moment, widget: text, required: false }
+          - { name: biggestSurprise, label: Biggest surprise, widget: text, required: false }
+          - { name: wouldChange, label: What I'd change, widget: text, required: false }
+          - { name: favouriteCity, label: Favourite city, required: false }
+          - { name: wouldRepeat, label: "Would I repeat it?", required: false }
+
+  - name: visits
+    label: City visits
+    label_singular: City visit
+    description: A city on a particular trip. The same city on another trip gets its own visit, scores and photos.
+    folder: content/visits
+    format: yaml
+    extension: yaml
+    create: true
+    slug: "{{trip}}--{{destination}}"
+    summary: "{{trip}} · {{destination}}"
+    sortable_fields: [trip, order]
+    view_groups:
+      - { label: Trip, field: trip }
+    fields:
+      - { name: trip, label: Trip, widget: relation, collection: trips, value_field: "{{slug}}", search_fields: [title], display_fields: [title] }
+      - { name: destination, label: Place, widget: relation, collection: places, value_field: "{{slug}}", search_fields: [city, country], display_fields: ["{{city}}, {{country}}"] }
+      - { name: order, label: Stop number, widget: number, value_type: int, min: 1, hint: "1 for the first city on the trip, 2 for the next…" }
+      - name: kind
+        label: Type of stop
+        widget: select
+        default: city
+        options:
+          - { label: City visit, value: city }
+          - { label: Match day only, value: match-only }
+          - { label: Day trip, value: day-trip }
+      - name: status
+        label: Status
+        widget: select
+        default: published
+        options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+      - { name: photoFolder, label: Photo folder name, required: false, hint: "Only if the media folder isn't named after the city, e.g. nice + french riviera" }
+      - { name: arrive, label: Arrived, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: depart, label: Left, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: summary, label: What I did, widget: text, required: false, hint: "A few lines in your own words" }
+      - name: highlights
+        label: Highlights
+        widget: list
+        required: false
+        fields:
+          - { name: label, label: Label, hint: "Food, Football, Architecture…" }
+          - { name: text, label: Text }
+      - { name: liked, label: Liked, widget: text, required: false }
+      - { name: disliked, label: Didn't like, widget: text, required: false }
+      - name: wouldReturn
+        label: Would I return?
+        widget: object
+        required: false
+        fields:
+          - { name: answer, label: Answer, widget: select, options: [yes, no, maybe] }
+          - { name: why, label: Why, required: false }
+      - { name: verdict, label: One-line verdict, required: false }
+      - name: rating
+        label: Scores (0–10, leave blank if unsure)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: ratedOn, label: Rated on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+          - name: scores
+            label: Scores
+            widget: object
+            fields:
+              - { name: food, label: Food & Desserts, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: value, label: Affordability & Value, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: transport, label: Public Transportation, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: walkability, label: Walkability, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: architecture, label: Architecture & Beauty, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: culture, label: Culture & Atmosphere, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: people, label: People & Hospitality, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: attractions, label: Attractions & Experiences, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: safety, label: Safety & Comfort, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: enjoyment, label: Overall Enjoyment, widget: number, value_type: int, min: 0, max: 10, required: false }
+      - name: matches
+        label: Matches
+        widget: list
+        required: false
+        fields:
+          - { name: home, label: Home team }
+          - { name: away, label: Away team }
+          - { name: score, label: Final score, required: false, hint: "e.g. 2–1" }
+          - { name: competition, label: Competition, required: false }
+          - { name: stadium, label: Stadium, required: false }
+          - { name: date, label: Date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+          - { name: writeUp, label: Write-up, widget: text, required: false }
+      - { name: cover, label: Cover photo, required: false, hint: "photos/img-1234" }
+      - name: mediaMeta
+        label: Photo captions
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+          - { name: file, label: Photo, hint: "photos/img-1234" }
+          - { name: caption, label: Caption, required: false }
+          - { name: alt, label: Description for screen readers, required: false }
+          - { name: hidden, label: Hide this photo, widget: boolean, required: false }
+      - name: youtube
+        label: YouTube videos (unlisted is fine)
+        widget: list
+        required: false
+        fields:
+          - { name: id, label: Video id, hint: "the part after v= in the YouTube link" }
+          - { name: title, label: Title }
+
+  - name: places
+    label: Places
+    label_singular: Place
+    description: Every city or region visited, listed once. Add a place before adding a visit to it.
+    folder: content/destinations
+    format: yaml
+    extension: yaml
+    identifier_field: city
+    create: true
+    summary: "{{city}}, {{country}}"
+    fields:
+      - { name: city, label: City or region }
+      - { name: country, label: Country }
+      - { name: lat, label: Latitude, widget: number, value_type: float, required: false, hint: "City centre. Leave blank for regions (no map pin)." }
+      - { name: lng, label: Longitude, widget: number, value_type: float, required: false }
+
+  # ---------------------------------------------------------------- Journal
+  - name: journal
+    label: Journal
+    label_singular: Post
+    folder: content/journal
+    format: frontmatter
+    extension: mdx
+    identifier_field: title
+    create: true
+    summary: "{{title}} · {{status}}"
+    sortable_fields: [publishedAt, title]
+    fields:
+      - { name: title, label: Title }
+      - { name: dek, label: One-line summary, widget: text }
+      - name: category
+        label: Category
+        widget: select
+        options: [Bible Study, Faith, Life Lessons, Essays, Engineering, Travel Reflections]
+      - { name: series, label: Series, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+      - name: visibility
+        label: Who can read it
+        widget: select
+        default: public
+        hint: Only Public posts are published for now. The other options are for future memberships.
+        options: [{ label: Public, value: public }, { label: Free subscribers (future), value: free }, { label: Paid members (future), value: paid }, { label: Private, value: private }]
+      - { name: publishedAt, label: Published on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: updatedAt, label: Updated on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: footnotes, label: Footnotes, widget: list, required: false, hint: "Mark them in the text with <Fn n={1} />" }
+      - { name: questions, label: Study questions, widget: list, required: false }
+      - name: body
+        label: Post
+        widget: text
+        hint: >-
+          Markdown. Headings start with ##. Scripture: <Scripture k="Hebrews 11:8-10" /> for a full passage,
+          <Ref k="Genesis 12:1">Genesis 12:1</Ref> for an inline reference, <Fn n={1} /> for footnote 1,
+          <Pull>quote</Pull> for a pull quote. New passages must be added to src/lib/scripture.ts once.
+
+  # ---------------------------------------------------------------- Work
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    format: yaml
+    extension: yaml
+    identifier_field: name
+    create: true
+    summary: "{{name}} · {{status}}"
+    fields:
+      - { name: name, label: Name }
+      - { name: order, label: Display order, widget: number, value_type: int }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+      - { name: kind, label: Type, widget: select, options: [{ label: Case study, value: case-study }, { label: Project, value: project }] }
+      - { name: stage, label: Stage, hint: "e.g. In progress" }
+      - { name: summary, label: Summary, widget: text }
+      - { name: problem, label: Problem, widget: text }
+      - { name: approach, label: Approach, widget: text }
+      - { name: stack, label: Tech stack, widget: list }
+      - { name: repo, label: GitHub link, required: false }
+      - { name: repoNote, label: Note when there's no public link, required: false }
+      - { name: demo, label: Live demo link, required: false }
+      - name: diagram
+        label: Data path diagram steps
+        widget: list
+        required: false
+        fields:
+          - { name: label, label: Step }
+          - { name: note, label: What it does, widget: text }
+
+  - name: settings
+    label: About me and career
+    files:
+      - name: site
+        label: About me and links
+        file: content/site.yaml
+        fields:
+          - { name: name, label: Name }
+          - { name: role, label: Role }
+          - { name: company, label: Company }
+          - { name: level, label: Level, required: false }
+          - { name: intro, label: Home page introduction, widget: text }
+          - { name: github, label: GitHub URL }
+          - { name: linkedin, label: LinkedIn URL, required: false }
+          - { name: email, label: Public contact email, required: false }
+          - { name: resume, label: Résumé PDF, widget: file, required: false, hint: "Upload the approved PDF" }
+          - { name: domain, label: Domain }
+      - name: experience
+        label: Career timeline and skills
+        file: content/experience.yaml
+        fields:
+          - name: milestones
+            label: Milestones
+            widget: list
+            fields:
+              - { name: date, label: Date, hint: "YYYY-MM" }
+              - { name: label, label: Label, hint: "e.g. Aug 2025" }
+              - { name: title, label: Title }
+              - { name: detail, label: Detail }
+              - { name: body, label: More detail, widget: text, required: false }
+          - { name: achievementsNote, label: Note under the timeline, widget: text }
+          - name: skills
+            label: Skills
+            widget: list
+            fields:
+              - { name: group, label: Group }
+              - { name: items, label: Skills, widget: list }
