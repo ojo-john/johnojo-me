@@ -11,3 +11,10 @@ repo: null
 repoNote: Private repository
 demo: https://codequest-zeta-self.vercel.app
 demoNote: Sign-in required
+diagram:
+  - { label: Browser editor, note: "I write real Java in the browser and submit it." }
+  - { label: Next.js API, note: "Validates the source and checks I'm signed in before anything runs." }
+  - { label: Budget gate, note: "Daily and monthly job caps, a CPU-seconds budget and one job at a time keep it on free tiers." }
+  - { label: Vercel Sandbox, note: "A fresh, throwaway VM from a pinned runner image. No network, no credentials, no root." }
+  - { label: Grading, note: "JUnit and method contracts. Expected answers never enter the sandbox; the server compares results." }
+  - { label: Supabase, note: "Attempts, skill progress and an XP ledger in Postgres, with row-level security on every table." }
