@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { getExperience, getSite } from "@/lib/content/load";
 
 export const metadata: Metadata = {
-  title: "Résumé",
-  description: "Experience, skills and education.",
-  alternates: { canonical: "/resume/" },
+  ...pageMeta({ title: "Résumé", description: "Experience, skills and education.", path: "/resume/" }),
 };
 
 /** Résumé built from content/experience.yaml. The same page is printed to /resume.pdf (npm run resume:pdf). */

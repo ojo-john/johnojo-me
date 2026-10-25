@@ -216,3 +216,11 @@ export const getPosts = memo((): PostEntry[] =>
 );
 
 export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug);
+
+/**
+ * The Journal stays hidden (no nav tab, home panel, footer link or sitemap entry, and noindex on its
+ * pages) until at least one post is public. Drafts count in dev, so a draft can be previewed locally.
+ */
+export function journalIsOpen(): boolean {
+  return getPosts().length > 0;
+}

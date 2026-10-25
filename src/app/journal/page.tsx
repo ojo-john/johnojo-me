@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { JournalIndex } from "@/components/journal/JournalIndex";
-import { getPosts } from "@/lib/content/load";
+import { getPosts, journalIsOpen } from "@/lib/content/load";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Journal",
-  description: "Bible studies, faith, life lessons, essays and engineering notes.",
-  alternates: { canonical: "/journal/" },
+  ...pageMeta({ title: "Journal", description: "Bible studies, faith, life lessons, essays and engineering notes.", path: "/journal/" }),
+  // Built but unlinked and kept out of search until the first post is public.
+  ...(journalIsOpen() ? {} : { robots: { index: false, follow: false } }),
 };
 
 const CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Essays", "Engineering", "Travel Reflections"];

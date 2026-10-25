@@ -4,7 +4,7 @@ import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header, type JumpItem } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
-import { getPosts, getSite, getTrips } from "@/lib/content/load";
+import { getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
@@ -14,13 +14,15 @@ const read = Source_Serif_4({ subsets: ["latin"], variable: "--font-read", style
 const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap", preload: false });
 
 const site = getSite();
+const journal = journalIsOpen();
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
-  title: { default: `${site.name} · Work, Travel, Journal`, template: `%s · ${site.name}` },
+  title: { default: `${site.name} · ${journal ? "Work, Travel, Journal" : "Software Engineer, Work and Travel"}`, template: `%s · ${site.name}` },
   description: site.intro,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: site.name, url: `https://${site.domain}` },
+  openGraph: { type: "website", siteName: site.name, url: "/", locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630 }] },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = { themeColor: "#f1f0eb" };
@@ -36,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       { label: t.title, hint: "Trip", href: `/travel/${t.slug}/` },
       ...t.visits.map((v) => ({ label: `${v.place.city} · ${t.year}`, hint: "City", href: `/travel/${t.slug}/#${v.slug}` })),
     ]),
-    { label: "Journal", hint: "Page", href: "/journal/" },
+    ...(journal ? [{ label: "Journal", hint: "Page", href: "/journal/" }] : []),
     ...getPosts().map((p) => ({ label: p.title, hint: p.category, href: `/journal/${p.slug}/` })),
   ];
   return (
@@ -47,11 +49,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a className="skip" href="#main">
           Skip to content
         </a>
-        <Header site={{ name: site.name, github: site.github, resume: site.resume, linkedin: site.linkedin, role: site.role, company: site.company }} jump={jump} />
+        <Header site={{ name: site.name, github: site.github, resume: site.resume, linkedin: site.linkedin, role: site.role, company: site.company }} jump={jump} journal={journal} />
         <main id="main" tabIndex={-1}>
           {children}
         </main>
-        <Footer site={site} />
+        <Footer site={site} journal={journal} />
         <Reveal />
         <Analytics />
       </body>

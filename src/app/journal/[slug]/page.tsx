@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reader } from "@/components/journal/Reader";
@@ -17,13 +18,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/journal/[slug]">): Promise<Metadata> {
   const post = getPost((await params).slug);
-  if (!post) return {};
-  return {
-    title: post.title,
-    description: post.dek,
-    alternates: { canonical: `/journal/${post.slug}/` },
-    openGraph: { type: "article", publishedTime: post.publishedAt, modifiedTime: post.updatedAt },
-  };
+  if (!post) return { robots: { index: false, follow: false } };
+  const meta = pageMeta({ title: post.title, description: post.dek, path: `/journal/${post.slug}/` });
+  return { ...meta, openGraph: { ...meta.openGraph, type: "article", publishedTime: post.publishedAt, modifiedTime: post.updatedAt } };
 }
 
 export default async function PostPage({ params }: PageProps<"/journal/[slug]">) {

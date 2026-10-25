@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { ResumeButton } from "@/components/ResumeButton";
 import { CareerTimeline } from "@/components/work/CareerTimeline";
 import { experienceByYear } from "@/lib/content/experience-years";
@@ -6,9 +7,7 @@ import { SkillsProjects } from "@/components/work/SkillsProjects";
 import { getExperience, getProjects, getSite } from "@/lib/content/load";
 
 export const metadata: Metadata = {
-  title: "Work",
-  description: "Career timeline, skills and engineering projects.",
-  alternates: { canonical: "/work/" },
+  ...pageMeta({ title: "Work", description: "Career timeline, skills and engineering projects.", path: "/work/" }),
 };
 
 export default function WorkPage() {

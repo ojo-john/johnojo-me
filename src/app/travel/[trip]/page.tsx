@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Picture } from "@/components/Picture";
@@ -19,11 +20,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/travel/[trip]">): Promise<Metadata> {
   const trip = getTrip((await params).trip);
   if (!trip) return {};
-  return {
+  return pageMeta({
     title: trip.title,
-    description: `${trip.title}: ${trip.visits.map((v) => v.place.city).join(", ")}.`,
-    alternates: { canonical: `/travel/${trip.slug}/` },
-  };
+    description: `${trip.title}: ${trip.visits.map((v) => v.place.city).join(", ")}. City rankings, match days and photos.`,
+    path: `/travel/${trip.slug}/`,
+    image: trip.coverPhoto,
+  });
 }
 
 const VERDICT_LABELS = {

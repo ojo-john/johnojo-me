@@ -27,8 +27,9 @@ const TABS = [
 ];
 
 /** The site's single navigation bar: name, pillar tabs, Jump-to search, GitHub and résumé. */
-export function Header({ site, jump }: { site: HeaderSite; jump: JumpItem[] }) {
+export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpItem[]; journal: boolean }) {
   const pathname = usePathname();
+  const tabs = journal ? TABS : TABS.filter((t) => t.href !== "/journal/");
   const active = TABS.find((t) => pathname.startsWith(t.href));
   const [palOpen, setPalOpen] = useState(false);
   const cvRef = useRef<HTMLDialogElement>(null);
@@ -68,7 +69,7 @@ export function Header({ site, jump }: { site: HeaderSite; jump: JumpItem[] }) {
             {site.name}
           </Link>
           <nav className="tnav" aria-label="Main">
-            {TABS.map((t) => (
+            {tabs.map((t) => (
               <Link key={t.href} href={t.href} style={{ ["--c" as string]: t.color }} aria-current={active?.href === t.href ? "page" : undefined}>
                 {t.label}
               </Link>

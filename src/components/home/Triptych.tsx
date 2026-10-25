@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
  * Three pillar panels. Hovering (mouse) or focusing a panel widens it; on narrow screens the panels
  * stack and show everything, so nothing depends on hover. Panels are server-rendered children.
  */
-export function Triptych({ children }: { children: React.ReactNode }) {
+export function Triptych({ children, panels = 3 }: { children: React.ReactNode; panels?: 2 | 3 }) {
   const [open, setOpen] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const panelOf = (e: React.SyntheticEvent) => (e.target as HTMLElement).closest<HTMLElement>("[data-i]")?.dataset.i ?? null;
@@ -18,7 +18,7 @@ export function Triptych({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={ref}
-      className="tri"
+      className={panels === 2 ? "tri two" : "tri"}
       data-open={open ?? undefined}
       onPointerOver={(e) => e.pointerType === "mouse" && setOpen(panelOf(e))}
       onPointerLeave={() => setOpen(null)}

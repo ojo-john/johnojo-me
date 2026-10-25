@@ -3,7 +3,7 @@ import { ResumeButton } from "@/components/ResumeButton";
 import { Picture } from "@/components/Picture";
 import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
-import { getExperience, getPosts, getSite, getTrips } from "@/lib/content/load";
+import { getExperience, getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
 
@@ -16,6 +16,7 @@ export default function Home() {
   const latestTrip = trips.find((t) => t.status === "published") ?? trips[0];
   const travelCover = trips.find((t) => t.coverPhoto)?.coverPhoto ?? null;
   const featured = posts[0];
+  const journal = journalIsOpen();
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   // The home teaser map shows the region with the most places (Europe today).
   const byRegion = Object.groupBy(places, (p) => regionOf(p.lng, p.lat));
@@ -24,8 +25,22 @@ export default function Home() {
   const [first, ...rest] = site.name.split(" ");
   const topSkills = Object.values(exp.skills).flat().slice(0, 8);
 
+  // Tells search engines who this site is about (name searches, knowledge panel).
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.name,
+    url: `https://${site.domain}/`,
+    jobTitle: site.role,
+    worksFor: { "@type": "Organization", name: site.company },
+    alumniOf: exp.education.map((e) => ({ "@type": "CollegeOrUniversity", name: e.school })),
+    ...(site.location ? { address: { "@type": "PostalAddress", addressLocality: site.location } } : {}),
+    sameAs: [site.github, site.linkedin].filter(Boolean),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />
       <section className="wrap intro" aria-labelledby="hn">
         <div>
           <h1 id="hn">
@@ -68,6 +83,7 @@ export default function Home() {
               <span aria-hidden="true">→</span>
             </Link>
           ) : null}
+          {journal ? (
           <Link href={featured ? `/journal/${featured.slug}/` : "/journal/"}>
             <span className="mono">Journal</span>
             <b>
@@ -75,11 +91,12 @@ export default function Home() {
             </b>
             <span aria-hidden="true">→</span>
           </Link>
+          ) : null}
         </aside>
       </section>
 
-      <section className="wrap" aria-label="Work, Travel and Journal">
-        <Triptych>
+      <section className="wrap" aria-label={journal ? "Work, Travel and Journal" : "Work and Travel"}>
+        <Triptych panels={journal ? 3 : 2}>
           <Link className="panel w" href="/work/" data-i="0">
             <span className="kicker">01 · Work</span>
             <h2>What I build</h2>
@@ -115,6 +132,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
+          {journal ? (
           <Link className="panel j" href="/journal/" data-i="2">
             <span className="kicker">03 · Journal</span>
             <h2>What I&apos;m learning</h2>
@@ -128,6 +146,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
+          ) : null}
         </Triptych>
       </section>
 

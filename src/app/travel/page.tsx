@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Picture } from "@/components/Picture";
 import { RankingLab } from "@/components/travel/RankingLab";
@@ -8,9 +9,7 @@ import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
 
 export const metadata: Metadata = {
-  title: "Travel",
-  description: "Every trip, city rankings, match days and photos.",
-  alternates: { canonical: "/travel/" },
+  ...pageMeta({ title: "Travel", description: "Every trip, city rankings, match days and photos.", path: "/travel/" }),
 };
 
 export default function TravelPage() {

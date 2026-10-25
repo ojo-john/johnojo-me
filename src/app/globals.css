@@ -118,6 +118,7 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .now a:hover { padding-left: 6px; }
 .now a .mono { color: var(--ink-2); }
 .tri { display: grid; grid-template-columns: var(--c1, 1fr) var(--c2, 1fr) var(--c3, 1fr); gap: 10px; height: clamp(440px, 62vh, 620px); transition: grid-template-columns 650ms var(--snap); margin-top: 24px; }
+.tri.two { grid-template-columns: var(--c1, 1fr) var(--c2, 1fr); }
 .tri[data-open="0"] { --c1: 2.1fr; } .tri[data-open="1"] { --c2: 2.1fr; } .tri[data-open="2"] { --c3: 2.1fr; }
 .panel { position: relative; overflow: hidden; color: var(--paper); text-decoration: none; display: flex; flex-direction: column; padding: clamp(20px, 2.4vw, 32px); isolation: isolate; min-width: 0; }
 .panel.w { background: var(--work); } .panel.t { background: var(--travel); } .panel.j { background: var(--journal); }
