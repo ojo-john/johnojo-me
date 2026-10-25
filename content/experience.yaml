@@ -4,10 +4,12 @@ milestones:
     label: Jun 2021
     title: First Amazon internship
     detail: Software Engineering Intern · Supply Chain Optimization · Seattle
+    body: Built an FAQ chatbot with Amazon Lex so common questions were answered automatically.
   - date: 2022-05
     label: May 2022
     title: Second Amazon internship
-    detail: Software Engineering Intern · Supply Chain Optimization · Seattle
+    detail: Software Engineering Intern · Supply Chain Optimization · Bellevue
+    body: Migrated a legacy service onto native AWS with Lambda and API Gateway.
   - date: 2023-07
     label: Jul 2023
     title: Joined Amazon full time
@@ -16,7 +18,7 @@ milestones:
   - date: 2025-10
     label: Oct 2025
     title: Promoted to SDE II
-    detail: Software Development Engineer II (L5) · confirmed Aug 2025, official Oct 2025
+    detail: Software Development Engineer II (L5)
     body: Now technical lead on the full-stack migration of a benefits platform with 4M+ records and 100K+ users from a shared monolithic pipeline to a standalone React application with independent releases.
 
 achievementsNote: Highlights below are from my résumé. Internal system names and details stay confidential.
@@ -30,6 +32,7 @@ roles:
     sections:
       - title: Platform Migration · Technical Lead
         dates: Oct 2025 – Present
+        start: 2025-10
         bullets:
           - Led full-stack migration of a benefits platform (4M+ records, ~200 TPS peak, P99 latency under 55 ms, 100K+ users) from a monolithic shared pipeline into a standalone React application with independent releases.
           - Reduced the release cycle from 4–5 days to 1–2 days and rollback time from hours to under 30 minutes.
@@ -40,6 +43,8 @@ roles:
           - Created a Cypress E2E suite (80 automated tests, 134-case QA plan) and authored onboarding documentation adopted as the team standard for new engineers.
       - title: Service Modernization
         dates: Jul 2023 – Oct 2025
+        start: 2023-07
+        end: 2025-10
         bullets:
           - Migrated a high-throughput benefits service (4M+ DynamoDB records) to ECS Fargate (CDK), reducing support tickets 5%+ year on year and eliminating OS patching overhead.
           - Resolved a production-blocking 403 auth failure by tracing it to API Gateway dropping SigV4 headers, and redesigned the networking (NLB to ALB) as a permanent fix.
@@ -51,11 +56,24 @@ roles:
   - title: Software Engineering Intern
     org: Amazon
     dates: Jun 2021 & May 2022
-    location: Seattle, WA
+    location: Seattle & Bellevue, WA
+    note: Two internships on Supply Chain Optimization, building inventory sourcing tooling used by operations analysts.
     sections:
-      - title: Supply Chain Optimization
+      - title: Second internship · Service migration
+        dates: May – Aug 2022
+        start: 2022-05
+        end: 2022-08
         bullets:
-          - Two internships on Supply Chain Optimization, building inventory sourcing tooling used by operations analysts.
+          - Migrated a legacy service onto native AWS, using Lambda with API Gateway as the compute platform.
+          - Created and delegated the service's DNS hosted zone.
+          - Ran end-to-end testing before onboarding internal and external clients.
+      - title: First internship · FAQ chatbot
+        dates: Jun – Aug 2021
+        start: 2021-06
+        end: 2021-08
+        bullets:
+          - Built a chatbot with Amazon Lex and QnABot that answered common customer questions automatically, reducing the load on the people answering them.
+          - Built the chat interface with the Lex Web UI and Angular so users could talk to the bot.
 
 education:
   - school: University of Texas at Dallas

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import type { ExperienceYear } from "@/lib/content/experience-years";
 
 export interface Milestone {
   date: string;
@@ -11,9 +12,12 @@ export interface Milestone {
   body?: string;
 }
 
-/** Proportional career line from the first milestone to today; select a milestone for details. */
-export function CareerTimeline({ milestones, today, currentTitle }: { milestones: Milestone[]; today: string; currentTitle: string }) {
-  const [sel, setSel] = useState<number | "now">(milestones.length - 1);
+/**
+ * Proportional career line from the first milestone to today. Pick a year (or a point on the line) to
+ * see that year's milestones and everything I worked on during it.
+ */
+export function CareerTimeline({ milestones, years, today }: { milestones: Milestone[]; years: ExperienceYear[]; today: string }) {
+  const [year, setYear] = useState(years.at(-1)?.year ?? new Date(today).getFullYear());
   const ref = useRef<HTMLDivElement>(null);
   const [seen, setSeen] = useState(false);
   const drawn = useReducedMotion() || seen;
@@ -29,17 +33,17 @@ export function CareerTimeline({ milestones, today, currentTitle }: { milestones
     return () => io.disconnect();
   }, []);
 
-  const m = sel === "now" ? null : milestones[sel];
+  const shown = years.find((y) => y.year === year);
   const todayLabel = new Date(today).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
   return (
     <>
       <div ref={ref} className={`ctl${drawn ? " in" : ""}`}>
         <div className="axis">
           <span className="span" />
-          {milestones.map((ms, i) => (
-            <button key={ms.date} className="pt" type="button" style={{ left: `${pct(ms.date)}%` }} aria-pressed={sel === i} aria-label={`${ms.label}: ${ms.title}`} onClick={() => setSel(i)} />
+          {milestones.map((ms) => (
+            <button key={ms.date} className="pt" type="button" style={{ left: `${pct(ms.date)}%` }} aria-pressed={year === Number(ms.date.slice(0, 4))} aria-label={`${ms.label}: ${ms.title}`} onClick={() => setYear(Number(ms.date.slice(0, 4)))} />
           ))}
-          <button className="pt now" type="button" style={{ left: "100%" }} aria-pressed={sel === "now"} aria-label={`Now: ${todayLabel}`} onClick={() => setSel("now")} />
+          <button className="pt now" type="button" style={{ left: "100%" }} aria-pressed={false} aria-label={`Now: ${todayLabel}`} onClick={() => setYear(years.at(-1)?.year ?? year)} />
         </div>
         <div className="lbls" aria-hidden="true">
           {milestones.map((ms) => (
@@ -50,22 +54,41 @@ export function CareerTimeline({ milestones, today, currentTitle }: { milestones
           <span style={{ left: "100%" }}>Now</span>
         </div>
       </div>
+      <div className="ctl-years" role="group" aria-label="Show a year">
+        {years.map((y) => (
+          <button key={y.year} type="button" aria-pressed={y.year === year} onClick={() => setYear(y.year)}>
+            {y.year}
+          </button>
+        ))}
+      </div>
       <div className="card ctl-card" aria-live="polite">
-        {m ? (
+        <h3>{year}</h3>
+        {shown && shown.milestones.length + shown.work.length > 0 ? (
           <>
-            <h3>{m.title}</h3>
-            <span className="mono">
-              {m.label} · {m.detail}
-            </span>
-            {m.body ? <p style={{ flexBasis: "100%" }}>{m.body}</p> : null}
+            {shown.milestones.map((m) => (
+              <div key={m.title} className="ctl-ms">
+                <b>{m.title}</b>
+                <span className="mono">
+                  {m.label} · {m.detail}
+                </span>
+              </div>
+            ))}
+            {shown.work.map((w) => (
+              <div key={w.role + w.title} className="ctl-work">
+                <h4>{w.title}</h4>
+                <span className="mono">
+                  {w.org} · {w.role} · {w.dates}
+                </span>
+                <ul>
+                  {w.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </>
         ) : (
-          <>
-            <h3>Now</h3>
-            <span className="mono">
-              {todayLabel} · {currentTitle}
-            </span>
-          </>
+          <p className="missing">Nothing recorded for this year.</p>
         )}
       </div>
     </>

@@ -29,6 +29,8 @@ const mapOrList = <V extends z.ZodType>(value: V, keyName: string, valueName?: s
 
 const slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "lowercase letters, numbers and hyphens only");
 
+const yearMonth = z.preprocess((v) => (v instanceof Date ? v.toISOString().slice(0, 7) : v), z.string().regex(/^\d{4}-\d{2}$/, "use YYYY-MM"));
+
 export const STATUS = ["draft", "coming-soon", "published"] as const;
 export const status = z.enum(STATUS);
 export type Status = z.infer<typeof status>;
@@ -153,7 +155,18 @@ export const experience = z.object({
         dates: z.string(),
         location: z.string().optional(),
         note: z.string().optional(),
-        sections: z.array(z.object({ title: z.string(), dates: z.string().optional(), bullets: z.array(z.string()) })).default([]),
+        sections: z
+          .array(
+            z.object({
+              title: z.string(),
+              dates: z.string().optional(),
+              /** YYYY-MM. Lets the Work page show what I worked on in a given year; no end means ongoing. */
+              start: yearMonth.optional(),
+              end: yearMonth.optional(),
+              bullets: z.array(z.string()),
+            }),
+          )
+          .default([]),
       }),
     )
     .default([]),

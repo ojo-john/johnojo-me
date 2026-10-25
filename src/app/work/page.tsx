@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ResumeButton } from "@/components/ResumeButton";
 import { CareerTimeline } from "@/components/work/CareerTimeline";
+import { experienceByYear } from "@/lib/content/experience-years";
 import { SkillsProjects } from "@/components/work/SkillsProjects";
 import { getExperience, getProjects, getSite } from "@/lib/content/load";
 
@@ -45,7 +46,7 @@ export default function WorkPage() {
         <h2 id="car" className="sr-only">
           Career timeline
         </h2>
-        <CareerTimeline milestones={exp.milestones} today={today} currentTitle={`${site.role} at ${site.company}`} />
+        <CareerTimeline milestones={exp.milestones} years={experienceByYear(exp, new Date(today).getFullYear())} today={today} />
       </section>
 
       <section className="wrap" id="experience" aria-labelledby="exp-h" style={{ paddingTop: 48 }}>
