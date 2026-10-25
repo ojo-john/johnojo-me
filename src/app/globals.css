@@ -162,6 +162,7 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ctl .pt.now { border-color: var(--ink); border-style: dashed; }
 .ctl .lbls { position: relative; height: 22px; margin-top: 18px; font-family: var(--f-mono); font-size: 12px; color: var(--ink-2); }
 .ctl .lbls span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.ctl .lbls span.up { top: -60px; }
 .ctl-years { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .ctl-years button { font: 600 14px var(--f-mono); padding: 8px 14px; border-radius: 999px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; min-height: 40px; }
 .ctl-years button:hover { background: var(--card); }

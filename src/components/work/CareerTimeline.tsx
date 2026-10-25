@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { ExperienceYear } from "@/lib/content/experience-years";
 
+/** Minimum horizontal gap (as % of the line) before a milestone label moves above the line. */
+const LABEL_GAP_PCT = 22;
+
 export interface Milestone {
   date: string;
   label: string;
@@ -34,6 +37,12 @@ export function CareerTimeline({ milestones, years, today }: { milestones: Miles
   }, []);
 
   const shown = years.find((y) => y.year === year);
+  // A label too close to the previous one (on the same side) moves above the line, so labels alternate
+  // instead of overlapping on phones.
+  const labelUp = milestones.reduce<boolean[]>((up, ms, i) => {
+    const close = i > 0 && Number(pct(ms.date)) - Number(pct(milestones[i - 1].date)) < LABEL_GAP_PCT;
+    return [...up, close && !up[i - 1]];
+  }, []);
   const todayLabel = new Date(today).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
   return (
     <>
@@ -46,8 +55,8 @@ export function CareerTimeline({ milestones, years, today }: { milestones: Miles
           <button className="pt now" type="button" style={{ left: "100%" }} aria-pressed={false} aria-label={`Now: ${todayLabel}`} onClick={() => setYear(years.at(-1)?.year ?? year)} />
         </div>
         <div className="lbls" aria-hidden="true">
-          {milestones.map((ms) => (
-            <span key={ms.date} style={{ left: `${pct(ms.date)}%` }}>
+          {milestones.map((ms, i) => (
+            <span key={ms.date} className={labelUp[i] ? "up" : undefined} style={{ left: `${pct(ms.date)}%` }}>
               {ms.label}
             </span>
           ))}
