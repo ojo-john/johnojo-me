@@ -1,12 +1,16 @@
 import Link from "next/link";
 import { ResumeButton } from "@/components/ResumeButton";
 import { Picture } from "@/components/Picture";
+import { FlowPattern } from "@/components/home/FlowPattern";
 import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
-import { getExperience, getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { getExperience, getPosts, getProjects, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
 import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
+
+/** The project whose system diagram is drawn behind the home Work panel. */
+const FLOW_PROJECT = "codequest";
 
 export default function Home() {
   const site = getSite();
@@ -28,6 +32,9 @@ export default function Home() {
   const map = mapFor(mainRegion.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 600, 420, 0.08);
   const [first, ...rest] = site.name.split(" ");
   const topSkills = Object.values(exp.skills).flat().slice(0, 8);
+  // The Work panel's background: CodeQuest's data flow, or any project with a diagram if it's gone.
+  const withDiagram = getProjects().filter((p) => p.diagram.length > 0);
+  const flowProject = withDiagram.find((p) => p.slug === FLOW_PROJECT) ?? withDiagram[0];
 
   // Tells search engines who this site is about (name searches, knowledge panel).
   const person = {
@@ -102,6 +109,11 @@ export default function Home() {
       <section className="wrap" aria-label={journal ? "Work, Travel and Journal" : "Work and Travel"}>
         <Triptych panels={journal ? 3 : 2}>
           <Link className="panel w" href="/work/" data-i="0">
+            {flowProject ? (
+              <div className="bg" aria-hidden="true">
+                <FlowPattern title={flowProject.name} steps={flowProject.diagram.map((d) => d.label)} />
+              </div>
+            ) : null}
             <span className="kicker">01 · Work</span>
             <h2>What I build</h2>
             <span className="go" aria-hidden="true">→</span>

@@ -43,7 +43,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     ...getPosts().map((p) => ({ label: p.title, hint: p.category, href: `/journal/${p.slug}/` })),
   ];
   return (
-    <html lang="en" className={`${display.variable} ${ui.variable} ${read.variable} ${mono.variable}`}>
+    // suppressHydrationWarning: the dev server can hash next/font class names differently on the server
+    // and in the browser. It only silences attribute mismatches on <html>; the static build has none.
+    <html lang="en" className={`${display.variable} ${ui.variable} ${read.variable} ${mono.variable}`} suppressHydrationWarning>
       <body>
         {/* Marks JS as available before first paint so reveal animations never hide content without it. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />

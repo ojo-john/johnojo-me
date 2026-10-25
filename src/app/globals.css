@@ -130,6 +130,12 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .panel .bg { position: absolute; inset: 0; z-index: -1; }
 .panel .bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; transition: transform 1200ms var(--snap), opacity 500ms; }
 .panel.is-open .bg img { transform: scale(1.05); opacity: 0.6; }
+.panel .bg .flow { width: 100%; height: 100%; opacity: 0.22; transition: transform 1200ms var(--snap), opacity 500ms; }
+.panel.is-open .bg .flow { transform: scale(1.04); opacity: 0.32; }
+.flow path { fill: none; stroke: var(--paper); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.flow rect { fill: none; stroke: var(--paper); stroke-width: 1.5; }
+.flow text { fill: var(--paper); font-family: var(--f-mono); font-size: 12px; }
+.flow .flow-cap { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
 .panel .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(18, 20, 23, 0.1), rgba(18, 20, 23, 0.65)); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tags span { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: rgba(18, 20, 23, 0.28); }
@@ -410,7 +416,7 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 @media (max-width: 1100px) { .reader { grid-template-columns: minmax(0, 1fr) 240px; } .toc { display: none; } }
 @media (max-width: 900px) {
   .intro, .projgrid, .explore, .lab-grid, .stackwrap, .ahead, .foot-in { grid-template-columns: minmax(0, 1fr); }
-  .tri { grid-template-columns: minmax(0, 1fr); height: auto; }
+  .tri, .tri.two { grid-template-columns: minmax(0, 1fr); height: auto; }
   .tri .panel { min-height: 300px; }
   .map-col { position: static; }
   .bigmap { aspect-ratio: 16 / 11; }
