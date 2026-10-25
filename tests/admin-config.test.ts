@@ -59,11 +59,7 @@ const OPTIONS_NOT_OFFERED: Record<string, string[]> = {
  * "Sleeping Beauty Castle" and "Disneyland Paris" becomes a stray key. Quoting the caption fixes it.
  * Remove each line once its file is fixed; the check then guards against the mistake coming back.
  */
-const KNOWN_STRAY_KEYS = [
-  "visits/europe-2021--paris.yaml: visits.mediaMeta[].Disneyland Paris",
-  "visits/europe-2021--paris.yaml: visits.mediaMeta[].Disneyland Paris",
-  "visits/europe-2024--nice.yaml: visits.mediaMeta[].Nice",
-];
+const KNOWN_STRAY_KEYS: string[] = [];
 
 /** Strings that date-like and id-like patterns must accept or reject exactly like the schema does. */
 const PATTERN_SAMPLES = ["2025-10", "2025-10-03", "2025", "2025-1", "Oct 2025", "porto", "st-moritz", "Porto", "a--b", ""];

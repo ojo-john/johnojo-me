@@ -54,6 +54,15 @@ collections:
           - { label: "Draft (hidden)", value: draft }
           - { label: Coming soon, value: coming-soon }
           - { label: Published, value: published }
+      - name: kind
+        label: Type
+        widget: select
+        required: false
+        default: trip
+        hint: "Trip: gets its own card on the Travel page. Match day: a one-off game; it shows under Match days and on the map, but not as a trip card."
+        options:
+          - { label: Trip, value: trip }
+          - { label: Match day, value: match-day }
       - { name: start, label: Start date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: end, label: End date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: datesNote, label: Dates note, required: false, hint: "Shown when exact dates aren't known, e.g. Early April 2024" }
