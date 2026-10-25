@@ -60,9 +60,13 @@ for (const [trip, list] of [...byTrip.entries()].sort()) {
       if (open.length && !personal) missing.push(`match questions unanswered: ${open.length} of ${qs.length}`);
     } else {
       if (!story) missing.push("\"What I did\" notes");
-      const scores = (md.match(/^(Food|Affordability|Public|Walkability|Architecture|Culture|People|Attractions|Safety|Overall)[^:\n]*:[ \t]*\S+/gm) ?? []).length;
+      // Count answers given either in notes.md or already written into the site's content.
+      const inNotes = (md.match(/^(Food|Affordability|Public|Walkability|Architecture|Culture|People|Attractions|Safety|Overall)[^:\n]*:[ \t]*\S+/gm) ?? []).length;
+      const scoresObj = ((v.rating as { scores?: Record<string, unknown> } | undefined)?.scores ?? {}) as Record<string, unknown>;
+      const inContent = Object.values(scoresObj).filter((x) => typeof x === "number").length;
+      const scores = Math.max(inNotes, inContent);
       if (scores < 10) missing.push(`scores: ${scores} of 10`);
-      if (!section(md, "Would I return")) missing.push("would you return?");
+      if (!section(md, "Would I return") && !v.wouldReturn) missing.push("would you return?");
     }
     todo += missing.length;
     const label = `${String(v.order).padStart(2)}. ${visitSlug}${kind !== "city" ? ` (${kind})` : ""}`;
