@@ -14,7 +14,8 @@
     "status": "tsx scripts/status.ts",
     "check:links": "tsx scripts/check-links.ts",
     "media:upload": "tsx scripts/upload-media.ts",
-    "perf": "node scripts/perf.mts"
+    "perf": "node scripts/perf.mts",
+    "resume:pdf": "node scripts/resume-pdf.mts"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",

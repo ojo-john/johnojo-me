@@ -134,6 +134,8 @@ export const site = z.object({
   email: z.string().email().nullable(),
   /** Path under /public, e.g. "/resume.pdf". Null until an approved résumé exists. */
   resume: z.string().nullable(),
+  /** City shown on the résumé page. Never a street address. */
+  location: z.string().nullable().default(null),
   domain: z.string(),
 });
 export type Site = z.infer<typeof site>;
@@ -143,6 +145,19 @@ export const experience = z.object({
     z.object({ date: isoDate, label: z.string(), title: z.string(), detail: z.string(), body: z.string().optional() }),
   ),
   achievementsNote: z.string(),
+  roles: z
+    .array(
+      z.object({
+        title: z.string(),
+        org: z.string(),
+        dates: z.string(),
+        location: z.string().optional(),
+        note: z.string().optional(),
+        sections: z.array(z.object({ title: z.string(), dates: z.string().optional(), bullets: z.array(z.string()) })).default([]),
+      }),
+    )
+    .default([]),
+  education: z.array(z.object({ school: z.string(), degree: z.string(), years: z.string() })).default([]),
   skills: mapOrList(z.array(z.string()), "group", "items"),
 });
 export type Experience = z.infer<typeof experience>;

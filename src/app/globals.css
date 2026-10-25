@@ -408,3 +408,46 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 /* Photos that fill a fixed frame: the <picture> wrapper must fill it too, or the image crops from the top. */
 .panel .bg picture, .ccard .cover picture, .tcard .ph picture, .trip-band .cover picture, .pstack button picture { width: 100%; height: 100%; }
 .ccard .cover { display: block; width: 100%; }
+
+/* ---------- résumé page (also printed to resume.pdf) ---------- */
+.resume { max-width: 900px; padding-block: 48px 96px; }
+.resume-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; align-items: end; border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
+.resume-head h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.04em; }
+.resume-role { font-weight: 700; color: var(--work); margin-top: 6px; }
+.resume .resume-contact { grid-column: 1 / -1; flex-direction: row; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-2); }
+.resume-head .btn { grid-row: 1; grid-column: 2; }
+.resume h2 { font-size: 22px; text-transform: uppercase; letter-spacing: 0.06em; margin: 32px 0 10px; color: var(--work); }
+.resume h3 { font-size: 19px; letter-spacing: -0.01em; }
+.resume-line { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; align-items: baseline; padding-top: 10px; }
+.resume-note { font-weight: 500; color: var(--ink-2); font-size: 15px; }
+.resume-role-block { border-top: 1.5px solid var(--rule); padding-bottom: 8px; }
+.resume-role-block:first-of-type { border-top: 0; }
+.resume-section { margin-top: 10px; }
+.resume-section-title { font-size: 15px; }
+.resume ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 5px; font-size: 14.5px; line-height: 1.5; }
+.resume-skills { margin: 0; display: grid; gap: 6px; font-size: 14.5px; }
+.resume-skills div { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 12px; }
+.resume-skills dt { font-weight: 700; }
+.resume-skills dd { margin: 0; }
+.roles { display: grid; gap: 14px; margin-top: 24px; }
+.roles details { padding: 18px 20px; }
+.roles summary { cursor: pointer; display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; align-items: baseline; list-style: none; }
+.roles summary::-webkit-details-marker { display: none; }
+.roles summary h3 { font-size: 24px; }
+.roles summary::after { content: "+"; font-family: var(--f-display); font-weight: 800; font-size: 24px; }
+.roles details[open] summary::after { content: "–"; }
+.roles ul { margin: 10px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+@media (max-width: 640px) { .resume-head { grid-template-columns: minmax(0, 1fr); } .resume-head .btn { grid-row: auto; grid-column: auto; justify-self: start; } .resume-skills div { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+@media print {
+  @page { size: Letter; margin: 0.55in 0.6in; }
+  .top, footer.foot, .skip, .no-print, .prog { display: none !important; }
+  main { padding-top: 0; }
+  body { background: #fff; font-size: 11pt; }
+  .resume { padding: 0; max-width: none; }
+  .resume-head h1 { font-size: 28pt; }
+  .resume h2 { font-size: 12pt; margin: 14pt 0 4pt; }
+  .resume h3 { font-size: 11.5pt; }
+  .resume ul { font-size: 9.6pt; gap: 2pt; }
+  .resume-skills { font-size: 9.6pt; }
+  .resume-role-block, .resume-section { break-inside: avoid-page; }
+}

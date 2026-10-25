@@ -111,37 +111,30 @@ function ResumeDialog({ ref, site }: { ref: React.Ref<HTMLDialogElement>; site: 
             </button>
           </form>
         </div>
-        {site.resume ? (
-          <object data={site.resume} type="application/pdf" style={{ width: "100%", height: "70vh", border: "2px solid var(--ink)" }} aria-label="Résumé PDF">
-            <p>
-              Your browser can&apos;t show PDFs inline. <a href={site.resume}>Download the résumé</a>.
-            </p>
-          </object>
-        ) : (
-          <div className="card" style={{ background: "var(--chalk)", padding: 28 }}>
-            <h3 style={{ fontSize: 34 }}>{site.name}</h3>
-            <p className="mono" style={{ marginTop: 6 }}>
-              {site.role} · {site.company}
-            </p>
-            <p className="missing" style={{ marginTop: 10 }}>
-              The full résumé will be here soon.
-            </p>
-          </div>
-        )}
+        <div className="card" style={{ background: "var(--chalk)", padding: 28 }}>
+          <h3 style={{ fontSize: 34 }}>{site.name}</h3>
+          <p className="mono" style={{ marginTop: 6 }}>
+            {site.role} · {site.company}
+          </p>
+          <p style={{ marginTop: 10, color: "var(--ink-2)" }}>Experience, technical skills and education on one page.</p>
+        </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <a className="btn fill" href="/resume/">
+            Open résumé
+          </a>
           {site.resume ? (
-            <a className="btn fill" href={site.resume} download>
+            <a className="btn" href={site.resume} download>
               Download PDF
             </a>
           ) : null}
-          <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
           {site.linkedin ? (
             <a className="btn" href={site.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn ↗
             </a>
           ) : null}
+          <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
         </div>
       </div>
     </dialog>

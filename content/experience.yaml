@@ -1,19 +1,69 @@
+# Career timeline, roles and skills. Drives the Work page, the résumé page (/resume/) and resume.pdf.
 milestones:
+  - date: 2021-06
+    label: Jun 2021
+    title: First Amazon internship
+    detail: Software Engineering Intern · Supply Chain Optimization · Seattle
+  - date: 2022-05
+    label: May 2022
+    title: Second Amazon internship
+    detail: Software Engineering Intern · Supply Chain Optimization · Seattle
   - date: 2023-07
     label: Jul 2023
-    title: Joined Amazon
-    detail: Software Development Engineer
-  - date: 2025-08
-    label: Aug 2025
+    title: Joined Amazon full time
+    detail: Software Development Engineer · Dallas
+    body: Service modernisation on a high-throughput benefits platform, including the move to ECS Fargate, a serverless CMS, a geospatial clinic search API and chaos engineering gamedays.
+  - date: 2025-10
+    label: Oct 2025
     title: Promoted to SDE II
-    detail: Software Development Engineer II (L5)
+    detail: Software Development Engineer II (L5) · confirmed Aug 2025, official Oct 2025
+    body: Now technical lead on the full-stack migration of a benefits platform with 4M+ records and 100K+ users from a shared monolithic pipeline to a standalone React application with independent releases.
 
-# Shown until approved résumé highlights are added. Employer details stay confidential.
-achievementsNote: Approved résumé highlights will appear here. Employer details stay confidential.
+achievementsNote: Highlights below are from my résumé. Internal system names and details stay confidential.
+
+roles:
+  - title: Software Development Engineer II
+    org: Amazon
+    dates: Jul 2023 – Present
+    location: Dallas, TX
+    note: Promoted to SDE II Oct 2025
+    sections:
+      - title: Platform Migration · Technical Lead
+        dates: Oct 2025 – Present
+        bullets:
+          - Led full-stack migration of a benefits platform (4M+ records, ~200 TPS peak, P99 latency under 55 ms, 100K+ users) from a monolithic shared pipeline into a standalone React application with independent releases.
+          - Reduced the release cycle from 4–5 days to 1–2 days and rollback time from hours to under 30 minutes.
+          - Built an aggregated API consolidating 4 microservices into a single response, eliminating an N+1 call pattern (8+ round-trips to 1) and reducing frontend latency by over 75%.
+          - Designed a dual-auth reverse proxy (SigV4 + token-based) with API Gateway, replacing an intermediary service layer for all GraphQL/REST operations.
+          - Built an automated data validation pipeline (S3, SQS, Lambda) comparing legacy and new endpoints field by field across 4M+ records to guarantee zero data loss during cutover.
+          - Implemented a phased rollout with independent feature flags and wave-based targeting (45 to 100K+ users), with full observability via custom telemetry, CloudWatch dashboards and Athena queries.
+          - Created a Cypress E2E suite (80 automated tests, 134-case QA plan) and authored onboarding documentation adopted as the team standard for new engineers.
+      - title: Service Modernization
+        dates: Jul 2023 – Oct 2025
+        bullets:
+          - Migrated a high-throughput benefits service (4M+ DynamoDB records) to ECS Fargate (CDK), reducing support tickets 5%+ year on year and eliminating OS patching overhead.
+          - Resolved a production-blocking 403 auth failure by tracing it to API Gateway dropping SigV4 headers, and redesigned the networking (NLB to ALB) as a permanent fix.
+          - Built a serverless CMS (Lambda, Step Functions, DynamoDB) that reduced engineering dependency for content updates by 80% and time-to-market from days to hours, saving 3 developer-months a year.
+          - Developed a geospatial clinic search API (AWS Location Service) with a cache-on-first-visit strategy on Fargate, helping employees across 10+ clinic locations find the nearest care in under 2 seconds.
+          - Built local development stack infrastructure (CDK, Docker) that cut the test cycle from 1.5 hours to 10 minutes for 8 engineers, and led its adoption across the team.
+          - Pioneered chaos engineering with AWS Fault Injection Simulator, organised and led live gameday exercises, and authored adoption documentation now used org-wide.
+          - Migrated containers to ARM64/Graviton for ~20% compute cost reduction and implemented CI/CD with alarm-triggered automated rollback.
+  - title: Software Engineering Intern
+    org: Amazon
+    dates: Jun 2021 & May 2022
+    location: Seattle, WA
+    sections:
+      - title: Supply Chain Optimization
+        bullets:
+          - Two internships on Supply Chain Optimization, building inventory sourcing tooling used by operations analysts.
+
+education:
+  - school: University of Texas at Dallas
+    degree: B.S. Computer Science
+    years: 2019 – 2023
 
 skills:
-  Languages: [Java, TypeScript, Python, Kotlin]
-  Frontend: [React, Next.js, GraphQL]
-  AWS & infrastructure: [Lambda, ECS / Fargate, API Gateway, Step Functions, SQS, S3, DynamoDB, Athena, CloudWatch, CDK]
-  Data: [PostgreSQL, DynamoDB]
-  Practice: [Distributed systems, Event-driven architecture, Testing, Observability, CI/CD]
+  Languages: [Java, TypeScript, JavaScript, Kotlin]
+  AWS: [ECS Fargate, Lambda, Step Functions, DynamoDB, API Gateway, NLB / ALB, SQS, S3, CloudWatch, CloudFormation, IAM, Location Service, Fault Injection Simulator, Athena, Glue]
+  Tools & frameworks: [React, GraphQL, gRPC, Cypress, Docker, CDK]
+  Practices: [Distributed systems, Microservices, CI/CD, Feature flags, Chaos engineering, Event-driven architecture, Observability, "Auth (SigV4, TLS, RBAC)"]

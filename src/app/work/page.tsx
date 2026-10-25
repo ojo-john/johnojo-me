@@ -46,9 +46,44 @@ export default function WorkPage() {
           Career timeline
         </h2>
         <CareerTimeline milestones={exp.milestones} today={today} currentTitle={`${site.role} at ${site.company}`} />
-        <p className="missing" style={{ marginTop: 12, fontSize: 14 }}>
+      </section>
+
+      <section className="wrap" id="experience" aria-labelledby="exp-h" style={{ paddingTop: 48 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: 12, flexWrap: "wrap" }}>
+          <h2 id="exp-h" style={{ fontSize: 40 }}>
+            Experience
+          </h2>
+          <a className="btn" href="/resume/">
+            Full résumé →
+          </a>
+        </div>
+        <p className="missing" style={{ marginTop: 8, fontSize: 14 }}>
           {exp.achievementsNote}
         </p>
+        <div className="roles">
+          {exp.roles.flatMap((r) =>
+            r.sections.map((sec, i) => (
+              <details key={r.title + sec.title} className="card" open={i === 0 && r === exp.roles[0]}>
+                <summary>
+                  <h3>{sec.title}</h3>
+                  <span className="mono">
+                    {r.org} · {r.title} · {sec.dates ?? r.dates}
+                  </span>
+                </summary>
+                <ul>
+                  {sec.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </details>
+            )),
+          )}
+        </div>
+        {exp.education.map((e) => (
+          <p key={e.school} className="mono" style={{ marginTop: 16, color: "var(--ink-2)" }}>
+            Education · {e.degree}, {e.school} · {e.years}
+          </p>
+        ))}
       </section>
 
       <SkillsProjects
