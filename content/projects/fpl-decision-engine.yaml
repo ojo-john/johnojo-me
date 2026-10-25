@@ -7,8 +7,7 @@ summary: A decision-support system for a Fantasy Premier League manager in a hea
 problem: Public FPL data is inconsistent and the game's rules change between seasons. Recommendations are only as good as the data under them.
 approach: A resilient API client with retries and health classification, versioned rules snapshots, normalised ingestion into Postgres, and a data-quality gate that blocks optimisation when checks fail.
 stack: [Python 3.12, FastAPI, SQLAlchemy 2.0, Alembic, PostgreSQL, Next.js, Docker Compose, GitHub Actions]
-repo: null
-repoNote: Private repository
+repo: https://github.com/ojo-john/fpl-decision-engine
 demo: https://fpl-decision-engine-chi.vercel.app
 demoNote: Sign-in required
 diagram:
