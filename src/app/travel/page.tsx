@@ -5,7 +5,7 @@ import { RankingLab } from "@/components/travel/RankingLab";
 import { slim, toView } from "@/components/travel/view";
 import { getTrips } from "@/lib/content/load";
 import { formatRange } from "@/lib/format";
-import { mapFor } from "@/lib/geo";
+import { mapFor, regionOf } from "@/lib/geo";
 
 export const metadata: Metadata = {
   title: "Travel",
@@ -18,7 +18,11 @@ export default function TravelPage() {
   const visits = trips.flatMap((t) => t.visits.map((v, i) => slim(toView(v, t, i + 1))));
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   const countries = new Set(places.map((p) => p.country));
-  const map = mapFor(places.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 900, 640, 0.06);
+  // One map per region (Europe, Americas…), biggest first.
+  const regions = Object.entries(Object.groupBy(places, (p) => regionOf(p.lng, p.lat)))
+    .filter(([r]) => r !== "Other")
+    .sort((a, b) => (b[1]?.length ?? 0) - (a[1]?.length ?? 0))
+    .map(([region, ps]) => ({ region, map: mapFor((ps ?? []).map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 900, (ps ?? []).length > 2 ? 640 : 420, 0.06) }));
   const stadiums = trips.flatMap((t) => t.visits.flatMap((v) => v.matches.map((m) => ({ ...m, city: v.place.city, trip: t.title, href: `/travel/${t.slug}/#${v.slug}` }))));
 
   return (
@@ -60,9 +64,16 @@ export default function TravelPage() {
         <h2 id="map-h" style={{ fontSize: "clamp(36px,4vw,56px)" }}>
           On the map
         </h2>
-        <div className="card" style={{ marginTop: 20, overflow: "hidden" }}>
-          <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-labelledby="map-alt" style={{ display: "block", width: "100%", height: "auto" }}>
-            <title id="map-alt">{`Places visited: ${map.points.map((p) => p.label).join(", ")}`}</title>
+        {regions.map(({ region, map }) => (
+          <figure key={region} style={{ margin: "20px 0 0" }}>
+            {regions.length > 1 ? (
+              <figcaption className="kicker" style={{ color: "var(--ink-2)", marginBottom: 8 }}>
+                {region}
+              </figcaption>
+            ) : null}
+            <div className="card" style={{ overflow: "hidden" }}>
+          <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-labelledby={`map-alt-${region}`} style={{ display: "block", width: "100%", height: "auto" }}>
+            <title id={`map-alt-${region}`}>{`Places visited: ${map.points.map((p) => p.label).join(", ")}`}</title>
             <path d={map.land} fill="#e4e2da" stroke="#cfccc2" />
             {map.points.map((p) => (
               <g key={p.id}>
@@ -81,7 +92,9 @@ export default function TravelPage() {
               </g>
             ))}
           </svg>
-        </div>
+            </div>
+          </figure>
+        ))}
         <ul style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px", listStyle: "none", padding: 0, marginTop: 14, fontSize: 14, color: "var(--ink-2)" }} aria-label="Places visited">
           {places.map((p) => (
             <li key={p.slug}>

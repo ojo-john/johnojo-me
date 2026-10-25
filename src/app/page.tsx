@@ -5,7 +5,7 @@ import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
 import { getExperience, getPosts, getSite, getTrips } from "@/lib/content/load";
 import { formatRange } from "@/lib/format";
-import { mapFor } from "@/lib/geo";
+import { mapFor, regionOf } from "@/lib/geo";
 
 export default function Home() {
   const site = getSite();
@@ -17,7 +17,10 @@ export default function Home() {
   const travelCover = trips.find((t) => t.coverPhoto)?.coverPhoto ?? null;
   const featured = posts[0];
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
-  const map = mapFor(places.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 600, 420, 0.08);
+  // The home teaser map shows the region with the most places (Europe today).
+  const byRegion = Object.groupBy(places, (p) => regionOf(p.lng, p.lat));
+  const mainRegion = Object.entries(byRegion).sort((a, b) => (b[1]?.length ?? 0) - (a[1]?.length ?? 0))[0]?.[1] ?? [];
+  const map = mapFor(mainRegion.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 600, 420, 0.08);
   const [first, ...rest] = site.name.split(" ");
   const topSkills = Object.values(exp.skills).flat().slice(0, 8);
 

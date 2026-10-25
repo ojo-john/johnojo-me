@@ -42,6 +42,15 @@ function placeLabels(points: Omit<MapPoint, "labelSide">[]): MapPoint[] {
       return { ...p, labelSide: side };
     });
 }
+/** Coarse region for grouping maps, so a trip to Mexico doesn't shrink Europe to a dot. */
+export function regionOf(lng: number | undefined, lat: number | undefined): string {
+  if (typeof lng !== "number" || typeof lat !== "number") return "Other";
+  if (lng < -25) return "Americas";
+  if (lng > 60) return "Asia & Pacific";
+  if (lat < 35 && lng > -20) return "Africa & Middle East";
+  return "Europe";
+}
+
 export interface MapGeometry {
   width: number;
   height: number;
@@ -55,8 +64,13 @@ const countries = feature(topology, topology.objects.countries) as FeatureCollec
 /** Frame the given coordinates with padding, so every trip gets a map centred on where it went. */
 export function mapFor(places: { id: string; label: string; lat?: number; lng?: number }[], width = 800, height = 800, pad = 0.18): MapGeometry {
   const located = places.filter((p) => typeof p.lat === "number" && typeof p.lng === "number");
-  // Fall back to a Europe-wide frame when there are fewer than two pins to fit around.
-  const frame = located.length >= 2 ? located : [{ lat: 36, lng: -10 }, { lat: 58, lng: 20 }];
+  // One pin: frame a region around it. No pins: fall back to a Europe-wide frame.
+  const frame =
+    located.length >= 2
+      ? located
+      : located.length === 1
+        ? [{ lat: (located[0].lat as number) - 5, lng: (located[0].lng as number) - 7 }, { lat: (located[0].lat as number) + 5, lng: (located[0].lng as number) + 7 }]
+        : [{ lat: 36, lng: -10 }, { lat: 58, lng: 20 }];
   const lngs = frame.map((p) => p.lng as number);
   const lats = frame.map((p) => p.lat as number);
   const spanLng = Math.max(...lngs) - Math.min(...lngs) || 4;
