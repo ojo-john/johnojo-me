@@ -11,7 +11,8 @@ script. No database, no server.
 
 | | |
 |---|---|
-| `npm run dev` | Local site at http://localhost:3000 (drafts shown). Editor at /admin/index.html |
+| `npm run dev` | Local site at http://localhost:3000, exactly as it will look live (drafts hidden). Editor at /admin/ |
+| `npm run dev:drafts` | Same, plus drafts (unpublished trips, draft posts) for previewing |
 | `npm run media` | Process new photos/videos from `~/workspace/johnojo-media` |
 | `npm run status` | What notes, scores, photos and videos are still missing |
 | `npm run build` | Production build into `out/` (drafts hidden) |

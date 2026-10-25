@@ -29,8 +29,13 @@ import {
 
 const CONTENT_DIR = process.env.CONTENT_DIR ?? path.join(process.cwd(), "content");
 
-/** Drafts show in `next dev` and in preview builds (SHOW_DRAFTS=1), never in a normal production build. */
-export const SHOW_DRAFTS = process.env.NODE_ENV !== "production" || process.env.SHOW_DRAFTS === "1";
+/**
+ * Drafts are opt-in: only `npm run dev:drafts` (or any build with SHOW_DRAFTS=1) shows them. Plain
+ * `npm run dev` matches the live site exactly.
+ */
+export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === "1";
+/** A missing photo is fatal only in a real build; while editing locally it's skipped until `npm run media` runs. */
+const LENIENT_MEDIA = process.env.NODE_ENV !== "production" || SHOW_DRAFTS;
 const visible = (s: Status) => s !== "draft" || SHOW_DRAFTS;
 
 class ContentError extends Error {
@@ -119,7 +124,7 @@ function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, pla
   for (const id of ids) {
     const entry = items[id];
     if (!entry) {
-      if (!SHOW_DRAFTS) throw new ContentError(file, `  - media: "${id}" is not in media-manifest.json (run npm run media)`);
+      if (!LENIENT_MEDIA) throw new ContentError(file, `  - media: "${id}" is not in media-manifest.json (run npm run media)`);
       continue;
     }
     if (entry.duplicateOf) continue; // near-identical copy of another photo or clip

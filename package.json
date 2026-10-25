@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:drafts": "SHOW_DRAFTS=1 next dev",
     "build": "next build",
     "start": "npx serve out",
     "lint": "eslint",

@@ -3,12 +3,12 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const FIXTURES = path.resolve(__dirname, "fixtures/content");
 
-/** Load the content module fresh with a given environment (drafts on/off). */
-async function loadWith(env: { showDrafts: boolean }) {
+/** Load the content module fresh with a given environment (drafts on/off, dev server or real build). */
+async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production" }) {
   vi.resetModules();
   vi.stubEnv("CONTENT_DIR", FIXTURES);
-  vi.stubEnv("NODE_ENV", env.showDrafts ? "development" : "production");
-  vi.stubEnv("SHOW_DRAFTS", "");
+  vi.stubEnv("NODE_ENV", env.nodeEnv ?? "production");
+  vi.stubEnv("SHOW_DRAFTS", env.showDrafts ? "1" : "");
   return import("@/lib/content/load");
 }
 
@@ -21,9 +21,14 @@ describe("content loader", () => {
     expect([trips.map((t) => t.slug), trips.find((t) => t.slug === "trip-b")?.visits.map((v) => v.slug)]).toEqual([["trip-b", "trip-a"], ["porto"]]);
   });
 
-  it("getTrips_devBuild_includesDrafts", async () => {
+  it("getTrips_showDraftsFlag_includesDrafts", async () => {
     const { getTrips } = await loadWith({ showDrafts: true });
     expect(getTrips().map((t) => t.slug)).toContain("hidden");
+  });
+
+  it("getTrips_plainDevServer_hidesDraftsLikeLiveSite", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, nodeEnv: "development" });
+    expect(getTrips().map((t) => t.slug)).not.toContain("hidden");
   });
 
   it("visit_partialRating_isIncompleteNotZero", async () => {
