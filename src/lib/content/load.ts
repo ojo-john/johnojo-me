@@ -122,6 +122,7 @@ function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, pla
       if (!SHOW_DRAFTS) throw new ContentError(file, `  - media: "${id}" is not in media-manifest.json (run npm run media)`);
       continue;
     }
+    if (entry.duplicateOf) continue; // near-identical copy of another photo or clip
     const key = id.slice(prefix.length);
     const meta = v.mediaMeta[key] ?? v.mediaMeta[key.split("/").pop() ?? key];
     if (meta?.hidden) continue;

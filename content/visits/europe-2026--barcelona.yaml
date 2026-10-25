@@ -3,3 +3,32 @@ destination: barcelona
 order: 1
 arrive: 2026-10-16
 depart: 2026-10-19
+summary: >-
+  Barcelona was amazing, and way better than Madrid. The food was good and the people were friendly.
+  I got a bit lost a couple of times, but I learnt quickly, and it's extremely walkable. My first night
+  was great, watching a flamenco show. I love learning about cultures. I also learnt how to make paella
+  at a cooking class, which was a good experience.
+highlights:
+  Culture: A flamenco show on my first night
+  Food: Learning to make paella at a cooking class
+  Sights: Park Güell and the Sagrada Família
+liked: Good food, friendly people, and it's extremely walkable.
+disliked: I got lost a couple of times at first, and the Espanyol game was very boring.
+matches:
+  - home: Espanyol
+    away: Atlético Madrid
+    score: 0–1
+    competition: La Liga
+    date: 2026-10-17
+    writeUp: The Espanyol game was very boring. Atlético won it with an 89th-minute goal from Álex Baena off the bench.
+cover: photos/img-0660
+mediaMeta:
+  photos/img-0660: { caption: "Park Güell", alt: "John at a lookout in Park Güell with the city behind him" }
+  photos/img-0803: { caption: "Sagrada Família", alt: "The spires of the Sagrada Família against a grey sky" }
+  photos/img-0893: { caption: "The paella we made", alt: "A large pan of seafood paella topped with mussels and prawns" }
+  photos/img-0532: { caption: "Espanyol v Atlético Madrid", alt: "A packed stand with the scoreboard showing 0–0" }
+  photos/img-0588: { hidden: true } # near-duplicate of img-0586
+  photos/img-0565: { hidden: true } # another person's face
+  photos/img-0860: { hidden: true } # other people's faces (cooking class)
+  photos/img-0862: { hidden: true } # other people's faces (cooking class)
+  videos/video-1020-singular-display: { hidden: true } # other people's faces (cooking class)

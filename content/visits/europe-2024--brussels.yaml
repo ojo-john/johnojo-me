@@ -15,6 +15,8 @@ rating:
   scores: { food: 8, value: 7, transport: 7, walkability: 8, architecture: 8, culture: 6, people: 7, attractions: 5, safety: 7, enjoyment: 7 }
 cover: photos/img-0587
 mediaMeta:
+  photos/img-0589: { hidden: true } # near-duplicate of img-0587
+  videos/shared-video-dddaa4a6-6df5-4cde-8228-c335361202e3: { hidden: true } # same moment as img-0565
   photos/img-0587: { caption: "Grand-Place, Brussels", alt: "John on the Grand-Place in Brussels with ornate guildhalls behind him" }
   photos/img-0544: { caption: "Brussels Town Hall", alt: "John taking a selfie in front of the Gothic town hall on the Grand-Place" }
   photos/img-0548: { caption: "Manneken Pis in costume", alt: "The Manneken Pis statue dressed in a red hat and white costume" }

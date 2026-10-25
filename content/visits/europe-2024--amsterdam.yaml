@@ -13,6 +13,7 @@ matches:
     writeUp: Twente went ahead through Ricky van Wolfswinkel, then Brian Brobbey equalised and a late Steven Bergwijn penalty won it. I remember the crowd going crazy over Brobbey and not understanding why. Watching him at Sunderland now, I get it.
 cover: photos/img-0645
 mediaMeta:
+  photos/img-0643: { hidden: true } # near-duplicate of img-0645
   photos/img-0645: { caption: "Johan Cruijff ArenA", alt: "Fans gathering outside the Johan Cruijff ArenA under a giant Cruyff mural" }
   photos/dd3cf986-6a23-47fe-908e-41848efad7e2: { caption: "Ajax 2–1 Twente", alt: "The ArenA scoreboard showing Ajax 2, Twente 1" }
   photos/img-0710: { caption: "Ajax", alt: "The Ajax crest on a pillar outside the stadium" }

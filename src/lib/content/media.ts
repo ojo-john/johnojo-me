@@ -13,6 +13,9 @@ export const photoEntry = z.object({
   variants: z.array(variant).min(1),
   placeholder: z.string(),
   takenAt: z.string().nullable(),
+  hash: z.string().optional(),
+  /** Set by npm run media when this picture is a near-identical copy of another one in the same city. */
+  duplicateOf: z.string().optional(),
 });
 
 export const videoEntry = z.object({
@@ -22,6 +25,9 @@ export const videoEntry = z.object({
   src: z.string(),
   poster: z.string(),
   takenAt: z.string().nullable(),
+  hash: z.string().optional(),
+  bytes: z.number().optional(),
+  duplicateOf: z.string().optional(),
 });
 
 export const manifest = z.object({

@@ -3,3 +3,21 @@ destination: marseille
 order: 2
 arrive: 2026-10-20
 depart: 2026-10-22
+summary: >-
+  Marseille was just a rest stop. I didn't really do much, and there didn't seem to be much to do. The
+  seafood was amazing, though. I walked up to Notre-Dame de la Garde, the basilica on the hill. The walk
+  up wasn't easy, but the views were worth it, and the weather was nice. Marseille has the easiest public
+  transport I've ever used. There are only two metro lines, M1 (La Rose to La Fourragère) and M2 (Gèze to
+  Sainte-Marguerite Dromel), and I never got lost once.
+highlights:
+  Food: Amazing seafood
+  Views: Walking up to Notre-Dame de la Garde
+  Football: A tour of the Stade Vélodrome
+liked: The seafood, the views, nice weather and the easiest transport system I've ever used.
+disliked: Not much to do.
+cover: photos/img-0921
+mediaMeta:
+  photos/img-0921: { caption: "Sunset over Marseille", alt: "Marseille's rooftops and the sea at sunset, seen from high on a hill" }
+  photos/img-0943: { caption: "The seafood", alt: "A whole grilled fish with herbs and pickled onions" }
+  photos/img-0948: { caption: "Stade Vélodrome", alt: "A statue outside the striped facade of the Stade Vélodrome" }
+  photos/img-0959: { hidden: true } # near-duplicate of img-0963

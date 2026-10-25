@@ -35,9 +35,35 @@ const VIDEO_EXT = new Set([".mp4", ".mov", ".m4v"]);
 const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
 
 type Variant = { w: number; avif: string; webp: string; jpg: string };
+type Fingerprint = { hash?: string; bytes?: number; duplicateOf?: string };
 type Entry =
-  | { type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null }
-  | { type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null };
+  | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null } & Fingerprint)
+  | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null } & Fingerprint);
+
+/** Difference hash: 64 bits describing an image's light/dark pattern. Near-identical pictures differ by a few bits. */
+async function dHash(file: string): Promise<string> {
+  const px = await sharp(file).rotate().resize(9, 8, { fit: "fill" }).grayscale().raw().toBuffer();
+  let bits = "";
+  for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) bits += px[y * 9 + x] > px[y * 9 + x + 1] ? "1" : "0";
+  let hex = "";
+  for (let i = 0; i < 64; i += 4) hex += parseInt(bits.slice(i, i + 4), 2).toString(16);
+  return hex;
+}
+const hamming = (a: string, b: string) => {
+  // Count differing bits, one hex digit at a time.
+  let n = 0;
+  for (let i = 0; i < a.length; i++) {
+    let x = parseInt(a[i], 16) ^ parseInt(b[i], 16);
+    while (x) { n += x & 1; x >>= 1; }
+  }
+  return n;
+};
+/** Photos this close are the same shot (including burst frames); clips must also match in size. */
+const PHOTO_DUPLICATE_BITS = 5;
+const VIDEO_DUPLICATE_BITS = 2;
+/** Re-taken shots (same scene, slightly moved) sit too far apart to auto-hide, so they are only flagged. */
+const REPEAT_WINDOW_SECONDS = 30;
+const REPEAT_BITS = 30;
 type Cache = Record<string, { key: string; id: string }>;
 
 const readJson = <T,>(file: string, fallback: T): T => (fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as T) : fallback);
@@ -195,6 +221,57 @@ async function main() {
     if (fs.existsSync(d)) for (const f of fs.readdirSync(d)) if (f.startsWith(base + "-") || f.startsWith(base + ".")) fs.rmSync(path.join(d, f));
   }
 
+  // Duplicates: fingerprint every item, then within each city keep the earliest of any near-identical
+  // group and mark the rest. The site never shows marked items; the originals are left untouched.
+  const dupes: string[] = [];
+  const repeats: string[] = [];
+  for (const [id, e] of Object.entries(manifest.items)) {
+    if (e.hash) continue;
+    try {
+      const pub = path.join(ROOT, "public");
+      e.hash = await dHash(path.join(pub, e.type === "photo" ? e.variants[0].jpg : e.poster));
+      if (e.type === "video") e.bytes = fs.statSync(path.join(pub, e.src)).size;
+    } catch {
+      /* no poster or unreadable file: skip fingerprinting rather than fail the run */
+    }
+  }
+  const byCity = new Map<string, string[]>();
+  for (const id of Object.keys(manifest.items)) {
+    const city = id.split("/").slice(0, 2).join("/");
+    byCity.set(city, [...(byCity.get(city) ?? []), id]);
+  }
+  for (const ids of byCity.values()) {
+    ids.sort((a, b) => (manifest.items[a].takenAt ?? "").localeCompare(manifest.items[b].takenAt ?? "") || a.length - b.length || a.localeCompare(b));
+    const kept: string[] = [];
+    for (const id of ids) {
+      const e = manifest.items[id];
+      delete e.duplicateOf;
+      const match = e.hash
+        ? kept.find((k) => {
+            const o = manifest.items[k];
+            if (!o.hash || o.type !== e.type) return false;
+            if (e.type === "photo") return hamming(o.hash, e.hash as string) <= PHOTO_DUPLICATE_BITS;
+            return hamming(o.hash, e.hash as string) <= VIDEO_DUPLICATE_BITS && Math.abs((o.bytes ?? 0) - (e.bytes ?? 0)) <= 0.05 * Math.max(o.bytes ?? 1, 1);
+          })
+        : undefined;
+      if (match) {
+        e.duplicateOf = match;
+        dupes.push(`${id}  →  same as ${match.split("/").pop()}`);
+        continue;
+      }
+      const repeat = e.hash && e.takenAt
+        ? kept.find((k) => {
+            const o = manifest.items[k];
+            if (!o.hash || !o.takenAt || o.type !== e.type) return false;
+            const gap = Math.abs(Date.parse(e.takenAt as string) - Date.parse(o.takenAt)) / 1000;
+            return gap <= REPEAT_WINDOW_SECONDS && hamming(o.hash, e.hash as string) <= REPEAT_BITS;
+          })
+        : undefined;
+      if (repeat) repeats.push(`${id}  ↔  ${repeat.split("/").pop()}`);
+      kept.push(id);
+    }
+  }
+
   manifest.generatedAt = new Date().toISOString();
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 1) + "\n");
@@ -206,6 +283,14 @@ async function main() {
   if (rows.length) {
     console.log("\nWhat's in each city (capture dates help match football fixtures):");
     for (const [k, c] of rows) console.log(`  ${k.padEnd(28)} ${String(c.photos).padStart(3)} photos ${String(c.videos).padStart(2)} videos   ${c.first ? `${c.first.slice(0, 10)} → ${c.last?.slice(0, 10)}` : "no dates"}`);
+  }
+  if (dupes.length) {
+    console.log(`\nHidden as duplicates (${dupes.length}). To show one anyway, delete its twin from the media folder:`);
+    for (const d of dupes) console.log(`  ${d}`);
+  }
+  if (repeats.length) {
+    console.log(`\nPossible repeats taken seconds apart (${repeats.length}). Check them; hide one with mediaMeta "hidden: true" if they look the same:`);
+    for (const r of repeats) console.log(`  ${r}`);
   }
   if (failed) process.exitCode = 1;
 }
