@@ -81,7 +81,11 @@ education:
     years: 2019 – 2023
 
 skills:
-  Languages: [Java, TypeScript, JavaScript, Kotlin]
-  AWS: [ECS Fargate, Lambda, Step Functions, DynamoDB, API Gateway, NLB / ALB, SQS, S3, CloudWatch, CloudFormation, IAM, Location Service, Fault Injection Simulator, Athena, Glue]
-  Tools & frameworks: [React, GraphQL, gRPC, Cypress, Docker, CDK]
-  Practices: [Distributed systems, Microservices, CI/CD, Feature flags, Chaos engineering, Event-driven architecture, Observability, "Auth (SigV4, TLS, RBAC)"]
+  - group: Languages
+    items: [Java, TypeScript, JavaScript, Kotlin]
+  - group: AWS
+    items: [ECS Fargate, Lambda, Step Functions, DynamoDB, API Gateway, NLB / ALB, SQS, S3, CloudWatch, CloudFormation, IAM, Location Service, Fault Injection Simulator, Athena, Glue]
+  - group: Tools & frameworks
+    items: [React, GraphQL, gRPC, Cypress, Docker, CDK]
+  - group: Practices
+    items: [Distributed systems, Microservices, CI/CD, Feature flags, Chaos engineering, Event-driven architecture, Observability, "Auth (SigV4, TLS, RBAC)"]

@@ -6,28 +6,79 @@ change the same files.
 
 ## The editor
 
+### On your computer (no login)
+
 1. `npm run dev`
-2. In **Chrome**, open <http://localhost:3000/admin/index.html>
-3. Click **Work with Local Repository** and choose the `portfolio` folder.
-4. Edit, then check the result at <http://localhost:3000>. Commit when you're happy
-   (`git add -A && git commit -m "…"`), or turn on *Settings → Developer → Commit Changes to Git*.
+2. In **Chrome**, open <http://localhost:3000/admin/>
+3. Click **Work with Local Repository** and choose the `portfolio` folder (the editor calls it by the
+   GitHub name, `johnojo-me`; it's the same project).
+4. Edit and save, then check the result at <http://localhost:3000>. Saving writes the files on your disk;
+   commit when you're happy (`git add -A && git commit -m "…"`).
 
-Once the site is on GitHub you can also use the editor at `https://johnojo.me/admin/index.html` and
-sign in with GitHub. Only accounts with write access to the repository can save; visitors can't.
+This needs no login because nothing leaves your machine.
 
-## Add a new trip (e.g. Europe 2027)
+### Online, once the site is deployed
 
-1. **Places**: add any city that isn't listed yet (name, country, and the city centre's latitude and
+Open `https://johnojo.me/admin/`. Cloudflare first asks for your email and a one-time PIN (only your
+address is allowed), then the editor asks you to sign in to GitHub, with a token or the
+**Sign in with GitHub** button. Only your GitHub account can save, because the repository is private
+and you're its only collaborator. Every save is a commit to `main`, and the site rebuilds in a minute
+or two. Setup steps: [DEPLOY.md](DEPLOY.md), "The editor online".
+
+### Draft vs published
+
+- **Draft**: you see it on your computer (`npm run dev`, with a "Draft" label). The live site leaves it
+  out completely: no page, no link, no search result.
+- **Published**: live for everyone after the next build.
+- Trips also have **Coming soon**, which currently behaves like Published.
+
+Keep a trip on Draft while you're still travelling; the site never shows where you are right now.
+
+### Add a trip
+
+1. **Places**: add any city that isn't listed yet (city, country, and the city centre's latitude and
    longitude from a map. Leave them blank for a region and it simply won't get a map pin).
-2. **Trips → New Trip**: title `Europe 2027`, year, status **Draft** while you're working on it.
-3. **City visits → New City visit**, once per stop: pick the trip and place, set the stop number
-   (1, 2, 3…) and the type (*City visit*, *Match day only* or *Day trip*).
-4. Drop photos into `~/workspace/johnojo-media/europe-2027/<city>/photos` and run `npm run media`
-   (see [MEDIA.md](MEDIA.md)).
-5. Set the trip to **Published** when it's ready.
+2. **Trips → New Trip**: title (e.g. `Europe 2027`; the web address is made from it on the first save),
+   year, status **Draft**. Dates, theme and introduction can wait.
+3. Save. The trip list, timeline, map, rankings, home page and search update automatically.
 
-The trip list, timeline, map, rankings, home page and search update automatically.
-Never publish a trip while you're still on it; the site doesn't show where you are right now.
+### Add a city visit
+
+1. **City visits → New City visit**.
+2. Pick the **Trip** and the **Place**, and set the **Stop number** (1 for the first city, 2 for the
+   next…). Leave *Type of stop* blank for a normal city, or choose *Match day only* or *Day trip*.
+3. Fill in what you have: *What I did*, *Highlights* (a label like Food on the left, a short line on the
+   right), *Liked*, *Didn't like*, *Would I return?*, *One-line verdict*, and any *Matches*.
+4. Save. The file is named after the trip and place, e.g. `europe-2027--porto.yaml`.
+5. Photos: drop them into `~/workspace/johnojo-media/europe-2027/<city>/photos` and run `npm run media`
+   (see [MEDIA.md](MEDIA.md)).
+
+### Scores
+
+Open the visit, click **Scores**, and fill in the ten categories with whole numbers from 0 to 10.
+Leave any you're unsure about blank: a blank is never counted as zero, and a city joins the rankings
+once all ten are filled in. *Rated on* is the date you scored it.
+
+### Hide a photo, or caption it
+
+Open the visit → **Photo captions and hiding** → add a row. In *Photo or clip* type its name without the
+extension, e.g. `photos/img-1234` or `videos/img-1234` (`npm run status` and the photo folder show the
+names). Then either write a caption and a short description, or switch on **Hide this photo**. The file
+stays on disk; it just isn't shown.
+
+### Write a journal post
+
+**Journal → New Post**: title, one-line summary, category, then the text in **Post** (Markdown, see
+"Journal posts" below). Keep it on **Draft** until it's ready, then set **Published** with
+*Who can read it* on **Public**. The Journal tab only appears on the site once at least one post is
+published and public.
+
+### Good to know
+
+- Blank fields are left out of the file, which the site reads as "not filled in yet".
+- Saving rewrites the whole file in a standard layout and drops `#` comments in it. The values are kept.
+- `npm test` checks the editor against the content rules (`tests/admin-config.test.ts`), so a change to
+  the rules that the editor doesn't know about fails the tests instead of breaking a save.
 
 ## Write about a city
 
@@ -68,9 +119,10 @@ Keep **Who can read it** on *Public*: other tiers are reserved for future member
 ## Résumé, links and career
 
 **About me and career**:
-- *About me and links*: home-page introduction, LinkedIn, public email, and **Résumé PDF** (upload the
-  approved file; the résumé buttons start working straight away).
-- *Career timeline and skills*: add a milestone for each promotion or new role.
+- *About me and links*: home-page introduction, LinkedIn, public email, résumé city. Keep
+  **Résumé PDF** as `/resume.pdf`: the PDF is made from your career timeline by `npm run resume:pdf`.
+- *Career timeline and skills*: a milestone for each promotion or new role, the résumé roles (each with
+  sections; *Started* and *Ended* in YYYY-MM drive "pick a year" on the Work page), education and skills.
 
 ## Projects
 
@@ -81,7 +133,7 @@ Keep **Who can read it** on *Public*: other tiers are reserved for future member
 `npm run status` lists, for every trip and city, the notes, scores, match answers, photos and videos
 that are still to do.
 
-## Draft vs published
+## Where drafts show
 
 | | `npm run dev` | Live site |
 |---|---|---|

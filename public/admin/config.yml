@@ -1,12 +1,19 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.252.0/schema/sveltia-cms.json
 # Editor configuration for johnojo.me (Sveltia CMS).
 # Every form below writes the same YAML / MDX files the site builds from, so nothing here is a separate database.
-# Locally: run `npm run dev`, open http://localhost:3000/admin/index.html in Chrome and choose
-# "Work with Local Repository". Online: sign in with GitHub (or a personal access token).
+# Locally: run `npm run dev`, open http://localhost:3000/admin/ in Chrome and choose
+# "Work with Local Repository". Online: sign in with GitHub (see docs/DEPLOY.md, "The editor online").
+#
+# The fields mirror src/lib/content/schema.ts. tests/admin-config.test.ts fails the test run if the two
+# drift apart (a field missing here, a field the schema doesn't know, required/optional or options that
+# don't match), so when you change the schema, change this file in the same commit.
 
 backend:
   name: github
-  repo: ojo-john/johnojo-me # GitHub repository holding this site; only people with write access can save
+  repo: ojo-john/johnojo-me # private GitHub repository holding this site; only people with write access can save
   branch: main
+  # "Sign in with GitHub" needs a small OAuth relay (docs/DEPLOY.md). Once it exists, uncomment and set:
+  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
 
 media_folder: public/uploads
 public_folder: /uploads
@@ -14,6 +21,11 @@ public_folder: /uploads
 slug:
   encoding: ascii
   clean_accents: true
+
+output:
+  # Leave blank optional fields out of the file instead of writing "" or null. The site treats a missing
+  # field as "not filled in yet", and an empty string would fail checks such as dates and links.
+  omit_empty_optional_fields: true
 
 collections:
   # ---------------------------------------------------------------- Travel
@@ -23,6 +35,7 @@ collections:
     description: One entry per journey. Cities are added under "City visits".
     folder: content/trips
     path: "{{slug}}/trip"
+    slug: "{{title}}"
     format: yaml
     extension: yaml
     identifier_field: title
@@ -30,34 +43,37 @@ collections:
     summary: "{{title}} · {{status}}"
     sortable_fields: [year, title]
     fields:
-      - { name: title, label: Title, hint: "e.g. Europe 2027. The web address is made from this." }
-      - { name: year, label: Year, widget: number, value_type: int }
+      - { name: title, label: Title, hint: "e.g. Europe 2027. The web address is made from this when you first save, and doesn't change after." }
+      - { name: year, label: Year, widget: number, value_type: int, step: -1 }
       - name: status
         label: Status
         widget: select
         default: draft
+        hint: "Draft: only you see it, on your computer. Published: live for everyone. Coming soon is treated like Published for now."
         options:
           - { label: "Draft (hidden)", value: draft }
           - { label: Coming soon, value: coming-soon }
           - { label: Published, value: published }
-      - { name: start, label: Start date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
-      - { name: end, label: End date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: start, label: Start date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+      - { name: end, label: End date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: datesNote, label: Dates note, required: false, hint: "Shown when exact dates aren't known, e.g. Early April 2024" }
       - { name: style, label: Travel style, required: false, hint: "e.g. Solo · birthday trip" }
-      - { name: theme, label: One-line theme, widget: text, required: false }
-      - { name: intro, label: Introduction, widget: text, required: false }
-      - { name: cover, label: Cover photo, required: false, hint: "city/photos/img-1234 (see npm run status for names)" }
+      - { name: theme, label: One-line theme, widget: text, required: false, hint: "One or two sentences that sum up the trip" }
+      - { name: intro, label: Introduction, widget: text, required: false, hint: "A short paragraph at the top of the trip page" }
+      - { name: cover, label: Cover photo, required: false, hint: "city/photos/img-1234 (see npm run status for names). Leave blank to use the first city's cover." }
       - name: awards
         label: Personal awards
         widget: list
         required: false
+        summary: "{{fields.award}}"
         fields:
           - { name: award, label: Award, hint: "e.g. Best food" }
-          - { name: visit, label: City visit id, required: false, hint: "the part after -- in the visit name, e.g. porto" }
+          - { name: visit, label: City visit id, required: false, pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lowercase letters, numbers and hyphens only, e.g. porto"], hint: "the part after -- in the visit name, e.g. porto" }
       - name: verdict
         label: Final verdict
         widget: object
         required: false
+        collapsed: auto
         fields:
           - { name: bestMoment, label: Best moment, widget: text, required: false }
           - { name: biggestSurprise, label: Biggest surprise, widget: text, required: false }
@@ -79,13 +95,15 @@ collections:
     view_groups:
       - { label: Trip, field: trip }
     fields:
-      - { name: trip, label: Trip, widget: relation, collection: trips, value_field: "{{slug}}", search_fields: [title], display_fields: [title] }
-      - { name: destination, label: Place, widget: relation, collection: places, value_field: "{{slug}}", search_fields: [city, country], display_fields: ["{{city}}, {{country}}"] }
+      - { name: trip, label: Trip, widget: relation, collection: trips, value_field: "{{slug}}", search_fields: [title], display_fields: [title], hint: "Pick the trip first. The file name is made from the trip and place when you first save." }
+      - { name: destination, label: Place, widget: relation, collection: places, value_field: "{{slug}}", search_fields: [city, country], display_fields: ["{{city}}, {{country}}"], hint: "Not in the list? Add it under Places first." }
       - { name: order, label: Stop number, widget: number, value_type: int, min: 1, hint: "1 for the first city on the trip, 2 for the next…" }
       - name: kind
         label: Type of stop
         widget: select
+        required: false
         default: city
+        hint: "Leave blank for a normal city visit."
         options:
           - { label: City visit, value: city }
           - { label: Match day only, value: match-only }
@@ -93,19 +111,22 @@ collections:
       - name: status
         label: Status
         widget: select
+        required: false
         default: published
+        hint: "Leave blank to follow the trip. Draft hides just this city, even on a published trip."
         options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
       - { name: photoFolder, label: Photo folder name, required: false, hint: "Only if the media folder isn't named after the city, e.g. nice + french riviera" }
-      - { name: arrive, label: Arrived, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
-      - { name: depart, label: Left, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: arrive, label: Arrived, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+      - { name: depart, label: Left, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: summary, label: What I did, widget: text, required: false, hint: "A few lines in your own words" }
       - name: highlights
         label: Highlights
-        widget: list
+        widget: keyvalue
         required: false
-        fields:
-          - { name: label, label: Label, hint: "Food, Football, Architecture…" }
-          - { name: text, label: Text }
+        key_label: Label
+        value_label: Text
+        label_singular: highlight
+        hint: "Label on the left (Food, Football, Architecture…), a short line on the right."
       - { name: liked, label: Liked, widget: text, required: false }
       - { name: disliked, label: Didn't like, widget: text, required: false }
       - name: wouldReturn
@@ -121,8 +142,9 @@ collections:
         widget: object
         required: false
         collapsed: true
+        hint: "Whole numbers from 0 to 10. A blank score is never counted as zero; the city is ranked once all ten are filled in."
         fields:
-          - { name: ratedOn, label: Rated on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+          - { name: ratedOn, label: Rated on, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
           - name: scores
             label: Scores
             widget: object
@@ -141,29 +163,39 @@ collections:
         label: Matches
         widget: list
         required: false
+        summary: "{{fields.home}} v {{fields.away}}"
         fields:
           - { name: home, label: Home team }
           - { name: away, label: Away team }
           - { name: score, label: Final score, required: false, hint: "e.g. 2–1" }
-          - { name: competition, label: Competition, required: false }
+          - { name: competition, label: Competition, required: false, hint: "e.g. Premier League" }
           - { name: stadium, label: Stadium, required: false }
-          - { name: date, label: Date, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
-          - { name: writeUp, label: Write-up, widget: text, required: false }
-      - { name: cover, label: Cover photo, required: false, hint: "photos/img-1234" }
-      - name: mediaMeta
-        label: Photo captions
+          - { name: date, label: Date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+          - { name: writeUp, label: Write-up, widget: text, required: false, hint: "Your own words about the day" }
+      - { name: cover, label: Cover photo, required: false, hint: "photos/img-1234. Leave blank to use the first photo." }
+      - name: media
+        label: Photo order
         widget: list
         required: false
+        hint: "Usually leave this empty: every photo for the city is shown, oldest first. Only list photos (photos/img-1234) to pick and order them by hand; anything not listed is left out."
+      - name: mediaMeta
+        label: Photo captions and hiding
+        widget: list
+        map_key_field: file
+        required: false
         collapsed: true
+        summary: "{{fields.file}}"
+        hint: "One row per photo or clip you want to caption or hide."
         fields:
-          - { name: file, label: Photo, hint: "photos/img-1234" }
+          - { name: file, label: Photo or clip, hint: "photos/img-1234 or videos/img-1234 (the name without .jpg/.mov)" }
           - { name: caption, label: Caption, required: false }
-          - { name: alt, label: Description for screen readers, required: false }
-          - { name: hidden, label: Hide this photo, widget: boolean, required: false }
+          - { name: alt, label: Description for screen readers, required: false, hint: "What's in the photo, for people who can't see it" }
+          - { name: hidden, label: Hide this photo, widget: boolean, required: false, hint: "Turn on to keep it off the site without deleting it" }
       - name: youtube
         label: YouTube videos (unlisted is fine)
         widget: list
         required: false
+        summary: "{{fields.title}}"
         fields:
           - { name: id, label: Video id, hint: "the part after v= in the YouTube link" }
           - { name: title, label: Title }
@@ -173,16 +205,17 @@ collections:
     label_singular: Place
     description: Every city or region visited, listed once. Add a place before adding a visit to it.
     folder: content/destinations
+    slug: "{{city}}"
     format: yaml
     extension: yaml
     identifier_field: city
     create: true
     summary: "{{city}}, {{country}}"
     fields:
-      - { name: city, label: City or region }
+      - { name: city, label: City or region, hint: "The place's id (used by visits) is made from this when you first save, e.g. St Moritz becomes st-moritz." }
       - { name: country, label: Country }
-      - { name: lat, label: Latitude, widget: number, value_type: float, required: false, hint: "City centre. Leave blank for regions (no map pin)." }
-      - { name: lng, label: Longitude, widget: number, value_type: float, required: false }
+      - { name: lat, label: Latitude, widget: number, value_type: float, min: -90, max: 90, step: -1, required: false, hint: "City centre, from a map (e.g. 41.1579). Leave blank for regions (no map pin)." }
+      - { name: lng, label: Longitude, widget: number, value_type: float, min: -180, max: 180, step: -1, required: false, hint: "e.g. -8.6291. West of Greenwich is negative." }
 
   # ---------------------------------------------------------------- Journal
   - name: journal
@@ -196,27 +229,30 @@ collections:
     summary: "{{title}} · {{status}}"
     sortable_fields: [publishedAt, title]
     fields:
-      - { name: title, label: Title }
+      - { name: title, label: Title, hint: "The web address is made from this when you first save." }
       - { name: dek, label: One-line summary, widget: text }
       - name: category
         label: Category
         widget: select
         options: [Bible Study, Faith, Life Lessons, Essays, Engineering, Travel Reflections]
-      - { name: series, label: Series, required: false }
+      - { name: series, label: Series, required: false, hint: "e.g. Strangers and pilgrims · Part 1" }
       - { name: tags, label: Tags, widget: list, required: false }
       - name: status
         label: Status
         widget: select
         default: draft
+        hint: "The Journal stays hidden from the site until at least one post is Published and Public."
         options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
       - name: visibility
         label: Who can read it
         widget: select
+        required: false
         default: public
         hint: Only Public posts are published for now. The other options are for future memberships.
         options: [{ label: Public, value: public }, { label: Free subscribers (future), value: free }, { label: Paid members (future), value: paid }, { label: Private, value: private }]
-      - { name: publishedAt, label: Published on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
-      - { name: updatedAt, label: Updated on, widget: datetime, time_format: false, format: YYYY-MM-DD, required: false }
+      - { name: publishedAt, label: Published on, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+      - { name: updatedAt, label: Updated on, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+      - { name: sample, label: Sample post, widget: boolean, required: false, hint: "Marks a placeholder post with a Sample label. Leave off for real posts." }
       - { name: footnotes, label: Footnotes, widget: list, required: false, hint: "Mark them in the text with <Fn n={1} />" }
       - { name: questions, label: Study questions, widget: list, required: false }
       - name: body
@@ -232,6 +268,7 @@ collections:
     label: Projects
     label_singular: Project
     folder: content/projects
+    slug: "{{name}}"
     format: yaml
     extension: yaml
     identifier_field: name
@@ -239,7 +276,7 @@ collections:
     summary: "{{name}} · {{status}}"
     fields:
       - { name: name, label: Name }
-      - { name: order, label: Display order, widget: number, value_type: int }
+      - { name: order, label: Display order, widget: number, value_type: int, hint: "1 is shown first" }
       - name: status
         label: Status
         widget: select
@@ -250,18 +287,20 @@ collections:
       - { name: summary, label: Summary, widget: text }
       - { name: problem, label: Problem, widget: text }
       - { name: approach, label: Approach, widget: text }
-      - { name: stack, label: Tech stack, widget: list }
-      - { name: repo, label: GitHub link, required: false }
-      - { name: repoNote, label: Note when there's no public link, required: false }
-      - { name: demo, label: Live app link, required: false }
+      - { name: stack, label: Tech stack, widget: list, hint: "One technology per item, e.g. Next.js 16" }
+      - { name: repo, label: GitHub link, type: url, required: false, hint: "Full link, e.g. https://github.com/ojo-john/codequest. Leave blank if the code is private." }
+      - { name: repoNote, label: Note when there's no public link, required: false, hint: "e.g. Private repository" }
+      - { name: demo, label: Live app link, type: url, required: false, hint: "Full link starting with https://" }
       - { name: demoNote, label: Note next to the live link, required: false, hint: "e.g. Sign-in required" }
       - name: diagram
         label: Data path diagram steps
         widget: list
         required: false
+        summary: "{{fields.label}}"
+        hint: "The boxes of the diagram on the project page, in order from left to right."
         fields:
-          - { name: label, label: Step }
-          - { name: note, label: What it does, widget: text }
+          - { name: label, label: Step, hint: "Short name, e.g. Browser editor" }
+          - { name: note, label: What it does, widget: text, hint: "One sentence" }
 
   - name: settings
     label: About me and career
@@ -275,11 +314,12 @@ collections:
           - { name: company, label: Company }
           - { name: level, label: Level, required: false }
           - { name: intro, label: Home page introduction, widget: text }
-          - { name: github, label: GitHub URL }
-          - { name: linkedin, label: LinkedIn URL, required: false }
-          - { name: email, label: Public contact email, required: false }
-          - { name: resume, label: Résumé PDF, widget: file, required: false, hint: "Upload the approved PDF" }
-          - { name: domain, label: Domain }
+          - { name: github, label: GitHub URL, type: url }
+          - { name: linkedin, label: LinkedIn URL, type: url, required: false }
+          - { name: email, label: Public contact email, type: email, required: false, hint: "Leave blank to show no email on the site" }
+          - { name: resume, label: Résumé PDF, required: false, hint: "Keep as /resume.pdf. The PDF is made from your career timeline by npm run resume:pdf. Leave blank to hide the résumé buttons." }
+          - { name: location, label: City on the résumé, required: false, hint: "City and state only, e.g. Dallas, TX. Never a street address." }
+          - { name: domain, label: Domain, hint: "johnojo.me" }
       - name: experience
         label: Career timeline and skills
         file: content/experience.yaml
@@ -287,16 +327,52 @@ collections:
           - name: milestones
             label: Milestones
             widget: list
+            summary: "{{fields.label}} · {{fields.title}}"
+            hint: "One per new role or promotion, oldest first."
             fields:
-              - { name: date, label: Date, hint: "YYYY-MM" }
-              - { name: label, label: Label, hint: "e.g. Aug 2025" }
+              - { name: date, label: Date, pattern: ["^\\d{4}-\\d{2}(-\\d{2})?$", "Use YYYY-MM, e.g. 2025-10"], hint: "YYYY-MM, e.g. 2025-10" }
+              - { name: label, label: Label, hint: "e.g. Oct 2025" }
               - { name: title, label: Title }
               - { name: detail, label: Detail }
-              - { name: body, label: More detail, widget: text, required: false }
+              - { name: body, label: More detail, widget: text, required: false, hint: "Shown when that year is picked on the Work page" }
           - { name: achievementsNote, label: Note under the timeline, widget: text }
+          - name: roles
+            label: Roles (résumé)
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.title}} · {{fields.org}}"
+            hint: "Newest first. Each role can have sections, one per project or chapter of that job."
+            fields:
+              - { name: title, label: Job title }
+              - { name: org, label: Company }
+              - { name: dates, label: Dates as shown, hint: "e.g. Jul 2023 – Present" }
+              - { name: location, label: Location, required: false, hint: "City only, e.g. Dallas, TX" }
+              - { name: note, label: Note, widget: text, required: false, hint: "e.g. Promoted to SDE II Oct 2025" }
+              - name: sections
+                label: Sections
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: title, label: Title, hint: "e.g. Platform Migration · Technical Lead" }
+                  - { name: dates, label: Dates as shown, required: false, hint: "e.g. Oct 2025 – Present" }
+                  - { name: start, label: Started, required: false, pattern: ["^\\d{4}-\\d{2}$", "Use YYYY-MM, e.g. 2023-07"], hint: "YYYY-MM. Used by \"pick a year\" on the Work page." }
+                  - { name: end, label: Ended, required: false, pattern: ["^\\d{4}-\\d{2}$", "Use YYYY-MM, e.g. 2025-10"], hint: "YYYY-MM. Leave blank if you're still doing it." }
+                  - { name: bullets, label: Bullet points, widget: list, field: { name: bullet, label: Bullet point, widget: text } }
+          - name: education
+            label: Education
+            widget: list
+            required: false
+            summary: "{{fields.school}}"
+            fields:
+              - { name: school, label: School }
+              - { name: degree, label: Degree }
+              - { name: years, label: Years, hint: "e.g. 2019 – 2023" }
           - name: skills
             label: Skills
             widget: list
+            summary: "{{fields.group}}"
             fields:
-              - { name: group, label: Group }
+              - { name: group, label: Group, hint: "e.g. Languages" }
               - { name: items, label: Skills, widget: list }
