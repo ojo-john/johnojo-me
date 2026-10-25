@@ -44,7 +44,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
           <div className="row" role="group" aria-label={group} key={group}>
             <span className="kicker">{group}</span>
             {items.map((s) => (
-              <button key={s} className="chip" type="button" style={{ ["--pill" as string]: "var(--work)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
+              <button key={s} className="chip" type="button" data-track={`skill: ${s}`} style={{ ["--pill" as string]: "var(--work)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
                 {s}
               </button>
             ))}

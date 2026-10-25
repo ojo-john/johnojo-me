@@ -23,6 +23,8 @@ Static build on **Cloudflare Pages** (free), photos and clips on **Cloudflare R2
    - Output directory: `out`
    - Environment variables: `NODE_VERSION=24`, `MEDIA_BASE_URL=https://media.johnojo.me`,
      and (optional) `NEXT_PUBLIC_CF_BEACON_TOKEN` for Web Analytics.
+   - The `functions/` folder (the site-metrics API) is deployed automatically with the site. It stays
+     switched off until you do the steps in [METRICS.md](METRICS.md).
 4. **Domain**: Pages project → Custom domains → add `johnojo.me` (and `www.johnojo.me`). Because the
    domain is registered with Cloudflare, DNS and HTTPS are set up automatically.
 5. **Budget alerts**: Billing → Notifications → set an alert on R2 usage, so nothing is ever charged
@@ -43,6 +45,7 @@ Static build on **Cloudflare Pages** (free), photos and clips on **Cloudflare R2
 | Pages hosting, builds, HTTPS | free tier (500 builds/month) |
 | R2 storage | free up to 10 GB a month, then usage-based; no charge for people viewing |
 | Web Analytics | free |
+| Site metrics (Pages Functions + Analytics Engine) | free tier (100,000 function requests and events a day) |
 
 ## The editor online (owner-only)
 
@@ -139,4 +142,7 @@ reach it anyway.
   because Cloudflare would otherwise apply both and block the editor) and is excluded from search engines.
 - Only GitHub accounts with write access to the repo can save through the editor, and Cloudflare Access
   keeps everyone else from loading it (see "The editor online" above).
-- No secrets are in the repo: R2 keys live in `.env.local` (git-ignored) and in Cloudflare's settings.
+- No secrets are in the repo: R2 keys live in `.env.local` (git-ignored) and in Cloudflare's settings,
+  and the metrics API token is a Pages secret.
+- `/api/metrics` sits behind the same Cloudflare Access application as `/admin/*`, and checks the Access
+  token itself, so it stays closed even if the Access app were removed (see [METRICS.md](METRICS.md)).

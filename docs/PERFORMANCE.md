@@ -15,6 +15,10 @@ under the Pages project's analytics.
 
 Targets (75th percentile of real visits): **LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1**.
 
+Which buttons and links people use is counted separately by the site's own metrics, shown at
+`/admin/metrics/` ([METRICS.md](METRICS.md)). Its tracker adds under 1 KB of JavaScript (compressed)
+to the shared bundle, and only runs when the build sets `NEXT_PUBLIC_METRICS=1`.
+
 ## 2. Every change: Lighthouse lab checks
 
 ```

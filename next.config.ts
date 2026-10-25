@@ -22,12 +22,16 @@ const nextConfig: NextConfig = {
 };
 
 /**
- * The editor lives in public/admin/index.html. Static hosts serve it at /admin/, but `next dev` only
- * serves public files at their exact path, so in development only, /admin and /admin/ are pointed at
- * the file. Static export ignores rewrites (Next prints a one-line warning about that in dev; it's
- * expected), and the production build never sees this.
+ * The editor lives in public/admin/index.html (and the metrics page in public/admin/metrics/). Static
+ * hosts serve them at /admin/, but `next dev` only serves public files at their exact path, so in
+ * development only, those folder addresses are pointed at their index.html. Static export ignores
+ * rewrites (Next prints a one-line warning about that in dev; it's expected), and the production build
+ * never sees this.
  */
-const devEditorRewrite: NextConfig["rewrites"] = async () => [{ source: "/admin/", destination: "/admin/index.html" }];
+const devEditorRewrite: NextConfig["rewrites"] = async () => [
+  { source: "/admin/", destination: "/admin/index.html" },
+  { source: "/admin/metrics/", destination: "/admin/metrics/index.html" },
+];
 
 export default function config(phase: string): NextConfig {
   return phase === PHASE_DEVELOPMENT_SERVER ? { ...nextConfig, rewrites: devEditorRewrite } : nextConfig;
