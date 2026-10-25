@@ -1,6 +1,6 @@
 name: CodeQuest
 order: 2
-status: draft
+status: published
 kind: project
 stage: In progress
 summary: I turned my own Java interview prep into a game. You solve challenges by writing real Java in the browser, and it runs in an isolated sandbox and gets graded instantly.
@@ -9,3 +9,5 @@ approach: Code runs in a locked-down sandbox built from a pinned runner image, J
 stack: [Next.js 16, TypeScript, Supabase / PostgreSQL, Vercel Sandbox, Vitest]
 repo: null
 repoNote: Private repository
+demo: https://codequest-zeta-self.vercel.app
+demoNote: Sign-in required

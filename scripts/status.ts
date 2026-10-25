@@ -54,8 +54,10 @@ for (const [trip, list] of [...byTrip.entries()].sort()) {
     const story = section(md, "What I did") || (v.summary as string);
     if (kind === "match-only") {
       const qs = ["Where did you sit", "atmosphere in three words", "Best moment of the match", "Off the pitch", "First time at this stadium", "Would you go back"];
+      // A first-person write-up already on the site covers the questions.
+      const personal = ((v.matches as { writeUp?: string }[] | undefined) ?? []).some((m) => /\b(I|I'm|I've|my)\b/.test(m.writeUp ?? ""));
       const open = qs.filter((q) => !answered(md, q));
-      if (open.length) missing.push(`match questions unanswered: ${open.length} of ${qs.length}`);
+      if (open.length && !personal) missing.push(`match questions unanswered: ${open.length} of ${qs.length}`);
     } else {
       if (!story) missing.push("\"What I did\" notes");
       const scores = (md.match(/^(Food|Affordability|Public|Walkability|Architecture|Culture|People|Attractions|Safety|Overall)[^:\n]*:[ \t]*\S+/gm) ?? []).length;

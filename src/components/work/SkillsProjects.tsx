@@ -16,6 +16,7 @@ export interface ProjectView {
   repo: string | null;
   repoNote?: string;
   demo: string | null;
+  demoNote?: string;
   diagram: { label: string; note: string }[];
 }
 
@@ -92,8 +93,9 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
                         <>
                           {" · "}
                           <a href={p.demo} target="_blank" rel="noopener noreferrer">
-                            Live demo ↗
+                            Live app ↗
                           </a>
+                          {p.demoNote ? <span style={{ color: "var(--ink-2)" }}> ({p.demoNote.toLowerCase()})</span> : null}
                         </>
                       ) : null}
                     </dd>

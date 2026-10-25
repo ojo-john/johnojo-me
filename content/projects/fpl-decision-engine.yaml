@@ -1,7 +1,6 @@
-# Draft until you approve the wording. Drafts only appear in local previews.
 name: FPL Decision Engine
 order: 1
-status: draft
+status: published
 kind: case-study
 stage: In progress · Milestone 1
 summary: A decision-support system for a Fantasy Premier League manager in a head-to-head league. It ingests player and fixture data, versions the game's rules and won't make recommendations from bad data.
@@ -10,6 +9,8 @@ approach: A resilient API client with retries and health classification, version
 stack: [Python 3.12, FastAPI, SQLAlchemy 2.0, Alembic, PostgreSQL, Next.js, Docker Compose, GitHub Actions]
 repo: null
 repoNote: Private repository
+demo: https://fpl-decision-engine-chi.vercel.app
+demoNote: Sign-in required
 diagram:
   - { label: FPL public API, note: "External, rate-limited and occasionally inconsistent." }
   - { label: Resilient client, note: "Retries with backoff, health classification and response fingerprinting." }

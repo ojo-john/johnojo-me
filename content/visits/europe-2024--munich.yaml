@@ -1,7 +1,6 @@
 trip: europe-2024
 destination: munich
 order: 8
-kind: match-only
 arrive: 2024-04-17
 matches:
   - home: Bayern Munich
@@ -11,6 +10,9 @@ matches:
     stadium: Allianz Arena
     date: 2024-04-17
     writeUp: Joshua Kimmich's header just after the hour sent Bayern into the semi-finals, 3–2 on aggregate.
+highlights:
+  Football: Bayern v Arsenal in the Champions League
+  Sightseeing: Marienplatz and the New Town Hall
 cover: photos/img-1006
 mediaMeta:
   photos/img-1006: { caption: "Allianz Arena", alt: "The Allianz Arena pitch with the Champions League logo at the centre circle" }

@@ -4,9 +4,16 @@ destination: nice
 order: 1
 arrive: 2024-04-03
 depart: 2024-04-06
+summary: Nice is one of my top three cities. The food was amazing and the setting is very romantic. Touring the French Riviera was a highlight, and Monaco was top of my list. The views, the culture, seeing the F1 track, the cars and the yachts.
 highlights:
   Day trip: Èze and Monaco on the French Riviera
   Food: No Diet Club food tour
+wouldReturn:
+  answer: "yes"
+  why: Definitely, but next time with a significant other.
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 9, value: 7, transport: 7, walkability: 8, architecture: 8, culture: 8, people: 8, attractions: 8, safety: 9, enjoyment: 9 }
 cover: photos/img-0273
 mediaMeta:
   photos/b7624b06-3272-440b-a12b-c883d03bbf15: { caption: Basilique Notre-Dame de Nice, alt: "The twin-towered Basilica of Notre-Dame in Nice at dusk" }

@@ -253,7 +253,8 @@ collections:
       - { name: stack, label: Tech stack, widget: list }
       - { name: repo, label: GitHub link, required: false }
       - { name: repoNote, label: Note when there's no public link, required: false }
-      - { name: demo, label: Live demo link, required: false }
+      - { name: demo, label: Live app link, required: false }
+      - { name: demoNote, label: Note next to the live link, required: false, hint: "e.g. Sign-in required" }
       - name: diagram
         label: Data path diagram steps
         widget: list

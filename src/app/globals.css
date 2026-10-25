@@ -438,8 +438,9 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 .roles details[open] summary::after { content: "–"; }
 .roles ul { margin: 10px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
 @media (max-width: 640px) { .resume-head { grid-template-columns: minmax(0, 1fr); } .resume-head .btn { grid-row: auto; grid-column: auto; justify-self: start; } .resume-skills div { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+/* @page must sit at the top level; nested inside @media it breaks every rule after it. */
+@page { size: Letter; margin: 0.55in 0.6in; }
 @media print {
-  @page { size: Letter; margin: 0.55in 0.6in; }
   .top, footer.foot, .skip, .no-print, .prog { display: none !important; }
   main { padding-top: 0; }
   body { background: #fff; font-size: 11pt; }
@@ -451,3 +452,8 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
   .resume-skills { font-size: 9.6pt; }
   .resume-role-block, .resume-section { break-inside: avoid-page; }
 }
+.clips { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.clips button { position: relative; aspect-ratio: 1; padding: 0; border: 2px solid var(--ink); background: var(--ink); overflow: hidden; cursor: pointer; transition: transform var(--t-quick) var(--spring); }
+.clips button:hover { transform: rotate(-2deg) scale(1.04); }
+.clips img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+.clips span { position: absolute; left: 8px; bottom: 8px; width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: var(--ink); display: grid; place-items: center; font-size: 12px; }

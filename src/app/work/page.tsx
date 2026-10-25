@@ -101,6 +101,7 @@ export default function WorkPage() {
           repo: p.repo,
           repoNote: p.repoNote,
           demo: p.demo,
+          demoNote: p.demoNote,
           diagram: p.diagram,
         }))}
       />

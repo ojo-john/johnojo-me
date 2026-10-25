@@ -175,6 +175,8 @@ export const project = z.object({
   repo: z.string().url().nullable(),
   repoNote: z.string().optional(),
   demo: z.string().url().nullable().default(null),
+  /** Shown next to the live link, e.g. "Sign-in required". */
+  demoNote: z.string().optional(),
   diagram: z.array(z.object({ label: z.string(), note: z.string() })).default([]),
 });
 export type Project = z.infer<typeof project>;
