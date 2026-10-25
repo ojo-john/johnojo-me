@@ -3,6 +3,10 @@ destination: ghent
 order: 4
 kind: day-trip
 arrive: 2024-04-09
+summary: Same as Brussels. Great waffles and chocolate, but a bit boring, and nothing really stood out.
+wouldReturn:
+  answer: "yes"
+  why: Just for the waffles and chocolate.
 cover: photos/img-0512
 mediaMeta:
   photos/img-0512: { caption: "St Bavo's Cathedral, Ghent", alt: "The tower of St Bavo's Cathedral in Ghent" }

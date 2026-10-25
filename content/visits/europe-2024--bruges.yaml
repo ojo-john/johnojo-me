@@ -3,6 +3,10 @@ destination: bruges
 order: 3
 kind: day-trip
 arrive: 2024-04-09
+summary: Same as Brussels. Great waffles and chocolate, but a bit boring, and nothing really stood out.
+wouldReturn:
+  answer: "yes"
+  why: Just for the waffles and chocolate.
 cover: photos/img-0528
 mediaMeta:
   photos/img-0528: { caption: "Church of Our Lady, Bruges", alt: "The brick spire of the Church of Our Lady in Bruges under a cloudy sky" }

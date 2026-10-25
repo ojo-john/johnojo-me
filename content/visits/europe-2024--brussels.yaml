@@ -2,6 +2,12 @@ trip: europe-2024
 destination: brussels
 order: 5
 arrive: 2024-04-10
+summary: Brussels was okay. The chocolates and waffles were amazing, but it was a bit boring and nothing really stood out. The best thing about Belgium was the waffles and chocolate, and I'd travel back just for those.
+liked: The chocolate and the waffles.
+disliked: A bit boring; nothing really stood out.
+wouldReturn:
+  answer: "yes"
+  why: Just for the waffles and chocolate.
 highlights:
   Food: Chocolate, beer, waffle and whiskey tour
 cover: photos/img-0587
