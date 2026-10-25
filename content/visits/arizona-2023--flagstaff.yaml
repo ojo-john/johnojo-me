@@ -1,0 +1,7 @@
+trip: arizona-2023
+destination: flagstaff
+order: 2
+kind: day-trip
+summary: "We did an outdoor course in Flagstaff."
+highlights:
+  Activities: An outdoor course
