@@ -219,8 +219,9 @@ export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug)
 
 /**
  * The Journal stays hidden (no nav tab, home panel, footer link or sitemap entry, and noindex on its
- * pages) until at least one post is public. Drafts count in dev, so a draft can be previewed locally.
+ * pages) until at least one real post is published and public. Drafts and samples never open it, even
+ * in dev, so the local preview matches the live site; a draft can still be previewed at /journal/<slug>/.
  */
 export function journalIsOpen(): boolean {
-  return getPosts().length > 0;
+  return getPosts().some((p) => p.status === "published" && p.visibility === "public" && !p.sample);
 }
