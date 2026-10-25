@@ -3,24 +3,20 @@ destination: barcelona
 order: 1
 arrive: 2026-10-16
 depart: 2026-10-19
-summary: >-
-  Barcelona was amazing, and way better than Madrid. The food was good and the people were friendly.
-  I got a bit lost a couple of times, but I learnt quickly, and it's extremely walkable. My first night
-  was great, watching a flamenco show. I love learning about cultures. I also learnt how to make paella
-  at a cooking class, which was a good experience.
+summary: "Barcelona was amazing, way better than Madrid. Good food, friendly people, and it's so walkable. I got lost a couple of times but figured it out quickly. My first night was a flamenco show, which was great. I love learning about other cultures. I also learnt to make paella at a cooking class, which was a really good experience."
 highlights:
   Culture: A flamenco show on my first night
   Food: Learning to make paella at a cooking class
   Sights: Park Güell and the Sagrada Família
-liked: Good food, friendly people, and it's extremely walkable.
-disliked: I got lost a couple of times at first, and the Espanyol game was very boring.
+liked: "Good food, friendly people and how walkable it is."
+disliked: "Getting lost a couple of times early on, and a very boring Espanyol game."
 matches:
   - home: Espanyol
     away: Atlético Madrid
     score: 0–1
     competition: La Liga
     date: 2026-10-17
-    writeUp: The Espanyol game was very boring. Atlético won it with an 89th-minute goal from Álex Baena off the bench.
+    writeUp: "Very boring game. Atlético won it with an 89th-minute goal from Álex Baena off the bench."
 cover: photos/img-0660
 mediaMeta:
   photos/img-0660: { caption: "Park Güell", alt: "John at a lookout in Park Güell with the city behind him" }

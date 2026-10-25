@@ -10,7 +10,7 @@ matches:
     competition: Ligue 1
     stadium: Parc des Princes
     date: 2024-04-06
-    writeUp: My first time at the Parc des Princes, and I went solo. Honestly, it was a flat game. Clermont led at half-time and PSG only equalised through Gonçalo Ramos in the 85th minute. Getting there was easy, though.
+    writeUp: "My first time at the Parc des Princes, and I went on my own. Honestly, it was a flat game. Clermont led at half-time and PSG only equalised through Gonçalo Ramos in the 85th minute. At least getting there was easy."
 cover: photos/img-0398
 mediaMeta:
   photos/img-0398: { caption: "Parc des Princes", alt: "John in the stands at the Parc des Princes during PSG v Clermont" }

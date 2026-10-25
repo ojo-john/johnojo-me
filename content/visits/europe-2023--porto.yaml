@@ -3,13 +3,13 @@ destination: porto
 order: 2
 arrive: 2023-05-27
 depart: 2023-05-29
-summary: Back to Porto, and just as good the second time. The food, the weather, easy transport and welcoming people. I edge it a little ahead of Lisbon.
-liked: The food, the weather, easy transport and welcoming people.
+summary: "Back in Porto. The food, the weather, the transport and the people were still great, just not quite as good as my first visit. I still edge Porto a little ahead of Lisbon."
+liked: "Good food, good weather, easy transport and welcoming people."
 highlights:
   Football: Estádio do Dragão, home of FC Porto
 wouldReturn:
   answer: "yes"
-  why: Still great, though not quite as good as my first time in 2022.
+  why: "Still great, just not quite as good as my first time in 2022."
 rating:
   ratedOn: 2026-10-25
   scores: { food: 8, value: 8, transport: 8, walkability: 8, architecture: 6, culture: 8, people: 8, attractions: 7, safety: 7, enjoyment: 8 }

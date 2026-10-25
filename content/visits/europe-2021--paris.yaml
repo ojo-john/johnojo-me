@@ -3,8 +3,8 @@ destination: paris
 order: 1
 arrive: 2021-12-17
 depart: 2021-12-18
-summary: My first time travelling, with my sisters. We did the Eiffel Tower and Disneyland Paris. Honestly, it wasn't the best experience. Paris wasn't what I'd expected.
-disliked: It felt dirty and smelly, and not what I'd pictured.
+summary: "My first trip abroad, with my sisters. We did the Eiffel Tower and Disneyland Paris. Honestly, Paris wasn't what I expected, and it wasn't the best experience."
+disliked: "It felt dirty and smelly, nothing like the Paris I'd pictured."
 highlights:
   Disneyland Paris: Sleeping Beauty Castle at Christmas
   Eiffel Tower: A clear blue December day on the Champ de Mars

@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  // The build cache missed edits to globals.css twice (it shipped the previous stylesheet), so
+  // production builds always start clean. Builds take a few seconds longer; correctness wins.
+  experimental: { turbopackFileSystemCacheForBuild: false },
   turbopack: {
     rules: {
       "*.css": {

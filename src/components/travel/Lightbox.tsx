@@ -67,7 +67,7 @@ export function Lightbox({ lb }: { lb: ReturnType<typeof useLightbox> }) {
           </div>
           <div className="lb-img">
             {item.type === "video" ? (
-              <video key={item.id} src={item.src} poster={item.poster || undefined} controls autoPlay playsInline width={item.w} height={item.h} aria-label={item.caption ?? item.alt} style={{ maxWidth: "100%", maxHeight: "100%" }} />
+              <video key={item.id} src={item.src} poster={item.poster || undefined} controls autoPlay playsInline width={item.w} height={item.h} aria-label={item.caption ?? item.alt} />
             ) : (
               // eslint-disable-next-line @next/next/no-img-element -- pre-optimised full-size variant
               <img key={item.id} src={fullSize(item)} width={item.w} height={item.h} alt={item.alt} />

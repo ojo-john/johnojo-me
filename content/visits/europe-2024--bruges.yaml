@@ -3,7 +3,7 @@ destination: bruges
 order: 3
 kind: day-trip
 arrive: 2024-04-09
-summary: Same as Brussels. Great waffles and chocolate, but a bit boring, and nothing really stood out.
+summary: "Much like Brussels. Great waffles and chocolate, but a bit boring, and nothing really stood out."
 wouldReturn:
   answer: "yes"
   why: Just for the waffles and chocolate.
