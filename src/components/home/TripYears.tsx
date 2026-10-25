@@ -20,7 +20,7 @@ export function TripYears({ trips }: { trips: TripSummary[] }) {
     <>
       <div className="ynodes" role="group" aria-label="Trips">
         {trips.map((x) => (
-          <button key={x.slug} className="ynode" type="button" aria-pressed={x.slug === sel} onClick={() => setSel(x.slug)}>
+          <button key={x.slug} className="ynode" type="button" data-track={`trip year: ${x.slug}`} aria-pressed={x.slug === sel} onClick={() => setSel(x.slug)}>
             <b>{x.title}</b>
             <span>
               {x.cities.length} {x.cities.length === 1 ? "stop" : "stops"}

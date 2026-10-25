@@ -55,7 +55,7 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
               ["then-now", "Then vs now"],
             ] as const
           ).map(([k, l]) => (
-            <button key={k} role="tab" type="button" aria-selected={tab === k} onClick={() => setTab(k)}>
+            <button key={k} role="tab" type="button" data-track={`rankings: ${k}`} aria-selected={tab === k} onClick={() => setTab(k)}>
               {l}
             </button>
           ))}

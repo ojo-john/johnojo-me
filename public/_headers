@@ -11,7 +11,11 @@
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 
-# The editor loads its app from unpkg and talks to GitHub, so it gets its own, wider policy.
+# The editor (Sveltia CMS) loads its app from unpkg, its fonts from jsDelivr and talks to GitHub, so it gets
+# its own policy. Cloudflare joins headers from every matching rule, and two CSP headers both apply (the
+# strictest wins), so the site-wide policy is detached first with "!". Sign-in with GitHub opens a popup
+# on the OAuth relay and answers by postMessage, so the relay's origin needs no entry here.
 /admin/*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.github.com https://github.com https://unpkg.com https://*.githubusercontent.com; frame-ancestors 'none'
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; media-src 'self' blob:; frame-src blob:; worker-src blob:; manifest-src blob:; connect-src 'self' blob: data: https://unpkg.com https://api.github.com https://www.githubstatus.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
   X-Robots-Tag: noindex

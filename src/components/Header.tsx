@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@/lib/metrics/track";
 
 export interface JumpItem {
   label: string;
@@ -76,7 +77,7 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
             ))}
           </nav>
           <div className="top-r">
-            <button className="find" type="button" onClick={() => setPalOpen(true)} aria-label="Search and jump to (press slash)">
+            <button className="find" type="button" data-track="jump to: open" onClick={() => setPalOpen(true)} aria-label="Search and jump to (press slash)">
               <span className="ico" aria-hidden="true">
                 ⌕
               </span>
@@ -86,7 +87,7 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
             <a className="btn gh" href={site.github} target="_blank" rel="noopener noreferrer">
               GitHub ↗
             </a>
-            <button className="btn fill" type="button" onClick={() => cvRef.current?.showModal()}>
+            <button className="btn fill" type="button" data-track="résumé: open" onClick={() => cvRef.current?.showModal()}>
               Résumé
             </button>
           </div>
@@ -166,6 +167,8 @@ function Palette({ open, onClose, items, onResume }: { open: boolean; onClose: (
   const run = useCallback(
     (item: JumpItem | undefined) => {
       if (!item) return;
+      // Counted here rather than on click, so choosing with Enter counts too. The typed query never is.
+      track(`jump to: ${item.hint} · ${item.label}`);
       onClose();
       if (item.href === "#resume") return onResume();
       if (item.external) return window.open(item.href, "_blank", "noopener");

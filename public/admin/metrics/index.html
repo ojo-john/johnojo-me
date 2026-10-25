@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Site metrics · johnojo.me</title>
+    <style>
+      :root { --bg: #f1f0eb; --card: #fff; --ink: #1d1d1b; --ink-2: #5e5d58; --line: #dcdad2; --bar: #2f5d50; --bar-2: #c9d8d2; }
+      @media (prefers-color-scheme: dark) { :root { --bg: #161615; --card: #20201e; --ink: #ecebe6; --ink-2: #a5a39b; --line: #34332f; --bar: #7fb8a6; --bar-2: #2f4640; } }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
+      header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+      h1 { font-size: 26px; margin: 0; }
+      h2 { font-size: 15px; margin: 0 0 10px; color: var(--ink-2); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+      a { color: inherit; }
+      .range button { font: inherit; padding: 6px 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; cursor: pointer; }
+      .range button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 16px; }
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; min-width: 0; }
+      .tiles { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 20px; }
+      .tile b { display: block; font-size: 30px; font-variant-numeric: tabular-nums; }
+      .tile span { color: var(--ink-2); }
+      svg { display: block; width: 100%; height: 160px; }
+      table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      td { padding: 5px 0; border-top: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+      td:last-child { text-align: right; padding-left: 12px; white-space: nowrap; }
+      .meter { height: 4px; background: var(--bar-2); border-radius: 2px; margin-top: 3px; }
+      .meter i { display: block; height: 100%; background: var(--bar); border-radius: 2px; }
+      .empty { color: var(--ink-2); }
+      .notice { margin-top: 20px; }
+      .muted { color: var(--ink-2); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Site metrics</h1>
+        <div class="range" role="group" aria-label="Period">
+          <button type="button" data-days="7" aria-pressed="false">Last 7 days</button>
+          <button type="button" data-days="30" aria-pressed="true">Last 30 days</button>
+        </div>
+      </header>
+      <p class="muted">Counts only: no cookies, no personal data. Visitors with Do Not Track or Global Privacy Control are never counted. <a href="/admin/">Back to the editor</a></p>
+      <div id="status" class="card notice" hidden></div>
+      <div id="report" hidden>
+        <div class="tiles">
+          <div class="card tile"><b id="t-views">0</b><span>page views</span></div>
+          <div class="card tile"><b id="t-clicks">0</b><span>clicks</span></div>
+          <div class="card tile"><b id="t-pages">0</b><span>pages viewed</span></div>
+        </div>
+        <div class="card" style="margin-top: 16px">
+          <h2>Page views per day</h2>
+          <svg id="daily" role="img" aria-label="Page views per day"></svg>
+          <p class="muted" id="daily-range"></p>
+        </div>
+        <div class="grid">
+          <section class="card"><h2>Top pages</h2><table id="pages"></table></section>
+          <section class="card"><h2>Buttons and links clicked</h2><table id="clicks"></table></section>
+          <section class="card"><h2>Links followed</h2><table id="links"></table></section>
+          <section class="card"><h2>Where visitors came from</h2><table id="referrers"></table></section>
+        </div>
+        <p class="muted" id="generated"></p>
+      </div>
+    </main>
+    <script src="metrics.js"></script>
+  </body>
+</html>

@@ -41,7 +41,8 @@ export { CATEGORIES, type CategoryKey };
 const score = z.number().int().min(0).max(10).nullable();
 export const rating = z.object({
   ratedOn: isoDate.optional(),
-  scores: z.object(Object.fromEntries(CATEGORIES.map((c) => [c.key, score.optional()])) as Record<CategoryKey, z.ZodOptional<typeof score>>),
+  /** No scores yet is the same as "not rated"; the editor leaves the block out when every score is blank. */
+  scores: z.object(Object.fromEntries(CATEGORIES.map((c) => [c.key, score.optional()])) as Record<CategoryKey, z.ZodOptional<typeof score>>).default({}),
   notes: z.record(z.string(), z.string()).optional(),
   tieBreakNote: z.string().optional(),
 });
@@ -134,10 +135,11 @@ export const site = z.object({
   level: z.string().optional(),
   intro: z.string(),
   github: z.string().url(),
-  linkedin: z.string().url().nullable(),
-  email: z.string().email().nullable(),
+  /** Null or left out (the editor leaves blank fields out) both mean "not shown". */
+  linkedin: z.string().url().nullable().default(null),
+  email: z.string().email().nullable().default(null),
   /** Path under /public, e.g. "/resume.pdf". Null until an approved résumé exists. */
-  resume: z.string().nullable(),
+  resume: z.string().nullable().default(null),
   /** City shown on the résumé page. Never a street address. */
   location: z.string().nullable().default(null),
   domain: z.string(),
@@ -187,7 +189,7 @@ export const project = z.object({
   problem: z.string(),
   approach: z.string(),
   stack: z.array(z.string()),
-  repo: z.string().url().nullable(),
+  repo: z.string().url().nullable().default(null),
   repoNote: z.string().optional(),
   demo: z.string().url().nullable().default(null),
   /** Shown next to the live link, e.g. "Sign-in required". */

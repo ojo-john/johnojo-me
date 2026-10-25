@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, DM_Mono, Figtree, Source_Serif_4 } from "next/font
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header, type JumpItem } from "@/components/Header";
+import { Metrics } from "@/components/Metrics";
 import { Reveal } from "@/components/Reveal";
 import { getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
 import "./globals.css";
@@ -56,6 +57,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer site={site} journal={journal} />
         <Reveal />
         <Analytics />
+        {/* Own page-view and click counts (docs/METRICS.md). Off unless the build sets NEXT_PUBLIC_METRICS=1. */}
+        {process.env.NEXT_PUBLIC_METRICS === "1" ? <Metrics /> : null}
       </body>
     </html>
   );

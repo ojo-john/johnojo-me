@@ -50,9 +50,9 @@ export function CareerTimeline({ milestones, years, today }: { milestones: Miles
         <div className="axis">
           <span className="span" />
           {milestones.map((ms) => (
-            <button key={ms.date} className="pt" type="button" style={{ left: `${pct(ms.date)}%` }} aria-pressed={year === Number(ms.date.slice(0, 4))} aria-label={`${ms.label}: ${ms.title}`} onClick={() => setYear(Number(ms.date.slice(0, 4)))} />
+            <button key={ms.date} className="pt" type="button" data-track={`year: ${ms.date.slice(0, 4)}`} style={{ left: `${pct(ms.date)}%` }} aria-pressed={year === Number(ms.date.slice(0, 4))} aria-label={`${ms.label}: ${ms.title}`} onClick={() => setYear(Number(ms.date.slice(0, 4)))} />
           ))}
-          <button className="pt now" type="button" style={{ left: "100%" }} aria-pressed={false} aria-label={`Now: ${todayLabel}`} onClick={() => setYear(years.at(-1)?.year ?? year)} />
+          <button className="pt now" type="button" data-track="year: now" style={{ left: "100%" }} aria-pressed={false} aria-label={`Now: ${todayLabel}`} onClick={() => setYear(years.at(-1)?.year ?? year)} />
         </div>
         <div className="lbls" aria-hidden="true">
           {milestones.map((ms, i) => (
@@ -65,7 +65,7 @@ export function CareerTimeline({ milestones, years, today }: { milestones: Miles
       </div>
       <div className="ctl-years" role="group" aria-label="Show a year">
         {years.map((y) => (
-          <button key={y.year} type="button" aria-pressed={y.year === year} onClick={() => setYear(y.year)}>
+          <button key={y.year} type="button" data-track={`year: ${y.year}`} aria-pressed={y.year === year} onClick={() => setYear(y.year)}>
             {y.year}
           </button>
         ))}

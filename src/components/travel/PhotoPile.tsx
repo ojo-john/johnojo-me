@@ -34,6 +34,7 @@ export function PhotoPile({ photos }: { photos: MediaItem[] }) {
                 tabIndex={d === 0 ? 0 : -1}
                 aria-hidden={d !== 0}
                 aria-label={`Open photo full screen: ${p.caption ?? p.alt}`}
+                data-track="lightbox: open"
                 onClick={() => lb.open(photos, top)}
                 style={{ zIndex: photos.length - d, transform: d === 0 ? "rotate(-1deg)" : `translate(${d * 6}px, ${d * 4}px) rotate(${TILT[d % 5]}deg)`, opacity: d > 4 ? 0 : 1 }}
               >
@@ -51,7 +52,7 @@ export function PhotoPile({ photos }: { photos: MediaItem[] }) {
             <button className="btn fill" type="button" onClick={() => go(1)}>
               Next photo →
             </button>
-            <button className="btn" type="button" onClick={() => lb.open(photos, top)}>
+            <button className="btn" type="button" data-track="lightbox: open" onClick={() => lb.open(photos, top)}>
               Full screen
             </button>
           </div>
