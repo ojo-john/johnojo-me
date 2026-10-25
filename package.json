@@ -15,7 +15,8 @@
     "check:links": "tsx scripts/check-links.ts",
     "media:upload": "tsx scripts/upload-media.ts",
     "perf": "node scripts/perf.mts",
-    "resume:pdf": "node scripts/resume-pdf.mts"
+    "resume:pdf": "node scripts/resume-pdf.mts",
+    "notes:sync": "python3 scripts/sync-notes.py"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",

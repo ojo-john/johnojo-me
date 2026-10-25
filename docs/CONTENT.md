@@ -89,3 +89,8 @@ that are still to do.
 | Published | shown | shown |
 
 To preview a production build with drafts: `SHOW_DRAFTS=1 npm run build && npm start`.
+
+## Keeping your notes in step
+
+`npm run notes:sync` copies everything on the site back into the notes files in `~/workspace/johnojo-media`,
+filling only empty sections, so details given in chat or the editor are also kept in your own notes.
