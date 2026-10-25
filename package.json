@@ -12,7 +12,9 @@
     "media": "tsx scripts/media.ts",
     "check": "npm run typecheck && npm run lint && npm run test",
     "status": "tsx scripts/status.ts",
-    "check:links": "tsx scripts/check-links.ts"
+    "check:links": "tsx scripts/check-links.ts",
+    "media:upload": "tsx scripts/upload-media.ts",
+    "perf": "node scripts/perf.mts"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.1",
@@ -27,6 +29,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1156.0",
     "@tailwindcss/turbopack": "^4",
     "@types/d3-geo": "^3.1.1",
     "@types/node": "^24.19.2",
@@ -34,9 +37,11 @@
     "@types/react-dom": "^19",
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-specification": "^1.0.5",
+    "chrome-launcher": "^1.2.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
     "exif-reader": "^2.0.3",
+    "lighthouse": "^12.8.2",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5",
     "tailwindcss": "^4",

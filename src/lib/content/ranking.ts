@@ -1,4 +1,4 @@
-import { CATEGORIES, type CategoryKey, type Rating } from "./schema";
+import { CATEGORIES, type CategoryKey, type Rating } from "./categories";
 
 /**
  * Scorecard maths. Pure functions with no I/O so they can be unit-tested exhaustively.

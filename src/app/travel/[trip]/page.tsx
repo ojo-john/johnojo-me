@@ -5,7 +5,7 @@ import { Picture } from "@/components/Picture";
 import { PhotoPile } from "@/components/travel/PhotoPile";
 import { RankingLab } from "@/components/travel/RankingLab";
 import { TripExplorer } from "@/components/travel/TripExplorer";
-import { toView, tripViews } from "@/components/travel/view";
+import { slim, toView, tripViews } from "@/components/travel/view";
 import { getTrip, getTrips } from "@/lib/content/load";
 import { durationDays, formatRange } from "@/lib/format";
 import { mapFor } from "@/lib/geo";
@@ -39,7 +39,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
   if (!trip) notFound();
   const trips = getTrips();
   const visits = tripViews(trip);
-  const allVisits = trips.flatMap((t) => t.visits.map((v, i) => toView(v, t, i + 1)));
+  const allVisits = trips.flatMap((t) => t.visits.map((v, i) => slim(toView(v, t, i + 1))));
   const map = mapFor(trip.visits.map((v) => ({ id: v.slug, label: v.place.city, lat: v.place.lat, lng: v.place.lng })));
   const days = durationDays(trip.start, trip.end);
   const dates = formatRange(trip.start, trip.end) ?? trip.datesNote;
@@ -81,7 +81,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
       <div className="wrap">
         <nav className="scrub" aria-label="Trips">
           {[...trips].sort((a, b) => a.year - b.year).map((t) => (
-            <Link key={t.slug} href={`/travel/${t.slug}/`} aria-current={t.slug === trip.slug ? "page" : undefined}>
+            <Link key={t.slug} href={`/travel/${t.slug}/`} prefetch={false} aria-current={t.slug === trip.slug ? "page" : undefined}>
               {t.title} <span>{t.visits.length}</span>
             </Link>
           ))}
@@ -92,7 +92,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
         <TripExplorer visits={visits} map={map} />
       </div>
 
-      <RankingLab visits={visits} allVisits={allVisits} scope="trip" />
+      <RankingLab visits={visits.map(slim)} allVisits={allVisits} scope="trip" />
 
       {awards.length || verdict.length ? (
         <section className="wrap" style={{ paddingBottom: 72 }} aria-labelledby="verdict-h">

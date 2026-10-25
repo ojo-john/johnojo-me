@@ -64,9 +64,23 @@ export const getDestinations = memo(() =>
   destinationsSchema.parse(Object.fromEntries(list(dir("destinations"), ".yaml").map((f) => [f.replace(/\.yaml$/, ""), parseFile(dir("destinations", f), destinationSchema)]))),
 );
 
+/**
+ * Where processed media is served from. Empty locally (files in public/media); in production set
+ * MEDIA_BASE_URL to the R2 bucket's public domain, e.g. https://media.johnojo.me, and media URLs
+ * become https://media.johnojo.me/media/<trip>/<city>/...
+ */
+const MEDIA_BASE_URL = (process.env.MEDIA_BASE_URL ?? "").replace(/\/$/, "");
+const withBase = (u: string) => (u && u.startsWith("/") ? MEDIA_BASE_URL + u : u);
+
 export const getMediaManifest = memo((): Manifest => {
   const file = dir("media-manifest.json");
-  return fs.existsSync(file) ? parseFile(file, manifestSchema) : { generatedAt: "", items: {} };
+  const m = fs.existsSync(file) ? parseFile(file, manifestSchema) : { generatedAt: "", items: {} };
+  if (!MEDIA_BASE_URL) return m;
+  for (const e of Object.values(m.items)) {
+    if (e.type === "photo") e.variants = e.variants.map((v) => ({ ...v, avif: withBase(v.avif), webp: withBase(v.webp), jpg: withBase(v.jpg) }));
+    else Object.assign(e, { src: withBase(e.src), poster: withBase(e.poster) });
+  }
+  return m;
 });
 
 export type ProjectEntry = Project & { slug: string };

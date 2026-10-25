@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Processed photos live in R2, not in the repo; point media URLs there so the build and
+      # link check don't look for local files.
+      MEDIA_BASE_URL: https://media.johnojo.me
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:links
+      - name: Performance budgets (Lighthouse, mobile)
+        run: npm run perf -- --strict
+        continue-on-error: true # lab scores vary between runners; the report is the useful part
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: performance-report
+          path: reports/perf/
+          retention-days: 30

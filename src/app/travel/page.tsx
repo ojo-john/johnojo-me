@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Picture } from "@/components/Picture";
 import { RankingLab } from "@/components/travel/RankingLab";
-import { toView } from "@/components/travel/view";
+import { slim, toView } from "@/components/travel/view";
 import { getTrips } from "@/lib/content/load";
 import { formatRange } from "@/lib/format";
 import { mapFor } from "@/lib/geo";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function TravelPage() {
   const trips = getTrips();
-  const visits = trips.flatMap((t) => t.visits.map((v, i) => toView(v, t, i + 1)));
+  const visits = trips.flatMap((t) => t.visits.map((v, i) => slim(toView(v, t, i + 1))));
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   const countries = new Set(places.map((p) => p.country));
   const map = mapFor(places.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 900, 640, 0.06);
@@ -41,7 +41,7 @@ export default function TravelPage() {
         </h2>
         <div className="trip-list">
           {trips.map((t) => (
-            <Link key={t.slug} className="card tcard" href={`/travel/${t.slug}/`}>
+            <Link key={t.slug} className="card tcard" href={`/travel/${t.slug}/`} prefetch={false}>
               <div className="ph">{t.coverPhoto ? <Picture photo={{ ...t.coverPhoto, alt: "" }} sizes="(max-width: 760px) 100vw, 33vw" /> : <span>Photos coming</span>}</div>
               <div className="bd">
                 <span className="kicker" style={{ color: "var(--ink-2)" }}>
@@ -90,7 +90,7 @@ export default function TravelPage() {
           </h2>
           <div className="trip-list">
             {stadiums.map((m) => (
-              <Link key={`${m.home}-${m.away}-${m.date}`} className="card tcard" href={m.href}>
+              <Link key={`${m.home}-${m.away}-${m.date}`} className="card tcard" href={m.href} prefetch={false}>
                 <div className="bd">
                   <span className="kicker">{[m.competition, m.stadium].filter(Boolean).join(" · ")}</span>
                   <h3>

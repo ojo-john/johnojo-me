@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, DM_Mono, Figtree, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header, type JumpItem } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
@@ -8,8 +9,9 @@ import "./globals.css";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const ui = Figtree({ subsets: ["latin"], variable: "--font-ui", display: "swap" });
-const read = Source_Serif_4({ subsets: ["latin"], variable: "--font-read", style: ["normal", "italic"], display: "swap" });
-const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
+// Reading and mono faces are never needed for the first paint, so they aren't preloaded.
+const read = Source_Serif_4({ subsets: ["latin"], variable: "--font-read", style: ["normal", "italic"], display: "swap", preload: false });
+const mono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap", preload: false });
 
 const site = getSite();
 
@@ -51,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer site={site} />
         <Reveal />
+        <Analytics />
       </body>
     </html>
   );

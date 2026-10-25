@@ -27,7 +27,8 @@ const OUT = path.join(ROOT, "public", "media");
 const MANIFEST = path.join(ROOT, "content", "media-manifest.json");
 const CACHE = path.join(ROOT, ".cache", "media.json");
 
-const WIDTHS = [480, 960, 1600, 2400];
+// 160 px serves thumbnails; the larger sizes serve cards, heroes and the full-screen viewer.
+const WIDTHS = [160, 480, 960, 1600, 2400];
 const PHOTO_EXT = new Set([".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp", ".tif", ".tiff"]);
 const VIDEO_EXT = new Set([".mp4", ".mov", ".m4v"]);
 /** Cloudflare Pages rejects files over 25 MiB; larger clips belong on YouTube (unlisted) or R2. */
@@ -118,7 +119,7 @@ async function processVideo(file: string, outDir: string, base: string, tmp: str
     execFileSync("qlmanage", ["-t", "-s", "1280", "-o", tmp, file], { stdio: "ignore", timeout: 60_000 });
     const thumb = path.join(tmp, path.basename(file) + ".png");
     const posterOut = path.join(outDir, `${base}-poster.jpg`);
-    const info = await sharp(thumb).jpeg({ quality: 80, mozjpeg: true }).toFile(posterOut);
+    const info = await sharp(thumb).resize({ width: 960, withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(posterOut);
     poster = webPath(posterOut);
     return { type: "video", w: info.width, h: info.height, src: webPath(out), poster, takenAt: spotlightDate(file) };
   } catch {

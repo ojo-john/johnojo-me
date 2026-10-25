@@ -1,3 +1,4 @@
+import { preload } from "react-dom";
 import type { MediaItem } from "@/lib/content/media";
 
 /**
@@ -19,6 +20,8 @@ export function Picture({
   if (photo.type !== "photo") return null;
   const set = (k: "avif" | "webp" | "jpg") => photo.variants.map((v) => `${v[k]} ${v.w}w`).join(", ");
   const fallback = photo.variants.find((v) => v.w >= 960) ?? photo.variants[photo.variants.length - 1];
+  // The page's hero image starts downloading with the HTML instead of waiting for layout.
+  if (priority) preload(photo.variants[0].avif, { as: "image", type: "image/avif", imageSrcSet: set("avif"), imageSizes: sizes, fetchPriority: "high" });
   return (
     <picture className={className}>
       <source type="image/avif" srcSet={set("avif")} sizes={sizes} />

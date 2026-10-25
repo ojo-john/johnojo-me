@@ -33,20 +33,8 @@ export const STATUS = ["draft", "coming-soon", "published"] as const;
 export const status = z.enum(STATUS);
 export type Status = z.infer<typeof status>;
 
-/** The ten scorecard categories, in display order. Keys are stable; labels can change freely. */
-export const CATEGORIES = [
-  { key: "food", label: "Food & Desserts" },
-  { key: "value", label: "Affordability & Value" },
-  { key: "transport", label: "Public Transportation" },
-  { key: "walkability", label: "Walkability" },
-  { key: "architecture", label: "Architecture & Beauty" },
-  { key: "culture", label: "Culture & Atmosphere" },
-  { key: "people", label: "People & Hospitality" },
-  { key: "attractions", label: "Attractions & Experiences" },
-  { key: "safety", label: "Safety & Comfort" },
-  { key: "enjoyment", label: "Overall Enjoyment" },
-] as const;
-export type CategoryKey = (typeof CATEGORIES)[number]["key"];
+import { CATEGORIES, type CategoryKey } from "./categories";
+export { CATEGORIES, type CategoryKey };
 
 const score = z.number().int().min(0).max(10).nullable();
 export const rating = z.object({

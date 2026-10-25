@@ -35,7 +35,9 @@ export function TripYears({ trips }: { trips: TripSummary[] }) {
             <b>{t.title}</b>
             {t.dates ? <span className="mono">{t.dates}</span> : null}
             <span>{t.cities.join(" → ")}</span>
-            <Link href={`/travel/${t.slug}/`}>Open trip →</Link>
+            <Link href={`/travel/${t.slug}/`} prefetch={false}>
+              Open trip →
+            </Link>
           </>
         ) : null}
       </div>

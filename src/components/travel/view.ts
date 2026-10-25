@@ -1,6 +1,6 @@
 import "server-only";
 import type { TripEntry, VisitEntry } from "@/lib/content/load";
-import { CATEGORIES } from "@/lib/content/schema";
+import { CATEGORIES } from "@/lib/content/categories";
 import { formatRange } from "@/lib/format";
 import type { VisitView } from "./types";
 
@@ -36,3 +36,6 @@ export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitVie
 }
 
 export const tripViews = (trip: TripEntry) => trip.visits.map((v, i) => toView(v, trip, i + 1));
+
+/** Rankings only need names, dates and scores: drop media so the page payload stays small. */
+export const slim = (v: VisitView): VisitView => ({ ...v, photos: [], videos: [], cover: null, youtube: [], matches: [] });

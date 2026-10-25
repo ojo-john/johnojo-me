@@ -46,3 +46,6 @@ next-env.d.ts
 
 # processed photos/videos are uploaded to Cloudflare R2 at deploy time, not committed (≈500 MB and growing)
 /public/media/
+
+# local performance reports (npm run perf)
+/reports/

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AGGREGATION_LABEL, aggregate, rank, type Aggregation } from "@/lib/content/ranking";
-import { CATEGORIES } from "@/lib/content/schema";
+import { CATEGORIES } from "@/lib/content/categories";
 import type { VisitView } from "./types";
 
 type Tab = "list" | "compare" | "then-now";

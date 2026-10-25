@@ -7,6 +7,12 @@
    "h": 3024,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2021/london/photos/img-2294-160.avif",
+     "webp": "/media/europe-2021/london/photos/img-2294-160.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2294-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2021/london/photos/img-2294-480.avif",
      "webp": "/media/europe-2021/london/photos/img-2294-480.webp",
@@ -39,6 +45,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2021/london/photos/img-2312-160.avif",
+     "webp": "/media/europe-2021/london/photos/img-2312-160.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2312-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2021/london/photos/img-2312-480.avif",
@@ -73,6 +85,12 @@
    "h": 3024,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2021/london/photos/img-2317-160.avif",
+     "webp": "/media/europe-2021/london/photos/img-2317-160.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2317-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2021/london/photos/img-2317-480.avif",
      "webp": "/media/europe-2021/london/photos/img-2317-480.webp",
@@ -105,6 +123,12 @@
    "w": 4032,
    "h": 3024,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2021/london/photos/img-2319-160.avif",
+     "webp": "/media/europe-2021/london/photos/img-2319-160.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2319-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2021/london/photos/img-2319-480.avif",
@@ -139,6 +163,12 @@
    "h": 1800,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2021/london/photos/img-2339-160.avif",
+     "webp": "/media/europe-2021/london/photos/img-2339-160.webp",
+     "jpg": "/media/europe-2021/london/photos/img-2339-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2021/london/photos/img-2339-480.avif",
      "webp": "/media/europe-2021/london/photos/img-2339-480.webp",
@@ -171,6 +201,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2021/paris/photos/img-1957-160.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1957-160.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1957-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2021/paris/photos/img-1957-480.avif",
@@ -205,6 +241,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2021/paris/photos/img-1968-160.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1968-160.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1968-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2021/paris/photos/img-1968-480.avif",
      "webp": "/media/europe-2021/paris/photos/img-1968-480.webp",
@@ -237,6 +279,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2021/paris/photos/img-1969-160.avif",
+     "webp": "/media/europe-2021/paris/photos/img-1969-160.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-1969-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2021/paris/photos/img-1969-480.avif",
@@ -271,6 +319,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2021/paris/photos/img-2100-160.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2100-160.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2100-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2021/paris/photos/img-2100-480.avif",
      "webp": "/media/europe-2021/paris/photos/img-2100-480.webp",
@@ -303,6 +357,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2021/paris/photos/img-2101-160.avif",
+     "webp": "/media/europe-2021/paris/photos/img-2101-160.webp",
+     "jpg": "/media/europe-2021/paris/photos/img-2101-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2021/paris/photos/img-2101-480.avif",
@@ -337,6 +397,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32-160.avif",
+     "webp": "/media/europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32-160.webp",
+     "jpg": "/media/europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32-480.avif",
      "webp": "/media/europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32-480.webp",
@@ -369,6 +435,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2022/london/photos/img-0394-160.avif",
+     "webp": "/media/europe-2022/london/photos/img-0394-160.webp",
+     "jpg": "/media/europe-2022/london/photos/img-0394-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2022/london/photos/img-0394-480.avif",
@@ -403,6 +475,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/london/photos/img-0398-160.avif",
+     "webp": "/media/europe-2022/london/photos/img-0398-160.webp",
+     "jpg": "/media/europe-2022/london/photos/img-0398-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/london/photos/img-0398-480.avif",
      "webp": "/media/europe-2022/london/photos/img-0398-480.webp",
@@ -436,6 +514,12 @@
    "h": 2208,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/london/photos/img-0404-160.avif",
+     "webp": "/media/europe-2022/london/photos/img-0404-160.webp",
+     "jpg": "/media/europe-2022/london/photos/img-0404-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/london/photos/img-0404-480.avif",
      "webp": "/media/europe-2022/london/photos/img-0404-480.webp",
@@ -463,6 +547,12 @@
    "h": 1800,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9-160.avif",
+     "webp": "/media/europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9-480.avif",
      "webp": "/media/europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9-480.webp",
@@ -489,6 +579,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-0422-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-0422-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-0422-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-0422-480.avif",
@@ -523,6 +619,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-0445-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-0445-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-0445-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-0445-480.avif",
      "webp": "/media/europe-2022/porto/photos/img-0445-480.webp",
@@ -555,6 +657,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-0547-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-0547-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-0547-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-0547-480.avif",
@@ -589,6 +697,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-0554-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-0554-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-0554-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-0554-480.avif",
      "webp": "/media/europe-2022/porto/photos/img-0554-480.webp",
@@ -622,6 +736,12 @@
    "h": 2134,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-1142-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-1142-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-1142-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-1142-480.avif",
      "webp": "/media/europe-2022/porto/photos/img-1142-480.webp",
@@ -649,6 +769,12 @@
    "h": 2134,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-1143-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-1143-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-1143-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-1143-480.avif",
      "webp": "/media/europe-2022/porto/photos/img-1143-480.webp",
@@ -675,6 +801,12 @@
    "w": 1164,
    "h": 2134,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2022/porto/photos/img-1144-160.avif",
+     "webp": "/media/europe-2022/porto/photos/img-1144-160.webp",
+     "jpg": "/media/europe-2022/porto/photos/img-1144-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2022/porto/photos/img-1144-480.avif",
@@ -727,6 +859,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2023/porto/photos/img-0201-160.avif",
+     "webp": "/media/europe-2023/porto/photos/img-0201-160.webp",
+     "jpg": "/media/europe-2023/porto/photos/img-0201-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2023/porto/photos/img-0201-480.avif",
      "webp": "/media/europe-2023/porto/photos/img-0201-480.webp",
@@ -759,6 +897,12 @@
    "w": 8900,
    "h": 3892,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2023/porto/photos/img-0207-160.avif",
+     "webp": "/media/europe-2023/porto/photos/img-0207-160.webp",
+     "jpg": "/media/europe-2023/porto/photos/img-0207-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2023/porto/photos/img-0207-480.avif",
@@ -793,6 +937,12 @@
    "h": 2208,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2023/porto/photos/img-0210-160.avif",
+     "webp": "/media/europe-2023/porto/photos/img-0210-160.webp",
+     "jpg": "/media/europe-2023/porto/photos/img-0210-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2023/porto/photos/img-0210-480.avif",
      "webp": "/media/europe-2023/porto/photos/img-0210-480.webp",
@@ -820,6 +970,12 @@
    "h": 2096,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2-480.avif",
      "webp": "/media/europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2-480.webp",
@@ -846,6 +1002,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0643-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0643-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0643-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0643-480.avif",
@@ -880,6 +1042,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0645-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0645-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0645-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0645-480.avif",
      "webp": "/media/europe-2024/amsterdam/photos/img-0645-480.webp",
@@ -912,6 +1080,12 @@
    "w": 2316,
    "h": 3088,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0653-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0653-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0653-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0653-480.avif",
@@ -946,6 +1120,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0673-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0673-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0673-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0673-480.avif",
      "webp": "/media/europe-2024/amsterdam/photos/img-0673-480.webp",
@@ -978,6 +1158,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0674-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0674-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0674-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0674-480.avif",
@@ -1012,6 +1198,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/amsterdam/photos/img-0710-160.avif",
+     "webp": "/media/europe-2024/amsterdam/photos/img-0710-160.webp",
+     "jpg": "/media/europe-2024/amsterdam/photos/img-0710-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/amsterdam/photos/img-0710-480.avif",
      "webp": "/media/europe-2024/amsterdam/photos/img-0710-480.webp",
@@ -1041,8 +1233,8 @@
   },
   "europe-2024/amsterdam/videos/img-0667": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/amsterdam/videos/img-0667.mp4",
    "poster": "/media/europe-2024/amsterdam/videos/img-0667-poster.jpg",
    "takenAt": "2024-04-14T15:51:41"
@@ -1068,6 +1260,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/bruges/photos/img-0528-160.avif",
+     "webp": "/media/europe-2024/bruges/photos/img-0528-160.webp",
+     "jpg": "/media/europe-2024/bruges/photos/img-0528-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/bruges/photos/img-0528-480.avif",
@@ -1102,6 +1300,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/bruges/photos/img-0531-160.avif",
+     "webp": "/media/europe-2024/bruges/photos/img-0531-160.webp",
+     "jpg": "/media/europe-2024/bruges/photos/img-0531-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/bruges/photos/img-0531-480.avif",
      "webp": "/media/europe-2024/bruges/photos/img-0531-480.webp",
@@ -1134,6 +1338,12 @@
    "w": 2316,
    "h": 3088,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0544-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0544-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0544-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0544-480.avif",
@@ -1168,6 +1378,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0548-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0548-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0548-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0548-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0548-480.webp",
@@ -1200,6 +1416,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0563-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0563-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0563-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0563-480.avif",
@@ -1234,6 +1456,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0570-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0570-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0570-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0570-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0570-480.webp",
@@ -1266,6 +1494,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0571-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0571-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0571-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0571-480.avif",
@@ -1300,6 +1534,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0587-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0587-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0587-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0587-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0587-480.webp",
@@ -1332,6 +1572,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0589-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0589-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0589-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0589-480.avif",
@@ -1366,6 +1612,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0592-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0592-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0592-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0592-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0592-480.webp",
@@ -1398,6 +1650,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0599-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0599-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0599-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0599-480.avif",
@@ -1432,6 +1690,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0601-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0601-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0601-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0601-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0601-480.webp",
@@ -1464,6 +1728,12 @@
    "w": 5712,
    "h": 4284,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0605-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0605-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0605-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0605-480.avif",
@@ -1498,6 +1768,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/brussels/photos/img-0607-160.avif",
+     "webp": "/media/europe-2024/brussels/photos/img-0607-160.webp",
+     "jpg": "/media/europe-2024/brussels/photos/img-0607-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/brussels/photos/img-0607-480.avif",
      "webp": "/media/europe-2024/brussels/photos/img-0607-480.webp",
@@ -1527,32 +1803,32 @@
   },
   "europe-2024/brussels/videos/img-0547": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/brussels/videos/img-0547.mp4",
    "poster": "/media/europe-2024/brussels/videos/img-0547-poster.jpg",
    "takenAt": "2024-04-10T11:51:17"
   },
   "europe-2024/brussels/videos/img-0555": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/brussels/videos/img-0555.mp4",
    "poster": "/media/europe-2024/brussels/videos/img-0555-poster.jpg",
    "takenAt": "2024-04-10T12:20:11"
   },
   "europe-2024/brussels/videos/img-0565": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/brussels/videos/img-0565.mp4",
    "poster": "/media/europe-2024/brussels/videos/img-0565-poster.jpg",
    "takenAt": "2024-04-10T13:21:07"
   },
   "europe-2024/brussels/videos/img-0606": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/brussels/videos/img-0606.mp4",
    "poster": "/media/europe-2024/brussels/videos/img-0606-poster.jpg",
    "takenAt": "2024-04-10T15:31:32"
@@ -1578,6 +1854,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/dortmund/photos/img-1110-160.avif",
+     "webp": "/media/europe-2024/dortmund/photos/img-1110-160.webp",
+     "jpg": "/media/europe-2024/dortmund/photos/img-1110-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/dortmund/photos/img-1110-480.avif",
@@ -1612,6 +1894,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/dortmund/photos/img-1129-160.avif",
+     "webp": "/media/europe-2024/dortmund/photos/img-1129-160.webp",
+     "jpg": "/media/europe-2024/dortmund/photos/img-1129-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/dortmund/photos/img-1129-480.avif",
      "webp": "/media/europe-2024/dortmund/photos/img-1129-480.webp",
@@ -1645,6 +1933,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/dortmund/photos/img-1131-160.avif",
+     "webp": "/media/europe-2024/dortmund/photos/img-1131-160.webp",
+     "jpg": "/media/europe-2024/dortmund/photos/img-1131-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/dortmund/photos/img-1131-480.avif",
      "webp": "/media/europe-2024/dortmund/photos/img-1131-480.webp",
@@ -1674,8 +1968,8 @@
   },
   "europe-2024/dortmund/videos/img-1113": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/dortmund/videos/img-1113.mp4",
    "poster": "/media/europe-2024/dortmund/videos/img-1113-poster.jpg",
    "takenAt": "2024-04-21T15:19:28"
@@ -1690,24 +1984,24 @@
   },
   "europe-2024/dortmund/videos/img-1119": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/dortmund/videos/img-1119.mp4",
    "poster": "/media/europe-2024/dortmund/videos/img-1119-poster.jpg",
    "takenAt": "2024-04-21T15:19:57"
   },
   "europe-2024/dortmund/videos/img-1121": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/dortmund/videos/img-1121.mp4",
    "poster": "/media/europe-2024/dortmund/videos/img-1121-poster.jpg",
    "takenAt": "2024-04-21T15:23:15"
   },
   "europe-2024/dortmund/videos/img-1127": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/dortmund/videos/img-1127.mp4",
    "poster": "/media/europe-2024/dortmund/videos/img-1127-poster.jpg",
    "takenAt": "2024-04-21T16:03:01"
@@ -1717,6 +2011,12 @@
    "w": 1179,
    "h": 2096,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/ghent/photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e-160.avif",
+     "webp": "/media/europe-2024/ghent/photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e-160.webp",
+     "jpg": "/media/europe-2024/ghent/photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/ghent/photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e-480.avif",
@@ -1744,6 +2044,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/ghent/photos/img-0506-160.avif",
+     "webp": "/media/europe-2024/ghent/photos/img-0506-160.webp",
+     "jpg": "/media/europe-2024/ghent/photos/img-0506-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/ghent/photos/img-0506-480.avif",
@@ -1778,6 +2084,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/ghent/photos/img-0508-160.avif",
+     "webp": "/media/europe-2024/ghent/photos/img-0508-160.webp",
+     "jpg": "/media/europe-2024/ghent/photos/img-0508-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/ghent/photos/img-0508-480.avif",
      "webp": "/media/europe-2024/ghent/photos/img-0508-480.webp",
@@ -1810,6 +2122,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/ghent/photos/img-0512-160.avif",
+     "webp": "/media/europe-2024/ghent/photos/img-0512-160.webp",
+     "jpg": "/media/europe-2024/ghent/photos/img-0512-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/ghent/photos/img-0512-480.avif",
@@ -1844,6 +2162,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/ghent/photos/img-0519-160.avif",
+     "webp": "/media/europe-2024/ghent/photos/img-0519-160.webp",
+     "jpg": "/media/europe-2024/ghent/photos/img-0519-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/ghent/photos/img-0519-480.avif",
      "webp": "/media/europe-2024/ghent/photos/img-0519-480.webp",
@@ -1876,6 +2200,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/london/photos/img-0729-160.avif",
+     "webp": "/media/europe-2024/london/photos/img-0729-160.webp",
+     "jpg": "/media/europe-2024/london/photos/img-0729-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/london/photos/img-0729-480.avif",
@@ -1910,6 +2240,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/london/photos/img-0746-160.avif",
+     "webp": "/media/europe-2024/london/photos/img-0746-160.webp",
+     "jpg": "/media/europe-2024/london/photos/img-0746-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/london/photos/img-0746-480.avif",
      "webp": "/media/europe-2024/london/photos/img-0746-480.webp",
@@ -1942,6 +2278,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/london/photos/img-0757-160.avif",
+     "webp": "/media/europe-2024/london/photos/img-0757-160.webp",
+     "jpg": "/media/europe-2024/london/photos/img-0757-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/london/photos/img-0757-480.avif",
@@ -1976,6 +2318,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/london/photos/img-0780-160.avif",
+     "webp": "/media/europe-2024/london/photos/img-0780-160.webp",
+     "jpg": "/media/europe-2024/london/photos/img-0780-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/london/photos/img-0780-480.avif",
      "webp": "/media/europe-2024/london/photos/img-0780-480.webp",
@@ -2008,6 +2356,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/london/photos/img-0820-160.avif",
+     "webp": "/media/europe-2024/london/photos/img-0820-160.webp",
+     "jpg": "/media/europe-2024/london/photos/img-0820-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/london/photos/img-0820-480.avif",
@@ -2046,24 +2400,24 @@
   },
   "europe-2024/london/videos/img-0763-2": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/london/videos/img-0763-2.mp4",
    "poster": "/media/europe-2024/london/videos/img-0763-2-poster.jpg",
    "takenAt": "2024-04-15T20:24:24"
   },
   "europe-2024/london/videos/img-0763": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/london/videos/img-0763.mp4",
    "poster": "/media/europe-2024/london/videos/img-0763-poster.jpg",
    "takenAt": "2024-04-15T20:24:24"
   },
   "europe-2024/london/videos/img-0764": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/london/videos/img-0764.mp4",
    "poster": "/media/europe-2024/london/videos/img-0764-poster.jpg",
    "takenAt": "2024-04-15T20:40:55"
@@ -2089,6 +2443,12 @@
    "w": 4032,
    "h": 3024,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-0992-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-0992-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-0992-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-0992-480.avif",
@@ -2123,6 +2483,12 @@
    "h": 3024,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-0993-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-0993-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-0993-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-0993-480.avif",
      "webp": "/media/europe-2024/munich/photos/img-0993-480.webp",
@@ -2155,6 +2521,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1001-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1001-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1001-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1001-480.avif",
@@ -2189,6 +2561,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1006-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1006-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1006-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1006-480.avif",
      "webp": "/media/europe-2024/munich/photos/img-1006-480.webp",
@@ -2221,6 +2599,12 @@
    "w": 3520,
    "h": 1980,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1020-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1020-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1020-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1020-480.avif",
@@ -2255,6 +2639,12 @@
    "h": 1980,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1024-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1024-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1024-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1024-480.avif",
      "webp": "/media/europe-2024/munich/photos/img-1024-480.webp",
@@ -2287,6 +2677,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1026-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1026-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1026-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1026-480.avif",
@@ -2321,6 +2717,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1061-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1061-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1061-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1061-480.avif",
      "webp": "/media/europe-2024/munich/photos/img-1061-480.webp",
@@ -2353,6 +2755,12 @@
    "w": 2316,
    "h": 3088,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1066-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1066-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1066-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1066-480.avif",
@@ -2387,6 +2795,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/munich/photos/img-1068-160.avif",
+     "webp": "/media/europe-2024/munich/photos/img-1068-160.webp",
+     "jpg": "/media/europe-2024/munich/photos/img-1068-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/munich/photos/img-1068-480.avif",
      "webp": "/media/europe-2024/munich/photos/img-1068-480.webp",
@@ -2416,24 +2830,24 @@
   },
   "europe-2024/munich/videos/img-1010": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/munich/videos/img-1010.mp4",
    "poster": "/media/europe-2024/munich/videos/img-1010-poster.jpg",
    "takenAt": "2024-04-17T18:55:00"
   },
   "europe-2024/munich/videos/img-1018-2": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/munich/videos/img-1018-2.mp4",
    "poster": "/media/europe-2024/munich/videos/img-1018-2-poster.jpg",
    "takenAt": "2024-04-17T18:57:43"
   },
   "europe-2024/munich/videos/img-1018": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/munich/videos/img-1018.mp4",
    "poster": "/media/europe-2024/munich/videos/img-1018-poster.jpg",
    "takenAt": "2024-04-17T18:57:43"
@@ -2443,6 +2857,12 @@
    "w": 1179,
    "h": 2096,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/b7624b06-3272-440b-a12b-c883d03bbf15-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/b7624b06-3272-440b-a12b-c883d03bbf15-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/b7624b06-3272-440b-a12b-c883d03bbf15-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/b7624b06-3272-440b-a12b-c883d03bbf15-480.avif",
@@ -2471,6 +2891,12 @@
    "h": 1440,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0116-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0116-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0116-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0116-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0116-480.webp",
@@ -2497,6 +2923,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-480.avif",
@@ -2531,6 +2963,12 @@
    "h": 3088,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-480.webp",
@@ -2563,6 +3001,12 @@
    "w": 4032,
    "h": 3024,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-480.avif",
@@ -2597,6 +3041,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-480.webp",
@@ -2629,6 +3079,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-480.avif",
@@ -2663,6 +3119,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-480.webp",
@@ -2695,6 +3157,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-480.avif",
@@ -2729,6 +3197,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-480.webp",
@@ -2761,6 +3235,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-480.avif",
@@ -2795,6 +3275,12 @@
    "h": 5712,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0273-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0273-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0273-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0273-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0273-480.webp",
@@ -2827,6 +3313,12 @@
    "w": 3024,
    "h": 4032,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0308-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0308-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0308-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0308-480.avif",
@@ -2861,6 +3353,12 @@
    "h": 4284,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0312-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0312-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0312-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0312-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0312-480.webp",
@@ -2894,6 +3392,12 @@
    "h": 1440,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0326-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0326-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0326-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0326-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0326-480.webp",
@@ -2921,6 +3425,12 @@
    "h": 384,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0335-160.avif",
+     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0335-160.webp",
+     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0335-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/nice-french-riviera/photos/img-0335-480.avif",
      "webp": "/media/europe-2024/nice-french-riviera/photos/img-0335-480.webp",
@@ -2941,6 +3451,12 @@
    "w": 4032,
    "h": 3024,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0347-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0347-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0347-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/paris/photos/img-0347-480.avif",
@@ -2975,6 +3491,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0384-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0384-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0384-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/paris/photos/img-0384-480.avif",
      "webp": "/media/europe-2024/paris/photos/img-0384-480.webp",
@@ -3007,6 +3529,12 @@
    "w": 4284,
    "h": 5712,
    "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0398-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0398-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0398-160.jpg"
+    },
     {
      "w": 480,
      "avif": "/media/europe-2024/paris/photos/img-0398-480.avif",
@@ -3041,6 +3569,12 @@
    "h": 4284,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0420-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0420-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0420-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/paris/photos/img-0420-480.avif",
      "webp": "/media/europe-2024/paris/photos/img-0420-480.webp",
@@ -3074,6 +3608,12 @@
    "h": 4032,
    "variants": [
     {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0474-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-160.jpg"
+    },
+    {
      "w": 480,
      "avif": "/media/europe-2024/paris/photos/img-0474-480.avif",
      "webp": "/media/europe-2024/paris/photos/img-0474-480.webp",
@@ -3103,16 +3643,16 @@
   },
   "europe-2024/paris/videos/img-0349": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/paris/videos/img-0349.mp4",
    "poster": "/media/europe-2024/paris/videos/img-0349-poster.jpg",
    "takenAt": "2024-04-06T18:49:30"
   },
   "europe-2024/paris/videos/img-0355": {
    "type": "video",
-   "w": 1280,
-   "h": 720,
+   "w": 960,
+   "h": 540,
    "src": "/media/europe-2024/paris/videos/img-0355.mp4",
    "poster": "/media/europe-2024/paris/videos/img-0355-poster.jpg",
    "takenAt": "2024-04-06T18:57:21"
