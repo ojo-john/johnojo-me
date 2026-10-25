@@ -7,6 +7,12 @@ summary: Back to Porto, and just as good the second time. The food, the weather,
 liked: The food, the weather, easy transport and welcoming people.
 highlights:
   Football: Estádio do Dragão, home of FC Porto
+wouldReturn:
+  answer: "yes"
+  why: Still great, though not quite as good as my first time in 2022.
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 8, value: 8, transport: 8, walkability: 8, architecture: 6, culture: 8, people: 8, attractions: 7, safety: 7, enjoyment: 8 }
 cover: photos/img-0207
 mediaMeta:
   photos/img-0201: { caption: Estádio do Dragão, alt: "John in the stands at FC Porto's Estádio do Dragão" }

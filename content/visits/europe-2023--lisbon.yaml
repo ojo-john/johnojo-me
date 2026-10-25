@@ -8,3 +8,8 @@ highlights:
   Food: Good food, plus a Portuguese food and wine tour
   Standout moment: Lost at 2am until a stranger helped me find my Airbnb
 liked: The food, the weather, easy transport and welcoming people.
+wouldReturn:
+  answer: "yes"
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 8, value: 8, transport: 8, walkability: 7, architecture: 7, culture: 8, people: 9, attractions: 8, safety: 8, enjoyment: 8 }

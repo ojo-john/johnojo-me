@@ -10,6 +10,9 @@ wouldReturn:
   why: Just for the waffles and chocolate.
 highlights:
   Food: Chocolate, beer, waffle and whiskey tour
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 8, value: 7, transport: 7, walkability: 8, architecture: 8, culture: 6, people: 7, attractions: 5, safety: 7, enjoyment: 7 }
 cover: photos/img-0587
 mediaMeta:
   photos/img-0587: { caption: "Grand-Place, Brussels", alt: "John on the Grand-Place in Brussels with ornate guildhalls behind him" }

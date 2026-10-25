@@ -15,6 +15,32 @@ export interface MapPoint {
   label: string;
   x: number;
   y: number;
+  /** Where to draw the label so close neighbours (Bruges, Ghent, Brussels) don't overlap. */
+  labelSide: "right" | "left" | "below" | "above";
+}
+
+/** Greedy placement: try right, left, below, above; take the first spot clear of labels already placed. */
+function placeLabels(points: Omit<MapPoint, "labelSide">[]): MapPoint[] {
+  // Every dot is an obstacle, so a label never sits on top of a neighbouring pin.
+  const boxes: { x0: number; y0: number; x1: number; y1: number }[] = points.map((p) => ({ x0: p.x - 7, y0: p.y - 7, x1: p.x + 7, y1: p.y + 7 }));
+  const box = (p: { x: number; y: number; label: string }, side: MapPoint["labelSide"]) => {
+    const w = p.label.length * 8 + 10, h = 18;
+    if (side === "right") return { x0: p.x + 8, y0: p.y - h / 2, x1: p.x + 8 + w, y1: p.y + h / 2 };
+    if (side === "left") return { x0: p.x - 8 - w, y0: p.y - h / 2, x1: p.x - 8, y1: p.y + h / 2 };
+    if (side === "below") return { x0: p.x - w / 2, y0: p.y + 8, x1: p.x + w / 2, y1: p.y + 8 + h };
+    return { x0: p.x - w / 2, y0: p.y - 8 - h, x1: p.x + w / 2, y1: p.y - 8 };
+  };
+  const overlap = (b: (typeof boxes)[number]) =>
+    boxes.reduce((sum, o) => sum + Math.max(0, Math.min(b.x1, o.x1) - Math.max(b.x0, o.x0)) * Math.max(0, Math.min(b.y1, o.y1) - Math.max(b.y0, o.y0)), 0);
+  return [...points]
+    .sort((a, b) => a.y - b.y)
+    .map((p) => {
+      // First side with no overlap; failing that, the side that overlaps least.
+      const sides = ["right", "left", "below", "above"] as const;
+      const side = sides.map((sd) => ({ sd, o: overlap(box(p, sd)) })).sort((x, y) => x.o - y.o || sides.indexOf(x.sd) - sides.indexOf(y.sd))[0].sd;
+      boxes.push(box(p, side));
+      return { ...p, labelSide: side };
+    });
 }
 export interface MapGeometry {
   width: number;
@@ -48,9 +74,11 @@ export function mapFor(places: { id: string; label: string; lat?: number; lng?: 
     width,
     height,
     land: path(countries) ?? "",
-    points: located.map((p) => {
-      const [x, y] = projection([p.lng as number, p.lat as number]) ?? [0, 0];
-      return { id: p.id, label: p.label, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
-    }),
+    points: placeLabels(
+      located.map((p) => {
+        const [x, y] = projection([p.lng as number, p.lat as number]) ?? [0, 0];
+        return { id: p.id, label: p.label, x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
+      }),
+    ),
   };
 }

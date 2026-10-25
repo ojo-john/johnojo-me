@@ -7,6 +7,9 @@ summary: Same as Brussels. Great waffles and chocolate, but a bit boring, and no
 wouldReturn:
   answer: "yes"
   why: Just for the waffles and chocolate.
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 8, value: 7, transport: 7, walkability: 8, architecture: 8, culture: 6, people: 7, attractions: 5, safety: 7, enjoyment: 7 }
 cover: photos/img-0512
 mediaMeta:
   photos/img-0512: { caption: "St Bavo's Cathedral, Ghent", alt: "The tower of St Bavo's Cathedral in Ghent" }

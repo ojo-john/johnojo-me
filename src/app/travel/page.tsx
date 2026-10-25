@@ -67,7 +67,15 @@ export default function TravelPage() {
             {map.points.map((p) => (
               <g key={p.id}>
                 <circle cx={p.x} cy={p.y} r={7} fill="var(--travel)" stroke="var(--paper)" strokeWidth={2} />
-                <text x={p.x + 11} y={p.y + 4} fontSize={13} fontWeight={700} fontFamily="var(--f-ui)" fill="var(--ink)">
+                <text
+                  x={p.labelSide === "right" ? p.x + 11 : p.labelSide === "left" ? p.x - 11 : p.x}
+                  y={p.labelSide === "below" ? p.y + 22 : p.labelSide === "above" ? p.y - 12 : p.y + 4}
+                  textAnchor={p.labelSide === "right" ? "start" : p.labelSide === "left" ? "end" : "middle"}
+                  fontSize={13}
+                  fontWeight={700}
+                  fontFamily="var(--f-ui)"
+                  fill="var(--ink)"
+                >
                   {p.label}
                 </text>
               </g>

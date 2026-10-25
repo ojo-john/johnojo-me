@@ -15,6 +15,9 @@ disliked: The weather was gloomy, people were rude and the food wasn't good.
 highlights:
   Football: Bayern v Arsenal in the Champions League
   Sightseeing: Marienplatz and the New Town Hall
+rating:
+  ratedOn: 2026-10-25
+  scores: { food: 6, value: 6, transport: 6, walkability: 7, architecture: 7, culture: 5, people: 4, attractions: 6, safety: 7, enjoyment: 6 }
 cover: photos/img-1006
 mediaMeta:
   photos/img-1006: { caption: "Allianz Arena", alt: "The Allianz Arena pitch with the Champions League logo at the centre circle" }
