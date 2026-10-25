@@ -1,0 +1,12 @@
+trip: europe-2023
+destination: porto
+order: 2
+arrive: 2023-05-27
+depart: 2023-05-29
+highlights:
+  Football: Estádio do Dragão, home of FC Porto
+cover: photos/img-0207
+mediaMeta:
+  photos/img-0201: { caption: Estádio do Dragão, alt: "John in the stands at FC Porto's Estádio do Dragão" }
+  photos/img-0207: { caption: Estádio do Dragão, alt: "The empty pitch and blue seats of Estádio do Dragão" }
+  photos/img-0210: { caption: In the dugout, alt: "John taking a selfie from a dugout seat at Estádio do Dragão" }

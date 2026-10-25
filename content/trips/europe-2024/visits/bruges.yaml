@@ -1,8 +1,0 @@
-destination: bruges
-order: 3
-kind: day-trip
-arrive: 2024-04-09
-cover: photos/img-0528
-mediaMeta:
-  photos/img-0528: { caption: "Church of Our Lady, Bruges", alt: "The brick spire of the Church of Our Lady in Bruges under a cloudy sky" }
-  photos/img-0531: { caption: "A Belgian waffle", alt: "A waffle covered in chocolate sauce and strawberries" }

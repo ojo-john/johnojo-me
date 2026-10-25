@@ -1,0 +1,21 @@
+trip: europe-2024
+photoFolder: nice + french riviera
+destination: nice
+order: 1
+arrive: 2024-04-03
+depart: 2024-04-06
+highlights:
+  Day trip: Èze and Monaco on the French Riviera
+  Food: No Diet Club food tour
+cover: photos/img-0273
+mediaMeta:
+  photos/b7624b06-3272-440b-a12b-c883d03bbf15: { caption: Basilique Notre-Dame de Nice, alt: "The twin-towered Basilica of Notre-Dame in Nice at dusk" }
+  photos/img-0273: { caption: Place Masséna, Nice, alt: "The Fountain of the Sun with its statue of Apollo on Place Masséna in Nice" }
+  photos/img-0159: { caption: Èze, alt: "The hilltop village of Èze above the trees" }
+  photos/img-0223: { caption: Monte-Carlo from above, alt: "Monaco's harbour packed with yachts below the city" }
+  photos/img-0232: { caption: Monaco harbour, alt: "John standing above Monaco's harbour" }
+  photos/img-0246: { caption: Casino de Monte-Carlo, alt: "A red supercar parked outside the Casino de Monte-Carlo" }
+  photos/img-0251: { caption: Outside the Casino de Monte-Carlo, alt: "John standing beside a red and black supercar outside the casino" }
+  photos/img-0116: { caption: Dinner in Nice, alt: "A plated steak with a creamy topping and red wine sauce" }
+  photos/img-0326: { caption: The beach at Nice, alt: "A pebble beach and the Mediterranean in Nice" }
+  photos/img-0335: { hidden: true }

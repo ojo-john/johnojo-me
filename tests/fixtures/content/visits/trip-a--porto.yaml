@@ -1,0 +1,5 @@
+trip: trip-a
+destination: porto
+order: 1
+rating:
+  scores: { food: 9, value: 9, transport: 8, walkability: 7, architecture: 8, culture: 8, people: 10, attractions: 7, safety: 8, enjoyment: 9 }

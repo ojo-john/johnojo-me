@@ -1,0 +1,6 @@
+trip: trip-a
+destination: region
+order: 2
+kind: day-trip
+rating:
+  scores: { food: 5 }

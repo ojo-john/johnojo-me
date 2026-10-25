@@ -59,7 +59,11 @@ export const match = z.object({
 export type Match = z.infer<typeof match>;
 
 export const visit = z.object({
+  /** Trip this visit belongs to (folder name under content/trips). */
+  trip: slug,
   destination: slug,
+  /** Folder name in the media inbox, when it differs from the visit name (e.g. "nice + french riviera"). */
+  photoFolder: z.string().optional(),
   order: z.number().int().min(1),
   kind: z.enum(["city", "match-only", "day-trip"]).default("city"),
   status: status.default("published"),

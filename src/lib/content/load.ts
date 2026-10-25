@@ -86,9 +86,12 @@ export type VisitEntry = Visit & {
 };
 export type TripEntry = Trip & { slug: string; visits: VisitEntry[]; coverPhoto: MediaItem | null };
 
-function resolveMedia(tripSlug: string, visitSlug: string, v: Visit, trip: Trip, place: Destination): MediaItem[] {
+/** Folder names are slugified by the media script, so "nice + french riviera" becomes "nice-french-riviera". */
+const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, place: Destination): MediaItem[] {
   const items = getMediaManifest().items;
-  const prefix = `${tripSlug}/${visitSlug}/`;
+  const prefix = `${v.trip}/${folderSlug(v.photoFolder ?? visitSlug)}/`;
   const ids =
     v.media?.map((id) => prefix + id) ??
     Object.keys(items)
@@ -98,7 +101,7 @@ function resolveMedia(tripSlug: string, visitSlug: string, v: Visit, trip: Trip,
   for (const id of ids) {
     const entry = items[id];
     if (!entry) {
-      if (!SHOW_DRAFTS) throw new ContentError(dir("trips", tripSlug, "visits", `${visitSlug}.yaml`), `  - media: "${id}" is not in media-manifest.json (run npm run media)`);
+      if (!SHOW_DRAFTS) throw new ContentError(file, `  - media: "${id}" is not in media-manifest.json (run npm run media)`);
       continue;
     }
     const key = id.slice(prefix.length);
@@ -109,21 +112,32 @@ function resolveMedia(tripSlug: string, visitSlug: string, v: Visit, trip: Trip,
   return out;
 }
 
+/** Visit files are named "<trip>--<visit>.yaml" in content/visits, one flat folder for every trip. */
+const getVisitFiles = memo(() =>
+  list(dir("visits"), ".yaml").map((f) => {
+    const file = dir("visits", f);
+    const v = parseFile(file, visitSchema);
+    const [tripPart, visitSlug] = f.replace(/\.yaml$/, "").split("--");
+    if (!visitSlug || tripPart !== v.trip) throw new ContentError(file, `  - file name must be "${v.trip}--<visit>.yaml" to match trip: ${v.trip}`);
+    return { file, v, visitSlug };
+  }),
+);
+
 export const getTrips = memo((): TripEntry[] => {
   const places = getDestinations();
   const tripsDir = dir("trips");
   const slugs = fs.existsSync(tripsDir) ? fs.readdirSync(tripsDir).filter((d) => fs.existsSync(path.join(tripsDir, d, "trip.yaml"))) : [];
+  const visitFiles = getVisitFiles();
+  for (const { file, v } of visitFiles) if (!slugs.includes(v.trip)) throw new ContentError(file, `  - trip: "${v.trip}" has no content/trips/${v.trip}/trip.yaml`);
   return slugs
     .map((tripSlug) => {
       const trip = parseFile(dir("trips", tripSlug, "trip.yaml"), tripSchema);
-      const visits = list(dir("trips", tripSlug, "visits"), ".yaml")
-        .map((f) => {
-          const file = dir("trips", tripSlug, "visits", f);
-          const v = parseFile(file, visitSchema);
+      const visits = visitFiles
+        .filter(({ v }) => v.trip === tripSlug)
+        .map(({ file, v, visitSlug }) => {
           const place = places[v.destination];
           if (!place) throw new ContentError(file, `  - destination: "${v.destination}" is not listed in content/destinations.yaml`);
-          const visitSlug = f.replace(/\.yaml$/, "");
-          const media = resolveMedia(tripSlug, visitSlug, v, trip, place);
+          const media = resolveMedia(file, visitSlug, v, trip, place);
           const photos = media.filter((m) => m.type === "photo");
           const coverPhoto = (v.cover && photos.find((p) => p.id.endsWith(v.cover as string))) || photos[0] || null;
           return {

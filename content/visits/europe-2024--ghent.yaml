@@ -1,0 +1,9 @@
+trip: europe-2024
+destination: ghent
+order: 4
+kind: day-trip
+arrive: 2024-04-09
+cover: photos/img-0512
+mediaMeta:
+  photos/img-0512: { caption: "St Bavo's Cathedral, Ghent", alt: "The tower of St Bavo's Cathedral in Ghent" }
+  photos/img-0519: { caption: "Inside St Bavo's", alt: "The vaulted nave and organ inside St Bavo's Cathedral" }
