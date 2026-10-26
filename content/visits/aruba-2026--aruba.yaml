@@ -5,7 +5,7 @@ summary: "Honestly, I only go to Aruba to eat, sleep and pray. These photos are 
 cover: photos/img-0351
 mediaMeta:
   photos/img-0351: { caption: "On the beach", alt: "John taking a selfie on a palm-lined beach" }
-  photos/img-0354: { hidden: true } # near-repeat of img-0351
+  photos/img-0354: { caption: "On the beach", alt: "John smiling in sunglasses under the palm trees" }
   photos/img-0358: { caption: "Dinner", alt: "A plated starter on a blue dish at a restaurant table" }
   photos/img-0360: { caption: "Dinner", alt: "A plate of fish with rice and vegetables" }
   photos/img-0361: { caption: "Oranjestad at night", alt: "A pastel Dutch-colonial building lit up at night" }
