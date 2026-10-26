@@ -311,7 +311,7 @@ async function main() {
           const ext = path.extname(name).toLowerCase();
           if (!(kind === "photos" ? PHOTO_EXT : VIDEO_EXT).has(ext)) continue;
           const base = slugify(name);
-          const citySlug = slugify(city);
+          const citySlug = folderSlug(city); // same rule as the site, so "st. moritz" matches st-moritz
           const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
           const stat = fs.statSync(file);
@@ -377,8 +377,9 @@ async function main() {
       const pub = path.join(ROOT, "public");
       e.hash = await dHash(path.join(pub, e.type === "photo" ? e.variants[0].jpg : e.poster));
       if (e.type === "video") e.bytes = fs.statSync(path.join(pub, e.src)).size;
-    } catch {
-      /* no poster or unreadable file: skip fingerprinting rather than fail the run */
+    } catch (err) {
+      // No poster or an unreadable file: this item just isn't checked for duplicates; the run carries on.
+      console.warn(`  ! Couldn't fingerprint ${id} for duplicate checks: ${(err as Error).message}`);
     }
   }
   const byCity = new Map<string, string[]>();
