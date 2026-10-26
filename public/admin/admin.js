@@ -1,6 +1,7 @@
 // Toolbar links in the editor (shown after signing in): "Site metrics" and "Upload photos". Each opens
 // its page in a new tab; pages can't be embedded because /admin/* forbids framing.
 if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
+  window.CMS.registerCustomPage({ id: "dashboard", label: "Dashboard", icon: "space_dashboard", url: "/admin/", newTab: false });
   window.CMS.registerCustomPage({ id: "metrics", label: "Site metrics", icon: "monitoring", url: "/admin/metrics/", newTab: true });
   window.CMS.registerCustomPage({ id: "upload", label: "Upload photos", icon: "upload", url: "/admin/upload/", newTab: true });
 }

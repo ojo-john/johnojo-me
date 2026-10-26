@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Editor · johnojo.me</title>
+    <!-- The editor lives at /admin/editor/; its settings stay at /admin/config.yml. -->
+    <link href="/admin/config.yml" type="application/yaml" rel="cms-config-url" />
+    <link rel="icon" href="/admin/logo.svg" type="image/svg+xml" />
+    <style>
+      /* Site colours inside the editor (Sveltia exposes these as CSS variables): cobalt accent, warm paper. */
+      :root {
+        --sui-base-hue: 228;
+        --sui-primary-accent-color: #2541b2;
+        --sui-primary-accent-color-light: #3a57c9;
+        --sui-primary-accent-color-text: #2541b2;
+        --sui-font-family-default: "Helvetica Neue", Arial, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sveltia CMS: a Git-based editor. Only accounts with write access to the GitHub repo can save. -->
+    <!-- Pinned to an exact version so an upstream release can't change the editor without a commit here. -->
+    <script src="https://unpkg.com/@sveltia/cms@0.252.0/dist/sveltia-cms.js"></script>
+    <!-- Toolbar links and the custom fields (cover picker, framing, photo editor). -->
+    <script src="/admin/admin.js"></script>
+  </body>
+</html>

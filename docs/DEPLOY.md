@@ -132,7 +132,7 @@ Your email lives only in Cloudflare's settings, never in this repository.
 ### Keeping /admin/ out of search engines
 
 `robots.txt` disallows `/admin/`, `public/_headers` sends `X-Robots-Tag: noindex` for it, and
-`public/admin/index.html` has `<meta name="robots" content="noindex">`. Behind Access, crawlers can't
+The admin pages (`public/admin/index.html` dashboard, `public/admin/editor/index.html` editor) have `<meta name="robots" content="noindex">`. Behind Access, crawlers can't
 reach it anyway.
 
 ## Security

@@ -4,13 +4,69 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>Editor · johnojo.me</title>
+    <title>Dashboard · johnojo.me</title>
+    <link rel="icon" href="/admin/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/admin/dashboard.css" />
   </head>
   <body>
-    <!-- Sveltia CMS: a Git-based editor. Only accounts with write access to the GitHub repo can save. -->
-    <!-- Pinned to an exact version so an upstream release can't change the editor without a commit here. -->
-    <script src="https://unpkg.com/@sveltia/cms@0.252.0/dist/sveltia-cms.js"></script>
-    <!-- Toolbar link to the visitor metrics page (public/admin/metrics/). -->
-    <script src="/admin/admin.js"></script>
+    <header class="top">
+      <a class="brand" href="/admin/"><img src="/admin/logo.svg" alt="" width="32" height="32" /><span>johnojo.me <b>admin</b></span></a>
+      <nav>
+        <a href="/admin/editor/">Editor</a>
+        <a href="/" target="_blank" rel="noopener">View site ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="kicker" id="today"></p>
+        <h1>Hi John<span class="dot">.</span></h1>
+        <p class="lede" id="lede">Loading your site…</p>
+      </section>
+
+      <section class="stats" aria-label="Site at a glance">
+        <div class="stat"><b data-count="trips">0</b><span>trips</span></div>
+        <div class="stat"><b data-count="places">0</b><span>places</span></div>
+        <div class="stat"><b data-count="countries">0</b><span>countries</span></div>
+        <div class="stat"><b data-count="photos">0</b><span>photos</span></div>
+        <div class="stat"><b data-count="videos">0</b><span>videos</span></div>
+        <div class="ring" aria-live="polite">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="track" cx="60" cy="60" r="50" /><circle class="fill" cx="60" cy="60" r="50" /></svg>
+          <div><b id="pct">0%</b><span id="pct-label">stops complete</span></div>
+        </div>
+      </section>
+
+      <section class="actions" aria-label="Quick actions">
+        <a class="tile sun" href="/admin/upload/"><span class="ico" aria-hidden="true">⇪</span><b>Upload photos</b><span>From your phone or laptop</span></a>
+        <a class="tile cobalt" href="/admin/editor/"><span class="ico" aria-hidden="true">✎</span><b>Write &amp; edit</b><span>Notes, scores, covers, crops</span></a>
+        <a class="tile moss" href="/admin/metrics/"><span class="ico" aria-hidden="true">◔</span><b>Site metrics</b><span>Views and clicks</span></a>
+        <a class="tile charcoal" href="/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">↗</span><b>View the site</b><span>As visitors see it</span></a>
+      </section>
+
+      <section class="panel" aria-labelledby="needs-h">
+        <div class="panel-head">
+          <h2 id="needs-h">Needs you <span class="count" id="needs-count"></span></h2>
+          <div class="chips" role="group" aria-label="Filter">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="scores" aria-pressed="false">Scores</button>
+            <button type="button" data-filter="would-return" aria-pressed="false">Would return?</button>
+            <button type="button" data-filter="notes" aria-pressed="false">Notes</button>
+            <button type="button" data-filter="photos" aria-pressed="false">Photos</button>
+          </div>
+        </div>
+        <ul class="needs" id="needs"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="trips-h">
+        <div class="panel-head">
+          <h2 id="trips-h">Trips</h2>
+          <input type="search" id="trip-search" placeholder="Find a trip…" aria-label="Find a trip" />
+        </div>
+        <div class="trips" id="trips"></div>
+      </section>
+
+      <p class="foot" id="built"></p>
+    </main>
+    <script src="/admin/dashboard.js"></script>
   </body>
 </html>

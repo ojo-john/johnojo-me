@@ -4,6 +4,8 @@ import path from "node:path";
 import YAML from "yaml";
 import type { z } from "zod";
 import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
+import { buildNeeds } from "./needs";
+import { travelStats } from "./stats";
 import { manifest as manifestSchema, type Manifest, type MediaItem } from "./media";
 import { scoreState, type ScoreState } from "./ranking";
 import {
@@ -227,6 +229,63 @@ export function getAdminMediaIndex(): AdminMediaIndex {
     })),
     Boolean(MEDIA_BASE_URL),
   );
+}
+
+/** Everything the admin dashboard shows: stats, the "needs you" checklist and every trip (drafts too). */
+export function getAdminDashboard() {
+  const places = getDestinations();
+  const media = getAdminMediaIndex();
+  const live = getTrips();
+  const tripFiles = new Map<string, Trip>();
+  const tripOf = (slug: string) => {
+    if (!tripFiles.has(slug)) tripFiles.set(slug, parseFile(dir("trips", slug, "trip.yaml"), tripSchema));
+    return tripFiles.get(slug) as Trip;
+  };
+  const visits = getVisitFiles();
+  const needs = buildNeeds(
+    visits.map(({ v, visitSlug }) => ({
+      trip: v.trip,
+      tripTitle: tripOf(v.trip).title,
+      tripPublished: tripOf(v.trip).status === "published" && v.status !== "draft",
+      visit: visitSlug,
+      city: places[v.destination]?.city ?? visitSlug,
+      kind: v.kind,
+      hasSummary: Boolean(v.summary?.trim()),
+      scoresGiven: Object.values(v.rating?.scores ?? {}).filter((n) => typeof n === "number").length,
+      hasWouldReturn: Boolean(v.wouldReturn),
+      photos: (media.visits[`${v.trip}--${visitSlug}`] ?? []).filter((p) => !p.hidden && !p.duplicate).length,
+      matches: v.matches.length,
+    })),
+  );
+  const liveStops = live.flatMap((t) => t.visits);
+  const complete = liveStops.length - needs.filter((n) => n.published).length;
+  const trips = [...new Set(visits.map(({ v }) => v.trip))].map((slug) => {
+    const t = tripOf(slug);
+    const photos = (media.trips[slug] ?? []).filter((p) => !p.hidden && !p.duplicate);
+    const cover = photos.find((p) => p.file === t.cover) ?? photos[0] ?? null;
+    return {
+      slug,
+      title: t.title,
+      year: t.year,
+      status: t.status,
+      kind: t.kind,
+      stops: visits.filter(({ v }) => v.trip === slug).length,
+      photos: photos.length,
+      cover: cover ? { thumb: cover.preview, placeholder: cover.placeholder, focus: cover.focus } : null,
+    };
+  });
+  return {
+    generatedAt: new Date().toISOString(),
+    stats: {
+      ...travelStats(live),
+      photos: liveStops.reduce((n, v) => n + v.photos.length, 0),
+      videos: liveStops.reduce((n, v) => n + v.videos.length, 0),
+      complete,
+      stops: liveStops.length,
+    },
+    needs,
+    trips: trips.sort((a, b) => b.year - a.year || a.title.localeCompare(b.title)),
+  };
 }
 
 export const getTrip = (slug: string) => getTrips().find((t) => t.slug === slug);

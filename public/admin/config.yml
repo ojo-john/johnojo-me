@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.252.0/schema/sveltia-cms.json
 # Editor configuration for johnojo.me (Sveltia CMS).
 # Every form below writes the same YAML / MDX files the site builds from, so nothing here is a separate database.
-# Locally: run `npm run dev`, open http://localhost:3000/admin/ in Chrome and choose
+# Locally: run `npm run dev`, open http://localhost:3000/admin/editor/ in Chrome and choose
 # "Work with Local Repository". Online: sign in with GitHub (see docs/DEPLOY.md, "The editor online").
 #
 # The fields mirror src/lib/content/schema.ts. tests/admin-config.test.ts fails the test run if the two
@@ -15,6 +15,9 @@ backend:
   # "Sign in with GitHub" needs a small OAuth relay (docs/DEPLOY.md). Once it exists, uncomment and set:
   # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
 
+app_title: johnojo.me · Editor
+logo:
+  src: /admin/logo.svg
 media_folder: public/uploads
 public_folder: /uploads
 
