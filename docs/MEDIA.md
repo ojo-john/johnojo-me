@@ -43,6 +43,10 @@ Nothing needs to stay on your Mac. Folders whose names start with `_` are never 
 
 ## Limits
 
-- Uploads through the admin page: 100 MB per file (Cloudflare's free plan). Trim longer clips first.
-- Web clips over 25 MB after compression are skipped with a warning.
+- Uploads through the admin page: any size up to 5 GB. Files over 90 MB go up in 50 MB parts (Cloudflare's free plan
+  caps one request at 100 MB). A file name already taken in that city is saved as name-2, name-3… (never overwritten).
+- Web clips over 25 MB after compression stay off the site, listed in the editor as "too long: trim" until trimmed.
+- The "Process media" job runs on every visit save (to catch rotate/crop/trim edits). A save with nothing to process
+  finishes in about a minute.
+- The Cloudflare Pages build fails on purpose if `MEDIA_BASE_URL` isn't set, rather than publishing broken images.
 - GitHub Actions on a private repo: 2,000 free minutes a month; a run takes a few minutes.

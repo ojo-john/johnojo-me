@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { ResumeButton } from "@/components/ResumeButton";
 import { Picture } from "@/components/Picture";
 import { FlowPattern } from "@/components/home/FlowPattern";
@@ -53,7 +54,7 @@ export default function Home() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />
+      <JsonLd data={person} />
       <section className="wrap intro" aria-labelledby="hn">
         <div>
           <h1 id="hn">

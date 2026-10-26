@@ -7,9 +7,24 @@
 import { verifyAccess, type AccessDeps } from "../metrics/access";
 import { json, log } from "../metrics/cf";
 
+/** One part of a multipart upload, as R2 reports it. */
+export interface UploadedPart {
+  partNumber: number;
+  etag: string;
+}
+export interface MultipartUpload {
+  uploadId: string;
+  uploadPart(partNumber: number, value: ReadableStream | ArrayBuffer): Promise<UploadedPart>;
+  complete(parts: UploadedPart[]): Promise<unknown>;
+  abort(): Promise<void>;
+}
+
 /** The slice of an R2 bucket binding these routes use. */
 export interface BucketBinding {
   put(key: string, value: ReadableStream | ArrayBuffer | null, options?: { httpMetadata?: { contentType?: string } }): Promise<unknown>;
+  head(key: string): Promise<unknown | null>;
+  createMultipartUpload(key: string, options?: { httpMetadata?: { contentType?: string } }): Promise<MultipartUpload>;
+  resumeMultipartUpload(key: string, uploadId: string): MultipartUpload;
   get(key: string, options?: { range?: { offset: number; length?: number } }): Promise<{ body: ReadableStream; size: number; httpMetadata?: { contentType?: string } } | null>;
 }
 
@@ -24,8 +39,11 @@ export interface MediaAdminEnv {
   GITHUB_DISPATCH_TOKEN?: string;
 }
 
-/** Cloudflare's free plan caps request bodies at 100 MB; bigger clips need trimming first. */
+/** Cloudflare's free plan caps request bodies at 100 MB, so bigger files arrive as parts of at most this. */
 export const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
+/** Largest whole file accepted through multipart upload (a long 4K phone clip is well under this). */
+export const MAX_FILE_BYTES = 5 * 1024 * 1024 * 1024;
+const MAX_PARTS = 10_000;
 const GITHUB_TIMEOUT_MS = 10_000;
 const PART = /^[A-Za-z0-9][A-Za-z0-9 ._+()-]{0,99}$/;
 const EXT = { photos: /\.(jpe?g|png|heic|heif|webp|tiff?)$/i, videos: /\.(mp4|mov|m4v)$/i } as const;
@@ -49,24 +67,100 @@ async function gate(req: Request, env: MediaAdminEnv, access: AccessDeps, route:
   return json(result.status, { error: result.status === 403 ? "forbidden" : result.reason });
 }
 
-/** PUT /api/upload?key=<trip>/<city>/<photos|videos>/<file>: stores one original in the private bucket. */
+/**
+ * /api/upload?key=<trip>/<city>/<photos|videos>/<file> stores one original in the private bucket. Never
+ * overwrites: cameras reuse names (IMG_0001), so an existing key answers 409 and the page picks a new name.
+ *   PUT                          whole file, up to MAX_UPLOAD_BYTES
+ *   POST   &action=start         begin a multipart upload (files bigger than one request allows)
+ *   PUT    &uploadId=…&part=N    one part
+ *   POST   &action=finish&uploadId=…   body: [{ partNumber, etag }]
+ *   DELETE &uploadId=…           abandon it
+ */
 export async function handleUpload(req: Request, env: MediaAdminEnv, access: AccessDeps): Promise<Response> {
   const id = requestId(req);
-  if (req.method !== "PUT") return json(405, { error: "method-not-allowed" }, { Allow: "PUT" });
+  if (!["PUT", "POST", "DELETE"].includes(req.method)) return json(405, { error: "method-not-allowed" }, { Allow: "PUT, POST, DELETE" });
   const denied = await gate(req, env, access, "upload", id);
   if (denied) return denied;
   if (!env.ORIGINALS) return json(503, { error: "not-configured" });
-  const key = new URL(req.url).searchParams.get("key");
+  const q = new URL(req.url).searchParams;
+  const key = q.get("key");
   if (!validOriginalKey(key)) return json(400, { error: "invalid-key" });
-  const size = Number(req.headers.get("content-length") ?? NaN);
-  if (!Number.isFinite(size) || size <= 0) return json(411, { error: "length-required" });
-  if (size > MAX_UPLOAD_BYTES) return json(413, { error: "too-large", maxBytes: MAX_UPLOAD_BYTES });
+  const bucket = env.ORIGINALS;
+  const uploadId = q.get("uploadId");
+  const contentType = req.headers.get("content-type") ?? "application/octet-stream";
   const started = Date.now();
-  try {
-    await env.ORIGINALS.put(key, req.body, { httpMetadata: { contentType: req.headers.get("content-type") ?? "application/octet-stream" } });
-  } catch (e) {
-    log("error", { route: "upload", outcome: "store-failed", error: e instanceof Error ? e.name : "unknown", requestId: id });
+  const failed = (e: unknown, step: string) => {
+    log("error", { route: "upload", outcome: "store-failed", step, error: e instanceof Error ? e.name : "unknown", requestId: id });
     return json(502, { error: "store-failed" });
+  };
+  const bodySize = () => {
+    const n = Number(req.headers.get("content-length") ?? NaN);
+    return Number.isFinite(n) && n > 0 ? n : null;
+  };
+
+  // Abandon a multipart upload.
+  if (req.method === "DELETE") {
+    if (!uploadId) return json(400, { error: "upload-id-required" });
+    try {
+      await bucket.resumeMultipartUpload(key, uploadId).abort();
+    } catch (e) {
+      return failed(e, "abort");
+    }
+    return json(200, { aborted: true });
+  }
+
+  if (req.method === "POST") {
+    const action = q.get("action");
+    if (action === "start") {
+      const size = Number(q.get("size") ?? NaN);
+      if (!Number.isFinite(size) || size <= 0) return json(400, { error: "size-required" });
+      if (size > MAX_FILE_BYTES) return json(413, { error: "too-large", maxBytes: MAX_FILE_BYTES });
+      if (await bucket.head(key)) return json(409, { error: "exists" });
+      try {
+        const up = await bucket.createMultipartUpload(key, { httpMetadata: { contentType } });
+        return json(200, { uploadId: up.uploadId });
+      } catch (e) {
+        return failed(e, "start");
+      }
+    }
+    if (action === "finish") {
+      if (!uploadId) return json(400, { error: "upload-id-required" });
+      let parts: UploadedPart[];
+      try {
+        parts = (await req.json()) as UploadedPart[];
+      } catch {
+        return json(400, { error: "invalid-parts" });
+      }
+      if (!Array.isArray(parts) || !parts.length || parts.length > MAX_PARTS || !parts.every((p) => Number.isInteger(p?.partNumber) && typeof p?.etag === "string")) return json(400, { error: "invalid-parts" });
+      try {
+        await bucket.resumeMultipartUpload(key, uploadId).complete(parts);
+      } catch (e) {
+        return failed(e, "finish");
+      }
+      log("info", { route: "upload", outcome: "ok", parts: parts.length, latencyMs: Date.now() - started, requestId: id });
+      return json(201, { key });
+    }
+    return json(400, { error: "unknown-action" });
+  }
+
+  // PUT: a whole file, or one part of a multipart upload.
+  const size = bodySize();
+  if (size === null) return json(411, { error: "length-required" });
+  if (size > MAX_UPLOAD_BYTES) return json(413, { error: "too-large", maxBytes: MAX_UPLOAD_BYTES });
+  if (uploadId) {
+    const part = Number(q.get("part"));
+    if (!Number.isInteger(part) || part < 1 || part > MAX_PARTS) return json(400, { error: "invalid-part" });
+    try {
+      return json(200, await bucket.resumeMultipartUpload(key, uploadId).uploadPart(part, req.body as ReadableStream));
+    } catch (e) {
+      return failed(e, "part");
+    }
+  }
+  if (await bucket.head(key)) return json(409, { error: "exists" });
+  try {
+    await bucket.put(key, req.body, { httpMetadata: { contentType } });
+  } catch (e) {
+    return failed(e, "put");
   }
   log("info", { route: "upload", outcome: "ok", bytes: size, latencyMs: Date.now() - started, requestId: id });
   return json(201, { key });

@@ -3,8 +3,13 @@
 // /api/process to start the media job. No storage keys ever reach the browser.
 (function () {
   "use strict";
-  /** Cloudflare's request limit on the free plan; the server enforces it too. */
-  const MAX_BYTES = 100 * 1024 * 1024;
+  /** Files above this go up in parts: Cloudflare's free plan caps one request at 100 MB. */
+  const SINGLE_MAX = 90 * 1024 * 1024;
+  const PART_BYTES = 50 * 1024 * 1024;
+  /** The server's ceiling for one file (a long 4K clip is far below it). */
+  const MAX_BYTES = 5 * 1024 * 1024 * 1024;
+  /** How many "-2", "-3"… names to try when a file name is already taken in that city. */
+  const MAX_RENAMES = 50;
   const PHOTO = /\.(jpe?g|png|heic|heif|webp|tiff?)$/i;
   const VIDEO = /\.(mp4|mov|m4v)$/i;
   const $ = (id) => document.getElementById(id);
@@ -40,7 +45,7 @@
       const kind = kindOf(file.name);
       const row = { file, kind, state: "queued", note: "" };
       if (!kind) Object.assign(row, { state: "skip", note: "not a photo or video" });
-      else if (file.size > MAX_BYTES) Object.assign(row, { state: "skip", note: `${mb(file.size)}: over 100 MB, trim it first` });
+      else if (file.size > MAX_BYTES) Object.assign(row, { state: "skip", note: `${mb(file.size)}: too big` });
       queue.push(row);
     }
     render();
@@ -75,34 +80,78 @@
   }
 
   // XHR rather than fetch: it reports upload progress, which matters for large clips on a phone.
-  function send(row) {
+  function xhr(method, url, body, onProgress, contentType) {
     return new Promise((resolve) => {
-      const key = `${target.value}/${row.kind}/${safeName(row.file.name)}`;
-      const xhr = new XMLHttpRequest();
-      xhr.open("PUT", `/api/upload?key=${encodeURIComponent(key)}`);
-      xhr.setRequestHeader("Content-Type", row.file.type || "application/octet-stream");
-      xhr.upload.onprogress = (e) => {
-        if (e.lengthComputable) {
-          row.progress = Math.round((e.loaded / e.total) * 100);
-          render();
+      const x = new XMLHttpRequest();
+      x.open(method, url);
+      if (contentType) x.setRequestHeader("Content-Type", contentType);
+      if (onProgress) x.upload.onprogress = (e) => e.lengthComputable && onProgress(e.loaded);
+      x.onload = () => {
+        let data = null;
+        try {
+          data = JSON.parse(x.responseText);
+        } catch {
+          data = null;
         }
+        resolve({ status: x.status, data });
       };
-      xhr.onload = () => {
-        if (xhr.status === 201) Object.assign(row, { state: "done", note: "uploaded" });
-        else if (xhr.status === 404) Object.assign(row, { state: "failed", note: "uploads only work on the live site" });
-        else if (xhr.status === 403) Object.assign(row, { state: "failed", note: "signed out: reload and sign in" });
-        else Object.assign(row, { state: "failed", note: `failed (${xhr.status}), try again` });
-        resolve();
-      };
-      xhr.onerror = () => {
-        Object.assign(row, { state: "failed", note: "connection lost, try again" });
-        resolve();
-      };
-      row.state = "uploading";
-      row.progress = 0;
-      render();
-      xhr.send(row.file);
+      x.onerror = () => resolve({ status: 0, data: null });
+      x.send(body);
     });
+  }
+
+  /** "IMG_0001.jpg" → "IMG_0001-2.jpg": cameras reuse names, and the server never overwrites. */
+  const withSuffix = (name, n) => (n < 2 ? name : name.replace(/(\.[^.]+)?$/, (ext) => `-${n}${ext || ""}`));
+  const urlFor = (key, extra = "") => `/api/upload?key=${encodeURIComponent(key)}${extra}`;
+  const progress = (row, done) => {
+    row.progress = Math.min(100, Math.round((done / row.file.size) * 100));
+    render();
+  };
+
+  async function sendWhole(row, key) {
+    return xhr("PUT", urlFor(key), row.file, (loaded) => progress(row, loaded), row.file.type || "application/octet-stream");
+  }
+
+  async function sendInParts(row, key) {
+    const type = row.file.type || "application/octet-stream";
+    const start = await xhr("POST", urlFor(key, `&action=start&size=${row.file.size}`), null, null, type);
+    if (start.status !== 200) return start;
+    const uploadId = start.data.uploadId;
+    const parts = [];
+    for (let offset = 0, n = 1; offset < row.file.size; offset += PART_BYTES, n++) {
+      const chunk = row.file.slice(offset, offset + PART_BYTES);
+      // One retry per part: a dropped phone connection shouldn't lose a 300 MB upload.
+      let res = await xhr("PUT", urlFor(key, `&uploadId=${encodeURIComponent(uploadId)}&part=${n}`), chunk, (loaded) => progress(row, offset + loaded));
+      if (res.status !== 200) res = await xhr("PUT", urlFor(key, `&uploadId=${encodeURIComponent(uploadId)}&part=${n}`), chunk, (loaded) => progress(row, offset + loaded));
+      if (res.status !== 200) {
+        await xhr("DELETE", urlFor(key, `&uploadId=${encodeURIComponent(uploadId)}`));
+        return res;
+      }
+      parts.push(res.data);
+    }
+    return xhr("POST", urlFor(key, `&action=finish&uploadId=${encodeURIComponent(uploadId)}`), JSON.stringify(parts), null, "application/json");
+  }
+
+  async function send(row) {
+    row.state = "uploading";
+    row.progress = 0;
+    render();
+    const name = safeName(row.file.name);
+    let res = { status: 0 };
+    let used = name;
+    for (let n = 1; n <= MAX_RENAMES; n++) {
+      used = withSuffix(name, n);
+      const key = `${target.value}/${row.kind}/${used}`;
+      res = row.file.size > SINGLE_MAX ? await sendInParts(row, key) : await sendWhole(row, key);
+      if (res.status !== 409) break;
+    }
+    if (res.status === 201) Object.assign(row, { state: "done", note: used === name ? "uploaded" : `uploaded as ${used}` });
+    else if (res.status === 404) Object.assign(row, { state: "failed", note: "uploads only work on the live site" });
+    else if (res.status === 403) Object.assign(row, { state: "failed", note: "signed out: reload and sign in" });
+    else if (res.status === 409) Object.assign(row, { state: "failed", note: "too many files with this name" });
+    else if (res.status === 0) Object.assign(row, { state: "failed", note: "connection lost, try again" });
+    else Object.assign(row, { state: "failed", note: `failed (${res.status}), try again` });
+    render();
   }
 
   uploadBtn.addEventListener("click", async () => {

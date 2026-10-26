@@ -35,6 +35,14 @@ const devEditorRewrite: NextConfig["rewrites"] = async () => [
   { source: "/admin/editor/", destination: "/admin/editor/index.html" },
 ];
 
+/**
+ * Photos aren't in the repo; on Cloudflare Pages they come from R2. A Pages build without MEDIA_BASE_URL
+ * would publish a site full of broken images, so it stops here with the fix instead.
+ */
+if (process.env.CF_PAGES === "1" && !process.env.MEDIA_BASE_URL) {
+  throw new Error("MEDIA_BASE_URL is not set for this Cloudflare Pages build. Add MEDIA_BASE_URL=https://media.johnojo.me in the Pages project's build settings (docs/MEDIA.md).");
+}
+
 export default function config(phase: string): NextConfig {
   return phase === PHASE_DEVELOPMENT_SERVER ? { ...nextConfig, rewrites: devEditorRewrite } : nextConfig;
 }

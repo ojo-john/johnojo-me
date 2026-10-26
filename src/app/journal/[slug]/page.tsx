@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reader } from "@/components/journal/Reader";
@@ -50,7 +51,7 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
   };
   return (
     <article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <header className="wrap ahead">
         <div>
           {post.status === "draft" ? <span className="flag">{post.sample ? "Sample · draft, not public" : "Draft · not public"}</span> : null}
