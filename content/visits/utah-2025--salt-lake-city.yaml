@@ -1,7 +1,7 @@
 trip: utah-2025
 destination: salt-lake-city
 order: 1
-summary: "We went to the Church History Museum in Salt Lake City."
+summary: "We went to the Church History Museum in Salt Lake City, and to the Loveland Living Planet Aquarium in Draper, just south of the city."
 cover: photos/img-4432
 mediaMeta:
   photos/100-0073: { caption: "Waiting at the airport", alt: "John laughing in an airport lounge chair" }
@@ -9,5 +9,5 @@ mediaMeta:
   photos/100-0078: { alt: "Two friends sitting together in the airport lounge" }
   photos/100-0084: { caption: "In-N-Out", alt: "A friend inside an In-N-Out restaurant" }
   photos/100-0094: { caption: "In-N-Out", alt: "John and three others posing inside In-N-Out" }
-  photos/img-4431: { caption: "At the museum", alt: "A group of friends taking a selfie in front of a jungle backdrop" }
-  photos/img-4432: { caption: "At the museum", alt: "The whole group posing in front of a thatched hut and mountain mural" }
+  photos/img-4431: { caption: "At the aquarium", alt: "A group of friends taking a selfie in front of a rainforest backdrop at the aquarium" }
+  photos/img-4432: { caption: "At the aquarium", alt: "The whole group posing in front of a thatched hut and mountain mural at the aquarium" }
