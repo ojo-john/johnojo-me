@@ -184,6 +184,7 @@ collections:
           - { name: writeUp, label: Write-up, widget: text, required: false, hint: "Your own words about the day" }
       - { name: cover, label: Cover photo, required: false, widget: cover-picker, hint: "Pick one of this visit's photos. Leave blank to use the first photo." }
       - { name: coverFocus, label: Cover framing, required: false, widget: focus-picker, hint: "Click the part of the cover that must stay in view when it's cropped." }
+      - { name: photoEdits, label: Photo editor (rotate and crop), required: false, widget: photo-editor, hint: "Turn or crop any of this visit's photos. Applied the next time photos are processed." }
       - name: media
         label: Photo order
         widget: list

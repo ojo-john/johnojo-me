@@ -221,6 +221,7 @@ export function getAdminMediaIndex(): AdminMediaIndex {
       folder: folderSlug(v.photoFolder ?? visitSlug),
       hiddenFiles: new Set(Object.entries(v.mediaMeta).flatMap(([k, m]) => (m.hidden ? [k.includes("/") ? k : `photos/${k}`] : []))),
     })),
+    Boolean(MEDIA_BASE_URL),
   );
 }
 

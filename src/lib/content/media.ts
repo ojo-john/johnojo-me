@@ -14,6 +14,8 @@ export const photoEntry = z.object({
   placeholder: z.string(),
   takenAt: z.string().nullable(),
   hash: z.string().optional(),
+  /** What it was made from (original's size and MD5, plus any edit), so the media job knows when to re-make it. */
+  source: z.string().optional(),
   /** Where the subject sits (percent across, percent down), found by npm run media. Crops keep this in frame. */
   focus: z.object({ x: z.number(), y: z.number() }).optional(),
   /** How focus was found: from faces, or (no faces) from colour and detail. */
@@ -30,6 +32,7 @@ export const videoEntry = z.object({
   poster: z.string(),
   takenAt: z.string().nullable(),
   hash: z.string().optional(),
+  source: z.string().optional(),
   bytes: z.number().optional(),
   duplicateOf: z.string().optional(),
 });

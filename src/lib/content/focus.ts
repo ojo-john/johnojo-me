@@ -1,4 +1,4 @@
-/** A face box from the Vision face finder: fractions of the image, origin at the top-left. */
+/** A face box from the face finder (scripts/lib/faces.ts): fractions of the image, origin at the top-left. */
 export type FaceBox = { x: number; y: number; w: number; h: number };
 /** Where to keep a cropped photo centred, as percentages across and down (CSS object-position). */
 export type Focus = { x: number; y: number };

@@ -49,3 +49,4 @@ next-env.d.ts
 
 # local performance reports (npm run perf)
 /reports/
+/public/_edit/

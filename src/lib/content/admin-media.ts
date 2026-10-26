@@ -13,6 +13,8 @@ export interface AdminPhoto {
   /** Tiny blurred stand-in, shown if the thumbnail isn't on public storage (hidden photos never are). */
   placeholder: string;
   focus: { x: number; y: number } | null;
+  /** The uncropped, unrotated working copy the photo tool draws on (private: local file or Access-only API). */
+  edit: string;
   takenAt: string | null;
   hidden: boolean;
   duplicate: boolean;
@@ -25,6 +27,12 @@ export interface AdminMediaIndex {
   trips: Record<string, AdminPhoto[]>;
 }
 
+/**
+ * Where the photo tool loads a photo's uncropped working copy. Locally that's public/_edit (never shipped);
+ * on the live site it's /api/preview, which reads the private originals bucket behind the admin login.
+ */
+export const editPreviewUrl = (id: string, live: boolean) => (live ? `/api/preview/${id}.jpg` : `/_edit/${id}.jpg`);
+
 export interface AdminVisitInput {
   trip: string;
   visitSlug: string;
@@ -36,7 +44,7 @@ export interface AdminVisitInput {
 /** The smallest jpg that still looks sharp in a grid of thumbnails on a high-density screen. */
 const thumbOf = (e: ManifestEntry & { type: "photo" }) => [...e.variants].sort((a, b) => a.w - b.w).find((v) => v.w >= 320)?.jpg ?? e.variants[0].jpg;
 
-export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visits: AdminVisitInput[]): AdminMediaIndex {
+export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visits: AdminVisitInput[], live = false): AdminMediaIndex {
   const index: AdminMediaIndex = { visits: {}, trips: {} };
   for (const v of visits) {
     const prefix = `${v.trip}/${v.folder}/`;
@@ -46,7 +54,7 @@ export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visit
       .map(([id, e]) => {
         const file = id.slice(prefix.length);
         const preview = ([...e.variants].sort((a, b) => a.w - b.w).find((v) => v.w >= 960) ?? e.variants[e.variants.length - 1]).jpg;
-        return { file, thumb: thumbOf(e), preview, placeholder: e.placeholder, focus: e.focus ?? null, takenAt: e.takenAt, hidden: v.hiddenFiles.has(file), duplicate: Boolean(e.duplicateOf) };
+        return { file, thumb: thumbOf(e), preview, edit: editPreviewUrl(id, live), placeholder: e.placeholder, focus: e.focus ?? null, takenAt: e.takenAt, hidden: v.hiddenFiles.has(file), duplicate: Boolean(e.duplicateOf) };
       });
     index.visits[`${v.trip}--${v.visitSlug}`] = photos;
     index.trips[v.trip] = [...(index.trips[v.trip] ?? []), ...photos.map((p) => ({ ...p, file: `${v.folder}/${p.file}` }))];

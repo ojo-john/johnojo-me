@@ -104,6 +104,8 @@ export const visit = z.object({
   mediaMeta: mapOrList(mediaMeta, "file").default({}),
   cover: z.string().optional(),
   coverFocus: coverFocus.optional(),
+  /** Rotate/crop lines from the editor's photo tool; see photo-edits.ts. Applied by npm run media. */
+  photoEdits: z.string().optional(),
   youtube: z.array(z.object({ id: z.string(), title: z.string() })).default([]),
 });
 export type Visit = z.infer<typeof visit>;

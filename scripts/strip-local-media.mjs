@@ -4,6 +4,9 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// The editor's uncropped working copies (public/_edit) are for the local preview only. Never ship them.
+fs.rmSync(path.join(process.cwd(), "out", "_edit"), { recursive: true, force: true });
+
 const media = path.join(process.cwd(), "out", "media");
 if (process.env.MEDIA_BASE_URL && fs.existsSync(media)) {
   fs.rmSync(media, { recursive: true, force: true });

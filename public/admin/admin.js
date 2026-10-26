@@ -211,4 +211,213 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
   }
 
   CMS.registerWidget("focus-picker", FocusPicker);
+
+  // "photo-editor" field: pick one of the visit's photos, turn it and drag a crop box. Saves one line per
+  // edited photo ("photos/img-1 rotate=90 crop=10,5,80,70", the format in src/lib/content/photo-edits.ts).
+  // The edit is baked into the web copies the next time photos are processed.
+  const MIN_CROP = 5;
+  const parseEdits = (text) => {
+    const out = {};
+    for (const raw of String(text ?? "").split("\n")) {
+      const [file, ...parts] = raw.trim().split(/\s+/);
+      if (!file || file.startsWith("#")) continue;
+      const e = {};
+      for (const p of parts) {
+        const [k, v = ""] = p.split("=");
+        if (k === "rotate" && ["90", "180", "270"].includes(v)) e.rotate = Number(v);
+        if (k === "crop") {
+          const n = v.split(",").map(Number);
+          if (n.length === 4 && n.every(Number.isFinite)) e.crop = { x: n[0], y: n[1], w: n[2], h: n[3] };
+        }
+      }
+      out[file.includes("/") ? file : `photos/${file}`] = e;
+    }
+    return out;
+  };
+  const r1 = (n) => Math.round(n * 10) / 10;
+  const formatEdits = (edits) =>
+    Object.keys(edits)
+      .sort()
+      .map((f) => {
+        const e = edits[f];
+        const bits = [e.rotate ? `rotate=${e.rotate}` : "", e.crop ? `crop=${[e.crop.x, e.crop.y, e.crop.w, e.crop.h].map(r1).join(",")}` : ""].filter(Boolean);
+        return bits.length ? [f, ...bits].join(" ") : "";
+      })
+      .filter(Boolean)
+      .join("\n");
+
+  function CropCanvas({ photo, edit, onEdit }) {
+    const canvasRef = React.useRef(null);
+    const drag = React.useRef(null);
+    const [ratio, setRatio] = React.useState(null);
+    const rotate = edit.rotate ?? 0;
+    // Draw the working copy turned by `rotate`, so the crop box is in the same frame the site will use.
+    React.useEffect(() => {
+      const img = new Image();
+      img.onload = () => {
+        const c = canvasRef.current;
+        if (!c) return;
+        const turned = rotate === 90 || rotate === 270;
+        const w = turned ? img.naturalHeight : img.naturalWidth, hgt = turned ? img.naturalWidth : img.naturalHeight;
+        c.width = w;
+        c.height = hgt;
+        const ctx = c.getContext("2d");
+        ctx.save();
+        ctx.translate(w / 2, hgt / 2);
+        ctx.rotate((rotate * Math.PI) / 180);
+        ctx.drawImage(img, -img.naturalWidth / 2, -img.naturalHeight / 2);
+        ctx.restore();
+        setRatio(w / hgt);
+      };
+      img.onerror = () => setRatio(-1);
+      img.src = photo.edit;
+    }, [photo.edit, rotate]);
+
+    const crop = edit.crop ?? { x: 0, y: 0, w: 100, h: 100 };
+    const pct = (e) => {
+      const r = canvasRef.current.getBoundingClientRect();
+      return { x: clamp(((e.clientX - r.left) / r.width) * 100), y: clamp(((e.clientY - r.top) / r.height) * 100) };
+    };
+    const setCrop = (c) => {
+      const full = c.x <= 0 && c.y <= 0 && c.w >= 100 && c.h >= 100;
+      onEdit({ ...edit, crop: full ? undefined : c });
+    };
+    const onDown = (e, mode) => {
+      e.stopPropagation();
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+      drag.current = { mode, start: pct(e), crop: { ...crop } };
+    };
+    const onMove = (e) => {
+      const d = drag.current;
+      if (!d) return;
+      const p = pct(e);
+      const dx = p.x - d.start.x, dy = p.y - d.start.y;
+      const c = { ...d.crop };
+      if (d.mode === "new") {
+        Object.assign(c, { x: Math.min(d.start.x, p.x), y: Math.min(d.start.y, p.y), w: Math.abs(dx), h: Math.abs(dy) });
+      } else if (d.mode === "move") {
+        c.x = Math.max(0, Math.min(100 - c.w, d.crop.x + dx));
+        c.y = Math.max(0, Math.min(100 - c.h, d.crop.y + dy));
+      } else {
+        // Corner handles: "nw", "ne", "sw", "se" move the matching edges.
+        if (d.mode.includes("w")) { c.x = Math.min(d.crop.x + d.crop.w - MIN_CROP, Math.max(0, d.crop.x + dx)); c.w = d.crop.x + d.crop.w - c.x; }
+        if (d.mode.includes("e")) c.w = Math.max(MIN_CROP, Math.min(100 - d.crop.x, d.crop.w + dx));
+        if (d.mode.includes("n")) { c.y = Math.min(d.crop.y + d.crop.h - MIN_CROP, Math.max(0, d.crop.y + dy)); c.h = d.crop.y + d.crop.h - c.y; }
+        if (d.mode.includes("s")) c.h = Math.max(MIN_CROP, Math.min(100 - d.crop.y, d.crop.h + dy));
+      }
+      if (c.w >= MIN_CROP && c.h >= MIN_CROP) setCrop(c);
+    };
+    const onUp = () => (drag.current = null);
+    const handle = (mode, pos) =>
+      h("span", {
+        key: mode,
+        onPointerDown: (e) => onDown(e, mode),
+        style: { position: "absolute", width: 16, height: 16, background: "#fff", border: "2px solid #2541b2", borderRadius: 3, cursor: `${mode}-resize`, ...pos },
+      });
+
+    if (ratio === -1) return h("p", { style: { fontSize: 13, color: "#a33" } }, "Couldn't load this photo's working copy. Process the photos again, then reopen.");
+    return h(
+      "div",
+      // overflow: hidden keeps the dimmed area outside the crop box on the photo, not the whole page.
+      { style: { position: "relative", maxWidth: 520, overflow: "hidden", borderRadius: 6, touchAction: "none", userSelect: "none", lineHeight: 0 }, onPointerDown: (e) => onDown(e, "new"), onPointerMove: onMove, onPointerUp: onUp },
+      h("canvas", { ref: canvasRef, style: { width: "100%", display: "block", borderRadius: 6, background: "#ddd", aspectRatio: ratio ? String(ratio) : "4 / 3", cursor: "crosshair" } }),
+      ratio && edit.crop
+        ? h(
+            "div",
+            {
+              onPointerDown: (e) => onDown(e, "move"),
+              style: {
+                position: "absolute", left: `${crop.x}%`, top: `${crop.y}%`, width: `${crop.w}%`, height: `${crop.h}%`,
+                boxShadow: "0 0 0 9999px rgba(0,0,0,.45)", outline: "2px solid #fff", cursor: "move",
+              },
+            },
+            handle("nw", { left: 0, top: 0 }),
+            handle("ne", { right: 0, top: 0 }),
+            handle("sw", { left: 0, bottom: 0 }),
+            handle("se", { right: 0, bottom: 0 }),
+          )
+        : null,
+    );
+  }
+
+  function PhotoEditor(props) {
+    const key = entryKey(props.entry, "visit");
+    const [photos, setPhotos] = React.useState(null);
+    const [error, setError] = React.useState(null);
+    const [selected, setSelected] = React.useState(null);
+    React.useEffect(() => {
+      let live = true;
+      loadIndex()
+        .then((index) => live && setPhotos(index.visits[key] ?? []))
+        .catch((err) => {
+          indexPromise = null;
+          if (live) setError(err.message);
+        });
+      return () => {
+        live = false;
+      };
+    }, [key]);
+
+    const edits = parseEdits(props.value);
+    const save = (file, edit) => props.onChange(formatEdits({ ...edits, [file]: edit }));
+    const note = (text) => h("p", { style: { margin: "6px 0", fontSize: 13, color: "#555" } }, text);
+    if (error) return note(`Couldn't load the photo list (${error}).`);
+    if (!photos) return note("Loading…");
+    if (!photos.length) return note("No photos for this visit yet.");
+    const photo = photos.find((p) => p.file === selected);
+    const edit = (photo && edits[photo.file]) || {};
+    const btn = (label, onClick, extra = {}) => h("button", { type: "button", onClick, style: { fontSize: 13, padding: "4px 10px", marginRight: 6 }, ...extra }, label);
+
+    return h(
+      "div",
+      { id: props.forID },
+      note("Pick a photo to rotate or crop it. Changes show on the site after the photos are next processed."),
+      h(
+        "div",
+        { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(90px, 1fr))", gap: 6, maxHeight: 260, overflowY: "auto", padding: 2 } },
+        photos.map((p) =>
+          h(
+            "button",
+            {
+              key: p.file,
+              type: "button",
+              title: p.file,
+              onClick: () => setSelected(p.file === selected ? null : p.file),
+              style: { position: "relative", padding: 0, aspectRatio: "1", overflow: "hidden", borderRadius: 6, cursor: "pointer", border: p.file === selected ? "3px solid #2541b2" : "1px solid #ccc", background: "#eee" },
+            },
+            h("img", {
+              src: p.thumb,
+              alt: "",
+              loading: "lazy",
+              onError: (e) => {
+                if (p.placeholder && e.currentTarget.src !== p.placeholder) e.currentTarget.src = p.placeholder;
+              },
+              style: { width: "100%", height: "100%", objectFit: "cover", display: "block" },
+            }),
+            edits[p.file] && (edits[p.file].rotate || edits[p.file].crop)
+              ? h("span", { style: { position: "absolute", top: 3, right: 3, background: "#2541b2", color: "#fff", font: "10px ui-monospace, Menlo, monospace", padding: "1px 4px", borderRadius: 3 } }, "edited")
+              : null,
+          ),
+        ),
+      ),
+      photo
+        ? h(
+            "div",
+            { style: { marginTop: 12 } },
+            h(
+              "div",
+              { style: { marginBottom: 8 } },
+              // Turning changes the frame, so any crop is cleared rather than silently moved.
+              btn("⟲ Rotate left", () => save(photo.file, { rotate: ((edit.rotate ?? 0) + 270) % 360 || undefined })),
+              btn("⟳ Rotate right", () => save(photo.file, { rotate: ((edit.rotate ?? 0) + 90) % 360 || undefined })),
+              btn("Reset", () => save(photo.file, {})),
+            ),
+            h(CropCanvas, { photo, edit, onEdit: (e) => save(photo.file, e) }),
+            note(edit.crop ? `Crop: ${r1(edit.crop.w)}% × ${r1(edit.crop.h)}% of the photo. Drag the box to move it, the corners to resize, or outside it to draw a new one.` : "Drag across the photo to draw a crop box."),
+          )
+        : null,
+    );
+  }
+
+  CMS.registerWidget("photo-editor", PhotoEditor);
 })();

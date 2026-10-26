@@ -19,9 +19,13 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import exifReader from "exif-reader";
+import ffmpegPath from "ffmpeg-static";
 import sharp, { type Sharp } from "sharp";
-import { parse as parseYaml } from "yaml";
-import { focusFromFaces, type FaceBox, type Focus } from "../src/lib/content/focus";
+import { focusFromFaces, type Focus } from "../src/lib/content/focus";
+import { findFaces } from "./lib/faces";
+import { videoDateFrom } from "./lib/video-date";
+import { folderSlug, loadEdits } from "./lib/edits";
+import { editSignature, type PhotoEdit } from "../src/lib/content/photo-edits";
 
 const SOURCE = process.env.MEDIA_SOURCE ?? path.join(os.homedir(), "workspace", "johnojo-media");
 const ROOT = process.cwd();
@@ -45,8 +49,8 @@ const FOCUS_PROBE = 400;
 const CENTRE = 50;
 
 type Entry =
-  | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null; focus?: Focus; focusBy?: "faces" | "attention" } & Fingerprint)
-  | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null } & Fingerprint);
+  | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null; focus?: Focus; focusBy?: "faces" | "attention"; source?: string } & Fingerprint)
+  | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null; source?: string } & Fingerprint);
 
 /** Difference hash: 64 bits describing an image's light/dark pattern. Near-identical pictures differ by a few bits. */
 async function dHash(file: string): Promise<string> {
@@ -72,45 +76,10 @@ const VIDEO_DUPLICATE_BITS = 2;
 /** Re-taken shots (same scene, slightly moved) sit too far apart to auto-hide, so they are only flagged. */
 const REPEAT_WINDOW_SECONDS = 30;
 const REPEAT_BITS = 30;
-type Cache = Record<string, { key: string; id: string }>;
+/** Per original: its id, the stat it was last seen with (legacy skip key) and its MD5. Local speed-up only. */
+type Cache = Record<string, { key?: string; id?: string; statKey?: string; md5?: string }>;
 
 const VISITS = path.join(ROOT, "content", "visits");
-const ROTATIONS = new Set([90, 180, 270]);
-
-/** Same rule as the site's loader: "sedona + flagstaff" becomes "sedona-flagstaff" (no extension stripping). */
-const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-
-/**
- * Manual turns set in visit files (mediaMeta.<file>.rotate), keyed by media id. For photos whose camera
- * didn't record which way up they were, so the fix lands in the web copies and every viewer sees it upright.
- */
-function loadRotations(): Record<string, number> {
-  const out: Record<string, number> = {};
-  if (!fs.existsSync(VISITS)) return out;
-  for (const name of fs.readdirSync(VISITS).filter((f) => f.endsWith(".yaml"))) {
-    const [trip, visit] = name.replace(/\.yaml$/, "").split("--");
-    if (!trip || !visit) continue;
-    let doc: { photoFolder?: string; mediaMeta?: unknown };
-    try {
-      doc = (parseYaml(fs.readFileSync(path.join(VISITS, name), "utf8")) ?? {}) as typeof doc;
-    } catch (err) {
-      // A broken visit file is reported by the site build; here it only means no rotations from it.
-      console.warn(`  ! Couldn't read rotations from ${name}: ${(err as Error).message}`);
-      continue;
-    }
-    // mediaMeta is a map in hand-written files and a list of { file, ... } rows when saved by the editor.
-    const rows: [string, { rotate?: unknown }][] = Array.isArray(doc.mediaMeta)
-      ? doc.mediaMeta.filter((r) => r && typeof r.file === "string").map((r) => [r.file, r])
-      : Object.entries((doc.mediaMeta ?? {}) as Record<string, { rotate?: unknown }>);
-    for (const [file, meta] of rows) {
-      const turn = Number(meta?.rotate);
-      if (!ROTATIONS.has(turn)) continue;
-      const key = file.includes("/") ? file : `photos/${file}`;
-      out[`${trip}/${folderSlug(doc.photoFolder ?? visit)}/${key}`] = turn;
-    }
-  }
-  return out;
-}
 
 const readJson = <T,>(file: string, fallback: T): T => (fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as T) : fallback);
 const slugify = (s: string) => s.toLowerCase().replace(/\.[^.]+$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -140,12 +109,16 @@ function spotlightDate(file: string): string | null {
   }
 }
 
-/** sharp's prebuilt binaries can't decode iPhone HEIC, so convert those with macOS `sips` first. */
+/** sharp's prebuilt binaries can't decode iPhone HEIC, so convert those first (sips on a Mac, heif-convert on Linux). */
 function decodable(file: string, tmp: string): string {
   if (![".heic", ".heif"].includes(path.extname(file).toLowerCase())) return file;
-  if (process.platform !== "darwin") throw new Error(`HEIC needs macOS (sips) to convert: ${file}`);
   const out = path.join(tmp, crypto.randomUUID() + ".jpg");
-  execFileSync("sips", ["-s", "format", "jpeg", "-s", "formatOptions", "95", file, "--out", out], { stdio: "ignore", timeout: 60_000 });
+  if (process.platform === "darwin") {
+    execFileSync("sips", ["-s", "format", "jpeg", "-s", "formatOptions", "95", file, "--out", out], { stdio: "ignore", timeout: 60_000 });
+  } else {
+    // Linux (the cloud job installs libheif-examples): heif-convert keeps the EXIF, so dates and orientation survive.
+    execFileSync("heif-convert", ["-q", "95", file, out], { stdio: "ignore", timeout: 60_000 });
+  }
   return out;
 }
 
@@ -167,65 +140,28 @@ async function focusPoint(oriented: Sharp): Promise<Focus> {
   return { x: pct(tall.cropOffsetLeft, tallScaledWidth - short), y: pct(wide.cropOffsetTop, base.height - short) };
 }
 
-const FACES_SRC = path.join(ROOT, "scripts", "faces.swift");
-const FACES_BIN = path.join(ROOT, ".cache", "faces");
-const FACE_BATCH = 100;
-
-
-/** Compile the Vision face finder once (and again whenever its source changes). Null off macOS or without Xcode tools. */
-function faceFinder(): string | null {
-  if (process.platform !== "darwin") return null;
-  try {
-    if (!fs.existsSync(FACES_BIN) || fs.statSync(FACES_BIN).mtimeMs < fs.statSync(FACES_SRC).mtimeMs) {
-      fs.mkdirSync(path.dirname(FACES_BIN), { recursive: true });
-      execFileSync("swiftc", ["-O", FACES_SRC, "-o", FACES_BIN], { stdio: "ignore", timeout: 300_000 });
-    }
-    return FACES_BIN;
-  } catch (err) {
-    console.warn(`  ! Face finder unavailable (${(err as Error).message}); covers will use the colour-based focus instead.`);
-    return null;
-  }
-}
+const FACE_PREVIEW_MIN_WIDTH = 960;
 
 /**
- * Point every photo's focus at its faces, when it has any. Runs on the upright, EXIF-free web copies, so
- * manual turns are already applied. Photos are checked once (focusBy records the outcome).
+ * Point every photo's focus at its faces, when it has any (scripts/lib/faces.ts runs anywhere Node does).
+ * Runs on the upright, metadata-free web copies, so manual turns are already applied. Each photo is
+ * checked once; focusBy records the outcome, and clearing it makes the next run check again.
  */
-function applyFaceFocus(items: Record<string, Entry>): number {
+async function applyFaceFocus(items: Record<string, Entry>): Promise<number> {
   const pending = Object.entries(items).filter((pair): pair is [string, Entry & { type: "photo" }] => pair[1].type === "photo" && !pair[1].focusBy);
-  if (pending.length === 0) return 0;
-  const bin = faceFinder();
-  if (!bin) return 0;
-  const localOf = (e: Entry & { type: "photo" }) => path.join(ROOT, "public", (e.variants.find((v) => v.w >= 960) ?? e.variants[e.variants.length - 1]).jpg);
   let withFaces = 0;
-  for (let i = 0; i < pending.length; i += FACE_BATCH) {
-    const batch = pending.slice(i, i + FACE_BATCH).map(([id, e]) => ({ id, e, file: localOf(e) })).filter((b) => fs.existsSync(b.file));
-    let out = "";
+  for (const [id, e] of pending) {
+    const file = path.join(ROOT, "public", (e.variants.find((v) => v.w >= FACE_PREVIEW_MIN_WIDTH) ?? e.variants[e.variants.length - 1]).jpg);
     try {
-      out = execFileSync(bin, batch.map((b) => b.file), { encoding: "utf8", timeout: 300_000, maxBuffer: 16 * 1024 * 1024 });
-    } catch (err) {
-      // A failed batch keeps the colour-based focus; the next run tries these photos again.
-      console.warn(`  ! Face check failed for ${batch.length} photos: ${(err as Error).message}`);
-      continue;
-    }
-    const byFile = new Map<string, FaceBox[]>();
-    for (const line of out.split("\n").filter(Boolean)) {
-      try {
-        const r = JSON.parse(line) as { file: string; faces: FaceBox[]; error?: string };
-        if (!r.error) byFile.set(r.file, r.faces);
-      } catch {
-        console.warn(`  ! Unreadable face-finder output: ${line.slice(0, 80)}`);
-      }
-    }
-    for (const { e, file } of batch) {
-      const faces = byFile.get(file);
-      if (!faces) continue;
-      const focus = focusFromFaces(faces);
+      const focus = focusFromFaces(await findFaces(file));
       if (focus) {
         e.focus = focus;
         withFaces++;
       }
       e.focusBy = focus ? "faces" : "attention";
+    } catch (err) {
+      // Keeps the colour-based focus; focusBy stays unset so the next run tries this photo again.
+      console.warn(`  ! Face check failed for ${id}: ${(err as Error).message}`);
     }
   }
   return withFaces;
@@ -236,12 +172,52 @@ async function orientedImage(input: string, turn: number): Promise<Sharp> {
   return turn ? sharp(await sharp(input).rotate().jpeg({ quality: 95 }).toBuffer()).rotate(turn) : sharp(input).rotate();
 }
 
-async function processPhoto(file: string, outDir: string, base: string, tmp: string, turn: number): Promise<Entry> {
+/** EXIF orientation, then the editor's turn and crop (crop is in percent of the turned photo). */
+async function editedImage(input: string, edit: PhotoEdit | undefined): Promise<Sharp> {
+  const turned = await orientedImage(input, edit?.rotate ?? 0);
+  if (!edit?.crop) return turned;
+  const { data, info } = await turned.jpeg({ quality: 95 }).toBuffer({ resolveWithObject: true });
+  const px = (pct: number, total: number) => Math.max(0, Math.min(total, Math.round((pct / 100) * total)));
+  const left = px(edit.crop.x, info.width), top = px(edit.crop.y, info.height);
+  const width = Math.max(1, Math.min(info.width - left, px(edit.crop.w, info.width)));
+  const height = Math.max(1, Math.min(info.height - top, px(edit.crop.h, info.height)));
+  return sharp(await sharp(data).extract({ left, top, width, height }).jpeg({ quality: 95 }).toBuffer());
+}
+
+/**
+ * The uncropped, unturned (but EXIF-upright) copy the editor's photo tool draws on, so a crop can always
+ * be changed later. Lives in public/_edit for the local preview only: postbuild never ships it, and the
+ * cloud copy sits in the private originals bucket.
+ */
+const EDIT_DIR = path.join(ROOT, "public", "_edit");
+const EDIT_EDGE = 1280;
+const editPreviewPath = (id: string) => path.join(EDIT_DIR, `${id}.jpg`);
+async function writeEditPreview(input: string, id: string): Promise<void> {
+  const out = editPreviewPath(id);
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  await sharp(input).rotate().resize(EDIT_EDGE, EDIT_EDGE, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
+}
+
+/** What a processed photo was made from: the original's bytes plus any edit. A change means re-make it. */
+const sourceKey = (size: number, md5: string, edit: PhotoEdit | undefined) => `${size}:${md5}${edit ? `|${editSignature(edit)}` : ""}`;
+
+/** MD5 of an original (R2 reports the same value as its ETag), remembered while the file is unchanged. */
+function fileMd5(file: string, stat: fs.Stats, cache: Cache): string {
+  const key = `${stat.size}:${stat.mtimeMs}`;
+  const hit = cache[file];
+  if (hit?.md5 && hit.statKey === key) return hit.md5;
+  const md5 = crypto.createHash("md5").update(fs.readFileSync(file)).digest("hex");
+  cache[file] = { ...hit, statKey: key, md5 };
+  return md5;
+}
+
+async function processPhoto(file: string, outDir: string, base: string, tmp: string, edit: PhotoEdit | undefined, id: string): Promise<Entry> {
   const input = decodable(file, tmp);
+  await writeEditPreview(input, id);
   const meta = await sharp(input).metadata();
   const takenAt = exifDate(meta.exif) ?? exifDate((await sharp(file).metadata().catch(() => ({ exif: undefined }))).exif) ?? spotlightDate(file);
   // .rotate() applies the EXIF orientation; re-encoding without .withMetadata() drops all EXIF/GPS.
-  const oriented = await orientedImage(input, turn);
+  const oriented = await editedImage(input, edit);
   const { width = 0, height = 0 } = await oriented.clone().toBuffer({ resolveWithObject: true }).then((r) => r.info);
   const widths = [...new Set([...WIDTHS.filter((w) => w < width), Math.min(width, WIDTHS[WIDTHS.length - 1])])].sort((a, b) => a - b);
   fs.mkdirSync(outDir, { recursive: true });
@@ -258,31 +234,50 @@ async function processPhoto(file: string, outDir: string, base: string, tmp: str
   return { type: "photo", w: width, h: height, variants, placeholder: `data:image/webp;base64,${tiny.toString("base64")}`, takenAt, focus: await focusPoint(oriented) };
 }
 
+/** Bundled ffmpeg (ffmpeg-static), so video works the same on a Mac and in the cloud. */
+const FFMPEG = ffmpegPath as unknown as string;
+/** Long edge of web clips: 720p-class, small enough for phones, sharp enough for a lightbox. */
+const VIDEO_EDGE = 1280;
+/** H.264 quality (lower = better, bigger). 26 keeps most clips a few MB. */
+const VIDEO_CRF = "26";
+
+function videoDate(file: string): string | null {
+  try {
+    execFileSync(FFMPEG, ["-hide_banner", "-i", file], { stdio: ["ignore", "ignore", "pipe"], timeout: 30_000 });
+    return null;
+  } catch (err) {
+    // With no output file ffmpeg exits non-zero, but it has printed the container's tags to stderr.
+    return videoDateFrom(String((err as { stderr?: Buffer | string }).stderr ?? ""));
+  }
+}
+
 async function processVideo(file: string, outDir: string, base: string, tmp: string): Promise<Entry | null> {
   fs.mkdirSync(outDir, { recursive: true });
   const out = path.join(outDir, `${base}.mp4`);
-  if (process.platform === "darwin") {
-    // avconvert ships with macOS: re-encode to 720p H.264 so clips stay small and play everywhere.
-    execFileSync("avconvert", ["--source", file, "--preset", "Preset1280x720", "--output", out, "--replace"], { stdio: "ignore", timeout: 600_000 });
-  } else {
-    fs.copyFileSync(file, out);
-  }
+  const takenAt = videoDate(file) ?? spotlightDate(file);
+  // Re-encode to H.264/AAC with the long edge at most VIDEO_EDGE. -map_metadata -1 drops every tag,
+  // including the GPS location phones write into clips; ffmpeg applies the rotation flag to the pixels.
+  const scale = `scale='if(gt(iw,ih),min(${VIDEO_EDGE},iw),-2)':'if(gt(iw,ih),-2,min(${VIDEO_EDGE},ih))'`;
+  execFileSync(
+    FFMPEG,
+    ["-hide_banner", "-loglevel", "error", "-y", "-i", file, "-map_metadata", "-1", "-map_chapters", "-1", "-vf", scale, "-c:v", "libx264", "-crf", VIDEO_CRF, "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out],
+    { stdio: "ignore", timeout: 900_000 },
+  );
   if (fs.statSync(out).size > MAX_VIDEO_BYTES) {
     fs.rmSync(out);
     console.warn(`  ! ${path.basename(file)} is still over 25 MB after compressing. Trim it, or upload it to YouTube as unlisted.`);
     return null;
   }
-  // Poster frame via Quick Look, then through sharp so it carries no metadata either.
-  let poster = "";
+  // Poster: a frame half a second in (skips a black first frame), through sharp so it carries no metadata.
+  const frame = path.join(tmp, `${base}-frame.png`);
   try {
-    execFileSync("qlmanage", ["-t", "-s", "1280", "-o", tmp, file], { stdio: "ignore", timeout: 60_000 });
-    const thumb = path.join(tmp, path.basename(file) + ".png");
+    execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y", "-ss", "0.5", "-i", out, "-frames:v", "1", frame], { stdio: "ignore", timeout: 60_000 });
     const posterOut = path.join(outDir, `${base}-poster.jpg`);
-    const info = await sharp(thumb).resize({ width: 960, withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(posterOut);
-    poster = webPath(posterOut);
-    return { type: "video", w: info.width, h: info.height, src: webPath(out), poster, takenAt: spotlightDate(file) };
-  } catch {
-    return { type: "video", w: 1280, h: 720, src: webPath(out), poster, takenAt: spotlightDate(file) };
+    const info = await sharp(frame).resize({ width: 960, withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(posterOut);
+    return { type: "video", w: info.width, h: info.height, src: webPath(out), poster: webPath(posterOut), takenAt };
+  } catch (err) {
+    console.warn(`  ! No poster frame for ${path.basename(file)}: ${(err as Error).message}`);
+    return { type: "video", w: VIDEO_EDGE, h: 720, src: webPath(out), poster: "", takenAt };
   }
 }
 
@@ -293,7 +288,7 @@ async function main() {
   }
   const manifest = readJson<{ generatedAt: string; items: Record<string, Entry> }>(MANIFEST, { generatedAt: "", items: {} });
   const cache = readJson<Cache>(CACHE, {});
-  const rotations = loadRotations();
+  const edits = loadEdits(VISITS);
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "media-"));
   const seen = new Set<string>();
   const counts: Record<string, { photos: number; videos: number; first: string | null; last: string | null }> = {};
@@ -315,15 +310,26 @@ async function main() {
           const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
           const stat = fs.statSync(file);
-          const turn = rotations[id] ?? 0;
-          const key = `${stat.size}:${stat.mtimeMs}${turn ? `:r${turn}` : ""}`;
+          const edit = kind === "photos" ? edits[id] : undefined;
+          const source = sourceKey(stat.size, fileMd5(file, stat, cache), edit);
           const existing = manifest.items[id];
-          if (cache[file]?.key === key && existing) {
+          // Before source keys existed, the skip test was size + modified time (+ turn); honour it once.
+          const turn = edit?.rotate ?? 0;
+          const legacy = !existing?.source && cache[file]?.key === `${stat.size}:${stat.mtimeMs}${turn ? `:r${turn}` : ""}` && !edit?.crop;
+          if (existing && (existing.source === source || legacy)) {
+            existing.source = source;
             skipped++;
+            if (kind === "photos" && !fs.existsSync(editPreviewPath(id))) {
+              try {
+                await writeEditPreview(decodable(file, tmp), id);
+              } catch (err) {
+                console.warn(`  ! No editor preview for ${id}: ${(err as Error).message}`);
+              }
+            }
             // Photos processed before focus points existed get one without re-making every size.
             if (existing.type === "photo" && !existing.focus) {
               try {
-                existing.focus = await focusPoint(await orientedImage(decodable(file, tmp), turn));
+                existing.focus = await focusPoint(await editedImage(decodable(file, tmp), edit));
               } catch (err) {
                 console.warn(`  ! No focus point for ${id}: ${(err as Error).message}`);
               }
@@ -331,10 +337,10 @@ async function main() {
           } else {
             try {
               const outDir = path.join(OUT, trip, citySlug, kind);
-              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp, turn) : await processVideo(file, outDir, base, tmp);
+              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp, edit, id) : await processVideo(file, outDir, base, tmp);
               if (entry) {
-                manifest.items[id] = entry;
-                cache[file] = { key, id };
+                manifest.items[id] = { ...entry, source };
+                cache[file] = { ...cache[file], id };
                 processed++;
                 console.log(`  ✓ ${id}${entry.takenAt ? `  (taken ${entry.takenAt.replace("T", " ")})` : "  (no capture date found)"}`);
               }
@@ -365,6 +371,7 @@ async function main() {
     const [trip, city, kind, base] = id.split("/");
     const d = path.join(OUT, trip, city, kind);
     if (fs.existsSync(d)) for (const f of fs.readdirSync(d)) if (f.startsWith(base + "-") || f.startsWith(base + ".")) fs.rmSync(path.join(d, f));
+    fs.rmSync(editPreviewPath(id), { force: true });
   }
 
   // Duplicates: fingerprint every item, then within each city keep the earliest of any near-identical
@@ -419,7 +426,7 @@ async function main() {
     }
   }
 
-  const faced = applyFaceFocus(manifest.items);
+  const faced = await applyFaceFocus(manifest.items);
   if (faced) console.log(`Centred ${faced} photo(s) on faces for covers and thumbnails.`);
 
   manifest.generatedAt = new Date().toISOString();
