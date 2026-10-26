@@ -5,6 +5,7 @@ import YAML from "yaml";
 import type { z } from "zod";
 import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
 import { buildNeeds } from "./needs";
+import { applyOrder, parsePhotoEdits } from "./photo-edits";
 import { travelStats } from "./stats";
 import { manifest as manifestSchema, type Manifest, type MediaItem } from "./media";
 import { scoreState, type ScoreState } from "./ranking";
@@ -134,11 +135,17 @@ const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").re
 function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, place: Destination): MediaItem[] {
   const items = getMediaManifest().items;
   const prefix = `${v.trip}/${folderSlug(v.photoFolder ?? visitSlug)}/`;
+  const { edits, order } = parsePhotoEdits(v.photoEdits);
+  // Order: an explicit media list wins; otherwise the editor's drag-and-drop order, then oldest first.
   const ids =
     v.media?.map((id) => prefix + id) ??
-    Object.keys(items)
-      .filter((k) => k.startsWith(prefix))
-      .sort((a, b) => (items[a].takenAt ?? a).localeCompare(items[b].takenAt ?? b));
+    applyOrder(
+      Object.keys(items)
+        .filter((k) => k.startsWith(prefix))
+        .sort((a, b) => (items[a].takenAt ?? a).localeCompare(items[b].takenAt ?? b))
+        .map((id) => ({ id, key: id.slice(prefix.length) })),
+      order,
+    ).map((x) => x.id);
   const out: MediaItem[] = [];
   for (const id of ids) {
     const entry = items[id];
@@ -147,9 +154,10 @@ function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, pla
       continue;
     }
     if (entry.duplicateOf) continue; // near-identical copy of another photo or clip
+    if (entry.type === "video" && entry.tooLarge) continue; // over the size limit until it's trimmed
     const key = id.slice(prefix.length);
     const meta = v.mediaMeta[key] ?? v.mediaMeta[key.split("/").pop() ?? key];
-    if (meta?.hidden) continue;
+    if (meta?.hidden || edits[key]?.hide || edits[key]?.delete) continue;
     // A manual "keep in frame" choice overrides the automatic focus point top-to-bottom.
     const focus = meta?.focus && entry.type === "photo" ? { x: entry.focus?.x ?? 50, y: FOCUS_Y[meta.focus] } : entry.type === "photo" ? entry.focus : undefined;
     out.push({ ...entry, ...(focus ? { focus } : {}), id, caption: meta?.caption ?? null, alt: meta?.alt ?? `${meta?.caption ?? "Photo"} in ${place.city}, ${trip.title}` });

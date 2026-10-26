@@ -15,7 +15,8 @@ cover: photos/img-1110
 mediaMeta:
   photos/img-1110: { caption: "Signal Iduna Park", alt: "The yellow-trimmed exterior of Signal Iduna Park in Dortmund" }
   photos/img-1131: { caption: "Dortmund v Leverkusen", alt: "A Dortmund player standing on the pitch" }
-  videos/img-1114: { hidden: true }
-  videos/img-1119: { hidden: true }
-  videos/img-1121: { hidden: true }
-  videos/img-1127: { hidden: true }
+photoEdits: |
+  videos/img-1114 hide  # Dortmund ultras clip: stays hidden
+  videos/img-1119 hide  # Dortmund ultras clip: stays hidden
+  videos/img-1121 hide  # Dortmund ultras clip: stays hidden
+  videos/img-1127 hide  # Dortmund ultras clip: stays hidden

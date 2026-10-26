@@ -16,4 +16,5 @@ mediaMeta:
   photos/img-3961: { caption: "Neto's early goal on the big screen", alt: "Lincoln Financial Field with the scoreboard showing Flamengo 0, Chelsea 1" }
   photos/img-3992: { caption: "In the Chelsea section", alt: "John in a blue Chelsea shirt in the stands at Lincoln Financial Field" }
   photos/img-3973: { caption: "Chelsea fans behind the goal", alt: "Chelsea fans in the stand, one in a Drogba shirt, watching play at the far end" }
-  videos/img-3976: { hidden: true } # repeat of img-3975
+photoEdits: |
+  videos/img-3976 hide  # repeat of img-3975

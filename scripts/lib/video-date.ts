@@ -10,3 +10,9 @@ export function videoDateFrom(info: string): string | null {
   const d = generic ? new Date(generic[1]) : null;
   return d && !Number.isNaN(d.getTime()) ? d.toISOString().slice(0, 19) : null;
 }
+
+/** Clip length in seconds from ffmpeg's "Duration: 00:00:40.64" line, or null. */
+export function videoDurationFrom(info: string): number | null {
+  const m = info.match(/Duration:\s*(\d+):(\d{2}):(\d{2}(?:\.\d+)?)/);
+  return m ? Math.round((Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3])) * 100) / 100 : null;
+}

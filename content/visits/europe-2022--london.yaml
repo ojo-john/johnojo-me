@@ -15,4 +15,5 @@ cover: photos/img-0398
 mediaMeta:
   photos/img-0394: { caption: Pitchside before kick-off, alt: "John pitchside at Stamford Bridge with players warming up behind him" }
   photos/img-0398: { caption: Stamford Bridge before Chelsea v Newcastle, alt: "The Stamford Bridge pitch and stands before kick-off, with TV crews pitchside" }
-  photos/img-0404: { hidden: true }
+photoEdits: |
+  photos/img-0404 hide

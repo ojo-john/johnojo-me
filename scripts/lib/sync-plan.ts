@@ -37,8 +37,8 @@ export function planPull(originals: StoredObject[], sources: Record<string, stri
   return originals
     .flatMap((o) => {
       const parsed = originalKeyToId(o.key);
-      if (!parsed) return [];
-      const expected = sourceKey(o.size, o.etag, parsed.kind === "photos" ? edits[parsed.id] : undefined);
+      if (!parsed || edits[parsed.id]?.delete) return [];
+      const expected = sourceKey(o.size, o.etag, edits[parsed.id]);
       return sources[parsed.id] === expected ? [] : [o.key];
     })
     .sort();
@@ -48,4 +48,12 @@ export function planPull(originals: StoredObject[], sources: Record<string, stri
 export function planBackup(local: Map<string, { size: number; md5: string }>, remote: StoredObject[]): string[] {
   const byKey = new Map(remote.map((o) => [o.key, o]));
   return [...local].filter(([key, f]) => byKey.get(key)?.etag !== f.md5).map(([key]) => key).sort();
+}
+
+/** Originals deleted in the editor: moved to _deleted/ in the bucket (recoverable), never processed again. */
+export function planDeletes(originals: StoredObject[], edits: Record<string, PhotoEdit>): string[] {
+  return originals.filter((o) => {
+    const parsed = originalKeyToId(o.key);
+    return parsed && edits[parsed.id]?.delete;
+  }).map((o) => o.key).sort();
 }

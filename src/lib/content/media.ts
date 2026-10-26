@@ -34,6 +34,10 @@ export const videoEntry = z.object({
   hash: z.string().optional(),
   source: z.string().optional(),
   bytes: z.number().optional(),
+  /** Length in seconds, for the editor's trim tool. */
+  duration: z.number().optional(),
+  /** Still over the size limit after compressing: not on the site until it's trimmed in the editor. */
+  tooLarge: z.boolean().optional(),
   duplicateOf: z.string().optional(),
 });
 

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T01:24:35.044Z",
+ "generatedAt": "2026-10-26T05:38:30.021Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -994,7 +994,8 @@
    "takenAt": "2026-10-24T21:05:40",
    "hash": "a0701c0ecb9a34f8",
    "bytes": 4041399,
-   "source": "4041590:033dc0036c5e795b87ed5ae1297308ad"
+   "source": "4041590:033dc0036c5e795b87ed5ae1297308ad",
+   "duration": 4.1
   },
   "europe-2022/porto/videos/8db34f3d-2baa-4951-a0b3-6d652a67aa31": {
    "type": "video",
@@ -1005,7 +1006,8 @@
    "takenAt": "2026-10-24T21:06:31",
    "hash": "0b495ae1653b2f7f",
    "bytes": 6707541,
-   "source": "6707670:88b250cb5ccef36eda46f6200229e6d7"
+   "source": "6707670:88b250cb5ccef36eda46f6200229e6d7",
+   "duration": 6.95
   },
   "europe-2022/porto/videos/c01ef0bc-f889-4b67-9c72-ed9b7b7488aa": {
    "type": "video",
@@ -1016,7 +1018,8 @@
    "takenAt": "2026-10-24T21:06:31",
    "hash": "cfe2e4d6fdffd710",
    "bytes": 1900238,
-   "source": "1900362:13bdb8a17f6eba83f58a0e98f6022f1d"
+   "source": "1900362:13bdb8a17f6eba83f58a0e98f6022f1d",
+   "duration": 2.77
   },
   "europe-2023/porto/photos/img-0201": {
    "type": "photo",
@@ -1475,7 +1478,8 @@
    "takenAt": "2024-04-14T15:51:41",
    "hash": "482f814b87979589",
    "bytes": 16926594,
-   "source": "24106415:e6f23178a3d9c9d61fe36f850c459d60"
+   "source": "24106415:e6f23178a3d9c9d61fe36f850c459d60",
+   "duration": 17.54
   },
   "europe-2024/amsterdam/videos/img-0677": {
    "type": "video",
@@ -1486,7 +1490,8 @@
    "takenAt": "2024-04-14T16:10:00",
    "hash": "26e57902ab8e9495",
    "bytes": 4646091,
-   "source": "6518492:903934d26920d11f972f281f971c5e8a"
+   "source": "6518492:903934d26920d11f972f281f971c5e8a",
+   "duration": 4.8
   },
   "europe-2024/amsterdam/videos/img-0690": {
    "type": "video",
@@ -1497,7 +1502,8 @@
    "takenAt": "2024-04-14T16:20:18",
    "hash": "0a0a4e04cab34ccc",
    "bytes": 7564119,
-   "source": "10854227:bec79b1842f31cef4cfa5e4804f88839"
+   "source": "10854227:bec79b1842f31cef4cfa5e4804f88839",
+   "duration": 7.83
   },
   "europe-2024/bruges/photos/img-0528": {
    "type": "photo",
@@ -2152,7 +2158,8 @@
    "takenAt": "2024-04-10T11:51:17",
    "hash": "c6e6a797d6e6e6d2",
    "bytes": 9722307,
-   "source": "13810680:abe42e8404bab9077fa46fa9e452f770"
+   "source": "13810680:abe42e8404bab9077fa46fa9e452f770",
+   "duration": 10.07
   },
   "europe-2024/brussels/videos/img-0555": {
    "type": "video",
@@ -2163,7 +2170,8 @@
    "takenAt": "2024-04-10T12:20:11",
    "hash": "5c1d493e8699f222",
    "bytes": 14059141,
-   "source": "20004026:0d6a9084c0e81ca5ba423200d0ab4955"
+   "source": "20004026:0d6a9084c0e81ca5ba423200d0ab4955",
+   "duration": 14.8
   },
   "europe-2024/brussels/videos/img-0565": {
    "type": "video",
@@ -2174,7 +2182,8 @@
    "takenAt": "2024-04-10T13:21:07",
    "hash": "607072726c686c9b",
    "bytes": 5319324,
-   "source": "7520517:1ef37ad31686ec6e9303a28335a6bf5a"
+   "source": "7520517:1ef37ad31686ec6e9303a28335a6bf5a",
+   "duration": 5.57
   },
   "europe-2024/brussels/videos/img-0606": {
    "type": "video",
@@ -2185,7 +2194,8 @@
    "takenAt": "2024-04-10T15:31:32",
    "hash": "e5454b1bd0380ee5",
    "bytes": 6742368,
-   "source": "9684163:3760e02c9dddedf9df4677677c7cc612"
+   "source": "9684163:3760e02c9dddedf9df4677677c7cc612",
+   "duration": 7.03
   },
   "europe-2024/brussels/videos/img-0619": {
    "type": "video",
@@ -2196,7 +2206,8 @@
    "takenAt": "2024-04-10T16:07:36",
    "hash": "c88eccc3936b6830",
    "bytes": 2343651,
-   "source": "3381376:fc77dfdaaa5d99db8822858a2d0be194"
+   "source": "3381376:fc77dfdaaa5d99db8822858a2d0be194",
+   "duration": 2.33
   },
   "europe-2024/brussels/videos/shared-video-dddaa4a6-6df5-4cde-8228-c335361202e3": {
    "type": "video",
@@ -2207,7 +2218,8 @@
    "takenAt": "2024-04-10T13:21:55",
    "hash": "e0f0f0f01b9ccc4d",
    "bytes": 1008679,
-   "source": "1008924:ec8860402f19e7006e729f97f70ff00c"
+   "source": "1008924:ec8860402f19e7006e729f97f70ff00c",
+   "duration": 1.74
   },
   "europe-2024/dortmund/photos/img-1110": {
    "type": "photo",
@@ -2356,7 +2368,8 @@
    "takenAt": "2024-04-21T15:19:28",
    "hash": "2911990bcbef7f37",
    "bytes": 5502583,
-   "source": "7831366:c188988a7517370f4054b9a3d6979585"
+   "source": "7831366:c188988a7517370f4054b9a3d6979585",
+   "duration": 5.8
   },
   "europe-2024/dortmund/videos/img-1114": {
    "type": "video",
@@ -2367,7 +2380,8 @@
    "takenAt": "2024-04-21T15:19:41",
    "hash": "7662d8f16c73f6e5",
    "bytes": 1767967,
-   "source": "2518068:abf9957f98381486726760dc5bae0a8b"
+   "source": "2518068:abf9957f98381486726760dc5bae0a8b",
+   "duration": 1.83
   },
   "europe-2024/dortmund/videos/img-1119": {
    "type": "video",
@@ -2378,7 +2392,8 @@
    "takenAt": "2024-04-21T15:19:57",
    "hash": "56793838393b0226",
    "bytes": 8081950,
-   "source": "11545563:9487241c1ca761916104bb071550c84e"
+   "source": "11545563:9487241c1ca761916104bb071550c84e",
+   "duration": 8.53
   },
   "europe-2024/dortmund/videos/img-1121": {
    "type": "video",
@@ -2389,7 +2404,8 @@
    "takenAt": "2024-04-21T15:23:15",
    "hash": "4662656d3f1b39e9",
    "bytes": 14323024,
-   "source": "20435787:c9bb74d6e0228fdff35a0c54080f05d1"
+   "source": "20435787:c9bb74d6e0228fdff35a0c54080f05d1",
+   "duration": 15.27
   },
   "europe-2024/dortmund/videos/img-1127": {
    "type": "video",
@@ -2400,7 +2416,8 @@
    "takenAt": "2024-04-21T16:03:01",
    "hash": "47a726260a9b1ae7",
    "bytes": 9682679,
-   "source": "13841707:c5e452492740a3b4011e3b1abddc3897"
+   "source": "13841707:c5e452492740a3b4011e3b1abddc3897",
+   "duration": 10.2
   },
   "europe-2024/ghent/photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e": {
    "type": "photo",
@@ -2865,7 +2882,8 @@
    "takenAt": "2024-04-15T20:22:25",
    "hash": "f012f26984d086fd",
    "bytes": 6387321,
-   "source": "9168470:45514dbf33c90932068b9d859fb15d62"
+   "source": "9168470:45514dbf33c90932068b9d859fb15d62",
+   "duration": 6.64
   },
   "europe-2024/london/videos/img-0763-2": {
    "type": "video",
@@ -2877,6 +2895,7 @@
    "hash": "a119faa725b13313",
    "bytes": 9021512,
    "source": "12975830:083bcc4de5172422a8db611a8821bd7a",
+   "duration": 9.5,
    "duplicateOf": "europe-2024/london/videos/img-0763"
   },
   "europe-2024/london/videos/img-0763": {
@@ -2888,7 +2907,8 @@
    "takenAt": "2024-04-15T20:24:24",
    "hash": "a119faa725b13313",
    "bytes": 9021512,
-   "source": "12975830:cee3d1d315ffcf4ac6a2e8c271868fcb"
+   "source": "12975830:cee3d1d315ffcf4ac6a2e8c271868fcb",
+   "duration": 9.5
   },
   "europe-2024/london/videos/img-0764": {
    "type": "video",
@@ -2899,7 +2919,8 @@
    "takenAt": "2024-04-15T20:40:55",
    "hash": "7ccf324ef83d8770",
    "bytes": 10992118,
-   "source": "15807865:c8a6d7200d420fa994a84718cdbf9327"
+   "source": "15807865:c8a6d7200d420fa994a84718cdbf9327",
+   "duration": 11.64
   },
   "europe-2024/london/videos/img-0774": {
    "type": "video",
@@ -2910,7 +2931,8 @@
    "takenAt": "2024-04-15T20:51:30",
    "hash": "361040451933528a",
    "bytes": 14969120,
-   "source": "21310821:1d8d0532315795e1cc99c74737413475"
+   "source": "21310821:1d8d0532315795e1cc99c74737413475",
+   "duration": 15.8
   },
   "europe-2024/london/videos/img-0788": {
    "type": "video",
@@ -2921,7 +2943,8 @@
    "takenAt": "2024-04-15T21:00:25",
    "hash": "b157c96862806038",
    "bytes": 8561318,
-   "source": "12022587:ce68a85660cfe20dba8cfb76552dc9fa"
+   "source": "12022587:ce68a85660cfe20dba8cfb76552dc9fa",
+   "duration": 8.84
   },
   "europe-2024/munich/photos/img-0992": {
    "type": "photo",
@@ -3393,7 +3416,8 @@
    "takenAt": "2024-04-17T18:55:00",
    "hash": "98e0e0d0e02a22f2",
    "bytes": 8459800,
-   "source": "12004623:0568c9a5f77e6e9fcb793f3aedcb13ad"
+   "source": "12004623:0568c9a5f77e6e9fcb793f3aedcb13ad",
+   "duration": 8.8
   },
   "europe-2024/munich/videos/img-1018-2": {
    "type": "video",
@@ -3405,6 +3429,7 @@
    "hash": "d1d9f363262fdbdb",
    "bytes": 3597602,
    "source": "5153596:a5b161da840f741f6239ab5ca5520bae",
+   "duration": 3.77,
    "duplicateOf": "europe-2024/munich/videos/img-1018"
   },
   "europe-2024/munich/videos/img-1018": {
@@ -3416,7 +3441,8 @@
    "takenAt": "2024-04-17T18:57:43",
    "hash": "d1d9f363262fdbdb",
    "bytes": 3597602,
-   "source": "5153596:8d2091f8d31a3c98bcae39a62def3c9b"
+   "source": "5153596:8d2091f8d31a3c98bcae39a62def3c9b",
+   "duration": 3.77
   },
   "europe-2024/nice-french-riviera/photos/b7624b06-3272-440b-a12b-c883d03bbf15": {
    "type": "photo",
@@ -4308,52 +4334,6 @@
    "focusBy": "faces",
    "source": "4427831:91da04147433933ae256204f706ad34c"
   },
-  "europe-2024/paris/photos/img-0474": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/paris/photos/img-0474-160.avif",
-     "webp": "/media/europe-2024/paris/photos/img-0474-160.webp",
-     "jpg": "/media/europe-2024/paris/photos/img-0474-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/paris/photos/img-0474-480.avif",
-     "webp": "/media/europe-2024/paris/photos/img-0474-480.webp",
-     "jpg": "/media/europe-2024/paris/photos/img-0474-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/paris/photos/img-0474-960.avif",
-     "webp": "/media/europe-2024/paris/photos/img-0474-960.webp",
-     "jpg": "/media/europe-2024/paris/photos/img-0474-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/paris/photos/img-0474-1600.avif",
-     "webp": "/media/europe-2024/paris/photos/img-0474-1600.webp",
-     "jpg": "/media/europe-2024/paris/photos/img-0474-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/paris/photos/img-0474-2400.avif",
-     "webp": "/media/europe-2024/paris/photos/img-0474-2400.webp",
-     "jpg": "/media/europe-2024/paris/photos/img-0474-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBACdASoUABsAPu1kqU2ppaOiMAgBMB2JbDuAG9JHDGoO0kg4qhSMGh9lgAD+xkf/+r/rVaTKVvil250mmsj09acIqH3e/NGo0P7o+rNKpGmN1ih6eeQ6GENwYr2K+Gmty5rss5F5mpMIcQF9fn/HdE0UaX5vJchgvssd7x1LQqlTYFqzrob6C2VT0jHZGvn+yU76+3G/OHjMc9UaE7kLS6+AAA==",
-   "takenAt": "2024-04-06T22:34:56",
-   "hash": "7d2920a94949275d",
-   "focus": {
-    "x": 41,
-    "y": 72
-   },
-   "focusBy": "faces",
-   "source": "3251503:0b99fa46b7ab34b1d1709b3258a17071"
-  },
   "europe-2024/paris/videos/img-0349": {
    "type": "video",
    "w": 960,
@@ -4363,7 +4343,8 @@
    "takenAt": "2024-04-06T18:49:30",
    "hash": "4f171f1f2f3d2c6d",
    "bytes": 10892874,
-   "source": "15495479:6d5eb665d8294ca2ba354c7207f88169"
+   "source": "15495479:6d5eb665d8294ca2ba354c7207f88169",
+   "duration": 11.51
   },
   "europe-2024/paris/videos/img-0355": {
    "type": "video",
@@ -4371,10 +4352,11 @@
    "h": 540,
    "src": "/media/europe-2024/paris/videos/img-0355.mp4",
    "poster": "/media/europe-2024/paris/videos/img-0355-poster.jpg",
-   "takenAt": "2024-04-06T18:57:21",
-   "hash": "4299af93d1e89330",
-   "bytes": 10502646,
-   "source": "14925782:e8edde940fc20d01daa7fc7a0f21263a"
+   "takenAt": "2024-04-06T20:57:21",
+   "duration": 10.94,
+   "source": "14925782:e8edde940fc20d01daa7fc7a0f21263a",
+   "hash": "0e7e0f0b87010f0f",
+   "bytes": 2786199
   },
   "europe-2024/nice-french-riviera/videos/4dcae28a471643fbbc2aa0c8302d91f7": {
    "type": "video",
@@ -4385,7 +4367,8 @@
    "takenAt": "2024-04-04T09:51:39",
    "hash": "d8f0e061a8b2e86f",
    "bytes": 5096809,
-   "source": "5097166:2a694178c0584cd98121dcf91cab142b"
+   "source": "5097166:2a694178c0584cd98121dcf91cab142b",
+   "duration": 5.4
   },
   "europe-2024/nice-french-riviera/videos/img-0120": {
    "type": "video",
@@ -4396,7 +4379,8 @@
    "takenAt": "2024-04-04T07:13:40",
    "hash": "00000001268283b3",
    "bytes": 4479260,
-   "source": "6461857:82f0574f1ad399df586c8c241ae7ecbf"
+   "source": "6461857:82f0574f1ad399df586c8c241ae7ecbf",
+   "duration": 4.8
   },
   "europe-2024/nice-french-riviera/videos/img-0126": {
    "type": "video",
@@ -4407,7 +4391,8 @@
    "takenAt": "2024-04-04T07:14:58",
    "hash": "0881021747469efc",
    "bytes": 6096507,
-   "source": "8644803:633f34f41bfac17058749e3985dcab1c"
+   "source": "8644803:633f34f41bfac17058749e3985dcab1c",
+   "duration": 6.33
   },
   "europe-2024/nice-french-riviera/videos/img-0156": {
    "type": "video",
@@ -4418,7 +4403,8 @@
    "takenAt": "2024-04-04T08:11:23",
    "hash": "1ad34694444b22a4",
    "bytes": 3492756,
-   "source": "5035257:faf45da7fa9d9481e62fa732daf60007"
+   "source": "5035257:faf45da7fa9d9481e62fa732daf60007",
+   "duration": 3.6
   },
   "europe-2024/nice-french-riviera/videos/img-0172": {
    "type": "video",
@@ -4429,7 +4415,8 @@
    "takenAt": "2024-04-04T08:41:56",
    "hash": "80d07c0009042129",
    "bytes": 4417173,
-   "source": "6268905:48dbcea3a052c05d6b96c9c258c9437c"
+   "source": "6268905:48dbcea3a052c05d6b96c9c258c9437c",
+   "duration": 4.5
   },
   "europe-2024/nice-french-riviera/videos/img-0199": {
    "type": "video",
@@ -4440,7 +4427,8 @@
    "takenAt": "2024-04-04T09:47:29",
    "hash": "f8c0272a2cb63222",
    "bytes": 14189116,
-   "source": "20213965:5db89e384ab93f99814e8ac73093792e"
+   "source": "20213965:5db89e384ab93f99814e8ac73093792e",
+   "duration": 14.91
   },
   "europe-2024/nice-french-riviera/videos/img-0307": {
    "type": "video",
@@ -4451,7 +4439,8 @@
    "takenAt": "2024-04-05T10:41:40",
    "hash": "b4c8481898381866",
    "bytes": 12955459,
-   "source": "18548147:190491f635f32a41e7cdaa9baa287017"
+   "source": "18548147:190491f635f32a41e7cdaa9baa287017",
+   "duration": 13.64
   },
   "europe-2024/nice-french-riviera/videos/img-0309": {
    "type": "video",
@@ -4462,7 +4451,8 @@
    "takenAt": "2024-04-05T11:08:09",
    "hash": "b6cfd6f7f3263f1c",
    "bytes": 18858055,
-   "source": "26752477:dc6b0168963e17127c28aa3a3093e608"
+   "source": "26752477:dc6b0168963e17127c28aa3a3093e608",
+   "duration": 19.74
   },
   "europe-2024/nice-french-riviera/videos/img-0313": {
    "type": "video",
@@ -4473,7 +4463,8 @@
    "takenAt": "2024-04-05T11:22:00",
    "hash": "119998cc4c668f1b",
    "bytes": 8414479,
-   "source": "11778286:aebc0c9afb472f780d389243e2664bda"
+   "source": "11778286:aebc0c9afb472f780d389243e2664bda",
+   "duration": 8.81
   },
   "europe-2024/nice-french-riviera/videos/d6788468aa654a42a3b8ff872e8da361": {
    "type": "video",
@@ -4484,7 +4475,8 @@
    "takenAt": "2024-04-04T10:05:14",
    "hash": "09817700f0433c35",
    "bytes": 3361446,
-   "source": "3361803:7eefb8483dfebe01240d1bb2f401b38b"
+   "source": "3361803:7eefb8483dfebe01240d1bb2f401b38b",
+   "duration": 3.53
   },
   "europe-2026/barcelona/photos/img-0532": {
    "type": "photo",
@@ -5369,7 +5361,8 @@
    "takenAt": "2026-10-16T18:40:33",
    "hash": "2931cfd7cb0f6bf1",
    "bytes": 8935969,
-   "source": "29308738:3f6c0cec99108130c3f6c16fa5ac2265"
+   "source": "29308738:3f6c0cec99108130c3f6c16fa5ac2265",
+   "duration": 10.13
   },
   "europe-2026/barcelona/videos/img-0491": {
    "type": "video",
@@ -5380,7 +5373,8 @@
    "takenAt": "2026-10-16T18:42:53",
    "hash": "000010a54f8d85ee",
    "bytes": 11739629,
-   "source": "40006013:f9dd311264467418c7b50891119726f7"
+   "source": "40006013:f9dd311264467418c7b50891119726f7",
+   "duration": 15.17
   },
   "europe-2026/barcelona/videos/img-0493": {
    "type": "video",
@@ -5391,7 +5385,8 @@
    "takenAt": "2026-10-16T18:48:25",
    "hash": "62609901e763739b",
    "bytes": 4446807,
-   "source": "15242653:a05eb49796efe733fd8c1f9fc7037527"
+   "source": "15242653:a05eb49796efe733fd8c1f9fc7037527",
+   "duration": 4.67
   },
   "europe-2026/barcelona/videos/img-0494": {
    "type": "video",
@@ -5402,7 +5397,8 @@
    "takenAt": "2026-10-16T19:02:12",
    "hash": "9c6dcde53132724e",
    "bytes": 6264457,
-   "source": "19230404:031c848b2560192f8b5a9bca57bd7d83"
+   "source": "19230404:031c848b2560192f8b5a9bca57bd7d83",
+   "duration": 6.63
   },
   "europe-2026/barcelona/videos/img-0555": {
    "type": "video",
@@ -5413,7 +5409,8 @@
    "takenAt": "2026-10-17T13:06:34",
    "hash": "cd8fb6e4fafb0753",
    "bytes": 5058693,
-   "source": "17553313:c7489c277e57ec5ca25beac33b98c61c"
+   "source": "17553313:c7489c277e57ec5ca25beac33b98c61c",
+   "duration": 5.2
   },
   "europe-2026/barcelona/videos/video-1020-singular-display": {
    "type": "video",
@@ -5424,7 +5421,8 @@
    "takenAt": "2026-10-19T10:16:02",
    "hash": "8d1c3b3233fb2f67",
    "bytes": 12143051,
-   "source": "17861481:237af9a594ae8add8d013c94e50f6fdc"
+   "source": "17861481:237af9a594ae8add8d013c94e50f6fdc",
+   "duration": 9.77
   },
   "europe-2026/marseille/photos/img-0905": {
    "type": "photo",
@@ -5942,6 +5940,7 @@
    "hash": "f0ff130767e48000",
    "bytes": 21776780,
    "source": "73504392:bfe526d20580a0f409e18624d60c2631",
+   "duration": 24.09,
    "duplicateOf": "europe-2026/marseille/videos/img-0949"
   },
   "europe-2026/marseille/videos/img-0949": {
@@ -5953,7 +5952,8 @@
    "takenAt": "2026-10-22T09:46:52",
    "hash": "f0ff130767e48000",
    "bytes": 21767415,
-   "source": "73504392:946c40024182108393a5f4be90a0c02b"
+   "source": "73504392:946c40024182108393a5f4be90a0c02b",
+   "duration": 24.09
   },
   "europe-2026/marseille/videos/img-0952": {
    "type": "video",
@@ -5964,7 +5964,8 @@
    "takenAt": "2026-10-22T09:53:08",
    "hash": "c0f00069baf9e91d",
    "bytes": 10095430,
-   "source": "34441307:2dff9e9c9d3b872070eb6268d951b1ff"
+   "source": "34441307:2dff9e9c9d3b872070eb6268d951b1ff",
+   "duration": 10.53
   },
   "europe-2026/marseille/videos/img-0958": {
    "type": "video",
@@ -5975,7 +5976,8 @@
    "takenAt": "2026-10-22T10:17:34",
    "hash": "4000031a19c40c00",
    "bytes": 6338021,
-   "source": "21474912:f39ade6d85d626dfb164c6e8f7847ece"
+   "source": "21474912:f39ade6d85d626dfb164c6e8f7847ece",
+   "duration": 6.64
   },
   "philadelphia-2025/philadelphia/photos/img-3961": {
    "type": "photo",
@@ -6308,7 +6310,8 @@
    "takenAt": "2025-06-20T18:13:46",
    "hash": "61577e32e9221f8d",
    "bytes": 13440029,
-   "source": "19288937:4e9f288c6fdd9e9bda5a1c905b9a2cd2"
+   "source": "19288937:4e9f288c6fdd9e9bda5a1c905b9a2cd2",
+   "duration": 14.27
   },
   "philadelphia-2025/philadelphia/videos/img-3975": {
    "type": "video",
@@ -6319,7 +6322,8 @@
    "takenAt": "2025-06-20T18:39:23",
    "hash": "e8d9131f448a1293",
    "bytes": 14615516,
-   "source": "20775086:a254052611a0e9c1ce6d32fa993aeff9"
+   "source": "20775086:a254052611a0e9c1ce6d32fa993aeff9",
+   "duration": 15.27
   },
   "philadelphia-2025/philadelphia/videos/img-3976-2": {
    "type": "video",
@@ -6331,6 +6335,7 @@
    "hash": "f9eb1f1dc1821693",
    "bytes": 6232704,
    "source": "8840904:3538d3e98034d8697443adf7579d4969",
+   "duration": 6.43,
    "duplicateOf": "philadelphia-2025/philadelphia/videos/img-3976"
   },
   "philadelphia-2025/philadelphia/videos/img-3976": {
@@ -6342,7 +6347,8 @@
    "takenAt": "2025-06-20T18:39:43",
    "hash": "f9eb1f1dc1821693",
    "bytes": 6232704,
-   "source": "8840904:e22d8d2cffdb6697c9c4782fc0a2113a"
+   "source": "8840904:e22d8d2cffdb6697c9c4782fc0a2113a",
+   "duration": 6.43
   },
   "philadelphia-2025/philadelphia/videos/img-4016": {
    "type": "video",
@@ -6353,7 +6359,8 @@
    "takenAt": "2025-06-20T19:28:09",
    "hash": "8a643517ac383c44",
    "bytes": 7953549,
-   "source": "11224340:47ca051d1b83b94af33cb14b8b12c71b"
+   "source": "11224340:47ca051d1b83b94af33cb14b8b12c71b",
+   "duration": 8.27
   },
   "cabo-2024/cabo-san-lucas/photos/img-2351": {
    "type": "photo",
@@ -6916,7 +6923,8 @@
    "takenAt": "2026-10-25T23:44:33",
    "hash": "9414301c5d3f0230",
    "bytes": 3599506,
-   "source": "3599681:9a74039697c35e8868f3de8b625f1d0f"
+   "source": "3599681:9a74039697c35e8868f3de8b625f1d0f",
+   "duration": 5.4
   },
   "arizona-2023/flagstaff/videos/96b7489d-a081-4023-a13a-5237f0f26d17": {
    "type": "video",
@@ -6927,7 +6935,8 @@
    "takenAt": "2026-10-25T23:44:03",
    "hash": "ceae8e8c9a93dbbb",
    "bytes": 6954117,
-   "source": "6954073:a02a6e0836ee32f637bf9896d052e39e"
+   "source": "6954073:a02a6e0836ee32f637bf9896d052e39e",
+   "duration": 10.7
   },
   "arizona-2023/sedona/photos/img-1605": {
    "type": "photo",
@@ -7030,7 +7039,8 @@
    "takenAt": "2026-10-25T23:43:23",
    "hash": "5a79e7efcf1b98c3",
    "bytes": 833404,
-   "source": "833639:c4e15a4114763af74d0e0b0279b0a759"
+   "source": "833639:c4e15a4114763af74d0e0b0279b0a759",
+   "duration": 1.8
   },
   "arizona-2023/sedona/videos/245890ac-7ded-49ce-aa40-8a6a679ad7ca": {
    "type": "video",
@@ -7041,7 +7051,8 @@
    "takenAt": "2026-10-25T23:45:03",
    "hash": "b6db613bd234266f",
    "bytes": 3645720,
-   "source": "3645708:d3059b889212849ccc6089300773518b"
+   "source": "3645708:d3059b889212849ccc6089300773518b",
+   "duration": 5.74
   },
   "europe-2026/milan/photos/img-0995": {
    "type": "photo",
@@ -8064,7 +8075,8 @@
    "takenAt": "2026-10-25T11:31:39",
    "hash": "90013b134f185068",
    "bytes": 4115510,
-   "source": "14437457:076ba275437e0c2ce280172f59804962"
+   "source": "14437457:076ba275437e0c2ce280172f59804962",
+   "duration": 4.2
   },
   "utah-2025/bonneville-salt-flats/photos/img-1779": {
    "type": "photo",
@@ -8115,7 +8127,8 @@
    "takenAt": "2025-07-05T21:47:41",
    "hash": "000a7464662e3334",
    "bytes": 8667020,
-   "source": "8667643:f9cb61de208ba99b91d7568119a8105a"
+   "source": "8667643:f9cb61de208ba99b91d7568119a8105a",
+   "duration": 22.37
   },
   "utah-2025/donut-falls/photos/100-0087": {
    "type": "photo",
@@ -8304,7 +8317,8 @@
    "takenAt": "2025-07-05T11:24:55",
    "hash": "6e6e27b7b36d6c65",
    "bytes": 2300015,
-   "source": "2300019:9c375013fa5775665ced4ab48d9544ce"
+   "source": "2300019:9c375013fa5775665ced4ab48d9544ce",
+   "duration": 5.93
   },
   "utah-2025/donut-falls/videos/img-2321": {
    "type": "video",
@@ -8315,7 +8329,8 @@
    "takenAt": "2025-07-05T15:48:08",
    "hash": "981cbc1c1448a172",
    "bytes": 1675530,
-   "source": "1675522:8972da56b6fa7a50f35fd84d1f57ffbd"
+   "source": "1675522:8972da56b6fa7a50f35fd84d1f57ffbd",
+   "duration": 4.17
   },
   "utah-2025/donut-falls/videos/img-4178": {
    "type": "video",
@@ -8326,7 +8341,8 @@
    "takenAt": "2025-07-05T16:35:44",
    "hash": "08696d1c6ccc0c66",
    "bytes": 5556203,
-   "source": "5556826:8fe49d0495d735a66f5f07c4dfef5c4a"
+   "source": "5556826:8fe49d0495d735a66f5f07c4dfef5c4a",
+   "duration": 13.77
   },
   "utah-2025/salt-lake-city/photos/100-0073": {
    "type": "photo",
@@ -9015,7 +9031,8 @@
    "takenAt": "2026-03-06T18:20:16",
    "hash": "ccf8868e93b91879",
    "bytes": 6925880,
-   "source": "9830025:9c003503c22ed085009d1aa389ec4db2"
+   "source": "9830025:9c003503c22ed085009d1aa389ec4db2",
+   "duration": 7.43
   },
   "cape-town-2026/cape-town/videos/d55d49f9-a3c1-42d1-98aa-1527cf360299": {
    "type": "video",
@@ -9026,7 +9043,8 @@
    "takenAt": "2026-03-07T16:15:58",
    "hash": "dba79b9994b4f4ba",
    "bytes": 4672229,
-   "source": "6607501:8fa4a04c0280caf6d5b972a45e898de1"
+   "source": "6607501:8fa4a04c0280caf6d5b972a45e898de1",
+   "duration": 4.97
   },
   "cape-town-2026/cape-town/videos/img-7216": {
    "type": "video",
@@ -9037,7 +9055,8 @@
    "takenAt": "2026-03-05T17:11:20",
    "hash": "f0c31c27b156cfac",
    "bytes": 14259819,
-   "source": "20255383:52fb1a12d26405362e6c4428fb4a2938"
+   "source": "20255383:52fb1a12d26405362e6c4428fb4a2938",
+   "duration": 14.84
   },
   "cape-town-2026/cape-town/videos/img-7551": {
    "type": "video",
@@ -9048,7 +9067,8 @@
    "takenAt": "2026-03-07T17:47:45",
    "hash": "d94b7c741a9caa93",
    "bytes": 6787299,
-   "source": "9641219:f38f11972e98aad60228c7d53fda3af1"
+   "source": "9641219:f38f11972e98aad60228c7d53fda3af1",
+   "duration": 7.1
   },
   "aruba-2026/aruba/photos/img-0351": {
    "type": "photo",
@@ -9381,7 +9401,8 @@
    "takenAt": "2026-09-03T18:00:23",
    "hash": "0bc617637113391f",
    "bytes": 5022014,
-   "source": "7094257:236d5aa34dbfd72fc6978a525126b8d6"
+   "source": "7094257:236d5aa34dbfd72fc6978a525126b8d6",
+   "duration": 5.2
   },
   "aruba-2026/aruba/videos/img-0346": {
    "type": "video",
@@ -9392,7 +9413,8 @@
    "takenAt": "2026-09-03T21:58:28",
    "hash": "fdfefcff3f3a8dce",
    "bytes": 8405922,
-   "source": "12083173:1c1a8bf9b20e46710148abe9485d97a3"
+   "source": "12083173:1c1a8bf9b20e46710148abe9485d97a3",
+   "duration": 8.77
   },
   "aruba-2026/aruba/videos/img-0355": {
    "type": "video",
@@ -9403,7 +9425,8 @@
    "takenAt": "2026-09-03T21:59:43",
    "hash": "80002088c0b0181e",
    "bytes": 6325849,
-   "source": "8967057:5e9be133bc6a3cae62296a58a4e43930"
+   "source": "8967057:5e9be133bc6a3cae62296a58a4e43930",
+   "duration": 6.73
   },
   "aruba-2026/aruba/videos/img-0365": {
    "type": "video",
@@ -9414,7 +9437,8 @@
    "takenAt": "2026-09-04T13:04:20",
    "hash": "069313859c9c8907",
    "bytes": 6811237,
-   "source": "9754702:4d538e946bc51b555a0f15b9b210ad11"
+   "source": "9754702:4d538e946bc51b555a0f15b9b210ad11",
+   "duration": 7.24
   },
   "europe-2024/brussels/videos/img-0557": {
    "type": "video",
@@ -9425,7 +9449,8 @@
    "takenAt": "2024-04-10T14:22:04",
    "source": "38894071:bd7065ddcc2bc228e0bbfde514d82311",
    "hash": "6d3d3d399b7f33cb",
-   "bytes": 4931157
+   "bytes": 4931157,
+   "duration": 28.7
   },
   "europe-2024/munich/videos/img-1025": {
    "type": "video",
@@ -9436,7 +9461,8 @@
    "takenAt": "2024-04-17T20:58:07",
    "source": "38079883:c19ec2d2f9d3f9a4e570fc34aafd36ff",
    "hash": "e1d6646d3f4fc741",
-   "bytes": 7881678
+   "bytes": 7881678,
+   "duration": 28.28
   },
   "europe-2024/paris/videos/img-0351": {
    "type": "video",
@@ -9447,7 +9473,54 @@
    "takenAt": "2024-04-06T20:51:43",
    "source": "50413927:0bfdfad20e7d75705bfe7fd1933a105d",
    "hash": "76665e2e2e263636",
-   "bytes": 12407093
+   "bytes": 12407093,
+   "duration": 37.39
+  },
+  "europe-2024/paris/photos/img-0474": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2024/paris/photos/img-0474-160.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-160.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2024/paris/photos/img-0474-480.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-480.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2024/paris/photos/img-0474-960.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-960.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2024/paris/photos/img-0474-1600.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-1600.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2024/paris/photos/img-0474-2400.avif",
+     "webp": "/media/europe-2024/paris/photos/img-0474-2400.webp",
+     "jpg": "/media/europe-2024/paris/photos/img-0474-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBACdASoUABsAPu1kqU2ppaOiMAgBMB2JbDuAG9JHDGoO0kg4qhSMGh9lgAD+xkf/+r/rVaTKVvil250mmsj09acIqH3e/NGo0P7o+rNKpGmN1ih6eeQ6GENwYr2K+Gmty5rss5F5mpMIcQF9fn/HdE0UaX5vJchgvssd7x1LQqlTYFqzrob6C2VT0jHZGvn+yU76+3G/OHjMc9UaE7kLS6+AAA==",
+   "takenAt": "2024-04-06T22:34:56",
+   "focus": {
+    "x": 41,
+    "y": 72
+   },
+   "source": "3251503:0b99fa46b7ab34b1d1709b3258a17071",
+   "hash": "7d2120a949c9275d",
+   "focusBy": "faces"
   }
  }
 }

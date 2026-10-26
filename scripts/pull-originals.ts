@@ -9,7 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { loadEdits } from "./lib/edits";
 import { loadEnvFile, r2Store } from "./lib/store";
-import { planPull } from "./lib/sync-plan";
+import { planDeletes, planPull } from "./lib/sync-plan";
 
 async function main() {
   loadEnvFile();
@@ -18,9 +18,22 @@ async function main() {
   const manifest = JSON.parse(fs.readFileSync(path.join(process.cwd(), "content", "media-manifest.json"), "utf8")) as { items: Record<string, { source?: string }> };
   const sources = Object.fromEntries(Object.entries(manifest.items).map(([id, e]) => [id, e.source]));
   const store = r2Store("R2_ORIGINALS_BUCKET");
-  const keys = planPull(await store.list(), sources, loadEdits(path.join(process.cwd(), "content", "visits")));
-  console.log(`${keys.length} original(s) to process.`);
+  const edits = loadEdits(path.join(process.cwd(), "content", "visits"));
+  const originals = await store.list();
+  const keys = planPull(originals, sources, edits);
+  const deletes = planDeletes(originals, edits);
+  console.log(`${keys.length} original(s) to process, ${deletes.length} deleted in the editor.`);
   let failed = 0;
+  // Deleted in the editor: keep a copy under _deleted/ (recoverable), then remove the original.
+  for (const key of deletes) {
+    try {
+      await store.put(`_deleted/${key}`, await store.get(key), "application/octet-stream");
+      await store.delete(key);
+    } catch (err) {
+      failed++;
+      console.error(`  ✗ delete ${key}: ${(err as Error).name}: ${(err as Error).message}`);
+    }
+  }
   for (const key of keys) {
     try {
       const file = path.join(target, ...key.split("/"));

@@ -25,4 +25,5 @@ mediaMeta:
   photos/img-0251: { caption: Outside the Casino de Monte-Carlo, alt: "John standing beside a red and black supercar outside the casino" }
   photos/img-0116: { caption: Dinner in Nice, alt: "A plated steak with a creamy topping and red wine sauce" }
   photos/img-0326: { caption: The beach at Nice, alt: "A pebble beach and the Mediterranean in Nice" }
-  photos/img-0335: { hidden: true }
+photoEdits: |
+  photos/img-0335 hide

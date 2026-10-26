@@ -23,8 +23,9 @@ rating:
   scores: { food: 6, value: 6, transport: 6, walkability: 7, architecture: 7, culture: 5, people: 4, attractions: 6, safety: 7, enjoyment: 6 }
 cover: photos/img-1006
 mediaMeta:
-  photos/img-1024: { hidden: true } # near-duplicate of img-1020
   photos/img-1006: { caption: "Allianz Arena", alt: "The Allianz Arena pitch with the Champions League logo at the centre circle" }
   photos/img-1020: { caption: "Pyro at the Allianz Arena", alt: "Red flares lighting up the Bayern fans before kick-off" }
   photos/img-1066: { caption: "Marienplatz", alt: "John in front of the New Town Hall on Marienplatz" }
   photos/img-1061: { caption: "New Town Hall, Munich", alt: "The Gothic tower of Munich's New Town Hall" }
+photoEdits: |
+  photos/img-1024 hide  # near-duplicate of img-1020

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { mediaId, originalKeyToId, sourceKey } from "../scripts/lib/ids";
-import { planBackup, planPublish, planPull } from "../scripts/lib/sync-plan";
+import { planBackup, planDeletes, planPublish, planPull } from "../scripts/lib/sync-plan";
 
 const obj = (key: string, etag = "aaa", size = 10) => ({ key, etag, size });
 
@@ -71,5 +71,23 @@ describe("originalKeyToId", () => {
 
   it("originalKeyToId_videoInVideosFolder_mapsToItsId", () => {
     expect(originalKeyToId("aruba-2026/aruba/videos/IMG_0345.MOV")).toEqual({ id: "aruba-2026/aruba/videos/img-0345", kind: "videos" });
+  });
+});
+
+describe("planDeletes", () => {
+  const key = "trip/city/videos/IMG_9.MOV";
+  const id = mediaId("trip", "city", "videos", "IMG_9.MOV");
+
+  it("planDeletes_deletedInEditor_isMovedAndNotPulled", () => {
+    const edits = { [id]: { delete: true } };
+    expect([planDeletes([obj(key)], edits), planPull([obj(key)], {}, edits)]).toEqual([[key], []]);
+  });
+
+  it("planDeletes_nothingDeleted_isEmpty", () => {
+    expect(planDeletes([obj(key)], {})).toEqual([]);
+  });
+
+  it("planPull_videoTrimChanged_isDownloadedAgain", () => {
+    expect(planPull([obj(key, "e", 5)], { [id]: sourceKey(5, "e", undefined) }, { [id]: { trim: { start: 1, end: 5 } } })).toEqual([key]);
   });
 });

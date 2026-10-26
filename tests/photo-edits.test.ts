@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { editSignature, formatPhotoEdits, parseCrop, parsePhotoEdits } from "@/lib/content/photo-edits";
+import { applyOrder, editSignature, formatPhotoEdits, parseCrop, parsePhotoEdits, parseTrim } from "@/lib/content/photo-edits";
 
 describe("photo edits", () => {
   it("parsePhotoEdits_emptyOrMissing_returnsNoEdits", () => {
-    expect(parsePhotoEdits(undefined)).toEqual({ edits: {}, problems: [] });
+    expect(parsePhotoEdits(undefined)).toEqual({ edits: {}, order: [], problems: [] });
   });
 
   it("parsePhotoEdits_rotateAndCrop_parsesBoth", () => {
@@ -34,5 +34,34 @@ describe("photo edits", () => {
 
   it("editSignature_noEdit_isEmpty", () => {
     expect([editSignature(undefined), editSignature({ rotate: 90, crop: { x: 1, y: 2, w: 3, h: 4 } })]).toEqual(["", "r90c1,2,3,4"]);
+  });
+});
+
+describe("media manager edits", () => {
+  it("parsePhotoEdits_trimHideDeleteAndOrder_areParsed", () => {
+    const r = parsePhotoEdits("order: videos/v1, photos/a\nvideos/v1 trim=1.5,9\nphotos/a hide # blurry\nphotos/b delete");
+    expect([r.order, r.edits]).toEqual([["videos/v1", "photos/a"], { "videos/v1": { trim: { start: 1.5, end: 9 } }, "photos/a": { hide: true }, "photos/b": { delete: true } }]);
+  });
+
+  it("parseTrim_endBeforeStartOrTooShort_isRejected", () => {
+    expect([parseTrim("5,2"), parseTrim("1,1.2"), parseTrim("x,2")]).toEqual([null, null, null]);
+  });
+
+  it("formatPhotoEdits_withOrder_writesOrderLineFirst", () => {
+    expect(formatPhotoEdits({ "photos/a": { hide: true } }, ["photos/a", "photos/b"])).toBe("order: photos/a, photos/b\nphotos/a hide");
+  });
+
+  it("editSignature_hideAndDelete_dontForceAReprocess", () => {
+    expect(editSignature({ hide: true, delete: true })).toBe("");
+  });
+
+  it("applyOrder_unlistedItems_keepTheirPlaceAfterListedOnes", () => {
+    const items = ["a", "b", "c", "d"].map((key) => ({ key }));
+    expect(applyOrder(items, ["c", "a"]).map((i) => i.key)).toEqual(["c", "a", "b", "d"]);
+  });
+
+  it("applyOrder_noOrder_returnsItemsUnchanged", () => {
+    const items = [{ key: "x" }, { key: "y" }];
+    expect(applyOrder(items, [])).toEqual(items);
   });
 });

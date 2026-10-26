@@ -42,7 +42,7 @@ function localPreviews(): Map<string, string> {
     for (const n of fs.existsSync(d) ? fs.readdirSync(d) : []) {
       const p = path.join(d, n);
       if (fs.statSync(p).isDirectory()) walk(p);
-      else if (n.endsWith(".jpg")) out.set(`_previews/${path.relative(PREVIEWS, p).split(path.sep).join("/")}`, p);
+      else if (n.endsWith(".jpg") || n.endsWith(".mp4")) out.set(`_previews/${path.relative(PREVIEWS, p).split(path.sep).join("/")}`, p);
     }
   };
   walk(PREVIEWS);

@@ -187,14 +187,14 @@ collections:
           - { name: writeUp, label: Write-up, widget: text, required: false, hint: "Your own words about the day" }
       - { name: cover, label: Cover photo, required: false, widget: cover-picker, hint: "Pick one of this visit's photos. Leave blank to use the first photo." }
       - { name: coverFocus, label: Cover framing, required: false, widget: focus-picker, hint: "Click the part of the cover that must stay in view when it's cropped." }
-      - { name: photoEdits, label: Photo editor (rotate and crop), required: false, widget: photo-editor, hint: "Turn or crop any of this visit's photos. Applied the next time photos are processed." }
+      - { name: photoEdits, label: Photos & videos, required: false, widget: media-manager, hint: "Reorder, hide, delete, rotate, crop and trim. Photo and clip edits apply the next time photos are processed." }
       - name: media
         label: Photo order
         widget: list
         required: false
         hint: "Usually leave this empty: every photo for the city is shown, oldest first. Only list photos (photos/img-1234) to pick and order them by hand; anything not listed is left out."
       - name: mediaMeta
-        label: Photo captions and hiding
+        label: Photo captions
         widget: list
         map_key_field: file
         required: false
@@ -205,7 +205,7 @@ collections:
           - { name: file, label: Photo or clip, hint: "photos/img-1234 or videos/img-1234 (the name without .jpg/.mov)" }
           - { name: caption, label: Caption, required: false }
           - { name: alt, label: Description for screen readers, required: false, hint: "What's in the photo, for people who can't see it" }
-          - { name: hidden, label: Hide this photo, widget: boolean, required: false, hint: "Turn on to keep it off the site without deleting it" }
+          - { name: hidden, label: Hide this photo (older way), widget: boolean, required: false, hint: "Prefer Show/Hide in Photos & videos above; this switch is kept for older entries" }
           - { name: rotate, label: Rotate, widget: select, required: false, value_type: int, options: [{ label: "90° clockwise", value: 90 }, { label: "180° (upside down)", value: 180 }, { label: "90° anticlockwise", value: 270 }], hint: "For a sideways or upside-down photo. Takes effect the next time the photos are processed." }
           - { name: focus, label: Keep in frame, widget: select, required: false, options: [{ label: Top, value: top }, { label: Upper middle, value: upper }, { label: Centre, value: centre }, { label: Lower middle, value: lower }, { label: Bottom, value: bottom }], hint: "When a cover or thumbnail crops this photo, which part to keep. Leave blank to let the site find the faces." }
       - name: youtube

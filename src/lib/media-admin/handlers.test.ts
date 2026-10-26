@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import type { AccessDeps } from "../metrics/access";
-import { handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, validOriginalKey, type BucketBinding, type MediaAdminEnv } from "./handlers";
+import { handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, parseRange, validOriginalKey, type BucketBinding, type MediaAdminEnv } from "./handlers";
 
 vi.spyOn(console, "log").mockImplementation(() => {});
 vi.spyOn(console, "warn").mockImplementation(() => {});
@@ -34,7 +34,7 @@ function bucket(failPut = false): BucketBinding & { keys: string[] } {
       this.keys.push(key);
     },
     async get(key) {
-      return stored.has(key) ? { body: new Blob(["jpeg"]).stream() } : null;
+      return stored.has(key) ? { body: new Blob(["jpeg"]).stream(), size: 1000 } : null;
     },
   };
 }
@@ -135,5 +135,24 @@ describe("handlePreview", () => {
     await b.put("_previews/t/c/photos/a.jpg", null);
     const res = await handlePreview(get("/api/preview/t/c/photos/a.jpg"), env({ ORIGINALS: b }), access());
     expect([res.status, res.headers.get("content-type"), res.headers.get("cache-control")]).toEqual([200, "image/jpeg", "private, max-age=300"]);
+  });
+});
+
+describe("video previews", () => {
+  const get = (path: string, headers: Record<string, string> = {}) => new Request(`https://johnojo.me${path}`, { headers: { "cf-access-jwt-assertion": goodToken, ...headers } });
+
+  it("parseRange_openAndClosedRanges_areParsed", () => {
+    expect([parseRange("bytes=0-99"), parseRange("bytes=500-"), parseRange("items=1-2"), parseRange(null)]).toEqual([{ offset: 0, length: 100 }, { offset: 500 }, null, null]);
+  });
+
+  it("handlePreview_videoWithRange_answers206WithContentRange", async () => {
+    const b = bucket();
+    await b.put("_previews/t/c/videos/v.mp4", null);
+    const res = await handlePreview(get("/api/preview/t/c/videos/v.mp4", { range: "bytes=0-99" }), env({ ORIGINALS: b }), access());
+    expect([res.status, res.headers.get("content-range"), res.headers.get("content-type")]).toEqual([206, "bytes 0-99/1000", "video/mp4"]);
+  });
+
+  it("handlePreview_videoUnderPhotosFolder_isRejected", async () => {
+    expect((await handlePreview(get("/api/preview/t/c/photos/v.mp4"), env(), access())).status).toBe(400);
   });
 });

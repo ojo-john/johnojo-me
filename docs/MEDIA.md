@@ -8,8 +8,10 @@
    downloads only new or edited originals → resizes, applies rotate/crop, finds faces, strips metadata →
    uploads the visible web copies to the public bucket (`R2_BUCKET`, served at `media.johnojo.me`) and deletes
    hidden ones → commits `content/media-manifest.json` → Cloudflare Pages rebuilds.
-3. **Edit** captions, covers, framing, rotate/crop and hide/show in the editor. Saving a visit re-runs the job
-   automatically when a photo needs re-making.
+3. **Edit** in the editor. Each city visit has **Photos & videos**: drag to reorder, Show/Hide, Delete (the
+   original moves to `_deleted/`, recoverable), rotate and crop photos, trim clips (including ones too big to
+   publish). Captions live in "Photo captions"; covers and framing in "Cover photo" / "Cover framing".
+   Saving a visit re-runs the job automatically when a photo or clip needs re-making.
 
 Nothing needs to stay on your Mac. Folders whose names start with `_` are never published.
 

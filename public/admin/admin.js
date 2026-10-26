@@ -214,39 +214,57 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
 
   CMS.registerWidget("focus-picker", FocusPicker);
 
-  // "photo-editor" field: pick one of the visit's photos, turn it and drag a crop box. Saves one line per
-  // edited photo ("photos/img-1 rotate=90 crop=10,5,80,70", the format in src/lib/content/photo-edits.ts).
-  // The edit is baked into the web copies the next time photos are processed.
+  // "media-manager" field: every photo and clip of a visit in one grid. Drag (or use the arrows) to reorder,
+  // hide/show, delete (the original is kept in a recovery folder), rotate/crop photos and trim clips. Saves
+  // plain lines in the format of src/lib/content/photo-edits.ts; rotate, crop and trim are baked into the
+  // web copies the next time photos are processed. Hide, delete and order apply on the next site build.
   const MIN_CROP = 5;
+  const MIN_TRIM = 0.5;
+  const keyOf = (f) => (f.includes("/") ? f : `photos/${f}`);
   const parseEdits = (text) => {
-    const out = {};
+    const edits = {};
+    let order = [];
     for (const raw of String(text ?? "").split("\n")) {
-      const [file, ...parts] = raw.trim().split(/\s+/);
-      if (!file || file.startsWith("#")) continue;
+      const line = raw.replace(/#.*$/, "").trim();
+      if (!line) continue;
+      if (line.startsWith("order:")) {
+        order = line.slice(6).split(",").map((x) => x.trim()).filter(Boolean).map(keyOf);
+        continue;
+      }
+      const [file, ...parts] = line.split(/\s+/);
       const e = {};
       for (const p of parts) {
         const [k, v = ""] = p.split("=");
+        const n = v.split(",").map(Number);
         if (k === "rotate" && ["90", "180", "270"].includes(v)) e.rotate = Number(v);
-        if (k === "crop") {
-          const n = v.split(",").map(Number);
-          if (n.length === 4 && n.every(Number.isFinite)) e.crop = { x: n[0], y: n[1], w: n[2], h: n[3] };
-        }
+        else if (k === "crop" && n.length === 4 && n.every(Number.isFinite)) e.crop = { x: n[0], y: n[1], w: n[2], h: n[3] };
+        else if (k === "trim" && n.length === 2 && n.every(Number.isFinite)) e.trim = { start: n[0], end: n[1] };
+        else if (k === "hide") e.hide = true;
+        else if (k === "delete") e.delete = true;
       }
-      out[file.includes("/") ? file : `photos/${file}`] = e;
+      edits[keyOf(file)] = e;
     }
-    return out;
+    return { edits, order };
   };
   const r1 = (n) => Math.round(n * 10) / 10;
-  const formatEdits = (edits) =>
-    Object.keys(edits)
+  const formatEdits = ({ edits, order }) => {
+    const lines = Object.keys(edits)
       .sort()
       .map((f) => {
         const e = edits[f];
-        const bits = [e.rotate ? `rotate=${e.rotate}` : "", e.crop ? `crop=${[e.crop.x, e.crop.y, e.crop.w, e.crop.h].map(r1).join(",")}` : ""].filter(Boolean);
+        const bits = [
+          e.rotate ? `rotate=${e.rotate}` : "",
+          e.crop ? `crop=${[e.crop.x, e.crop.y, e.crop.w, e.crop.h].map(r1).join(",")}` : "",
+          e.trim ? `trim=${r1(e.trim.start)},${r1(e.trim.end)}` : "",
+          e.hide ? "hide" : "",
+          e.delete ? "delete" : "",
+        ].filter(Boolean);
         return bits.length ? [f, ...bits].join(" ") : "";
       })
-      .filter(Boolean)
-      .join("\n");
+      .filter(Boolean);
+    return [order.length ? `order: ${order.join(", ")}` : "", ...lines].filter(Boolean).join("\n");
+  };
+  const clock = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
   function CropCanvas({ photo, edit, onEdit }) {
     const canvasRef = React.useRef(null);
@@ -342,15 +360,75 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
     );
   }
 
-  function PhotoEditor(props) {
+
+  function TrimEditor({ item, edit, onEdit }) {
+    const videoRef = React.useRef(null);
+    const stopAt = React.useRef(null);
+    const [duration, setDuration] = React.useState(item.duration ?? 0);
+    const trim = edit.trim ?? { start: 0, end: duration };
+    const set = (start, end) => {
+      const s = Math.max(0, Math.min(start, duration - MIN_TRIM)), e = Math.max(s + MIN_TRIM, Math.min(end, duration));
+      const whole = s <= 0.05 && e >= duration - 0.05;
+      onEdit({ ...edit, trim: whole ? undefined : { start: r1(s), end: r1(e) } });
+    };
+    const seek = (t) => videoRef.current && (videoRef.current.currentTime = t);
+    const playSelection = () => {
+      const v = videoRef.current;
+      if (!v) return;
+      v.currentTime = trim.start;
+      stopAt.current = trim.end;
+      v.play();
+    };
+    const slider = (label, value, onChange) =>
+      h(
+        "label",
+        { style: { display: "grid", gridTemplateColumns: "56px minmax(0, 1fr) 52px", alignItems: "center", gap: 8, fontSize: 13, margin: "6px 0" } },
+        label,
+        h("input", { type: "range", min: 0, max: duration || 1, step: 0.1, value, onChange: (e) => onChange(Number(e.target.value)), "aria-label": `${label} (seconds)` }),
+        h("span", { style: { fontFamily: "ui-monospace, Menlo, monospace" } }, `${r1(value)}s`),
+      );
+    return h(
+      "div",
+      { style: { maxWidth: 520 } },
+      h("video", {
+        ref: videoRef,
+        src: item.edit,
+        controls: true,
+        playsInline: true,
+        preload: "metadata",
+        onLoadedMetadata: (e) => Number.isFinite(e.currentTarget.duration) && setDuration(e.currentTarget.duration),
+        onTimeUpdate: (e) => {
+          if (stopAt.current !== null && e.currentTarget.currentTime >= stopAt.current) {
+            e.currentTarget.pause();
+            stopAt.current = null;
+          }
+        },
+        style: { width: "100%", maxHeight: 360, background: "#000", borderRadius: 6, display: "block" },
+      }),
+      duration
+        ? h(
+            "div",
+            null,
+            slider("Start", trim.start, (v) => (set(v, trim.end), seek(v))),
+            slider("End", trim.end, (v) => (set(trim.start, v), seek(v))),
+            h("p", { style: { fontSize: 13, color: "#555", margin: "4px 0" } }, `Keeps ${r1(trim.end - trim.start)}s of ${r1(duration)}s.${item.tooLarge ? " This clip is too big to publish as it is; trim it to about 30 seconds or less." : ""}`),
+            h("button", { type: "button", onClick: playSelection, style: { fontSize: 13, padding: "4px 10px", marginRight: 6 } }, "▶ Play the kept part"),
+            edit.trim ? h("button", { type: "button", onClick: () => onEdit({ ...edit, trim: undefined }), style: { fontSize: 13, padding: "4px 10px" } }, "Reset trim") : null,
+          )
+        : h("p", { style: { fontSize: 13, color: "#555" } }, "Loading the clip…"),
+    );
+  }
+
+  function MediaManager(props) {
     const key = entryKey(props.entry, "visit");
-    const [photos, setPhotos] = React.useState(null);
+    const [all, setAll] = React.useState(null);
     const [error, setError] = React.useState(null);
     const [selected, setSelected] = React.useState(null);
+    const dragFrom = React.useRef(null);
     React.useEffect(() => {
       let live = true;
       loadIndex()
-        .then((index) => live && setPhotos(index.visits[key] ?? []))
+        .then((index) => live && setAll(index.media?.[key] ?? []))
         .catch((err) => {
           indexPromise = null;
           if (live) setError(err.message);
@@ -360,66 +438,133 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
       };
     }, [key]);
 
-    const edits = parseEdits(props.value);
-    const save = (file, edit) => props.onChange(formatEdits({ ...edits, [file]: edit }));
+    const state = parseEdits(props.value);
     const note = (text) => h("p", { style: { margin: "6px 0", fontSize: 13, color: "#555" } }, text);
-    if (error) return note(`Couldn't load the photo list (${error}).`);
-    if (!photos) return note("Loading…");
-    if (!photos.length) return note("No photos for this visit yet.");
-    const photo = photos.find((p) => p.file === selected);
-    const edit = (photo && edits[photo.file]) || {};
-    const btn = (label, onClick, extra = {}) => h("button", { type: "button", onClick, style: { fontSize: 13, padding: "4px 10px", marginRight: 6 }, ...extra }, label);
+    if (error) return note(`Couldn't load the photos and clips (${error}).`);
+    if (!all) return note("Loading…");
+    if (!all.length) return note("No photos or clips for this visit yet. Upload some first.");
+
+    const save = (next) => props.onChange(formatEdits(next));
+    const editOf = (f) => state.edits[f] ?? {};
+    const setEdit = (f, e) => save({ ...state, edits: { ...state.edits, [f]: e } });
+    // Display order: the saved order first, then everything else oldest first (as the site does).
+    const rank = new Map(state.order.map((f, i) => [f, i]));
+    const items = [...all].sort((a, b) => (rank.get(a.file) ?? Infinity) - (rank.get(b.file) ?? Infinity));
+    const visible = items.filter((i) => !editOf(i.file).delete);
+    const deleted = items.filter((i) => editOf(i.file).delete);
+    const move = (from, to) => {
+      if (to < 0 || to >= visible.length || from === to) return;
+      const files = visible.map((i) => i.file);
+      const [f] = files.splice(from, 1);
+      files.splice(to, 0, f);
+      save({ ...state, order: files });
+    };
+    const btn = (label, onClick, title, extra = {}) =>
+      h("button", { type: "button", title, "aria-label": title, onClick: (e) => (e.stopPropagation(), onClick()), style: { minWidth: 30, minHeight: 30, padding: "0 6px", fontSize: 13, border: "1px solid #bbb", borderRadius: 6, background: "#fff", cursor: "pointer", flex: "0 0 auto", ...extra } }, label);
+    const badge = (text, bg = "rgba(0,0,0,.65)") => h("span", { key: text, style: { background: bg, color: "#fff", font: "10px ui-monospace, Menlo, monospace", padding: "1px 5px", borderRadius: 3 } }, text);
+    const sel = items.find((i) => i.file === selected);
 
     return h(
       "div",
       { id: props.forID },
-      note("Pick a photo to rotate or crop it. Changes show on the site after the photos are next processed."),
+      note(`${visible.filter((i) => i.kind === "photo").length} photos · ${visible.filter((i) => i.kind === "video").length} clips. Drag to reorder (or use the arrows), tap one to rotate, crop or trim.`),
+      state.order.length ? btn("Reset to date order", () => save({ ...state, order: [] }), "Reset to date order", { marginBottom: 8, width: "auto" }) : null,
       h(
         "div",
-        { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(90px, 1fr))", gap: 6, maxHeight: 260, overflowY: "auto", padding: 2 } },
-        photos.map((p) =>
-          h(
-            "button",
-            {
-              key: p.file,
-              type: "button",
-              title: p.file,
-              onClick: () => setSelected(p.file === selected ? null : p.file),
-              style: { position: "relative", padding: 0, aspectRatio: "1", overflow: "hidden", borderRadius: 6, cursor: "pointer", border: p.file === selected ? "3px solid #2541b2" : "1px solid #ccc", background: "#eee" },
-            },
-            h("img", {
-              src: p.thumb,
-              alt: "",
-              loading: "lazy",
-              onError: (e) => {
-                if (p.placeholder && e.currentTarget.src !== p.placeholder) e.currentTarget.src = p.placeholder;
-              },
-              style: { width: "100%", height: "100%", objectFit: "cover", display: "block" },
-            }),
-            edits[p.file] && (edits[p.file].rotate || edits[p.file].crop)
-              ? h("span", { style: { position: "absolute", top: 3, right: 3, background: "#2541b2", color: "#fff", font: "10px ui-monospace, Menlo, monospace", padding: "1px 4px", borderRadius: 3 } }, "edited")
-              : null,
-          ),
-        ),
-      ),
-      photo
-        ? h(
+        { style: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 } },
+        visible.map((item, index) => {
+          const e = editOf(item.file);
+          const hidden = e.hide || item.hidden;
+          return h(
             "div",
-            { style: { marginTop: 12 } },
+            {
+              key: item.file,
+              draggable: true,
+              onDragStart: () => (dragFrom.current = index),
+              onDragOver: (ev) => ev.preventDefault(),
+              onDrop: (ev) => {
+                ev.preventDefault();
+                if (dragFrom.current !== null) move(dragFrom.current, index);
+                dragFrom.current = null;
+              },
+              onClick: () => setSelected(item.file === selected ? null : item.file),
+              role: "button",
+              tabIndex: 0,
+              onKeyDown: (ev) => (ev.key === "Enter" || ev.key === " ") && (ev.preventDefault(), setSelected(item.file === selected ? null : item.file)),
+              "aria-label": `${item.kind === "video" ? "Clip" : "Photo"} ${index + 1}: ${item.file}${hidden ? " (hidden)" : ""}`,
+              style: { border: item.file === selected ? "3px solid #2541b2" : "1px solid #ccc", borderRadius: 8, overflow: "hidden", background: "#fff", cursor: "grab" },
+            },
             h(
               "div",
-              { style: { marginBottom: 8 } },
-              // Turning changes the frame, so any crop is cleared rather than silently moved.
-              btn("⟲ Rotate left", () => save(photo.file, { rotate: ((edit.rotate ?? 0) + 270) % 360 || undefined })),
-              btn("⟳ Rotate right", () => save(photo.file, { rotate: ((edit.rotate ?? 0) + 90) % 360 || undefined })),
-              btn("Reset", () => save(photo.file, {})),
+              { style: { position: "relative", aspectRatio: "1", background: "#222" } },
+              h("img", {
+                src: item.thumb,
+                alt: "",
+                loading: "lazy",
+                draggable: false,
+                onError: (ev) => item.placeholder && ev.currentTarget.src !== item.placeholder && (ev.currentTarget.src = item.placeholder),
+                style: { width: "100%", height: "100%", objectFit: "cover", display: "block", opacity: hidden || item.duplicate ? 0.4 : 1, transform: e.rotate ? `rotate(${e.rotate}deg)` : undefined },
+              }),
+              h(
+                "div",
+                { style: { position: "absolute", top: 4, left: 4, right: 4, display: "flex", flexWrap: "wrap", gap: 3 } },
+                item.kind === "video" ? badge(`▶ ${item.duration ? clock(e.trim ? e.trim.end - e.trim.start : item.duration) : ""}`) : null,
+                hidden ? badge("hidden", "#555") : null,
+                item.tooLarge && !e.trim ? badge("too long: trim", "#b3261e") : null,
+                item.duplicate ? badge("duplicate", "#555") : null,
+                e.rotate || e.crop || e.trim ? badge("edited", "#2541b2") : null,
+              ),
             ),
-            h(CropCanvas, { photo, edit, onEdit: (e) => save(photo.file, e) }),
-            note(edit.crop ? `Crop: ${r1(edit.crop.w)}% × ${r1(edit.crop.h)}% of the photo. Drag the box to move it, the corners to resize, or outside it to draw a new one.` : "Drag across the photo to draw a crop box."),
+            h(
+              "div",
+              { style: { display: "flex", gap: 4, padding: 4, justifyContent: "space-between" } },
+              btn("←", () => move(index, index - 1), "Move earlier"),
+              btn(hidden ? "Show" : "Hide", () => setEdit(item.file, { ...e, hide: !e.hide || undefined }), hidden ? "Show on the site" : "Hide from the site", { flex: "1 1 auto" }),
+              btn("✕", () => window.confirm(`Delete this ${item.kind}? It comes off the site, and the original is kept in a recovery folder.`) && setEdit(item.file, { ...e, delete: true }), "Delete", { color: "#b3261e" }),
+              btn("→", () => move(index, index + 1), "Move later"),
+            ),
+          );
+        }),
+      ),
+      item_hint(sel),
+      deleted.length
+        ? h(
+            "div",
+            { style: { marginTop: 12, fontSize: 13 } },
+            h("b", null, `Deleted (${deleted.length}) `),
+            deleted.map((item) => h("span", { key: item.file, style: { marginRight: 8 } }, `${item.file} `, btn("Undo", () => setEdit(item.file, { ...editOf(item.file), delete: undefined }), "Undo delete", { width: "auto" }))),
           )
         : null,
     );
+
+    function item_hint(item) {
+      if (!item || editOf(item.file).delete) return null;
+      const e = editOf(item.file);
+      return h(
+        "div",
+        { style: { marginTop: 14, padding: 12, border: "1px solid #ddd", borderRadius: 8, background: "#fafafa" } },
+        h("b", { style: { display: "block", marginBottom: 8 } }, item.file),
+        item.kind === "video"
+          ? h(TrimEditor, { item, edit: e, onEdit: (next) => setEdit(item.file, next) })
+          : h(
+              "div",
+              null,
+              h(
+                "div",
+                { style: { marginBottom: 8 } },
+                // Turning changes the frame, so any crop is cleared rather than silently moved.
+                btn("⟲ Rotate left", () => setEdit(item.file, { ...e, crop: undefined, rotate: ((e.rotate ?? 0) + 270) % 360 || undefined }), "Rotate left", { width: "auto", marginRight: 6 }),
+                btn("⟳ Rotate right", () => setEdit(item.file, { ...e, crop: undefined, rotate: ((e.rotate ?? 0) + 90) % 360 || undefined }), "Rotate right", { width: "auto", marginRight: 6 }),
+                e.rotate || e.crop ? btn("Reset", () => setEdit(item.file, { ...e, rotate: undefined, crop: undefined }), "Reset rotate and crop", { width: "auto" }) : null,
+              ),
+              h(CropCanvas, { photo: item, edit: e, onEdit: (next) => setEdit(item.file, next) }),
+              note(e.crop ? "Drag the box to move it, the corners to resize, or outside it to draw a new one." : "Drag across the photo to draw a crop box."),
+            ),
+      );
+    }
   }
 
-  CMS.registerWidget("photo-editor", PhotoEditor);
+  CMS.registerWidget("media-manager", MediaManager);
+  // Older configs named the field's widget "photo-editor".
+  CMS.registerWidget("photo-editor", MediaManager);
 })();

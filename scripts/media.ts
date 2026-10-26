@@ -23,7 +23,7 @@ import ffmpegPath from "ffmpeg-static";
 import sharp, { type Sharp } from "sharp";
 import { focusFromFaces, type Focus } from "../src/lib/content/focus";
 import { findFaces } from "./lib/faces";
-import { videoDateFrom } from "./lib/video-date";
+import { videoDateFrom, videoDurationFrom } from "./lib/video-date";
 import { loadEdits } from "./lib/edits";
 import { fileSlug, folderSlug, PHOTO_EXT, sourceKey, VIDEO_EXT } from "./lib/ids";
 import type { PhotoEdit } from "../src/lib/content/photo-edits";
@@ -50,7 +50,7 @@ const CENTRE = 50;
 
 type Entry =
   | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null; focus?: Focus; focusBy?: "faces" | "attention"; source?: string } & Fingerprint)
-  | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null; source?: string } & Fingerprint);
+  | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null; source?: string; duration?: number; tooLarge?: boolean } & Fingerprint);
 
 /** Difference hash: 64 bits describing an image's light/dark pattern. Near-identical pictures differ by a few bits. */
 async function dHash(file: string): Promise<string> {
@@ -238,43 +238,58 @@ const VIDEO_EDGE = 1280;
 /** H.264 quality (lower = better, bigger). 26 keeps most clips a few MB. */
 const VIDEO_CRF = "26";
 
-function videoDate(file: string): string | null {
+/** The container's tags and stream info, as ffmpeg prints them. */
+function probe(file: string): string {
   try {
     execFileSync(FFMPEG, ["-hide_banner", "-i", file], { stdio: ["ignore", "ignore", "pipe"], timeout: 30_000 });
-    return null;
+    return "";
   } catch (err) {
-    // With no output file ffmpeg exits non-zero, but it has printed the container's tags to stderr.
-    return videoDateFrom(String((err as { stderr?: Buffer | string }).stderr ?? ""));
+    // With no output file ffmpeg exits non-zero, but it has printed what we want to stderr.
+    return String((err as { stderr?: Buffer | string }).stderr ?? "");
   }
 }
 
-async function processVideo(file: string, outDir: string, base: string, tmp: string): Promise<Entry | null> {
+/** Long edge of the editor's untrimmed working copy of a clip: enough to pick trim points. */
+const VIDEO_PREVIEW_EDGE = 640;
+
+const scaleTo = (edge: number) => `scale='if(gt(iw,ih),min(${edge},iw),-2)':'if(gt(iw,ih),-2,min(${edge},ih))'`;
+/** -map_metadata -1 drops every tag, including the GPS location phones write into clips. */
+const STRIP = ["-map_metadata", "-1", "-map_chapters", "-1"];
+
+async function processVideo(file: string, outDir: string, base: string, tmp: string, edit: PhotoEdit | undefined, id: string): Promise<Entry | null> {
   fs.mkdirSync(outDir, { recursive: true });
   const out = path.join(outDir, `${base}.mp4`);
-  const takenAt = videoDate(file) ?? spotlightDate(file);
-  // Re-encode to H.264/AAC with the long edge at most VIDEO_EDGE. -map_metadata -1 drops every tag,
-  // including the GPS location phones write into clips; ffmpeg applies the rotation flag to the pixels.
-  const scale = `scale='if(gt(iw,ih),min(${VIDEO_EDGE},iw),-2)':'if(gt(iw,ih),-2,min(${VIDEO_EDGE},ih))'`;
+  const info = probe(file);
+  const takenAt = videoDateFrom(info) ?? spotlightDate(file);
+  const duration = videoDurationFrom(info);
+
+  // The editor's working copy: small, untrimmed, metadata-free, so trim points can always be changed.
+  const preview = path.join(EDIT_DIR, `${id}.mp4`);
+  fs.mkdirSync(path.dirname(preview), { recursive: true });
+  execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y", "-i", file, ...STRIP, "-vf", scaleTo(VIDEO_PREVIEW_EDGE), "-c:v", "libx264", "-crf", "32", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", preview], { stdio: "ignore", timeout: 900_000 });
+
+  // The web copy: trimmed if asked, H.264/AAC, long edge at most VIDEO_EDGE (ffmpeg applies the rotation flag).
+  const trim = edit?.trim ? ["-ss", String(edit.trim.start), "-to", String(edit.trim.end)] : [];
   execFileSync(
     FFMPEG,
-    ["-hide_banner", "-loglevel", "error", "-y", "-i", file, "-map_metadata", "-1", "-map_chapters", "-1", "-vf", scale, "-c:v", "libx264", "-crf", VIDEO_CRF, "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out],
+    ["-hide_banner", "-loglevel", "error", "-y", ...trim, "-i", file, ...STRIP, "-vf", scaleTo(VIDEO_EDGE), "-c:v", "libx264", "-crf", VIDEO_CRF, "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out],
     { stdio: "ignore", timeout: 900_000 },
   );
-  if (fs.statSync(out).size > MAX_VIDEO_BYTES) {
+  const tooLarge = fs.statSync(out).size > MAX_VIDEO_BYTES;
+  if (tooLarge) {
     fs.rmSync(out);
-    console.warn(`  ! ${path.basename(file)} is still over 25 MB after compressing. Trim it, or upload it to YouTube as unlisted.`);
-    return null;
+    console.warn(`  ! ${path.basename(file)} is still over 25 MB after compressing. Trim it in the editor (Photos & videos) to put it on the site.`);
   }
   // Poster: a frame half a second in (skips a black first frame), through sharp so it carries no metadata.
   const frame = path.join(tmp, `${base}-frame.png`);
   try {
-    execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y", "-ss", "0.5", "-i", out, "-frames:v", "1", frame], { stdio: "ignore", timeout: 60_000 });
+    execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y", "-ss", "0.5", "-i", tooLarge ? preview : out, "-frames:v", "1", frame], { stdio: "ignore", timeout: 60_000 });
     const posterOut = path.join(outDir, `${base}-poster.jpg`);
-    const info = await sharp(frame).resize({ width: 960, withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(posterOut);
-    return { type: "video", w: info.width, h: info.height, src: webPath(out), poster: webPath(posterOut), takenAt };
+    const p = await sharp(frame).resize({ width: 960, withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(posterOut);
+    return { type: "video", w: p.width, h: p.height, src: tooLarge ? "" : webPath(out), poster: webPath(posterOut), takenAt, duration: duration ?? undefined, ...(tooLarge ? { tooLarge } : {}) };
   } catch (err) {
     console.warn(`  ! No poster frame for ${path.basename(file)}: ${(err as Error).message}`);
-    return { type: "video", w: VIDEO_EDGE, h: 720, src: webPath(out), poster: "", takenAt };
+    return { type: "video", w: VIDEO_EDGE, h: 720, src: tooLarge ? "" : webPath(out), poster: "", takenAt, duration: duration ?? undefined, ...(tooLarge ? { tooLarge } : {}) };
   }
 }
 
@@ -307,7 +322,15 @@ async function main() {
           const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
           const stat = fs.statSync(file);
-          const edit = kind === "photos" ? edits[id] : undefined;
+          const edit = edits[id];
+          // Deleted in the editor: move the original to the recovery folder and drop it from the site below.
+          if (edit?.delete) {
+            const bin = path.join(SOURCE, "_deleted", trip, city, kind, name);
+            fs.mkdirSync(path.dirname(bin), { recursive: true });
+            fs.renameSync(file, bin);
+            console.log(`  − ${id} deleted (original kept in ${path.relative(SOURCE, bin)})`);
+            continue;
+          }
           const source = sourceKey(stat.size, fileMd5(file, stat, cache), edit);
           const existing = manifest.items[id];
           // Before source keys existed, the skip test was size + modified time (+ turn); honour it once.
@@ -316,6 +339,17 @@ async function main() {
           if (existing && (existing.source === source || legacy)) {
             existing.source = source;
             skipped++;
+            // Clips processed before the trim tool: add their length and the editor's untrimmed working copy.
+            if (existing.type === "video" && (existing.duration === undefined || !fs.existsSync(path.join(EDIT_DIR, `${id}.mp4`)))) {
+              try {
+                existing.duration = videoDurationFrom(probe(file)) ?? undefined;
+                const preview = path.join(EDIT_DIR, `${id}.mp4`);
+                fs.mkdirSync(path.dirname(preview), { recursive: true });
+                execFileSync(FFMPEG, ["-hide_banner", "-loglevel", "error", "-y", "-i", file, ...STRIP, "-vf", scaleTo(VIDEO_PREVIEW_EDGE), "-c:v", "libx264", "-crf", "32", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", preview], { stdio: "ignore", timeout: 900_000 });
+              } catch (err) {
+                console.warn(`  ! No editor preview for ${id}: ${(err as Error).message}`);
+              }
+            }
             if (kind === "photos" && !fs.existsSync(editPreviewPath(id))) {
               try {
                 await writeEditPreview(decodable(file, tmp), id);
@@ -334,7 +368,7 @@ async function main() {
           } else {
             try {
               const outDir = path.join(OUT, trip, citySlug, kind);
-              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp, edit, id) : await processVideo(file, outDir, base, tmp);
+              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp, edit, id) : await processVideo(file, outDir, base, tmp, edit, id);
               if (entry) {
                 manifest.items[id] = { ...entry, source };
                 cache[file] = { ...cache[file], id };
@@ -363,13 +397,16 @@ async function main() {
 
   // Originals that were deleted or renamed: drop their entries and generated files. The cloud job only
   // downloads new or edited originals, so there "not seen" means "not downloaded": it sets MEDIA_KEEP_UNSEEN.
-  for (const id of KEEP_UNSEEN ? [] : Object.keys(manifest.items)) {
-    if (seen.has(id)) continue;
+  // Deleted in the editor always goes, even in the cloud job where the original was never downloaded.
+  const deleted = new Set(Object.entries(edits).filter(([, e]) => e.delete).map(([id]) => id));
+  for (const id of Object.keys(manifest.items)) {
+    if (!deleted.has(id) && (KEEP_UNSEEN || seen.has(id))) continue;
     delete manifest.items[id];
     const [trip, city, kind, base] = id.split("/");
     const d = path.join(OUT, trip, city, kind);
     if (fs.existsSync(d)) for (const f of fs.readdirSync(d)) if (f.startsWith(base + "-") || f.startsWith(base + ".")) fs.rmSync(path.join(d, f));
     fs.rmSync(editPreviewPath(id), { force: true });
+    fs.rmSync(path.join(EDIT_DIR, `${id}.mp4`), { force: true });
   }
 
   // Duplicates: fingerprint every item, then within each city keep the earliest of any near-identical

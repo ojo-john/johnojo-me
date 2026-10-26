@@ -15,4 +15,5 @@ mediaMeta:
   photos/img-0921: { caption: "Sunset over Marseille", alt: "Marseille's rooftops and the sea at sunset, seen from high on a hill" }
   photos/img-0943: { caption: "The seafood", alt: "A whole grilled fish with herbs and pickled onions" }
   photos/img-0948: { caption: "Stade Vélodrome", alt: "A statue outside the striped facade of the Stade Vélodrome" }
-  photos/img-0959: { hidden: true } # near-duplicate of img-0963
+photoEdits: |
+  photos/img-0959 hide  # near-duplicate of img-0963

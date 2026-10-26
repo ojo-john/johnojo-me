@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { videoDateFrom } from "../scripts/lib/video-date";
+import { videoDateFrom, videoDurationFrom } from "../scripts/lib/video-date";
 
 describe("videoDateFrom", () => {
   it("videoDateFrom_iphoneClip_prefersAppleLocalCaptureTimeOverExportTime", () => {
@@ -17,5 +17,15 @@ describe("videoDateFrom", () => {
 
   it("videoDateFrom_garbageDate_returnsNull", () => {
     expect(videoDateFrom("creation_time : not-a-date")).toBeNull();
+  });
+});
+
+describe("videoDurationFrom", () => {
+  it("videoDurationFrom_ffmpegLine_returnsSeconds", () => {
+    expect(videoDurationFrom("  Duration: 00:01:02.50, start: 0.000000, bitrate: 5000 kb/s")).toBe(62.5);
+  });
+
+  it("videoDurationFrom_noDurationLine_returnsNull", () => {
+    expect(videoDurationFrom("Stream #0:0: Video: h264")).toBeNull();
   });
 });

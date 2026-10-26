@@ -7,8 +7,9 @@ mediaMeta:
   photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7: { caption: "Family at the wedding", alt: "John and family in matching green traditional outfits" }
   photos/img-7243: { caption: "Ready for the traditional ceremony", alt: "John taking a mirror selfie in a green agbada" }
   photos/img-7250: { caption: "The traditional ceremony", alt: "John and a family member in green outfits in a garden" }
-  photos/img-7348: { hidden: true } # welcome sign shows the couple's names and date
   photos/img-7490: { caption: "The white wedding", alt: "John in a burgundy suit with mountains behind him" }
   photos/img-7494: { caption: "The white wedding", alt: "John standing in a burgundy suit by the garden" }
   photos/img-7512: { caption: "The reception", alt: "A server offering a tray of canapés to guests in the courtyard" }
   photos/img-7532: { caption: "A live painter at the reception", alt: "An artist painting the wedding scene on an easel" }
+photoEdits: |
+  photos/img-7348 hide  # welcome sign shows the couple's names and date
