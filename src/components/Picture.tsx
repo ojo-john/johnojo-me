@@ -36,7 +36,12 @@ export function Picture({
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
         decoding="async"
-        style={{ backgroundImage: `url(${photo.placeholder})`, backgroundSize: "cover" }}
+        // When a frame crops the photo, keep its subject (usually faces) in view instead of the middle.
+        style={{
+          backgroundImage: `url(${photo.placeholder})`,
+          backgroundSize: "cover",
+          ...(photo.focus ? { objectPosition: `${photo.focus.x}% ${photo.focus.y}%`, backgroundPosition: `${photo.focus.x}% ${photo.focus.y}%` } : {}),
+        }}
       />
     </picture>
   );

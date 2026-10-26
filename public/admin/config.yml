@@ -201,6 +201,7 @@ collections:
           - { name: alt, label: Description for screen readers, required: false, hint: "What's in the photo, for people who can't see it" }
           - { name: hidden, label: Hide this photo, widget: boolean, required: false, hint: "Turn on to keep it off the site without deleting it" }
           - { name: rotate, label: Rotate, widget: select, required: false, value_type: int, options: [{ label: "90° clockwise", value: 90 }, { label: "180° (upside down)", value: 180 }, { label: "90° anticlockwise", value: 270 }], hint: "For a sideways or upside-down photo. Takes effect the next time the photos are processed." }
+          - { name: focus, label: Keep in frame, widget: select, required: false, options: [{ label: Top, value: top }, { label: Upper middle, value: upper }, { label: Centre, value: centre }, { label: Lower middle, value: lower }, { label: Bottom, value: bottom }], hint: "When a cover or thumbnail crops this photo, which part to keep. Leave blank to let the site find the faces." }
       - name: youtube
         label: YouTube videos (unlisted is fine)
         widget: list

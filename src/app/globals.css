@@ -292,7 +292,11 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tcard { display: flex; flex-direction: column; text-decoration: none; transition: transform var(--t-quick) var(--spring), box-shadow 300ms; }
 .tcard:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 var(--travel); }
 .tcard .ph { aspect-ratio: 16 / 10; overflow: hidden; background: var(--travel); border-bottom: 2px solid var(--ink); display: grid; place-items: center; color: rgba(251, 250, 247, 0.6); font-family: var(--f-mono); font-size: 12px; }
-.tcard .ph picture, .tcard .ph img { width: 100%; height: 100%; object-fit: cover; }
+/* The photo is pinned to the frame: as a grid item its height:100% has nothing definite to resolve against,
+   so it would overflow and show only its top, ignoring the focus point. */
+.tcard .ph { position: relative; }
+.tcard .ph picture { position: absolute; inset: 0; }
+.tcard .ph img { width: 100%; height: 100%; object-fit: cover; }
 .tcard .bd { padding: 18px; display: flex; flex-direction: column; gap: 6px; }
 .tcard h3 { font-size: 30px; }
 .tcard p { color: var(--ink-2); font-size: 14.5px; }

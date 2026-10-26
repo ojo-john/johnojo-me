@@ -10,6 +10,7 @@ import {
   destination as destinationSchema,
   destinations as destinationsSchema,
   experience as experienceSchema,
+  FOCUS_Y,
   post as postSchema,
   project as projectSchema,
   site as siteSchema,
@@ -146,7 +147,9 @@ function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, pla
     const key = id.slice(prefix.length);
     const meta = v.mediaMeta[key] ?? v.mediaMeta[key.split("/").pop() ?? key];
     if (meta?.hidden) continue;
-    out.push({ ...entry, id, caption: meta?.caption ?? null, alt: meta?.alt ?? `${meta?.caption ?? "Photo"} in ${place.city}, ${trip.title}` });
+    // A manual "keep in frame" choice overrides the automatic focus point top-to-bottom.
+    const focus = meta?.focus && entry.type === "photo" ? { x: entry.focus?.x ?? 50, y: FOCUS_Y[meta.focus] } : entry.type === "photo" ? entry.focus : undefined;
+    out.push({ ...entry, ...(focus ? { focus } : {}), id, caption: meta?.caption ?? null, alt: meta?.alt ?? `${meta?.caption ?? "Photo"} in ${place.city}, ${trip.title}` });
   }
   return out;
 }

@@ -14,6 +14,10 @@ export const photoEntry = z.object({
   placeholder: z.string(),
   takenAt: z.string().nullable(),
   hash: z.string().optional(),
+  /** Where the subject sits (percent across, percent down), found by npm run media. Crops keep this in frame. */
+  focus: z.object({ x: z.number(), y: z.number() }).optional(),
+  /** How focus was found: from faces, or (no faces) from colour and detail. */
+  focusBy: z.enum(["faces", "attention"]).optional(),
   /** Set by npm run media when this picture is a near-identical copy of another one in the same city. */
   duplicateOf: z.string().optional(),
 });

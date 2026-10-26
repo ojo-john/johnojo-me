@@ -1,4 +1,13 @@
 trip: aruba-2026
 destination: aruba
 order: 1
-summary: "Back again. Honestly, I only go to Aruba to eat, sleep and pray."
+summary: "Honestly, I only go to Aruba to eat, sleep and pray. These photos are from my 2026 visit."
+cover: photos/img-0351
+mediaMeta:
+  photos/img-0351: { caption: "On the beach", alt: "John taking a selfie on a palm-lined beach" }
+  photos/img-0354: { hidden: true } # near-repeat of img-0351
+  photos/img-0358: { caption: "Dinner", alt: "A plated starter on a blue dish at a restaurant table" }
+  photos/img-0360: { caption: "Dinner", alt: "A plate of fish with rice and vegetables" }
+  photos/img-0361: { caption: "Oranjestad at night", alt: "A pastel Dutch-colonial building lit up at night" }
+  photos/img-0399: { caption: "Sunset", alt: "Two flamingo statues silhouetted against a pink sky" }
+  photos/img-0404: { caption: "The harbour", alt: "Boats moored in a harbour at dusk" }

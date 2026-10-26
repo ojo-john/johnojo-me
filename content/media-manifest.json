@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T00:10:49.490Z",
+ "generatedAt": "2026-10-26T00:33:21.980Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -39,7 +39,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAALfep+Y9Fw2AernLwA9dx4KcGLh/oHLNc5TeU+ss9am10HchkNj3o7Rrd6NFpoBn486WCknDCAJegDpYmiapw2ZO7O2yRe6/06Zwb+b4CvN/N7JPAlKoAAAA==",
    "takenAt": "2021-12-20T10:41:05",
-   "hash": "0e5333311339395b"
+   "hash": "0e5333311339395b",
+   "focus": {
+    "x": 52,
+    "y": 31
+   },
+   "focusBy": "faces"
   },
   "europe-2021/london/photos/img-2312": {
    "type": "photo",
@@ -79,7 +84,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAAAwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWoAuzNMQVClgA3cuq1cXz7tHc5dF5wa4AD+fpP1py3AMVR4Pb8g3i62q93eFw5cVcg4VbtpB85nfoj0KpxztmztOWrBYrOuV39AUCJBXOE4myt4jojYKfdT7Hdb3stDWHKDPUGRCoqCYawtqJGFMAr43EmQFk0mg/mwZcmrsw62I/QwTZwzHQ77A5Q6O+zpVZBdgWwpgLDa6JlUoPSFMy5+DTPbm0eqzo6LqtRgGyqywHS96ZoXUAAAAA==",
    "takenAt": "2021-12-20T11:12:11",
-   "hash": "d2a4b5d3d373c969"
+   "hash": "d2a4b5d3d373c969",
+   "focus": {
+    "x": 57,
+    "y": 30
+   },
+   "focusBy": "faces"
   },
   "europe-2021/london/photos/img-2317": {
    "type": "photo",
@@ -119,7 +129,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoMYJnAAc1JQBrjGbJFgAMkCD/zCmFMaM3LimLQqVSDLKtzUTtOPuaztiMr0wopdq7XZyzUFN6CfcReeUxVLTLQUzezkr5iwE9Q05P8wMJ1DFWjIJZxDF8Nffv8rVX38rVk4TjQ+9oxoAAAA",
    "takenAt": "2021-12-20T11:25:24",
-   "hash": "0b1edb9999f97939"
+   "hash": "0b1edb9999f97939",
+   "focus": {
+    "x": 51,
+    "y": 30
+   },
+   "focusBy": "faces"
   },
   "europe-2021/london/photos/img-2319": {
    "type": "photo",
@@ -159,7 +174,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoADTUO63lEKHJqILAD+ZXVDbAsFiqBhPN5aCLCo+HI0CNXVTwVh/Y4r8wvdQW0gU7pweXw1y98Z862a/2RBkTYQVVy7y+qSv0LLaRKIOAwPgHhJkJGzGpL15FQCrx6l9IAAAA==",
    "takenAt": "2021-12-20T11:25:42",
-   "hash": "311fcf17b2f031b3"
+   "hash": "311fcf17b2f031b3",
+   "focus": {
+    "x": 51,
+    "y": 47
+   },
+   "focusBy": "faces"
   },
   "europe-2021/london/photos/img-2339": {
    "type": "photo",
@@ -199,7 +219,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JbAC7AB57U3VQ+nkd0AD+5nuNhChlbijlBiuupIBrQR7IjaaKYZnAAqwaEeqB12JsFSbgVeHzmi7pbAI+rAv59x+mCd2OOiquPKuDvEVWvzPI/3KLeXJ/9+uXDoIyuTbVX0J4nvsLdcNvGdHt+Yvr8NAAAA==",
    "takenAt": "2021-12-20T11:33:04",
-   "hash": "5d130633f0923333"
+   "hash": "5d130633f0923333",
+   "focus": {
+    "x": 50,
+    "y": 32
+   },
+   "focusBy": "faces"
   },
   "europe-2021/paris/photos/img-1957": {
    "type": "photo",
@@ -239,7 +264,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAAAwBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWUAxkA0cCGx4oLVTzjNoIXWq+C9WNyLAAD+6DisOzSFn/s1vJiZSwOsOzDUbSld3CsVb2LigdPWywPVReumDt0phNFDLHplDZNhtRr8auMPa9eBQRqOzaEGsnwmonOmKD2b/Uub6TxVsyc55RaLcWVj+lThQH+BXO+BtZ7FhxAmucDx6vcxJ78kIwAAAAA=",
    "takenAt": "2021-12-17T09:48:36",
-   "hash": "0f0f4a4a416b6699"
+   "hash": "0f0f4a4a416b6699",
+   "focus": {
+    "x": 28,
+    "y": 34
+   },
+   "focusBy": "faces"
   },
   "europe-2021/paris/photos/img-1968": {
    "type": "photo",
@@ -279,7 +309,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoUABsAPu1qrVCppaQiqAqpMB2JZwDDcBEcsFcKiSiSxf5vflPE4fEAAP7ThIiNOD6N0Mh2UnlRJPvwA++Qq/m4l+8kXvlaVZlBgpbxYrOKf1wvcKyE0dTx58hyo2cM9HETEWgoXGc9EbpJMUTO2oR1FFRY8brXnBt1Wy3V2RLiF0gxN2880trC4qfRFlAA",
    "takenAt": "2021-12-17T09:54:38",
-   "hash": "1737337173b3105b"
+   "hash": "1737337173b3105b",
+   "focus": {
+    "x": 50,
+    "y": 54
+   },
+   "focusBy": "faces"
   },
   "europe-2021/paris/photos/img-1969": {
    "type": "photo",
@@ -320,6 +355,11 @@
    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAwBQCdASoUABsAPu1mq0+ppSOiMBgIATAdiWUAvdAQ8OmPD6GeY0rnWbjvCragY9nvgAD+04S7UQ4RDiE3Qz6MOUPrdGba/AD75CDqh7wrHhtv0J7E4gwkw/P1OuDKW0VwSr3Py7VIQMbBSvEXQocbb+27Zd3D91d87nJgGk6Z3GUZ/T1kJd5a1ZHDpnSn35m0cCeeZ5TT3FqMr5gYtDOtyykv5chPKHButeAA",
    "takenAt": "2021-12-17T09:54:40",
    "hash": "1337336173939059",
+   "focus": {
+    "x": 0,
+    "y": 72
+   },
+   "focusBy": "attention",
    "duplicateOf": "europe-2021/paris/photos/img-1968"
   },
   "europe-2021/paris/photos/img-2100": {
@@ -360,7 +400,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWgAtRCA8/8A2c7OJYmBqddnO+qk/G2AAPnjDzOXHHMBJ+LxbV2VoOgxGu1lOIoF4d4rg9fyS9dYVaOVe2/dDzy0fu5mcXfMn/Wqp3nwjrC3lVU56TXQB1pbo61BkD6WYWucV2C+/dzbtfEGvNcPauPxW9FLRHdHQ2xGXx1/hYiA/CIrROSH75MY7kM+kOEJAAAA",
    "takenAt": "2021-12-18T13:00:37",
-   "hash": "f0f8f03049103028"
+   "hash": "f0f8f03049103028",
+   "focus": {
+    "x": 37,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2021/paris/photos/img-2101": {
    "type": "photo",
@@ -401,6 +446,11 @@
    "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADQBACdASoUABsAPu1orlCppaQiqAqpMB2JagCxH2QBgEMFI8LoWKCVb7ldcfjLEAD56CWfi5pS+Wu5n8z7BcyltEDfA8/wvTsK6+erXdv8zdOcJ8XZko8X6Fa/0KxfYk74m1eLoOHUlggQte9vW99uxAOrP+D8Zc7xlMQEbCKoxikI4P6Zzt5GmhFJysNhggS6IvFmIuCyWQw9JSdd0a9OB/EV0pMymmkMLqAAAAA=",
    "takenAt": "2021-12-18T13:00:39",
    "hash": "f0d0f03049123820",
+   "focus": {
+    "x": 37,
+    "y": 44
+   },
+   "focusBy": "attention",
    "duplicateOf": "europe-2021/paris/photos/img-2100"
   },
   "europe-2022/london/photos/66888032119-1f187407-ef94-4b7f-aa89-5643c9ea9d32": {
@@ -441,7 +491,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAADQBQCdASoUABsAPu1kqk2ppaQiMAgBMB2JbACdMoM20+qa0YhMUEH64UfWw+SA5eHNo9dJqtAAAPqbqHEwJCng3PjJs8Lzrwhv9uiqJXW6veFyYOBMoG3ArVKh6UrTzU/Bsud3rrSlreyy/K7i3CxBSAKqbNn+xwjSevqWpU+6TC8XEPmaoQE1A2YGHyRTkCh+Q3QlukBJZhg3KaRSbg/iy/EHT3BSfpOzYy0iVRLZVJwc/QEj2SN9yNGOiwKNs+AULw+IPENVW6WBuHqbGN9h47Zm7Yjxaaqj/ycr5XJ7has08JvBP4b/x8nbdKKlv/0OL7aNcufZi2/a/9REQ+yaePU27xZTYHmn94cQAAA=",
    "takenAt": "2022-03-13T16:05:21",
-   "hash": "7363474959484955"
+   "hash": "7363474959484955",
+   "focus": {
+    "x": 57,
+    "y": 57
+   },
+   "focusBy": "faces"
   },
   "europe-2022/london/photos/img-0394": {
    "type": "photo",
@@ -481,7 +536,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAAAQBwCdASoUABsAPu1kqU2ppaQiMAgBMB2JbAC/ZwGUCN76ADxcvX/UtwzLJgqhR3KbP6ZHEX9goM5LWSmSzxR3MADQb71/ZSuhdfrnzdWwm+pMhnsH1WvHCVvU6EfwKm7smPgbPt4COMjzxlwR7EOtxnPWeB8GVNQnBDHEhJPpud13p+WAG072vbCXrMEsAJRe8ymwnxSoUfxnYr0tJZElfUxApWubpxk3bMvyK92nm8KhKLqkAc31bNjkeo58ka9IIm4h0NNKl9r9U7BpG/kA4U2ptE+e6hjRE1ZUYBpAD4tLNMAAAA==",
    "takenAt": "2022-03-13T15:56:44",
-   "hash": "4b26050c2a236671"
+   "hash": "4b26050c2a236671",
+   "focus": {
+    "x": 44,
+    "y": 57
+   },
+   "focusBy": "faces"
   },
   "europe-2022/london/photos/img-0398": {
    "type": "photo",
@@ -521,7 +581,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAACQBQCdASoUABsAPu1ur1IppiQiqAgBMB2JbACdEfqi2VDeTfJ2NNWcEdXPN0nVl3j2n7EswAD+vDA3pTw8qxBCTXxLRnkbtMhoBWOFJ7CQ5qQN10Syrd7zE7Vk+e+WfHs7UbOFtu+xK3EcupNbNp/TtgLvzNM4s8SY8tOX2ooloObRtrd6EYj3zgciyvSG/Rb/J+9CLTouhikgV64F37eIe2KfpFk3OrDCZgqK2Rwimc3pWpcWqzGxAWJ6xHJ9/RlJXI0jus1Kc5YUuiAOE0RLmbvkwd35/BmIHOknrqyxOiLDEdXz41NF/DJJp98xCRFAAA==",
    "takenAt": "2022-03-13T16:10:29",
-   "hash": "0c3c7251c4d45ccc"
+   "hash": "0c3c7251c4d45ccc",
+   "focus": {
+    "x": 63,
+    "y": 66
+   },
+   "focusBy": "attention"
   },
   "europe-2022/london/photos/img-0404": {
    "type": "photo",
@@ -555,7 +620,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAADwBQCdASoUACUAPu1oplAppaMiqqoBMB2JQBjirJwZYLeIjTahPB/5PJi4aaNBe9tY5FJogdFtQAD+WGgCopQ4o+4E7bge/un5ktTBdm6Qg4LwilnF1WrcVKnMu9ZxMewZBL3jK8jEf4/4BmGsgi0zcA5bK4DypMBbe5acoTsFX+cSlqYHmQoErG6g/Q68eqRtrhx4ZWM3SMzVZEUIC8755rGCE/eZOxkntE718YwK6Z9ZZH6jmgtaLUfdlsjAw+6QCRttGTI8BosjVMF9ZldaWjyg452yO817WLT6o19H693xKDEUJBTHFj40pQRZQQeH6x1rjzABsP1DMTZ2Dw0kVaD84G0UpeWTzvAAAAA=",
    "takenAt": "2022-03-13T18:58:41",
-   "hash": "e059cbcb6061e4c8"
+   "hash": "e059cbcb6061e4c8",
+   "focus": {
+    "x": 66,
+    "y": 51
+   },
+   "focusBy": "faces"
   },
   "europe-2022/porto/photos/0d960d93-b257-4933-ab17-22bd4b344df9": {
    "type": "photo",
@@ -589,7 +659,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBQCdASoUABkAPu1mqk2ppaQiMAgBMB2JYwCw7CHe+ephA5UhVmINktZ3BKkari8AAP7tO526ITtHykWl6sdKebtQQexc65Rui+kqNcaTxQ95nujOsIwLjyxlca+8Eh/CZ8kukFmmCgLEjuULa5SZPhMRb2a6mHXEL2HvStZ7+3ZLrHc+kPhY+vSnuwlbtpf0PzylfGAAAA==",
    "takenAt": "2022-03-18T01:19:18",
-   "hash": "13251a92d3e8e478"
+   "hash": "13251a92d3e8e478",
+   "focus": {
+    "x": 58,
+    "y": 34
+   },
+   "focusBy": "faces"
   },
   "europe-2022/porto/photos/img-0422": {
    "type": "photo",
@@ -629,7 +704,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAABwBQCdASoUABsAPu1ur1IppiQiqAgBMB2JYgCnGa0Azqgghwt6/kRitJLect15s7I7Eq2cAP7sG6h7q7RP+KLda+AHuA3rNOafRb+N06s1cvY7bGUr+iYK6gZV2IY8H6m1XuEw3R0S1B6VHzwj1syF1RW+V7eh3nNMzR4hu9Fw9PSQCc3y29NkBeFuNjkpxRdI0n0Kkm/iExtz9vEWE1a/BRumR7CduVFnJOgTGUV7OMrkyo32PZWrOYCBr17tdte8DBRJ4vO6MF0AAAA=",
    "takenAt": "2022-03-14T17:24:12",
-   "hash": "45037151dc5e9fb3"
+   "hash": "45037151dc5e9fb3",
+   "focus": {
+    "x": 100,
+    "y": 44
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/photos/img-0445": {
    "type": "photo",
@@ -669,7 +749,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoUABsAPu1grFAppSQisBgIATAdiWUAuwA0b94p8n4BqKuBb4suDV7y7nQeAAD+83e0N7603TK61WBQK/AXbyQqtGneTyItxZqHW5X8XmpWSMBZt+pi369OQLn0lLFXQyPXCJwxbzAHY9CWb2ybjQDPTsnQuupOUv7voAAA",
    "takenAt": "2022-03-15T15:40:46",
-   "hash": "072f4f49cd4deb9b"
+   "hash": "072f4f49cd4deb9b",
+   "focus": {
+    "x": 31,
+    "y": 39
+   },
+   "focusBy": "faces"
   },
   "europe-2022/porto/photos/img-0547": {
    "type": "photo",
@@ -709,7 +794,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABQBQCdASoUABsAPu1srVEppaQiqAqpMB2JQBOmaYg1Wyk/Tgb+8PjejTsLaKgA7UJbpkAA/rI6juRMK+7kTsfFlcnrgmv8fQv1uKTI/+omUAhZmWDEZiamFw0P4/zGDKUE8cS7vyAOkPoIguB/4zNstqNReBMea6EuDHJoZjv9MKbx1wOjFSxtnINwJNiRRumQjBoPNZZ8ly/DYChRYhUkPtuAYnoRetDzsXOw7Bf9hSycAAA=",
    "takenAt": "2022-03-16T11:02:10",
-   "hash": "46312383b833cdcb"
+   "hash": "46312383b833cdcb",
+   "focus": {
+    "x": 100,
+    "y": 56
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/photos/img-0554": {
    "type": "photo",
@@ -749,7 +839,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoUABsAPu1kq0+ppSOiMBgIATAdiWUAAI9ZlDl7VVxVA+QaGFu6sPbAAP7xyfJRFjp3WJsR5Dt6VHwwq4SXI0f9IctX72yd6PsAF41TjJMUgV5Uxrt6wub3MtXKuACPL4bZnIn10kvrpkY7ZtmRmyr9k+E2GPFQAAA=",
    "takenAt": "2022-03-16T11:07:22",
-   "hash": "0f0f1b26276e6767"
+   "hash": "0f0f1b26276e6767",
+   "focus": {
+    "x": 100,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/photos/img-1142": {
    "type": "photo",
@@ -783,7 +878,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAADQBQCdASoUACUAPu1wr1KppiQipWmZMB2JZQDGQBurhFw0BOFy1vxLX/6oTvrqXK2Ld0znf7mYAMsqWQ+m7MRguFhieY1SKZSRZUbv3fwyoUteuag+kPncGgWfwspurURmk/rm9oU0KUtj8smXIxneSf/SUxmPTyMZA6m4VcVZaBkA5wtfcM9Uc2ZFgzWoG2X3iAUGvknJvKdBJv35PD8j06LWeH4ugXZYR0o6eW9szwsr5VQMKXiq6EIKEH1dJuAAAA==",
    "takenAt": "2026-10-24T21:06:31",
-   "hash": "1e1f669ec1e1f9cb"
+   "hash": "1e1f669ec1e1f9cb",
+   "focus": {
+    "x": 50,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/photos/img-1143": {
    "type": "photo",
@@ -817,7 +917,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAAAQBgCdASoUACUAPu1mr1KppKQiqrgIATAdiWUAwCggA4k757mIUfFj9BW0lZ3y7LRn2OYJPTJ33kAA/u0auK+IPq8eSUom7M/MSJQZcdiMNKK/Muv7h3mjF+UxcZG5ISEwRKecI1qaQGofmGVhLFi223Wj27LcCrqZN+hcTg+GUEO7CANL4A9rEc6uKsasWUvLHFk6DpvpML8ZbxGpEz8ix9JWI+0mK7LVs9YgAjkhNRIhuemcYz70OPZ3QCOizRLVZJqTeYNAzbtukvLk7RNG1FKfnjGslLujzstPlfWehbEiYAdoEtGdnKVzacAA",
    "takenAt": "2026-10-24T21:06:32",
-   "hash": "0e0e9e75d6ad7cdc"
+   "hash": "0e0e9e75d6ad7cdc",
+   "focus": {
+    "x": 50,
+    "y": 32
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/photos/img-1144": {
    "type": "photo",
@@ -851,7 +956,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADQBQCdASoUACUAPu1oqk6ppiOiKqwBMB2JYwC7B3vN0AMFhVW1lsNdfMjK8xpaptFeEGyhBOEQAPliDMwF2yFPI+LJOgdC0WkBnyGtrbacsLHg1+kP0yzBh5gy6gzse0TcpKC10wyl2jSUW/tDRF1awBGUvGMHoHH08Qan1rX7fr3Var06779W8K7jOvsrWClGPD61zaIr1ws2SlP8Za0xHk3p+TOxiNOe+GEtaMb7mQhIfpTOmadY9cr9nmSx+jj1fgs0e0n7cgQtUDbP0KhMcL7WiQOEqsHD7ODwAAA=",
    "takenAt": "2026-10-24T21:06:32",
-   "hash": "64844bd1dc0e97c4"
+   "hash": "64844bd1dc0e97c4",
+   "focus": {
+    "x": 50,
+    "y": 55
+   },
+   "focusBy": "attention"
   },
   "europe-2022/porto/videos/86b63226-aa47-44e7-9841-61700f8b5a14": {
    "type": "video",
@@ -921,7 +1031,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACQBQCdASoUABsAPu1oq08ppiOiMBgIATAdiWYAgjtJw08CqdF04Knc1EzZp+JU4SZDChrUAADLQtxjTBTuvDsJf7BQTr0XYvrv7tluKcrPsFUL4iLO4xcdWC0uR+8/96BRsMDHlESofz4+TirjL8ARuYRC0D6uz+Uc/d3NajBeYTZJO7+o3osvWK1hQo5mWyXkRiPR4mkl/nOfiPr0OoIrUhcWdbiEB7pm5jkxU9Azee9sJ11onqFz/7zHLNh5u/z+65XBpVQFcDtgqt8nO0sm3mwAAA==",
    "takenAt": "2023-05-28T15:26:01",
-   "hash": "6117b5b1f06ce4e4"
+   "hash": "6117b5b1f06ce4e4",
+   "focus": {
+    "x": 51,
+    "y": 46
+   },
+   "focusBy": "faces"
   },
   "europe-2023/porto/photos/img-0207": {
    "type": "photo",
@@ -961,7 +1076,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAwCdASoUAAkAPu1iqU2ppaOiMAgBMB2JZwAAUXoNZ1SurAqFwADh1LkXnO19oORgzq5mcvydTUkObbccHHW6DPJMqegzM7OYGANUU02wa8FwxEAAAA==",
    "takenAt": "2023-05-28T15:37:53",
-   "hash": "305c17706d370f1f"
+   "hash": "305c17706d370f1f",
+   "focus": {
+    "x": 25,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2023/porto/photos/img-0210": {
    "type": "photo",
@@ -995,7 +1115,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhABAABXRUJQVlA4IAQBAACQBgCdASoUACQAPu1srVIppaQipWsxMB2JZADDZ1j8CJQBOU52AMS62vG4s10p2n/9Hpaxz6j84pbTdsgAAP7nYpBfwnLqk7O8oWIPZyx2kvfTdR6aayQ5lfaWFeYPlYCIrbnSXLXYUNEmxOlcNFzsWGcemiVLYQw1UngZcL7eWz24pow0YuRJkiTSjkitxvNKs1k2fYi+mGlLBTpYJopX0tE8qArHf32itzEp4wVqg6ApBweYeXKuLQ8FZ7FRQyLh6lp3fPAHo78KbcgdEaIXpvSbWQRCiXEe2AWNQerOel5SPhc0RLk7NX4IS8Yxo5hokY5h+gEM2iHZ9ALjgAEAIAAAAA==",
    "takenAt": "2023-05-28T21:46:49",
-   "hash": "f7518688d4b4ea9f"
+   "hash": "f7518688d4b4ea9f",
+   "focus": {
+    "x": 59,
+    "y": 60
+   },
+   "focusBy": "faces"
   },
   "europe-2024/amsterdam/photos/dd3cf986-6a23-47fe-908e-41848efad7e2": {
    "type": "photo",
@@ -1029,7 +1154,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACwBQCdASoUACQAPu1apk2ppKMiNVgIATAdiWMAxNgUOUlBWjOwx5kDKOhPNGlo9q43NU83/VQA/udAe661n1Zz1kyN4U8h53zPhdOpq1dZctqL6XBqPyh2lRzG3PzuHCOusGi9adrOQBx2t4mhGf4Por0LCfFAHQ+iy1abVGDcEqzze1MUHa0vWrt9meHGbi8HPy3OKpPf2DamUxM4+3m1TbJus2ldWuFlEwVHpTGfBvJfppR7fTbRtigQlnNg6iO7AdRoAAA=",
    "takenAt": "2024-04-14T18:28:10",
-   "hash": "c9f7f253efcb5c1f"
+   "hash": "c9f7f253efcb5c1f",
+   "focus": {
+    "x": 0,
+    "y": 23
+   },
+   "focusBy": "attention"
   },
   "europe-2024/amsterdam/photos/img-0643": {
    "type": "photo",
@@ -1069,7 +1199,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBQCdASoUABsAPu1mpk2ppaMiMBgMATAdiUAXYDuADww6hp7GDP4EllESWSjLpb9NAAD+xXEte5l+LrXBb4tfP1tTe+M9t1p9B+RDNX6JWywAUOmXe/xDZhvLabsGIphHAMPYYLKwoghPeeBHA0jAbs1E/bZw+JAy+RJHoi358v7o96RfQwOKPJC4MxR3OerOeheNmdFqNfvEhTQaquenDVjU1InWQkUEHZG+0xZ4V8YW+nxvbp4fiT/TCqZNspY4B4d9rswHSMVhXY0NAAAA",
    "takenAt": "2024-04-14T16:14:59",
-   "hash": "f5deec8e9ad2352d"
+   "hash": "f5deec8e9ad2352d",
+   "focus": {
+    "x": 55,
+    "y": 51
+   },
+   "focusBy": "faces"
   },
   "europe-2024/amsterdam/photos/img-0645": {
    "type": "photo",
@@ -1109,7 +1244,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAABQBQCdASoUABsAPu1kqk+ppSOiMBgIATAdiUAXYAZa3b9FIKDc21AJpnkQP7E+KLXryAAA/rGNXr43xUMVFns0IJKvk2LHe65DSZYEA/v1htjO5/h10uqZEX/kmqD+B8C/z95Be22GMfDSD0f1arczLYgJifvqrXISxRo3npzP7EOoI2sBxkAjTwDNIpkTVFXkBUcG/VhlEyGWli0eaP3O73vHvPxNN7uU4IOPeHZPaWCE+WmJkoj2EW94pSSalOz+W88tF2VcYLN+F3a9u8EmxfXHAAAA",
    "takenAt": "2024-04-14T16:15:00",
-   "hash": "63bcfc0c0da4644b"
+   "hash": "63bcfc0c0da4644b",
+   "focus": {
+    "x": 46,
+    "y": 53
+   },
+   "focusBy": "faces"
   },
   "europe-2024/amsterdam/photos/img-0653": {
    "type": "photo",
@@ -1149,7 +1289,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAADwBQCdASoUABsAPu1kqk+ppSOiMBgIATAdiWQAsR7Q5c4KX/Pcg535FZvtVZ7TSwmL8v6UthlkoAD+24J/xNBAY9CCEVC8VOXj0ZU5pk3YCjb4JJ3e5rH4xYj1EX8AVmu7AUkUL1KmbR6TqsB8kza/880Ob8PVYr8/80OQIIBBaCgdMIJuf3iAv1SgcKliCKcxxEKL/UE4H2aTcnlnTxP2wnfYfO0T12/v68GHCqK27c2TE2WFcd/X2abaCvCXlyDxhBzpjPuznmHE5fsZ0jijcUJNXomT+dQRu+M0VpMdZg3JNfZCg0gA",
    "takenAt": "2024-04-14T17:39:01",
-   "hash": "84df21c94be8e4c8"
+   "hash": "84df21c94be8e4c8",
+   "focus": {
+    "x": 51,
+    "y": 61
+   },
+   "focusBy": "faces"
   },
   "europe-2024/amsterdam/photos/img-0673": {
    "type": "photo",
@@ -1189,7 +1334,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBQCdASoUABsAPu1eqE6ppKOiMBgMATAdiWYAnSDaCf4BHUXvmMM5DdU64kElutcozeAA+9omVWBpe5UfN60uMw6IJ3+rQao9ABD9lMitCIFuihBKS4bTfhQDxzTaIFfWaFoTlcjjBESwh4dbTKh5N/I8D4Cxp9MUfFrEr+kIAxghDQq5bG6sZvgT626W9BWbcVYyEN6cwFXstvjirLqUHs2Zua0gAAA=",
    "takenAt": "2024-04-14T18:02:30",
-   "hash": "0a2a2c4ca408d33b"
+   "hash": "0a2a2c4ca408d33b",
+   "focus": {
+    "x": 37,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2024/amsterdam/photos/img-0674": {
    "type": "photo",
@@ -1229,7 +1379,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBQCdASoUABsAPu1kqE2ppaOiMAgBMB2JZgC1CHG7g5/8B3wRhtJJRQ/03TRBu4xpqoAA3mG/kHceWors4vZ8aKh/bFWmQSJRqC2U8GmAbg23vmpiA0B6AHLJs8u46ilySnqdmE8qx/Z9Kb/Ggd2xdpciDc3xredwLQBPhnWOzHjEF7HbccP+O0sxL9uRleHFPZG6/qjRXXgstguHIsbdN8uis8u1xVwldQ2Jfr2aQYIdpQAAAA==",
    "takenAt": "2024-04-14T18:03:24",
-   "hash": "0d80ef1f19495090"
+   "hash": "0d80ef1f19495090",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2024/amsterdam/photos/img-0710": {
    "type": "photo",
@@ -1269,7 +1424,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASoUABsAPu1mrE+ppSQiMBgIATAdiWUAxkQIAfn7bRek3pIIWFZV8hLqkzjc9QVZkQAA/u0ShPvu5HEdq9Go2NiiX+vu7z/Ig2MFukjkmw6eWZS1IXdp7QgJ8U8bjed7mlKPIICQTJ+4TEf5MSJU+B4d3CIQpCoIfmz7YNwAt3ZTUowhmEukZRKvm9gS1hXGB3k2VggaoevbadLq3bfnvkQf3dq9fLIwZDOYbYWcKKBVeUFm2jDsBmue+gAAAA==",
    "takenAt": "2024-04-14T18:52:01",
-   "hash": "a2809433211d2931"
+   "hash": "a2809433211d2931",
+   "focus": {
+    "x": 12,
+    "y": 34
+   },
+   "focusBy": "attention"
   },
   "europe-2024/amsterdam/videos/img-0667": {
    "type": "video",
@@ -1339,7 +1499,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoUABsAPu1kqE2ppaOiMAgBMB2JZwDDNAvQFaUCbAht8VXXQ6ezX7SAAP7XSmhBdmscGEhse+5iQhQh4Co/uPizZGNA6tSefOnAGjEGvLyHh1JnmfQaitch36lopRqmjpPVpM4VDsB2X89gqjq2mkvqu/rbcUKwP2pu3nh9ou8/m4LgQlgIYPLdfjMOBWFqUgAAAA==",
    "takenAt": "2024-04-09T14:44:26",
-   "hash": "de8e2d2d3cf4bc1c"
+   "hash": "de8e2d2d3cf4bc1c",
+   "focus": {
+    "x": 100,
+    "y": 17
+   },
+   "focusBy": "attention"
   },
   "europe-2024/bruges/photos/img-0531": {
    "type": "photo",
@@ -1379,7 +1544,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADQBQCdASoUABsAPu1irFAppSQisBgIATAdiWwAnQHdwGaNfnB++3b9qN8CoVTblVuv7UIX3VMgAP6anR/iWWvpDIa6YcZy8vFew5veNcm0Ew5kAKQ44LQ2EjVLRECswwz0dwU4ve1TZFOlfL915Rskl9ptAFBu56CLSjNxvOARyzYcwhJ+xyqTCBr9++dPSWwEuYwcYl/JRTen2DzmnRHG6zMJQUMQzzcrJoaOVx2U1b/iMP5+LJBTvjYTVZ53RDCmsIZw5s5BlCAYu5BTaC/eLhlsAA==",
    "takenAt": "2024-04-09T16:18:21",
-   "hash": "3fbed3c369697339"
+   "hash": "3fbed3c369697339",
+   "focus": {
+    "x": 74,
+    "y": 12
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0544": {
    "type": "photo",
@@ -1419,7 +1589,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABQBQCdASoUABsAPu1iqE2ppaOiMAgBMB2JYgCdMtpC4oKllX1aHsUZRGvxz6tMJDL/4AAA/svrrvQEqyBXtXHQDy8TKY/1jAEHyYNC9ibcByPrl6kV94r+3Pn2kDzOwhCyT+CNMQNAnrOtiQAzYS3blVJ5L1Ef4yi26nyFMyoMF0ynOJsOOXp8ocT2Um5wDF0Q2ndCZFqOTh1AZt/4mjEmlUIxhVS8vW9THvIDXySH5anV5us0pmDgJex1bLAKM6iyyswNQlAAAA==",
    "takenAt": "2024-04-10T13:45:49",
-   "hash": "0092b071e7d61231"
+   "hash": "0092b071e7d61231",
+   "focus": {
+    "x": 56,
+    "y": 77
+   },
+   "focusBy": "faces"
   },
   "europe-2024/brussels/photos/img-0548": {
    "type": "photo",
@@ -1459,7 +1634,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JZwDE3a9AnocDlL9k+2qCDFn9TTb1wt0D5DqdIADOIviPVcukRgZHkZyCKyJrJEizSY1OTcwhf0fAHCdwaMOtSy2Xn6qro7hZ+xR5Z4EROPMjHQdWbUH6htp9Q+R2+5lX/Ho0V1UXH2l1I02RT9pIiPbGI1TWfUnkxv/XcpJFja587XSC7TRrUDOVNgUOiAA=",
    "takenAt": "2024-04-10T13:51:33",
-   "hash": "73c99bc3e3c3e3e1"
+   "hash": "73c99bc3e3c3e3e1",
+   "focus": {
+    "x": 12,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0563": {
    "type": "photo",
@@ -1499,7 +1679,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAADQBACdASoUABsAPu1sq1EppaOiqAqpMB2JQBmDhgXoXfK37v90TSxjw8nu8415kAD+C5HIOQLodIGk9SP2A1b3ogI6dFLQsChzDGVWKQ2rHEV0q0Wyc0ic48L0qtmOVKizl8lWTS5UVymW+RqKKZg7Rxw7hYiB8Eal8zmLymS2E+cJmJx6k6kjuLxCy9+ilFXw6QhpiRKvYYIvuTdZzrmSIexDy+XD5J3MXnXXSqAAAA==",
    "takenAt": "2024-04-10T15:21:01",
-   "hash": "c0c0e0f1c8cceb14"
+   "hash": "c0c0e0f1c8cceb14",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0570": {
    "type": "photo",
@@ -1539,7 +1724,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwBACdASoUABsAPu1epk2ppKMiMAgBMB2JQBadA7HGTPTB23+3vSEj7q88OE+1mDgA+MY5YAqLo3E3GugBHe+EA9tgqLYpNlhJnC0OtOxpfqOrSIQX8iToWm6IojAVmo6TaAgMcPG+bo/fGKEr9MBYawp4UqTzbH4wYOyCcDoCmtgn9emdSC55DLYcFYxggiGEY5zap0qzOWzWYmSNVkAA",
    "takenAt": "2024-04-10T15:29:46",
-   "hash": "73757373b4b03331"
+   "hash": "73757373b4b03331",
+   "focus": {
+    "x": 45,
+    "y": 27
+   },
+   "focusBy": "faces"
   },
   "europe-2024/brussels/photos/img-0571": {
    "type": "photo",
@@ -1579,7 +1769,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoUABsAPu1mqk+ppaOiMBgIATAdiWoAnSioDLnlJZtmVTv+XZGbrrjdtB262acSNXgA/nUpN7eMFfGw8jWh558kMXX6n/hLiuXWSIHEM3l133delmlbGkXJLo8GN6kjLh9z/Ox+EYwSQozO1jMH8vuacQV7smXjCPRfUym1e5jFk3nnizTBN2Zqw7hpHOH/AMlrbvlxgIzhhOM7hffSKayo2iCTGNByJEzwZJthbGuyd8rcu6oX2ojM2rSQmAAA",
    "takenAt": "2024-04-10T15:30:33",
-   "hash": "071f90282660a1d1"
+   "hash": "071f90282660a1d1",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0587": {
    "type": "photo",
@@ -1619,7 +1814,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAABwBQCdASoUABsAPu1qrFEppaQiqAqpMB2JQBlpmQQYYWOCs8U4iW0iI562/wVq1s6IqY+QAP6EBAkXXg/c/yXjlv9B+8DSo8otSKYsMg+lRmfdNl3SmTIof455llRcB+H9te2phzpohZMePMtTT8roZYL7JZuSW41VBrlUrFEcEwzZ/CFq4xA3R+TvzsrlZnjAE6HN/3D+F2dESdZoJDbKHPaJPM2VVvFpgcQiSW1JC0NhKNC4uM1al5yYaFA0xmCteKsUcqAeQO9/gxWIe6Ju6YFJv94YkhMbEBFBCDeqCmx4AAA=",
    "takenAt": "2024-04-10T16:49:07",
-   "hash": "19c95ca4b4646424"
+   "hash": "19c95ca4b4646424",
+   "focus": {
+    "x": 0,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0589": {
    "type": "photo",
@@ -1659,7 +1859,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACwBQCdASoUABsAPu1qrlCppaQiqAqpMB2JYgCCdK/4tm0nM2tavQYyR39Mox+JsLtL7NiSBgAA9z5ho+zXSKk5b91gu6CiX3Vts5Sws20pb1a96VQ19BOwDbWy6UwM2GI3pLpTvuu1Zu9hYMk9MUabIwadNfudcGouKOlWfm3sOshXiAayXcBxQEyv5+7bLjZ6NbClMV6ofcZyzJJdPKo9LbHCaF6p5K7YFX4L+zrhAp8FmGlkNJIapVV0wjKI8wBssNCa9s7E8Djm1HwAAA==",
    "takenAt": "2024-04-10T16:49:11",
-   "hash": "7850d8ea73672434"
+   "hash": "7850d8ea73672434",
+   "focus": {
+    "x": 53,
+    "y": 49
+   },
+   "focusBy": "faces"
   },
   "europe-2024/brussels/photos/img-0592": {
    "type": "photo",
@@ -1699,7 +1904,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAADQBQCdASoUABsAPu1qrFEppaQiqAqpMB2JQBjPsZ8KLkHT1YoBEto0E3FBWuSbYAf4PSRU5TQAAP25idLhzPtwNgeRsFxN+YjqqMdFIzysBx+zI25gcUzT6is2bdCWRl2bQ9uNadMBrYQ4yFK9aMyXtboPRRfKrWdFuywp7DFG7PL59Xfm2r1S0FPj23nT3f0SYD4px6WlIQgctQ2VV2tPTysrPD8mIJmVWy/Xjd13zpfRBtKVmN9bWyEHvOVmDqdnTewt5HuURZl7142+OOCYNcgc8KLnDOCnVuRGuEC0MrO3bRAAAA==",
    "takenAt": "2024-04-10T16:49:29",
-   "hash": "c938594978307444"
+   "hash": "c938594978307444",
+   "focus": {
+    "x": 54,
+    "y": 51
+   },
+   "focusBy": "faces"
   },
   "europe-2024/brussels/photos/img-0599": {
    "type": "photo",
@@ -1739,7 +1949,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBQCdASoUABsAPu1eq02ppKQiMBgMATAdiWoAp0OOgtDVsru5QIg98KKEK8SRXj1/+Ycv4AD+69I7o9y6mgeoVfTsSZ2FdliZFoLt1fi5+nVN+98c3r07F664wUN27jYGSmtBP2TCIfvf+M5kwgf14sDzV9EAE9EBBm9RefZAwLBE73JYmIxsbQu0jxvs2QhA2YHbaUmHT693E2gG4t1n7B0LJImPAAA=",
    "takenAt": "2024-04-10T17:12:49",
-   "hash": "4080606c85ce4b0b"
+   "hash": "4080606c85ce4b0b",
+   "focus": {
+    "x": 63,
+    "y": 88
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0601": {
    "type": "photo",
@@ -1779,7 +1994,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAAAwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiUAYnwTHEsFz2zo6Ep80z1yVsvf4UhYAAAD8YMpZqsHNA0RvUgDSyfN8n4bds0EU6+qt9imeNn0g2fLo7rpybScA6Cj8LqPRguBFHpYiBtgB5/I/suQPPsVx71gdrUzdPIGXWVQSrPf3HfLWmncSjI1MzP+Y7ynB4ayGAvlNMyWpAuz18JBer7T8iE6w2qO1CsrUuxU0hukcRrKeJB+auwC68XM8KgfjfZZzc+rDiDewisvA1VqN2iV3AAAA",
    "takenAt": "2024-04-10T17:17:00",
-   "hash": "c2d09c363a123b0d"
+   "hash": "c2d09c363a123b0d",
+   "focus": {
+    "x": 63,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/photos/img-0605": {
    "type": "photo",
@@ -1819,7 +2039,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdABm/PJ976HjHTyuIAO/o+ALp0pLp/0rARPa+t8r/PmP2NcQpzj1X5/8r6IRUmeO5PzftxgIhmojVSeFKud/ZkLR9YdljLcdnzrgbK6+x/KeFQ3Bun2TW9DJVPsDUQisCgAA=",
    "takenAt": "2024-04-10T17:31:30",
-   "hash": "a428e48418001a99"
+   "hash": "a428e48418001a99",
+   "focus": {
+    "x": 46,
+    "y": 8
+   },
+   "focusBy": "faces"
   },
   "europe-2024/brussels/photos/img-0607": {
    "type": "photo",
@@ -1859,7 +2084,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAADQBQCdASoUABsAPu1ur1IppiQiqAgBMB2JYgC7My/lxgnLsn8H+xxnk80cYFg//PnW7MjPQ3ioAPxnpDAglHJ+6PGD9UuIcEsV5i7TwNbsc8VEUl8nObxKAOK6uSGFqRNJA7RtFIZr5obV00a9YmWja+Gi+KE6aVss64CUX9Esg2v5L3dtdu95CAorC79NN9U5LpXgwwIieOES1mEFfZuxqaNIoox+3MVXoIqX5VmQsPzybXx/gmtICIm4wdpP5LFGtGCNWNwC+N9gwv8KQAMQAAA=",
    "takenAt": "2024-04-10T17:36:32",
-   "hash": "39b359672f8d383d"
+   "hash": "39b359672f8d383d",
+   "focus": {
+    "x": 12,
+    "y": 39
+   },
+   "focusBy": "attention"
   },
   "europe-2024/brussels/videos/img-0547": {
    "type": "video",
@@ -1959,7 +2189,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAACQBQCdASoUABsAPu1grFAppKQisBgIATAdiUAXYIEAFTMpC9ruLaWM0Y9+WKrZFDvP8n5AAADpiV0Dyva3NPALguyoK18eB6xEnVYcLd1cxYiLdK5BZOlM484YkvqWeu/MusXeiTNHKJBXQH5l5hmsFODsGPhVFIgqC5L19WlFcc+SYBjx/8uTKbdp3NwI9T5gxXgJXIRtbfQNJ0W+bdBKuuyewIHJhj8rlKOa4g55nCCG/0x5t6qr/LRRcJBd3aVjUu8aMW4BIAAA",
    "takenAt": "2024-04-21T16:47:08",
-   "hash": "e37313c2b8998c6a"
+   "hash": "e37313c2b8998c6a",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2024/dortmund/photos/img-1129": {
    "type": "photo",
@@ -1999,7 +2234,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAABwBgCdASoUABsAPu1kq0+ppSOiMBgIATAdiWwAqRSUHAG4BpAmiAspiYdL+dmfuW3BnY4nX2nqhFjCGAAA/U26jQ3EybsfNzLNrq0cENwfmyk/7JSyCttZhW2BdqJ7Ard9togHBb5z3UoGrmYuhx3NNrER/WF00b2mZzfPT3HqtsPiuq39GVLh2IrUuCT2cgAmH4oFkMA+f50g6tygm5rfYJnSM8fp5I+4dZh00+jF9XZ3VlNGw+DSvr/ANHSs5k77ikSrXsyvOPIcfnxisQBJtL4J4/izEV61hgavaMzd+FHZstyTf6uuJg0SUmOJdv+gVVRQ6ycQPSI1Zn8J+W0ielaV9+XMJBWvwAAA",
    "takenAt": "2024-04-21T18:23:31",
-   "hash": "c7c7875864349b9b"
+   "hash": "c7c7875864349b9b",
+   "focus": {
+    "x": 54,
+    "y": 41
+   },
+   "focusBy": "faces"
   },
   "europe-2024/dortmund/photos/img-1131": {
    "type": "photo",
@@ -2039,7 +2279,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoUABsAPu1cqE2ppKOiN/VYATAdiWoAwoA+coybOZqvlEQ3ukaAAPcfeVz+mvSY6mtutJaIwDCDvL96f/cf2R/ezqFlf14OhPBvLkYHxf0OAfwu1tfkBbzg7+bVJK50xt7B0npzUTKGVVsfonaIHmsGMx1W6aVqAulBqBdorTv9t9rVHD3gAA==",
    "takenAt": "2024-04-21T18:46:28",
-   "hash": "1270e0e8b019e7c1"
+   "hash": "1270e0e8b019e7c1",
+   "focus": {
+    "x": 51,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/dortmund/videos/img-1113": {
    "type": "video",
@@ -2123,7 +2368,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABQBQCdASoUACQAPu1wsVKppiSipWmZMB2JZwDHMB6pVITRDzCIKf/Aue7OZlZUQVeP/wgA/eaEyG483ErjKdkTd0DyUqeajj40KLbDiLES3zVE4fwPakH4YkpisInc4lz1Xrr2gh9LMsyAhF94G9QOWGSNyO65H9n/xkv9IOq1Gq9WvqjDcSwG8qkYncIUSAS+/EudW7uIBq+7iJVWHzU+cQajKkiHoGrkbYOs0LWBQnX3GOuLrP+ZjP3VRwgAAAA=",
    "takenAt": "2024-04-09T10:29:42",
-   "hash": "f4cff37373d19943"
+   "hash": "f4cff37373d19943",
+   "focus": {
+    "x": 0,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2024/ghent/photos/img-0506": {
    "type": "photo",
@@ -2163,7 +2413,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABwBQCdASoUABsAPu1iq1AppSOisBgIATAdiUAYmwFv8F5ZIiTcZC3+x4K8YJZKescRvZk0AP4XcjbnpNil8vwJU2pvRRTpebJ0ID6LU1kCilmZmpZjT+e5AsifiNLOjKuoufKHxhwmdBOaB1cA5HPiPFYhxUZpyxBZTasg9ulxtHmMZwnUrfVDndHIuFZzmnQfimx+tdFBoC7am1jruOakZbNOhWbSZfBtx6vEzbOxyFzGAKbV+9LclZWzcowv4+Rtzha2AAA=",
    "takenAt": "2024-04-09T10:22:02",
-   "hash": "9c4989cf454c4c70"
+   "hash": "9c4989cf454c4c70",
+   "focus": {
+    "x": 25,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2024/ghent/photos/img-0508": {
    "type": "photo",
@@ -2203,7 +2458,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACwBQCdASoUABsAPu1oq08ppiOiMBgIATAdiUAVhnHozMFaEOU+FXYLfOzXiY6r6QrKkdQoeeAA/si99TxVL4MDgly6LZxyhuMp71MZPwpbqJhX2sg4iWLxROcYNeJbP3yDevoO9ZH9rVXvXf/j5YfbTAuw+skaiypKdNaRE1RVUsGNZkBX63XESKSTGc92Zm0dmoK2CIe/0efy/ghPrnxMjWUw55QRNNsWwVIrA5SzvKyOBXayAAAA",
    "takenAt": "2024-04-09T10:22:52",
-   "hash": "64ec4e79ec96a647"
+   "hash": "64ec4e79ec96a647",
+   "focus": {
+    "x": 0,
+    "y": 83
+   },
+   "focusBy": "attention"
   },
   "europe-2024/ghent/photos/img-0512": {
    "type": "photo",
@@ -2243,7 +2503,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASoUABsAPu1wsFIppiSiqAgBMB2JZwDO7BGO66dh4BCrYg19xFt2blG+Umb7AAD2vYbcMzDgNQ0HyIMNzCEoNtGjLmPirc/JBQsSmnutY2LyVZ4tF4TiJqODedSwVjlqcsjKHvQTgTPyFRiQuF+hgPP0mO6BZ3aFeTGj3h/3lM428RQriwcUTFe2KM+S3J4DLoYWpVTZsJrt9B6bFFGcOBxkvgAAAA==",
    "takenAt": "2024-04-09T10:28:50",
-   "hash": "1c0d673133d21623"
+   "hash": "1c0d673133d21623",
+   "focus": {
+    "x": 100,
+    "y": 23
+   },
+   "focusBy": "attention"
   },
   "europe-2024/ghent/photos/img-0519": {
    "type": "photo",
@@ -2283,7 +2548,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADwBQCdASoUABsAPu1krVAppSQisBgIATAdiWUAv+2M5GAlhYkMiIQIFuvDP5C58YgGROMFoF9AAAD2fUtPHULWI7GQ4Ej1lfrtpTGvDWWZqWObl7Dj6fKdqeC7FhIgwPtpZABuAjpPdEvwU6aLMw1Ad2YRhHiNSjVOzH61icHjN7gffHNX33t0xfzTknDaYBTCS6QNbSUJ2JHUqHSRFW071L7WyzIH/ecClp2bQf6w/YHwIfeA80NwiNaxcRN/qoq0KdbQ7CrV97m9p3mIi6NdwdX/OCeO2wAAAA==",
    "takenAt": "2024-04-09T10:34:20",
-   "hash": "616173b3b3097151"
+   "hash": "616173b3b3097151",
+   "focus": {
+    "x": 100,
+    "y": 12
+   },
+   "focusBy": "attention"
   },
   "europe-2024/london/photos/img-0729": {
    "type": "photo",
@@ -2323,7 +2593,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoUABsAPu1sqlEppaOiqAqpMB2JbACsM2iA8QvBTIkA/zOQh/fKSZfo4ioJTgFUAAD8U7H1TusLf51F7nEcDSAu+pEnqt8XRC93HerkOrm7dYSbI9k5WC7uXS6teoFXbN32FlzbTFL3ckmGQ/u/p1wz+JSQW0/2AjejtuO7Agn4JJJ4pfSEbAOd4cZ7E6cAzOVHgpn9HlA2VBK848W27QjkExN6t+sL4CtR7prPLkMJclnojCScQpS8vplwWuXLR9+zL7pAAAA=",
    "takenAt": "2024-04-15T19:33:13",
-   "hash": "80517cd8d99d5d12"
+   "hash": "80517cd8d99d5d12",
+   "focus": {
+    "x": 100,
+    "y": 39
+   },
+   "focusBy": "attention"
   },
   "europe-2024/london/photos/img-0746": {
    "type": "photo",
@@ -2363,7 +2638,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwBQCdASoUABsAPu1gqk2ppSQiMBgMATAdiWIAqScvwXweLNGdpIx9oj0wq2IsZXZVAAD6EFUhV1FVHtygrYbWPojRXl+IerO4Rs8LF78WeJUyd4W0qF3jEzFbrUTxnLMk5M7gA9kjTe+6NlVCQhieQ2D90+BxYR0uFr6B8AA=",
    "takenAt": "2024-04-15T19:59:39",
-   "hash": "f026cddb61e03e07"
+   "hash": "f026cddb61e03e07",
+   "focus": {
+    "x": 12,
+    "y": 39
+   },
+   "focusBy": "attention"
   },
   "europe-2024/london/photos/img-0757": {
    "type": "photo",
@@ -2403,7 +2683,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBQCdASoUABsAPu1qqlEppaOiqAqpMB2JbACzhbLAyJdXjnGOjX/OTZ3FUmzSxdNCoAD+5YgIXN1rSU3WHHAiFOvYS1G9OlXLh+JygHSlms27UGIjfefJcByvBcNWSqNX2iu6XOxTBjoAfzMGLIRnFFPS81TNTGnLmUL3D3+PI+AAEBYBtB/uqyEXjMA+BhYBW/OR6rla51gkwphgZ09AxmA23rFZ/Eu/PumeiAAAAA==",
    "takenAt": "2024-04-15T21:20:13",
-   "hash": "002081020c106020"
+   "hash": "002081020c106020",
+   "focus": {
+    "x": 0,
+    "y": 93
+   },
+   "focusBy": "attention"
   },
   "europe-2024/london/photos/img-0780": {
    "type": "photo",
@@ -2443,7 +2728,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAABwBQCdASoUABsAPu1kqk2ppaQiMAgBMB2JbAC7AYzk1TxiBoadxXtU6dmnbJZw8oq67CyAAP7pG36344zH0zXp3zDvBFesoWHCMzqMTrZc+gnFrAG/07xNaBSOPBGu4Fjhkzk3kYL0lUjghPT2ehWpq2fnUiCd3V9/PyP6pvq1JhyFTkzZ/0ztEAbaI0QuiV9wd4UjhdRljekwcMX4Tiy3NsGtAajkDeTehHGVd9t0erHK2j/lPfzHqvc8rXEbq3nrQAlmCOkPfTgrXz1gdRDQvYkaLpFQhrm3dae10o1wXs4HTB1VPrF9l4bgAA==",
    "takenAt": "2024-04-15T21:59:24",
-   "hash": "9c15f3b2f26b1b32"
+   "hash": "9c15f3b2f26b1b32",
+   "focus": {
+    "x": 47,
+    "y": 23
+   },
+   "focusBy": "faces"
   },
   "europe-2024/london/photos/img-0820": {
    "type": "photo",
@@ -2483,7 +2773,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADQBQCdASoUABsAPu1irFAppSQisBgIATAdiWoAwQvBhgAqU8xdG50xHovWm+upQxNq+jm68Q9AAP5A8KWkl7UvcgiSWBMO+AJ/BsPjQnhPHujG3ir8tlS+nCMlZt+0teCo6kZSxjnMnx7OoBKZWOB8fDf8DlLecEFa7sWrzPsL/njb2SLak6puX1VX4k4xoCSk8e0bL/QeVi7QXqA0lOgcBWf5EhnRKgNi4TC0Jq8e/T5x0E0rejjoIBsudBzZL6mn3uzNqNJT+xboWeRWA3mqKB2jYMmFrZLqGdXH3AA=",
    "takenAt": "2024-04-15T22:15:17",
-   "hash": "7171632b7273b3f3"
+   "hash": "7171632b7273b3f3",
+   "focus": {
+    "x": 40,
+    "y": 22
+   },
+   "focusBy": "faces"
   },
   "europe-2024/london/videos/img-0762": {
    "type": "video",
@@ -2584,7 +2879,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JagCdMoAC+4z9ltakC0KEvLgA/nkTQI/FjtEE5XJ5JD4uu7E4XcshcoXWPBnChLWiQLGklTPLZjpgMmFGAQT9FKKvh0BoJzboAN0YI+ebE3ER2R1O2kR1xNZyF9iSv9OIvao6ovPwMgwCr04uVIYyAAA=",
    "takenAt": "2024-04-17T19:52:07",
-   "hash": "e63c1f06071f2bca"
+   "hash": "e63c1f06071f2bca",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-0993": {
    "type": "photo",
@@ -2625,6 +2925,11 @@
    "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JaACdAB6R8Wv588bDvnAA/nkKXwQz4QwSoxltlEJYAAB9wIa6lN+/uVE99byHDp+60RSPibg7DLlUVhSE2xTOmzsDsc5t0AIlHg3v05Ms80VVPbSI6pLnF4XtjaQyzHlly9J9IxWAnagIQffab1noAAA=",
    "takenAt": "2024-04-17T19:52:07",
    "hash": "e63c1f06570f2bca",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention",
    "duplicateOf": "europe-2024/munich/photos/img-0992"
   },
   "europe-2024/munich/photos/img-1001": {
@@ -2665,7 +2970,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoUABsAPu1iqE2ppaOiMAgBMB2JbACdMoMzVWhz/4Dpu32uOF1yUaMHWDb+HIT493AA/c63Du315kIpuCGcj2oDldbrMOF1rKd+W5GQ+ZnW5YIvGPoafzRFG/ovPQk8YZYbTpFYgaJ43WKFRpD8r0Abt2YXvfOf59Knq/BgbNWNiXC0o1VolbR5u0T1cQ85+2ObD3zqgNKaz6+4hJRr+RDwG5s8fJjfrqjW5bzoQhWGpLB79BQEhaJ7I93ww0HVT0fk0FW/bjC78JT7LDsPDFztlAA=",
    "takenAt": "2024-04-17T19:56:11",
-   "hash": "1d49391b4bc44d2f"
+   "hash": "1d49391b4bc44d2f",
+   "focus": {
+    "x": 33,
+    "y": 54
+   },
+   "focusBy": "faces"
   },
   "europe-2024/munich/photos/img-1006": {
    "type": "photo",
@@ -2705,7 +3015,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoUABsAPu1gp02ppSOiMAgBMB2JZgCdMoNBln/AeNlo1OFekmRDWTo+aTJ4AP7w1oYsCboWmHUSLcpAJp58YP5EZViYDPJIULF7asIcmq6C0K/IHaV8M3FOs07EBkSfrc0XcAoxIUNf5nSzzv4vZmqm1V+sEKZfDmDaRHAe7egCeDX5GGTnBPI8lh1TZ7w3c99zUmNbI/Xa5gXqbAAAAA==",
    "takenAt": "2024-04-17T20:26:07",
-   "hash": "e0d0d0e17199aa69"
+   "hash": "e0d0d0e17199aa69",
+   "focus": {
+    "x": 100,
+    "y": 7
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-1020": {
    "type": "photo",
@@ -2745,7 +3060,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoUAAsAPu1iqU2ppaQiMAgBMB2JbACdAB3/AMzIU5mgOAD2mAXBDHXlQ9U9E3axym0Dozxo0lqnsRB9L9a+HbimkWKhNx4Htnumegx7rQaOBollwFrhNJ1BvbmrnXmAnLtF3LLQbrot3YOwAAA=",
    "takenAt": "2024-04-17T20:58:29",
-   "hash": "d949716363676dd1"
+   "hash": "d949716363676dd1",
+   "focus": {
+    "x": 0,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-1024": {
    "type": "photo",
@@ -2785,7 +3105,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAAsAPu1iqU2ppaOiMAgBMB2JbAC06BSYDp13fpzUSAAA+V2pV/N75mSpk5LQbkAMoDAY0b2dZIta9Fw5bQnB5rtgtUcpY4ROXksbD+BdN2f4fGUD8a6YiHSSUBYLsn3Un7Y8ihZHpXO0MvGAAA==",
    "takenAt": "2024-04-17T20:58:35",
-   "hash": "4970e9f1c9676759"
+   "hash": "4970e9f1c9676759",
+   "focus": {
+    "x": 0,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-1026": {
    "type": "photo",
@@ -2825,7 +3150,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASoUABsAPu1qrFEppaQiqAqpMB2JYgC96vVt/8AsrMC4MAMEyXLPnBQbDUvAYAD4Wm9n3xrwTSp2rn9GAeZkJ6Jq/F6ggtz0qA8ONrFgDxxGokRNV/VHeqcOH79Do9Cl7u77vEl3CqoErAOxWGU2pMreMJFZbfUtgCahNrlyU8iz1Rh+EbcTLscYZffgAAAA",
    "takenAt": "2024-04-17T21:00:06",
-   "hash": "e2e1e5cef82b6d4c"
+   "hash": "e2e1e5cef82b6d4c",
+   "focus": {
+    "x": 100,
+    "y": 1
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-1061": {
    "type": "photo",
@@ -2865,7 +3195,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWUAvzgy17fdnmwC2EFUj7IMdKsc6o/QAAD876EStqP3S8hWkHJqausrt5xUfKqnalPMQNEZI6YkK+oQW1X7fnQfFuuQBV8twxnwFtGZnC/RbWnx/LD2mfVBqwGYx1XVEuX98TLoGz9W3FnfvVIizpxn9mZpSjG5WVclvLGrJN0hnE0fh2S5QAA=",
    "takenAt": "2024-04-18T17:31:14",
-   "hash": "4c01109292c026c7"
+   "hash": "4c01109292c026c7",
+   "focus": {
+    "x": 51,
+    "y": 34
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/photos/img-1066": {
    "type": "photo",
@@ -2905,7 +3240,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACwBQCdASoUABsAPu1qsVAppiUiqAqpMB2JZQC2yDHao18I0+dOwDls3NzqerKNxjikID5qC2AA/u2elQPjU8ZSIXKpHJtpg+KcjjG0cJbB/m+8LSLIgqnCBzjAMgkmDSSFpTum60ffK+ZNE/28ajfb7YySoQV8U7eE4LKBS1J3N+yUSyqp0C386rwTLDEGTZGpxdN/UMD0KBnzG2BbmEOb6t/yjxaWoJcGzgEUFC/+101M9KvcEp/IFAs7svsYd41VBnED5CrXlg7Fq8AAAA==",
    "takenAt": "2024-04-18T17:31:41",
-   "hash": "6fee66e6d863d292"
+   "hash": "6fee66e6d863d292",
+   "focus": {
+    "x": 41,
+    "y": 88
+   },
+   "focusBy": "faces"
   },
   "europe-2024/munich/photos/img-1068": {
    "type": "photo",
@@ -2945,7 +3285,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASoUABsAPu1oqU+ppiOiKA1RMB2JQBbe+BKxe5P2P7CRglVxZt+mmxGGA9y38AD+6nwzZqxKPd7xRGjpjmQX52p9cb4PJADDEbD9tXa1/7qqLOSxbzj3LTwsL4Z+MefmtFtAYpyzSi/A/W82J2/tNcbHJwE5VQlhPChmXU1emoQIn3IVJf/72SoM2yuF7FU8vE6GmiCUrTNe+jFlB7izJ8PVE+wAAA==",
    "takenAt": "2024-04-18T17:37:57",
-   "hash": "9bdb9a3513d3fd3c"
+   "hash": "9bdb9a3513d3fd3c",
+   "focus": {
+    "x": 100,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2024/munich/videos/img-1010": {
    "type": "video",
@@ -3010,7 +3355,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAAAwBgCdASoUACQAPu1yrlMppqOipWmZMB2JYwDDrd0K8btLj4Nw4rPzZRAMzdvs1Fd//aB1QrbRjnIAAP0cK5zk413UmyKj8Pwbv8EAm6QbSbXzX8rG5YEDPyOd4TICG8GgP2X1Afewu2XO1eA/m6uCxLBe5OG1L3Cz3vBxHlGvZGcSdp65jxnV0zFPCiNlneGCyBMumw/izfsvGO+9lf9neVL/JgRVLStOBADwHFjaOSRttYBPg4R6sEQYXnpcDKxXTbLbhEqLVoZ8LNyi9o6AIM9YAA==",
    "takenAt": "2024-04-03T19:57:48",
-   "hash": "00944a49330cd131"
+   "hash": "00944a49330cd131",
+   "focus": {
+    "x": 0,
+    "y": 45
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0116": {
    "type": "photo",
@@ -3044,7 +3394,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoUABQAPu1krE4ppaSiKA1RMB2JYwDDNdwAeeLYXn3XL6SQM9tCBcPFqN05j4AA/owx4jvxcOeMOMRE9NWDcWGnOYcOOq7n08hlLde4BB62l1ZNDAFbEKlrBxGt6ROU9IF61ImBeVgDdRTaKabK2XLf7liNHjWZPQtwKDuC9UJBtvXULfLDiLacgK20sWbsGNRdlCgAAAA=",
    "takenAt": "2024-04-03T11:52:59",
-   "hash": "380ecd8ca8f0f34a"
+   "hash": "380ecd8ca8f0f34a",
+   "focus": {
+    "x": 7,
+    "y": 14
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0159": {
    "type": "photo",
@@ -3084,7 +3439,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPu1krE4ppaSiKA1RMB2JbACsAEXWkK5O9YdxZ4HuzN6Xo7XIphdJAAD+nQVR95OGwBlN4J1YWHIi0i5bd3+dvxB8QKsBw5yUI/Ff3X9JFt7kL+5plxXJcv01TCWshtVSwDXr0nwQfN5s9ckTby1HLRDHYN6eAP7AcC4aLdQlddYQxr+A9i2WbzQo3Kg8wggPDJS3xAMRbZVk+21Lchde1yawW9cm2/98gAA=",
    "takenAt": "2024-04-04T10:25:50",
-   "hash": "a0808461d8ee6634"
+   "hash": "a0808461d8ee6634",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0162": {
    "type": "photo",
@@ -3124,7 +3484,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACQBQCdASoUABsAPu1kq1AppSOisBgIATAdiWwAnTMy+gNJFI6jsUjjwOQucdSanC/237hF4ADKgN+z5m4s+eD8ibFZ2R6z33Y9ABdjTBMbX2NYM/UNZXBs3RtbKtJvK5gGPCyZ6Vxh78BwB06ixqMYdu4Y23se5B4zwsy/mgFzTnNe2nJGWj+7JG6qnV6iOhQUoFDQBRqRDLZ7E7K6hnVj7Eh49PJ2r+HQ1SJBgj7fSs5hPaUE2YQF5G7fN/UPlChm1Yy87dx/wowV5KlJkyzBOojPQU8cOJfwFIo2HsgWn8YF29L/xqBt8Qrw5jLKL2+j/aukDt6posAA",
    "takenAt": "2024-04-04T10:29:31",
-   "hash": "33f9f91c3031e5d2"
+   "hash": "33f9f91c3031e5d2",
+   "focus": {
+    "x": 38,
+    "y": 69
+   },
+   "focusBy": "faces"
   },
   "europe-2024/nice-french-riviera/photos/img-0179": {
    "type": "photo",
@@ -3164,7 +3529,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdH8AB80h4TUlwVKLAAP3e2RnJ3QskTE7mo/np25InJ0KMtEGrYK7FjxrJCxPumSEizOnXpO+ZajhZuSosCC7fpxu+bcORMwSGAhMZ41BhhNGgb3EghL/gWBiaoulv1gAA",
    "takenAt": "2024-04-04T10:44:21",
-   "hash": "f2e6e77d89998484"
+   "hash": "f2e6e77d89998484",
+   "focus": {
+    "x": 21,
+    "y": 66
+   },
+   "focusBy": "faces"
   },
   "europe-2024/nice-french-riviera/photos/img-0195": {
    "type": "photo",
@@ -3204,7 +3574,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoUABsAPu1iq0+ppSOiMBgIATAdiUAVhl0QnwklREOQpcmdNzIZ3XUNOx3NjQjAAAD+fgPPzbV9RqX73VD4cooX4vNrpgGFabrrhfSm0lJwTMZImIIh64Qf9et6iNt8u9NsT/ELinT2RpyjLWdr/npy9WtuO7unC1T+Z8y3KBbBIDqNRl3l4ccGCgV6xGP3ac2m6DhGTmBc3z8fPxMn/jM9/LGAUlsbllgAAA==",
    "takenAt": "2024-04-04T11:38:42",
-   "hash": "b2f2620d809d0bcb"
+   "hash": "b2f2620d809d0bcb",
+   "focus": {
+    "x": 38,
+    "y": 99
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0223": {
    "type": "photo",
@@ -3244,7 +3619,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JYwC7IOZBo6HPphYw7QhYqjY/kwAA34FJ3JL59Vi92dzW+XGleXEmnEtiRf7ZO+iyqwN5zWJKrALlggo/hyvqH28Ezk6isuNIGFxZMuuelBPlGNO9Bk3c7lUO/8062lAO1/jeA8zYsc2waByFqYIiETvKzFm3ykV2mfFMgZOVBF0YtOvKFM4DTrwnk1SqL5JyAAAA",
    "takenAt": "2024-04-04T12:13:16",
-   "hash": "9ed83137dd6caa9e"
+   "hash": "9ed83137dd6caa9e",
+   "focus": {
+    "x": 0,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0232": {
    "type": "photo",
@@ -3284,7 +3664,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAABQBQCdASoUABsAPu1ip02ppaOiMAgBMB2JYgCdM1XC/wJfp1efswr++O1x0hZbL6D5nQAA/q8e8V1UQsRTJk6jAi4glspUDD0t27qDfQaIM/W9N6h2de02yO9P5iuNZSUOatzpKW25x4CN9clo/QveZXinGcpn7NPq814GuR2RZflBKH4ecRBAYO+gy6JA6S1I42SbFjocPDuXXQ9ZLMAtqo9cccHeb6suA73OnQlto46blzMtPMNvYECAAA==",
    "takenAt": "2024-04-04T12:14:54",
-   "hash": "e10668997919b979"
+   "hash": "e10668997919b979",
+   "focus": {
+    "x": 57,
+    "y": 41
+   },
+   "focusBy": "faces"
   },
   "europe-2024/nice-french-riviera/photos/img-0246": {
    "type": "photo",
@@ -3324,7 +3709,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoUABsAPu1srFEppaQiqAqpMB2JQBZwAgvgSsHt7zU2ueB2TG4B5XvpXWH20srgAPwhCNP+amEf7Mza8GP3MVr+9IfFPoTlWtMuHwuwfkOZpL1e9/46Ht5lSLSY1d5ugNR8op23gctkLWJDBmt5/CdKjoykT2porSIO8ZseSRN6yQ35q11jYyIba+WlN5RJQ4pug0fQktd/Z5iVrYcV2d5tDAA=",
    "takenAt": "2024-04-04T13:04:54",
-   "hash": "39330d7fc59d1f17"
+   "hash": "39330d7fc59d1f17",
+   "focus": {
+    "x": 100,
+    "y": 66
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0251": {
    "type": "photo",
@@ -3364,7 +3754,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAACwBQCdASoUABsAPu1qrVEppaQiqAqpMB2JYgCxHtP6A0nIpX8rdt/t7DRaHf+VScUmlBeCeAAA/oKqKWAwn/fFRCbUxJK7ruF3F/AlEpCXwqkhhg5qa+Yq5kqQWFK3MjT9S9uf6r908R7gDXFgl0icoEWCcgTvoJMXSsdtuAjPIw6EpVLwjn8MagBYsDUrbnHsXnW3NwTVCApFb9YHLdK9aR7kBvWbNVa8KwS7Xy6nze50JWIfsKdDeHSeSU6XMtBTjcW0JYSouP38xRFtxhrq7npwgAAA",
    "takenAt": "2024-04-04T13:05:31",
-   "hash": "004848b8a8c2e470"
+   "hash": "004848b8a8c2e470",
+   "focus": {
+    "x": 13,
+    "y": 31
+   },
+   "focusBy": "faces"
   },
   "europe-2024/nice-french-riviera/photos/img-0272": {
    "type": "photo",
@@ -3404,7 +3799,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoUABsAPu1kqU2ppaOiMAgBMB2JZQC7ABK1CEyFljvOA6RTrU/YjmpmAAD+PZk1fYuNgpnRrcFNTURUm0/cIGxewsSCsgqBDl8x9OR9vFw0Jr/ZuJm2W2J2X6NPNWgCuMUJmQvefTyYXZYO+fjKhVO7LvE7W66DQu6EIBV/tEmrDI0ljnJSV0qNvJcbm49wZ3I6lM9B/Bl+D2mqWIACkAAA",
    "takenAt": "2024-04-04T17:04:48",
-   "hash": "0f0f1f0f13b63f3e"
+   "hash": "0f0f1f0f13b63f3e",
+   "focus": {
+    "x": 12,
+    "y": 88
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0273": {
    "type": "photo",
@@ -3444,7 +3844,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoUABsAPu1mrE+ppaQiMBgIATAdiWQAtRev7P8C7r8oX3+yhyWkhbDm5y8VVcwAAP7LVB5koV8TaIKcnBe4+xFCZAdq1vI2ZRXb8wQ/jzqNmrAfUD1vaXLP+DWiQIZ20iXrYeSHMVIljLcObVL5zKUAurTqvxSYg7AgC01Ab7S0FoVV1suUunLBt3PVzjU7ZvtUUKvhYnXW+n7jNBbPLtg59eenupo01FQE5Qhom3YPGnWqfEgLwAAA",
    "takenAt": "2024-04-04T18:11:32",
-   "hash": "f0f8d02d7e276322"
+   "hash": "f0f8d02d7e276322",
+   "focus": {
+    "x": 75,
+    "y": 72
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0308": {
    "type": "photo",
@@ -3484,7 +3889,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAAAwBgCdASoUABsAPu1mqk2ppaQiMAgBMB2JYgC/TQA57ouwRhYv6vOquqL0c97ciw8jMfXeizJnbrQAAP7yqVkEJsJ0/rCRB6aT8v395dCb7niQMg0J27WL6oa4AnN4jxS2loOvI6thFhu3xgTlBxJSNSHGMk7CsOkXwsx5kZ2UtwCS3++AGs8ws4vkwinU9cncWVk0Zgzt0cqkZn39LqtgXnVIVXS3hRF+s1kToJ8GlbAG70F04CwJgqyejCRSPlDVdioMCnu1U7DGCF+BGOgz36qLELtzYvqbJp6uffa0YMC/vryhb2sxfUf4pCn++p5DmOQuA3FwAA==",
    "takenAt": "2024-04-05T12:42:01",
-   "hash": "1894f77b63ed891f"
+   "hash": "1894f77b63ed891f",
+   "focus": {
+    "x": 0,
+    "y": 34
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0312": {
    "type": "photo",
@@ -3524,7 +3934,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdMoAlvRY5lZJQDZHfkrAA/qwViQzPcXzH2yufYt1VaJJV8z6FfeKqhvaCw+yh0EP/JkVQEffSMLDZqIb9YK1LdKrVxw3NwfMC2KODPEhnCQRm6qR/t+8S5XsNd5btP6mA5EHUnP8mEUr4AGTLNDmBduApLtBo6rc0kmAAAA==",
    "takenAt": "2024-04-05T13:21:57",
-   "hash": "272b66a6a34725b1"
+   "hash": "272b66a6a34725b1",
+   "focus": {
+    "x": 29,
+    "y": 31
+   },
+   "focusBy": "faces"
   },
   "europe-2024/nice-french-riviera/photos/img-0326": {
    "type": "photo",
@@ -3558,7 +3973,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQBACdASoUABQAPu1srFEppaQiqAqpMB2JYwDE2BEYAxsFM8tbXXmuNy8L9MAA/sODDNYBHCaezcA4jqh5b6DU4RCdD+xs0Fp0/ytcQkRRhG0XKDOzNVwycN1g+1A1A4Afw4KsjHT0Sj1hv26a2jzLV9JkPbEwAAAAAA==",
    "takenAt": "2024-04-05T12:51:14",
-   "hash": "000000848d91985c"
+   "hash": "000000848d91985c",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2024/nice-french-riviera/photos/img-0335": {
    "type": "photo",
@@ -3586,7 +4006,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JagCw/f/gNBG/6WO0hsIWTQAA/HeCgFGR2wf5jxJ1q7+uiq03FMHTCnOclXSv1hK0Cmg3y3akFGMoF3xF5aPYTAw8vgb47CRp9Ct36Oy18PdXgrdLJFUysBUG1GVQNDP1AwCD7n2u8J+g3GRAgAESQMsUFJXjEar2X8/UayCOetFxJAA=",
    "takenAt": "2024-04-06T13:38:57",
-   "hash": "3bb9bc3d3d686e7c"
+   "hash": "3bb9bc3d3d686e7c",
+   "focus": {
+    "x": 50,
+    "y": 37
+   },
+   "focusBy": "faces"
   },
   "europe-2024/paris/photos/img-0347": {
    "type": "photo",
@@ -3626,7 +4051,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdMoMulEi3b7gqaqkRvuFRsBAA/ngSIYpY/qybxj4XFbNfqjjGW5vnziK34wbYJRtPF5LK96o24ZLqkrzkLkvPJF5t0Lhub9EIax8yGcZxCW6tZbPYNPf/e8lc81NJvLyCBsvwNsBl0IRALPquoLA4qVhPOAA=",
    "takenAt": "2024-04-06T20:46:49",
-   "hash": "408c9b163e4666a3"
+   "hash": "408c9b163e4666a3",
+   "focus": {
+    "x": 79,
+    "y": 63
+   },
+   "focusBy": "faces"
   },
   "europe-2024/paris/photos/img-0384": {
    "type": "photo",
@@ -3666,7 +4096,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABQBQCdASoUABsAPu1irVAppSQisBgIATAdiWQAzNA0VcaOb/bZVe3erD5aVfCl++1YmAAA/vd30lzss1kBpwnItlKRdW1QmyfAXTTDpunJRwHSvO19JUKqrqfXm7vyPC/PtrZFdNU5Vshg/QLHcTqXBehU4NwoizyShgjn7rk7GdspraWM16wMwCV/mWWhIgCVkX0cukA6Yh6LMxHQzGELg6GHzN833/eftgnB9clC4yV3GB3sLZ1v+XJi2IXHFSNC19CEasWq4AAA",
    "takenAt": "2024-04-06T21:54:58",
-   "hash": "3319793b1bfdb8d2"
+   "hash": "3319793b1bfdb8d2",
+   "focus": {
+    "x": 54,
+    "y": 54
+   },
+   "focusBy": "faces"
   },
   "europe-2024/paris/photos/img-0398": {
    "type": "photo",
@@ -3706,7 +4141,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAQBQCdASoUABsAPu1osFAppaSiqAqpMB2JZADKtDMvY+bE8fSVyQ7OH8dj6a7aWPwAAP5+XXlRGrjs/u5jpwc9CijiPjHz8Q9VfCipr9bMxjCI58P+TH/tjafiegU6xjUCANCpzifvNzVEuWy2zKvdkJSSnNZwVm47StuPqnJS/9+z4MjiKOtUIxGrqQfK0q/87QRqZfYe9cWc1eCBq+tIhroK2VBwWwX21IiQGRdw+5Kn/f0KgAAA",
    "takenAt": "2024-04-06T21:56:16",
-   "hash": "f9fcfc5933f3fedc"
+   "hash": "f9fcfc5933f3fedc",
+   "focus": {
+    "x": 51,
+    "y": 57
+   },
+   "focusBy": "faces"
   },
   "europe-2024/paris/photos/img-0420": {
    "type": "photo",
@@ -3746,7 +4186,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAAJMPnzwoxV8pAA/nj3dkm2OmvlajxxUBTPOjclp9cEwM4u+PfZ3XyFUDueVTk0uWzkVLa7B42iMUCkSu4BUGwVaQt10MU88asQkavsfNmOso3L1cKHwTlz9i6y2qfcAk5DeizHlLMSUKQ7BiRd7mKgAAAA",
    "takenAt": "2024-04-06T22:03:26",
-   "hash": "fe3c14f4f33678f9"
+   "hash": "fe3c14f4f33678f9",
+   "focus": {
+    "x": 47,
+    "y": 40
+   },
+   "focusBy": "faces"
   },
   "europe-2024/paris/photos/img-0474": {
    "type": "photo",
@@ -3786,7 +4231,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBACdASoUABsAPu1kqU2ppaOiMAgBMB2JbDuAG9JHDGoO0kg4qhSMGh9lgAD+xkf/+r/rVaTKVvil250mmsj09acIqH3e/NGo0P7o+rNKpGmN1ih6eeQ6GENwYr2K+Gmty5rss5F5mpMIcQF9fn/HdE0UaX5vJchgvssd7x1LQqlTYFqzrob6C2VT0jHZGvn+yU76+3G/OHjMc9UaE7kLS6+AAA==",
    "takenAt": "2024-04-06T22:34:56",
-   "hash": "7d2920a94949275d"
+   "hash": "7d2920a94949275d",
+   "focus": {
+    "x": 63,
+    "y": 23
+   },
+   "focusBy": "attention"
   },
   "europe-2024/paris/videos/img-0349": {
    "type": "video",
@@ -3946,7 +4396,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAACwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWMAt7suu6aDsyU0Z3MJKEZN78kLufYeVgcDrTAA/oNOpHklbJe/uPTO1G6XdCqtLHLG+P3bw65Od/11ZkMLkd/VCiIcHdRJpOFX9CgCQFsHk0KMzU5XBY+iWO1sQHxeql0tD1xbEv4d/BKLN4ImvXxgQ+s2JE8DLFn1vjZ4qgJgsafyxM3nE9F1rtzBUdHQEsBD0g8yz6DdHzIkV42r7yX2RXEHl4DER7VowZezPeMuKLkRvMQwAAA=",
    "takenAt": "2026-10-17T14:06:51",
-   "hash": "0c31d42916968041"
+   "hash": "0c31d42916968041",
+   "focus": {
+    "x": 51,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0537": {
    "type": "photo",
@@ -3986,7 +4441,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBACdASoUABsAPu1qrFEppaQiqAqpMB2JZACnFAo3UXJRG0SNo8QuAAD+6ZCIYDMwp4ZZ3e4aE58XaqyWDYoA9b8pR7Sg7VzX6P8eF4G/O7H569ls9cQAiu+Gg/cjxKrCDH5RnAVbwHeqES1tLuyShwwAtFVJ4zkiKJTZ/pyDQa5hGuAF4vhGQh0m726dNVFucHvpIhJV9EWQWsJ/fP1XGF+gCYBqcyewTW4mjfLi1ud0zzcoAA==",
    "takenAt": "2026-10-17T14:17:35",
-   "hash": "8b0ec03137c9e8f6"
+   "hash": "8b0ec03137c9e8f6",
+   "focus": {
+    "x": 100,
+    "y": 34
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0543": {
    "type": "photo",
@@ -4026,7 +4486,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAwBQCdASoUABsAPu1ur1IppiQiqAgBMB2JZACxDPAJ/l3IGRcdPf9xgVvO/eu7vnp/gAD+6QRvaYW66B4VB4eyRjXDmuifYIAHwWLvJphRBk7gfiCJk1lfDjynI72giNlO4ThIE8EkDt643YSnonAxidSVaGGzxufa6FV484yQvfg1hitW/bkuclHZh2XReO9mukC2yBXbv9oTxF1/lauxco01RcqyPou/tqDiLOgM3D9t7TKAAA==",
    "takenAt": "2026-10-17T14:22:37",
-   "hash": "384006b474372068"
+   "hash": "384006b474372068",
+   "focus": {
+    "x": 100,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0565": {
    "type": "photo",
@@ -4066,7 +4531,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAADwBACdASoUABsAPu1qrVEppaQiqAqpMB2JbACdADHWJj/ycZd+QOEK6F+H/mqCPq4A/lRmdTEhqjhlTxgK/zl/PbPpf34R5nwu4oiI/DZQFD5Mx8IVssgt74QE9eTKGZnFkUxCeqIqPr0m/jL2Fc9sD4eKNdu2Sy60+jeKnJFW2uI5R72w8cV3nvdVbFbe4PDtzre0WQ/dyqfcEO0DAwVdRHshEgcJtwFDNdK7IWWnBwv60gR1KUMEQ2Z8QUQFHDhEH6TNP0oK0o2MYTKZBTq4cAA=",
    "takenAt": "2026-10-17T15:58:04",
-   "hash": "00004088a4a1b1a7"
+   "hash": "00004088a4a1b1a7",
+   "focus": {
+    "x": 53,
+    "y": 73
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0571": {
    "type": "photo",
@@ -4106,7 +4576,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAACwBQCdASoUABsAPu1sqlEppaOiqAqpMB2JYwCw83gAO4mpU47i0ulXanADTrRYmpXNK6ivgAAA/uq6sMfYRADR3WKSuD7znU1JV82c3d4R1j02ce+B4SlIiGNGgrg2+uKkxKDg7Woc1UMA4vLGp+pG9yPNzigPRco9nOFiXwPxb2ZWsHJKR2wK9NP9xn7Vvv4KZGZocUTLQD2ItXmSf/RjrdRfj7fPvm4qEgIuqVbYfgFbdXlj3W4CP4LxFmSkR1wbjkl9uPDzG+/s0x79AAAA",
    "takenAt": "2026-10-17T16:16:49",
-   "hash": "67a7b1e4c5d21cfc"
+   "hash": "67a7b1e4c5d21cfc",
+   "focus": {
+    "x": 60,
+    "y": 38
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0578": {
    "type": "photo",
@@ -4146,7 +4621,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADwBgCdASoUABsAPu1mrE+ppaQiMBgIATAdiWQAnTMjWmfT/ngB3SOHw4Sio6ANGrSuTcA2BfFeG/MCfrCTWpoAAP4qLLknRIh2BB3jr39R02lB1MfxGCtmraiOcp3DiOfJ8xRNpDrE3aLBMSkWdzt9MipNd//zI642Q9gJNzGBlkrqyXtuS457DEOE8NXw9tVi984TFbOfGG4nIuJe+rMvPBLy9d0KuN36TvLNJHu9VaecjxsqHOyjGEktsh6bcxKeKMiSPK1K5OYyV9rDmLxGJJII2EYeVZGzHuMw4VNTyV893U76TiCaOfF4s1GiUT/EAAAA",
    "takenAt": "2026-10-17T20:43:32",
-   "hash": "c397ccf5daec7878"
+   "hash": "c397ccf5daec7878",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0586": {
    "type": "photo",
@@ -4186,7 +4666,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JaACdMoAC8Oy9rRbU7YXtCsgA+OMkc4pz1yCTHvz6VoqReg5jeEG2mEkbI5NDa+IXFyuscW7vC1GojmghH+NNcFOouAivstnN7cR1ict4OfecWaToNegVOd1dT460PwU0/eVL2d1nBmShZTUypG+oMqoS6xGbS7kUqAAA",
    "takenAt": "2026-10-17T20:57:47",
-   "hash": "e57333383a5725a6"
+   "hash": "e57333383a5725a6",
+   "focus": {
+    "x": 54,
+    "y": 43
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0588": {
    "type": "photo",
@@ -4226,7 +4711,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBQCdASoUABsAPuVepU2pJSOiMAwBIByJYgCw7Bt8k6tncgLwhbDj+PsfJS4D/GygAPQ/Zy/IBeLshg37S6AQ6FPuE4tt9fvRzsmpFvuZZf9ZIU50TfPmAL11xcz99GrSV/zq0HgIhE/nJhcLSOiii5rw/dH2e5NwSBCgAHn/MuMSd914MZkORuLU5sTdeQ/ZPb7JJE1H2rfRdQMdXZQ8JmrTQAAA",
    "takenAt": "2026-10-17T20:57:56",
-   "hash": "e1e7e369381b8e2e"
+   "hash": "e1e7e369381b8e2e",
+   "focus": {
+    "x": 53,
+    "y": 53
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0660": {
    "type": "photo",
@@ -4266,7 +4756,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAwBQCdASoUABsAPuVgo02pJaMiMAwBIByJZwC06CHevSiaBXfOStx0HVRW4sgqQwIXSAD+78Q42Ah2cNV1SDM2xW4TP3rUxz3XTzjPlEWB/szR9Vh0tV6Akm7kpNo2ueVV2p/IomvY9poCd9NbJ+Wi0ezVkR2I/TbwqOLBSeDR9eSRZlJtBDlMt3GoP2C5fLQuOgoCoP8jY4wWT00JpGo4A0hPQAAA",
    "takenAt": "2026-10-18T15:25:52",
-   "hash": "73f49b5838b818f8"
+   "hash": "73f49b5838b818f8",
+   "focus": {
+    "x": 55,
+    "y": 40
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0803": {
    "type": "photo",
@@ -4306,7 +4801,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAACQBQCdASoUABsAPu1qqU6ppiOiMBgIATAdiWUAnTMJxSFVn3ub6er4DQKpdVeB5EijVgv4AAD+6oNjy3ROTlD5PTw7PVCI15oETc+ugau5iNd0+QI4SYrroH52OAXIEQhrCMSwyisOhQIbiAU8VG0ho1/7U9e0GGF4Zi+oxxl40cihNj3OGocyGfxsUqz9tY3U9crejpOMnNeinzAQ3vzl0AA=",
    "takenAt": "2026-10-18T16:44:18",
-   "hash": "4e467c6cfa3018ce"
+   "hash": "4e467c6cfa3018ce",
+   "focus": {
+    "x": 25,
+    "y": 17
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0805": {
    "type": "photo",
@@ -4346,7 +4846,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAACwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwC7K78L0AUup8DgkTd7WwDfhd0AAP7tYR0xhG/1BSkbLPHiSxJ6W5Yw+QC7EVmUmV+ztZa1KfEG32J/8dbbh/DfE36r3fZbQ2VIQw22BLQJcPwPcU1a5MmOA1sO0DzA0yKprA8KHnGGXL3CqIAA",
    "takenAt": "2026-10-18T16:45:09",
-   "hash": "366361f0b292da18"
+   "hash": "366361f0b292da18",
+   "focus": {
+    "x": 55,
+    "y": 69
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0816": {
    "type": "photo",
@@ -4386,7 +4891,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAABwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JYwDGfYxYVTbJlb0WZaj+OdlYZ1XRew2M89YAAP6DdE/TIjWzQgMr2ZoRVkO/eRJQjz5Rmk5MmOmr0+OEUmgrv4S8D44dOWHwIU6etv36oEG0l399ZS3TwmrMBYm/ZKFzNuFNN37NOighAeBvaU4rWXPsOlBpwHKnwf7X035xD/YNjrmO+343rfptHsA+Q6pBDue+eXdi2oampSlGdIlqUm4+xwrAegv2CVSRxN4q0qMLjKvxDOAA",
    "takenAt": "2026-10-18T17:06:42",
-   "hash": "1c363628195969e8"
+   "hash": "1c363628195969e8",
+   "focus": {
+    "x": 59,
+    "y": 54
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0820": {
    "type": "photo",
@@ -4426,7 +4936,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAABwBQCdASoUABsAPu1ur1IppiQiqAgBMB2JYwDGfYzQUxnQlBXUfCSuZw5ybsstspvf/Xk0AP54ksCISj/0UHXs+Q0dtx9B+ivathXVadqMg615ox4OC64wUfxDKJGLcG9E7UMZDgg7Rh/rfi90KzTcRN2hvqYIWlYpTdt8F/wJK3h0LGR6d6emLYpncvCZNg6Ypa/f0MYVkhLTnkAi+S+/RQgitKWGuuk8ynOWJtZCl8KEXCsmfsv1ap47YFLq9kASOP9WQaaMI4AcpFEsPGcw/Hn3benunMQAAA==",
    "takenAt": "2026-10-18T17:06:51",
-   "hash": "4a1b991b33f11333"
+   "hash": "4a1b991b33f11333",
+   "focus": {
+    "x": 51,
+    "y": 47
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0832": {
    "type": "photo",
@@ -4466,7 +4981,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAABwBQCdASoUABsAPu1oq02ppiQiMAgBMB2JYwDI1BuPFCUh1ajTU9VLg9ON3dnvqtMK3uAAAP7rfFxWp6s5fcW9DDeQC0jUllP1PXomNtGuCx8XVbbq/uIQZl3QcS/5DfA3wj4ZbPSZRz/6ilM8qK27pJHPduVHLsmVvpQMtxYvdOYh2idV6PAbDpJA4OS9T0TZLMSdG70HNpMncAym35+wOftz2kOi4qQp0oGaYAA=",
    "takenAt": "2026-10-18T18:35:09",
-   "hash": "e367e6cf5377ba32"
+   "hash": "e367e6cf5377ba32",
+   "focus": {
+    "x": 51,
+    "y": 61
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0837": {
    "type": "photo",
@@ -4506,7 +5026,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAACQBQCdASoUABsAPuVepE2pJSOiMAwBIByJbACxHvU+QE5+GZD8/XOoyIwzfWBU53Y5tamCeAD2G9Bi68UvPu01a5/z7tGg/3Nhyb0Xi3QuWVifoQpfZj5+YDFh/qfRI63/ygBapKjztRXdJ5PownwWnD1I+v31pHMStxxmeKoGKUJD4U1r1liDxy7+/KR2LMVWlAn/NU0cuovcJcK5EDywEONdgSWx3uNOfEuL1rIxbfpQJ9F/tzOAAAA=",
    "takenAt": "2026-10-18T18:44:17",
-   "hash": "1a20e4e46eee6646"
+   "hash": "1a20e4e46eee6646",
+   "focus": {
+    "x": 0,
+    "y": 61
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/photos/img-0860": {
    "type": "photo",
@@ -4546,7 +5071,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAACQBQCdASoUABsAPu1srVEppaQiqAqpMB2JZACxHuCv/i2GDfGADoE1OQ1OXcWEAQ6MX/iGAAD+qc/NjmmaOe+34JoDyr04ICFTYQ8c3/H8UsN1icahKC2Vdl1vpiLG6Q6CoMMZwmFs+O10HCE+5l04xnkE3rW/7ReqHtXgOXakx49psMeLSg+5nSYOx10kRP/J+V0dNiR68uDCd3lbZo0a7CPED7An6uvBctT2Re8pKqbl6c59b/fnf+tCHqyW2uZIwe85kq/NURQkTy5Wz6UGOapHNcBa5fn1MHxYtKZsxS8tqqSeEKj+iB+bCJ0gAAA=",
    "takenAt": "2026-10-19T12:22:45",
-   "hash": "790949a9bd931497"
+   "hash": "790949a9bd931497",
+   "focus": {
+    "x": 53,
+    "y": 38
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0862": {
    "type": "photo",
@@ -4586,7 +5116,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAADQBQCdASoUABsAPu1qr1AppaSiqAqpMB2JaAC1CHAgxQsS771fK21I5aaRqIN8BLTezXDAelAAAP7N9oaxnBHhOM/fQMe18UNs4koQiz4cGUSVPqyIYNhxYAVGXbHpeIbvHM7+hl/XL53f2RIOg3q7c1o3AuCFvMOCjtLNv8nk8vp026mZ82vwDLzcO3tRA+hvWhthJm2JpZzSqPCOQpAWZoFwZV6I4lAv3ptfiLX6pZ86bG7ezoATkc/+imD4BQub9vSenr7O6RHyvgDSel2ZICFJUk0sJmyMv+OD+6dONSK2RyW9HUwcJ+etoD8jvuhfd9rQAAA=",
    "takenAt": "2026-10-19T12:22:57",
-   "hash": "7d8dc8c96cc98acb"
+   "hash": "7d8dc8c96cc98acb",
+   "focus": {
+    "x": 60,
+    "y": 35
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0893": {
    "type": "photo",
@@ -4626,7 +5161,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRi4BAABXRUJQVlA4ICIBAABwBgCdASoUABsAPu1irE+ppSQiMBgIATAdiWgAnSEAif7NAYwIcj1uCXTFb/yAFCE/a6ylD3Xia7Chw/AA/tz2Ztl9af8Dryw5nxGF5gumSZWv0P+l/EvoW6pCobpS7ym5ha3G/NxueZPAG5RIUfIb88uK9Z7VrvpCTRShMGomRnNvHVYATmb3+z/ML6WYUXdWu2l38lNxeb/3jCmp9kTwRZBBpJsnslMGssUxAEJ3FL6MF9dVS83JPR/Ol83Xe54RKpomG3XTqdZpyH25X8y+1qwvfslQ+/KBdDK7v0/QjDr0T4QUIKohzPz93nG1NvGo3stwQViKcMACJYVESOByqgtrnd2H2Ndv27C7uwjPtdXbYwdG3UjVrnumipTlfoAAAA==",
    "takenAt": "2026-10-19T12:57:58",
-   "hash": "3969b221310f094b"
+   "hash": "3969b221310f094b",
+   "focus": {
+    "x": 85,
+    "y": 4
+   },
+   "focusBy": "faces"
   },
   "europe-2026/barcelona/photos/img-0897": {
    "type": "photo",
@@ -4666,7 +5206,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAABwBgCdASoUABsAPu1kq0+ppSOiMBgIATAdiWwAnTKEe08Wq5ULuRGCteeCmQe86NNDUmapk8XmeL9vBAAA/SAgXGIZP3wbQf9BjRp1I6HErbrXkVlehvCkSVbI1Rxpt5h3luaQoA8eHLn2v3v6+Bf+++3fuBb53SxFGiTembr6AyzRdKq0LdmTM8JwMY3ZzwFew6effL16DUuYIQ9xYC1rJyRWjQqls+Je8keWy5o8h4X/Jk/Eixqk8jKyOeEsZdBPtou9zK6acqLZUHlhSMp7drCVQsXkymw4GFZAdlQO+wGT3WEVAAAA",
    "takenAt": "2026-10-19T13:05:52",
-   "hash": "cdceb2f3c9f1d18c"
+   "hash": "cdceb2f3c9f1d18c",
+   "focus": {
+    "x": 100,
+    "y": 77
+   },
+   "focusBy": "attention"
   },
   "europe-2026/barcelona/videos/img-0489": {
    "type": "video",
@@ -4766,7 +5311,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAACwBACdASoUABsAPu1mqk2ppaQiMAgBMB2JZwDInbLBqBbIOpq1LePc2OKsqiioAP7nFGZuB7Vey+XmauE/lBBMhDE4a1BTGSjOavllUNHXHymB6JBP4X+mfXIEP0/2YkEPkr8+SqU8oM2A3XzAZsMOFqL7p+RBPj+NT34yoksWQ5geoOSVtYeaHpvhZnjRcvUpGy3jOaZxw8SuEm2bNAAAAAA=",
    "takenAt": "2026-10-20T12:35:40",
-   "hash": "e7aed97366573355"
+   "hash": "e7aed97366573355",
+   "focus": {
+    "x": 0,
+    "y": 61
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0909": {
    "type": "photo",
@@ -4806,7 +5356,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBACdASoUABsAPu1qqk8ppiOiMBgIATAdiUAToAFj8duARzh/lcjEN4mAAPcEJULNtqcQgiDEm5SQPQpMaLWreCiAiTPD6VsxviJu5omnC/TZjCQLkoA5yQWpCrEq4dJI0+jk3hZ91fw+GryhhFVRmUgqKSfypQ+9af8DfGFTE9gA",
    "takenAt": "2026-10-20T13:42:38",
-   "hash": "d006d9d9f9700000"
+   "hash": "d006d9d9f9700000",
+   "focus": {
+    "x": 46,
+    "y": 45
+   },
+   "focusBy": "faces"
   },
   "europe-2026/marseille/photos/img-0914": {
    "type": "photo",
@@ -4846,7 +5401,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADwBACdASoUABsAPu1kqk2ppaQiMAgBMB2JQBOmWhhpvVVpVtv2VQJrCAyX66c01XAA/sNBixSoni4s2ibejzLprCPePqcBRISYHZ6QGqW9i4E9Ms17Lh+zE1A61gT6JY1IYHZDjbQUcVKRCvyNkPDBcW+Vmhu6FlqZzaKzg4AnJ24FWZ5ow0jBjF4IdkTMp7i5yhscl5lVsNpsPlgbjKJXchAAAA==",
    "takenAt": "2026-10-21T18:30:59",
-   "hash": "805b5b1f9ab2130f"
+   "hash": "805b5b1f9ab2130f",
+   "focus": {
+    "x": 0,
+    "y": 23
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0921": {
    "type": "photo",
@@ -4886,7 +5446,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoUABsAPu1mqE2ppaOiMBgMATAdiUATpmM1/8C1+20G2KRcMu6X9ZF6AkrN5AD8fls4NHLmXtDKDuDyvffw+ceogiTwfb3XsHNpoXFUdPnml3W8j31Q4mA4ETDeDcCkVxnMJnAsNobAQ3FvaaApf1E2APEH1If99bgXIAAA",
    "takenAt": "2026-10-21T18:40:35",
-   "hash": "f7ffff4f6f2326c4"
+   "hash": "f7ffff4f6f2326c4",
+   "focus": {
+    "x": 0,
+    "y": 39
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0925": {
    "type": "photo",
@@ -4926,7 +5491,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA8APu1iqk4ppaQiMAgBMB2JQBOgBDs1miMyychlogAA/rF0edQhwdDtiSc+f5rTrAtDQJaO/EEgVmODbJgYiRKBiI+FISJqO/n7vDdswwmn/00i/jwSH7oghE++DXTg5wL6bKBbxagA",
    "takenAt": "2026-10-21T18:44:13",
-   "hash": "e0f009103432f030"
+   "hash": "e0f009103432f030",
+   "focus": {
+    "x": 51,
+    "y": 58
+   },
+   "focusBy": "faces"
   },
   "europe-2026/marseille/photos/img-0942": {
    "type": "photo",
@@ -4966,7 +5536,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBQCdASoUABsAPu1urlKppiQiqAgBMB2JQBWCP/wTc55RqYF0jxtoR6s+RGubM8AAAP7NTGc++u2ZrHNKNk5VKzHJ8b+9z16upGlykLXNOfkylVd9biJUUS6GxGNw7Vv4hZANR7g2NxRN1CEcHB2NoTvtgww78LMwAA==",
    "takenAt": "2026-10-21T18:54:46",
-   "hash": "dfef7f3f0fe43d10"
+   "hash": "dfef7f3f0fe43d10",
+   "focus": {
+    "x": 0,
+    "y": 77
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0943": {
    "type": "photo",
@@ -5006,7 +5581,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAACQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JZgCdL9S4QO6Rw7jOq3wEHPt6KvkoqZL5Gwv4gAD+7ER/T4Q5/YOyAghn1rjMrpvZzGMfOLxnx7gYwweSXMjef9hmfdd43/5iJyh7TVOC23SAh5aZKBD74PwssC2ZU0TwulQFocDcofILja6rytwvLsI/jRu4m7uhpNvyCPgLu9Us4hwBwZnQs5y9HUHEbGcobVvPR4FSISHRUqw/9G9PM9YtT1omL8SjyfGkjy5O84mqIlQ4N2pCbJI/s0QqmYOyYhTn1ikKWE/RevOYAAAA",
    "takenAt": "2026-10-21T19:45:39",
-   "hash": "0202592460603088"
+   "hash": "0202592460603088",
+   "focus": {
+    "x": 100,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0948": {
    "type": "photo",
@@ -5046,7 +5626,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JYwC+wCHw/ZszYVBWZw+KuvMtfWhZpAXTKgAA/NlH7lBwPYrVj/59VKcIT5R2Cr6B2Bnp0+64QYDc0wrGxlxG8I1F6/uLt7thoV8lrb47AbkZojPhsvW76vEr/IlwwIcYc+D07nDOHKjqnCJkXwzfBZg8oVhquso7KnQZs6qYpWGlrtUYr19DmW9mAhI5Q9IaZgiMu0KWkzGwJDIAAA==",
    "takenAt": "2026-10-22T11:41:48",
-   "hash": "1f01808e67b6b065"
+   "hash": "1f01808e67b6b065",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/photos/img-0959": {
    "type": "photo",
@@ -5086,7 +5671,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBQCdASoUABsAPuFepk2opSOiMAwBEBwJagCpCRG5/8BrXmxqk5CWjzI6lNUBs4Z2xB4+VAAA/rH2xHIbTCxEy2i+ZiAqWkL/hc3lQLHOEk9uuqsq/8IxSDKqdC8S7Y/9sVwyKl+zajTzSA0VMldSxhooiD1NIt4yadPeVwB6QG77HQAYu7cxctbEg9R143idMNJzdVjziLV/kbJRy8lmTEsRZlBzAAA=",
    "takenAt": "2026-10-22T12:19:13",
-   "hash": "e82b79c011b9f878"
+   "hash": "e82b79c011b9f878",
+   "focus": {
+    "x": 51,
+    "y": 62
+   },
+   "focusBy": "faces"
   },
   "europe-2026/marseille/photos/img-0963": {
    "type": "photo",
@@ -5126,7 +5716,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUAA8APu1iqU2ppaQiMAgBMB2JYgCsACKS4DQBIp+8bvtZ0AD99zrG/lL2QTgHW9C3yZZSe4CIjyqA3Fv/fYxQWbBTm837+GkJcbX9gbrKRkj0KdLgLAAA",
    "takenAt": "2026-10-22T12:19:32",
-   "hash": "687cf67100d2d2b8"
+   "hash": "687cf67100d2d2b8",
+   "focus": {
+    "x": 51,
+    "y": 74
+   },
+   "focusBy": "faces"
   },
   "europe-2026/marseille/photos/img-0966": {
    "type": "photo",
@@ -5166,7 +5761,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBQCdASoUABsAPu1gqE4ppSOiMBgMATAdiWgAtRrtANgVHfNQn9Y98vuqD20gnQ1h0AD91eJktHWQVIlI9G2VA1YZpx+ee/7Gah6iTZeTzVlGvj6yLVoqNY5DIvCujbzecmQD08mdY0LZ7kVVIsnwoAXFdU1EIB6P3Jc/44+/S+yn8QZUCCr1ye0CNxRFvuZ3z1uLUs7xhWgbnNgkByXwDcIvT/X60Dx/1sX/INT+zijctxzp9e2m2AA=",
    "takenAt": "2026-10-22T12:21:47",
-   "hash": "6b26ccc9e8880f0f"
+   "hash": "6b26ccc9e8880f0f",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2026/marseille/videos/img-0949-2": {
    "type": "video",
@@ -5247,7 +5847,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBACdASoUABsAPu1ur1KppiQiqAgBMB2JQBWEJAAxmse2x2j19PSjfwE8zgAA+kvA23G0O8I/UdWpKa+GvLOrMir6OUCuVSo6iF5lG6EUhl6f6JHV2t2wo+gH+/SRkVcg5YcVRaYGy/c34QU0Lzi/qMvYa2p4n6nEMjEQMUFRVDyMnHnpOvQzAGvPtpGhIrVBI7MFOW694KkiTmR13CKCtiM2AnLvK7RtBQ4SwRgAAA==",
    "takenAt": "2025-06-20T14:18:52",
-   "hash": "db8b0fb1a82ed2b3"
+   "hash": "db8b0fb1a82ed2b3",
+   "focus": {
+    "x": 25,
+    "y": 12
+   },
+   "focusBy": "attention"
   },
   "philadelphia-2025/philadelphia/photos/img-3963": {
    "type": "photo",
@@ -5287,7 +5892,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoUABsAPu1oqk8ppiOiKA1RMB2JQBfntP0FB4/hYshtXZbaoAAA/nGYMBEu3+8dYoN1ruhZCb9sJ8LnVupTbptZ9xwP1w7uyWwoLZMHkVeo9Y03yYoyaeDJE1lr44o0AxIut6KWtzDCsEj0y4C1syqswrpgrbTQJDHb1ZCl7O2o0VE93sztKKiNXOH9q0taYvzjXoAA",
    "takenAt": "2025-06-20T14:18:58",
-   "hash": "6834c6d63ad39ab6"
+   "hash": "6834c6d63ad39ab6",
+   "focus": {
+    "x": 0,
+    "y": 12
+   },
+   "focusBy": "attention"
   },
   "philadelphia-2025/philadelphia/photos/img-3968": {
    "type": "photo",
@@ -5327,7 +5937,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADQBACdASoUABsAPu1oqU+ppaOiKA1RMB2JQBdiP/wDyvKTy531UiDgHfZzc6ufQAD+bwBu/wQGqLIKdRMJ4ZFycPHE6ofoYXV+BIGRa4QiYKExrt8EvSYaqg96UApEIuTUuqdQQrMeT6ww4gki4IUHEsIPQ2TrdD4aT/BDKmv7yLMFlorrH24xHVk+amxj+KFfMPgrAAA=",
    "takenAt": "2025-06-20T14:19:18",
-   "hash": "35d11485e9c8cae3"
+   "hash": "35d11485e9c8cae3",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "philadelphia-2025/philadelphia/photos/img-3971": {
    "type": "photo",
@@ -5367,7 +5982,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAAAQBQCdASoUABsAPu1wsFIppiSiqAgBMB2JQBYhkR1IAJz2rN9aaAoL3AULzb/zziAAAP6obSKhMJGGPtndCIBypf7nrZERrPhNKUOA10oUgIW1MnPHRwkVDVu0uMEqjsRpLHLWQtNu+aME/34RVZygOCIHrhRRRKRFO0Wt1zv42BuGoPo7ihzdXNl/CVUgv9wCEitOty9a6YM9qdwnf2Sw6ZhJuUpD4aufZe4jQLIMVAo7vW6Q+vFuogTaow0M/H3isMqpdmBIv/jiG/yeY6yO4AtJDYy1f/loewrIMK9QAAAA",
    "takenAt": "2025-06-20T14:22:44",
-   "hash": "129d7959db1a04e9"
+   "hash": "129d7959db1a04e9",
+   "focus": {
+    "x": 100,
+    "y": 93
+   },
+   "focusBy": "attention"
   },
   "philadelphia-2025/philadelphia/photos/img-3973": {
    "type": "photo",
@@ -5407,7 +6027,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABwBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZgCdM2cycnVAbzKIZ048Cd7kKcwAaN7CO5rwAOAGfdJHisMMfHuy/Num1FM+oHK76/xYWoe88K3JfMDFCIyPmrywvj012spg9MzyII50aEXYGRfAsQ4Zi5Gv+Ov8qn7FQaoZV2pqCXFA5mMF3518FS36lxjMvD1AhHiS7FqBTs6sE6KW/KwE8p0/7TTGYvdNcrADjcqkSNJgJ5rSYLwngHyV2/+zKee4vEB4/DrlEtf+eHdKascYXDbU+FcJ7ZieccDS+AA=",
    "takenAt": "2025-06-20T14:24:26",
-   "hash": "9f3e0ccd314a18ad"
+   "hash": "9f3e0ccd314a18ad",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "philadelphia-2025/philadelphia/photos/img-3987": {
    "type": "photo",
@@ -5447,7 +6072,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JagAIFaPL7Qce1OPPAMy08G0iLF4Q6dTQYAD+n+g20/YCqHLG2wUZ9n6dXQ+M9LrShcSsbZvGG+Axfadnc2VKY4keTP6vJ1cGVnKMseQ8JUfrcqpXkJLs9USqpDY1xonZyskvEDONRfD++9CF7wI++1FdG28yjINAbTeW6W7g348rYxiTAxFE8i1STivRt+vPs4UjvIBX4rGa4zLjgAAA",
    "takenAt": "2025-06-20T14:49:27",
-   "hash": "874462a8686ce8b4"
+   "hash": "874462a8686ce8b4",
+   "focus": {
+    "x": 2,
+    "y": 77
+   },
+   "focusBy": "faces"
   },
   "philadelphia-2025/philadelphia/photos/img-3992": {
    "type": "photo",
@@ -5487,7 +6117,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAADQBQCdASoUABsAPu1qr1AppaSiqAqpMB2JZgCdOUEKBy/4tmMmeaLTTDA7R9bUUXvC9eemuYVAAPdBzUx9S7xsR20DFnIi72MsxW/oaLo67HZPCVL6gYeMw+ivN8Lsqy5JpIGAfgYlsphxaslRneLFCkDiW05R1IV6fL3mLU1HG0rphyQk0Wd3uTjGyk8R0bNlJmWgkWoMXYUmWXv8AlP0UxePZ8SMHMSXJ9vJkE2As3oWWFbqe0Gg76RoU4QCq4hMR+nzJjPguSbDquBLscqyNoCh73C7WnIe+9PWEhLSzx89GKzVlSjBJOTDtYr/dOlpoAAA",
    "takenAt": "2025-06-20T14:57:43",
-   "hash": "313b2566a5c0da60"
+   "hash": "313b2566a5c0da60",
+   "focus": {
+    "x": 39,
+    "y": 48
+   },
+   "focusBy": "faces"
   },
   "philadelphia-2025/philadelphia/videos/img-3960": {
    "type": "video",
@@ -5578,7 +6213,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASoUABsAPu1iqU2ppaOiMAgBMB2JZQDH5Y0qyUrfAbxzBBLX/NVsIV/R/gUeh1EM+BfeAAD+gtxTDJJN/8rkslHap4c/dtgHqaVyEakS3K5NATYtEbcv+qjQj3vlX96HYlLPRQnJQbVVTX9yaNPg3er74Nua/kzigQRxMSD13LCxIeO322jZNPWdDmdqN7fcmkD22fSxvbtgiAbe5aqF1yrBRsl4rE6CWorw8zZd6NNFKXYX3XoxzmZuYX2juvTZNnZLCCQmhPImzUSmjgyf32TZZrlaGB+72vFthY+dXYvl0JFbA+eqiwxMAAA=",
    "takenAt": "2024-02-21T13:15:13",
-   "hash": "707292b08bcbe4e4"
+   "hash": "707292b08bcbe4e4",
+   "focus": {
+    "x": 53,
+    "y": 41
+   },
+   "focusBy": "faces"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2372": {
    "type": "photo",
@@ -5618,7 +6258,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JZgC/OAysqXfF2F7ZR54vCXGPdob+VdVcQAD+rPJM11cpP0n0eQRJRG5nrxEjrLQUnjm4z/thxXAT5Q1aDqW7QmqDSG5EprhvAWr6dwBBlFaj7gjX/cBuwvo6EE55y3gAeeSkimka+yU6CNZkX9XM4c+LaLmfyvqSn+phrF/v5TmXq61SndG+NOmmZ7er2vBkokfmY+Oq1Xm4lXk0TiGesLuvwYm1RP7+zU3zEJlAAA==",
    "takenAt": "2024-02-22T14:30:36",
-   "hash": "200082dc92b02e23"
+   "hash": "200082dc92b02e23",
+   "focus": {
+    "x": 0,
+    "y": 66
+   },
+   "focusBy": "attention"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2385": {
    "type": "photo",
@@ -5658,7 +6303,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRi4BAABXRUJQVlA4ICIBAADQBgCdASoUABsAPu1qrlCppaQiqAqpMB2JbACdIHJ896lcCBHuA/fouafqRlMfsukPusBoMcOEmjy3JVue9gAA/sxXKNep4mZJe0nittq2/yCwWRxdl8ddR0EgzXApdEcqie2l78KA9zYCk0A7kmzwNKGiCbicrdDkDAzVHTs0KY4AXQq+sJqguHQo2OrH/ZV+iQwtakDPdot006bZi18rCQpRDQ2cyOI+2SyGsyxiC9XmAQU5YBB4tDcVt9AU977ilNnMM/eQv/Hiofci18ljgzOM/n//zAS89rZyWLYeAi4WOc0WnmzQgJbmBgPf0ENkcsKHdor6m0tyGf/mKuWqhag+pOrnEBQfYpzN9BZsWYAQ1JXcGvE/jqXJX4dgJQEAAA==",
    "takenAt": "2024-02-22T15:37:01",
-   "hash": "926af244406353c6"
+   "hash": "926af244406353c6",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2459": {
    "type": "photo",
@@ -5698,7 +6348,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAADwBACdASoUABsAPu1srVEppiQiqAqpMB2JZACsAYw7RR55SOnNBpr4tJkm1f4dEhAA8d9sbRSiy1Li0FzUl+Pzendciw9Xxd7CH5TbwH1xubXtqNB0OWrEeoRoGXo5c5WYZtF2u6hZwsquWXJ9pAlUcwwi/b+sD2gNr0S9ykRkJ32JmyO0BS5Mrc9XTgNINgQUlTlhUaVSxtaDGHc6FgdCMG12/7WDo+M4O4edsOoxJkVmVHNAAAAA",
    "takenAt": "2024-02-23T13:35:13",
-   "hash": "f4f3f9fee5eb6b0b"
+   "hash": "f4f3f9fee5eb6b0b",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2553": {
    "type": "photo",
@@ -5738,7 +6393,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAACQBQCdASoUABsAPu1gq1AppSOisBgIATAdiWIAnTNyjj0z4GQTMOeV43+DCUaNrrtC602dUAD+u+tU7JkiY3uhPVdCUnXPnK3KygT0e5ptmWdjb87eRr4d1gRz0HRQMOOk6XJGK96jEUd4kEOoGHbfFOZbyLZbAgvAbvYyRQP+GEwZjsXwc2hJjnOipvdDjYFyghjYZ/qQN8g/4cOxTIIemn31AT9oVu91meq+geECytUTU1iNqsU/rIGiEauV7NoeCDyRkBcH8p8jyy4+TUJ9fn5z90SGzzGfbEBKt36/EcrPE91FwQZtk+uKnXRF2tFI4rvRTJxsSaPonW3lOd23Io2KvHtR5yGtAAAA",
    "takenAt": "2024-02-24T18:45:28",
-   "hash": "199b920c08544040"
+   "hash": "199b920c08544040",
+   "focus": {
+    "x": 51,
+    "y": 34
+   },
+   "focusBy": "attention"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2579": {
    "type": "photo",
@@ -5778,7 +6438,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAACwBQCdASoUABsAPu1osFAppaUiqAqpMB2JQBTlIAD8Aqg4xSCwrJDARtlIeRMBYKvWOR1/TUAA/goFG66FArSVtZQM771Bt6QwTggMWIlpF7viqne4B64E3lMgXRydMkl+cy4BzLAI23qnm9ogKz4M9wOvD2rXbQM0ep+eN++4QhqsmiOxOHVyPdZdMV/1pghAizAnqbBARYle5Daa2SatMIOuN9en6OCCcefz0Bg2ySzETZcsSAEB8NcaqJljp+MJXvY8q68P43arGt8BPM3cbAZfYLzSpMNY34/+rs3BbafyARZ18YEOZg+JuFGo4aWtyg71z/JbXA0mRLcvRuKZCmxSvAAA",
    "takenAt": "2024-02-24T18:46:30",
-   "hash": "7b766256a6262434"
+   "hash": "7b766256a6262434",
+   "focus": {
+    "x": 57,
+    "y": 45
+   },
+   "focusBy": "faces"
   },
   "cabo-2024/cabo-san-lucas/photos/img-2995": {
    "type": "photo",
@@ -5818,7 +6483,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAAAwBgCdASoUABsAPu1oq08ppiOiMBgIATAdiUAU4zUGMBVCZWtMLmByt7BqB5+LRaAw7rbzZeD4RDMAAP51ozHTD1hmkoYt0Dv+va30O9ZO74XhWQoH9wn+1ks1/Nk7Ag1EX/L1nFkHCyNGGpoQptj+W6hLRCsXuurkXoNHtkZblRhdiaL8FvLb8iB8gcV05WSQLpp9vXzJV1W68CNPrcsb09n2U02eYN5dG5/DxOkKKcZQAJuM4gVlDVgDUqQvMo8y5vX9wUGVNgBNdBB4i0N5AGYN7WqqpbokPL1wzN+PCKnLaeCBsLK6dh+7LAs0AAA=",
    "takenAt": "2024-02-22T14:33:16",
-   "hash": "72f6c8b7b6c3c7b3"
+   "hash": "72f6c8b7b6c3c7b3",
+   "focus": {
+    "x": 60,
+    "y": 59
+   },
+   "focusBy": "faces"
   },
   "cabo-2024/cabo-san-lucas/photos/img-3034": {
    "type": "photo",
@@ -5858,7 +6528,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAABQBgCdASoUABsAPu1qrVEppaQiqAqpMB2JZACdMuu1cQhbdAtoY5sXKroaWphyRJWBoYBCgFxvaHmYQAD+wKLnaoTZxW6CIzvrUQul4nOUCeH4AIsRvzQ7yTpKlt6faeJqeUn1qg/ShBZAqJIrjaxRoz0gOXHdLNjikp4wB2tv2L7n3NR5G7KauIAI+5+j8PHnI4NzOZ0N8aYLrMWT0b6hnAbXoMMqK6R/JvHD/1KCY7mz2BaiP6tVRy1X+R0iILx7aofarW6Mzm7Pte6arMA+EnjtajgKmnrycpQxVwi+Tyz4YZrT2WSGB5IH8kaZUiDt+uhKb8AAAA==",
    "takenAt": "2024-02-22T14:37:44",
-   "hash": "c6bafce8eb5efbec"
+   "hash": "c6bafce8eb5efbec",
+   "focus": {
+    "x": 44,
+    "y": 55
+   },
+   "focusBy": "faces"
   },
   "cabo-2024/cabo-san-lucas/photos/img-3633": {
    "type": "photo",
@@ -5898,7 +6573,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBACdASoUABsAPu1qsVAppiUiqAqpMB2JYwAAKLR+QjyJklh2KYYGz1zuAAD+b8HTDPgmeEwO+L6nbQwSENSmFl4XGsx42lOWrW/glRxAcfckTBrmjOxLD2F7diLAQEu//A59ugUy5dej51Xpr1dzrZPfy7WUM2WGJYMLNzfnON1t24qPoN90W/gAAA==",
    "takenAt": "2024-02-23T15:33:48",
-   "hash": "8003163231328c49"
+   "hash": "8003163231328c49",
+   "focus": {
+    "x": 37,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "cabo-2024/cabo-san-lucas/photos/img-3809": {
    "type": "photo",
@@ -5938,7 +6618,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAACwBgCdASoUABsAPu1mqk2ppaQiMAgBMB2JaACdMzL3hKTz8ZdgswbQYg1Jqxx7VTy+/3W0Yi+mFUKVwtLFAAD3BrlZ0Q0vrCFvX/MZELXnW4vsq4PGeWUS6MXRbCZyYwpY7UyzSfWbNdLaG9Uvhqc+oS+5hhj4Ce4hqJawefxPhm7uxEKr+hvoyXeMgnkW0nOA6BNG+ve6+YOxpRgdj5K84aUgAwAFsNip7jADMI9glMOost0p7PNEHzl/ZjXrKyJsSXMQNNYds1nNL/P6tX54rhQE7+g3KbMvE9lbWvjEDG6U7uziXTyfWrWn8z2HF1vFa3hAMQlXQ/ZAJeLhy3YzDwCpuT5kTMc1S8AA",
    "takenAt": "2024-02-23T15:46:19",
-   "hash": "9a7b39f2d2d95276"
+   "hash": "9a7b39f2d2d95276",
+   "focus": {
+    "x": 57,
+    "y": 19
+   },
+   "focusBy": "faces"
   },
   "cabo-2024/cabo-san-lucas/photos/img-4577": {
    "type": "photo",
@@ -5978,7 +6663,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABsAPu1irVAppSQisBgIATAdiWIArAANpyFlaCNUOOBFlkgpZLDQ/3EAAP5Z7PqpeVDJxayuomroOGOKYDmonVeTslpnoA3xNsbExSVIUxMCVwb19gj7DBlp2Ez9JxiSkC/Ascfi7GEVZMiPoVzTkTAkOT11EZkLujObg++zKzjSX5E5+QiCRAyMwTXDg4JjV1oOiAoWWtX3/gah/v884pIda3+1gGll937GhEEjMqXWVPIXvBg7TVQdpk0AAAA=",
    "takenAt": "2024-02-23T14:42:49",
-   "hash": "49d3374ce4e390fc"
+   "hash": "49d3374ce4e390fc",
+   "focus": {
+    "x": 0,
+    "y": 82
+   },
+   "focusBy": "attention"
   },
   "arizona-2023/flagstaff/photos/img-1669": {
    "type": "photo",
@@ -6018,7 +6708,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAB03f/Ei7SVWpBAA/ZK/IlLclVZdttr1lxxZXOSKS9Oc+zvEk/iidFPLOl6yiG3fvpiQ3ZmiIu89GPnTWyd/FfJgWNHrsN8eSouEBuSa2XleCoAKY+WIYqBLUb3T0uJ4BHQiDkUbNAA=",
    "takenAt": "2023-03-13T16:54:45",
-   "hash": "4f1d76327273fb7a"
+   "hash": "4f1d76327273fb7a",
+   "focus": {
+    "x": 77,
+    "y": 49
+   },
+   "focusBy": "faces"
   },
   "arizona-2023/flagstaff/videos/0284fc1c-3255-4d0a-a7b9-1f31e7d38bf2": {
    "type": "video",
@@ -6078,7 +6773,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdHX+lQEGkyM9+votJ57wA3aUKEujjZA/Lusrhhg6AodVESCXPBkoybOWPM7mgoCiN1kLStiVwd0NYdcG/OcenSSqbVv8dI6tfFnbPEP2utA8OwlM4SyNqdjglAg8PVXbaeaUbNw6f3dkoj63u58lyrqXm1rC/3LdL1kPRFxDjlCWIzlWq9gAAAA==",
    "takenAt": "2023-03-12T16:23:10",
-   "hash": "dec8696df5e5b4a4"
+   "hash": "dec8696df5e5b4a4",
+   "focus": {
+    "x": 41,
+    "y": 28
+   },
+   "focusBy": "faces"
   },
   "arizona-2023/sedona/photos/img-2079": {
    "type": "photo",
@@ -6118,7 +6818,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADwBQCdASoUABsAPu1opk2ppiMiMBgMATAdiWQAnQ4isj1+ODVW6FFQnTIslG+X3mVogwpKSUAgAAD+VwT2/BRJhfFH9V3JCD7mZB7Rgs9ZvG8b345cmnIFLtR5Dw+97qzVRG56Yp2BvKgTq7kxxVGGQQA5ta4x1LKpKzLfjXbU3cCDqTxhcm4I9X4bEI98Dc1s0uYn47tpRWNzznqQwePOOOfihoe8lrhfq5Mtka/bVOt/oMQpmf2VfuybPMWBtj3RA5jKCDcK+xWIniH5ZAAA",
    "takenAt": "2023-03-11T15:51:27",
-   "hash": "81275bb97878dedc"
+   "hash": "81275bb97878dedc",
+   "focus": {
+    "x": 58,
+    "y": 55
+   },
+   "focusBy": "faces"
   },
   "arizona-2023/sedona/videos/1c067010-59f9-4b40-98f7-c1a05bb483ee": {
    "type": "video",
@@ -6178,7 +6883,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoUABsAPu1mq0+ppSOiMBgIATAdiWQAnTLMhgGeqDEI8SGu2dr6T2WD20xMCX7FqIAA/lFQs26zOWqBKD3RCKGr7KA+ZR2XMmhzafq+RvMOJ1hw+y2et4lgAvEgZwTuiMrLsKLFVDzJlHtLQG1r5s/QUOmgpvuGtoi4EyA1XeNXn/LGdUieu1u731+D9jemKSTFkwyK9x25rUL+9eIXRDIuzAIJP+8AAAA=",
    "takenAt": "2026-10-24T09:47:57",
-   "hash": "ffcfd153d331f1d0"
+   "hash": "ffcfd153d331f1d0",
+   "focus": {
+    "x": 52,
+    "y": 59
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1006": {
    "type": "photo",
@@ -6218,7 +6928,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWUAxNpsB12xfGFonAOxaEs2NVNnN9hezRoA4kQA/prKXOM3i0ci87LKZ8qicU9lO5J3MS5YWzJK3EOPGnOHqorNqAOWqtR971SJ/fpKtZuR1zUGc6/zXKclnw4HZCYA75mqy2x2jGVEKbhnWVEz1ZZV+eHnFoHnOFUKM/U7WMxV554bFRM6aC3Pwzt3Zp05LMlsaX38BtV+kq13CHSIBng2ir5EysNJAeNVWAA=",
    "takenAt": "2026-10-24T10:06:30",
-   "hash": "bc3c6c4447636367"
+   "hash": "bc3c6c4447636367",
+   "focus": {
+    "x": 0,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1009": {
    "type": "photo",
@@ -6258,7 +6973,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiUAYHAEADqLf94w0YwKCXJz3sj1w5u13gAD+VAJoE9wvIGne83wQyN3Zh2k0ge/qs0nPg6+HvsPtSkpZ4pphKnUL5dcoEkgf4UELc50dY84zT5J+dWW/zEVkWDPYdYvO/1LPBgwGokCDZ0sngMd60SnEyQbLk3InftV08cQRKgXgC763b3aj3+Ukz9wsjCpVz/qFJU4jP1rSJOlE+USy5JVatNFGEuZCvNGI8AA=",
    "takenAt": "2026-10-24T10:06:51",
-   "hash": "a3dbfbd9e9696d6a"
+   "hash": "a3dbfbd9e9696d6a",
+   "focus": {
+    "x": 54,
+    "y": 60
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1012": {
    "type": "photo",
@@ -6298,7 +7018,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACwBQCdASoUABsAPu1osFAppaSiqAqpMB2JZQDM0y5rpgQRt2wEaU8bRnnkxmq+N5QZKFDm2gAA/qunbIXi54UZ57TGXx1qdD2R4yHhjJ+ZXLW/FcP1rTpmPWRtErNY/Nd6vVG/vhBaMDN0chdwg4jesB8jrMxXgNd0OQkEVqDbsWZKs5e6oHUf6czNOUHdmmRTK0ZmK6cGCTeLn/4CLjAUATqBLahbO0gNOvLfegzC8BoNQ4uUXPsI5THIhifGZC0mIf2p8Fiywv+iAAA=",
    "takenAt": "2026-10-24T10:08:37",
-   "hash": "3991999111717960"
+   "hash": "3991999111717960",
+   "focus": {
+    "x": 49,
+    "y": 30
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1026": {
    "type": "photo",
@@ -6338,7 +7063,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZQDGBYxi393J/jNTEZI1mZpY70/RxFDgQzCgAP7H4/049r7zLyVgvrt56VMC/l5RyI4NBPU6UNq/wsd41SPJ6+R/3Ejx0msB+6FfHFMkbMy5+KXk45i5OTHWb0omNAhpwGL0N23TKtb6mAfOuzmD+MoVW1B2PHfq1o+7RJbE5eptXL6j2fnGeR7GXJh30xF0lf15jb6LbKmpW1sFeCRVVVl0AAAA",
    "takenAt": "2026-10-24T10:13:55",
-   "hash": "1d3326f0cccc2181"
+   "hash": "1d3326f0cccc2181",
+   "focus": {
+    "x": 42,
+    "y": 57
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1035": {
    "type": "photo",
@@ -6378,7 +7108,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAAAwBQCdASoUABsAPu1qqlEppaOiqAqpMB2JYgC90Awk4Awrd/EJZd5gr0YuDSPi83wOgAD+Tu9MXmLECfMRhJ0+PcxxuW0IRptMEC36JpOeC3+U2iyjXfuFMzvCxXfkXwc6ib7t5M1U/p6tRDUq9zhfRxe5ODlf+aTs6eM7G+dRhVIL+Q0p8SEVki4NkKtcMi2sEJZ12SNQmCeUuh4/lFkRQ1O5bcrrQUH3H363b5tXQoJh2oVj2B1HjRj9AAAA",
    "takenAt": "2026-10-24T10:19:08",
-   "hash": "71319034b4f85a6f"
+   "hash": "71319034b4f85a6f",
+   "focus": {
+    "x": 44,
+    "y": 56
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1043": {
    "type": "photo",
@@ -6418,7 +7153,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAADwBQCdASoUABsAPu1srVCppaQiqAqpMB2JQBOl+BVzHvYHkC2cnkIrd1WkGnSR4Las7aK3w19QAAD+yUQZUDiqH80DK/Ohz8uvP9xgut3QZrTG7ACwr7ckE9DuJE38Lai/xiHEDzB4sJ8zwJN+1pztROQrbAsgvv/9OZstv7Y2qNm+oRyLKRPO5fAVrdGez7Qmde8seobl0gYlaKQZhyis46lnLiNaJXaStGZ+aQA/3kjGr+XYFhSwpnUt6toGdzJ8gIXG+9jfojqMZjab9OBXFiG3Sg59meK5QwOEx7xoOdB1/AEjPx4X7SJjMjNhbADsBbqv/VAAAA==",
    "takenAt": "2026-10-24T10:32:54",
-   "hash": "dbdb65e1d1d0a436"
+   "hash": "dbdb65e1d1d0a436",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1044": {
    "type": "photo",
@@ -6458,7 +7198,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAACQBQCdASoUABsAPu1srFEppaQiqAqpMB2JQBOmYwzlsQb50C2jrTSx/YgpF32J5CqH+oYuAAD6rL8P2HT/xqadYIbkZTPeOZjhwbznMGOzjju1Zq2ZF+5AcrXk0pEmGa9RoWLO2oc7CUvJqWcBjN3AQtwd6Y1Ago8+XiM+UFCfPMfclWnYPiuO6x/Syk19QKIARVVXLyKNDuv8vie9Ywtb9Zpb9tlSXMW/QR9TYrmXFSD2ykbSpqOgZQptE6x6D54lpWdvp2iatckLAO0D9hqB6n1WJ1bVlVCl7X94XAAAAA==",
    "takenAt": "2026-10-24T10:33:00",
-   "hash": "a2b664e1c8c8f2b1"
+   "hash": "a2b664e1c8c8f2b1",
+   "focus": {
+    "x": 100,
+    "y": 50
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1069": {
    "type": "photo",
@@ -6498,7 +7243,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACwBQCdASoUABsAPu1sq08ppqOiMBgIATAdiWMAuwMsE6WD9GeAchi9MikfKfjRzyQ9Di+Hx+gA/Y+2Od62ly/AdYyIXLqkUqtvECv+GU2aKMm/NAdH2wKQZvjV9V8A/hyjTG3jW6oPCMnIT5VhzLQm1rqFap1kmBocqGHUNkbgvliaI6lxITSjzWvAmwzAaNyWV2rWmCn/iv1kf4MRgspAHwz4WPZhb7x6QrMQs3uqEGtC9gquM6k6SohSdjGzN52pfqgB/ZcqnEdK6XQaQXMAmBlUAvGvTwAAAA==",
    "takenAt": "2026-10-24T10:43:39",
-   "hash": "343236b636333332"
+   "hash": "343236b636333332",
+   "focus": {
+    "x": 53,
+    "y": 45
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1080": {
    "type": "photo",
@@ -6538,7 +7288,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoUABsAPu1oqk8ppiOiMBgIATAdiWMAuwALL85Ml1GylnWgwOWGZlAtUNStDlAA/oHJukWuQ6MEkRJHpNFXNgEgleZYOec+qCK9CQCj8SZGypY3Aj4q7q4VRlQ6iHsKvn/ZHQT/45uhA478fN8FmviW2p4M/yOc0u/N71Be4s90Fk0nU+Sl4PVtVs2j6jrcIxx6ssyBLdfgp6QcGk83LEIO1ExAyCklFY+DWhy44A5ZikD0gVtmcrTLP6ZSwAAA",
    "takenAt": "2026-10-24T10:49:49",
-   "hash": "479313318b47c783"
+   "hash": "479313318b47c783",
+   "focus": {
+    "x": 88,
+    "y": 83
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1087": {
    "type": "photo",
@@ -6578,7 +7333,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACQBQCdASoUABsAPu1mrE+ppSQiMBgIATAdiWcAy2ndpFG771K3Ww/AHIJzbabR74eZS4lkAAD+lvtbNm28usMh2CtwVFLgzQCWpRFTldSDMDAoUWcDx71blrkoGmGvtw4WdRppEVDfPktv3NQBv4p44udgYrPp8JX5y19J0Ydi5ExrJLCgHuoieW7oScvCWY3VzAQQApknG50ktyTG72UQwJ9ezVbBlzYSfAtc3Q5CUoA0LWKwT/3ipJgxxbyRTZJWu72wAAA=",
    "takenAt": "2026-10-24T10:57:22",
-   "hash": "6ca5a595d590f1b3"
+   "hash": "6ca5a595d590f1b3",
+   "focus": {
+    "x": 54,
+    "y": 49
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1100": {
    "type": "photo",
@@ -6618,7 +7378,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABQBgCdASoUABsAPu1osFAppaSiqAqpMB2JQBOmavQVj8AB7sX4KnjdeP3HESyIJpRDwRW4owIlLA+wAADhzByULCEDCaxZVHGae59LN0KOSA7PO8+BDLOqlhZJpgn5M5wDkbcvuelD92YQ4Zw6wQ3fqbH3+UpQNPsBd56iBIYz+yN5JeFBzcp6xlCJAQJ6bLuM9kN+GsnSGO4GoXeWshtZOvSzAh0HbCNpH7ntinjStSHqru3wz/WBh3cknRIMe6LlBgHoiQgJ97z9b38FmDuCMuUG4mhczuoeh9iYAAA=",
    "takenAt": "2026-10-24T11:35:03",
-   "hash": "1e79c1e13030399d"
+   "hash": "1e79c1e13030399d",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1110": {
    "type": "photo",
@@ -6658,7 +7423,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAABQBgCdASoUABsAPu1irFAppSQisBgIATAdiWoAnSDIpm/IBM8g07r3T/dHZbGhHJ9zs8dEWK24TicBAAD8d//+weN6nbpdOnD77jI3zXaLynO3ksLizvFoP6pO29AlJfaN+QJKhJv5a9drY9h6MTfZi5vNoHU0XJKUijW4olyhLhwM6ng9ZF3R2f1C6piTUeZaceKtCsdWceN9nuUFfG2BesodWTxuHsINc/B04AO2Edqblot+NWCdkXbZiWlicDci1AiXgtWrTZDucfVDH7e9kMzlGkY8rYme9a6LLfe25M7k80gbRZHfGeTBTYqE4cpC2SiIEC4FHAAA",
    "takenAt": "2026-10-24T12:37:13",
-   "hash": "6e6667cbb8cc8dfd"
+   "hash": "6e6667cbb8cc8dfd",
+   "focus": {
+    "x": 0,
+    "y": 55
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1155": {
    "type": "photo",
@@ -6698,7 +7468,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoUABsAPu1uqlEppiOiqAqpMB2JYwC7IP94AAwokXB1SD99VfxCJjfNyH7N9M5WTgAAzmBION7DAN7hd08katNv2qWpZ7mMLUn8kbBbtOVztXXABv+xi+WKPz5qn+JycvFUYmRIda8rCnq8pVTA7a1K8x/Rj/opECqRPo5FoDnA4bbHUuUE2StUxbehBMR9I9HK3vr6Kzgubcr2T0Nt1ufNXuCvw9Hj73SPzA8TdyZMzytHeKS7q5PxVJkBwAAA",
    "takenAt": "2026-10-25T12:52:32",
-   "hash": "37110717171b6aab"
+   "hash": "37110717171b6aab",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1163": {
    "type": "photo",
@@ -6738,7 +7513,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAQBQCdASoUABsAPu1urlKppiQiqAgBMB2JbAC/Sf/i2fAhmDVz2Fmb9dm+4wwKTrIAAP6sBEcKN2LGXGYuiudjW4TsCO62eowZsZeURI/OFemoYqup0aP5dL0eBXzWAddaKtQorOFWuYdevmjv6n78ALzeeSPgyPeeF0/GcgqG/Dw//geq4yEtGwSGv2OGo/a4yUPNw8wD9eMqaGybTId+DZcW32z1FR3ch+FWu73ZlcD0l1XKA2B/mMeXo7jgeDjOtXFrXrW9dH+Ww8Tc3xA1YtLC0RqQinHc7HP60AA=",
    "takenAt": "2026-10-25T13:07:08",
-   "hash": "0e63e1e5b61dc9a3"
+   "hash": "0e63e1e5b61dc9a3",
+   "focus": {
+    "x": 100,
+    "y": 7
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1173": {
    "type": "photo",
@@ -6778,7 +7558,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQApggf8B1e8LzZMIe4S96yAAzhUEXFf6O3Lxze/lD9RrQCokitWI7CKSx0YrChQjde0m26lRUZjBa3xrzxhhCJ6ZHw/H9iuDQT+zEBP6Ogo2SqRFH30PADNkAXIB8hZOzLm/M6FNI4AA",
    "takenAt": "2026-10-25T13:21:20",
-   "hash": "131bc14545e29999"
+   "hash": "131bc14545e29999",
+   "focus": {
+    "x": 37,
+    "y": 48
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1174": {
    "type": "photo",
@@ -6818,7 +7603,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoUABsAPu1srVCppaQiqAqpMB2JZQC06AuUHVDxDgSV+hVEPLfg1LQ7y+eRAAD6DcPHZvYuqUiJW9dFtwXyg6YhJ0gD5b2Y8VnroYdUvskmcnkFLV695DWTgVqyVg+MPB2XooOYACBUjYffNtj5kNjWPF724+7KpbNyqb7WwuPyQPbPvaYz1+iaDrzCl9w4t6gx6I+hp51TmLij0uEWcbW7EECCQgVLtC298OcyIHMN+5CE6oLqSnaCAAA=",
    "takenAt": "2026-10-25T13:34:33",
-   "hash": "c9eda0d9c9c82b99"
+   "hash": "c9eda0d9c9c82b99",
+   "focus": {
+    "x": 0,
+    "y": 61
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1221": {
    "type": "photo",
@@ -6858,7 +7648,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWgAuzLrqQAh6EZC22g83ySarRgrm49kMEWSIbAA/tRNwe4C0pPFnpM7hMy0QLupQEIonJEsVhlDQLgAa7jSyGCODOY/AE3jNpSUQlAEFn9TpQrFFBwiIacPjX6Jd34/+jPzAabQHAgX+Sw+mxixwD9QJxP4uFw8rE1fyrSy5I97dh8kWyldAjwUurTZ25Q/ENO/TJQ+4jqw4dkVOdK12+YJVNffRRvAAAAA",
    "takenAt": "2026-10-25T14:38:11",
-   "hash": "8b6327095958f8e4"
+   "hash": "8b6327095958f8e4",
+   "focus": {
+    "x": 56,
+    "y": 60
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1225": {
    "type": "photo",
@@ -6898,7 +7693,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABwBQCdASoUABsAPu1ipk4ppSMiMBgMATAdiWgAuzOTP/gyjYYMqa2j3OIleme4RXBJvNAAANPUjXgY8d2gi8sANdK3MFt7tn7jTklGRQg/oU4dNTElDc8LloFm3nFJZUgvh7/tMFUNFe7969Y8Bq8BM7pwYEIqVayjIbO2NNNi1c7FsVN/G8nDjteEM9LYanG7twQCEvyIxCTxgMW3i5Aawqfje36bwdtILVsMueMr9KlhAAA=",
    "takenAt": "2026-10-25T14:39:13",
-   "hash": "8789f6a7a3313b73"
+   "hash": "8789f6a7a3313b73",
+   "focus": {
+    "x": 48,
+    "y": 51
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1236": {
    "type": "photo",
@@ -6938,7 +7738,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwBACdASoUABsAPu1qrFEppaQiqAqpMB2JZQDE2A9jBfS/N9wA2mguxHKG168fWkAA/qX+pBuf+GBUfHGMBkzOO4YTuuLKGcUsJzhGMrU3Ypo4Vm3f3AUQ3nYKLXhIdET9mIdWY6mubH0vBMRWQZqSRu/frbe69eLHNxWVC7UXaKSPd4xLg+Wuwa6mGWsU6zmeAAAA",
    "takenAt": "2026-10-25T15:58:13",
-   "hash": "ce171b1b236b0b63"
+   "hash": "ce171b1b236b0b63",
+   "focus": {
+    "x": 100,
+    "y": 93
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/photos/img-1241": {
    "type": "photo",
@@ -6978,7 +7783,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBbed+W4ADMMiPeQD6HKKAmwAP7fhystFnvhyGKqzs++LDRtq/hJQaNeJnaYx+YhQdOFMUxhCRWZFNVhELhyQxCo9fxzugac9hEzAxO/s0c6W4Gm+4rhul3TwNefhnGBw/5Hy/fYD165RwAAAA==",
    "takenAt": "2026-10-25T16:00:29",
-   "hash": "c31b3b034362e5e2"
+   "hash": "c31b3b034362e5e2",
+   "focus": {
+    "x": 41,
+    "y": 67
+   },
+   "focusBy": "faces"
   },
   "europe-2026/milan/photos/img-1256": {
    "type": "photo",
@@ -7018,7 +7828,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoUABsAPu1qrFCppaQiqAqpMB2JYwC1CTuEr6wZPbb6/9lkfSTY2sYrjYQoAAD+isgTDwH64Ug1dPPQI0OnmebBphEU1Y2HzXfL1+Lxw1nsUyqb489fevxRl7BMgD98acKKoMrt4oQX59T5lnzfZ+EPRiYLGZRLdMgViDBjy1pFq7G0oEr0vO4M4AA=",
    "takenAt": "2026-10-25T17:30:38",
-   "hash": "c24ced9446070c6f"
+   "hash": "c24ced9446070c6f",
+   "focus": {
+    "x": 25,
+    "y": 93
+   },
+   "focusBy": "attention"
   },
   "europe-2026/milan/videos/img-1154": {
    "type": "video",
@@ -7062,7 +7877,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUABsAPuVepU2pJSOiMAwBIByJQBYj6rhp1UpRf5zLYpwAAP7ueQT2xhdavd7RzwZ3dm5GPMN+YIUMuZJr11sDbsd1rFjJmNnbxoh3Ttz4zQAA",
    "takenAt": "2025-07-05T16:18:29",
-   "hash": "e0e0c04042070408"
+   "hash": "e0e0c04042070408",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "focusBy": "attention"
   },
   "utah-2025/bonneville-salt-flats/videos/img-1713": {
    "type": "video",
@@ -7112,7 +7932,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwC7AYw6qz11LOgHiW+4QI8AAP67EdR7zbNgqabGWc7IlUdJ7GfCQX82JU4LLh/UhU3D60N8Ccdibw/JxWm3/sukcTgYyxn1Vu6Vw+rdReYIncl+Vl5wIkfLNHZZlm+6muHaVc8a6eLLNaFQsLazu6xtW48C1Vag4wAA",
    "takenAt": "2025-07-05T10:38:02",
-   "hash": "c9cd3d9b9b9bbb6c"
+   "hash": "c9cd3d9b9b9bbb6c",
+   "focus": {
+    "x": 46,
+    "y": 41
+   },
+   "focusBy": "faces"
   },
   "utah-2025/donut-falls/photos/img-6867": {
    "type": "photo",
@@ -7146,7 +7971,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAAAQBgCdASoUABsAPu1qq08ppiOiMBgIATAdiWwAnTlBUn4AocADrn1drWx5TrbhAm0opgNhhUPzXAAA9VaUlDSn2MAcogg2uHXy8I9F3Gl6micbG7UNTP8zsF9UjfaCBM2eHZBZqoZhSmnZNfLBBJLrn3uySKP9KSs6P9dC26b5htAb549QGtB50kpYiezZ/k8saDrniL+pUyVvRZdLFvppyh7WKJNcpJQk4vVvw4loWrGWFCZG49O6PtaL4IV30Om1x9knHbbYUVUBJEB09dQskXo0dTvEAAA=",
    "takenAt": "2025-07-05T11:29:24",
-   "hash": "03072d6b6dd8f3c1"
+   "hash": "03072d6b6dd8f3c1",
+   "focus": {
+    "x": 51,
+    "y": 52
+   },
+   "focusBy": "faces"
   },
   "utah-2025/donut-falls/photos/img-8685": {
    "type": "photo",
@@ -7186,7 +8016,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBhQAz68V1nv7AR8goAA9Y6PPeDX3iNUl3CN7I7tKOr1bJkYM+gtfsrqy/Py3j+RBMPY8BpBoXDNPwvxYIn02pi57BBufqeW3lTxnobOzt7c90Z4aAAA",
    "takenAt": "2025-07-05T10:19:23",
-   "hash": "4f4e9a95d4d1d9c3"
+   "hash": "4f4e9a95d4d1d9c3",
+   "focus": {
+    "x": 23,
+    "y": 55
+   },
+   "focusBy": "faces"
   },
   "utah-2025/donut-falls/photos/img-8688": {
    "type": "photo",
@@ -7226,7 +8061,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwCdINiC4w+r++DdgAaEipJPAAD7hHBAeDPtWlZhMFj/hVsbSdLahNSvc6Hh0qQn1/4SXsJZMdDmjN2mCnnmGbduF8ZEWoQmpJlAV1f4BNHSWLuG6cUrpONu2tNOWEcPlOFFVoG5wJc9yqEnbQAA",
    "takenAt": "2025-07-05T10:19:39",
-   "hash": "674db59d1c526766"
+   "hash": "674db59d1c526766",
+   "focus": {
+    "x": 44,
+    "y": 29
+   },
+   "focusBy": "faces"
   },
   "utah-2025/donut-falls/videos/100-0194": {
    "type": "video",
@@ -7296,7 +8136,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAAKJqPCyFx5y1RhaAD+6Y80tX585EC4IW8dPxdJ/xBBMj6dvxVt9c1lFBBBth1LTY+Btcc4Ws7X/MrLDd1GTuywZj+IAAA=",
    "takenAt": "2025-07-04T21:10:03",
-   "hash": "d0d2cbebcb4b6729"
+   "hash": "d0d2cbebcb4b6729",
+   "focus": {
+    "x": 57,
+    "y": 28
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/100-0074": {
    "type": "photo",
@@ -7330,7 +8175,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBQCdASoUABsAPu1qr1CppaQiqAqpMB2JZwDPZBEUPysz1nSxCyW23e9Mlnx6BxiZLAAA/u7dniOKGrQynS48wr3ghRZMC6PV1AX1Z+T3ERMdnR7Hk5NdFSXQD3J4spb4rZ6/6+6OloVozCxMwQLsEiHYHQrWEyajHtNWht2TE7M0Tp8vahjNrrZfQJkUPc2kXZmArHUFTCgA",
    "takenAt": "2025-07-04T21:10:09",
-   "hash": "d4681713074bb946"
+   "hash": "d4681713074bb946",
+   "focus": {
+    "x": 54,
+    "y": 28
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/100-0078": {
    "type": "photo",
@@ -7370,7 +8220,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAYuQzmdbcH0OZ5NFEAD+2e0WKZ/iRQD3vhGfQBypRy7vqTi3rUG3iYt/kkuWDvy4PQjIzgTmj6jRwzoPHWi8+jFYur/EGPE3J0hDWPirYA3Hed22fAw68ozoWpMzcLcRWZ8dcoQ/+KpO0Pm+JMgbwlDWJ0oAAA==",
    "takenAt": "2025-07-04T21:10:47",
-   "hash": "6529ad3126363576"
+   "hash": "6529ad3126363576",
+   "focus": {
+    "x": 42,
+    "y": 37
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/100-0084": {
    "type": "photo",
@@ -7410,7 +8265,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdAYyKzgsmkeWzzLU9VBraAAD+TW2tUKUY9bjnuvgi3psP6QPWv6B6D/PyqWPnsliEY6yvaw5tK8VcEXaT8v6N+ZmAne9XLlrRq2z20BzgErNdU83YlP0lme1R75L6E8oXD9cOQq5QWVyyPGnbhp3Xf59HamNEwy/0OaF8UvMIosEzVLiAAAA=",
    "takenAt": "2025-07-05T00:02:38",
-   "hash": "b5b1a9a79797b61c"
+   "hash": "b5b1a9a79797b61c",
+   "focus": {
+    "x": 51,
+    "y": 34
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/100-0094": {
    "type": "photo",
@@ -7450,7 +8310,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JagCdACG39F9UVR2/ap/fQAD+xgPFR6JTE1tumujDEpFb79XMEzK+3nwdy9dGVHzyC/Xh37vtl1X4Lo8FeDSwIiLTxPsO/VkZG7f2dW7b2/NuJAjAWtg/Pp/cUx5EE4VQY3rY0/Sm09bruJ6MLbUS6E8KRWSKnozoWmav21w/+vS5Pb0ZEERC0ORMhoAA",
    "takenAt": "2025-07-05T00:05:44",
-   "hash": "c746a69e9a9e9eaa"
+   "hash": "c746a69e9a9e9eaa",
+   "focus": {
+    "x": 47,
+    "y": 30
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/img-4431": {
    "type": "photo",
@@ -7490,7 +8355,12 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgC1CCXgugqhW2ZhxzCDuhwAzfCWLWWRY2ivK+LKu3ZdRnp34nPrK92XFzGXgo0BJVfAHoeFHYxahE372WlqYbrRBUQJgp6WXHjZGlmGLaLTo23G/ZkC7xlW9rJoTA9HB7fylQ8kGJDiqEMNbvQhEJ8N4rHnEfWdBilUEvxzoAAA",
    "takenAt": "2025-07-06T15:13:42",
-   "hash": "cf2c4d494c98b9b1"
+   "hash": "cf2c4d494c98b9b1",
+   "focus": {
+    "x": 51,
+    "y": 56
+   },
+   "focusBy": "faces"
   },
   "utah-2025/salt-lake-city/photos/img-4432": {
    "type": "photo",
@@ -7530,7 +8400,761 @@
    ],
    "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdFQvAeNTGRb6Gm5R5+wAA/kx/6JsTPwzLhRbFavlQAWGIuhczgN1YcDe1gbAf6OuZqTyVaUDXFSAaB6MpdfXkYtfopWn010aVps92siASghX27Cu+/nz/VaXl6H9RpiU6g8Hp8zi5j2A5Irrb3H353eQAAAA=",
    "takenAt": "2025-07-06T15:14:24",
-   "hash": "3f09012401c3a392"
+   "hash": "3f09012401c3a392",
+   "focus": {
+    "x": 57,
+    "y": 53
+   },
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7490": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7490-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7490-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7490-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7490-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7490-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7490-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7490-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7490-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7490-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7490-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7490-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7490-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7490-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7490-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7490-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADQBQCdASoUABsAPuVipU2pJaOiMAwBIByJagCdM0Llxxfy5Lxs38jGPyhSSvzWPWxB1SPaGmAAAPG8vPRmAq7u6O8AO9Ka5Yg7V9tSz4YUh67gsqevnqgNvRUwHOUbGv1E0RTsbJ+AtOx+HUUTglWB9DXU6hlT6JDodzXTN9zW3EcX5ZWoP0Z3F4DOZHzJX+mZM3SCPqoCj5f0Tyb/Nh5ZzYM5EPGl82Z+6VZy/GA40cN/gHphAuQKjYYatuD17TAIDhnyMR/bK88PSoAAAA==",
+   "takenAt": "2026-03-07T17:45:17",
+   "focus": {
+    "x": 59,
+    "y": 39
+   },
+   "hash": "f0cf32dac3f1e2e0",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7494": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7494-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7494-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7494-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7494-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7494-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7494-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7494-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7494-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7494-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7494-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7494-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7494-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7494-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7494-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7494-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACQBQCdASoUABsAPu1epk2ppKMiMAgBMB2JbACsMt6isAfWkhH0sphKqXCmk5w7f2jUB+IAAAD518CLX4ak7CvGYFc//uOlw6v7qIsZARdbpYv4mNZoiF01k5622i21K6x8STGni8+If+1nRjC2unZh218A2BM9CtbmlIj/AKsLwC/crJ9rnNOEhaWURTgPDdBEtxvsxKVUfLZCrlNes8m/tJ3aWjrv1vJpVDJ92Wyo85jq7Jq7dfQ8zshV3d/aUHQPS4aJ1d7Hh8b7Gb4IcdmmnlFRLwa4uAAAAA==",
+   "takenAt": "2026-03-07T17:45:37",
+   "focus": {
+    "x": 60,
+    "y": 38
+   },
+   "hash": "f1efdf347895e139",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7512": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7512-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7512-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7512-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7512-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7512-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7512-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7512-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7512-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7512-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7512-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7512-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7512-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7512-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7512-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7512-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAABQBQCdASoUABsAPu1sq1EppaOiqAqpMB2JQBhmsZPJJpFJkbSu3Sa0UEjpGLD24XnRvAAA+88nllv53fKiV8HsK5G9Yh6WL1wdnE1EIJ9S1aIeZzO5x5tebnOUallYzyCcTLqUtQ4RmQRZ8u2PD8tnKcJU+NnH2K6KTgGLhPprYdwYXTuFxMlfCgiFYNfC2BDvlEjJ4vLfECo4OAGCM4i67QtVhhwVAzgZSUAl/XVr+Dd89qb3lPiEBMy7w6PuS3O3McO7NPpEWN0YgiYu18DwolKngP2HDlKrTwpZcaL8pwygAAA=",
+   "takenAt": "2026-03-07T17:54:52",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "hash": "c3d248792ac3cf6d",
+   "focusBy": "attention"
+  },
+  "cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7": {
+   "type": "photo",
+   "w": 1500,
+   "h": 2000,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-960.jpg"
+    },
+    {
+     "w": 1500,
+     "avif": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-1500.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-1500.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7-1500.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAABwBQCdASoUABsAPu1kqk2ppaQiMAgBMB2JZQC9WCHegMIcX6aurcZvO8IhA38gQ2TEN2AAAP7GraUKNyaxw9G/osVLUm9oqtZv4wnqZ3H1nFAK+kY62YNTp0H+eg1ybezEq+I0sy2YGHxjDRC5eollfHBjoddYAuKjbYaYBfnQTt0BbCtXkUR3VmHI+djuiPrLUbwVoifn6Wf4L4X7+HdGC2cRXfbZPSOOPH8AAAA=",
+   "takenAt": "2026-03-07T18:34:47",
+   "focus": {
+    "x": 48,
+    "y": 30
+   },
+   "hash": "9b5dcda8f0f0f045",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7243": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7243-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7243-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7243-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7243-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7243-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7243-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7243-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7243-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7243-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7243-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7243-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7243-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7243-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7243-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7243-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABwBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWMAtOgyvn8jNpYr2kV1kfTpb2qBpVWaes6AAP5oEJ51kNYwBlj7+XfhMe8YFqT1+ZDBZR4hJUWwS36bRpyf4rBFAPW1w6nfmZtd00htY+5i2z1buVw6X5tcKY6/eq/drS6rlRXiA2pOpRkzApPPXad74s3o9yVGMXa/cL8tBeuJa7UHJgJUgzgAAA==",
+   "takenAt": "2026-03-06T17:52:54",
+   "focus": {
+    "x": 61,
+    "y": 54
+   },
+   "hash": "80c0c8c4e6e3e4e2",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7250": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7250-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7250-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7250-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7250-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7250-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7250-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7250-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7250-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7250-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7250-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7250-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7250-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7250-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7250-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7250-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JQBOmcdggv2E32JyCf7gLyurEjd5rQDTCAP59a+7uA6nF/8m+EydgFWbH2BQu/yLrMvHFHjqwp8+KQcpfLAofIXi1y0vhvNrpYbQaB1m4ki6pFyDwZ63BwJJvTQGDisf8DaNk6ZGZT9vsfa7iuL6bopvuI3sceO01AcvwJ9d+cMF/sMzN+HtIk0eB0SOXZlfRYAAA",
+   "takenAt": "2026-03-06T17:55:24",
+   "focus": {
+    "x": 52,
+    "y": 41
+   },
+   "hash": "e2c85446c6083161",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7348": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7348-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7348-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7348-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7348-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7348-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7348-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7348-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7348-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7348-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7348-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7348-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7348-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7348-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7348-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7348-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAAAQBgCdASoUABsAPu1oqk8ppiOiMBgIATAdiUAZ3gECPZ97A4uRMyRqgRYM7KMCjaBCw9GICrFnKqwA/rIOu8+888VDvQzx+H0CGg0UQ7JFK97RdGKgsW+uz0Bm+XPjd0Z10LRqLHvctfBM2XRt3iBKIT8DSX3lZM0YEbTWlI6+tO6e4lxZJgMe8GyzEm1SlA+pQBbJS/I71DDPshrvwJSBupYCYc/T5WIUIs2odpWrv7cHFOj9eoXlYALbWdBLLYicXkbJmoMxen63pyYxioPN0heOu1Yt37LUoj9rE3j5s2dKBUR8vTKStcuAdi7JCbaAAA==",
+   "takenAt": "2026-03-07T15:07:42",
+   "focus": {
+    "x": 49,
+    "y": 45
+   },
+   "hash": "6af9f9e9dbf0b3d2",
+   "focusBy": "faces"
+  },
+  "cape-town-2026/cape-town/photos/img-7532": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7532-160.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7532-160.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7532-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7532-480.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7532-480.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7532-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7532-960.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7532-960.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7532-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7532-1600.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7532-1600.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7532-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/cape-town-2026/cape-town/photos/img-7532-2400.avif",
+     "webp": "/media/cape-town-2026/cape-town/photos/img-7532-2400.webp",
+     "jpg": "/media/cape-town-2026/cape-town/photos/img-7532-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABQBQCdASoUABsAPu1krVAppSQisBgIATAdiUATpmX4Jw7mFG+Z3gyhLtrpnxOkruyW/9QA/qya68W3nZqoqS5UIOaTLZOn3Vpjkofew8tnC0S8rAnzS3e41+G5xwHzDzH0ImH85xvQyU1Omz6ntQtaNKP4M72awM2mfzPO4Uv/bVRAfuIo/0o9FAXv5w73wqh3A1WSXdJyLU5adqFdU3TbwbKk03B25yxIFk/hyeuXlyJPlqBn/XJW0tDGCERInJSMdTwFPvuHQAAA",
+   "takenAt": "2026-03-07T19:19:30",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "hash": "b2b1b397cba93c5c",
+   "focusBy": "attention"
+  },
+  "cape-town-2026/cape-town/videos/93e525c2-4830-4a7f-9c80-2286803229ea": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/cape-town-2026/cape-town/videos/93e525c2-4830-4a7f-9c80-2286803229ea.mp4",
+   "poster": "/media/cape-town-2026/cape-town/videos/93e525c2-4830-4a7f-9c80-2286803229ea-poster.jpg",
+   "takenAt": "2026-03-06T18:20:16",
+   "hash": "ccf8868e93b91879",
+   "bytes": 6925880
+  },
+  "cape-town-2026/cape-town/videos/d55d49f9-a3c1-42d1-98aa-1527cf360299": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/cape-town-2026/cape-town/videos/d55d49f9-a3c1-42d1-98aa-1527cf360299.mp4",
+   "poster": "/media/cape-town-2026/cape-town/videos/d55d49f9-a3c1-42d1-98aa-1527cf360299-poster.jpg",
+   "takenAt": "2026-03-07T16:15:58",
+   "hash": "dba79b9994b4f4ba",
+   "bytes": 4672229
+  },
+  "cape-town-2026/cape-town/videos/img-7216": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/cape-town-2026/cape-town/videos/img-7216.mp4",
+   "poster": "/media/cape-town-2026/cape-town/videos/img-7216-poster.jpg",
+   "takenAt": "2026-03-05T17:11:20",
+   "hash": "f0c31c27b156cfac",
+   "bytes": 14259819
+  },
+  "cape-town-2026/cape-town/videos/img-7551": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/cape-town-2026/cape-town/videos/img-7551.mp4",
+   "poster": "/media/cape-town-2026/cape-town/videos/img-7551-poster.jpg",
+   "takenAt": "2026-03-07T17:47:45",
+   "hash": "d94b7c741a9caa93",
+   "bytes": 6787299
+  },
+  "aruba-2026/aruba/photos/img-0351": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0351-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0351-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0351-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0351-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0351-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0351-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0351-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0351-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0351-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0351-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0351-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0351-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0351-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0351-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0351-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdBagBDoH+GXi5TVHgAM4ogvCyb25G5gQ2dmZHHxW+SqJsYhFGpvtRffbrTqlDmcpvOsqYItcvvQMvZ+X/S+UnLpfat45ncjneAzWhE8JD4y1oRfqIRc9vGp2INmffRJOKuZRy+ZFJarL8WDAGoLebQnPQk6vS4i0w704erfswHSvIAAAA",
+   "takenAt": "2026-09-03T17:59:04",
+   "focus": {
+    "x": 59,
+    "y": 72
+   },
+   "hash": "6c64646808785958",
+   "focusBy": "faces"
+  },
+  "aruba-2026/aruba/photos/img-0354": {
+   "type": "photo",
+   "w": 2316,
+   "h": 3088,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0354-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0354-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0354-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0354-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0354-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0354-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0354-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0354-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0354-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0354-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0354-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0354-1600.jpg"
+    },
+    {
+     "w": 2316,
+     "avif": "/media/aruba-2026/aruba/photos/img-0354-2316.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0354-2316.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0354-2316.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhYBAABXRUJQVlA4IAoBAADQBQCdASoUABsAPu1qrVCppaQiqAqpMB2JbACdMuIq1X+z/4B0+x8EVg5kNWxz85/0wzCN3eZaAPp0UY4UE6wxDIVI8EQ3KlRl5YDktXbaFasyt0MWbQmtIwHjQhpiEniq7Vzv/kH8fFJTeRhWN1ACpy1lpu51adkeH7X/jaIYmo4MnKrsoODyMfpj6Fnd/+qSqJH8+R0/iY4+O6PWpuTzb2atIzoTkShv9IJKtDWKltXv6qEAJR1EVWGjA64dW/2TWWiUJLDXdQ5NH12/Cyd9X3piC9zlgpzzyf9y9PkfM2w75A94Pz7Rb0XRybij9+p6JmpkzDgYK/7klVBXP/ZJVPHWFMat8IUgAA==",
+   "takenAt": "2026-09-03T17:59:32",
+   "focus": {
+    "x": 66,
+    "y": 86
+   },
+   "hash": "c4e6071991391898",
+   "focusBy": "faces"
+  },
+  "aruba-2026/aruba/photos/img-0358": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0358-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0358-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0358-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0358-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0358-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0358-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0358-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0358-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0358-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0358-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0358-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0358-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0358-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0358-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0358-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAAAQBwCdASoUABsAPu1osFAppaUiqAqpMB2JagCdM6T//nbUsRylikcKhr4KSNa4dvb6hDs2wP/VsWnyMSqPrhHYAADhhf1khu8CiMp24ua1k5UupID3lAEz0nSnRcTnS4lwJDm1uOhOZjceJcw84Mu8+Dq/zteAxs+LC5nredaaj5T4zcmK2qEoBQmL/uBj3QKapR0m8Un+rwOhJM9S8KhjrlsD6rxFH3CLbR5NuHAYmi81Y+AaghftfV5lemYMkknXgapauYwepWL8GCKI4uVRVWQVqlaGz+BMLl4Z1nmKv4dJmrNb9VMyQ40wVqg1d4cpUiHq/vB5sCoJgFw272NcjNwfStIAuedStQgAAAA=",
+   "takenAt": "2026-09-03T18:15:32",
+   "focus": {
+    "x": 75,
+    "y": 0
+   },
+   "hash": "a6b62df6e0b99664",
+   "focusBy": "attention"
+  },
+  "aruba-2026/aruba/photos/img-0360": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0360-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0360-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0360-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0360-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0360-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0360-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0360-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0360-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0360-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0360-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0360-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0360-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0360-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0360-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0360-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAAAwBgCdASoUABsAPu1iq1AppSOisBgIATAdiWwAnTNnMYNIsOYMTjKLJJY+iktEufkDKwuj4aBVrEDQAP262TlgO+V24qNX4Rm+3gBBKG1Ad2EA4Q/zpQLzRc8gBTn6nAd+uTZcXUDr8VXlJ7nr1fHYx1zOdA4i8FjkVANQVIFPqMnUIzthkuvTrfYmmHOK32X/KSqWCC/m9LxKEJ7Neg9OsDO9+t2JZOsl6Eb+rJ5gi/MNoKT/ukI0qJmsWwTDpVndiI8QzeSn9ssjA6V5ukJjxDYbmIwD6IF2q2MMubJmAprKoX7NbYdkSPQ3x4+QUtbmjxPc6J8YTCpoOmw3/yivZNyC/HWixv4iDaxf0zj4oAAA",
+   "takenAt": "2026-09-03T18:26:21",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "hash": "9457351c3333c573",
+   "focusBy": "attention"
+  },
+  "aruba-2026/aruba/photos/img-0361": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0361-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0361-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0361-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0361-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0361-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0361-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0361-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0361-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0361-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0361-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0361-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0361-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0361-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0361-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0361-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwBACdASoUABsAPu1srlKppaQiqAgBMB2JYwDE2FbQJSiM2zkaSii2vgxRtXaRt0AA/vsCAigYtLEuZ6oOg8iBXbqHTc0NXXglDSF/gVfxlxN3q9GMSGNlAgH9k6U+Yga3FqM6rkH4Lg1JJU0V2kwdPRVDQ32faF+ugZetgyh8XcVgfTeYKbALE2yk79Y0gAA=",
+   "takenAt": "2026-09-03T19:20:03",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "hash": "e1a6dde2839fb93b",
+   "focusBy": "attention"
+  },
+  "aruba-2026/aruba/photos/img-0399": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0399-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0399-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0399-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0399-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0399-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0399-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0399-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0399-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0399-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0399-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0399-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0399-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0399-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0399-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0399-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABwBQCdASoUABsAPu1mq0+ppaOiMBgIATAdiWQAtRshhGkbOUq7iU5lZkEXSoi0qPiq9M8AAP4yjw8JWh2/ifmqcDbYq0FDXvqYNJMJ/NSW3LQbIPK5T9vtcEYit+Z42zakQUBUXh8BnCjaxIDVa9noIGtH89tpbKWIXl1kG9nC7fZjOb8M8cWNa0n2ft5tqau5XSGE+L7RgE6DstGILp7aM8ofQe9yGH+WBTNfRzu82Re0PxOAsaAAAAA=",
+   "takenAt": "2026-09-05T18:57:40",
+   "focus": {
+    "x": 25,
+    "y": 88
+   },
+   "hash": "cf4799893773c95b",
+   "focusBy": "attention"
+  },
+  "aruba-2026/aruba/photos/img-0404": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/aruba-2026/aruba/photos/img-0404-160.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0404-160.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0404-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/aruba-2026/aruba/photos/img-0404-480.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0404-480.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0404-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/aruba-2026/aruba/photos/img-0404-960.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0404-960.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0404-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/aruba-2026/aruba/photos/img-0404-1600.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0404-1600.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0404-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/aruba-2026/aruba/photos/img-0404-2400.avif",
+     "webp": "/media/aruba-2026/aruba/photos/img-0404-2400.webp",
+     "jpg": "/media/aruba-2026/aruba/photos/img-0404-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBQCdASoUABsAPu1urlKppiQiqAgBMB2JZQC+Wf/giv3vYTGKkws/BWWaJ9S82BG6WAD+gPfzbO/fLNIz6vUNNv0hRJMie5cZ26yfETLwKBUS8QrPfZ5yZ0txkq1Er3E5EhwvNrFc6m8d8n25/aep8siC9sRMkwXiP3273NqI8GUe/4rUAA==",
+   "takenAt": "2026-09-05T18:59:39",
+   "focus": {
+    "x": 100,
+    "y": 77
+   },
+   "hash": "030000000009494a",
+   "focusBy": "attention"
+  },
+  "aruba-2026/aruba/videos/img-0345": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/aruba-2026/aruba/videos/img-0345.mp4",
+   "poster": "/media/aruba-2026/aruba/videos/img-0345-poster.jpg",
+   "takenAt": "2026-09-03T18:00:23",
+   "hash": "0bc617637113391f",
+   "bytes": 5022014
+  },
+  "aruba-2026/aruba/videos/img-0346": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/aruba-2026/aruba/videos/img-0346.mp4",
+   "poster": "/media/aruba-2026/aruba/videos/img-0346-poster.jpg",
+   "takenAt": "2026-09-03T21:58:28",
+   "hash": "fdfefcff3f3a8dce",
+   "bytes": 8405922
+  },
+  "aruba-2026/aruba/videos/img-0355": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/aruba-2026/aruba/videos/img-0355.mp4",
+   "poster": "/media/aruba-2026/aruba/videos/img-0355-poster.jpg",
+   "takenAt": "2026-09-03T21:59:43",
+   "hash": "80002088c0b0181e",
+   "bytes": 6325849
+  },
+  "aruba-2026/aruba/videos/img-0365": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/aruba-2026/aruba/videos/img-0365.mp4",
+   "poster": "/media/aruba-2026/aruba/videos/img-0365-poster.jpg",
+   "takenAt": "2026-09-04T13:04:20",
+   "hash": "069313859c9c8907",
+   "bytes": 6811237
   }
  }
 }

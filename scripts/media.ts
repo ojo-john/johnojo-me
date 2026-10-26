@@ -19,8 +19,9 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import exifReader from "exif-reader";
-import sharp from "sharp";
+import sharp, { type Sharp } from "sharp";
 import { parse as parseYaml } from "yaml";
+import { focusFromFaces, type FaceBox, type Focus } from "../src/lib/content/focus";
 
 const SOURCE = process.env.MEDIA_SOURCE ?? path.join(os.homedir(), "workspace", "johnojo-media");
 const ROOT = process.cwd();
@@ -37,8 +38,14 @@ const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
 
 type Variant = { w: number; avif: string; webp: string; jpg: string };
 type Fingerprint = { hash?: string; bytes?: number; duplicateOf?: string };
+/** Where the subject sits, as percentages across (x) and down (y): the CSS object-position for crops. */
+
+/** Width the focus probe works at: plenty to find faces, quick to compute. */
+const FOCUS_PROBE = 400;
+const CENTRE = 50;
+
 type Entry =
-  | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null } & Fingerprint)
+  | ({ type: "photo"; w: number; h: number; variants: Variant[]; placeholder: string; takenAt: string | null; focus?: Focus; focusBy?: "faces" | "attention" } & Fingerprint)
   | ({ type: "video"; w: number; h: number; src: string; poster: string; takenAt: string | null } & Fingerprint);
 
 /** Difference hash: 64 bits describing an image's light/dark pattern. Near-identical pictures differ by a few bits. */
@@ -142,13 +149,99 @@ function decodable(file: string, tmp: string): string {
   return out;
 }
 
+/**
+ * Find the most important part of the photo (faces and skin tones weigh most) with sharp's attention
+ * strategy, once as a wide crop (which part to keep top-to-bottom) and once as a tall crop (side-to-side).
+ * Covers and thumbnails crop to fit their frame; this keeps that crop on the people instead of the middle.
+ */
+async function focusPoint(oriented: Sharp): Promise<Focus> {
+  const { data, info: base } = await oriented.clone().resize({ width: FOCUS_PROBE }).toBuffer({ resolveWithObject: true });
+  const crop = async (width: number, height: number) =>
+    (await sharp(data).resize(width, height, { fit: "cover", position: sharp.strategy.attention }).toBuffer({ resolveWithObject: true })).info;
+  const short = Math.round((FOCUS_PROBE * 9) / 16);
+  const wide = await crop(FOCUS_PROBE, short);
+  const tall = await crop(short, FOCUS_PROBE);
+  // Offsets come back as negative pixels into the scaled image; turn them into a share of the spare room.
+  const pct = (offset: number | undefined, spare: number) => (spare > 0 ? Math.min(100, Math.round((Math.abs(offset ?? 0) / spare) * 100)) : CENTRE);
+  const tallScaledWidth = (base.width * FOCUS_PROBE) / base.height;
+  return { x: pct(tall.cropOffsetLeft, tallScaledWidth - short), y: pct(wide.cropOffsetTop, base.height - short) };
+}
+
+const FACES_SRC = path.join(ROOT, "scripts", "faces.swift");
+const FACES_BIN = path.join(ROOT, ".cache", "faces");
+const FACE_BATCH = 100;
+
+
+/** Compile the Vision face finder once (and again whenever its source changes). Null off macOS or without Xcode tools. */
+function faceFinder(): string | null {
+  if (process.platform !== "darwin") return null;
+  try {
+    if (!fs.existsSync(FACES_BIN) || fs.statSync(FACES_BIN).mtimeMs < fs.statSync(FACES_SRC).mtimeMs) {
+      fs.mkdirSync(path.dirname(FACES_BIN), { recursive: true });
+      execFileSync("swiftc", ["-O", FACES_SRC, "-o", FACES_BIN], { stdio: "ignore", timeout: 300_000 });
+    }
+    return FACES_BIN;
+  } catch (err) {
+    console.warn(`  ! Face finder unavailable (${(err as Error).message}); covers will use the colour-based focus instead.`);
+    return null;
+  }
+}
+
+/**
+ * Point every photo's focus at its faces, when it has any. Runs on the upright, EXIF-free web copies, so
+ * manual turns are already applied. Photos are checked once (focusBy records the outcome).
+ */
+function applyFaceFocus(items: Record<string, Entry>): number {
+  const pending = Object.entries(items).filter((pair): pair is [string, Entry & { type: "photo" }] => pair[1].type === "photo" && !pair[1].focusBy);
+  if (pending.length === 0) return 0;
+  const bin = faceFinder();
+  if (!bin) return 0;
+  const localOf = (e: Entry & { type: "photo" }) => path.join(ROOT, "public", (e.variants.find((v) => v.w >= 960) ?? e.variants[e.variants.length - 1]).jpg);
+  let withFaces = 0;
+  for (let i = 0; i < pending.length; i += FACE_BATCH) {
+    const batch = pending.slice(i, i + FACE_BATCH).map(([id, e]) => ({ id, e, file: localOf(e) })).filter((b) => fs.existsSync(b.file));
+    let out = "";
+    try {
+      out = execFileSync(bin, batch.map((b) => b.file), { encoding: "utf8", timeout: 300_000, maxBuffer: 16 * 1024 * 1024 });
+    } catch (err) {
+      // A failed batch keeps the colour-based focus; the next run tries these photos again.
+      console.warn(`  ! Face check failed for ${batch.length} photos: ${(err as Error).message}`);
+      continue;
+    }
+    const byFile = new Map<string, FaceBox[]>();
+    for (const line of out.split("\n").filter(Boolean)) {
+      try {
+        const r = JSON.parse(line) as { file: string; faces: FaceBox[]; error?: string };
+        if (!r.error) byFile.set(r.file, r.faces);
+      } catch {
+        console.warn(`  ! Unreadable face-finder output: ${line.slice(0, 80)}`);
+      }
+    }
+    for (const { e, file } of batch) {
+      const faces = byFile.get(file);
+      if (!faces) continue;
+      const focus = focusFromFaces(faces);
+      if (focus) {
+        e.focus = focus;
+        withFaces++;
+      }
+      e.focusBy = focus ? "faces" : "attention";
+    }
+  }
+  return withFaces;
+}
+
+/** EXIF orientation, then any manual turn on top (that needs the EXIF-oriented pixels first). */
+async function orientedImage(input: string, turn: number): Promise<Sharp> {
+  return turn ? sharp(await sharp(input).rotate().jpeg({ quality: 95 }).toBuffer()).rotate(turn) : sharp(input).rotate();
+}
+
 async function processPhoto(file: string, outDir: string, base: string, tmp: string, turn: number): Promise<Entry> {
   const input = decodable(file, tmp);
   const meta = await sharp(input).metadata();
   const takenAt = exifDate(meta.exif) ?? exifDate((await sharp(file).metadata().catch(() => ({ exif: undefined }))).exif) ?? spotlightDate(file);
   // .rotate() applies the EXIF orientation; re-encoding without .withMetadata() drops all EXIF/GPS.
-  // A manual turn goes on top of the EXIF one, so it needs the EXIF-oriented pixels first.
-  const oriented = turn ? sharp(await sharp(input).rotate().jpeg({ quality: 95 }).toBuffer()).rotate(turn) : sharp(input).rotate();
+  const oriented = await orientedImage(input, turn);
   const { width = 0, height = 0 } = await oriented.clone().toBuffer({ resolveWithObject: true }).then((r) => r.info);
   const widths = [...new Set([...WIDTHS.filter((w) => w < width), Math.min(width, WIDTHS[WIDTHS.length - 1])])].sort((a, b) => a - b);
   fs.mkdirSync(outDir, { recursive: true });
@@ -162,7 +255,7 @@ async function processPhoto(file: string, outDir: string, base: string, tmp: str
     variants.push({ w, avif: webPath(stem + ".avif"), webp: webPath(stem + ".webp"), jpg: webPath(stem + ".jpg") });
   }
   const tiny = await oriented.clone().resize({ width: 20 }).webp({ quality: 40 }).toBuffer();
-  return { type: "photo", w: width, h: height, variants, placeholder: `data:image/webp;base64,${tiny.toString("base64")}`, takenAt };
+  return { type: "photo", w: width, h: height, variants, placeholder: `data:image/webp;base64,${tiny.toString("base64")}`, takenAt, focus: await focusPoint(oriented) };
 }
 
 async function processVideo(file: string, outDir: string, base: string, tmp: string): Promise<Entry | null> {
@@ -224,8 +317,17 @@ async function main() {
           const stat = fs.statSync(file);
           const turn = rotations[id] ?? 0;
           const key = `${stat.size}:${stat.mtimeMs}${turn ? `:r${turn}` : ""}`;
-          if (cache[file]?.key === key && manifest.items[id]) {
+          const existing = manifest.items[id];
+          if (cache[file]?.key === key && existing) {
             skipped++;
+            // Photos processed before focus points existed get one without re-making every size.
+            if (existing.type === "photo" && !existing.focus) {
+              try {
+                existing.focus = await focusPoint(await orientedImage(decodable(file, tmp), turn));
+              } catch (err) {
+                console.warn(`  ! No focus point for ${id}: ${(err as Error).message}`);
+              }
+            }
           } else {
             try {
               const outDir = path.join(OUT, trip, citySlug, kind);
@@ -315,6 +417,9 @@ async function main() {
       kept.push(id);
     }
   }
+
+  const faced = applyFaceFocus(manifest.items);
+  if (faced) console.log(`Centred ${faced} photo(s) on faces for covers and thumbnails.`);
 
   manifest.generatedAt = new Date().toISOString();
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });

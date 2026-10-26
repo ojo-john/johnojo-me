@@ -1,10 +1,9 @@
-# Fields you leave out simply don't appear on the site. Nothing is filled in automatically.
-
-# Published stop by stop: each upcoming stop is a draft until it's done, so the site never shows where you are right now.
 title: Europe 2026
 year: 2026
 status: published
+kind: trip
 start: 2026-10-16
 datesNote: October 2026
 style: Solo · birthday trip
 theme: Football, food, architecture and city exploration
+cover: milan/photos/img-1087

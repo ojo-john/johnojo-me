@@ -48,12 +48,18 @@ export const rating = z.object({
 });
 export type Rating = z.infer<typeof rating>;
 
+/** Manual crop choices, top to bottom; each maps to a vertical position in FOCUS_Y. */
+export const FOCUS_BANDS = ["top", "upper", "centre", "lower", "bottom"] as const;
+export const FOCUS_Y: Record<(typeof FOCUS_BANDS)[number], number> = { top: 0, upper: 25, centre: 50, lower: 75, bottom: 100 };
+
 export const mediaMeta = z.object({
   caption: z.string().optional(),
   alt: z.string().optional(),
   hidden: z.boolean().optional(),
   /** Clockwise turn for a photo whose camera didn't record which way up it was. Applied by npm run media. */
   rotate: z.union([z.literal(90), z.literal(180), z.literal(270)]).optional(),
+  /** Which part to keep when a cover or thumbnail crops this photo, if the automatic choice misses. */
+  focus: z.enum(FOCUS_BANDS).optional(),
 });
 
 export const match = z.object({
