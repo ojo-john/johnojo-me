@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { breadcrumbs, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Picture } from "@/components/Picture";
@@ -7,7 +8,7 @@ import { PhotoPile } from "@/components/travel/PhotoPile";
 import { RankingLab } from "@/components/travel/RankingLab";
 import { TripExplorer } from "@/components/travel/TripExplorer";
 import { slim, toView, tripViews } from "@/components/travel/view";
-import { getTrip, getTrips } from "@/lib/content/load";
+import { getSite, getTrip, getTrips } from "@/lib/content/load";
 import { durationDays, formatRange } from "@/lib/format";
 import { mapFor } from "@/lib/geo";
 
@@ -52,6 +53,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
 
   return (
     <>
+      <JsonLd data={breadcrumbs(getSite().domain, [{ name: "Travel", path: "/travel/" }, { name: trip.title, path: `/travel/${trip.slug}/` }])} />
       <header className="band trip-band" style={{ ["--pillar" as string]: "var(--travel)" }}>
         {trip.coverPhoto ? (
           <figure className="cover">

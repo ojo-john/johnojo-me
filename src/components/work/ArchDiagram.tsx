@@ -36,7 +36,7 @@ export function ArchDiagram({ name, steps }: { name: string; steps: { label: str
 
   return (
     <div className={`arch${playing ? " flow" : ""}`}>
-      <svg viewBox={`0 0 ${PAD * 2 + COLS * W + (COLS - 1) * GX} ${PAD * 2 + rows * H + (rows - 1) * GY}`} role="img" aria-label={`${name} data path: ${steps.map((s) => s.label).join(", then ")}`}>
+      <svg viewBox={`0 0 ${PAD * 2 + COLS * W + (COLS - 1) * GX} ${PAD * 2 + rows * H + (rows - 1) * GY}`} role="group" aria-label={`${name} data path: ${steps.map((s) => s.label).join(", then ")}`}>
         <path className="edge" d={path} />
         {steps.map((s, i) => (
           <g

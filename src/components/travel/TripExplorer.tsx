@@ -76,7 +76,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     <div className="explore">
       <div className="map-col">
         <div ref={mapRef} className={`bigmap${drawn ? " in" : ""}`}>
-          <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
+          <svg viewBox={`0 0 ${map.width} ${map.height}`} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
             <g className="cam" style={{ transform: camera }}>
               <path className="land" d={map.land} />
               {route.length > 1 ? <path className="rt" d={"M" + route.map((p) => `${p.x} ${p.y}`).join(" L")} /> : null}
@@ -115,6 +115,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
         </div>
       </div>
 
+      <h2 className="sr-only">Stops on this trip</h2>
       <div className="cities">
         {visits.map((v) => (
           <article key={v.slug} id={v.slug} className={`card ccard${active === v.slug ? " act" : ""}`} data-city={v.slug} aria-labelledby={`h-${v.slug}`}>

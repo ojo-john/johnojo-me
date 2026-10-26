@@ -331,6 +331,7 @@ collections:
           - { name: company, label: Company }
           - { name: level, label: Level, required: false }
           - { name: intro, label: Home page introduction, widget: text }
+          - { name: seoDescription, label: Search result description, widget: text, required: false, hint: "What Google shows under your name. Keep it to 120–160 characters." }
           - { name: github, label: GitHub URL, type: url }
           - { name: linkedin, label: LinkedIn URL, type: url, required: false }
           - { name: email, label: Public contact email, type: email, required: false, hint: "Leave blank to show no email on the site" }

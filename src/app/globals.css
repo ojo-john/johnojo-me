@@ -247,6 +247,10 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tmap .tmap-pin { cursor: pointer; }
 .tmap .tmap-pin:hover circle:nth-child(2), .tmap .tmap-pin:focus-visible circle:nth-child(2) { fill: var(--sun); stroke: var(--ink); }
 .tmap .tmap-pin:focus-visible, .tmap a:focus-visible { outline: none; }
+/* Keyboard focus must be unmistakable (WCAG 2.4.7/2.4.11): a thick cobalt outline, not just a tint. */
+.tmap a:focus-visible .tmap-country, .tmap path.tmap-country:focus-visible { stroke: var(--work); stroke-opacity: 1; stroke-width: 3; fill-opacity: .35; }
+.tmap .tmap-pin:focus-visible circle:nth-child(2) { stroke: var(--work); stroke-width: 4; }
+.bigmap .pin:focus-visible circle { stroke: var(--work); stroke-width: 5px; }
 .tmap-pick { position: absolute; z-index: 2; width: min(280px, 80%); background: var(--paper); border: 2px solid var(--ink); border-radius: 14px; padding: 12px; box-shadow: 0 12px 32px rgba(18,20,23,.18); }
 .tmap-pick-hd { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
 .tmap-pick .circ { width: 32px; height: 32px; min-height: 0; color: var(--ink); background: var(--card); border: 2px solid var(--ink); border-radius: 50%; cursor: pointer; }

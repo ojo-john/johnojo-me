@@ -77,7 +77,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <aside className="card now" aria-labelledby="now-h">
+        <section className="card now" aria-labelledby="now-h">
           <h2 id="now-h">
             <i aria-hidden="true" />
             Latest
@@ -105,7 +105,7 @@ export default function Home() {
             <span aria-hidden="true">→</span>
           </Link>
           ) : null}
-        </aside>
+        </section>
       </section>
 
       <section className="wrap" aria-label={journal ? "Work, Travel and Journal" : "Work and Travel"}>

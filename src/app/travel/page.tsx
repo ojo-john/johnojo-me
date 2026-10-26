@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { breadcrumbs, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { Picture } from "@/components/Picture";
 import { RankingLab } from "@/components/travel/RankingLab";
 import { TravelMap, type MapStop } from "@/components/travel/TravelMap";
 import { slim, toView } from "@/components/travel/view";
-import { getTrips } from "@/lib/content/load";
+import { getSite, getTrips } from "@/lib/content/load";
 import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
 
-export const metadata: Metadata = {
-  ...pageMeta({ title: "Travel", description: "Every trip, city rankings, match days and photos.", path: "/travel/" }),
-};
+export function generateMetadata(): Metadata {
+  const s = travelStats(getTrips());
+  return pageMeta({
+    title: "Travel",
+    description: `${s.trips} trips, ${s.places} places in ${s.countries} countries: honest city rankings out of 100, football match days and photos from every trip.`,
+    path: "/travel/",
+  });
+}
 
 export default function TravelPage() {
   const all = getTrips();
@@ -34,6 +40,7 @@ export default function TravelPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbs(getSite().domain, [{ name: "Travel", path: "/travel/" }])} />
       <header className="band" style={{ ["--pillar" as string]: "var(--travel)" }}>
         <div className="wrap">
           <span className="kicker" style={{ opacity: 0.85 }}>

@@ -153,6 +153,8 @@ export const site = z.object({
   company: z.string(),
   level: z.string().optional(),
   intro: z.string(),
+  /** The home page's search-result snippet (aim for 120–160 characters). Falls back to the intro. */
+  seoDescription: z.string().optional(),
   github: z.string().url(),
   /** Null or left out (the editor leaves blank fields out) both mean "not shown". */
   linkedin: z.string().url().nullable().default(null),

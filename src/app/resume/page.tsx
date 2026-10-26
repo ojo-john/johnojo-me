@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { breadcrumbs, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { getExperience, getSite } from "@/lib/content/load";
 
-export const metadata: Metadata = {
-  ...pageMeta({ title: "Résumé", description: "Experience, skills and education.", path: "/resume/" }),
-};
+export function generateMetadata(): Metadata {
+  const site = getSite();
+  const skills = getExperience().featuredSkills.slice(0, 3).join(", ");
+  return pageMeta({ title: "Résumé", description: `${site.name}'s résumé: ${site.role} at ${site.company}. Experience, education and technical skills including ${skills}.`, path: "/resume/" });
+}
 
 /** Résumé built from content/experience.yaml. The same page is printed to /resume.pdf (npm run resume:pdf). */
 export default function ResumePage() {
@@ -19,6 +22,7 @@ export default function ResumePage() {
   ].filter(Boolean) as string[];
   return (
     <article className="wrap resume">
+      <JsonLd data={breadcrumbs(site.domain, [{ name: "Résumé", path: "/resume/" }])} />
       <header className="resume-head">
         <div>
           <h1>{site.name}</h1>

@@ -23,3 +23,12 @@ export function pageMeta({ title, description, path, image }: { title?: string; 
     },
   };
 }
+
+/** schema.org BreadcrumbList, so search results show "johnojo.me › Travel › Europe 2024" instead of a raw URL. */
+export function breadcrumbs(domain: string, trail: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [{ name: "Home", path: "/" }, ...trail].map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: `https://${domain}${c.path}` })),
+  };
+}

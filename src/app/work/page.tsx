@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { breadcrumbs, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { ResumeButton } from "@/components/ResumeButton";
 import { CareerTimeline } from "@/components/work/CareerTimeline";
 import { experienceByYear } from "@/lib/content/experience-years";
 import { SkillsProjects } from "@/components/work/SkillsProjects";
 import { getExperience, getProjects, getSite } from "@/lib/content/load";
 
-export const metadata: Metadata = {
-  ...pageMeta({ title: "Work", description: "Career timeline, skills and engineering projects.", path: "/work/" }),
-};
+export function generateMetadata(): Metadata {
+  const site = getSite();
+  const projects = getProjects().map((p) => p.name);
+  const skills = getExperience().featuredSkills.slice(0, 3).join(", ");
+  return pageMeta({
+    title: "Work",
+    description: `${site.name}, ${site.role.replace("Software Development Engineer", "SDE")} at ${site.company}: career timeline, ${skills} skills, and projects${projects.length ? ` like ${projects.join(" and ")}` : ""}.`,
+    path: "/work/",
+  });
+}
 
 export default function WorkPage() {
   const site = getSite();
@@ -18,6 +26,7 @@ export default function WorkPage() {
   const today = new Date().toISOString().slice(0, 10);
   return (
     <>
+      <JsonLd data={breadcrumbs(site.domain, [{ name: "Work", path: "/work/" }])} />
       <header className="band" style={{ ["--pillar" as string]: "var(--work)" }}>
         <div className="wrap">
           <span className="kicker" style={{ opacity: 0.85 }}>
