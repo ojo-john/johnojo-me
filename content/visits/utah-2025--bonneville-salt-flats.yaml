@@ -3,3 +3,6 @@ destination: bonneville-salt-flats
 order: 3
 kind: day-trip
 summary: "We went out to the salt flats."
+cover: photos/img-1779
+mediaMeta:
+  photos/img-1779: { caption: "Bonneville Salt Flats", alt: "Flat white salt crust stretching to the horizon under a deep blue sky" }

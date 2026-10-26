@@ -3,3 +3,22 @@ destination: milan
 order: 3
 arrive: 2026-10-24
 depart: 2026-10-26
+matches:
+  - home: Inter
+    away: Fiorentina
+    score: 2–1
+    competition: Serie A
+    date: 2026-10-25
+    stadium: San Siro
+    writeUp: "Fiorentina led from the 65th minute. Thuram equalised in the 91st, and Zieliński scored a 98th-minute penalty to win it and put Inter top of the table."
+cover: photos/img-0995
+mediaMeta:
+  photos/img-0995: { caption: "The Duomo", alt: "John taking a selfie in Piazza del Duomo with the cathedral behind him" }
+  photos/img-1035: { caption: "Up on the Duomo", alt: "John framed by a stone arch with the Milan skyline behind him" }
+  photos/img-1069: { caption: "Inside the Duomo", alt: "John standing among the cathedral's tall columns and patterned marble floor" }
+  photos/img-1100: { caption: "Cannoli", alt: "Two cannoli, one with chocolate chips and one with pistachio" }
+  photos/img-1110: { caption: "Pizza", alt: "Two slices of pizza on a paper plate" }
+  photos/img-1155: { caption: "San Siro", alt: "The pitch and red roof trusses of San Siro from the stands" }
+  photos/img-1174: { caption: "74,642 at San Siro", alt: "The stadium screen showing an attendance of 74,642" }
+  photos/img-1225: { caption: "Inter v Fiorentina", alt: "Inter players giving interviews pitchside after the game" }
+  photos/img-1241: { caption: "Castello Sforzesco", alt: "John taking a selfie in front of the castle's tower and fountain" }

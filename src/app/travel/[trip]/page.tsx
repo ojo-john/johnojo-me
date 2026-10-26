@@ -94,7 +94,8 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
         <TripExplorer visits={visits} map={map} />
       </div>
 
-      <RankingLab visits={visits.map(slim)} allVisits={allVisits} scope="trip" />
+      {/* Rankings only make sense for a trip with cities; a match day has none to score. */}
+      {trip.kind === "trip" && trip.visits.some((v) => v.kind === "city") ? <RankingLab visits={visits.map(slim)} allVisits={allVisits} scope="trip" /> : null}
 
       {awards.length || verdict.length ? (
         <section className="wrap" style={{ paddingBottom: 72 }} aria-labelledby="verdict-h">

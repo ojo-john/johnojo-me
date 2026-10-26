@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T16:49:28.947Z",
+ "generatedAt": "2026-10-26T00:10:49.490Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -5979,6 +5979,1558 @@
    "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABsAPu1irVAppSQisBgIATAdiWIArAANpyFlaCNUOOBFlkgpZLDQ/3EAAP5Z7PqpeVDJxayuomroOGOKYDmonVeTslpnoA3xNsbExSVIUxMCVwb19gj7DBlp2Ez9JxiSkC/Ascfi7GEVZMiPoVzTkTAkOT11EZkLujObg++zKzjSX5E5+QiCRAyMwTXDg4JjV1oOiAoWWtX3/gah/v884pIda3+1gGll937GhEEjMqXWVPIXvBg7TVQdpk0AAAA=",
    "takenAt": "2024-02-23T14:42:49",
    "hash": "49d3374ce4e390fc"
+  },
+  "arizona-2023/flagstaff/photos/img-1669": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/arizona-2023/flagstaff/photos/img-1669-160.avif",
+     "webp": "/media/arizona-2023/flagstaff/photos/img-1669-160.webp",
+     "jpg": "/media/arizona-2023/flagstaff/photos/img-1669-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/arizona-2023/flagstaff/photos/img-1669-480.avif",
+     "webp": "/media/arizona-2023/flagstaff/photos/img-1669-480.webp",
+     "jpg": "/media/arizona-2023/flagstaff/photos/img-1669-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/arizona-2023/flagstaff/photos/img-1669-960.avif",
+     "webp": "/media/arizona-2023/flagstaff/photos/img-1669-960.webp",
+     "jpg": "/media/arizona-2023/flagstaff/photos/img-1669-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/arizona-2023/flagstaff/photos/img-1669-1600.avif",
+     "webp": "/media/arizona-2023/flagstaff/photos/img-1669-1600.webp",
+     "jpg": "/media/arizona-2023/flagstaff/photos/img-1669-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/arizona-2023/flagstaff/photos/img-1669-2400.avif",
+     "webp": "/media/arizona-2023/flagstaff/photos/img-1669-2400.webp",
+     "jpg": "/media/arizona-2023/flagstaff/photos/img-1669-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAB03f/Ei7SVWpBAA/ZK/IlLclVZdttr1lxxZXOSKS9Oc+zvEk/iidFPLOl6yiG3fvpiQ3ZmiIu89GPnTWyd/FfJgWNHrsN8eSouEBuSa2XleCoAKY+WIYqBLUb3T0uJ4BHQiDkUbNAA=",
+   "takenAt": "2023-03-13T16:54:45",
+   "hash": "4f1d76327273fb7a"
+  },
+  "arizona-2023/flagstaff/videos/0284fc1c-3255-4d0a-a7b9-1f31e7d38bf2": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/arizona-2023/flagstaff/videos/0284fc1c-3255-4d0a-a7b9-1f31e7d38bf2.mp4",
+   "poster": "/media/arizona-2023/flagstaff/videos/0284fc1c-3255-4d0a-a7b9-1f31e7d38bf2-poster.jpg",
+   "takenAt": "2026-10-25T23:44:33",
+   "hash": "9414301c5d3f0230",
+   "bytes": 3599506
+  },
+  "arizona-2023/flagstaff/videos/96b7489d-a081-4023-a13a-5237f0f26d17": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/arizona-2023/flagstaff/videos/96b7489d-a081-4023-a13a-5237f0f26d17.mp4",
+   "poster": "/media/arizona-2023/flagstaff/videos/96b7489d-a081-4023-a13a-5237f0f26d17-poster.jpg",
+   "takenAt": "2026-10-25T23:44:03",
+   "hash": "ceae8e8c9a93dbbb",
+   "bytes": 6954117
+  },
+  "arizona-2023/sedona/photos/img-1605": {
+   "type": "photo",
+   "w": 4032,
+   "h": 3024,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/arizona-2023/sedona/photos/img-1605-160.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-1605-160.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-1605-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/arizona-2023/sedona/photos/img-1605-480.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-1605-480.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-1605-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/arizona-2023/sedona/photos/img-1605-960.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-1605-960.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-1605-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/arizona-2023/sedona/photos/img-1605-1600.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-1605-1600.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-1605-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/arizona-2023/sedona/photos/img-1605-2400.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-1605-2400.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-1605-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JbACdHX+lQEGkyM9+votJ57wA3aUKEujjZA/Lusrhhg6AodVESCXPBkoybOWPM7mgoCiN1kLStiVwd0NYdcG/OcenSSqbVv8dI6tfFnbPEP2utA8OwlM4SyNqdjglAg8PVXbaeaUbNw6f3dkoj63u58lyrqXm1rC/3LdL1kPRFxDjlCWIzlWq9gAAAA==",
+   "takenAt": "2023-03-12T16:23:10",
+   "hash": "dec8696df5e5b4a4"
+  },
+  "arizona-2023/sedona/photos/img-2079": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/arizona-2023/sedona/photos/img-2079-160.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-2079-160.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-2079-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/arizona-2023/sedona/photos/img-2079-480.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-2079-480.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-2079-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/arizona-2023/sedona/photos/img-2079-960.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-2079-960.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-2079-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/arizona-2023/sedona/photos/img-2079-1600.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-2079-1600.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-2079-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/arizona-2023/sedona/photos/img-2079-2400.avif",
+     "webp": "/media/arizona-2023/sedona/photos/img-2079-2400.webp",
+     "jpg": "/media/arizona-2023/sedona/photos/img-2079-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADwBQCdASoUABsAPu1opk2ppiMiMBgMATAdiWQAnQ4isj1+ODVW6FFQnTIslG+X3mVogwpKSUAgAAD+VwT2/BRJhfFH9V3JCD7mZB7Rgs9ZvG8b345cmnIFLtR5Dw+97qzVRG56Yp2BvKgTq7kxxVGGQQA5ta4x1LKpKzLfjXbU3cCDqTxhcm4I9X4bEI98Dc1s0uYn47tpRWNzznqQwePOOOfihoe8lrhfq5Mtka/bVOt/oMQpmf2VfuybPMWBtj3RA5jKCDcK+xWIniH5ZAAA",
+   "takenAt": "2023-03-11T15:51:27",
+   "hash": "81275bb97878dedc"
+  },
+  "arizona-2023/sedona/videos/1c067010-59f9-4b40-98f7-c1a05bb483ee": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/arizona-2023/sedona/videos/1c067010-59f9-4b40-98f7-c1a05bb483ee.mp4",
+   "poster": "/media/arizona-2023/sedona/videos/1c067010-59f9-4b40-98f7-c1a05bb483ee-poster.jpg",
+   "takenAt": "2026-10-25T23:43:23",
+   "hash": "5a79e7efcf1b98c3",
+   "bytes": 833404
+  },
+  "arizona-2023/sedona/videos/245890ac-7ded-49ce-aa40-8a6a679ad7ca": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/arizona-2023/sedona/videos/245890ac-7ded-49ce-aa40-8a6a679ad7ca.mp4",
+   "poster": "/media/arizona-2023/sedona/videos/245890ac-7ded-49ce-aa40-8a6a679ad7ca-poster.jpg",
+   "takenAt": "2026-10-25T23:45:03",
+   "hash": "b6db613bd234266f",
+   "bytes": 3645720
+  },
+  "europe-2026/milan/photos/img-0995": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-0995-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-0995-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-0995-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-0995-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-0995-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-0995-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-0995-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-0995-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-0995-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-0995-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-0995-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-0995-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-0995-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-0995-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-0995-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoUABsAPu1mq0+ppSOiMBgIATAdiWQAnTLMhgGeqDEI8SGu2dr6T2WD20xMCX7FqIAA/lFQs26zOWqBKD3RCKGr7KA+ZR2XMmhzafq+RvMOJ1hw+y2et4lgAvEgZwTuiMrLsKLFVDzJlHtLQG1r5s/QUOmgpvuGtoi4EyA1XeNXn/LGdUieu1u731+D9jemKSTFkwyK9x25rUL+9eIXRDIuzAIJP+8AAAA=",
+   "takenAt": "2026-10-24T09:47:57",
+   "hash": "ffcfd153d331f1d0"
+  },
+  "europe-2026/milan/photos/img-1006": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1006-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1006-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1006-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1006-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1006-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1006-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1006-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1006-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1006-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1006-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1006-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1006-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1006-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1006-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1006-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiWUAxNpsB12xfGFonAOxaEs2NVNnN9hezRoA4kQA/prKXOM3i0ci87LKZ8qicU9lO5J3MS5YWzJK3EOPGnOHqorNqAOWqtR971SJ/fpKtZuR1zUGc6/zXKclnw4HZCYA75mqy2x2jGVEKbhnWVEz1ZZV+eHnFoHnOFUKM/U7WMxV554bFRM6aC3Pwzt3Zp05LMlsaX38BtV+kq13CHSIBng2ir5EysNJAeNVWAA=",
+   "takenAt": "2026-10-24T10:06:30",
+   "hash": "bc3c6c4447636367"
+  },
+  "europe-2026/milan/photos/img-1009": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1009-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1009-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1009-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1009-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1009-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1009-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1009-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1009-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1009-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1009-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1009-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1009-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1009-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1009-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1009-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAwBQCdASoUABsAPu1kq0+ppSOiMBgIATAdiUAYHAEADqLf94w0YwKCXJz3sj1w5u13gAD+VAJoE9wvIGne83wQyN3Zh2k0ge/qs0nPg6+HvsPtSkpZ4pphKnUL5dcoEkgf4UELc50dY84zT5J+dWW/zEVkWDPYdYvO/1LPBgwGokCDZ0sngMd60SnEyQbLk3InftV08cQRKgXgC763b3aj3+Ukz9wsjCpVz/qFJU4jP1rSJOlE+USy5JVatNFGEuZCvNGI8AA=",
+   "takenAt": "2026-10-24T10:06:51",
+   "hash": "a3dbfbd9e9696d6a"
+  },
+  "europe-2026/milan/photos/img-1012": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1012-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1012-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1012-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1012-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1012-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1012-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1012-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1012-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1012-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1012-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1012-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1012-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1012-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1012-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1012-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACwBQCdASoUABsAPu1osFAppaSiqAqpMB2JZQDM0y5rpgQRt2wEaU8bRnnkxmq+N5QZKFDm2gAA/qunbIXi54UZ57TGXx1qdD2R4yHhjJ+ZXLW/FcP1rTpmPWRtErNY/Nd6vVG/vhBaMDN0chdwg4jesB8jrMxXgNd0OQkEVqDbsWZKs5e6oHUf6czNOUHdmmRTK0ZmK6cGCTeLn/4CLjAUATqBLahbO0gNOvLfegzC8BoNQ4uUXPsI5THIhifGZC0mIf2p8Fiywv+iAAA=",
+   "takenAt": "2026-10-24T10:08:37",
+   "hash": "3991999111717960"
+  },
+  "europe-2026/milan/photos/img-1026": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1026-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1026-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1026-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1026-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1026-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1026-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1026-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1026-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1026-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1026-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1026-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1026-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1026-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1026-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1026-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZQDGBYxi393J/jNTEZI1mZpY70/RxFDgQzCgAP7H4/049r7zLyVgvrt56VMC/l5RyI4NBPU6UNq/wsd41SPJ6+R/3Ejx0msB+6FfHFMkbMy5+KXk45i5OTHWb0omNAhpwGL0N23TKtb6mAfOuzmD+MoVW1B2PHfq1o+7RJbE5eptXL6j2fnGeR7GXJh30xF0lf15jb6LbKmpW1sFeCRVVVl0AAAA",
+   "takenAt": "2026-10-24T10:13:55",
+   "hash": "1d3326f0cccc2181"
+  },
+  "europe-2026/milan/photos/img-1035": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1035-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1035-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1035-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1035-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1035-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1035-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1035-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1035-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1035-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1035-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1035-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1035-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1035-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1035-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1035-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAAAwBQCdASoUABsAPu1qqlEppaOiqAqpMB2JYgC90Awk4Awrd/EJZd5gr0YuDSPi83wOgAD+Tu9MXmLECfMRhJ0+PcxxuW0IRptMEC36JpOeC3+U2iyjXfuFMzvCxXfkXwc6ib7t5M1U/p6tRDUq9zhfRxe5ODlf+aTs6eM7G+dRhVIL+Q0p8SEVki4NkKtcMi2sEJZ12SNQmCeUuh4/lFkRQ1O5bcrrQUH3H363b5tXQoJh2oVj2B1HjRj9AAAA",
+   "takenAt": "2026-10-24T10:19:08",
+   "hash": "71319034b4f85a6f"
+  },
+  "europe-2026/milan/photos/img-1043": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1043-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1043-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1043-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1043-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1043-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1043-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1043-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1043-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1043-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1043-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1043-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1043-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1043-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1043-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1043-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAADwBQCdASoUABsAPu1srVCppaQiqAqpMB2JQBOl+BVzHvYHkC2cnkIrd1WkGnSR4Las7aK3w19QAAD+yUQZUDiqH80DK/Ohz8uvP9xgut3QZrTG7ACwr7ckE9DuJE38Lai/xiHEDzB4sJ8zwJN+1pztROQrbAsgvv/9OZstv7Y2qNm+oRyLKRPO5fAVrdGez7Qmde8seobl0gYlaKQZhyis46lnLiNaJXaStGZ+aQA/3kjGr+XYFhSwpnUt6toGdzJ8gIXG+9jfojqMZjab9OBXFiG3Sg59meK5QwOEx7xoOdB1/AEjPx4X7SJjMjNhbADsBbqv/VAAAA==",
+   "takenAt": "2026-10-24T10:32:54",
+   "hash": "dbdb65e1d1d0a436"
+  },
+  "europe-2026/milan/photos/img-1044": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1044-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1044-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1044-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1044-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1044-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1044-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1044-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1044-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1044-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1044-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1044-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1044-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1044-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1044-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1044-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAACQBQCdASoUABsAPu1srFEppaQiqAqpMB2JQBOmYwzlsQb50C2jrTSx/YgpF32J5CqH+oYuAAD6rL8P2HT/xqadYIbkZTPeOZjhwbznMGOzjju1Zq2ZF+5AcrXk0pEmGa9RoWLO2oc7CUvJqWcBjN3AQtwd6Y1Ago8+XiM+UFCfPMfclWnYPiuO6x/Syk19QKIARVVXLyKNDuv8vie9Ywtb9Zpb9tlSXMW/QR9TYrmXFSD2ykbSpqOgZQptE6x6D54lpWdvp2iatckLAO0D9hqB6n1WJ1bVlVCl7X94XAAAAA==",
+   "takenAt": "2026-10-24T10:33:00",
+   "hash": "a2b664e1c8c8f2b1"
+  },
+  "europe-2026/milan/photos/img-1069": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1069-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1069-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1069-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1069-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1069-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1069-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1069-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1069-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1069-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1069-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1069-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1069-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1069-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1069-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1069-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACwBQCdASoUABsAPu1sq08ppqOiMBgIATAdiWMAuwMsE6WD9GeAchi9MikfKfjRzyQ9Di+Hx+gA/Y+2Od62ly/AdYyIXLqkUqtvECv+GU2aKMm/NAdH2wKQZvjV9V8A/hyjTG3jW6oPCMnIT5VhzLQm1rqFap1kmBocqGHUNkbgvliaI6lxITSjzWvAmwzAaNyWV2rWmCn/iv1kf4MRgspAHwz4WPZhb7x6QrMQs3uqEGtC9gquM6k6SohSdjGzN52pfqgB/ZcqnEdK6XQaQXMAmBlUAvGvTwAAAA==",
+   "takenAt": "2026-10-24T10:43:39",
+   "hash": "343236b636333332"
+  },
+  "europe-2026/milan/photos/img-1080": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1080-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1080-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1080-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1080-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1080-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1080-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1080-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1080-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1080-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1080-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1080-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1080-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1080-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1080-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1080-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoUABsAPu1oqk8ppiOiMBgIATAdiWMAuwALL85Ml1GylnWgwOWGZlAtUNStDlAA/oHJukWuQ6MEkRJHpNFXNgEgleZYOec+qCK9CQCj8SZGypY3Aj4q7q4VRlQ6iHsKvn/ZHQT/45uhA478fN8FmviW2p4M/yOc0u/N71Be4s90Fk0nU+Sl4PVtVs2j6jrcIxx6ssyBLdfgp6QcGk83LEIO1ExAyCklFY+DWhy44A5ZikD0gVtmcrTLP6ZSwAAA",
+   "takenAt": "2026-10-24T10:49:49",
+   "hash": "479313318b47c783"
+  },
+  "europe-2026/milan/photos/img-1087": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1087-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1087-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1087-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1087-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1087-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1087-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1087-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1087-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1087-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1087-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1087-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1087-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1087-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1087-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1087-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACQBQCdASoUABsAPu1mrE+ppSQiMBgIATAdiWcAy2ndpFG771K3Ww/AHIJzbabR74eZS4lkAAD+lvtbNm28usMh2CtwVFLgzQCWpRFTldSDMDAoUWcDx71blrkoGmGvtw4WdRppEVDfPktv3NQBv4p44udgYrPp8JX5y19J0Ydi5ExrJLCgHuoieW7oScvCWY3VzAQQApknG50ktyTG72UQwJ9ezVbBlzYSfAtc3Q5CUoA0LWKwT/3ipJgxxbyRTZJWu72wAAA=",
+   "takenAt": "2026-10-24T10:57:22",
+   "hash": "6ca5a595d590f1b3"
+  },
+  "europe-2026/milan/photos/img-1100": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1100-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1100-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1100-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1100-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1100-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1100-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1100-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1100-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1100-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1100-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1100-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1100-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1100-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1100-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1100-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABQBgCdASoUABsAPu1osFAppaSiqAqpMB2JQBOmavQVj8AB7sX4KnjdeP3HESyIJpRDwRW4owIlLA+wAADhzByULCEDCaxZVHGae59LN0KOSA7PO8+BDLOqlhZJpgn5M5wDkbcvuelD92YQ4Zw6wQ3fqbH3+UpQNPsBd56iBIYz+yN5JeFBzcp6xlCJAQJ6bLuM9kN+GsnSGO4GoXeWshtZOvSzAh0HbCNpH7ntinjStSHqru3wz/WBh3cknRIMe6LlBgHoiQgJ97z9b38FmDuCMuUG4mhczuoeh9iYAAA=",
+   "takenAt": "2026-10-24T11:35:03",
+   "hash": "1e79c1e13030399d"
+  },
+  "europe-2026/milan/photos/img-1110": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1110-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1110-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1110-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1110-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1110-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1110-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1110-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1110-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1110-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1110-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1110-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1110-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1110-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1110-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1110-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAABQBgCdASoUABsAPu1irFAppSQisBgIATAdiWoAnSDIpm/IBM8g07r3T/dHZbGhHJ9zs8dEWK24TicBAAD8d//+weN6nbpdOnD77jI3zXaLynO3ksLizvFoP6pO29AlJfaN+QJKhJv5a9drY9h6MTfZi5vNoHU0XJKUijW4olyhLhwM6ng9ZF3R2f1C6piTUeZaceKtCsdWceN9nuUFfG2BesodWTxuHsINc/B04AO2Edqblot+NWCdkXbZiWlicDci1AiXgtWrTZDucfVDH7e9kMzlGkY8rYme9a6LLfe25M7k80gbRZHfGeTBTYqE4cpC2SiIEC4FHAAA",
+   "takenAt": "2026-10-24T12:37:13",
+   "hash": "6e6667cbb8cc8dfd"
+  },
+  "europe-2026/milan/photos/img-1155": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1155-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1155-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1155-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1155-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1155-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1155-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1155-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1155-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1155-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1155-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1155-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1155-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1155-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1155-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1155-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoUABsAPu1uqlEppiOiqAqpMB2JYwC7IP94AAwokXB1SD99VfxCJjfNyH7N9M5WTgAAzmBION7DAN7hd08katNv2qWpZ7mMLUn8kbBbtOVztXXABv+xi+WKPz5qn+JycvFUYmRIda8rCnq8pVTA7a1K8x/Rj/opECqRPo5FoDnA4bbHUuUE2StUxbehBMR9I9HK3vr6Kzgubcr2T0Nt1ufNXuCvw9Hj73SPzA8TdyZMzytHeKS7q5PxVJkBwAAA",
+   "takenAt": "2026-10-25T12:52:32",
+   "hash": "37110717171b6aab"
+  },
+  "europe-2026/milan/photos/img-1163": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1163-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1163-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1163-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1163-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1163-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1163-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1163-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1163-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1163-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1163-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1163-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1163-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1163-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1163-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1163-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAQBQCdASoUABsAPu1urlKppiQiqAgBMB2JbAC/Sf/i2fAhmDVz2Fmb9dm+4wwKTrIAAP6sBEcKN2LGXGYuiudjW4TsCO62eowZsZeURI/OFemoYqup0aP5dL0eBXzWAddaKtQorOFWuYdevmjv6n78ALzeeSPgyPeeF0/GcgqG/Dw//geq4yEtGwSGv2OGo/a4yUPNw8wD9eMqaGybTId+DZcW32z1FR3ch+FWu73ZlcD0l1XKA2B/mMeXo7jgeDjOtXFrXrW9dH+Ww8Tc3xA1YtLC0RqQinHc7HP60AA=",
+   "takenAt": "2026-10-25T13:07:08",
+   "hash": "0e63e1e5b61dc9a3"
+  },
+  "europe-2026/milan/photos/img-1173": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1173-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1173-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1173-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1173-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1173-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1173-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1173-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1173-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1173-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1173-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1173-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1173-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1173-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1173-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1173-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQApggf8B1e8LzZMIe4S96yAAzhUEXFf6O3Lxze/lD9RrQCokitWI7CKSx0YrChQjde0m26lRUZjBa3xrzxhhCJ6ZHw/H9iuDQT+zEBP6Ogo2SqRFH30PADNkAXIB8hZOzLm/M6FNI4AA",
+   "takenAt": "2026-10-25T13:21:20",
+   "hash": "131bc14545e29999"
+  },
+  "europe-2026/milan/photos/img-1174": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1174-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1174-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1174-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1174-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1174-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1174-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1174-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1174-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1174-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1174-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1174-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1174-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1174-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1174-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1174-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBQCdASoUABsAPu1srVCppaQiqAqpMB2JZQC06AuUHVDxDgSV+hVEPLfg1LQ7y+eRAAD6DcPHZvYuqUiJW9dFtwXyg6YhJ0gD5b2Y8VnroYdUvskmcnkFLV695DWTgVqyVg+MPB2XooOYACBUjYffNtj5kNjWPF724+7KpbNyqb7WwuPyQPbPvaYz1+iaDrzCl9w4t6gx6I+hp51TmLij0uEWcbW7EECCQgVLtC298OcyIHMN+5CE6oLqSnaCAAA=",
+   "takenAt": "2026-10-25T13:34:33",
+   "hash": "c9eda0d9c9c82b99"
+  },
+  "europe-2026/milan/photos/img-1221": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1221-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1221-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1221-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1221-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1221-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1221-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1221-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1221-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1221-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1221-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1221-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1221-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1221-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1221-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1221-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWgAuzLrqQAh6EZC22g83ySarRgrm49kMEWSIbAA/tRNwe4C0pPFnpM7hMy0QLupQEIonJEsVhlDQLgAa7jSyGCODOY/AE3jNpSUQlAEFn9TpQrFFBwiIacPjX6Jd34/+jPzAabQHAgX+Sw+mxixwD9QJxP4uFw8rE1fyrSy5I97dh8kWyldAjwUurTZ25Q/ENO/TJQ+4jqw4dkVOdK12+YJVNffRRvAAAAA",
+   "takenAt": "2026-10-25T14:38:11",
+   "hash": "8b6327095958f8e4"
+  },
+  "europe-2026/milan/photos/img-1225": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1225-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1225-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1225-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1225-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1225-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1225-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1225-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1225-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1225-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1225-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1225-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1225-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1225-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1225-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1225-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABwBQCdASoUABsAPu1ipk4ppSMiMBgMATAdiWgAuzOTP/gyjYYMqa2j3OIleme4RXBJvNAAANPUjXgY8d2gi8sANdK3MFt7tn7jTklGRQg/oU4dNTElDc8LloFm3nFJZUgvh7/tMFUNFe7969Y8Bq8BM7pwYEIqVayjIbO2NNNi1c7FsVN/G8nDjteEM9LYanG7twQCEvyIxCTxgMW3i5Aawqfje36bwdtILVsMueMr9KlhAAA=",
+   "takenAt": "2026-10-25T14:39:13",
+   "hash": "8789f6a7a3313b73"
+  },
+  "europe-2026/milan/photos/img-1236": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1236-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1236-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1236-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1236-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1236-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1236-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1236-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1236-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1236-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1236-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1236-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1236-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1236-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1236-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1236-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwBACdASoUABsAPu1qrFEppaQiqAqpMB2JZQDE2A9jBfS/N9wA2mguxHKG168fWkAA/qX+pBuf+GBUfHGMBkzOO4YTuuLKGcUsJzhGMrU3Ypo4Vm3f3AUQ3nYKLXhIdET9mIdWY6mubH0vBMRWQZqSRu/frbe69eLHNxWVC7UXaKSPd4xLg+Wuwa6mGWsU6zmeAAAA",
+   "takenAt": "2026-10-25T15:58:13",
+   "hash": "ce171b1b236b0b63"
+  },
+  "europe-2026/milan/photos/img-1241": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1241-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1241-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1241-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1241-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1241-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1241-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1241-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1241-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1241-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1241-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1241-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1241-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1241-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1241-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1241-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBbed+W4ADMMiPeQD6HKKAmwAP7fhystFnvhyGKqzs++LDRtq/hJQaNeJnaYx+YhQdOFMUxhCRWZFNVhELhyQxCo9fxzugac9hEzAxO/s0c6W4Gm+4rhul3TwNefhnGBw/5Hy/fYD165RwAAAA==",
+   "takenAt": "2026-10-25T16:00:29",
+   "hash": "c31b3b034362e5e2"
+  },
+  "europe-2026/milan/photos/img-1256": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1256-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1256-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1256-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1256-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1256-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1256-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1256-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1256-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1256-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1256-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1256-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1256-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1256-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1256-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1256-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBQCdASoUABsAPu1qrFCppaQiqAqpMB2JYwC1CTuEr6wZPbb6/9lkfSTY2sYrjYQoAAD+isgTDwH64Ug1dPPQI0OnmebBphEU1Y2HzXfL1+Lxw1nsUyqb489fevxRl7BMgD98acKKoMrt4oQX59T5lnzfZ+EPRiYLGZRLdMgViDBjy1pFq7G0oEr0vO4M4AA=",
+   "takenAt": "2026-10-25T17:30:38",
+   "hash": "c24ced9446070c6f"
+  },
+  "europe-2026/milan/videos/img-1154": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/milan/videos/img-1154.mp4",
+   "poster": "/media/europe-2026/milan/videos/img-1154-poster.jpg",
+   "takenAt": "2026-10-25T11:31:39",
+   "hash": "90013b134f185068",
+   "bytes": 4115510
+  },
+  "utah-2025/bonneville-salt-flats/photos/img-1779": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-160.avif",
+     "webp": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-160.webp",
+     "jpg": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-480.avif",
+     "webp": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-480.webp",
+     "jpg": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-960.avif",
+     "webp": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-960.webp",
+     "jpg": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-1536.avif",
+     "webp": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-1536.webp",
+     "jpg": "/media/utah-2025/bonneville-salt-flats/photos/img-1779-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUABsAPuVepU2pJSOiMAwBIByJQBYj6rhp1UpRf5zLYpwAAP7ueQT2xhdavd7RzwZ3dm5GPMN+YIUMuZJr11sDbsd1rFjJmNnbxoh3Ttz4zQAA",
+   "takenAt": "2025-07-05T16:18:29",
+   "hash": "e0e0c04042070408"
+  },
+  "utah-2025/bonneville-salt-flats/videos/img-1713": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/utah-2025/bonneville-salt-flats/videos/img-1713.mp4",
+   "poster": "/media/utah-2025/bonneville-salt-flats/videos/img-1713-poster.jpg",
+   "takenAt": "2025-07-05T21:47:41",
+   "hash": "000a7464662e3334",
+   "bytes": 8667020
+  },
+  "utah-2025/donut-falls/photos/100-0087": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/donut-falls/photos/100-0087-160.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/100-0087-160.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/100-0087-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/donut-falls/photos/100-0087-480.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/100-0087-480.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/100-0087-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/donut-falls/photos/100-0087-960.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/100-0087-960.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/100-0087-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/donut-falls/photos/100-0087-1600.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/100-0087-1600.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/100-0087-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/donut-falls/photos/100-0087-2048.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/100-0087-2048.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/100-0087-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwC7AYw6qz11LOgHiW+4QI8AAP67EdR7zbNgqabGWc7IlUdJ7GfCQX82JU4LLh/UhU3D60N8Ccdibw/JxWm3/sukcTgYyxn1Vu6Vw+rdReYIncl+Vl5wIkfLNHZZlm+6muHaVc8a6eLLNaFQsLazu6xtW48C1Vag4wAA",
+   "takenAt": "2025-07-05T10:38:02",
+   "hash": "c9cd3d9b9b9bbb6c"
+  },
+  "utah-2025/donut-falls/photos/img-6867": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/donut-falls/photos/img-6867-160.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-6867-160.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-6867-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/donut-falls/photos/img-6867-480.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-6867-480.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-6867-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/donut-falls/photos/img-6867-960.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-6867-960.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-6867-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/utah-2025/donut-falls/photos/img-6867-1536.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-6867-1536.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-6867-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAAAQBgCdASoUABsAPu1qq08ppiOiMBgIATAdiWwAnTlBUn4AocADrn1drWx5TrbhAm0opgNhhUPzXAAA9VaUlDSn2MAcogg2uHXy8I9F3Gl6micbG7UNTP8zsF9UjfaCBM2eHZBZqoZhSmnZNfLBBJLrn3uySKP9KSs6P9dC26b5htAb549QGtB50kpYiezZ/k8saDrniL+pUyVvRZdLFvppyh7WKJNcpJQk4vVvw4loWrGWFCZG49O6PtaL4IV30Om1x9knHbbYUVUBJEB09dQskXo0dTvEAAA=",
+   "takenAt": "2025-07-05T11:29:24",
+   "hash": "03072d6b6dd8f3c1"
+  },
+  "utah-2025/donut-falls/photos/img-8685": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8685-160.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8685-160.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8685-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8685-480.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8685-480.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8685-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8685-960.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8685-960.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8685-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8685-1600.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8685-1600.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8685-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8685-2048.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8685-2048.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8685-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBhQAz68V1nv7AR8goAA9Y6PPeDX3iNUl3CN7I7tKOr1bJkYM+gtfsrqy/Py3j+RBMPY8BpBoXDNPwvxYIn02pi57BBufqeW3lTxnobOzt7c90Z4aAAA",
+   "takenAt": "2025-07-05T10:19:23",
+   "hash": "4f4e9a95d4d1d9c3"
+  },
+  "utah-2025/donut-falls/photos/img-8688": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8688-160.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8688-160.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8688-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8688-480.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8688-480.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8688-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8688-960.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8688-960.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8688-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8688-1600.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8688-1600.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8688-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/donut-falls/photos/img-8688-2048.avif",
+     "webp": "/media/utah-2025/donut-falls/photos/img-8688-2048.webp",
+     "jpg": "/media/utah-2025/donut-falls/photos/img-8688-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYwCdINiC4w+r++DdgAaEipJPAAD7hHBAeDPtWlZhMFj/hVsbSdLahNSvc6Hh0qQn1/4SXsJZMdDmjN2mCnnmGbduF8ZEWoQmpJlAV1f4BNHSWLuG6cUrpONu2tNOWEcPlOFFVoG5wJc9yqEnbQAA",
+   "takenAt": "2025-07-05T10:19:39",
+   "hash": "674db59d1c526766"
+  },
+  "utah-2025/donut-falls/videos/100-0194": {
+   "type": "video",
+   "w": 960,
+   "h": 540,
+   "src": "/media/utah-2025/donut-falls/videos/100-0194.mp4",
+   "poster": "/media/utah-2025/donut-falls/videos/100-0194-poster.jpg",
+   "takenAt": "2025-07-05T11:24:55",
+   "hash": "6e6e27b7b36d6c65",
+   "bytes": 2300015
+  },
+  "utah-2025/donut-falls/videos/img-2321": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/utah-2025/donut-falls/videos/img-2321.mp4",
+   "poster": "/media/utah-2025/donut-falls/videos/img-2321-poster.jpg",
+   "takenAt": "2025-07-05T15:48:08",
+   "hash": "981cbc1c1448a172",
+   "bytes": 1675530
+  },
+  "utah-2025/donut-falls/videos/img-4178": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/utah-2025/donut-falls/videos/img-4178.mp4",
+   "poster": "/media/utah-2025/donut-falls/videos/img-4178-poster.jpg",
+   "takenAt": "2025-07-05T16:35:44",
+   "hash": "08696d1c6ccc0c66",
+   "bytes": 5556203
+  },
+  "utah-2025/salt-lake-city/photos/100-0073": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0073-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0073-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0073-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0073-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0073-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0073-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0073-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0073-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0073-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0073-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0073-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0073-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0073-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0073-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0073-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQAAKJqPCyFx5y1RhaAD+6Y80tX585EC4IW8dPxdJ/xBBMj6dvxVt9c1lFBBBth1LTY+Btcc4Ws7X/MrLDd1GTuywZj+IAAA=",
+   "takenAt": "2025-07-04T21:10:03",
+   "hash": "d0d2cbebcb4b6729"
+  },
+  "utah-2025/salt-lake-city/photos/100-0074": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0074-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0074-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0074-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0074-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0074-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0074-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0074-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0074-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0074-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0074-1536.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0074-1536.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0074-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABQBQCdASoUABsAPu1qr1CppaQiqAqpMB2JZwDPZBEUPysz1nSxCyW23e9Mlnx6BxiZLAAA/u7dniOKGrQynS48wr3ghRZMC6PV1AX1Z+T3ERMdnR7Hk5NdFSXQD3J4spb4rZ6/6+6OloVozCxMwQLsEiHYHQrWEyajHtNWht2TE7M0Tp8vahjNrrZfQJkUPc2kXZmArHUFTCgA",
+   "takenAt": "2025-07-04T21:10:09",
+   "hash": "d4681713074bb946"
+  },
+  "utah-2025/salt-lake-city/photos/100-0078": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0078-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0078-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0078-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0078-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0078-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0078-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0078-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0078-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0078-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0078-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0078-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0078-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0078-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0078-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0078-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAYuQzmdbcH0OZ5NFEAD+2e0WKZ/iRQD3vhGfQBypRy7vqTi3rUG3iYt/kkuWDvy4PQjIzgTmj6jRwzoPHWi8+jFYur/EGPE3J0hDWPirYA3Hed22fAw68ozoWpMzcLcRWZ8dcoQ/+KpO0Pm+JMgbwlDWJ0oAAA==",
+   "takenAt": "2025-07-04T21:10:47",
+   "hash": "6529ad3126363576"
+  },
+  "utah-2025/salt-lake-city/photos/100-0084": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0084-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0084-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0084-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0084-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0084-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0084-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0084-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0084-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0084-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0084-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0084-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0084-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0084-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0084-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0084-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdAYyKzgsmkeWzzLU9VBraAAD+TW2tUKUY9bjnuvgi3psP6QPWv6B6D/PyqWPnsliEY6yvaw5tK8VcEXaT8v6N+ZmAne9XLlrRq2z20BzgErNdU83YlP0lme1R75L6E8oXD9cOQq5QWVyyPGnbhp3Xf59HamNEwy/0OaF8UvMIosEzVLiAAAA=",
+   "takenAt": "2025-07-05T00:02:38",
+   "hash": "b5b1a9a79797b61c"
+  },
+  "utah-2025/salt-lake-city/photos/100-0094": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0094-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0094-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0094-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0094-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0094-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0094-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0094-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0094-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0094-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0094-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0094-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0094-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/100-0094-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/100-0094-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/100-0094-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JagCdACG39F9UVR2/ap/fQAD+xgPFR6JTE1tumujDEpFb79XMEzK+3nwdy9dGVHzyC/Xh37vtl1X4Lo8FeDSwIiLTxPsO/VkZG7f2dW7b2/NuJAjAWtg/Pp/cUx5EE4VQY3rY0/Sm09bruJ6MLbUS6E8KRWSKnozoWmav21w/+vS5Pb0ZEERC0ORMhoAA",
+   "takenAt": "2025-07-05T00:05:44",
+   "hash": "c746a69e9a9e9eaa"
+  },
+  "utah-2025/salt-lake-city/photos/img-4431": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4431-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4431-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4431-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4431-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4431-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4431-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4431-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4431-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4431-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4431-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4431-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4431-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4431-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4431-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4431-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgC1CCXgugqhW2ZhxzCDuhwAzfCWLWWRY2ivK+LKu3ZdRnp34nPrK92XFzGXgo0BJVfAHoeFHYxahE372WlqYbrRBUQJgp6WXHjZGlmGLaLTo23G/ZkC7xlW9rJoTA9HB7fylQ8kGJDiqEMNbvQhEJ8N4rHnEfWdBilUEvxzoAAA",
+   "takenAt": "2025-07-06T15:13:42",
+   "hash": "cf2c4d494c98b9b1"
+  },
+  "utah-2025/salt-lake-city/photos/img-4432": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4432-160.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4432-160.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4432-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4432-480.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4432-480.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4432-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4432-960.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4432-960.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4432-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4432-1600.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4432-1600.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4432-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/utah-2025/salt-lake-city/photos/img-4432-2048.avif",
+     "webp": "/media/utah-2025/salt-lake-city/photos/img-4432-2048.webp",
+     "jpg": "/media/utah-2025/salt-lake-city/photos/img-4432-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdFQvAeNTGRb6Gm5R5+wAA/kx/6JsTPwzLhRbFavlQAWGIuhczgN1YcDe1gbAf6OuZqTyVaUDXFSAaB6MpdfXkYtfopWn010aVps92siASghX27Cu+/nz/VaXl6H9RpiU6g8Hp8zi5j2A5Irrb3H353eQAAAA=",
+   "takenAt": "2025-07-06T15:14:24",
+   "hash": "3f09012401c3a392"
   }
  }
 }

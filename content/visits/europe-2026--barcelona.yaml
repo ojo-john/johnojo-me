@@ -24,7 +24,7 @@ mediaMeta:
   photos/img-0893: { caption: "The paella we made", alt: "A large pan of seafood paella topped with mussels and prawns" }
   photos/img-0532: { caption: "Espanyol v Atlético Madrid", alt: "A packed stand with the scoreboard showing 0–0" }
   photos/img-0588: { hidden: true } # near-duplicate of img-0586
-  photos/img-0565: { hidden: true } # another person's face
-  photos/img-0860: { hidden: true } # other people's faces (cooking class)
-  photos/img-0862: { hidden: true } # other people's faces (cooking class)
+  photos/img-0565: { caption: "Pitchside before kick-off", alt: "John taking a selfie by the pitch before Espanyol v Atlético Madrid" }
+  photos/img-0860: { caption: "The paella cooking class", alt: "John in an apron at the cooking class, pans of paella on the counter" }
+  photos/img-0862: { hidden: true } # near-repeat of img-0860
   videos/video-1020-singular-display: { hidden: true } # other people's faces (cooking class)

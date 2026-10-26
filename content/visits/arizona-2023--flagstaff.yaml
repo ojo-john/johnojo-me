@@ -5,3 +5,6 @@ kind: day-trip
 summary: "We did an outdoor course in Flagstaff."
 highlights:
   Activities: An outdoor course
+cover: photos/img-1669
+mediaMeta:
+  photos/img-1669: { caption: "The outdoor course", alt: "John and friends taking a selfie in the snow by the course entrance" }

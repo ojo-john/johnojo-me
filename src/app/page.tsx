@@ -11,6 +11,8 @@ import { mapFor, regionOf } from "@/lib/geo";
 
 /** The project whose system diagram is drawn behind the home Work panel. */
 const FLOW_PROJECT = "codequest";
+/** How many skills to show on the Work panel if no home page tags are chosen. */
+const HOME_TAG_FALLBACK = 6;
 
 export default function Home() {
   const site = getSite();
@@ -31,7 +33,7 @@ export default function Home() {
   const mainRegion = Object.entries(byRegion).sort((a, b) => (b[1]?.length ?? 0) - (a[1]?.length ?? 0))[0]?.[1] ?? [];
   const map = mapFor(mainRegion.map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng })), 600, 420, 0.08);
   const [first, ...rest] = site.name.split(" ");
-  const topSkills = Object.values(exp.skills).flat().slice(0, 8);
+  const topSkills = exp.featuredSkills.length > 0 ? exp.featuredSkills : Object.values(exp.skills).flat().slice(0, HOME_TAG_FALLBACK);
   // The Work panel's background: CodeQuest's data flow, or any project with a diagram if it's gone.
   const withDiagram = getProjects().filter((p) => p.diagram.length > 0);
   const flowProject = withDiagram.find((p) => p.slug === FLOW_PROJECT) ?? withDiagram[0];

@@ -69,7 +69,7 @@ collections:
       - { name: style, label: Travel style, required: false, hint: "e.g. Solo · birthday trip" }
       - { name: theme, label: One-line theme, widget: text, required: false, hint: "One or two sentences that sum up the trip" }
       - { name: intro, label: Introduction, widget: text, required: false, hint: "A short paragraph at the top of the trip page" }
-      - { name: cover, label: Cover photo, required: false, hint: "city/photos/img-1234 (see npm run status for names). Leave blank to use the first city's cover." }
+      - { name: cover, label: Cover photo, required: false, widget: cover-picker, scope: trip, hint: "Pick from every stop's photos. Leave blank to use the first city's cover." }
       - name: awards
         label: Personal awards
         widget: list
@@ -181,7 +181,7 @@ collections:
           - { name: stadium, label: Stadium, required: false }
           - { name: date, label: Date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
           - { name: writeUp, label: Write-up, widget: text, required: false, hint: "Your own words about the day" }
-      - { name: cover, label: Cover photo, required: false, hint: "photos/img-1234. Leave blank to use the first photo." }
+      - { name: cover, label: Cover photo, required: false, widget: cover-picker, hint: "Pick one of this visit's photos. Leave blank to use the first photo." }
       - name: media
         label: Photo order
         widget: list
@@ -200,6 +200,7 @@ collections:
           - { name: caption, label: Caption, required: false }
           - { name: alt, label: Description for screen readers, required: false, hint: "What's in the photo, for people who can't see it" }
           - { name: hidden, label: Hide this photo, widget: boolean, required: false, hint: "Turn on to keep it off the site without deleting it" }
+          - { name: rotate, label: Rotate, widget: select, required: false, value_type: int, options: [{ label: "90° clockwise", value: 90 }, { label: "180° (upside down)", value: 180 }, { label: "90° anticlockwise", value: 270 }], hint: "For a sideways or upside-down photo. Takes effect the next time the photos are processed." }
       - name: youtube
         label: YouTube videos (unlisted is fine)
         widget: list
@@ -385,3 +386,4 @@ collections:
             fields:
               - { name: group, label: Group, hint: "e.g. Languages" }
               - { name: items, label: Skills, widget: list }
+          - { name: featuredSkills, label: Home page tags, widget: list, required: false, hint: "The handful of tags on the home Work panel. Keep it to your most important skills." }

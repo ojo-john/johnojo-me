@@ -72,7 +72,7 @@ interface CmsField {
   required?: boolean;
   fields?: CmsField[];
   field?: CmsField;
-  options?: (string | { label: string; value: string })[];
+  options?: (string | { label: string; value: string | number })[];
   value_type?: string;
   min?: number;
   max?: number;
@@ -92,7 +92,7 @@ interface CmsConfig {
   collections: CmsCollection[];
 }
 
-type Def = { type: string; innerType?: z.ZodType; in?: z.ZodType; out?: z.ZodType; shape?: Record<string, z.ZodType>; element?: z.ZodType; valueType?: z.ZodType; entries?: Record<string, string> };
+type Def = { type: string; innerType?: z.ZodType; in?: z.ZodType; out?: z.ZodType; shape?: Record<string, z.ZodType>; element?: z.ZodType; valueType?: z.ZodType; entries?: Record<string, string>; options?: z.ZodType[]; values?: unknown[] };
 const def = (s: z.ZodType) => (s as unknown as { _zod: { def: Def } })._zod.def;
 
 /** Peel off optional/default/nullable wrappers and preprocess/transform steps to reach the shape underneath. */
@@ -187,10 +187,12 @@ function compareField(f: CmsField, s: z.ZodType, p: string, problems: string[]) 
       return;
 
     case "select": {
-      if (k !== "enum") return void problems.push(`${p}: select in the editor, ${k} in the schema`);
+      // A select maps to an enum of text, or to a union of literals for numeric choices (e.g. rotate: 90 | 180 | 270).
+      const literals = k === "union" ? d.options!.map((o) => def(o)) : [];
+      if (k !== "enum" && !(literals.length > 0 && literals.every((o) => o.type === "literal"))) return void problems.push(`${p}: select in the editor, ${k} in the schema`);
       const offered = (f.options ?? []).map((o) => (typeof o === "string" ? o : o.value));
-      const allowed = Object.values(d.entries!);
-      const skipped = OPTIONS_NOT_OFFERED[p] ?? [];
+      const allowed = k === "enum" ? Object.values(d.entries!) : literals.flatMap((o) => (o.values ?? []) as (string | number)[]);
+      const skipped: (string | number)[] = OPTIONS_NOT_OFFERED[p] ?? [];
       for (const o of offered) if (!allowed.includes(o)) problems.push(`${p}: option "${o}" isn't allowed by the schema`);
       for (const o of allowed) if (!offered.includes(o) && !skipped.includes(o)) problems.push(`${p}: schema option "${o}" is missing from the editor`);
       return;

@@ -20,6 +20,7 @@ import os from "node:os";
 import path from "node:path";
 import exifReader from "exif-reader";
 import sharp from "sharp";
+import { parse as parseYaml } from "yaml";
 
 const SOURCE = process.env.MEDIA_SOURCE ?? path.join(os.homedir(), "workspace", "johnojo-media");
 const ROOT = process.cwd();
@@ -66,6 +67,44 @@ const REPEAT_WINDOW_SECONDS = 30;
 const REPEAT_BITS = 30;
 type Cache = Record<string, { key: string; id: string }>;
 
+const VISITS = path.join(ROOT, "content", "visits");
+const ROTATIONS = new Set([90, 180, 270]);
+
+/** Same rule as the site's loader: "sedona + flagstaff" becomes "sedona-flagstaff" (no extension stripping). */
+const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/**
+ * Manual turns set in visit files (mediaMeta.<file>.rotate), keyed by media id. For photos whose camera
+ * didn't record which way up they were, so the fix lands in the web copies and every viewer sees it upright.
+ */
+function loadRotations(): Record<string, number> {
+  const out: Record<string, number> = {};
+  if (!fs.existsSync(VISITS)) return out;
+  for (const name of fs.readdirSync(VISITS).filter((f) => f.endsWith(".yaml"))) {
+    const [trip, visit] = name.replace(/\.yaml$/, "").split("--");
+    if (!trip || !visit) continue;
+    let doc: { photoFolder?: string; mediaMeta?: unknown };
+    try {
+      doc = (parseYaml(fs.readFileSync(path.join(VISITS, name), "utf8")) ?? {}) as typeof doc;
+    } catch (err) {
+      // A broken visit file is reported by the site build; here it only means no rotations from it.
+      console.warn(`  ! Couldn't read rotations from ${name}: ${(err as Error).message}`);
+      continue;
+    }
+    // mediaMeta is a map in hand-written files and a list of { file, ... } rows when saved by the editor.
+    const rows: [string, { rotate?: unknown }][] = Array.isArray(doc.mediaMeta)
+      ? doc.mediaMeta.filter((r) => r && typeof r.file === "string").map((r) => [r.file, r])
+      : Object.entries((doc.mediaMeta ?? {}) as Record<string, { rotate?: unknown }>);
+    for (const [file, meta] of rows) {
+      const turn = Number(meta?.rotate);
+      if (!ROTATIONS.has(turn)) continue;
+      const key = file.includes("/") ? file : `photos/${file}`;
+      out[`${trip}/${folderSlug(doc.photoFolder ?? visit)}/${key}`] = turn;
+    }
+  }
+  return out;
+}
+
 const readJson = <T,>(file: string, fallback: T): T => (fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as T) : fallback);
 const slugify = (s: string) => s.toLowerCase().replace(/\.[^.]+$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const webPath = (abs: string) => "/" + path.relative(path.join(ROOT, "public"), abs).split(path.sep).join("/");
@@ -103,12 +142,13 @@ function decodable(file: string, tmp: string): string {
   return out;
 }
 
-async function processPhoto(file: string, outDir: string, base: string, tmp: string): Promise<Entry> {
+async function processPhoto(file: string, outDir: string, base: string, tmp: string, turn: number): Promise<Entry> {
   const input = decodable(file, tmp);
   const meta = await sharp(input).metadata();
   const takenAt = exifDate(meta.exif) ?? exifDate((await sharp(file).metadata().catch(() => ({ exif: undefined }))).exif) ?? spotlightDate(file);
   // .rotate() applies the EXIF orientation; re-encoding without .withMetadata() drops all EXIF/GPS.
-  const oriented = sharp(input).rotate();
+  // A manual turn goes on top of the EXIF one, so it needs the EXIF-oriented pixels first.
+  const oriented = turn ? sharp(await sharp(input).rotate().jpeg({ quality: 95 }).toBuffer()).rotate(turn) : sharp(input).rotate();
   const { width = 0, height = 0 } = await oriented.clone().toBuffer({ resolveWithObject: true }).then((r) => r.info);
   const widths = [...new Set([...WIDTHS.filter((w) => w < width), Math.min(width, WIDTHS[WIDTHS.length - 1])])].sort((a, b) => a - b);
   fs.mkdirSync(outDir, { recursive: true });
@@ -160,13 +200,16 @@ async function main() {
   }
   const manifest = readJson<{ generatedAt: string; items: Record<string, Entry> }>(MANIFEST, { generatedAt: "", items: {} });
   const cache = readJson<Cache>(CACHE, {});
+  const rotations = loadRotations();
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "media-"));
   const seen = new Set<string>();
   const counts: Record<string, { photos: number; videos: number; first: string | null; last: string | null }> = {};
   let processed = 0, skipped = 0, failed = 0;
 
-  for (const trip of fs.readdirSync(SOURCE).filter((d) => fs.statSync(path.join(SOURCE, d)).isDirectory()).sort()) {
-    for (const city of fs.readdirSync(path.join(SOURCE, trip)).filter((d) => fs.statSync(path.join(SOURCE, trip, d)).isDirectory()).sort()) {
+  // Folders starting with "_" (e.g. _not-on-site) are kept out of the site entirely.
+  const folders = (dir: string) => fs.readdirSync(dir).filter((d) => !d.startsWith("_") && fs.statSync(path.join(dir, d)).isDirectory()).sort();
+  for (const trip of folders(SOURCE)) {
+    for (const city of folders(path.join(SOURCE, trip))) {
       for (const kind of ["photos", "videos"] as const) {
         const srcDir = path.join(SOURCE, trip, city, kind);
         if (!fs.existsSync(srcDir)) continue;
@@ -179,13 +222,14 @@ async function main() {
           const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
           const stat = fs.statSync(file);
-          const key = `${stat.size}:${stat.mtimeMs}`;
+          const turn = rotations[id] ?? 0;
+          const key = `${stat.size}:${stat.mtimeMs}${turn ? `:r${turn}` : ""}`;
           if (cache[file]?.key === key && manifest.items[id]) {
             skipped++;
           } else {
             try {
               const outDir = path.join(OUT, trip, citySlug, kind);
-              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp) : await processVideo(file, outDir, base, tmp);
+              const entry = kind === "photos" ? await processPhoto(file, outDir, base, tmp, turn) : await processVideo(file, outDir, base, tmp);
               if (entry) {
                 manifest.items[id] = entry;
                 cache[file] = { key, id };

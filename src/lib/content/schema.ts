@@ -52,6 +52,8 @@ export const mediaMeta = z.object({
   caption: z.string().optional(),
   alt: z.string().optional(),
   hidden: z.boolean().optional(),
+  /** Clockwise turn for a photo whose camera didn't record which way up it was. Applied by npm run media. */
+  rotate: z.union([z.literal(90), z.literal(180), z.literal(270)]).optional(),
 });
 
 export const match = z.object({
@@ -176,6 +178,8 @@ export const experience = z.object({
     .default([]),
   education: z.array(z.object({ school: z.string(), degree: z.string(), years: z.string() })).default([]),
   skills: mapOrList(z.array(z.string()), "group", "items"),
+  /** The few tags shown on the home page Work panel. The full list stays on /work/ and the résumé. */
+  featuredSkills: z.array(z.string()).default([]),
 });
 export type Experience = z.infer<typeof experience>;
 

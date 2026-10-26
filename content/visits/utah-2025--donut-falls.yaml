@@ -3,3 +3,9 @@ destination: donut-falls
 order: 2
 kind: day-trip
 summary: "We hiked to Donut Falls."
+cover: photos/img-6867
+mediaMeta:
+  photos/100-0087: { caption: "At the trailhead", alt: "John and friends standing by the cars at the trailhead" }
+  photos/img-6867: { caption: "The group on the trail", alt: "A big group of friends on a dirt trail with pine-covered mountains behind" }
+  photos/img-8685: { caption: "On the hike", alt: "John in sunglasses on a rocky trail with friends behind him" }
+  photos/img-8688: { caption: "On the hike", alt: "A friend in a white vest on the rocks by the stream" }

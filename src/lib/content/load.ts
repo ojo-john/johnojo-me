@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import type { z } from "zod";
+import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
 import { manifest as manifestSchema, type Manifest, type MediaItem } from "./media";
 import { scoreState, type ScoreState } from "./ranking";
 import {
@@ -184,6 +185,20 @@ export const getTrips = memo((): TripEntry[] => {
     .filter((t) => visible(t.status))
     .sort((a, b) => b.year - a.year || (b.start ?? "").localeCompare(a.start ?? ""));
 });
+
+/** Every photo per visit and per trip, hidden ones included, for the editor's cover picker. Drafts too. */
+export function getAdminMediaIndex(): AdminMediaIndex {
+  const items = getMediaManifest().items;
+  return buildAdminMediaIndex(
+    items,
+    getVisitFiles().map(({ v, visitSlug }) => ({
+      trip: v.trip,
+      visitSlug,
+      folder: folderSlug(v.photoFolder ?? visitSlug),
+      hiddenFiles: new Set(Object.entries(v.mediaMeta).flatMap(([k, m]) => (m.hidden ? [k.includes("/") ? k : `photos/${k}`] : []))),
+    })),
+  );
+}
 
 export const getTrip = (slug: string) => getTrips().find((t) => t.slug === slug);
 

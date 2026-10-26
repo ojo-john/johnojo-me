@@ -80,6 +80,7 @@ education:
     degree: B.S. Computer Science
     years: 2019 – 2023
 
+featuredSkills: [Java, TypeScript, Kotlin, AWS, React]
 skills:
   - group: Languages
     items: [Java, TypeScript, JavaScript, Kotlin]

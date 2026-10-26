@@ -4,3 +4,7 @@ order: 1
 summary: "We stayed in Sedona for spring break and went ATV riding."
 highlights:
   Activities: ATV riding
+cover: photos/img-1605
+mediaMeta:
+  photos/img-1605: { caption: "ATV riding", alt: "John and four friends in helmets standing by their ATVs on a dirt track" }
+  photos/img-2079: { caption: "Sedona's red rocks", alt: "Four friends posing on a lookout with red rock formations behind them" }
