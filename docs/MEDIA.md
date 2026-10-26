@@ -1,46 +1,46 @@
 # Photos and videos
 
-Originals live in **`~/workspace/johnojo-media`** (outside the code, never uploaded):
+## How it works once live
 
-```
-johnojo-media/<trip>/<city>/photos/   IMG_1234.HEIC, IMG_1235.jpg …
-johnojo-media/<trip>/<city>/videos/   IMG_1240.MOV …
-johnojo-media/<trip>/<city>/notes.md  your notes (optional)
-```
+1. **Upload**: Editor → "Upload photos" (or `/admin/upload/`). Pick the city, choose files, press Upload.
+   Originals go to the private R2 bucket (`R2_ORIGINALS_BUCKET`) through `/api/upload`, behind the admin login.
+2. **Process and publish**: press the button. `/api/process` starts the "Process media" GitHub Action, which:
+   downloads only new or edited originals → resizes, applies rotate/crop, finds faces, strips metadata →
+   uploads the visible web copies to the public bucket (`R2_BUCKET`, served at `media.johnojo.me`) and deletes
+   hidden ones → commits `content/media-manifest.json` → Cloudflare Pages rebuilds.
+3. **Edit** captions, covers, framing, rotate/crop and hide/show in the editor. Saving a visit re-runs the job
+   automatically when a photo needs re-making.
 
-Folder names become ids: `europe-2027`, `nice + french riviera` → `nice-french-riviera`.
+Nothing needs to stay on your Mac. Folders whose names start with `_` are never published.
 
-## Process them
+## Local commands (optional)
 
-```
-npm run media
-```
+| Command | What it does |
+|---|---|
+| `npm run media` | Process the media folder locally (`~/workspace/johnojo-media`) |
+| `npm run media:publish` | Process, back up originals, publish visible copies, all in one |
+| `npm run media:upload -- --dry-run` | Show what would be published or removed |
+| `npm run media:backup -- --dry-run` | Show which originals aren't backed up yet |
 
-For each new or changed file it:
+## One-time setup (needs John's accounts)
 
-- converts iPhone HEIC, fixes rotation, and makes AVIF + WebP + JPEG copies at up to four widths
-  (480–2400 px) with a tiny blurred placeholder;
-- **strips all metadata**: GPS location, camera serials and other EXIF never reach the site. Only the
-  time the photo was taken is kept (in `content/media-manifest.json`) to order photos and match football
-  fixtures;
-- compresses clips to 720p H.264 with a poster frame (uses macOS `avconvert`).
+1. **R2**: create two buckets, `johnojo-media` (public, custom domain `media.johnojo.me`) and
+   `johnojo-originals` (private, no public access). Create one API token: Object Read & Write, these two buckets.
+2. **Local**: put `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ORIGINALS_BUCKET`
+   in `.env.local` (git-ignored). Then `npm run media:publish` once to send everything up.
+3. **GitHub** repo → Settings → Secrets → Actions: the same five values.
+4. **Cloudflare Pages** project:
+   - Build env: `MEDIA_BASE_URL=https://media.johnojo.me`.
+   - Bindings: R2 bucket `ORIGINALS` → `johnojo-originals`.
+   - Variables: `GITHUB_REPO=ojo-john/johnojo-me`; secret `GITHUB_DISPATCH_TOKEN` = a fine-grained GitHub token
+     for that repo only, with "Contents: read and write" (repository_dispatch needs it).
+   - `ACCESS_TEAM_DOMAIN` / `ACCESS_AUD` as for metrics.
+5. **Cloudflare Access**: the "johnojo.me admin" application must cover `/admin/*`, `/api/upload`,
+   `/api/process` and `/api/preview/*` (and `/api/metrics`). The functions also verify the Access token and deny
+   without it.
 
-It skips files it has already done, so re-running after adding a few photos is quick. Deleted originals
-are removed from the site on the next run. One bad file never stops the rest.
+## Limits
 
-## Rules of thumb
-
-- **Clips over 25 MB after compressing are skipped** (Cloudflare's per-file limit). Trim them in the
-  Photos app, or upload to YouTube as **unlisted** and add the video id under *YouTube videos* in the
-  city's visit.
-- Don't add screenshots of tickets, QR codes, booking emails, passports or boarding passes.
-- Photos with other people's faces: hide any they wouldn't want online (*Photo captions → Hide this photo*).
-- Captions and screen-reader descriptions go in the visit's *Photo captions*; the cover photo is
-  `photos/img-1234` (file name, lower-case, no extension).
-- Only use your own photos, or ones you have permission for.
-
-## Where processed files go
-
-`public/media/` (git-ignored, about 500 MB and growing). At deploy they're uploaded to Cloudflare R2,
-which is free up to 10 GB of storage with no charge for people viewing them. Large video collections
-are what fill that up, which is another reason to put long videos on YouTube.
+- Uploads through the admin page: 100 MB per file (Cloudflare's free plan). Trim longer clips first.
+- Web clips over 25 MB after compression are skipped with a warning.
+- GitHub Actions on a private repo: 2,000 free minutes a month; a run takes a few minutes.

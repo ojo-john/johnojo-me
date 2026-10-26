@@ -1,0 +1,70 @@
+# Processes new or edited photos and clips in the cloud, publishes the visible ones and commits the
+# updated photo list, which makes Cloudflare Pages rebuild the site. Nothing here runs until the repo
+# is on GitHub with the secrets below set (see docs/MEDIA.md).
+#
+# Runs when:
+#   - the admin upload page's "Process and publish" button fires (repository_dispatch: process-media)
+#   - a visit file changes on main (a rotate/crop/hide edit saved in the editor)
+#   - you start it by hand (Actions → Process media → Run workflow)
+name: Process media
+
+on:
+  repository_dispatch:
+    types: [process-media]
+  push:
+    branches: [main]
+    paths: ["content/visits/**"]
+  workflow_dispatch:
+
+# One run at a time; a second trigger waits instead of racing the first one's commit.
+concurrency:
+  group: media
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ORIGINALS_BUCKET: ${{ secrets.R2_ORIGINALS_BUCKET }}
+      MEDIA_SOURCE: ${{ runner.temp }}/originals
+      MEDIA_KEEP_UNSEEN: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      # iPhone HEIC photos: sharp can't decode them, heif-convert can.
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libheif-examples
+      - run: npm ci
+      - name: Download new or edited originals
+        run: npm run media:pull
+      - name: Resize, rotate, crop, find faces
+        run: npm run media
+      - name: Publish visible photos (and remove hidden ones)
+        run: npm run media:upload
+      - name: Store the editor's working copies privately
+        run: npm run media:backup -- --previews-only
+      - name: Commit the updated photo list
+        run: |
+          if git diff --quiet -- content/media-manifest.json; then
+            echo "Nothing new to publish."
+            exit 0
+          fi
+          git config user.name "johnojo.me media bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/media-manifest.json
+          git commit -m "Process media"
+          # The editor may have saved in the meantime; rebase onto it rather than fail.
+          git pull --rebase origin main
+          git push origin HEAD:main

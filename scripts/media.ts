@@ -24,8 +24,9 @@ import sharp, { type Sharp } from "sharp";
 import { focusFromFaces, type Focus } from "../src/lib/content/focus";
 import { findFaces } from "./lib/faces";
 import { videoDateFrom } from "./lib/video-date";
-import { folderSlug, loadEdits } from "./lib/edits";
-import { editSignature, type PhotoEdit } from "../src/lib/content/photo-edits";
+import { loadEdits } from "./lib/edits";
+import { fileSlug, folderSlug, PHOTO_EXT, sourceKey, VIDEO_EXT } from "./lib/ids";
+import type { PhotoEdit } from "../src/lib/content/photo-edits";
 
 const SOURCE = process.env.MEDIA_SOURCE ?? path.join(os.homedir(), "workspace", "johnojo-media");
 const ROOT = process.cwd();
@@ -35,8 +36,7 @@ const CACHE = path.join(ROOT, ".cache", "media.json");
 
 // 160 px serves thumbnails; the larger sizes serve cards, heroes and the full-screen viewer.
 const WIDTHS = [160, 480, 960, 1600, 2400];
-const PHOTO_EXT = new Set([".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp", ".tif", ".tiff"]);
-const VIDEO_EXT = new Set([".mp4", ".mov", ".m4v"]);
+const KEEP_UNSEEN = process.env.MEDIA_KEEP_UNSEEN === "1";
 /** Cloudflare Pages rejects files over 25 MiB; larger clips belong on YouTube (unlisted) or R2. */
 const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
 
@@ -82,7 +82,6 @@ type Cache = Record<string, { key?: string; id?: string; statKey?: string; md5?:
 const VISITS = path.join(ROOT, "content", "visits");
 
 const readJson = <T,>(file: string, fallback: T): T => (fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as T) : fallback);
-const slugify = (s: string) => s.toLowerCase().replace(/\.[^.]+$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const webPath = (abs: string) => "/" + path.relative(path.join(ROOT, "public"), abs).split(path.sep).join("/");
 
 /** EXIF DateTimeOriginal as local wall-clock ISO (no timezone): what the camera clock said. */
@@ -198,8 +197,6 @@ async function writeEditPreview(input: string, id: string): Promise<void> {
   await sharp(input).rotate().resize(EDIT_EDGE, EDIT_EDGE, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
 }
 
-/** What a processed photo was made from: the original's bytes plus any edit. A change means re-make it. */
-const sourceKey = (size: number, md5: string, edit: PhotoEdit | undefined) => `${size}:${md5}${edit ? `|${editSignature(edit)}` : ""}`;
 
 /** MD5 of an original (R2 reports the same value as its ETag), remembered while the file is unchanged. */
 function fileMd5(file: string, stat: fs.Stats, cache: Cache): string {
@@ -305,7 +302,7 @@ async function main() {
           const file = path.join(srcDir, name);
           const ext = path.extname(name).toLowerCase();
           if (!(kind === "photos" ? PHOTO_EXT : VIDEO_EXT).has(ext)) continue;
-          const base = slugify(name);
+          const base = fileSlug(name);
           const citySlug = folderSlug(city); // same rule as the site, so "st. moritz" matches st-moritz
           const id = `${trip}/${citySlug}/${kind}/${base}`;
           seen.add(id);
@@ -364,8 +361,9 @@ async function main() {
     }
   }
 
-  // Originals that were deleted or renamed: drop their entries and generated files.
-  for (const id of Object.keys(manifest.items)) {
+  // Originals that were deleted or renamed: drop their entries and generated files. The cloud job only
+  // downloads new or edited originals, so there "not seen" means "not downloaded": it sets MEDIA_KEEP_UNSEEN.
+  for (const id of KEEP_UNSEEN ? [] : Object.keys(manifest.items)) {
     if (seen.has(id)) continue;
     delete manifest.items[id];
     const [trip, city, kind, base] = id.split("/");

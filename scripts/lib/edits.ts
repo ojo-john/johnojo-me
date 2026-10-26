@@ -6,10 +6,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import { parsePhotoEdits, type PhotoEdit } from "../../src/lib/content/photo-edits";
+import { folderSlug } from "./ids";
 
 const ROTATIONS = new Set([90, 180, 270]);
-/** Same rule as the site's loader: "sedona + flagstaff" becomes "sedona-flagstaff". */
-export const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 export function loadEdits(visitsDir: string, warn: (msg: string) => void = console.warn): Record<string, PhotoEdit> {
   const out: Record<string, PhotoEdit> = {};

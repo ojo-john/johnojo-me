@@ -16,6 +16,9 @@
     "status": "tsx scripts/status.ts",
     "check:links": "tsx scripts/check-links.ts",
     "media:upload": "tsx --conditions=react-server scripts/upload-media.ts",
+    "media:backup": "tsx scripts/backup-originals.ts",
+    "media:pull": "tsx scripts/pull-originals.ts",
+    "media:publish": "npm run media && npm run media:backup && npm run media:upload",
     "perf": "node scripts/perf.mts",
     "resume:pdf": "node scripts/resume-pdf.mts",
     "notes:sync": "python3 scripts/sync-notes.py"
@@ -56,5 +59,11 @@
     "tsx": "^4.23.15",
     "typescript": "^5",
     "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "ffmpeg-static@5.2.0": true,
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true,
+    "core-js": false
   }
 }

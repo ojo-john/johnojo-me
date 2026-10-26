@@ -20,11 +20,21 @@ export interface AdminPhoto {
   duplicate: boolean;
 }
 
+/** Where the upload page can send originals: one per visit, drafts included. */
+export interface UploadTarget {
+  /** Visit file name without .yaml, e.g. "europe-2026--rome". */
+  visit: string;
+  label: string;
+  /** Bucket folder for this visit's originals: "<trip>/<folder>". */
+  path: string;
+}
+
 export interface AdminMediaIndex {
   /** Keyed by visit file name without .yaml, e.g. "europe-2026--barcelona". */
   visits: Record<string, AdminPhoto[]>;
   /** Keyed by trip slug: every photo from every stop on that trip. */
   trips: Record<string, AdminPhoto[]>;
+  uploadTargets: UploadTarget[];
 }
 
 /**
@@ -39,13 +49,15 @@ export interface AdminVisitInput {
   /** The media folder slug ("nice-french-riviera"), already slugified. */
   folder: string;
   hiddenFiles: Set<string>;
+  /** "Europe 2026 · Rome", for the upload page. */
+  label?: string;
 }
 
 /** The smallest jpg that still looks sharp in a grid of thumbnails on a high-density screen. */
 const thumbOf = (e: ManifestEntry & { type: "photo" }) => [...e.variants].sort((a, b) => a.w - b.w).find((v) => v.w >= 320)?.jpg ?? e.variants[0].jpg;
 
 export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visits: AdminVisitInput[], live = false): AdminMediaIndex {
-  const index: AdminMediaIndex = { visits: {}, trips: {} };
+  const index: AdminMediaIndex = { visits: {}, trips: {}, uploadTargets: [] };
   for (const v of visits) {
     const prefix = `${v.trip}/${v.folder}/`;
     const photos = Object.entries(items)
@@ -57,6 +69,7 @@ export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visit
         return { file, thumb: thumbOf(e), preview, edit: editPreviewUrl(id, live), placeholder: e.placeholder, focus: e.focus ?? null, takenAt: e.takenAt, hidden: v.hiddenFiles.has(file), duplicate: Boolean(e.duplicateOf) };
       });
     index.visits[`${v.trip}--${v.visitSlug}`] = photos;
+    index.uploadTargets.push({ visit: `${v.trip}--${v.visitSlug}`, label: v.label ?? `${v.trip} · ${v.visitSlug}`, path: `${v.trip}/${v.folder}` });
     index.trips[v.trip] = [...(index.trips[v.trip] ?? []), ...photos.map((p) => ({ ...p, file: `${v.folder}/${p.file}` }))];
   }
   return index;

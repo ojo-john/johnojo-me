@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
 const devEditorRewrite: NextConfig["rewrites"] = async () => [
   { source: "/admin/", destination: "/admin/index.html" },
   { source: "/admin/metrics/", destination: "/admin/metrics/index.html" },
+  { source: "/admin/upload/", destination: "/admin/upload/index.html" },
 ];
 
 export default function config(phase: string): NextConfig {

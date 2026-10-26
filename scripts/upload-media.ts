@@ -1,101 +1,71 @@
 /**
- * npm run media:upload  (add --dry-run to list what would change without touching the bucket)
+ * npm run media:upload  (add --dry-run to see the plan without changing the bucket)
  *
- * Uploads to the Cloudflare R2 bucket behind https://media.johnojo.me ONLY the files the public site shows:
- * visible photos and clips from published trips. Hidden photos, duplicates and drafts stay off public
- * storage, and anything uploaded before that is now hidden is deleted from the bucket. Only new or
- * changed files are sent; a local record of what's in the bucket lives in .cache/uploaded.json.
- *
- * Needs, in .env.local (never committed):
- *   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET
- * Create the key in the Cloudflare dashboard: R2 → Manage API tokens → Object Read & Write, this bucket only.
+ * Makes the public bucket (https://media.johnojo.me) hold exactly what the site shows: visible photos and
+ * clips from published trips. New or changed files are uploaded; anything else under media/ (hidden
+ * since, duplicates, drafts, removed) is deleted. Works on a machine that only has some of the files
+ * (the cloud job): a file already in the bucket doesn't need to be local.
  */
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { DeleteObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { loadEnvFile, r2Store } from "./lib/store";
+import { planPublish } from "./lib/sync-plan";
 
-for (const line of fs.existsSync(".env.local") ? fs.readFileSync(".env.local", "utf8").split("\n") : []) {
-  const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
-  if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
-}
-const DRY_RUN = process.argv.includes("--dry-run");
 const ROOT = path.join(process.cwd(), "public");
-const CACHE = path.join(process.cwd(), ".cache", "uploaded.json");
 const TYPES: Record<string, string> = { ".avif": "image/avif", ".webp": "image/webp", ".jpg": "image/jpeg", ".mp4": "video/mp4" };
+/** Web copies never change under the same name without the manifest changing too, so browsers can keep them a week. */
+const CACHE_CONTROL = "public, max-age=604800";
 
 async function main() {
+  loadEnvFile();
+  const dryRun = process.argv.includes("--dry-run");
   // Read content exactly as the live build does: no drafts, and local /media paths (not the R2 domain).
   Object.assign(process.env, { NODE_ENV: "production", SHOW_DRAFTS: "", MEDIA_BASE_URL: "" });
   const { getTrips } = await import("../src/lib/content/load");
   const { publicMediaKeys } = await import("../src/lib/content/public-media");
-  const wanted = publicMediaKeys(getTrips());
 
-  const missing = [...wanted].filter((k) => !fs.existsSync(path.join(ROOT, k)));
-  if (missing.length) {
-    console.error(`${missing.length} file(s) the site shows aren't in public/media (run npm run media first), e.g. ${missing[0]}`);
+  const md5 = (file: string) => crypto.createHash("md5").update(fs.readFileSync(file)).digest("hex");
+  const wanted = new Map([...publicMediaKeys(getTrips())].map((key) => {
+    const file = path.join(ROOT, key);
+    return [key, fs.existsSync(file) ? md5(file) : null] as const;
+  }));
+  const store = r2Store("R2_BUCKET");
+  const plan = planPublish(wanted, await store.list("media/"));
+  console.log(`${wanted.size} public files: ${plan.upload.length} to upload, ${plan.remove.length} to remove, ${plan.unchanged} unchanged.`);
+  if (plan.missing.length) {
+    // Publishing now would leave holes on the site; stop before changing anything.
+    console.error(`${plan.missing.length} file(s) the site shows are neither in the bucket nor here (run npm run media first), e.g. ${plan.missing[0]}`);
     process.exit(1);
   }
-
-  const done: Record<string, string> = fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, "utf8")) : {};
-  const toSend = [...wanted].sort().flatMap((key) => {
-    const body = fs.readFileSync(path.join(ROOT, key));
-    const hash = crypto.createHash("sha1").update(body).digest("hex");
-    return done[key] === hash ? [] : [{ key, body, hash }];
-  });
-  const toRemove = Object.keys(done).filter((key) => !wanted.has(key)).sort();
-  console.log(`${wanted.size} public files: ${toSend.length} to upload, ${toRemove.length} to remove (hidden or no longer used), ${wanted.size - toSend.length} unchanged.`);
-  if (DRY_RUN) {
-    toRemove.forEach((k) => console.log(`  - ${k}`));
-    process.exit(0);
+  if (dryRun) {
+    plan.remove.forEach((k) => console.log(`  - ${k}`));
+    return;
   }
 
-  const { R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET } = process.env;
-  if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY || !R2_BUCKET) {
-    console.error("Missing R2 settings. Add R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY and R2_BUCKET to .env.local.");
-    process.exit(1);
-  }
-  const s3 = new S3Client({
-    region: "auto",
-    endpoint: `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
-    credentials: { accessKeyId: R2_ACCESS_KEY_ID, secretAccessKey: R2_SECRET_ACCESS_KEY },
-    requestHandler: { requestTimeout: 120_000 },
-    maxAttempts: 4, // SDK retries with exponential backoff
-  });
-  const save = () => {
-    fs.mkdirSync(path.dirname(CACHE), { recursive: true });
-    fs.writeFileSync(CACHE, JSON.stringify(done));
-  };
-
-  let sent = 0, removed = 0, failed = 0;
-  for (const { key, body, hash } of toSend) {
+  let failed = 0;
+  for (const key of plan.upload) {
     try {
-      await s3.send(new PutObjectCommand({ Bucket: R2_BUCKET, Key: key, Body: body, ContentType: TYPES[path.extname(key)], CacheControl: "public, max-age=604800" }));
-      done[key] = hash;
-      if (++sent % 50 === 0) save();
+      await store.put(key, fs.readFileSync(path.join(ROOT, key)), TYPES[path.extname(key)] ?? "application/octet-stream", CACHE_CONTROL);
     } catch (err) {
-      // Keep going: one failed upload shouldn't stop the batch. Re-running retries only what's missing.
+      // One failed file shouldn't stop the batch; re-running retries only what's still different.
       failed++;
       console.error(`  ✗ upload ${key}: ${(err as Error).name}: ${(err as Error).message}`);
     }
   }
-  for (const key of toRemove) {
+  for (const key of plan.remove) {
     try {
-      await s3.send(new DeleteObjectCommand({ Bucket: R2_BUCKET, Key: key }));
-      delete done[key];
-      removed++;
+      await store.delete(key);
     } catch (err) {
-      // Left in the record, so the next run tries the removal again.
       failed++;
       console.error(`  ✗ remove ${key}: ${(err as Error).name}: ${(err as Error).message}`);
     }
   }
-  save();
-  console.log(`${sent} uploaded, ${removed} removed, ${failed} failed.`);
+  console.log(`${plan.upload.length - failed} uploaded/removed ok, ${failed} failed.`);
   if (failed) process.exitCode = 1;
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error(err instanceof Error ? err.message : err);
   process.exit(1);
 });

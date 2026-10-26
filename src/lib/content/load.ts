@@ -213,9 +213,13 @@ export const getTrips = memo((): TripEntry[] => {
 /** Every photo per visit and per trip, hidden ones included, for the editor's cover picker. Drafts too. */
 export function getAdminMediaIndex(): AdminMediaIndex {
   const items = getMediaManifest().items;
+  const places = getDestinations();
+  // Every trip, drafts too (the upload page needs upcoming stops), so read the files rather than getTrips().
+  const titles = new Map(getVisitFiles().map(({ v }) => [v.trip, parseFile(dir("trips", v.trip, "trip.yaml"), tripSchema).title]));
   return buildAdminMediaIndex(
     items,
     getVisitFiles().map(({ v, visitSlug }) => ({
+      label: `${titles.get(v.trip) ?? v.trip} · ${places[v.destination]?.city ?? visitSlug}`,
       trip: v.trip,
       visitSlug,
       folder: folderSlug(v.photoFolder ?? visitSlug),
