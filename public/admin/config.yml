@@ -70,6 +70,7 @@ collections:
       - { name: theme, label: One-line theme, widget: text, required: false, hint: "One or two sentences that sum up the trip" }
       - { name: intro, label: Introduction, widget: text, required: false, hint: "A short paragraph at the top of the trip page" }
       - { name: cover, label: Cover photo, required: false, widget: cover-picker, scope: trip, hint: "Pick from every stop's photos. Leave blank to use the first city's cover." }
+      - { name: coverFocus, label: Cover framing, required: false, widget: focus-picker, scope: trip, hint: "Click the part of the cover that must stay in view when it's cropped." }
       - name: awards
         label: Personal awards
         widget: list
@@ -182,6 +183,7 @@ collections:
           - { name: date, label: Date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
           - { name: writeUp, label: Write-up, widget: text, required: false, hint: "Your own words about the day" }
       - { name: cover, label: Cover photo, required: false, widget: cover-picker, hint: "Pick one of this visit's photos. Leave blank to use the first photo." }
+      - { name: coverFocus, label: Cover framing, required: false, widget: focus-picker, hint: "Click the part of the cover that must stay in view when it's cropped." }
       - name: media
         label: Photo order
         widget: list

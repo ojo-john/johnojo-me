@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:drafts": "SHOW_DRAFTS=1 next dev",
     "build": "next build",
+    "postbuild": "node scripts/strip-local-media.mjs",
     "start": "npx serve out",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
@@ -14,7 +15,7 @@
     "check": "npm run typecheck && npm run lint && npm run test",
     "status": "tsx scripts/status.ts",
     "check:links": "tsx scripts/check-links.ts",
-    "media:upload": "tsx scripts/upload-media.ts",
+    "media:upload": "tsx --conditions=react-server scripts/upload-media.ts",
     "perf": "node scripts/perf.mts",
     "resume:pdf": "node scripts/resume-pdf.mts",
     "notes:sync": "python3 scripts/sync-notes.py"

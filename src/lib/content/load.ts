@@ -11,6 +11,7 @@ import {
   destinations as destinationsSchema,
   experience as experienceSchema,
   FOCUS_Y,
+  parseFocus,
   post as postSchema,
   project as projectSchema,
   site as siteSchema,
@@ -154,6 +155,12 @@ function resolveMedia(file: string, visitSlug: string, v: Visit, trip: Trip, pla
   return out;
 }
 
+/** Apply the framing chosen in the editor (coverFocus) to a cover; the photo elsewhere keeps its own focus. */
+const withFocus = (photo: MediaItem | null, focus: string | undefined): MediaItem | null => {
+  const point = parseFocus(focus);
+  return photo?.type === "photo" && point ? { ...photo, focus: point } : photo;
+};
+
 /** Visit files are named "<trip>--<visit>.yaml" in content/visits, one flat folder for every trip. */
 const getVisitFiles = memo(() =>
   list(dir("visits"), ".yaml").map((f) => {
@@ -181,7 +188,7 @@ export const getTrips = memo((): TripEntry[] => {
           if (!place) throw new ContentError(file, `  - destination: "${v.destination}" has no content/destinations/<id>.yaml`);
           const media = resolveMedia(file, visitSlug, v, trip, place);
           const photos = media.filter((m) => m.type === "photo");
-          const coverPhoto = (v.cover && photos.find((p) => p.id.endsWith(v.cover as string))) || photos[0] || null;
+          const coverPhoto = withFocus((v.cover && photos.find((p) => p.id.endsWith(v.cover as string))) || photos[0] || null, v.coverFocus);
           return {
             ...v,
             slug: visitSlug,
@@ -196,7 +203,7 @@ export const getTrips = memo((): TripEntry[] => {
         .filter((v) => visible(v.status))
         .sort((a, b) => a.order - b.order);
       const allPhotos = visits.flatMap((v) => v.photos);
-      const coverPhoto = (trip.cover && allPhotos.find((p) => p.id.endsWith(trip.cover as string))) || visits.find((v) => v.coverPhoto)?.coverPhoto || null;
+      const coverPhoto = withFocus((trip.cover && allPhotos.find((p) => p.id.endsWith(trip.cover as string))) || visits.find((v) => v.coverPhoto)?.coverPhoto || null, trip.coverFocus);
       return { ...trip, slug: tripSlug, visits, coverPhoto } satisfies TripEntry;
     })
     .filter((t) => visible(t.status))

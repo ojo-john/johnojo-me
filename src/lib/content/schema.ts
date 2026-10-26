@@ -52,6 +52,13 @@ export type Rating = z.infer<typeof rating>;
 export const FOCUS_BANDS = ["top", "upper", "centre", "lower", "bottom"] as const;
 export const FOCUS_Y: Record<(typeof FOCUS_BANDS)[number], number> = { top: 0, upper: 25, centre: 50, lower: 75, bottom: 100 };
 
+/** The point to keep in view when the cover is cropped, set by clicking in the editor: "62% 30%" (across, down). */
+const coverFocus = z.string().regex(/^(100|\d{1,2})% (100|\d{1,2})%$/, 'two percentages, e.g. "62% 30%"');
+export const parseFocus = (s: string | undefined) => {
+  const m = s?.match(/^(\d+)% (\d+)%$/);
+  return m ? { x: Number(m[1]), y: Number(m[2]) } : null;
+};
+
 export const mediaMeta = z.object({
   caption: z.string().optional(),
   alt: z.string().optional(),
@@ -96,6 +103,7 @@ export const visit = z.object({
   media: z.array(z.string()).optional(),
   mediaMeta: mapOrList(mediaMeta, "file").default({}),
   cover: z.string().optional(),
+  coverFocus: coverFocus.optional(),
   youtube: z.array(z.object({ id: z.string(), title: z.string() })).default([]),
 });
 export type Visit = z.infer<typeof visit>;
@@ -113,6 +121,7 @@ export const trip = z.object({
   theme: z.string().optional(),
   intro: z.string().optional(),
   cover: z.string().optional(),
+  coverFocus: coverFocus.optional(),
   awards: z.array(z.object({ award: z.string(), visit: slug.optional() })).default([]),
   verdict: z
     .object({

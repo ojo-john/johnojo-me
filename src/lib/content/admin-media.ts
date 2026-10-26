@@ -8,6 +8,11 @@ export interface AdminPhoto {
   /** The value a cover field stores: "photos/img-1234" for a visit, "<folder>/photos/img-1234" for a trip. */
   file: string;
   thumb: string;
+  /** A larger copy for the framing tool. */
+  preview: string;
+  /** Tiny blurred stand-in, shown if the thumbnail isn't on public storage (hidden photos never are). */
+  placeholder: string;
+  focus: { x: number; y: number } | null;
   takenAt: string | null;
   hidden: boolean;
   duplicate: boolean;
@@ -40,7 +45,8 @@ export function buildAdminMediaIndex(items: Record<string, ManifestEntry>, visit
       .sort(([a, x], [b, y]) => (x.takenAt ?? a).localeCompare(y.takenAt ?? b))
       .map(([id, e]) => {
         const file = id.slice(prefix.length);
-        return { file, thumb: thumbOf(e), takenAt: e.takenAt, hidden: v.hiddenFiles.has(file), duplicate: Boolean(e.duplicateOf) };
+        const preview = ([...e.variants].sort((a, b) => a.w - b.w).find((v) => v.w >= 960) ?? e.variants[e.variants.length - 1]).jpg;
+        return { file, thumb: thumbOf(e), preview, placeholder: e.placeholder, focus: e.focus ?? null, takenAt: e.takenAt, hidden: v.hiddenFiles.has(file), duplicate: Boolean(e.duplicateOf) };
       });
     index.visits[`${v.trip}--${v.visitSlug}`] = photos;
     index.trips[v.trip] = [...(index.trips[v.trip] ?? []), ...photos.map((p) => ({ ...p, file: `${v.folder}/${p.file}` }))];

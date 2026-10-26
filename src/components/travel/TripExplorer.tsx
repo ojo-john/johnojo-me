@@ -15,12 +15,35 @@ const KIND_LABEL = { city: null, "match-only": "Match day", "day-trip": "Day tri
  * Sticky map beside the city stories. Scrolling a story into view highlights and centres its pin;
  * selecting a pin scrolls to its story. The story list doubles as the map's text alternative.
  */
+/** Pin and text sizes in map units (the desktop look), and the smallest each may appear on screen, in px. */
+const PIN_R = 14;
+const NUMBER_SIZE = 15;
+const LABEL_SIZE = 17;
+const MIN_PIN_PX = 11;
+const MIN_NUMBER_PX = 12;
+const MIN_LABEL_PX = 13;
+
 export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeometry }) {
   const [active, setActive] = useState<string | null>(null);
   const [seen, setSeen] = useState(false);
   const reducedMotion = useReducedMotion();
   const drawn = reducedMotion || seen;
   const mapRef = useRef<HTMLDivElement>(null);
+  // Map units per on-screen pixel. The map is drawn at a fixed size and scaled to fit, so on a phone a
+  // 14-unit pin would be ~6px; pins and labels grow with this so they never drop below a readable size.
+  const [unitsPerPx, setUnitsPerPx] = useState(1);
+  useEffect(() => {
+    const svg = mapRef.current?.querySelector("svg");
+    if (!svg) return;
+    const measure = () => svg.clientWidth > 0 && setUnitsPerPx(map.width / svg.clientWidth);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(svg);
+    return () => ro.disconnect();
+  }, [map.width]);
+  const pinR = Math.max(PIN_R, MIN_PIN_PX * unitsPerPx);
+  const numberSize = Math.max(NUMBER_SIZE, MIN_NUMBER_PX * unitsPerPx);
+  const labelSize = Math.max(LABEL_SIZE, MIN_LABEL_PX * unitsPerPx);
   const lb = useLightbox();
   const pins = new Map(map.points.map((p) => [p.id, p]));
   const route = visits.map((v) => pins.get(v.slug)).filter(Boolean) as MapGeometry["points"];
@@ -71,11 +94,11 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                     onClick={() => jump(v.slug)}
                     onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), jump(v.slug))}
                   >
-                    <circle cx={p.x} cy={p.y} r={14} />
-                    <text x={p.x} y={p.y}>
+                    <circle cx={p.x} cy={p.y} r={pinR} strokeWidth={Math.max(3, pinR / 5)} />
+                    <text x={p.x} y={p.y} style={{ fontSize: numberSize }}>
                       {v.number}
                     </text>
-                    <text className="lbl" x={p.x + 22} y={p.y}>
+                    <text className="lbl" x={p.x + pinR + 8} y={p.y} style={{ fontSize: labelSize }}>
                       {v.city}
                     </text>
                   </g>

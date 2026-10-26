@@ -47,7 +47,16 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
           background: "#eee", cursor: "pointer", aspectRatio: "1", overflow: "hidden", opacity: photo.hidden || photo.duplicate ? 0.45 : 1,
         },
       },
-      h("img", { src: photo.thumb, alt: "", loading: "lazy", style: { width: "100%", height: "100%", objectFit: "cover", display: "block" } }),
+      h("img", {
+        src: photo.thumb,
+        alt: "",
+        loading: "lazy",
+        // Hidden photos are never uploaded to public storage; show the blurred stand-in instead of a broken image.
+        onError: (e) => {
+          if (photo.placeholder && e.currentTarget.src !== photo.placeholder) e.currentTarget.src = photo.placeholder;
+        },
+        style: { width: "100%", height: "100%", objectFit: "cover", display: "block" },
+      }),
       h(
         "span",
         { style: { position: "absolute", left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,.6)", color: "#fff", font: "11px ui-monospace, Menlo, monospace", padding: "2px 4px", textAlign: "left" } },
@@ -100,4 +109,106 @@ if (window.CMS && typeof window.CMS.registerCustomPage === "function") {
   }
 
   CMS.registerWidget("cover-picker", CoverPicker);
+
+  // "focus-picker" field: shows the chosen cover large; click (or drag) on the part that must stay in view.
+  // Saves "x% y%", and previews how the trip header and card will crop with it.
+  const FRAMES = [
+    { label: "Trip header", ratio: "16 / 9" },
+    { label: "Card", ratio: "16 / 10" },
+    { label: "Phone header", ratio: "16 / 7" },
+  ];
+  const parse = (v) => {
+    const m = String(v ?? "").match(/^(\d+)% (\d+)%$/);
+    return m ? { x: Number(m[1]), y: Number(m[2]) } : null;
+  };
+  const clamp = (n) => Math.max(0, Math.min(100, Math.round(n)));
+
+  function FocusPicker(props) {
+    const scope = read(props.field, ["scope"]) === "trip" ? "trip" : "visit";
+    const key = entryKey(props.entry, scope);
+    const cover = String(read(props.entry, ["data", "cover"]) ?? "");
+    const [photos, setPhotos] = React.useState(null);
+    const [error, setError] = React.useState(null);
+    const dragging = React.useRef(false);
+    React.useEffect(() => {
+      let live = true;
+      loadIndex()
+        .then((index) => live && setPhotos((scope === "trip" ? index.trips : index.visits)[key] ?? []))
+        .catch((err) => {
+          indexPromise = null;
+          if (live) setError(err.message);
+        });
+      return () => {
+        live = false;
+      };
+    }, [key, scope]);
+
+    const note = (text) => h("p", { style: { margin: "6px 0", fontSize: 13, color: "#555" } }, text);
+    if (error) return note(`Couldn't load the photo list (${error}).`);
+    if (!photos) return note("Loading…");
+    // No cover picked: the site uses the first photo, so frame that one.
+    const photo = photos.find((p) => p.file === cover) ?? (cover ? null : photos.find((p) => !p.hidden && !p.duplicate));
+    if (!photo) return note(cover ? "Couldn't find the cover photo. Pick it again above." : "No photos yet.");
+
+    const chosen = parse(props.value);
+    const point = chosen ?? photo.focus ?? { x: 50, y: 50 };
+    const setFrom = (e) => {
+      const r = e.currentTarget.getBoundingClientRect();
+      props.onChange(`${clamp(((e.clientX - r.left) / r.width) * 100)}% ${clamp(((e.clientY - r.top) / r.height) * 100)}%`);
+    };
+    const position = `${point.x}% ${point.y}%`;
+    return h(
+      "div",
+      { id: props.forID },
+      note(chosen ? "Your framing. Click or drag on the photo to move it." : photo.focus ? "Framed automatically (on faces when it finds them). Click or drag on the photo to choose yourself." : "Click or drag on the photo to choose what stays in view."),
+      h(
+        "div",
+        {
+          role: "button",
+          tabIndex: 0,
+          "aria-label": "Click the part of the photo to keep in view",
+          onPointerDown: (e) => {
+            dragging.current = true;
+            e.currentTarget.setPointerCapture(e.pointerId);
+            setFrom(e);
+          },
+          onPointerMove: (e) => dragging.current && setFrom(e),
+          onPointerUp: () => (dragging.current = false),
+          style: { position: "relative", maxWidth: 420, cursor: "crosshair", touchAction: "none", userSelect: "none", lineHeight: 0 },
+        },
+        h("img", {
+          src: photo.preview,
+          alt: "",
+          draggable: false,
+          onError: (e) => {
+            if (photo.placeholder && e.currentTarget.src !== photo.placeholder) e.currentTarget.src = photo.placeholder;
+          },
+          style: { width: "100%", display: "block", borderRadius: 6 },
+        }),
+        h("span", {
+          style: {
+            position: "absolute", left: `${point.x}%`, top: `${point.y}%`, width: 26, height: 26, margin: "-13px 0 0 -13px",
+            borderRadius: "50%", border: "3px solid #fff", boxShadow: "0 0 0 2px #2541b2, 0 2px 8px rgba(0,0,0,.5)", pointerEvents: "none",
+          },
+        }),
+      ),
+      h(
+        "div",
+        { style: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 10 } },
+        FRAMES.map((f) =>
+          h(
+            "figure",
+            { key: f.label, style: { margin: 0, width: 150 } },
+            h("img", { src: photo.preview, alt: "", style: { width: "100%", aspectRatio: f.ratio, objectFit: "cover", objectPosition: position, display: "block", borderRadius: 4, background: "#eee" } }),
+            h("figcaption", { style: { fontSize: 11, color: "#555", marginTop: 3 } }, f.label),
+          ),
+        ),
+      ),
+      chosen
+        ? h("button", { type: "button", onClick: () => props.onChange(""), style: { marginTop: 8, fontSize: 13 } }, "Reset to automatic")
+        : null,
+    );
+  }
+
+  CMS.registerWidget("focus-picker", FocusPicker);
 })();
