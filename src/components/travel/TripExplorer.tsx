@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Picture } from "@/components/Picture";
 import type { MapGeometry } from "@/lib/geo";
+import { spreadPins } from "@/lib/pin-spread";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { Lightbox, useLightbox } from "./Lightbox";
 import type { VisitView } from "./types";
@@ -17,6 +18,8 @@ const KIND_LABEL = { city: null, "match-only": "Match day", "day-trip": "Day tri
  */
 /** Pin and text sizes in map units (the desktop look), and the smallest each may appear on screen, in px. */
 const PIN_R = 14;
+/** Space kept between neighbouring pins once a crowd is fanned out. */
+const PIN_GAP = 6;
 const NUMBER_SIZE = 15;
 const LABEL_SIZE = 17;
 const MIN_PIN_PX = 11;
@@ -46,6 +49,8 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
   const labelSize = Math.max(LABEL_SIZE, MIN_LABEL_PX * unitsPerPx);
   const lb = useLightbox();
   const pins = new Map(map.points.map((p) => [p.id, p]));
+  // Crowded stops (Bruges, Ghent, Brussels) fan out so every number stays readable and tappable.
+  const placed = new Map(spreadPins(map.points, 2 * pinR + PIN_GAP).map((p) => [p.id, p]));
   const route = visits.map((v) => pins.get(v.slug)).filter(Boolean) as MapGeometry["points"];
 
   useEffect(() => {
@@ -80,9 +85,17 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
             <g className="cam" style={{ transform: camera }}>
               <path className="land" d={map.land} />
               {route.length > 1 ? <path className="rt" d={"M" + route.map((p) => `${p.x} ${p.y}`).join(" L")} /> : null}
+              {/* A moved pin keeps a thin line and dot back to the city's true position. */}
+              {[...placed.values()].filter((p) => p.moved).map((p) => (
+                <g key={`lead-${p.id}`} className="lead" aria-hidden="true">
+                  <line x1={p.x} y1={p.y} x2={p.px} y2={p.py} strokeWidth={Math.max(1.5, pinR / 9)} />
+                  <circle cx={p.x} cy={p.y} r={Math.max(3, pinR / 4)} />
+                </g>
+              ))}
               {visits.map((v) => {
-                const p = pins.get(v.slug);
-                if (!p) return null;
+                const t = placed.get(v.slug);
+                if (!t) return null;
+                const p = { x: t.px, y: t.py };
                 return (
                   <g
                     key={v.slug}
