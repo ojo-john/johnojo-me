@@ -99,12 +99,11 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
                         fill="var(--ink)"
                       >
                         {p.label}
-                        {list.length > 1 ? ` ×${list.length}` : ""}
                       </text>
                     </>
                   );
                   return list.length === 1 ? (
-                    <Link key={p.id} href={list[0].href} className="tmap-pin" aria-label={`${p.label}, ${list[0].trip}`} prefetch={false}>
+                    <Link key={p.id} href={list[0].href} className="tmap-pin" aria-label={`${list[0].city}, ${list[0].trip}`} prefetch={false}>
                       {pin}
                     </Link>
                   ) : (
@@ -113,15 +112,15 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
                       className="tmap-pin"
                       role="button"
                       tabIndex={0}
-                      aria-label={`${p.label}: ${list.length} visits`}
+                      aria-label={`${list[0]?.city ?? p.label}: ${list.length} visits`}
                       onClick={(e) => {
                         e.stopPropagation();
-                        open(map, p.label, list, p.x, p.y);
+                        open(map, list[0]?.city ?? p.label, list, p.x, p.y);
                       }}
                       onKeyDown={(e) => {
                         if (e.key !== "Enter" && e.key !== " ") return;
                         e.preventDefault();
-                        open(map, p.label, list, p.x, p.y);
+                        open(map, list[0]?.city ?? p.label, list, p.x, p.y);
                       }}
                     >
                       {pin}

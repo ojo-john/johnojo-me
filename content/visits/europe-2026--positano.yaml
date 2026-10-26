@@ -1,5 +1,6 @@
 trip: europe-2026
 destination: positano
+status: draft # upcoming; publish once it's done
 order: 6
 kind: day-trip
 arrive: 2026-10-29

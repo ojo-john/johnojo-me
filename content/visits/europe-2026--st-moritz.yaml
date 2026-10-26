@@ -1,5 +1,6 @@
 trip: europe-2026
 destination: st-moritz
+status: draft # upcoming; publish once it's done
 order: 4
 kind: day-trip
 arrive: 2026-10-26

@@ -1,4 +1,5 @@
 trip: europe-2026
 destination: london
+status: draft # upcoming; publish once it's done
 order: 7
 arrive: 2026-10-31

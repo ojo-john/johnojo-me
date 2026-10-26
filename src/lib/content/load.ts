@@ -56,9 +56,23 @@ function parseFile<T extends z.ZodType>(file: string, schema: T): z.infer<T> {
   return result.data;
 }
 
+/**
+ * Content is read once per build. Under `next dev` the YAML files aren't module imports, so a permanent
+ * cache would keep serving old content until a restart; there, entries expire after a moment instead,
+ * long enough to cover one page render.
+ */
+const DEV_CACHE_MS = 1500;
+const IS_DEV_SERVER = process.env.NODE_ENV === "development";
 const memo = <T,>(fn: () => T) => {
   let value: T | undefined;
-  return () => (value ??= fn());
+  let readAt = 0;
+  return () => {
+    if (value === undefined || (IS_DEV_SERVER && Date.now() - readAt > DEV_CACHE_MS)) {
+      value = fn();
+      readAt = Date.now();
+    }
+    return value;
+  };
 };
 const dir = (...p: string[]) => path.join(CONTENT_DIR, ...p);
 const list = (d: string, ext: string) => (fs.existsSync(d) ? fs.readdirSync(d).filter((f) => f.endsWith(ext)).sort() : []);

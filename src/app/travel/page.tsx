@@ -21,11 +21,14 @@ export default function TravelPage() {
   // Places and countries count every published stop, match days included.
   const places = Array.from(new Map(all.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   const stats = travelStats(all);
+  // "London ×3" when a place has several visits; the count is part of the label so placement leaves room for it.
+  const visitCount = (slug: string) => all.reduce((n, t) => n + t.visits.filter((v) => v.place.slug === slug).length, 0);
+  const pinLabel = (p: (typeof places)[number]) => (visitCount(p.slug) > 1 ? `${p.city} ×${visitCount(p.slug)}` : p.city);
   // One map per region (Europe, Americas…), biggest first.
   const regions = Object.entries(Object.groupBy(places, (p) => regionOf(p.lng, p.lat)))
     .filter(([r]) => r !== "Other")
     .sort((a, b) => (b[1]?.length ?? 0) - (a[1]?.length ?? 0))
-    .map(([region, ps]) => ({ region, map: mapFor((ps ?? []).map((p) => ({ id: p.slug, label: p.city, lat: p.lat, lng: p.lng, country: p.country })), 900, (ps ?? []).length > 2 ? 640 : 420, 0.06) }));
+    .map(([region, ps]) => ({ region, map: mapFor((ps ?? []).map((p) => ({ id: p.slug, label: pinLabel(p), lat: p.lat, lng: p.lng, country: p.country })), 900, (ps ?? []).length > 2 ? 640 : 420, 0.06) }));
   const stops: MapStop[] = all.flatMap((t) => t.visits.map((v) => ({ place: v.place.slug, city: v.place.city, country: v.place.country, trip: t.title, href: `/travel/${t.slug}/#${v.slug}` })));
   const stadiums = all.flatMap((t) => t.visits.flatMap((v) => v.matches.map((m) => ({ ...m, city: v.place.city, trip: t.title, href: `/travel/${t.slug}/#${v.slug}` }))));
 

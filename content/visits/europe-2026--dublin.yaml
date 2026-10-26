@@ -1,3 +1,4 @@
 trip: europe-2026
 destination: dublin
+status: draft # upcoming; publish once it's done
 order: 8
