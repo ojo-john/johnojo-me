@@ -69,10 +69,11 @@ export default function WorkPage() {
         <p className="missing" style={{ marginTop: 8, fontSize: 14 }}>
           {exp.achievementsNote}
         </p>
+        {/* Every role starts closed: the timeline's year card above already shows the current one. */}
         <div className="roles">
           {exp.roles.flatMap((r) =>
-            r.sections.map((sec, i) => (
-              <details key={r.title + sec.title} className="card" open={i === 0 && r === exp.roles[0]}>
+            r.sections.map((sec) => (
+              <details key={r.title + sec.title} className="card">
                 <summary>
                   <h3>{sec.title}</h3>
                   <span className="mono">
