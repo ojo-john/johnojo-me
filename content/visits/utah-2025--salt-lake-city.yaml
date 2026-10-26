@@ -1,7 +1,7 @@
 trip: utah-2025
 destination: salt-lake-city
 order: 1
-summary: "We went to a Mormon museum near Salt Lake City."
+summary: "We went to the Church History Museum in Salt Lake City."
 cover: photos/img-4432
 mediaMeta:
   photos/100-0073: { caption: "Waiting at the airport", alt: "John laughing in an airport lounge chair" }
