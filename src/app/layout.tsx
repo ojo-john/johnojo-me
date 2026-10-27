@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { preconnect } from "react-dom";
 import { Bricolage_Grotesque, DM_Mono, Figtree, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: "#f1f0eb" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  // Photos come from their own domain: open that connection while the page is still loading.
+  const mediaOrigin = process.env.MEDIA_BASE_URL ? new URL(process.env.MEDIA_BASE_URL).origin : null;
+  if (mediaOrigin) preconnect(mediaOrigin);
   // Quick-jump index for the "Jump to" palette, built at compile time from content.
   const jump: JumpItem[] = [
     { label: "Work", hint: "Page", href: "/work/" },
