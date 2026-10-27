@@ -11,6 +11,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { PHOTO_EXT, VIDEO_EXT } from "./lib/ids";
+import { accountBytes, assertWithinBudget } from "./lib/budget-guard";
 import { loadEnvFile, r2Store } from "./lib/store";
 import { planBackup } from "./lib/sync-plan";
 
@@ -55,8 +56,11 @@ async function main() {
   const files = new Map([...(process.argv.includes("--previews-only") ? [] : localOriginals()), ...localPreviews()]);
   const local = new Map([...files].map(([key, file]) => [key, { size: fs.statSync(file).size, md5: md5(file) }]));
   const store = r2Store("R2_ORIGINALS_BUCKET");
-  const send = planBackup(local, await store.list());
+  const existing = await store.list();
+  const send = planBackup(local, existing);
   console.log(`${local.size} local files: ${send.length} to back up, ${local.size - send.length} already safe.`);
+  // Free-tier guardrail: measured across both buckets, checked before anything is sent (a dry run too).
+  assertWithinBudget(await accountBytes([store, r2Store("R2_BUCKET")]), existing, new Map(send.map((key) => [key, local.get(key)?.size ?? 0])), []);
   if (dryRun) return;
   let failed = 0;
   for (const key of send) {

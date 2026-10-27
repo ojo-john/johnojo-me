@@ -9,6 +9,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { accountBytes, assertWithinBudget } from "./lib/budget-guard";
 import { loadEnvFile, r2Store } from "./lib/store";
 import { planPublish } from "./lib/sync-plan";
 
@@ -31,13 +32,21 @@ async function main() {
     return [key, fs.existsSync(file) ? md5(file) : null] as const;
   }));
   const store = r2Store("R2_BUCKET");
-  const plan = planPublish(wanted, await store.list("media/"));
+  const existing = await store.list("media/");
+  const plan = planPublish(wanted, existing);
   console.log(`${wanted.size} public files: ${plan.upload.length} to upload, ${plan.remove.length} to remove, ${plan.unchanged} unchanged.`);
   if (plan.missing.length) {
     // Publishing now would leave holes on the site; stop before changing anything.
     console.error(`${plan.missing.length} file(s) the site shows are neither in the bucket nor here (run npm run media first), e.g. ${plan.missing[0]}`);
     process.exit(1);
   }
+  // Free-tier guardrail: measured across both buckets, checked before anything changes (a dry run too).
+  assertWithinBudget(
+    await accountBytes([store, r2Store("R2_ORIGINALS_BUCKET")]),
+    existing,
+    new Map(plan.upload.map((key) => [key, fs.statSync(path.join(ROOT, key)).size])),
+    plan.remove,
+  );
   if (dryRun) {
     plan.remove.forEach((k) => console.log(`  - ${k}`));
     return;

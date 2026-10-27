@@ -1,6 +1,7 @@
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import type { AccessDeps } from "../metrics/access";
-import { handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, parseRange, validOriginalKey, type BucketBinding, type MediaAdminEnv } from "./handlers";
+import { STORAGE_BUDGET_BYTES } from "./budget";
+import { handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, parseRange, validOriginalKey, type BucketBinding, type ListableBucket, type MediaAdminEnv } from "./handlers";
 
 vi.spyOn(console, "log").mockImplementation(() => {});
 vi.spyOn(console, "warn").mockImplementation(() => {});
@@ -57,6 +58,9 @@ function bucket(failPut = false) {
     async head(key: string) {
       return stored.has(key) ? {} : null;
     },
+    async list() {
+      return { objects: [...stored.keys()].map(() => ({ size: 1 })), truncated: false };
+    },
     async get(key: string) {
       return stored.has(key) ? { body: new Blob(["jpeg"]).stream(), size: 1000 } : null;
     },
@@ -69,7 +73,13 @@ function bucket(failPut = false) {
   };
   return b satisfies BucketBinding;
 }
-const env = (over: Partial<MediaAdminEnv> = {}): MediaAdminEnv => ({ ACCESS_TEAM_DOMAIN: TEAM, ACCESS_AUD: AUD, ORIGINALS: bucket(), GITHUB_REPO: "ojo-john/johnojo-me", GITHUB_DISPATCH_TOKEN: "t", ...over });
+/** The public bucket, as the budget sees it: `bytes` stored, split over two listing pages. */
+const mediaBucket = (bytes = 0): ListableBucket => ({
+  async list(options) {
+    return options?.cursor ? { objects: [{ size: bytes - Math.floor(bytes / 2) }], truncated: false } : { objects: [{ size: Math.floor(bytes / 2) }], truncated: true, cursor: "p2" };
+  },
+});
+const env = (over: Partial<MediaAdminEnv> = {}): MediaAdminEnv => ({ ACCESS_TEAM_DOMAIN: TEAM, ACCESS_AUD: AUD, ORIGINALS: bucket(), MEDIA: mediaBucket(), GITHUB_REPO: "ojo-john/johnojo-me", GITHUB_DISPATCH_TOKEN: "t", ...over });
 const upload = (key: string, { token = goodToken, size = 4 } = {}) =>
   new Request(`https://johnojo.me/api/upload?key=${encodeURIComponent(key)}`, { method: "PUT", body: "abcd", headers: { "cf-access-jwt-assertion": token, "content-length": String(size), "content-type": "image/jpeg" } });
 
@@ -243,5 +253,43 @@ describe("upload safety and big files", () => {
     const start = await (await handleUpload(req("POST", "&action=start&size=10"), e, access())).json();
     const res = await handleUpload(req("DELETE", `&uploadId=${start.uploadId}`), e, access());
     expect([res.status, b.uploads.get(start.uploadId)?.aborted]).toEqual([200, true]);
+  });
+});
+
+describe("handleUpload storage budget", () => {
+  const KEY = "europe-2026/rome/photos/IMG_1.jpg";
+  const start = (size: number) =>
+    new Request(`https://johnojo.me/api/upload?key=${encodeURIComponent(KEY)}&action=start&size=${size}`, { method: "POST", headers: { "cf-access-jwt-assertion": goodToken } });
+
+  it("handleUpload_wholeFileWouldPassBudget_answers507AndStoresNothing", async () => {
+    const e = env({ MEDIA: mediaBucket(STORAGE_BUDGET_BYTES - 2) });
+    const res = await handleUpload(upload(KEY), e, access());
+    expect([res.status, (e.ORIGINALS as ReturnType<typeof bucket>).keys]).toEqual([507, []]);
+  });
+
+  it("handleUpload_multipartStartWouldPassBudget_answers507", async () => {
+    const res = await handleUpload(start(2 * 1000 ** 3), env({ MEDIA: mediaBucket(STORAGE_BUDGET_BYTES - 1000 ** 3) }), access());
+    expect(res.status).toBe(507);
+  });
+
+  it("handleUpload_justUnderBudgetAcrossPages_isStored", async () => {
+    const res = await handleUpload(upload(KEY), env({ MEDIA: mediaBucket(STORAGE_BUDGET_BYTES - 4) }), access());
+    expect(res.status).toBe(201);
+  });
+
+  it("handleUpload_publicBucketNotBound_failsClosedWith503", async () => {
+    const res = await handleUpload(upload(KEY), env({ MEDIA: undefined }), access());
+    expect(res.status).toBe(503);
+  });
+
+  it("handleUpload_listingFails_failsClosedWith503", async () => {
+    const res = await handleUpload(upload(KEY), env({ MEDIA: { list: async () => Promise.reject(new Error("r2 down")) } }), access());
+    expect(await res.json()).toEqual({ error: "budget-unknown" });
+  });
+
+  it("handleUpload_listingNeverEnds_failsClosedWith503", async () => {
+    const endless: ListableBucket = { list: async () => ({ objects: [{ size: 1 }], truncated: true, cursor: "again" }) };
+    const res = await handleUpload(upload(KEY), env({ MEDIA: endless }), access());
+    expect(res.status).toBe(503);
   });
 });

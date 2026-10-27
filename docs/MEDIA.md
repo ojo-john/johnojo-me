@@ -33,7 +33,8 @@ Nothing needs to stay on your Mac. Folders whose names start with `_` are never 
 3. **GitHub** repo → Settings → Secrets → Actions: the same five values.
 4. **Cloudflare Pages** project:
    - Build env: `MEDIA_BASE_URL=https://media.johnojo.me`.
-   - Bindings: R2 bucket `ORIGINALS` → `johnojo-originals`.
+   - Bindings: R2 bucket `ORIGINALS` → `johnojo-originals`, and R2 bucket `MEDIA` → `johnojo-media` (only listed,
+     for the storage budget; uploads refuse to run without it).
    - Variables: `GITHUB_REPO=ojo-john/johnojo-me`; secret `GITHUB_DISPATCH_TOKEN` = a fine-grained GitHub token
      for that repo only, with "Contents: read and write" (repository_dispatch needs it).
    - `ACCESS_TEAM_DOMAIN` / `ACCESS_AUD` as for metrics.
@@ -45,6 +46,8 @@ Nothing needs to stay on your Mac. Folders whose names start with `_` are never 
 
 - Uploads through the admin page: any size up to 5 GB. Files over 90 MB go up in 50 MB parts (Cloudflare's free plan
   caps one request at 100 MB). A file name already taken in that city is saved as name-2, name-3… (never overwritten).
+- Storage stops at 8 GB across both buckets, to stay inside R2's free 10 GB. See "Staying on the free tier" in
+  [DEPLOY.md](DEPLOY.md); `npm run media:usage` shows where it stands.
 - Web clips over 25 MB after compression stay off the site, listed in the editor as "too long: trim" until trimmed.
 - The "Process media" job runs on every visit save (to catch rotate/crop/trim edits). A save with nothing to process
   finishes in about a minute.

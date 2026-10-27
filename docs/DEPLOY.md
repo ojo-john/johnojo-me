@@ -30,6 +30,21 @@ Static build on **Cloudflare Pages** (free), photos and clips on **Cloudflare R2
 5. **Budget alerts**: Billing → Notifications → set an alert on R2 usage, so nothing is ever charged
    without warning.
 
+## Staying on the free tier
+
+Everything runs on free plans. Only R2 storage can ever bill, so it has guardrails in code and in the account:
+
+| Guardrail | Where |
+|---|---|
+| Storage budget: 8 GB across both buckets (free tier is 10 GB). The upload page, `npm run media:upload` and `npm run media:backup` measure both buckets first and refuse anything that would go over; if storage can't be measured, they refuse too. Deleting is always allowed. | `src/lib/media-admin/budget.ts` |
+| `npm run media:usage` shows usage per bucket against the budget. | `scripts/storage-usage.ts` |
+| Buckets use the Standard storage class (Infrequent Access isn't in the free tier and charges per read). | R2, set at creation |
+| Abandoned multipart uploads are deleted after 1 day, so half-finished clips never sit there taking space. | R2 lifecycle rule `abort-stale-uploads` |
+| Hidden photos, duplicates and drafts are never uploaded to the public bucket. | `npm run media:upload` |
+| Web copies are sent with a week-long cache header, so repeat views are served by Cloudflare's cache, not read from R2. | `scripts/upload-media.ts` |
+| Workers Free plan: Pages Functions stop at 100,000 requests a day instead of charging. Keep the account on Workers **Free**. | Dashboard → Workers & Pages → Plans |
+| Billing alert on R2 usage, and no paid plan or add-on switched on. | Dashboard → Notifications (see step 5 above) |
+
 ## Publishing changes
 
 - **Content or code**: commit and push to `main`. Cloudflare rebuilds and publishes in a minute or two.

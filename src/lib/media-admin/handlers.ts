@@ -6,6 +6,7 @@
  */
 import { verifyAccess, type AccessDeps } from "../metrics/access";
 import { json, log } from "../metrics/cf";
+import { checkStorageBudget } from "./budget";
 
 /** One part of a multipart upload, as R2 reports it. */
 export interface UploadedPart {
@@ -19,8 +20,19 @@ export interface MultipartUpload {
   abort(): Promise<void>;
 }
 
+/** One page of an R2 bucket listing. */
+export interface BucketListing {
+  objects: { size: number }[];
+  truncated: boolean;
+  cursor?: string;
+}
+/** A bucket the routes only measure (the public one, for the storage budget). */
+export interface ListableBucket {
+  list(options?: { cursor?: string; limit?: number }): Promise<BucketListing>;
+}
+
 /** The slice of an R2 bucket binding these routes use. */
-export interface BucketBinding {
+export interface BucketBinding extends ListableBucket {
   put(key: string, value: ReadableStream | ArrayBuffer | null, options?: { httpMetadata?: { contentType?: string } }): Promise<unknown>;
   head(key: string): Promise<unknown | null>;
   createMultipartUpload(key: string, options?: { httpMetadata?: { contentType?: string } }): Promise<MultipartUpload>;
@@ -31,6 +43,8 @@ export interface BucketBinding {
 export interface MediaAdminEnv {
   /** Private bucket for originals and the editor's working copies. */
   ORIGINALS?: BucketBinding;
+  /** Public bucket of web copies: only listed, so the storage budget counts the whole account. */
+  MEDIA?: ListableBucket;
   ACCESS_TEAM_DOMAIN?: string;
   ACCESS_AUD?: string;
   /** "owner/repo" whose media workflow runs on "process-media". */
@@ -44,6 +58,10 @@ export const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 /** Largest whole file accepted through multipart upload (a long 4K phone clip is well under this). */
 export const MAX_FILE_BYTES = 5 * 1024 * 1024 * 1024;
 const MAX_PARTS = 10_000;
+/** R2 returns at most 1000 objects per listing page. */
+const LIST_PAGE = 1000;
+/** 100 pages = 100,000 files, far beyond this site; past it the count is treated as unknown (refuse). */
+const MAX_LIST_PAGES = 100;
 const GITHUB_TIMEOUT_MS = 10_000;
 const PART = /^[A-Za-z0-9][A-Za-z0-9 ._+()-]{0,99}$/;
 const EXT = { photos: /\.(jpe?g|png|heic|heif|webp|tiff?)$/i, videos: /\.(mp4|mov|m4v)$/i } as const;
@@ -58,6 +76,40 @@ export function validOriginalKey(key: string | null): key is string {
   if (parts.length !== 4 || parts.some((p) => !PART.test(p) || p.startsWith("_") || p === "." || p === "..")) return false;
   const [, , kind, file] = parts;
   return (kind === "photos" || kind === "videos") && EXT[kind].test(file);
+}
+
+class StorageUnmeasurable extends Error {}
+
+/** Total bytes stored in a bucket, all pages. */
+async function storedBytes(bucket: ListableBucket): Promise<number> {
+  let total = 0;
+  let cursor: string | undefined;
+  for (let page = 0; page < MAX_LIST_PAGES; page++) {
+    const res = await bucket.list({ cursor, limit: LIST_PAGE });
+    total += res.objects.reduce((sum, o) => sum + o.size, 0);
+    if (!res.truncated) return total;
+    cursor = res.cursor;
+  }
+  throw new StorageUnmeasurable("too many objects to measure");
+}
+
+/**
+ * Refuses a new file that would take the account past the free-tier storage budget. Fails closed: if
+ * either bucket can't be measured, nothing is stored.
+ */
+async function budgetGate(env: MediaAdminEnv, adding: number, id: string): Promise<Response | null> {
+  if (!env.ORIGINALS || !env.MEDIA) return json(503, { error: "not-configured" });
+  let used: number;
+  try {
+    used = (await storedBytes(env.ORIGINALS)) + (await storedBytes(env.MEDIA));
+  } catch (e) {
+    log("error", { route: "upload", outcome: "budget-unknown", error: e instanceof Error ? e.name : "unknown", requestId: id });
+    return json(503, { error: "budget-unknown" });
+  }
+  const check = checkStorageBudget(used, adding);
+  if (check.ok) return null;
+  log("warn", { route: "upload", outcome: "over-budget", usedBytes: check.usedBytes, addingBytes: adding, budgetBytes: check.budgetBytes, requestId: id });
+  return json(507, { error: "over-budget", usedBytes: check.usedBytes, budgetBytes: check.budgetBytes });
 }
 
 async function gate(req: Request, env: MediaAdminEnv, access: AccessDeps, route: string, id: string): Promise<Response | null> {
@@ -116,6 +168,8 @@ export async function handleUpload(req: Request, env: MediaAdminEnv, access: Acc
       if (!Number.isFinite(size) || size <= 0) return json(400, { error: "size-required" });
       if (size > MAX_FILE_BYTES) return json(413, { error: "too-large", maxBytes: MAX_FILE_BYTES });
       if (await bucket.head(key)) return json(409, { error: "exists" });
+      const overBudget = await budgetGate(env, size, id);
+      if (overBudget) return overBudget;
       try {
         const up = await bucket.createMultipartUpload(key, { httpMetadata: { contentType } });
         return json(200, { uploadId: up.uploadId });
@@ -157,6 +211,8 @@ export async function handleUpload(req: Request, env: MediaAdminEnv, access: Acc
     }
   }
   if (await bucket.head(key)) return json(409, { error: "exists" });
+  const overBudget = await budgetGate(env, size, id);
+  if (overBudget) return overBudget;
   try {
     await bucket.put(key, req.body, { httpMetadata: { contentType } });
   } catch (e) {

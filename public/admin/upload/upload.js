@@ -149,6 +149,8 @@
     else if (res.status === 404) Object.assign(row, { state: "failed", note: "uploads only work on the live site" });
     else if (res.status === 403) Object.assign(row, { state: "failed", note: "signed out: reload and sign in" });
     else if (res.status === 409) Object.assign(row, { state: "failed", note: "too many files with this name" });
+    else if (res.status === 507) Object.assign(row, { state: "failed", note: "storage is at its free limit: nothing was uploaded" });
+    else if (res.status === 503) Object.assign(row, { state: "failed", note: "uploads paused: storage space couldn't be checked" });
     else if (res.status === 0) Object.assign(row, { state: "failed", note: "connection lost, try again" });
     else Object.assign(row, { state: "failed", note: `failed (${res.status}), try again` });
     render();
