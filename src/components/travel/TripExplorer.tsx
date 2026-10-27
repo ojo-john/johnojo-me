@@ -132,11 +132,12 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                     className={`pin${active === v.slug ? " act" : ""}`}
                     tabIndex={0}
                     role="button"
-                    aria-label={`${v.number}. ${v.city}`}
                     data-track={`city: ${v.slug}`}
                     onClick={() => jump(v.slug)}
                     onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), jump(v.slug))}
                   >
+                    {/* Its accessible name (and desktop tooltip). A title, not aria-label, so the name and the visible "1 Barcelona" can't disagree. */}
+                    <title>{`${v.number}. ${v.city}`}</title>
                     <circle className="hit" cx={p.x} cy={p.y} r={hitFor(v.slug)} />
                     <circle cx={p.x} cy={p.y} r={pinR} strokeWidth={Math.max(3, pinR / 5)} />
                     <text x={p.x} y={p.y} style={{ fontSize: numberSize }}>
