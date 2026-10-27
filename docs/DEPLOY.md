@@ -9,15 +9,9 @@ Static build on **Cloudflare Pages** (free), photos and clips on **Cloudflare R2
    `public/admin/config.yml` points at that name.
 2. **R2 bucket for media**: Cloudflare dashboard → R2 → Create bucket `johnojo-media` →
    Settings → Custom domains → connect `media.johnojo.me`.
-   Then R2 → Manage API tokens → create an *Object Read & Write* token for that bucket only, and put
-   it in `.env.local` (git-ignored):
-   ```
-   R2_ACCOUNT_ID=…
-   R2_ACCESS_KEY_ID=…
-   R2_SECRET_ACCESS_KEY=…
-   R2_BUCKET=johnojo-media
-   ```
-   Upload everything: `npm run media:upload`.
+   `.env.local` (git-ignored) names the account and buckets; the commands use your Cloudflare sign-in
+   (`npx wrangler login`), so no key is needed locally (see [MEDIA.md](MEDIA.md)).
+   Upload everything: `npm run media:backup && npm run media:upload`.
 3. **Pages project**: Workers & Pages → Create → Pages → Connect to Git → choose the repo.
    - Build command: `npm run build`
    - Output directory: `out`

@@ -4,7 +4,10 @@
  *   R2_BUCKET            public: the web copies served at https://media.johnojo.me
  *   R2_ORIGINALS_BUCKET  private: original photos and clips, plus the editor's working copies (_previews/)
  * Credentials come from .env.local locally and from repository secrets in the cloud job; never from code.
+ * On a laptop with no R2 keys, the commands use your Cloudflare sign-in instead (npx wrangler login),
+ * through Cloudflare's REST API: no key to create or keep.
  */
+import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import { DeleteObjectCommand, GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
@@ -56,6 +59,7 @@ function client(): S3Client {
 export function r2Store(bucketVar: "R2_BUCKET" | "R2_ORIGINALS_BUCKET"): ObjectStore {
   const bucket = process.env[bucketVar];
   if (!bucket) throw new MissingStorageSettings(`Missing ${bucketVar} in .env.local (or the job's secrets).`);
+  if (!process.env.R2_ACCESS_KEY_ID && !process.env.R2_SECRET_ACCESS_KEY) return signedInStore(bucket);
   const s3 = client();
   return {
     async list(prefix = "") {
@@ -77,6 +81,111 @@ export function r2Store(bucketVar: "R2_BUCKET" | "R2_ORIGINALS_BUCKET"): ObjectS
     },
     async delete(key) {
       await s3.send(new DeleteObjectCommand({ Bucket: bucket, Key: key }));
+    },
+  };
+}
+
+/** Pinned so the sign-in path doesn't change under us; matches the version used to log in. */
+const WRANGLER = "wrangler@4.153.0";
+/** Cloudflare's REST API takes uploads up to 300 MB; anything bigger needs R2 keys (S3 multipart). */
+const API_MAX_BYTES = 300 * 1000 ** 2;
+const LIST_PAGE = 1000;
+
+export class StorageRequestFailed extends Error {
+  constructor(
+    message: string,
+    readonly retryable: boolean,
+  ) {
+    super(message);
+  }
+}
+
+/** The signed-in Cloudflare session's current token (wrangler refreshes it when it has expired). */
+function signedInToken(): string {
+  if (process.env.CLOUDFLARE_API_TOKEN) return process.env.CLOUDFLARE_API_TOKEN;
+  let out: string;
+  try {
+    out = execFileSync("npx", ["--yes", WRANGLER, "auth", "token"], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], timeout: 60_000 });
+  } catch {
+    throw new MissingStorageSettings("No R2 keys in .env.local and no Cloudflare sign-in: run `npx wrangler login` first.");
+  }
+  const token = out.trim().split("\n").at(-1)?.trim();
+  if (!token || /\s/.test(token)) throw new MissingStorageSettings("Couldn't read the Cloudflare sign-in: run `npx wrangler login` again.");
+  return token;
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+function signedInStore(bucket: string): ObjectStore {
+  const account = process.env.R2_ACCOUNT_ID;
+  if (!account) throw new MissingStorageSettings("Missing R2_ACCOUNT_ID in .env.local.");
+  return apiStore({ account, bucket, getToken: signedInToken, canRenew: !process.env.CLOUDFLARE_API_TOKEN, fetch, backoffMs: 500 });
+}
+
+export interface ApiStoreDeps {
+  account: string;
+  bucket: string;
+  getToken: () => string;
+  /** False for a fixed CLOUDFLARE_API_TOKEN, which a retry can't renew. */
+  canRenew: boolean;
+  fetch: typeof fetch;
+  /** First backoff step; doubles per attempt, with full jitter. */
+  backoffMs: number;
+}
+
+/** R2 through Cloudflare's REST API. Same timeout and retry budget as the S3 client. */
+export function apiStore({ account, bucket, getToken, canRenew, fetch, backoffMs }: ApiStoreDeps): ObjectStore {
+  const base = `https://api.cloudflare.com/client/v4/accounts/${account}/r2/buckets/${encodeURIComponent(bucket)}/objects`;
+  let token: string | null = null;
+  const objectUrl = (key: string) => `${base}/${key.split("/").map(encodeURIComponent).join("/")}`;
+
+  async function call(url: string, init: RequestInit = {}): Promise<Response> {
+    token ??= getToken();
+    for (let attempt = 1; ; attempt++) {
+      let res: Response | null = null;
+      let failure: StorageRequestFailed;
+      try {
+        res = await fetch(url, { ...init, headers: { ...init.headers, Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+        if (res.ok) return res;
+        // Sign-ins last about an hour; a long sync renews it once rather than failing everything after.
+        if (res.status === 401 && attempt === 1 && canRenew) {
+          token = getToken();
+          continue;
+        }
+        // Throttling and server errors are worth another try; anything else (denied, not found, bad request) isn't.
+        const retryable = res.status === 429 || res.status >= 500;
+        failure = new StorageRequestFailed(`R2 API ${init.method ?? "GET"} answered ${res.status}`, retryable);
+      } catch (err) {
+        // Timeouts and dropped connections.
+        failure = new StorageRequestFailed(`R2 API ${init.method ?? "GET"} failed: ${(err as Error).name}`, true);
+      }
+      if (!failure.retryable || attempt >= MAX_ATTEMPTS) throw failure;
+      // Exponential backoff with full jitter: up to 0.5 s, 1 s, 2 s.
+      await sleep(Math.random() * backoffMs * 2 ** (attempt - 1));
+    }
+  }
+
+  return {
+    async list(prefix = "") {
+      const out: StoredObject[] = [];
+      let cursor: string | undefined;
+      do {
+        const q = new URLSearchParams({ per_page: String(LIST_PAGE), ...(prefix ? { prefix } : {}), ...(cursor ? { cursor } : {}) });
+        const body = (await (await call(`${base}?${q}`)).json()) as { result: { key: string; size: number; etag: string }[]; result_info?: { cursor?: string; is_truncated?: boolean } };
+        for (const o of body.result) out.push({ key: o.key, size: Number(o.size), etag: o.etag.replace(/"/g, "") });
+        cursor = body.result_info?.is_truncated ? body.result_info.cursor : undefined;
+      } while (cursor);
+      return out;
+    },
+    async put(key, body, contentType, cacheControl) {
+      if (body.length > API_MAX_BYTES) throw new StorageRequestFailed(`${key} is over 300 MB: upload it with R2 keys or trim it`, false);
+      await call(objectUrl(key), { method: "PUT", body: new Uint8Array(body), headers: { "Content-Type": contentType, ...(cacheControl ? { "Cache-Control": cacheControl } : {}) } });
+    },
+    async get(key) {
+      return Buffer.from(await (await call(objectUrl(key))).arrayBuffer());
+    },
+    async delete(key) {
+      await call(objectUrl(key), { method: "DELETE" });
     },
   };
 }

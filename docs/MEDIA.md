@@ -26,11 +26,15 @@ Nothing needs to stay on your Mac. Folders whose names start with `_` are never 
 
 ## One-time setup (needs John's accounts)
 
-1. **R2**: create two buckets, `johnojo-media` (public, custom domain `media.johnojo.me`) and
-   `johnojo-originals` (private, no public access). Create one API token: Object Read & Write, these two buckets.
-2. **Local**: put `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_ORIGINALS_BUCKET`
-   in `.env.local` (git-ignored). Then `npm run media:publish` once to send everything up.
-3. **GitHub** repo → Settings → Secrets → Actions: the same five values.
+1. **R2** (done 2026-10-27): buckets `johnojo-media` (public once `media.johnojo.me` is connected) and
+   `johnojo-originals` (private, no public access), Standard storage class, lifecycle rule `abort-stale-uploads`.
+2. **Local**: `.env.local` (git-ignored) holds `R2_ACCOUNT_ID`, `R2_BUCKET` and `R2_ORIGINALS_BUCKET`. No keys: the
+   media commands use your Cloudflare sign-in (`npx wrangler login`) through Cloudflare's API. Then
+   `npm run media:publish` sends everything up. (R2 keys, if ever added to `.env.local`, take over; they're needed
+   only for single files over 300 MB.)
+3. **GitHub** repo → Settings → Secrets → Actions, for the cloud media job only: `R2_ACCOUNT_ID`, `R2_BUCKET`,
+   `R2_ORIGINALS_BUCKET`, plus an R2 API token (Object Read & Write, these two buckets) as `R2_ACCESS_KEY_ID` and
+   `R2_SECRET_ACCESS_KEY`. A sign-in can't be used there, so this is the one key to create, when the job is switched on.
 4. **Cloudflare Pages** project:
    - Build env: `MEDIA_BASE_URL=https://media.johnojo.me`.
    - Bindings: R2 bucket `ORIGINALS` → `johnojo-originals`, and R2 bucket `MEDIA` → `johnojo-media` (only listed,
