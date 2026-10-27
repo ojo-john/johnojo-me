@@ -74,7 +74,7 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .card { background: var(--paper); border: 2px solid var(--ink); }
 
 /* ---------- header (the only navigation bar) ---------- */
-.top { position: fixed; inset: 0 0 auto 0; z-index: 45; padding-top: env(safe-area-inset-top, 0px); background: color-mix(in srgb, var(--chalk) 94%, transparent); border-bottom: 1.5px solid var(--rule); }
+.top { position: fixed; inset: 0 0 auto 0; z-index: 45; transform: translateZ(0); padding-top: env(safe-area-inset-top, 0px); background: color-mix(in srgb, var(--chalk) 94%, transparent); border-bottom: 1.5px solid var(--rule); }
 .top-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; height: var(--header-h); }
 .logo { font-family: var(--f-display); font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.03em; display: inline-flex; align-items: center; gap: 10px; }
 .logo i { width: 14px; height: 14px; border-radius: 50%; background: var(--pillar, var(--ink)); transition: background-color 400ms; }
@@ -241,9 +241,10 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .bigmap .pin .hit { fill: transparent; stroke: none; }
 .bigmap .pin circle { fill: var(--paper); stroke: var(--ink); transform-box: fill-box; transform-origin: center; transition: transform 300ms var(--spring), fill 250ms; }
 .bigmap .pin text { font-weight: 800; font-family: var(--f-display); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
-.bigmap .pin .lbl { font-weight: 700; font-family: var(--f-ui); text-anchor: start; opacity: 0; transition: opacity 250ms; }
+/* City names always show: a bare "1, 2, 3" means nothing until you tap. A white halo keeps them readable over land and lines. */
+.bigmap .pin .lbl { font-weight: 700; font-family: var(--f-ui); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
 .bigmap .pin.act circle:not(.hit), .bigmap .pin:focus-visible circle:not(.hit), .bigmap .pin:hover circle:not(.hit) { fill: var(--sun); transform: scale(1.2); }
-.bigmap .pin.act .lbl, .bigmap .pin:hover .lbl, .bigmap .pin:focus-visible .lbl { opacity: 1; }
+
 .map-legend { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; padding-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .tmap .tmap-country { fill: var(--travel); fill-opacity: .12; stroke: var(--travel); stroke-opacity: .35; cursor: pointer; transition: fill-opacity var(--t-quick); }
 .tmap a:hover .tmap-country, .tmap a:focus-visible .tmap-country, .tmap path.tmap-country:hover, .tmap path.tmap-country:focus-visible { fill-opacity: .28; outline: none; }
@@ -284,9 +285,13 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ccard .sub { font-size: 13px; color: var(--ink-2); font-family: var(--f-mono); }
 .ccard .sum { font-family: var(--f-read); font-size: 18.5px; line-height: 1.55; }
 .ccard .cover { aspect-ratio: 16 / 9; overflow: hidden; border: 2px solid var(--ink); }
-.gal { display: grid; gap: 8px; }
-.gal-track { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
+/* Its own stacking layer, below the fixed header: iOS can otherwise paint a sideways-scrolling strip over it. */
+.gal { position: relative; z-index: 0; isolation: isolate; display: grid; gap: 8px; }
+.gal-track { display: flex; gap: 10px; overflow-x: auto; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
 .gal-track::-webkit-scrollbar { display: none; }
+/* While a mouse drags the strip, snapping would fight the drag; it settles on release. Images mustn't start a browser drag. */
+.gal-track.dragging { scroll-snap-type: none; cursor: grabbing; }
+.gal-track img { -webkit-user-drag: none; user-select: none; }
 .gal-track:focus-visible { outline: 3px solid var(--work); outline-offset: 3px; }
 .gal-slide { position: relative; flex: 0 0 88%; aspect-ratio: 4 / 3; padding: 0; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; background: var(--chalk); cursor: zoom-in; scroll-snap-align: center; }
 .gal-track.one .gal-slide { flex-basis: 100%; }

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Picture } from "@/components/Picture";
 import type { MapGeometry } from "@/lib/geo";
+import { placeLabels } from "@/lib/label-place";
 import { nearestGap, spreadPins } from "@/lib/pin-spread";
 import { usePanZoom } from "@/lib/usePanZoom";
 import { useReducedMotion } from "@/lib/useReducedMotion";
@@ -71,6 +72,14 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
   const pins = new Map(map.points.map((p) => [p.id, p]));
   // Crowded stops (Bruges, Ghent, Brussels) fan out so every number stays readable and tappable.
   const placed = new Map(spreadPins(map.points, 2 * pinR + PIN_GAP).map((p) => [p.id, p]));
+  // Each city name goes on the side of its pin that's clear of other pins and names.
+  const names = new Map(visits.map((v) => [v.slug, v.city]));
+  const labels = new Map(
+    placeLabels(
+      [...placed.values()].map((p) => ({ id: p.id, x: p.px, y: p.py, label: names.get(p.id) ?? p.id })),
+      { pinR: pinR * 1.3, fontSize: labelSize, gap: 5 * pz.scale * unitsPerPx },
+    ).map((l) => [l.id, l]),
+  );
   const hitFor = (id: string) => Math.min(hitR, nearestGap([...placed.values()], id) / 2);
   const route = visits.map((v) => pins.get(v.slug)).filter(Boolean) as MapGeometry["points"];
 
@@ -133,7 +142,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                     <text x={p.x} y={p.y} style={{ fontSize: numberSize }}>
                       {v.number}
                     </text>
-                    <text className="lbl" x={p.x + pinR + 8} y={p.y} style={{ fontSize: labelSize }}>
+                    <text className="lbl" x={labels.get(v.slug)?.x ?? p.x + pinR + 8} y={labels.get(v.slug)?.y ?? p.y} textAnchor={labels.get(v.slug)?.anchor ?? "start"} style={{ fontSize: labelSize }}>
                       {v.city}
                     </text>
                   </g>
