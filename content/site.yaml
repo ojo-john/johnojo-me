@@ -7,7 +7,7 @@ seoDescription: John Ojo, software engineer at Amazon building distributed syste
 intro: I'm a software engineer at Amazon, building distributed, event-driven systems on AWS. Away from work I travel for football and food, rank every city I visit, and write about faith and the lessons I'm learning along the way.
 github: https://github.com/ojo-john
 linkedin: https://www.linkedin.com/in/john-ojo-573717217
-email: null # the public contact email you want shown
+email: hello@johnojo.me # public address; Cloudflare Email Routing forwards it to a private inbox
 resume: /resume.pdf # generated from content/experience.yaml by npm run resume:pdf
 location: Dallas, TX # city only, never a street address
 domain: johnojo.me
