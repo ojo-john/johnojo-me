@@ -56,19 +56,20 @@ export function PhotoPile({ photos }: { photos: MediaItem[] }) {
         </div>
         <div className="stack-ctl">
           <p className="cap">{current.caption ?? ""}</p>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <button className="btn" type="button" onClick={() => go(-1)}>
-              ← Back
+          {/* Swiping is the main way through; the arrows are for keyboards, screen readers and anyone who can't swipe. Tapping the photo opens it full screen. */}
+          <div className="gal-ctl" style={{ justifyContent: "flex-start" }}>
+            <button type="button" className="circ" onClick={() => go(-1)} aria-label="Previous photo">
+              ‹
             </button>
-            <button className="btn fill" type="button" onClick={() => go(1)}>
-              Next photo →
-            </button>
-            <button className="btn" type="button" data-track="lightbox: open" onClick={() => lb.open(photos, top)}>
-              Full screen
+            <span aria-live="polite" aria-atomic="true">
+              {top + 1} of {count}
+            </span>
+            <button type="button" className="circ" onClick={() => go(1)} aria-label="Next photo">
+              ›
             </button>
           </div>
-          <p className="mono" style={{ color: "var(--ink-2)" }} aria-live="polite">
-            {top + 1} / {photos.length}
+          <p className="mono" style={{ color: "var(--ink-2)", fontSize: 13 }}>
+            Swipe or drag for the next photo. Tap a photo to see it full screen.
           </p>
         </div>
       </div>
