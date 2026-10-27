@@ -58,6 +58,22 @@ mediaMeta:
   photos/img-0532: { caption: "Espanyol v Atlético Madrid", alt: "A packed stand with the scoreboard showing 0–0" }
   photos/img-0565: { caption: "Pitchside before kick-off", alt: "John taking a selfie by the pitch before Espanyol v Atlético Madrid" }
   photos/img-0860: { caption: "The paella cooking class", alt: "John in an apron at the cooking class, pans of paella on the counter" }
+  videos/img-0489: { caption: "Flamenco show", alt: "A flamenco dancer on stage under purple light" }
+  videos/img-0491: { caption: "Flamenco show", alt: "The flamenco dancer mid-routine" }
+  videos/img-0493: { caption: "Flamenco show", alt: "Musicians and the dancer on stage" }
+  videos/img-0494: { caption: "Flamenco show", alt: "The dancer in front of the Theatre Flamenco sign" }
+  videos/img-0555: { caption: "Espanyol v Atlético Madrid", alt: "The pitch and packed stands during the game" }
+  photos/img-0537: { caption: "Atlético attack", alt: "An Atlético Madrid player near the Espanyol goal in front of the home fans" }
+  photos/img-0543: { caption: "Atlético corner", alt: "An Atlético Madrid player taking a corner in front of the Espanyol end" }
+  photos/img-0571: { caption: "Outside Espanyol's stadium", alt: "John by the statue outside Espanyol's stadium" }
+  photos/img-0578: { caption: "Birthday dinner at Besta", alt: "Small plates from the tasting menu on a wooden table" }
+  photos/img-0586: { caption: "At Besta", alt: "John giving a thumbs-up at his birthday dinner" }
+  photos/img-0805: { caption: "At the Sagrada Família", alt: "John smiling in a selfie in front of the basilica's spires" }
+  photos/img-0816: { caption: "The Sagrada Família", alt: "John standing on the street with the basilica behind him" }
+  photos/img-0820: { caption: "The Sagrada Família from the street", alt: "The basilica's towers above a row of parked motorbikes" }
+  photos/img-0832: { caption: "99 Cheesecake", alt: "The round 99 Cheesecake sign hanging over the street" }
+  photos/img-0837: { caption: "A slice from 99 Cheesecake", alt: "A slice of cheesecake with a crumble topping in a paper tray" }
+  photos/img-0897: { caption: "Paella on the plate", alt: "A plate of the seafood paella from the cooking class" }
 photoEdits: |
   photos/img-0588 hide  # near-duplicate of img-0586
   photos/img-0862 hide  # near-repeat of img-0860

@@ -46,3 +46,17 @@ mediaMeta:
   photos/img-1174: { caption: "74,642 at San Siro", alt: "The stadium screen showing an attendance of 74,642" }
   photos/img-1225: { caption: "Inter v Fiorentina", alt: "Inter players giving interviews pitchside after the game" }
   photos/img-1241: { caption: "Castello Sforzesco", alt: "John taking a selfie in front of the castle's tower and fountain" }
+  photos/img-1006: { caption: "On the Duomo", alt: "A marble statue in a niche on the cathedral" }
+  photos/img-1009: { caption: "Up on the roof", alt: "John in a selfie among the cathedral's carved stonework" }
+  photos/img-1012: { caption: "Statues of the Duomo", alt: "A carved saint on the cathedral's exterior" }
+  photos/img-1026: { caption: "A carved face", alt: "A stone face carved into the cathedral, hands together in prayer" }
+  photos/img-1043: { caption: "Inside the Duomo", alt: "A bronze statue inside the cathedral" }
+  photos/img-1044: { caption: "Inside the Duomo", alt: "A bronze statue of a bearded figure in armour" }
+  photos/img-1080: { caption: "A side altar", alt: "John looking at one of the cathedral's side altars" }
+  photos/img-1087: { caption: "Piazza del Duomo", alt: "John in the square in front of the cathedral's façade" }
+  photos/img-1163: { caption: "Inter corner", alt: "An Inter player at the corner flag" }
+  photos/img-1173: { caption: "At San Siro", alt: "John in a selfie in the stands" }
+  photos/img-1221: { caption: "Thumbs up at San Siro", alt: "John giving a thumbs-up with the pitch behind him" }
+  photos/img-1236: { caption: "A marble relief", alt: "A marble relief of a rider on horseback" }
+  photos/img-1256: { caption: "Milan at dusk", alt: "A grand building lit up in the evening" }
+  videos/img-1154: { caption: "San Siro", alt: "The pitch and stands before kick-off" }

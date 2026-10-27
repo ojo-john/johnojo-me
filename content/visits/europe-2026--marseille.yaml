@@ -37,5 +37,15 @@ mediaMeta:
   photos/img-0921: { caption: "Sunset over Marseille", alt: "Marseille's rooftops and the sea at sunset, seen from high on a hill" }
   photos/img-0943: { caption: "The seafood", alt: "A whole grilled fish with herbs and pickled onions" }
   photos/img-0948: { caption: "Stade Vélodrome", alt: "A statue outside the striped facade of the Stade Vélodrome" }
+  photos/img-0905: { caption: "Saint-Ferréol les Augustins", alt: "The white church on the Old Port under a cloudy sky" }
+  photos/img-0909: { caption: "A signed photo on the wall", alt: "A framed, signed photograph of a man in a cap" }
+  photos/img-0914: { caption: "Walking up the hill", alt: "A steep street looking down over Marseille's rooftops at golden hour" }
+  photos/img-0925: { caption: "At the top", alt: "John smiling with the city and the sea behind him at sunset" }
+  photos/img-0942: { caption: "Sunset from Notre-Dame de la Garde", alt: "Orange and pink clouds over the sea at dusk" }
+  photos/img-0963: { caption: "Inside the Vélodrome", alt: "John in a selfie inside the empty stadium" }
+  photos/img-0966: { caption: "The players' tunnel", alt: "The tunnel leading out onto the Vélodrome pitch" }
+  videos/img-0949: { caption: "Habib Beye's plaque", alt: "A plaque of former Marseille player Habib Beye on the stadium wall" }
+  videos/img-0952: { caption: "The Vélodrome", alt: "The empty stadium seen from the stands" }
+  videos/img-0958: { caption: "The Vélodrome from pitchside", alt: "A sweep across the stadium's curved roof and stands" }
 photoEdits: |
   photos/img-0959 hide  # near-duplicate of img-0963
