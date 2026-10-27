@@ -93,27 +93,22 @@ The editor offers two ways in. Either works; you only need one.
    and paste it. It's kept in that browser only. Never put the token in the repo or in chat.
 6. Lost the laptop or think the token leaked? Delete it on the same GitHub page; it stops working at once.
 
-**Option B: "Sign in with GitHub" button (needs a small free relay).**
+**Option B: "Sign in with GitHub" button (built into the site).**
 
-GitHub's sign-in needs a server to hold a client secret. Sveltia's own relay,
-[sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth), runs free on Cloudflare Workers.
+GitHub's sign-in needs a server that holds a client secret. The site has one: `functions/oauth/` (logic in
+`src/lib/oauth/relay.ts`, ported from [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth)). It only
+ever hands a token to a window on `SITE_HOST`, and `/oauth/*` is outside Access so the popup can reach it.
 
-1. Cloudflare dashboard → Workers & Pages → Create → deploy `sveltia-cms-auth` from its README
-   ("Deploy to Cloudflare" button, or clone it and run `npx wrangler deploy`). Note the worker URL, e.g.
-   `https://sveltia-cms-auth.<your-subdomain>.workers.dev`.
-2. GitHub → Settings → Developer settings → **OAuth Apps** → New OAuth App:
+1. GitHub → Settings → Developer settings → **OAuth Apps** → New OAuth App:
    - Application name: `johnojo.me editor`
    - Homepage URL: `https://johnojo.me`
-   - Authorization callback URL: `<worker URL>/callback`
-   Register, copy the **Client ID**, generate a **Client secret** and copy it.
-3. In the worker's Settings → Variables and secrets add:
-   - `GITHUB_CLIENT_ID` = the client ID
-   - `GITHUB_CLIENT_SECRET` = the secret (type **Secret**)
-   - `ALLOWED_DOMAINS` = `johnojo.me` (so only your site can use the relay)
-4. In `public/admin/config.yml`, uncomment `base_url:` under `backend` and set it to the worker URL.
-   Commit and push.
-5. The Content Security Policy needs no change: the sign-in opens a popup on the worker and the answer
-   comes back by `postMessage`, so the editor page never fetches from the worker.
+   - Authorization callback URL: `https://johnojo.me/oauth/callback`
+   Register, copy the **Client ID**, generate a **Client secret**.
+2. In your own terminal (each asks for the value, hidden):
+   `npx wrangler@4.153.0 pages secret put GITHUB_CLIENT_ID --project-name johnojo-me`
+   `npx wrangler@4.153.0 pages secret put GITHUB_CLIENT_SECRET --project-name johnojo-me`
+3. Redeploy (any push, or Deployments → Retry). `public/admin/config.yml` already points at
+   `base_url: https://johnojo.me` with `auth_endpoint: oauth/auth`.
 
 ### Layer 1: Cloudflare Access in front of /admin/ (recommended)
 

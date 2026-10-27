@@ -12,8 +12,10 @@ backend:
   name: github
   repo: ojo-john/johnojo-me # private GitHub repository holding this site; only people with write access can save
   branch: main
-  # "Sign in with GitHub" needs a small OAuth relay (docs/DEPLOY.md). Once it exists, uncomment and set:
-  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  # "Sign in with GitHub" goes through the site's own relay (functions/oauth/, docs/DEPLOY.md). Until the
+  # GitHub OAuth app's ID and secret are set on Pages, the button says so; "Sign In Using Access Token" still works.
+  base_url: https://johnojo.me
+  auth_endpoint: oauth/auth
 
 app_title: johnojo.me · Editor
 logo:
