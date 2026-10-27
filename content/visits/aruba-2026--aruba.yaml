@@ -7,6 +7,8 @@ wouldReturn:
 rating:
   ratedOn: 2026-10-27
   scores: { food: 8, value: 7, transport: 0, walkability: 9, architecture: 8, culture: 8, people: 8, attractions: 8, safety: 8, enjoyment: 8 }
+  notes:
+    transport: "Only used taxis."
 cover: photos/img-0351
 mediaMeta:
   photos/img-0351: { caption: "On the beach", alt: "John taking a selfie on a palm-lined beach" }

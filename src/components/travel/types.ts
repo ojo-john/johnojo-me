@@ -25,6 +25,8 @@ export interface VisitView {
   notRanked: string | null;
   score: ScoreState;
   scores: Record<string, number | null>;
+  /** Context for individual scores, keyed like `scores`. */
+  scoreNotes: Record<string, string>;
   matches: Match[];
   photos: MediaItem[];
   videos: MediaItem[];

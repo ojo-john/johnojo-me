@@ -124,7 +124,7 @@ function BoardRow({ r, rankLabel, open, toggle }: { r: Row; rankLabel: string; o
       {open ? (
         <div className="bd">
           {CATEGORIES.map((c) => (
-            <Cat key={c.key} label={c.label} value={r.v.scores[c.key]} />
+            <Cat key={c.key} label={c.label} value={r.v.scores[c.key]} note={r.v.scoreNotes[c.key]} />
           ))}
           {r.v.verdict ? <p style={{ gridColumn: "1 / -1", fontFamily: "var(--f-read)" }}>Verdict: {r.v.verdict}</p> : null}
         </div>
@@ -133,12 +133,13 @@ function BoardRow({ r, rankLabel, open, toggle }: { r: Row; rankLabel: string; o
   );
 }
 
-function Cat({ label, value }: { label: string; value: number | null }) {
+function Cat({ label, value, note }: { label: string; value: number | null; note?: string }) {
   return (
     <div>
       <span>{label}</span>
       <span style={{ textAlign: "right" }}>{value ?? "—"}</span>
       <Bar v={value !== null ? value / 10 : 0} />
+      {note ? <span className="note">{note}</span> : null}
     </div>
   );
 }

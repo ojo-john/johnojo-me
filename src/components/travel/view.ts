@@ -28,6 +28,7 @@ export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitVie
     notRanked: v.notRanked ?? null,
     score: v.score,
     scores: Object.fromEntries(CATEGORIES.map((c) => [c.key, v.rating?.scores[c.key] ?? null])),
+    scoreNotes: Object.fromEntries(Object.entries(v.rating?.notes ?? {}).filter((e): e is [string, string] => Boolean(e[1]))),
     matches: v.matches,
     photos: v.photos,
     videos: v.videos,

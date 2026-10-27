@@ -43,7 +43,8 @@ export const rating = z.object({
   ratedOn: isoDate.optional(),
   /** No scores yet is the same as "not rated"; the editor leaves the block out when every score is blank. */
   scores: z.object(Object.fromEntries(CATEGORIES.map((c) => [c.key, score.optional()])) as Record<CategoryKey, z.ZodOptional<typeof score>>).default({}),
-  notes: z.record(z.string(), z.string()).optional(),
+  /** Optional one-line context per score, e.g. transport: "Only used taxis." Shown under that score. */
+  notes: z.object(Object.fromEntries(CATEGORIES.map((c) => [c.key, z.string().optional()])) as Record<CategoryKey, z.ZodOptional<z.ZodString>>).strict().optional(),
   tieBreakNote: z.string().optional(),
 });
 export type Rating = z.infer<typeof rating>;

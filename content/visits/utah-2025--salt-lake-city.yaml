@@ -1,12 +1,16 @@
 trip: utah-2025
 destination: salt-lake-city
 order: 1
-summary: "We went to the Church History Museum in Salt Lake City, and to the Loveland Living Planet Aquarium in Draper, just south of the city."
+summary: "We went to the Church History Museum in Salt Lake City, and to the Loveland Living Planet Aquarium in Draper, just south of the city. What I loved most was the drive: the views, with the mountains dropping down all around us. We don't get that in Texas."
+liked: "The views driving through, with the mountains all around."
+disliked: "Not walkable. We had to drive everywhere."
 wouldReturn:
   answer: "no"
 rating:
   ratedOn: 2026-10-27
   scores: { food: 4, value: 6, transport: 5, walkability: 0, architecture: 6, culture: 3, people: 4, attractions: 7, safety: 7, enjoyment: 7 }
+  notes:
+    walkability: "Had to drive everywhere."
 cover: photos/img-4432
 mediaMeta:
   photos/100-0073: { caption: "Waiting at the airport", alt: "John laughing in an airport lounge chair" }

@@ -10,6 +10,9 @@ highlights:
   Football: A tour of the Stade Vélodrome
 liked: The seafood, the views, nice weather and the easiest transport system I've ever used.
 disliked: Not much to do.
+wouldReturn:
+  answer: "maybe"
+  why: "As a day trip from Nice."
 rating:
   ratedOn: 2026-10-27
   scores: { food: 9, value: 8, transport: 10, walkability: 10, architecture: 8, culture: 8, people: 7, attractions: 7, safety: 8, enjoyment: 8 }

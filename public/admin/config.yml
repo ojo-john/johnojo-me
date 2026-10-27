@@ -173,6 +173,23 @@ collections:
               - { name: attractions, label: Attractions & Experiences, widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: safety, label: Safety & Comfort, widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: enjoyment, label: Overall Enjoyment, widget: number, value_type: int, min: 0, max: 10, required: false }
+          - name: notes
+            label: Short notes on scores (optional)
+            widget: object
+            required: false
+            collapsed: true
+            hint: "One line explaining a score, shown under it, e.g. Public Transport: Only used taxis."
+            fields:
+              - { name: food, label: Food & Desserts, required: false }
+              - { name: value, label: Affordability & Value, required: false }
+              - { name: transport, label: "Public Transport (buses, trains, trams)", required: false }
+              - { name: walkability, label: Walkability, required: false }
+              - { name: architecture, label: Architecture & Beauty, required: false }
+              - { name: culture, label: Culture & Atmosphere, required: false }
+              - { name: people, label: People & Hospitality, required: false }
+              - { name: attractions, label: Attractions & Experiences, required: false }
+              - { name: safety, label: Safety & Comfort, required: false }
+              - { name: enjoyment, label: Overall Enjoyment, required: false }
       - name: matches
         label: Matches
         widget: list

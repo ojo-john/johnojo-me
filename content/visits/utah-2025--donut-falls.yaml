@@ -2,7 +2,7 @@ trip: utah-2025
 destination: donut-falls
 order: 2
 kind: day-trip
-summary: "We hiked to Donut Falls."
+summary: "We hiked to Donut Falls with friends. The hike was nice and the views were cool. I'm not the biggest nature guy, but I love the exercise and the community side of hiking together."
 wouldReturn:
   answer: "no"
 cover: photos/img-6867

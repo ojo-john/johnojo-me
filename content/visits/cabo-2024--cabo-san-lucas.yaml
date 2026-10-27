@@ -3,11 +3,15 @@ destination: cabo-san-lucas
 order: 1
 arrive: 2024-02-21
 depart: 2024-02-24
-summary: "My friend's 22nd birthday trip: dinner, ATV riding and the beach. It was also the first place I'd ever been racially profiled. At the airport I was accused of carrying drugs and told to show where they were. Out on the streets, people kept coming up to me offering drugs. Then, during the birthday dinner, someone collapsed, and the ambulance took more than 30 minutes to arrive."
+summary: "My friend's 22nd birthday trip. ATV riding was the highlight, and our Airbnb was really cool, with great views. It was my first time meeting the people on the trip, and it was great vibes. It was also the first place I'd ever been racially profiled. At the airport I was accused of carrying drugs and told to show where they were. Out on the streets, people kept coming up to me offering drugs. Then, during the birthday dinner, someone collapsed, and the ambulance took more than 30 minutes to arrive. Honestly, after that dinner I just wanted to leave."
 disliked: "Being racially profiled at the airport, being offered drugs on the street, and waiting over 30 minutes for an ambulance."
+liked: "ATV riding, our Airbnb's views and the people on the trip."
 highlights:
-  Activities: ATV riding
-  Food: The birthday dinner
+  Activities: ATV riding, the best part of the trip
+  Stay: An Airbnb with great views
+wouldReturn:
+  answer: "no"
+  why: "Never going back."
 rating:
   ratedOn: 2026-10-27
   scores: { food: 4, value: 5, transport: 5, walkability: 0, architecture: 2, culture: 5, people: 8, attractions: 4, safety: 4, enjoyment: 5 }

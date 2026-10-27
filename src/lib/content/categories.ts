@@ -20,6 +20,6 @@ export type CategoryKey = (typeof CATEGORIES)[number]["key"];
 export interface Rating {
   ratedOn?: string;
   scores: Partial<Record<CategoryKey, number | null>>;
-  notes?: Record<string, string>;
+  notes?: Partial<Record<CategoryKey, string>>;
   tieBreakNote?: string;
 }

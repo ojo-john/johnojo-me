@@ -1,7 +1,8 @@
 trip: arizona-2023
 destination: sedona
 order: 1
-summary: "We stayed in Sedona for spring break and went ATV riding."
+summary: "We stayed in Sedona for spring break and went ATV riding. It was so much fun: dusty desert trails and a very bumpy ride. We also went up to the Chapel of the Holy Cross, a chapel built right into the red rocks."
+disliked: "Not walkable. We had to drive everywhere."
 highlights:
   Activities: ATV riding
 wouldReturn:
@@ -9,7 +10,9 @@ wouldReturn:
 rating:
   ratedOn: 2026-10-27
   scores: { food: 6, value: 7, transport: 3, walkability: 0, architecture: 5, culture: 5, people: 6, attractions: 7, safety: 7, enjoyment: 7 }
+  notes:
+    walkability: "Had to drive everywhere."
 cover: photos/img-1605
 mediaMeta:
   photos/img-1605: { caption: "ATV riding", alt: "John and four friends in helmets standing by their ATVs on a dirt track" }
-  photos/img-2079: { caption: "Sedona's red rocks", alt: "Four friends posing on a lookout with red rock formations behind them" }
+  photos/img-2079: { caption: "Red rocks from the Chapel of the Holy Cross", alt: "Four friends posing on a lookout with red rock formations behind them" }

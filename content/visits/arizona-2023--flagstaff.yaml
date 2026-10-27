@@ -2,9 +2,9 @@ trip: arizona-2023
 destination: flagstaff
 order: 2
 kind: day-trip
-summary: "We did an outdoor course in Flagstaff."
+summary: "We did the Flagstaff Extreme Adventure Course at Fort Tuthill County Park, a mix of ropes and zip lines up in the pines. There was snow on the ground, but it wasn't too cold, so it was perfect weather for it. I was definitely the best on the course. I won't say who was the worst. I'd love to do another one in a different city or country."
 highlights:
-  Activities: An outdoor course
+  Activities: Ropes and zip lines at Flagstaff Extreme
 cover: photos/img-1669
 mediaMeta:
   photos/img-1669: { caption: "The outdoor course", alt: "John and friends taking a selfie in the snow by the course entrance" }
