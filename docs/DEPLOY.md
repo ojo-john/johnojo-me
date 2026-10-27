@@ -126,14 +126,18 @@ Free for up to 50 users on the Zero Trust free plan.
 3. Access → Applications → **Add an application** → Self-hosted:
    - Application name: `johnojo.me admin`
    - Session duration: 24 hours
-   - Public hostname: domain `johnojo.me`, path `admin/*`.
-     Add a second hostname with path `api/metrics` (the visitor stats, see [METRICS.md](METRICS.md)).
-     If you serve `www.johnojo.me` too, add the same two paths for it.
+   - Public hostnames: domain `johnojo.me` with path `admin/*`, and domain `johnojo.me` with path `api/*`.
+   - Access can't protect `*.pages.dev` (not our domain), so the site does it: `functions/admin/_middleware.ts`
+     redirects `/admin/*` on any other host (pages.dev, previews, www) to `https://$SITE_HOST/admin/…`, and on
+     the real host verifies the Access token itself before serving any admin file. The `/api/*` functions verify
+     it too, so on pages.dev they answer 403.
 4. Add a policy: name `Only me`, action **Allow**, Include → **Emails** → `<your email>`.
    No other rules. Anyone else gets Cloudflare's login page and can't get past it.
 5. Save. Open `https://johnojo.me/admin/` in a private window: you should see Cloudflare's login page,
    get a PIN by email, and only then the editor.
-6. Copy the application's **Application Audience (AUD) tag** (Access → Applications → the app →
+6. Pages project → Settings → Variables: `SITE_HOST` = `johnojo.me`, `ACCESS_TEAM_DOMAIN` = `<team>.cloudflareaccess.com`,
+   `ACCESS_AUD` = the tag below. Without all three, `/admin/*` serves nothing (fails closed).
+7. Copy the application's **Application Audience (AUD) tag** (Access → Applications → the app →
    Overview). The metrics API checks it; see [METRICS.md](METRICS.md).
 
 Your email lives only in Cloudflare's settings, never in this repository.
