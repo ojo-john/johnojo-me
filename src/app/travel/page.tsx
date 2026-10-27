@@ -93,6 +93,11 @@ export default function TravelPage() {
           <h2 id="st-h" style={{ fontSize: "clamp(36px,4vw,56px)" }}>
             Match days
           </h2>
+          <p style={{ margin: "8px 0 18px" }}>
+            <Link className="tap" href="/travel/match-days/">
+              Every game, with photos and write-ups
+            </Link>
+          </p>
           <div className="trip-list">
             {stadiums.map((m) => (
               <Link key={`${m.home}-${m.away}-${m.date}`} className="card tcard" href={m.href} prefetch={false}>

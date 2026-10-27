@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...["/", "/work/", "/travel/", "/resume/", ...(journalIsOpen() ? ["/journal/"] : [])].map((p) => ({ url: base + p, ...(p === "/" || p === "/travel/" ? { lastModified: newest } : {}) })),
     ...trips.map((t) => ({ url: `${base}/travel/${t.slug}/`, lastModified: tripDate(t) })),
+    ...(trips.some((t) => t.visits.some((v) => v.matches.length)) ? [{ url: `${base}/travel/match-days/`, lastModified: newest }] : []),
     ...getPosts().map((p) => ({ url: `${base}/journal/${p.slug}/`, lastModified: p.updatedAt ?? p.publishedAt })),
   ];
 }

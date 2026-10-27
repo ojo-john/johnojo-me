@@ -265,13 +265,14 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .map-legend button { border: 0; background: none; text-decoration: underline; cursor: pointer; padding: 0; font-weight: 600; }
 .tmap-zoom { display: flex; justify-content: flex-end; margin-top: 8px; }
 .zoomctl { display: inline-flex; align-items: center; gap: 6px; }
-.zoomctl button[aria-label] { width: 36px; height: 36px; min-height: 36px; border: 2px solid var(--ink); border-radius: 50%; text-decoration: none; font-size: 18px; line-height: 1; display: inline-grid; place-items: center; background: var(--paper); color: var(--ink); }
+.zoomctl button[aria-label] { width: 32px; height: 32px; min-height: 32px; border: 2px solid var(--ink); border-radius: 50%; text-decoration: none; font-size: 16px; line-height: 1; display: inline-grid; place-items: center; background: var(--paper); color: var(--ink); }
 .zoomctl button:disabled { opacity: .35; cursor: default; }
 /* Phones: small text links and buttons get a finger-sized hit area (WCAG 2.5.8 asks for 24px; 44px is comfortable). */
 @media (max-width: 767px) {
   .map-legend button, a.tap { display: inline-flex; align-items: center; min-height: 44px; }
   .map-legend button { padding: 0 6px; }
-  .zoomctl button[aria-label] { width: 44px; height: 44px; min-height: 44px; padding: 0; }
+  /* Smaller than the 44px links on phones, still well above the 24px minimum target (WCAG 2.2). */
+  .zoomctl button[aria-label] { width: 34px; height: 34px; min-height: 34px; padding: 0; }
 }
 .cities { display: flex; flex-direction: column; gap: 20px; }
 .ccard { padding: 22px; display: flex; flex-direction: column; gap: 14px; transition: box-shadow 400ms, transform 500ms var(--spring); scroll-margin-top: calc(var(--header-h) + 24px); }
@@ -292,7 +293,7 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .gal-slide picture, .gal-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .gal-slide .cap { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 4px 10px; border-radius: 99px; background: rgba(18, 20, 23, .72); color: #fff; font-size: 13px; text-align: left; }
 .gal-ctl { display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--f-mono); font-size: 13px; color: var(--ink-2); }
-.gal-ctl .circ { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
+.gal-ctl .circ { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font-size: 18px; line-height: 1; cursor: pointer; }
 .gal-ctl .circ:disabled { opacity: .35; cursor: default; }
 .ccard .cover img { width: 100%; height: 100%; object-fit: cover; }
 .hlchips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -545,3 +546,12 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 .clips button:hover { transform: rotate(-2deg) scale(1.04); }
 .clips img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
 .clips span { position: absolute; left: 8px; bottom: 8px; width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: var(--ink); display: grid; place-items: center; font-size: 12px; }
+
+/* Match days page */
+.matchdays { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 20px; padding-block: 28px 64px; }
+.mday { display: grid; gap: 14px; padding: 18px; align-content: start; }
+.mday-hd { display: grid; gap: 4px; }
+.mday-hd .kicker { color: var(--ink-2); }
+.mday .fixture { font-family: var(--f-display); font-size: clamp(24px, 3vw, 30px); line-height: 1.1; }
+.mday .sub { font-size: 14px; color: var(--ink-2); }
+.mday .sum { margin: 0; font-family: var(--f-read); font-size: 17px; }

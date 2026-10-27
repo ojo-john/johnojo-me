@@ -36,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     { label: "Career timeline", hint: "Work", href: "/work/#career" },
     { label: "Skills and projects", hint: "Work", href: "/work/#skills" },
     { label: "Travel", hint: "Page", href: "/travel/" },
+    { label: "Match days", hint: "Travel", href: "/travel/match-days/" },
     ...getTrips().flatMap((t) => [
       { label: t.title, hint: "Trip", href: `/travel/${t.slug}/` },
       ...t.visits.map((v) => ({ label: `${v.place.city} · ${t.year}`, hint: "City", href: `/travel/${t.slug}/#${v.slug}` })),
