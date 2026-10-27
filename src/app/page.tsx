@@ -6,6 +6,7 @@ import { FlowPattern } from "@/components/home/FlowPattern";
 import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
 import { getExperience, getPosts, getProjects, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { usedCategories } from "@/lib/content/post-categories";
 import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
@@ -65,7 +66,7 @@ export default function Home() {
               {site.role.replace("Software Development Engineer", "SDE")} @ {site.company}
             </span>
             <span>since {exp.milestones[0].label}</span>
-            <span>Java · TypeScript · AWS</span>
+            <span>{topSkills.join(" · ")}</span>
           </div>
           <p className="lede">{site.intro}</p>
           <div className="ctas">
@@ -76,6 +77,11 @@ export default function Home() {
             <Link className="btn" href="/work/">
               Experience →
             </Link>
+            {site.email ? (
+              <a className="btn" href={`mailto:${site.email}`}>
+                Email me
+              </a>
+            ) : null}
           </div>
         </div>
         <section className="card now" aria-labelledby="now-h">
@@ -159,7 +165,7 @@ export default function Home() {
             <div className="more">
               <p style={{ fontFamily: "var(--f-read)", fontSize: 22, lineHeight: 1.3 }}>Bible studies, faith, life lessons, essays and engineering notes.</p>
               <div className="tags">
-                {["Bible Study", "Faith", "Life Lessons", "Essays"].map((c) => (
+                {usedCategories(posts.filter((p) => !p.sample)).map((c) => (
                   <span key={c}>{c}</span>
                 ))}
               </div>

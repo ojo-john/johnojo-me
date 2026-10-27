@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { journalIsOpen } from "@/lib/content/load";
 
 export default function NotFound() {
   return (
@@ -18,6 +19,11 @@ export default function NotFound() {
         <Link className="btn" href="/travel/">
           Travel
         </Link>
+        {journalIsOpen() ? (
+          <Link className="btn" href="/journal/">
+            Journal
+          </Link>
+        ) : null}
       </div>
     </section>
   );

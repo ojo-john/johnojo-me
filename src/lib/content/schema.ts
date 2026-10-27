@@ -222,10 +222,12 @@ export const project = z.object({
 export type Project = z.infer<typeof project>;
 
 export const VISIBILITY = ["public", "free", "paid", "private"] as const;
+/** Journal categories, in the order the site lists them. */
+export const POST_CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Essays", "Engineering", "Travel Reflections"] as const;
 export const post = z.object({
   title: z.string(),
   dek: z.string(),
-  category: z.enum(["Bible Study", "Faith", "Life Lessons", "Essays", "Engineering", "Travel Reflections"]),
+  category: z.enum(POST_CATEGORIES),
   series: z.string().optional(),
   tags: z.array(z.string()).default([]),
   status: status,

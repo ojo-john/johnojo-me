@@ -13,6 +13,8 @@ export function Footer({ site, journal }: { site: Site; journal: boolean }) {
           <Link href="/work/">Work</Link>
           <Link href="/travel/">Travel</Link>
           {journal ? <Link href="/journal/">Journal</Link> : null}
+          {/* A plain link, not next/link: the feed is an XML file, not a page. */}
+          {journal ? <a href="/journal/feed.xml">RSS feed</a> : null}
           <a href={site.github} target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>

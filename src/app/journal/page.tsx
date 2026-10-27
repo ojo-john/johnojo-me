@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { JournalIndex } from "@/components/journal/JournalIndex";
 import { getPosts, journalIsOpen } from "@/lib/content/load";
+import { usedCategories } from "@/lib/content/post-categories";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
@@ -9,8 +10,6 @@ export const metadata: Metadata = {
   // Built but unlinked and kept out of search until the first post is public.
   ...(journalIsOpen() ? {} : { robots: { index: false, follow: false } }),
 };
-
-const CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Essays", "Engineering", "Travel Reflections"];
 
 export default function JournalPage() {
   const posts = getPosts();
@@ -26,7 +25,7 @@ export default function JournalPage() {
         </div>
       </header>
       <JournalIndex
-        categories={CATEGORIES}
+        categories={usedCategories(posts)}
         posts={posts.map((p) => ({
           slug: p.slug,
           title: p.title,

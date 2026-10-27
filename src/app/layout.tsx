@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
   title: { default: `${site.name} · ${journal ? "Work, Travel, Journal" : "Software Engineer, Work and Travel"}`, template: `%s · ${site.name}` },
   description: site.seoDescription ?? site.intro,
-  alternates: { canonical: "/" },
+  // Feed readers and browsers find the journal feed from any page, once the journal is public.
+  alternates: { canonical: "/", ...(journal ? { types: { "application/rss+xml": [{ url: "/journal/feed.xml", title: `${site.name} · Journal` }] } } : {}) },
   openGraph: { type: "website", siteName: site.name, url: "/", locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image" },
 };

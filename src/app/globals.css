@@ -254,6 +254,7 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tmap .tmap-pin:focus-visible circle:nth-child(2) { stroke: var(--work); stroke-width: 4; }
 .bigmap .pin:focus-visible circle { stroke: var(--work); stroke-width: 5px; }
 .tmap-pick { position: absolute; z-index: 2; width: min(280px, 80%); background: var(--paper); border: 2px solid var(--ink); border-radius: 14px; padding: 12px; box-shadow: 0 12px 32px rgba(18,20,23,.18); }
+.tmap-pick.below { position: static; width: auto; margin: 0 10px 10px; box-shadow: none; }
 .tmap-pick-hd { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
 .tmap-pick .circ { width: 32px; height: 32px; min-height: 0; color: var(--ink); background: var(--card); border: 2px solid var(--ink); border-radius: 50%; cursor: pointer; }
 .tmap-pick ul { list-style: none; padding: 0; margin: 0; }
