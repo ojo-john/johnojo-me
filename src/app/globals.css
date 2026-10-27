@@ -291,13 +291,15 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ccard .cover { aspect-ratio: 16 / 9; overflow: hidden; border: 2px solid var(--ink); }
 /* Its own stacking layer, below the fixed header: iOS can otherwise paint a sideways-scrolling strip over it. */
 .gal { position: relative; z-index: 0; isolation: isolate; display: grid; gap: 8px; }
-.gal-track { display: flex; gap: 10px; overflow-x: auto; touch-action: pan-y; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
-.gal-track::-webkit-scrollbar { display: none; }
-/* While a finger or mouse drags the strip, snapping would fight the drag; it settles on release. Images mustn't start a browser drag. */
-.gal-track.dragging { scroll-snap-type: none; cursor: grabbing; }
+.gal-track { overflow: clip; touch-action: pan-y; overscroll-behavior-x: contain; border-radius: 14px; cursor: grab; }
+/* The strip slides by a transform (--x picks the photo, --dx follows a drag); no native scrolling to fight. */
+.gal-rail { display: flex; gap: 10px; transform: translateX(calc(var(--x, 0px) + var(--dx, 0px))); transition: transform 320ms cubic-bezier(.2, .7, .2, 1); }
+.gal-rail.dragging, .gal-rail.still { transition: none; }
+.gal-rail.dragging { cursor: grabbing; }
 .gal-track img { -webkit-user-drag: none; user-select: none; }
 .gal-track:focus-visible { outline: 3px solid var(--work); outline-offset: 3px; }
-.gal-slide { position: relative; flex: 0 0 88%; aspect-ratio: 4 / 3; padding: 0; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; background: var(--chalk); cursor: zoom-in; scroll-snap-align: center; }
+.gal-track.one { cursor: auto; }
+.gal-slide { position: relative; flex: 0 0 88%; aspect-ratio: 4 / 3; padding: 0; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; background: var(--chalk); cursor: inherit; }
 .gal-track.one .gal-slide { flex-basis: 100%; }
 .gal-slide picture, .gal-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .gal-slide .cap { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 4px 10px; border-radius: 99px; background: rgba(18, 20, 23, .72); color: #fff; font-size: 13px; text-align: left; }
