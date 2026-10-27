@@ -17,5 +17,9 @@ mediaMeta:
   photos/img-3961: { caption: "Neto's early goal on the big screen", alt: "Lincoln Financial Field with the scoreboard showing Flamengo 0, Chelsea 1" }
   photos/img-3992: { caption: "In the Chelsea section", alt: "John in a blue Chelsea shirt in the stands at Lincoln Financial Field" }
   photos/img-3973: { caption: "Chelsea fans behind the goal", alt: "Chelsea fans in the stand, one in a Drogba shirt, watching play at the far end" }
+  photos/img-3963: { caption: "Captain Reece James (24), with Liam Delap (9) behind", alt: "Chelsea's number 24, wearing the captain's armband, stands near the centre circle with number 9 behind him and the Flamengo end packed in red and black" }
+  photos/img-3968: { caption: "Trevoh Chalobah on the ball", alt: "Chelsea's Chalobah, number 23, plays a pass in front of the Flamengo fans' banner" }
+  photos/img-3971: { caption: "Cole Palmer by the touchline", alt: "Cole Palmer, number 10, walks along the touchline near a linesman with his flag" }
+  photos/img-3987: { caption: "Moisés Caicedo, with Chelsea still 1–0 up", alt: "Chelsea's Caicedo, number 25, near halfway as a Flamengo player walks past, with the scoreboard showing 0–1" }
 photoEdits: |
   videos/img-3976 hide  # repeat of img-3975
