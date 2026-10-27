@@ -23,7 +23,7 @@ export interface PlacedLabel {
   hidden: boolean;
 }
 
-interface Box {
+export interface Box {
   x0: number;
   y0: number;
   x1: number;
@@ -31,6 +31,8 @@ interface Box {
 }
 
 const SIDES: Side[] = ["right", "left", "below", "above", "upper-right", "lower-right", "upper-left", "lower-left"];
+/** How much worse a name cut off by the map's edge is than one touching a neighbour. */
+const EDGE_WEIGHT = 4;
 /** Average glyph width as a share of the font size, for a bold UI face. */
 const CHAR_WIDTH = 0.64;
 
@@ -52,7 +54,20 @@ function candidate(p: LabelPin, side: Side, pinR: number, fontSize: number, gap:
 
 export function placeLabels(
   pins: readonly LabelPin[],
-  { pinR, fontSize, gap = 6, skipCrowded = false }: { pinR: number; fontSize: number; gap?: number; skipCrowded?: boolean },
+  {
+    pinR,
+    fontSize,
+    gap = 6,
+    skipCrowded = false,
+    bounds,
+  }: {
+    pinR: number;
+    fontSize: number;
+    gap?: number;
+    skipCrowded?: boolean;
+    /** The visible area. A name running past its edge would be cut off, so that counts as overlap too. */
+    bounds?: Box;
+  },
 ): PlacedLabel[] {
   const taken: Box[] = pins.map((p) => ({ x0: p.x - pinR, y0: p.y - pinR, x1: p.x + pinR, y1: p.y + pinR }));
   // Top to bottom, so placement is stable and matches how the map is read.
@@ -61,7 +76,10 @@ export function placeLabels(
     .map((p) => {
       const options = SIDES.map((side, order) => {
         const c = candidate(p, side, pinR, fontSize, gap);
-        return { ...c, order, cost: taken.reduce((sum, t) => sum + area(c.box, t), 0) };
+        const inside = bounds ? area(c.box, bounds) : 0;
+        const outside = bounds ? (c.box.x1 - c.box.x0) * (c.box.y1 - c.box.y0) - inside : 0;
+        // Being cut off is worse than touching a neighbour, so it weighs more.
+        return { ...c, order, cost: taken.reduce((sum, t) => sum + area(c.box, t), 0) + outside * EDGE_WEIGHT };
       });
       const best = options.sort((a, b) => a.cost - b.cost || a.order - b.order)[0];
       // A name that can't be placed cleanly is left off rather than drawn over something, and doesn't take room.

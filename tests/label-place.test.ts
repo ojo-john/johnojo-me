@@ -62,4 +62,21 @@ describe("placeLabels", () => {
     );
     expect(placed.every((p) => !p.hidden)).toBe(true);
   });
+
+  it("placeLabels_pinAtRightEdge_putsNameInsideTheMap", () => {
+    const [p] = placeLabels([{ id: "philadelphia", x: 790, y: 300, label: "Philadelphia" }], { ...opts, bounds: { x0: 0, y0: 0, x1: 800, y1: 600 } });
+    expect(p).toMatchObject({ side: "left", anchor: "end" });
+  });
+
+  it("placeLabels_pinAtBottomEdge_neverPutsNameBelow", () => {
+    const [p] = placeLabels(
+      [
+        { id: "aruba", x: 400, y: 595, label: "Aruba" },
+        { id: "right", x: 430, y: 595, label: "R" },
+        { id: "left", x: 370, y: 595, label: "L" },
+      ],
+      { ...opts, bounds: { x0: 0, y0: 0, x1: 800, y1: 600 } },
+    ).filter((l) => l.id === "aruba");
+    expect(["below", "lower-left", "lower-right"]).not.toContain(p.side);
+  });
 });

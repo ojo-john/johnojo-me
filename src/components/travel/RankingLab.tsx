@@ -12,6 +12,9 @@ type Tab = "list" | "compare" | "then-now";
  * and never placed in the ranked order. On the all-time view, repeat visits to a city collapse
  * using the chosen aggregation, which is always named on screen.
  */
+/** "Then vs now" appears once at least this many cities have more than one rated visit. */
+const MIN_REPEAT_CITIES = 2;
+
 export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; scope: "trip" | "all"; allVisits?: VisitView[] }) {
   const [tab, setTab] = useState<Tab>("list");
   const [mode, setMode] = useState<Aggregation>("latest");
@@ -53,7 +56,8 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
             [
               ["list", "Rankings"],
               ["compare", "Compare"],
-              ["then-now", "Then vs now"],
+              // Comparing a city with itself is only worth a tab once two or more cities have repeat visits.
+              ...(repeat.length >= MIN_REPEAT_CITIES ? ([["then-now", "Then vs now"]] as const) : []),
             ] as const
           ).map(([k, l]) => (
             <button key={k} role="tab" type="button" data-track={`rankings: ${k}`} aria-selected={tab === k} onClick={() => setTab(k)}>
@@ -66,16 +70,20 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
       {tab === "list" ? (
         <div style={{ marginTop: 28 }}>
           {scope === "all" ? (
-            <div className="tabs" role="group" aria-label="How repeat visits count" style={{ marginBottom: 14 }}>
-              {(Object.keys(AGGREGATION_LABEL) as Aggregation[]).map((m) => (
-                <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)}>
-                  {AGGREGATION_LABEL[m]}
-                </button>
-              ))}
+            <div className="seg-wrap">
+              <span id="seg-l" className="seg-l">
+                Cities visited more than once use their
+              </span>
+              <div className="tabs seg" role="group" aria-labelledby="seg-l">
+                {(Object.keys(AGGREGATION_LABEL) as Aggregation[]).map((m) => (
+                  <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)}>
+                    {AGGREGATION_LABEL[m]}
+                  </button>
+                ))}
+              </div>
             </div>
           ) : null}
           <Board ranked={ranked} unranked={unranked} />
-          {scope === "all" ? <p className="method">Repeat visits counted by: {AGGREGATION_LABEL[mode].toLowerCase()}.</p> : null}
         </div>
       ) : tab === "compare" ? (
         <Compare visits={scope === "trip" ? rateable : rows.map((r) => r.v)} />
@@ -113,7 +121,8 @@ function BoardRow({ r, rankLabel, open, toggle }: { r: Row; rankLabel: string; o
           <b>{r.label}</b>
           <br />
           <span className="st">
-            {r.sub} · {st.state === "complete" ? "all ten rated" : st.state === "incomplete" ? `incomplete · ${st.rated}/10` : "not yet rated"}
+            {r.sub}
+            {st.state === "complete" ? "" : st.state === "incomplete" ? ` · ${st.rated} of 10 scored` : " · not yet rated"}
           </span>
         </span>
         <span className="tot">{r.total !== null ? `${r.total}/100` : "—"}</span>

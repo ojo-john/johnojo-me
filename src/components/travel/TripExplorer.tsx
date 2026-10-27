@@ -81,7 +81,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
   const labels = new Map(
     placeLabels(
       [...placed.values()].map((p) => ({ id: p.id, x: p.px, y: p.py, label: names.get(p.id) ?? p.id })),
-      { pinR: pinR * PIN_FOOTPRINT, fontSize: labelSize, gap: LABEL_GAP_PX * pz.scale * unitsPerPx },
+      { pinR: pinR * PIN_FOOTPRINT, fontSize: labelSize, gap: LABEL_GAP_PX * pz.scale * unitsPerPx, bounds: { x0: pz.view.x, y0: pz.view.y, x1: pz.view.x + pz.view.w, y1: pz.view.y + pz.view.h } },
     ).map((l) => [l.id, l]),
   );
   const hitFor = (id: string) => Math.min(hitR, nearestGap([...placed.values()], id) / 2);

@@ -128,7 +128,7 @@ function RegionMap({
   const labels = new Map(
     placeLabels(
       placed.map((p) => ({ id: p.id, x: p.px, y: p.py, label: pointLabel.get(p.id) ?? p.id })),
-      { pinR: pinR * 1.4, fontSize: labelSize, gap: 4 * (compact ? u : k), skipCrowded: compact },
+      { pinR: pinR * 1.4, fontSize: labelSize, gap: 4 * (compact ? u : k), skipCrowded: compact, bounds: { x0: view.x, y0: view.y, x1: view.x + view.w, y1: view.y + view.h } },
     ).map((l) => [l.id, l]),
   );
   const open = (title: string, list: MapStop[], x: number, y: number) => setPicker({ region, title, stops: list, x, y });

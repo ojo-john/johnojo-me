@@ -358,6 +358,13 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tabs { display: inline-flex; background: var(--paper); border: 2px solid var(--ink); border-radius: 99px; padding: 4px; gap: 2px; flex-wrap: wrap; }
 .tabs button { border: 0; background: none; border-radius: 99px; min-height: 38px; padding: 0 14px; font-weight: 700; font-size: 13.5px; cursor: pointer; }
 .tabs button[aria-selected="true"], .tabs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.seg-wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 16px; }
+.seg-l { font-size: 14px; color: var(--ink-2); }
+@media (max-width: 600px) {
+  /* Three equal segments across the width instead of a pill that wraps onto two ragged rows. */
+  .seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; border-radius: 16px; }
+  .seg button { padding: 0 6px; font-size: 13px; border-radius: 12px; }
+}
 .lab-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px; margin-top: 28px; }
 .board .r { width: 100%; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 14px 16px; border: 0; border-top: 1.5px solid var(--rule); background: none; text-align: left; cursor: pointer; }
 .board .r:first-child { border-top: 0; }

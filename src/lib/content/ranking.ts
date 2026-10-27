@@ -50,9 +50,9 @@ export function rank<T extends Rankable>(items: readonly T[]): { ranked: Ranked<
 
 export type Aggregation = "latest" | "best" | "average";
 export const AGGREGATION_LABEL: Record<Aggregation, string> = {
-  latest: "Latest visit",
-  best: "Highest-rated visit",
-  average: "Average of rated visits",
+  latest: "Latest score",
+  best: "Best score",
+  average: "Average score",
 };
 
 export interface VisitScore {

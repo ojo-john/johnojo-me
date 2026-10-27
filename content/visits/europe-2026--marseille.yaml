@@ -11,8 +11,8 @@ highlights:
 moments:
   - date: 2026-10-20
     title: "The Old Port"
-    note: "My first afternoon, around the Vieux-Port and the church of Saint-Ferréol les Augustins on the harbour."
-    media: [photos/img-0905]
+    note: "My first afternoon, around the Vieux-Port and the church of Saint-Ferréol les Augustins on the harbour. Nearby, a signed photo of Eric Cantona: he was born in Marseille and played for Olympique de Marseille, his boyhood club, before he became a Manchester United legend."
+    media: [photos/img-0905, photos/img-0909]
   - date: 2026-10-21
     title: "Sunset at Notre-Dame de la Garde"
     note: "The basilica sits on the highest point in Marseille. It's a steep climb, but the view over the city and the sea at sunset was worth it."
@@ -38,7 +38,7 @@ mediaMeta:
   photos/img-0943: { caption: "The seafood", alt: "A whole grilled fish with herbs and pickled onions" }
   photos/img-0948: { caption: "Stade Vélodrome", alt: "A statue outside the striped facade of the Stade Vélodrome" }
   photos/img-0905: { caption: "Saint-Ferréol les Augustins", alt: "The white church on the Old Port under a cloudy sky" }
-  photos/img-0909: { caption: "A signed photo on the wall", alt: "A framed, signed photograph of a man in a cap" }
+  photos/img-0909: { caption: "A signed photo of Eric Cantona", alt: "A framed, signed photograph of Eric Cantona in a cap" }
   photos/img-0914: { caption: "Walking up the hill", alt: "A steep street looking down over Marseille's rooftops at golden hour" }
   photos/img-0925: { caption: "At the top", alt: "John smiling with the city and the sea behind him at sunset" }
   photos/img-0942: { caption: "Sunset from Notre-Dame de la Garde", alt: "Orange and pink clouds over the sea at dusk" }
