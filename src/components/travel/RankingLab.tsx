@@ -82,9 +82,6 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
       ) : (
         <ThenNow groups={repeat} />
       )}
-      <p className="method">
-        Method v1: ten categories scored 0–10 with equal weights. A city is ranked only once all ten are scored; an unrated category is never counted as zero. Ties share a rank. Match-day stops aren&apos;t ranked as cities.
-      </p>
     </section>
   );
 }

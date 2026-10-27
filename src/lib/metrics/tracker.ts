@@ -7,6 +7,8 @@ import type { ClickEvent, MetricEvent, PageViewEvent } from "./events";
 import { TRACK_EVENT } from "./track";
 
 // Outside /api/* on purpose: Cloudflare Access guards /api/*, and visitors must reach this without a login.
+const NEW_TAB_NOTE = /\(opens in a new tab\)/g;
+
 export const COLLECT_URL = "/hit";
 
 interface PrivacySignals {
@@ -59,7 +61,8 @@ export function clickEvent(target: TrackableElement | null, loc: { pathname: str
       return null;
     }
   }
-  const label = (el.getAttribute("data-track") ?? el.getAttribute("aria-label") ?? el.textContent ?? "").replace(/\s+/g, " ").trim().slice(0, 80);
+  // The screen-reader note on new-tab links isn't part of the link's name for counting.
+  const label = (el.getAttribute("data-track") ?? el.getAttribute("aria-label") ?? el.textContent ?? "").replace(NEW_TAB_NOTE, "").replace(/\s+/g, " ").trim().slice(0, 80);
   if (!label) return null;
   return { type: "click", path: loc.pathname, label, to };
 }

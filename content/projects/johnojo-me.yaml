@@ -1,0 +1,19 @@
+name: johnojo.me
+order: 3
+status: published
+kind: project
+stage: Live
+summary: This site. A static personal site for my work, travel and journal, with a private admin where I upload photos from my phone, edit trips and see visitor stats, all on free tiers.
+problem: I wanted one place for my career, my travels and my writing that loads fast, costs almost nothing to run, and that I can update from my phone without touching code.
+approach: Pages are built ahead of time from YAML and Markdown in Git, so there's no database to run. Photos go through a pipeline that finds faces for cropping, and a storage budget keeps it inside the free tier. The admin sits behind two locks, Cloudflare Access and the site checking the login itself.
+stack: [Next.js 16, TypeScript, Cloudflare Pages, Cloudflare R2, Pages Functions, Sveltia CMS, sharp, ffmpeg, Vitest]
+repo: null
+repoNote: Private, because it holds unpublished drafts
+demo: https://johnojo.me
+diagram:
+  - { label: Phone upload, note: "I upload originals from my phone to a login-protected page." }
+  - { label: Private bucket, note: "Originals land in private R2 storage. Uploads never overwrite, and an 8 GB budget keeps it free." }
+  - { label: Media pipeline, note: "Rotates, crops around faces, makes small web copies and compressed clips, and strips location data." }
+  - { label: Git content, note: "Trips, scores and notes are YAML and Markdown, edited in the browser and saved as commits." }
+  - { label: Static build, note: "Every page is built ahead of time, so visitors never wait on a database." }
+  - { label: Cloudflare edge, note: "Pages and photos are served from Cloudflare's cache, with the admin behind two locks." }

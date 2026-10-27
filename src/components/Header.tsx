@@ -85,7 +85,7 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
               <kbd>/</kbd>
             </button>
             <a className="btn gh" href={site.github} target="_blank" rel="noopener noreferrer">
-              GitHub ↗
+              GitHub<span className="sr-only"> (opens in a new tab)</span>
             </a>
             <button className="btn fill" type="button" data-track="résumé: open" onClick={() => cvRef.current?.showModal()}>
               Résumé
@@ -131,11 +131,11 @@ function ResumeDialog({ ref, site }: { ref: React.Ref<HTMLDialogElement>; site: 
           ) : null}
           {site.linkedin ? (
             <a className="btn" href={site.linkedin} target="_blank" rel="noopener noreferrer">
-              LinkedIn ↗
+              LinkedIn<span className="sr-only"> (opens in a new tab)</span>
             </a>
           ) : null}
           <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
+            GitHub<span className="sr-only"> (opens in a new tab)</span>
           </a>
         </div>
       </div>
@@ -214,7 +214,7 @@ function Palette({ open, onClose, items, onResume }: { open: boolean; onClose: (
           results.slice(0, 40).map((r, i) => (
             <li key={r.href + r.label} id={`po-${i}`} role="option" aria-selected={i === sel} onClick={() => run(r)} onMouseEnter={() => setSel(i)}>
               {r.label}
-              {r.external ? " ↗" : ""}
+              {r.external ? <span className="sr-only"> (opens in a new tab)</span> : null}
               <span>{r.hint}</span>
             </li>
           ))

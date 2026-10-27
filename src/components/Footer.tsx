@@ -16,11 +16,11 @@ export function Footer({ site, journal }: { site: Site; journal: boolean }) {
           {/* A plain link, not next/link: the feed is an XML file, not a page. */}
           {journal ? <a href="/journal/feed.xml">RSS feed</a> : null}
           <a href={site.github} target="_blank" rel="noopener noreferrer">
-            GitHub ↗
+            GitHub<span className="sr-only"> (opens in a new tab)</span>
           </a>
           {site.linkedin ? (
             <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
-              LinkedIn ↗
+              LinkedIn<span className="sr-only"> (opens in a new tab)</span>
             </a>
           ) : null}
           {site.email ? <a href={`mailto:${site.email}`}>{site.email}</a> : null}

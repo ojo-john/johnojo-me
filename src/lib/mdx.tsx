@@ -23,7 +23,7 @@ function Scripture({ k }: { k: string }) {
       <div className="r">{p.ref} · World English Bible</div>
       <blockquote>{p.text}</blockquote>
       <a href={passageUrl(k)} target="_blank" rel="noopener noreferrer">
-        Read the passage ↗
+        Read the passage<span className="sr-only"> (opens in a new tab)</span>
       </a>
     </figure>
   );

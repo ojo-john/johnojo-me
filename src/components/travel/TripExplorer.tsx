@@ -5,6 +5,7 @@ import { Picture } from "@/components/Picture";
 import type { MapGeometry } from "@/lib/geo";
 import { spreadPins } from "@/lib/pin-spread";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { Gallery } from "./Gallery";
 import { Lightbox, useLightbox } from "./Lightbox";
 import type { VisitView } from "./types";
 import { ClipPlayer, YouTube } from "./Video";
@@ -25,6 +26,10 @@ const LABEL_SIZE = 17;
 const MIN_PIN_PX = 11;
 const MIN_NUMBER_PX = 12;
 const MIN_LABEL_PX = 13;
+/** Each pin's tap target is at least this wide on screen (WCAG 2.2 asks for 24px; 44px is comfortable). */
+const MIN_HIT_PX = 44;
+/** Below this width the map stops being sticky (see globals.css), so it shows the whole route instead of zooming. */
+const STACKED_QUERY = "(max-width: 900px)";
 
 export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeometry }) {
   const [active, setActive] = useState<string | null>(null);
@@ -45,6 +50,17 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     return () => ro.disconnect();
   }, [map.width]);
   const pinR = Math.max(PIN_R, MIN_PIN_PX * unitsPerPx);
+  const hitR = Math.max(pinR, (MIN_HIT_PX / 2) * unitsPerPx);
+  // On a phone the map sits above the stories rather than beside them, so following the reader with a
+  // zoom would only push other pins off the edge. It stays zoomed out there.
+  const [stacked, setStacked] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia(STACKED_QUERY);
+    const update = () => setStacked(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   const numberSize = Math.max(NUMBER_SIZE, MIN_NUMBER_PX * unitsPerPx);
   const labelSize = Math.max(LABEL_SIZE, MIN_LABEL_PX * unitsPerPx);
   const lb = useLightbox();
@@ -74,7 +90,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     document.getElementById(slug)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
   }, [reducedMotion]);
 
-  const focus = active ? pins.get(active) : null;
+  const focus = active && !stacked ? pins.get(active) : null;
   const camera = focus ? `translate(${(map.width / 2 - focus.x * ZOOM).toFixed(1)}px, ${(map.height / 2 - focus.y * ZOOM).toFixed(1)}px) scale(${ZOOM})` : undefined;
 
   return (
@@ -107,6 +123,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                     onClick={() => jump(v.slug)}
                     onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), jump(v.slug))}
                   >
+                    <circle className="hit" cx={p.x} cy={p.y} r={hitR} />
                     <circle cx={p.x} cy={p.y} r={pinR} strokeWidth={Math.max(3, pinR / 5)} />
                     <text x={p.x} y={p.y} style={{ fontSize: numberSize }}>
                       {v.number}
@@ -144,22 +161,10 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
               {KIND_LABEL[v.kind] ? <span className="flag muted">{KIND_LABEL[v.kind]}</span> : null}
             </div>
 
-            {v.cover ? (
-              <button type="button" className="cover" data-track="lightbox: open" style={{ padding: 0, cursor: "zoom-in", background: "none" }} onClick={() => lb.open(v.photos, Math.max(0, v.photos.findIndex((p) => p.id === v.cover?.id)))} aria-label={`Open photo: ${v.cover.caption ?? v.city}`}>
-                <Picture photo={v.cover} sizes="(max-width: 900px) 100vw, 45vw" />
-              </button>
+            {v.photos.length ? (
+              <Gallery photos={v.cover ? [v.cover, ...v.photos.filter((p) => p.id !== v.cover?.id)] : v.photos} label={`Photos from ${v.city}`} onOpen={(i) => lb.open(v.cover ? [v.cover, ...v.photos.filter((p) => p.id !== v.cover?.id)] : v.photos, i)} />
             ) : null}
 
-            {v.matches.map((m) => (
-              <div key={`${m.home}-${m.away}-${m.date}`} className="matchbox">
-                <span className="kicker">{[m.competition, m.stadium].filter(Boolean).join(" · ") || "Match"}</span>
-                <span className="fixture">
-                  {m.home} {m.score ?? "v"} {m.away}
-                </span>
-                {m.writeUp ? <p style={{ fontFamily: "var(--f-read)", fontSize: 17.5 }}>{m.writeUp}</p> : null}
-              </div>
-            ))}
-            {v.kind === "match-only" && v.matches.length === 0 ? <p className="missing">Match details coming soon.</p> : null}
 
             {v.summary ? <p className="sum">{v.summary}</p> : v.kind === "city" && v.highlights.length === 0 ? <p className="missing">Notes coming.</p> : null}
 
@@ -204,6 +209,17 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
               </div>
             ) : null}
 
+            {v.matches.map((m) => (
+              <div key={`${m.home}-${m.away}-${m.date}`} className="matchbox">
+                <span className="kicker">{[m.competition, m.stadium].filter(Boolean).join(" · ") || "Match"}</span>
+                <span className="fixture">
+                  {m.home} {m.score ?? "v"} {m.away}
+                </span>
+                {m.writeUp ? <p style={{ fontFamily: "var(--f-read)", fontSize: 17.5 }}>{m.writeUp}</p> : null}
+              </div>
+            ))}
+            {v.kind === "match-only" && v.matches.length === 0 ? <p className="missing">Match details coming soon.</p> : null}
+
             {v.liked || v.disliked ? (
               <div className="ld">
                 {v.liked ? (
@@ -214,19 +230,20 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                 ) : null}
                 {v.disliked ? (
                   <div>
-                    <b>Didn&apos;t</b>
+                    <b>Didn&apos;t like</b>
                     {v.disliked}
                   </div>
                 ) : null}
               </div>
             ) : null}
 
-            {v.videos.length === 1 ? (
-              <ClipPlayer clip={v.videos[0]} label={v.videos[0].caption ?? `Clip from ${v.city}`} />
-            ) : v.videos.length > 1 ? (
-              <div className="clips" role="group" aria-label={`${v.videos.length} clips from ${v.city}`}>
-                {v.videos.map((clip, i) => (
-                  <button key={clip.id} type="button" data-track="clip: open" onClick={() => lb.open(v.videos, i)} aria-label={`Play clip ${i + 1}: ${clip.caption ?? v.city}`}>
+            {/* Clips already shown under "What I did" aren't repeated here. */}
+            {v.looseClips.length === 1 ? (
+              <ClipPlayer clip={v.looseClips[0]} label={v.looseClips[0].caption ?? `Clip from ${v.city}`} />
+            ) : v.looseClips.length > 1 ? (
+              <div className="clips" role="group" aria-label={`${v.looseClips.length} clips from ${v.city}`}>
+                {v.looseClips.map((clip, i) => (
+                  <button key={clip.id} type="button" data-track="clip: open" onClick={() => lb.open(v.looseClips, i)} aria-label={`Play clip ${i + 1}: ${clip.caption ?? v.city}`}>
                     {clip.type === "video" && clip.poster ? (
                       // eslint-disable-next-line @next/next/no-img-element -- poster generated by scripts/media.ts
                       <img src={clip.poster} alt="" loading="lazy" width={clip.w} height={clip.h} />
@@ -240,16 +257,9 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
               <YouTube key={y.id} id={y.id} title={y.title} />
             ))}
 
-            {v.photos.length || v.kind === "city" ? (
+            {v.kind !== "match-only" ? (
               <div className="crow">
-                <div className="thumbs">
-                  {v.photos.map((p, i) => (
-                    <button key={p.id} type="button" data-track="lightbox: open" onClick={() => lb.open(v.photos, i)} aria-label={`Open photo: ${p.caption ?? p.alt}`}>
-                      <Picture photo={{ ...p, alt: "" }} sizes="64px" />
-                    </button>
-                  ))}
-                </div>
-                {v.kind !== "match-only" ? <Score v={v} /> : null}
+                <Score v={v} />
               </div>
             ) : null}
           </article>

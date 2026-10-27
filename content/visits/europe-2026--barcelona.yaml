@@ -3,7 +3,7 @@ destination: barcelona
 order: 1
 arrive: 2026-10-16
 depart: 2026-10-19
-summary: "Barcelona was amazing, way better than Madrid. Good food, friendly people, and it's so walkable. I got lost a couple of times, but I figured it out quickly. On my first night I saw a flamenco show and loved it, because I love learning about other cultures. I also learnt to make paella at a cooking class."
+summary: "Barcelona was amazing, way better than Madrid. Good food, friendly people, and it's so walkable. I got lost a couple of times, but I figured it out quickly. On my first night I saw a flamenco show. I love learning about other cultures, so it was the perfect start. I also learnt to make paella at a cooking class."
 highlights:
   Culture: A flamenco show on my first night
   Food: Learning to make paella at a cooking class
@@ -11,26 +11,30 @@ highlights:
 moments:
   - date: 2026-10-16
     title: "Flamenco show"
-    note: "My first night, at Theatre Flamenco Barcelona City Hall."
+    note: "My first night, at the Theatre Flamenco Barcelona City Hall, just off Plaça de Catalunya."
     media: [videos/img-0489, videos/img-0491, videos/img-0493, videos/img-0494]
   - date: 2026-10-17
     title: "Espanyol v Atlético Madrid"
+    note: "At Espanyol's stadium in Cornellà, just outside the city."
     media: [videos/img-0555, photos/img-0532, photos/img-0537, photos/img-0543, photos/img-0565, photos/img-0571]
   - date: 2026-10-17
-    title: "Dinner at Besta"
+    title: "Birthday dinner at Besta"
+    note: "The 12-course tasting menu at Besta, a seafood-focused, Michelin-listed bistro in the Eixample."
     media: [photos/img-0578, photos/img-0586]
   - date: 2026-10-18
     title: "Park Güell"
+    note: "Gaudí's park on Carmel Hill, with views over the whole city."
     media: [photos/img-0660]
   - date: 2026-10-18
     title: "Sagrada Família"
-    note: "From the outside."
+    note: "Gaudí's basilica, under construction since 1882. My visit inside was cancelled, so I saw it from the street."
     media: [photos/img-0803, photos/img-0805, photos/img-0816, photos/img-0820]
   - date: 2026-10-18
     title: "99 Cheesecake"
     media: [photos/img-0832, photos/img-0837]
   - date: 2026-10-19
-    title: "Paella cooking class"
+    title: "Paella and tapas cooking class"
+    note: "We made seafood paella from scratch, then ate it."
     media: [photos/img-0860, photos/img-0893, photos/img-0897]
 liked: "Good food, friendly people and how walkable it is."
 disliked: "Getting lost a couple of times early on, and a very boring Espanyol game."

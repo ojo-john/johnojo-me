@@ -39,11 +39,11 @@ export default function WorkPage() {
           <div className="ctas">
             <ResumeButton className="btn fill">View résumé</ResumeButton>
             <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
-              GitHub ↗
+              GitHub<span className="sr-only"> (opens in a new tab)</span>
             </a>
             {site.linkedin ? (
               <a className="btn" href={site.linkedin} target="_blank" rel="noopener noreferrer">
-                LinkedIn ↗
+                LinkedIn<span className="sr-only"> (opens in a new tab)</span>
               </a>
             ) : null}
           </div>

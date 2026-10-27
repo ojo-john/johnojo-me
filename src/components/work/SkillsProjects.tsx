@@ -84,7 +84,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
                     <dd>
                       {p.repo ? (
                         <a className="tap" href={p.repo} target="_blank" rel="noopener noreferrer">
-                          View on GitHub ↗
+                          View on GitHub<span className="sr-only"> (opens in a new tab)</span>
                         </a>
                       ) : (
                         p.repoNote ?? "Not public"
@@ -93,7 +93,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
                         <>
                           {" · "}
                           <a className="tap" href={p.demo} target="_blank" rel="noopener noreferrer">
-                            Live app ↗
+                            Live app<span className="sr-only"> (opens in a new tab)</span>
                           </a>
                           {p.demoNote ? <span style={{ color: "var(--ink-2)" }}> ({p.demoNote.toLowerCase()})</span> : null}
                         </>

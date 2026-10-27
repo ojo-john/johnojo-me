@@ -72,7 +72,7 @@ export default function Home() {
           <div className="ctas">
             <ResumeButton className="btn fill">View résumé</ResumeButton>
             <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
-              GitHub ↗
+              GitHub<span className="sr-only"> (opens in a new tab)</span>
             </a>
             <Link className="btn" href="/work/">
               Experience →

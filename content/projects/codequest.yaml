@@ -2,7 +2,7 @@ name: CodeQuest
 order: 2
 status: published
 kind: project
-stage: In progress
+stage: Live
 summary: I turned my own Java interview prep into a game. You solve challenges by writing real Java in the browser, and it runs in an isolated sandbox and gets graded instantly.
 problem: Interview prep is a grind and easy to drop. I wanted to make practising Java feel like a game I'd actually come back to, and run it for as close to nothing as possible.
 approach: Code runs in a locked-down sandbox built from a pinned runner image, JUnit and contract tests grade every answer, and job and CPU budgets keep it inside free and hobby tiers.

@@ -9,6 +9,12 @@ const dayLabel = (iso: string) => new Date(`${iso.slice(0, 10)}T12:00:00Z`).toLo
 
 /** Flatten a loaded visit into the plain data interactive components need. */
 export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitView {
+  const view = baseView(v, trip, number);
+  const inMoments = new Set(view.moments.flatMap((m) => m.media.map((x) => x.id)));
+  return { ...view, looseClips: view.videos.filter((c) => !inMoments.has(c.id)) };
+}
+
+function baseView(v: VisitEntry, trip: TripEntry, number: number): Omit<VisitView, "looseClips"> {
   return {
     id: `${trip.slug}/${v.slug}`,
     slug: v.slug,
@@ -50,4 +56,4 @@ export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitVie
 export const tripViews = (trip: TripEntry) => trip.visits.map((v, i) => toView(v, trip, i + 1));
 
 /** Rankings only need names, dates and scores: drop media so the page payload stays small. */
-export const slim = (v: VisitView): VisitView => ({ ...v, photos: [], videos: [], cover: null, youtube: [], matches: [], moments: [] });
+export const slim = (v: VisitView): VisitView => ({ ...v, photos: [], videos: [], cover: null, youtube: [], matches: [], moments: [], looseClips: [] });

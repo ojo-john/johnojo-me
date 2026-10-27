@@ -98,7 +98,7 @@ export function Reader({
               <span className="r">{current.ref} · WEB</span>
               <blockquote>{current.text}</blockquote>
               <a href={current.url} target="_blank" rel="noopener noreferrer">
-                Read the passage ↗
+                Read the passage<span className="sr-only"> (opens in a new tab)</span>
               </a>
               <span className="missing" style={{ fontSize: 12.5 }}>
                 Select a highlighted reference to show it here.

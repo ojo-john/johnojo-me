@@ -6,6 +6,7 @@ depart: 2026-10-26
 moments:
   - date: 2026-10-24
     title: "The Duomo and its rooftop terraces"
+    note: "Milan's Gothic cathedral took almost six centuries to finish. Up on the roof, you walk among its spires and statues."
     media: [photos/img-0995, photos/img-1087, photos/img-1006, photos/img-1009, photos/img-1012, photos/img-1026, photos/img-1035]
   - date: 2026-10-24
     title: "Inside the Duomo"
@@ -15,9 +16,11 @@ moments:
     media: [photos/img-1100, photos/img-1110]
   - date: 2026-10-25
     title: "Inter v Fiorentina at San Siro"
+    note: "Inter's home, which they share with AC Milan. 74,642 people were there."
     media: [videos/img-1154, photos/img-1155, photos/img-1163, photos/img-1173, photos/img-1174, photos/img-1221, photos/img-1225]
   - date: 2026-10-25
     title: "Castello Sforzesco"
+    note: "The 15th-century castle of the Sforza family, who once ruled Milan."
     media: [photos/img-1236, photos/img-1241]
 matches:
   - home: Inter

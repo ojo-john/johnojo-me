@@ -13,13 +13,15 @@ export function generateMetadata(): Metadata {
 export default function ResumePage() {
   const site = getSite();
   const exp = getExperience();
-  const contact = [
-    site.location,
-    site.email,
-    site.linkedin?.replace(/^https?:\/\/(www\.)?/, ""),
-    site.github.replace(/^https?:\/\//, ""),
-    site.domain,
-  ].filter(Boolean) as string[];
+  // Shown without "https://", but each one is a real link, on the page and in the printed PDF.
+  const bare = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  const contact: { text: string; href?: string }[] = [
+    ...(site.location ? [{ text: site.location }] : []),
+    ...(site.email ? [{ text: site.email, href: `mailto:${site.email}` }] : []),
+    ...(site.linkedin ? [{ text: bare(site.linkedin), href: site.linkedin }] : []),
+    { text: bare(site.github), href: site.github },
+    { text: site.domain, href: `https://${site.domain}/` },
+  ];
   return (
     <article className="wrap resume">
       <JsonLd data={breadcrumbs(site.domain, [{ name: "Résumé", path: "/resume/" }])} />
@@ -32,7 +34,7 @@ export default function ResumePage() {
         </div>
         <ul className="resume-contact">
           {contact.map((c) => (
-            <li key={c}>{c}</li>
+            <li key={c.text}>{c.href ? <a href={c.href}>{c.text}</a> : c.text}</li>
           ))}
         </ul>
         {site.resume ? (

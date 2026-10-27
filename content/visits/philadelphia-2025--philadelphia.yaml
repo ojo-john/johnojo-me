@@ -3,6 +3,7 @@ destination: philadelphia
 order: 1
 kind: match-only
 arrive: 2025-06-20
+summary: "I flew up from Dallas with a friend, and getting there was chaos. Our Frontier flight was stuck in the air for hours, then diverted to Pittsburgh. Frontier gave us no hotel and no food, so we slept in the airport. The next morning our flight was delayed again, and when we finally landed in Philadelphia we went straight to the game, only to watch Chelsea lose."
 matches:
   - home: Flamengo
     away: Chelsea

@@ -25,6 +25,8 @@ export interface VisitView {
   notRanked: string | null;
   /** "What I did", day by day, each with its own media. */
   moments: { when: string | null; title: string; note: string | null; media: MediaItem[] }[];
+  /** Clips not already shown under a moment. */
+  looseClips: MediaItem[];
   score: ScoreState;
   scores: Record<string, number | null>;
   /** Context for individual scores, keyed like `scores`. */

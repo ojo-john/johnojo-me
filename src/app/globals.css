@@ -238,10 +238,11 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .bigmap .pin { cursor: pointer; outline: none; }
 .bigmap .lead line { stroke: var(--ink); stroke-opacity: 0.55; }
 .bigmap .lead circle { fill: var(--ink); }
+.bigmap .pin .hit { fill: transparent; stroke: none; }
 .bigmap .pin circle { fill: var(--paper); stroke: var(--ink); transform-box: fill-box; transform-origin: center; transition: transform 300ms var(--spring), fill 250ms; }
 .bigmap .pin text { font-weight: 800; font-family: var(--f-display); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
 .bigmap .pin .lbl { font-weight: 700; font-family: var(--f-ui); text-anchor: start; opacity: 0; transition: opacity 250ms; }
-.bigmap .pin.act circle, .bigmap .pin:focus-visible circle, .bigmap .pin:hover circle { fill: var(--sun); transform: scale(1.2); }
+.bigmap .pin.act circle:not(.hit), .bigmap .pin:focus-visible circle:not(.hit), .bigmap .pin:hover circle:not(.hit) { fill: var(--sun); transform: scale(1.2); }
 .bigmap .pin.act .lbl, .bigmap .pin:hover .lbl, .bigmap .pin:focus-visible .lbl { opacity: 1; }
 .map-legend { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; padding-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .tmap .tmap-country { fill: var(--travel); fill-opacity: .12; stroke: var(--travel); stroke-opacity: .35; cursor: pointer; transition: fill-opacity var(--t-quick); }
@@ -252,7 +253,7 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 /* Keyboard focus must be unmistakable (WCAG 2.4.7/2.4.11): a thick cobalt outline, not just a tint. */
 .tmap a:focus-visible .tmap-country, .tmap path.tmap-country:focus-visible { stroke: var(--work); stroke-opacity: 1; stroke-width: 3; fill-opacity: .35; }
 .tmap .tmap-pin:focus-visible circle:nth-child(2) { stroke: var(--work); stroke-width: 4; }
-.bigmap .pin:focus-visible circle { stroke: var(--work); stroke-width: 5px; }
+.bigmap .pin:focus-visible circle:not(.hit) { stroke: var(--work); stroke-width: 5px; }
 .tmap-pick { position: absolute; z-index: 2; width: min(280px, 80%); background: var(--paper); border: 2px solid var(--ink); border-radius: 14px; padding: 12px; box-shadow: 0 12px 32px rgba(18,20,23,.18); }
 .tmap-pick.below { position: static; width: auto; margin: 0 10px 10px; box-shadow: none; }
 .tmap-pick-hd { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
@@ -277,6 +278,17 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ccard .sub { font-size: 13px; color: var(--ink-2); font-family: var(--f-mono); }
 .ccard .sum { font-family: var(--f-read); font-size: 18.5px; line-height: 1.55; }
 .ccard .cover { aspect-ratio: 16 / 9; overflow: hidden; border: 2px solid var(--ink); }
+.gal { display: grid; gap: 8px; }
+.gal-track { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
+.gal-track::-webkit-scrollbar { display: none; }
+.gal-track:focus-visible { outline: 3px solid var(--work); outline-offset: 3px; }
+.gal-slide { position: relative; flex: 0 0 88%; aspect-ratio: 4 / 3; padding: 0; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; background: var(--chalk); cursor: zoom-in; scroll-snap-align: center; }
+.gal-track.one .gal-slide { flex-basis: 100%; }
+.gal-slide picture, .gal-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gal-slide .cap { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 4px 10px; border-radius: 99px; background: rgba(18, 20, 23, .72); color: #fff; font-size: 13px; text-align: left; }
+.gal-ctl { display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--f-mono); font-size: 13px; color: var(--ink-2); }
+.gal-ctl .circ { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
+.gal-ctl .circ:disabled { opacity: .35; cursor: default; }
 .ccard .cover img { width: 100%; height: 100%; object-fit: cover; }
 .hlchips { display: flex; flex-wrap: wrap; gap: 6px; }
 .hlchips span { font-size: 13px; padding: 5px 11px; border-radius: 99px; background: var(--chalk); }
@@ -448,7 +460,7 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
   .tri, .tri.two { grid-template-columns: minmax(0, 1fr); height: auto; }
   .tri .panel { min-height: 300px; }
   .map-col { position: static; }
-  .bigmap { aspect-ratio: 16 / 11; }
+  .bigmap { aspect-ratio: 1 / 1; max-height: none; }
   .trip-band .cover { position: relative; width: 100%; height: 220px; margin-top: 24px; }
   .trip-band .txt { max-width: none; }
   .reader { grid-template-columns: minmax(0, 1fr); }
@@ -484,6 +496,7 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 .resume-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 24px; align-items: end; border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
 .resume-head h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.04em; }
 .resume-role { font-weight: 700; color: var(--work); margin-top: 6px; }
+.resume .resume-contact a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .resume .resume-contact { grid-column: 1 / -1; flex-direction: row; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-2); }
 .resume-head .btn { grid-row: 1; grid-column: 2; }
 .resume h2 { font-size: 22px; text-transform: uppercase; letter-spacing: 0.06em; margin: 32px 0 10px; color: var(--work); }

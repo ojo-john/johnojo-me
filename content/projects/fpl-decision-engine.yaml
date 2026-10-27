@@ -2,7 +2,7 @@ name: FPL Decision Engine
 order: 1
 status: published
 kind: case-study
-stage: In progress · Milestone 1
+stage: Live
 summary: A decision-support system for a Fantasy Premier League manager in a head-to-head league. It ingests player and fixture data, versions the game's rules and won't make recommendations from bad data.
 problem: Public FPL data is inconsistent and the game's rules change between seasons. Recommendations are only as good as the data under them.
 approach: A resilient API client with retries and health classification, versioned rules snapshots, normalised ingestion into Postgres, and a data-quality gate that blocks optimisation when checks fail.

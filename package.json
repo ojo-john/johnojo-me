@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:drafts": "SHOW_DRAFTS=1 next dev",
     "build": "next build",
-    "postbuild": "node scripts/strip-local-media.mjs",
+    "postbuild": "node scripts/strip-local-media.mjs && tsx scripts/indexnow.ts --on-deploy",
     "start": "npx serve out",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
