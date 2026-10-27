@@ -397,7 +397,10 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .awards b { font-family: var(--f-display); font-size: 22px; }
 .stack-sec { padding-block: 72px 96px; border-top: 3px solid var(--ink); }
 .stackwrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: center; margin-top: 28px; }
-.pstack { position: relative; aspect-ratio: 4 / 3; }
+.pstack { position: relative; aspect-ratio: 4 / 3; touch-action: pan-y; }
+/* While a finger drags the top photo, it follows exactly; the spring returns on release. */
+.pstack.dragging button { transition: none; }
+.pstack img { -webkit-user-drag: none; user-select: none; }
 .pstack button { position: absolute; inset: 6%; padding: 0; border: 8px solid var(--paper); box-shadow: 0 18px 40px -20px rgba(18, 20, 23, 0.5); background: var(--paper); cursor: zoom-in; transition: transform 700ms var(--spring), opacity 400ms; overflow: hidden; }
 .pstack button picture, .pstack button img { width: 100%; height: 100%; object-fit: cover; }
 .stack-ctl { display: flex; flex-direction: column; gap: 14px; }

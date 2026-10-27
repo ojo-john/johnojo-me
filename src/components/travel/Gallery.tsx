@@ -1,15 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useRef, useState, type CSSProperties } from "react";
 import { Picture } from "@/components/Picture";
 import type { MediaItem } from "@/lib/content/media";
-import { clampIndex, DRAG_PX, railOffset, swipeStep } from "@/lib/swipe";
+import { clampIndex, railOffset } from "@/lib/swipe";
+import { useSwipe } from "@/lib/useSwipe";
 import { useReducedMotion } from "@/lib/useReducedMotion";
-
-/** Pointer and touch events both report the same swipe; only the first one moves the strip. */
-const STEP_DEBOUNCE_MS = 400;
-/** A trackpad's sideways scroll has to add up to this much (px) before it turns the page of photos. */
-const WHEEL_STEP_PX = 50;
 
 /**
  * A stop's photos as a swipeable strip, the next photo peeking in so the pile is obvious; previous/next
@@ -28,108 +24,13 @@ export function Gallery({ photos, label, onOpen, priority = false }: { photos: M
 
   const go = useCallback((to: number) => setIndex(clampIndex(to, count)), [count]);
 
-  useEffect(() => {
-    const el = viewport.current;
+  const follow = useCallback((dx: number) => {
     const strip = rail.current;
-    if (!el || !strip || count < 2) return;
-    // The strip follows a finger or a mouse; touch-action: pan-y in the CSS hands vertical moves to the
-    // browser, so the page still scrolls. Where the swipe started and ended decides it: iOS doesn't always
-    // send the moves in between.
-    let drag: { id: number; x: number; y: number } | null = null;
-    let suppressClick = false;
-    let lastStep = 0;
-    const follow = (dx: number) => {
-      strip.style.setProperty("--dx", `${dx}px`);
-      strip.classList.toggle("dragging", dx !== 0);
-    };
-    const settle = (dx: number, dy: number) => {
-      follow(0);
-      if (Math.abs(dx) < DRAG_PX) return;
-      // A drag ends with a click on the photo under the finger; that mustn't open it.
-      suppressClick = true;
-      const step = swipeStep(dx, dy);
-      if (!step || Date.now() - lastStep < STEP_DEBOUNCE_MS) return;
-      lastStep = Date.now();
-      setIndex((i) => clampIndex(i + step, count));
-    };
-    const down = (e: PointerEvent) => {
-      if (!e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) return;
-      suppressClick = false;
-      drag = { id: e.pointerId, x: e.clientX, y: e.clientY };
-    };
-    const move = (e: PointerEvent) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const dx = e.clientX - drag.x;
-      if (Math.abs(dx) >= DRAG_PX && Math.abs(dx) > Math.abs(e.clientY - drag.y)) follow(dx);
-    };
-    const up = (e: PointerEvent) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const { x, y } = drag;
-      drag = null;
-      settle(e.clientX - x, e.clientY - y);
-    };
-    // The browser took over (a vertical scroll): put the strip back.
-    const cancel = (e: PointerEvent) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      drag = null;
-      follow(0);
-    };
-    // Backup for phones whose pointer events go missing mid-swipe: plain touch start and end positions.
-    let touch: { x: number; y: number } | null = null;
-    const touchStart = (e: TouchEvent) => {
-      touch = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null;
-    };
-    const touchEnd = (e: TouchEvent) => {
-      const t = e.changedTouches[0];
-      if (!touch || !t) return;
-      const { x, y } = touch;
-      touch = null;
-      settle(t.clientX - x, t.clientY - y);
-    };
-    // Two-finger sideways scroll on a trackpad (or Shift+wheel): one photo per flick.
-    let wheelSum = 0;
-    const wheel = (e: WheelEvent) => {
-      const dx = e.deltaX || (e.shiftKey ? e.deltaY : 0);
-      if (Math.abs(dx) <= Math.abs(e.shiftKey ? 0 : e.deltaY)) return;
-      // Stops the browser treating the sideways scroll as "go back a page".
-      e.preventDefault();
-      if (Date.now() - lastStep < STEP_DEBOUNCE_MS) return;
-      wheelSum += dx;
-      if (Math.abs(wheelSum) < WHEEL_STEP_PX) return;
-      lastStep = Date.now();
-      const step = wheelSum > 0 ? 1 : -1;
-      wheelSum = 0;
-      setIndex((i) => clampIndex(i + step, count));
-    };
-    const click = (e: MouseEvent) => {
-      if (!suppressClick) return;
-      e.stopPropagation();
-      e.preventDefault();
-      suppressClick = false;
-    };
-    // A mouse drag on a photo would otherwise start the browser's own "drag this image", cancelling ours.
-    const noNativeDrag = (e: DragEvent) => e.preventDefault();
-    el.addEventListener("pointerdown", down);
-    window.addEventListener("pointermove", move);
-    window.addEventListener("pointerup", up);
-    window.addEventListener("pointercancel", cancel);
-    el.addEventListener("touchstart", touchStart, { passive: true });
-    el.addEventListener("touchend", touchEnd, { passive: true });
-    el.addEventListener("wheel", wheel, { passive: false });
-    el.addEventListener("click", click, true);
-    el.addEventListener("dragstart", noNativeDrag);
-    return () => {
-      el.removeEventListener("pointerdown", down);
-      window.removeEventListener("pointermove", move);
-      window.removeEventListener("pointerup", up);
-      window.removeEventListener("pointercancel", cancel);
-      el.removeEventListener("touchstart", touchStart);
-      el.removeEventListener("touchend", touchEnd);
-      el.removeEventListener("wheel", wheel);
-      el.removeEventListener("click", click, true);
-      el.removeEventListener("dragstart", noNativeDrag);
-    };
-  }, [count]);
+    if (!strip) return;
+    strip.style.setProperty("--dx", `${dx}px`);
+    strip.classList.toggle("dragging", dx !== 0);
+  }, []);
+  useSwipe(viewport, (step) => setIndex((i) => clampIndex(i + step, count)), follow, count > 1);
 
   if (!count) return null;
   const many = count > 1;

@@ -1,18 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Picture } from "@/components/Picture";
 import type { MediaItem } from "@/lib/content/media";
+import { useSwipe } from "@/lib/useSwipe";
 import { Lightbox, useLightbox } from "./Lightbox";
 
 const TILT = [-2, 3, -5, 6, -7];
 
-/** A shuffleable pile of the trip's photos; the top photo opens full screen. */
+/** A shuffleable pile of the trip's photos: swipe, drag or use the buttons; the top photo opens full screen. */
 export function PhotoPile({ photos }: { photos: MediaItem[] }) {
   const [top, setTop] = useState(0);
   const lb = useLightbox();
-  if (!photos.length) return null;
-  const go = (d: number) => setTop((t) => (t + d + photos.length) % photos.length);
+  const pile = useRef<HTMLDivElement>(null);
+  const count = photos.length;
+  const go = useCallback((d: number) => setTop((t) => (t + d + count) % count), [count]);
+  // The top photo follows the finger, then the pile shuffles on release.
+  const follow = useCallback((dx: number) => {
+    const el = pile.current;
+    if (!el) return;
+    el.style.setProperty("--dx", `${dx}px`);
+    el.classList.toggle("dragging", dx !== 0);
+  }, []);
+  useSwipe(pile, go, follow, count > 1);
+  if (!count) return null;
   const current = photos[top];
   return (
     <section className="wrap stack-sec" aria-labelledby="pile-h">
@@ -23,7 +34,7 @@ export function PhotoPile({ photos }: { photos: MediaItem[] }) {
         The pile
       </h2>
       <div className="stackwrap">
-        <div className="pstack">
+        <div className="pstack" ref={pile}>
           {photos.map((p, i) => {
             const d = (i - top + photos.length) % photos.length;
             if (d > 5) return null;
@@ -36,7 +47,7 @@ export function PhotoPile({ photos }: { photos: MediaItem[] }) {
                 aria-label={`Open photo full screen: ${p.caption ?? p.alt}`}
                 data-track="lightbox: open"
                 onClick={() => lb.open(photos, top)}
-                style={{ zIndex: photos.length - d, transform: d === 0 ? "rotate(-1deg)" : `translate(${d * 6}px, ${d * 4}px) rotate(${TILT[d % 5]}deg)`, opacity: d > 4 ? 0 : 1 }}
+                style={{ zIndex: photos.length - d, transform: d === 0 ? "translateX(var(--dx, 0px)) rotate(-1deg)" : `translate(${d * 6}px, ${d * 4}px) rotate(${TILT[d % 5]}deg)`, opacity: d > 4 ? 0 : 1 }}
               >
                 <Picture photo={d === 0 ? p : { ...p, alt: "" }} sizes="(max-width: 900px) 90vw, 55vw" />
               </button>
