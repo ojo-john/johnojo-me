@@ -32,6 +32,10 @@ const MIN_LABEL_PX = 13;
 const MIN_HIT_PX = 44;
 /** Below this width the map stops being sticky (see globals.css), so it shows the whole route instead of zooming. */
 const STACKED_QUERY = "(max-width: 900px)";
+/** How far a pin really reaches, as a share of its radius: the thick outline plus the 1.2x grow when selected. */
+const PIN_FOOTPRINT = 1.45;
+/** Clear space between a pin and its name, in on-screen px. */
+const LABEL_GAP_PX = 6;
 
 export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeometry }) {
   const [active, setActive] = useState<string | null>(null);
@@ -77,7 +81,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
   const labels = new Map(
     placeLabels(
       [...placed.values()].map((p) => ({ id: p.id, x: p.px, y: p.py, label: names.get(p.id) ?? p.id })),
-      { pinR: pinR * 1.3, fontSize: labelSize, gap: 5 * pz.scale * unitsPerPx },
+      { pinR: pinR * PIN_FOOTPRINT, fontSize: labelSize, gap: LABEL_GAP_PX * pz.scale * unitsPerPx },
     ).map((l) => [l.id, l]),
   );
   const hitFor = (id: string) => Math.min(hitR, nearestGap([...placed.values()], id) / 2);

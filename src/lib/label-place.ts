@@ -19,6 +19,8 @@ export interface PlacedLabel {
   x: number;
   y: number;
   anchor: "start" | "middle" | "end";
+  /** No clear spot was found and skipCrowded was set: leave this name off (zooming in usually frees room). */
+  hidden: boolean;
 }
 
 interface Box {
@@ -45,10 +47,13 @@ function candidate(p: LabelPin, side: Side, pinR: number, fontSize: number, gap:
   const cy = p.y + dy * (dx ? off * 0.75 : off) + (dy > 0 ? h / 2 : dy < 0 ? -h / 2 : 0);
   const anchor: PlacedLabel["anchor"] = dx > 0 ? "start" : dx < 0 ? "end" : "middle";
   const x0 = anchor === "start" ? cx : anchor === "end" ? cx - w : cx - w / 2;
-  return { box: { x0, y0: cy - h / 2, x1: x0 + w, y1: cy + h / 2 }, label: { id: p.id, side, x: cx, y: cy, anchor } };
+  return { box: { x0, y0: cy - h / 2, x1: x0 + w, y1: cy + h / 2 }, label: { id: p.id, side, x: cx, y: cy, anchor, hidden: false } };
 }
 
-export function placeLabels(pins: readonly LabelPin[], { pinR, fontSize, gap = 6 }: { pinR: number; fontSize: number; gap?: number }): PlacedLabel[] {
+export function placeLabels(
+  pins: readonly LabelPin[],
+  { pinR, fontSize, gap = 6, skipCrowded = false }: { pinR: number; fontSize: number; gap?: number; skipCrowded?: boolean },
+): PlacedLabel[] {
   const taken: Box[] = pins.map((p) => ({ x0: p.x - pinR, y0: p.y - pinR, x1: p.x + pinR, y1: p.y + pinR }));
   // Top to bottom, so placement is stable and matches how the map is read.
   return [...pins]
@@ -59,6 +64,8 @@ export function placeLabels(pins: readonly LabelPin[], { pinR, fontSize, gap = 6
         return { ...c, order, cost: taken.reduce((sum, t) => sum + area(c.box, t), 0) };
       });
       const best = options.sort((a, b) => a.cost - b.cost || a.order - b.order)[0];
+      // A name that can't be placed cleanly is left off rather than drawn over something, and doesn't take room.
+      if (skipCrowded && best.cost > 0) return { ...best.label, hidden: true };
       taken.push(best.box);
       return best.label;
     });

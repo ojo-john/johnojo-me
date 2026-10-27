@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { MapGeometry } from "@/lib/geo";
+import { placeLabels } from "@/lib/label-place";
 import { nearestGap, spreadPins } from "@/lib/pin-spread";
 import { usePanZoom } from "@/lib/usePanZoom";
 
@@ -34,6 +35,8 @@ const MIN_LABEL_PX = 11;
 const COMPACT_PIN_PX = 8;
 const COMPACT_HIT_PX = 22;
 const COMPACT_GAP_PX = 4;
+/** City names in the compact look, in on-screen px. Only names that fit without touching anything are shown. */
+const COMPACT_LABEL_PX = 12;
 
 /**
  * The Travel page's overview maps. Visited countries and city pins are clickable: one stop goes
@@ -76,7 +79,7 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
         <RegionMap key={region} region={region} map={map} caption={regions.length > 1} stops={stops} unitsPerPx={unitsPerPx} picker={picker?.region === region ? picker : null} setPicker={setPicker} pickerRef={pickerRef} />
       ))}
       <p style={{ marginTop: 10, fontSize: 14, color: "var(--ink-2)" }}>
-        {compactAtFull ? "Tap a pin to see the city, or a country to see its stops. Pinch or use + and − to zoom." : "Select a country or a city to jump to that stop. Use + and − to zoom."}
+        {compactAtFull ? "Tap a pin or a country to see its stops. Pinch or use + and − to zoom in and see more city names." : "Select a country or a city to jump to that stop. Use + and − to zoom."}
       </p>
     </div>
   );
@@ -118,6 +121,16 @@ function RegionMap({
   // A pin's tap area never reaches past halfway to its nearest neighbour, so a tap lands on the pin you
   // meant. Crowded pins get a smaller area at full size; zooming in gives them room again.
   const hitFor = (id: string) => Math.min(hitR, nearestGap(placed, id) / 2);
+  // On a phone, every city name that fits cleanly is shown; the rest appear as you zoom in.
+  const pointLabel = new Map(map.points.map((p) => [p.id, p.label]));
+  // Larger screens show every name, each on its clearest side; phones only the ones that fit cleanly.
+  const labelSize = compact ? COMPACT_LABEL_PX * u : LABEL_SIZE * k;
+  const labels = new Map(
+    placeLabels(
+      placed.map((p) => ({ id: p.id, x: p.px, y: p.py, label: pointLabel.get(p.id) ?? p.id })),
+      { pinR: pinR * 1.4, fontSize: labelSize, gap: 4 * (compact ? u : k), skipCrowded: compact },
+    ).map((l) => [l.id, l]),
+  );
   const open = (title: string, list: MapStop[], x: number, y: number) => setPicker({ region, title, stops: list, x, y });
   // Where a click lands, in map units, allowing for the current zoom.
   const toMap = (e: React.MouseEvent, svg: SVGSVGElement) => {
@@ -179,19 +192,11 @@ function RegionMap({
               <>
                 <circle cx={at.px} cy={at.py} r={hitFor(p.id)} fill="transparent" />
                 <circle cx={at.px} cy={at.py} r={pinR} fill="var(--travel)" stroke="var(--paper)" strokeWidth={compact ? 2 * u : 2 * k} />
-                {compact ? null : (
-                  <text
-                    x={p.labelSide === "right" ? p.x + 11 * k : p.labelSide === "left" ? p.x - 11 * k : p.x}
-                    y={p.labelSide === "below" ? p.y + 22 * k : p.labelSide === "above" ? p.y - 12 * k : p.y + 4 * k}
-                    textAnchor={p.labelSide === "right" ? "start" : p.labelSide === "left" ? "end" : "middle"}
-                    fontSize={LABEL_SIZE * k}
-                    fontWeight={700}
-                    fontFamily="var(--f-ui)"
-                    fill="var(--ink)"
-                  >
+                {labels.get(p.id) && !labels.get(p.id)?.hidden ? (
+                  <text className="tmap-lbl" x={labels.get(p.id)?.x} y={labels.get(p.id)?.y} textAnchor={labels.get(p.id)?.anchor} fontSize={labelSize} strokeWidth={3 * (compact ? u : k)}>
                     {p.label}
                   </text>
-                )}
+                ) : null}
               </>
             );
             const choose = () => open(list[0]?.city ?? p.label, list, at.px, at.py);

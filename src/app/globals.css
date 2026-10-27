@@ -240,7 +240,10 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .bigmap .lead circle { fill: var(--ink); }
 .bigmap .pin .hit { fill: transparent; stroke: none; }
 .bigmap .pin circle { fill: var(--paper); stroke: var(--ink); transform-box: fill-box; transform-origin: center; transition: transform 300ms var(--spring), fill 250ms; }
-.bigmap .pin text { font-weight: 800; font-family: var(--f-display); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+/* The number sits centred in its pin. Names (.lbl) take their side from label placement, so they aren't centred here:
+   a CSS text-anchor would override the side chosen for each name and draw it over its own number. */
+.bigmap .pin text { font-weight: 800; font-family: var(--f-display); fill: var(--ink); dominant-baseline: central; pointer-events: none; }
+.bigmap .pin text:not(.lbl) { text-anchor: middle; }
 /* City names always show: a bare "1, 2, 3" means nothing until you tap. A white halo keeps them readable over land and lines. */
 .bigmap .pin .lbl { font-weight: 700; font-family: var(--f-ui); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
 .bigmap .pin.act circle:not(.hit), .bigmap .pin:focus-visible circle:not(.hit), .bigmap .pin:hover circle:not(.hit) { fill: var(--sun); transform: scale(1.2); }
@@ -249,6 +252,7 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tmap .tmap-country { fill: var(--travel); fill-opacity: .12; stroke: var(--travel); stroke-opacity: .35; cursor: pointer; transition: fill-opacity var(--t-quick); }
 .tmap a:hover .tmap-country, .tmap a:focus-visible .tmap-country, .tmap path.tmap-country:hover, .tmap path.tmap-country:focus-visible { fill-opacity: .28; outline: none; }
 .tmap .tmap-pin { cursor: pointer; }
+.tmap .tmap-lbl { font-family: var(--f-ui); font-weight: 700; fill: var(--ink); dominant-baseline: central; paint-order: stroke; stroke: var(--paper); stroke-linejoin: round; pointer-events: none; }
 .tmap .tmap-pin:hover circle:nth-child(2), .tmap .tmap-pin:focus-visible circle:nth-child(2) { fill: var(--sun); stroke: var(--ink); }
 .tmap .tmap-pin:focus-visible, .tmap a:focus-visible { outline: none; }
 /* Keyboard focus must be unmistakable (WCAG 2.4.7/2.4.11): a thick cobalt outline, not just a tint. */
@@ -287,9 +291,9 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ccard .cover { aspect-ratio: 16 / 9; overflow: hidden; border: 2px solid var(--ink); }
 /* Its own stacking layer, below the fixed header: iOS can otherwise paint a sideways-scrolling strip over it. */
 .gal { position: relative; z-index: 0; isolation: isolate; display: grid; gap: 8px; }
-.gal-track { display: flex; gap: 10px; overflow-x: auto; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
+.gal-track { display: flex; gap: 10px; overflow-x: auto; touch-action: pan-y; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; border-radius: 14px; }
 .gal-track::-webkit-scrollbar { display: none; }
-/* While a mouse drags the strip, snapping would fight the drag; it settles on release. Images mustn't start a browser drag. */
+/* While a finger or mouse drags the strip, snapping would fight the drag; it settles on release. Images mustn't start a browser drag. */
 .gal-track.dragging { scroll-snap-type: none; cursor: grabbing; }
 .gal-track img { -webkit-user-drag: none; user-select: none; }
 .gal-track:focus-visible { outline: 3px solid var(--work); outline-offset: 3px; }

@@ -7,7 +7,7 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 
 /** A sideways swipe at least this long (px) moves to the next photo. */
 const SWIPE_PX = 40;
-/** A mouse has to move this far (px) before a press counts as dragging the strip. */
+/** A finger or mouse has to move this far (px) sideways before a press counts as dragging the strip. */
 const DRAG_PX = 6;
 
 /**
@@ -48,67 +48,60 @@ export function Gallery({ photos, label, onOpen }: { photos: MediaItem[]; label:
     const el = track.current;
     if (!el) return;
     el.addEventListener("scroll", sync, { passive: true });
-    // Swiping normally scrolls the strip natively. Some phones don't scroll a strip of buttons sideways,
-    // so if a clear sideways swipe ends with the strip not having moved, step to the next or previous photo.
-    let start: { x: number; y: number; left: number } | null = null;
-    const touchStart = (e: TouchEvent) => {
-      const t = e.touches[0];
-      start = e.touches.length === 1 ? { x: t.clientX, y: t.clientY, left: el.scrollLeft } : null;
+    // The strip follows a finger or a mouse directly. Native sideways scrolling isn't relied on (some phones
+    // won't scroll a strip of buttons sideways); touch-action: pan-y in the CSS hands vertical moves to the
+    // browser, so the page still scrolls. On release it settles on the next photo if the drag went far enough.
+    let drag: { id: number; x: number; left: number; from: number; moved: number } | null = null;
+    let suppressClick = false;
+    const down = (e: PointerEvent) => {
+      if (!e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) return;
+      suppressClick = false;
+      drag = { id: e.pointerId, x: e.clientX, left: el.scrollLeft, from: indexRef.current, moved: 0 };
     };
-    const touchEnd = (e: TouchEvent) => {
-      const t = e.changedTouches[0];
-      if (!start || !t) return;
-      const dx = t.clientX - start.x;
-      const dy = t.clientY - start.y;
-      const moved = Math.abs(el.scrollLeft - start.left) > 4;
-      if (!moved && Math.abs(dx) > SWIPE_PX && Math.abs(dx) > Math.abs(dy) * 1.5) go(indexRef.current + (dx < 0 ? 1 : -1));
-      start = null;
-    };
-    // A mouse can't scroll a strip by dragging, so do it here: drag to move, release to settle on the
-    // nearest photo. A drag never opens the photo it started on.
-    let drag: { x: number; left: number; moved: number } | null = null;
-    const mouseDown = (e: PointerEvent) => {
-      if (e.pointerType !== "mouse" || e.button !== 0) return;
-      drag = { x: e.clientX, left: el.scrollLeft, moved: 0 };
-    };
-    const mouseMove = (e: PointerEvent) => {
-      if (!drag) return;
-      drag.moved = Math.max(drag.moved, Math.abs(e.clientX - drag.x));
+    const move = (e: PointerEvent) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x;
+      drag.moved = Math.max(drag.moved, Math.abs(dx));
       if (drag.moved < DRAG_PX) return;
       el.classList.add("dragging");
-      el.scrollLeft = drag.left - (e.clientX - drag.x);
+      el.scrollLeft = drag.left - dx;
     };
-    const mouseUp = () => {
-      if (!drag) return;
-      const wasDrag = drag.moved >= DRAG_PX;
+    const up = (e: PointerEvent) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x;
+      const { from, moved } = drag;
       drag = null;
       el.classList.remove("dragging");
-      if (wasDrag) {
-        suppressClick = true;
-        sync();
-        go(indexRef.current);
-      }
+      if (moved < DRAG_PX) return;
+      // A drag ends with a click on the photo under the finger; that mustn't open it.
+      suppressClick = true;
+      go(Math.abs(dx) > SWIPE_PX ? from + (dx < 0 ? 1 : -1) : from);
     };
-    let suppressClick = false;
+    // The browser took over (a vertical scroll): put the strip back where it was.
+    const cancel = (e: PointerEvent) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const { from } = drag;
+      drag = null;
+      el.classList.remove("dragging");
+      go(from);
+    };
     const click = (e: MouseEvent) => {
       if (!suppressClick) return;
       e.stopPropagation();
       e.preventDefault();
       suppressClick = false;
     };
-    el.addEventListener("touchstart", touchStart, { passive: true });
-    el.addEventListener("touchend", touchEnd, { passive: true });
-    el.addEventListener("pointerdown", mouseDown);
-    window.addEventListener("pointermove", mouseMove);
-    window.addEventListener("pointerup", mouseUp);
+    el.addEventListener("pointerdown", down);
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", up);
+    window.addEventListener("pointercancel", cancel);
     el.addEventListener("click", click, true);
     return () => {
       el.removeEventListener("scroll", sync);
-      el.removeEventListener("touchstart", touchStart);
-      el.removeEventListener("touchend", touchEnd);
-      el.removeEventListener("pointerdown", mouseDown);
-      window.removeEventListener("pointermove", mouseMove);
-      window.removeEventListener("pointerup", mouseUp);
+      el.removeEventListener("pointerdown", down);
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", up);
+      window.removeEventListener("pointercancel", cancel);
       el.removeEventListener("click", click, true);
     };
   }, [sync, go]);

@@ -44,4 +44,22 @@ describe("placeLabels", () => {
     );
     expect(placed.find((p) => p.id === "a")).toMatchObject({ side: "left", anchor: "end" });
   });
+
+  it("placeLabels_skipCrowdedAndNoClearSpot_hidesTheName", () => {
+    // Eight neighbours box Brussels in on every side.
+    const ring = [[-30, 0], [30, 0], [0, -22], [0, 22], [-30, -22], [30, -22], [-30, 22], [30, 22]].map(([dx, dy], i) => ({ id: `n${i}`, x: 100 + dx, y: 100 + dy, label: "Neighbour" }));
+    const placed = placeLabels([{ id: "brussels", x: 100, y: 100, label: "Brussels" }, ...ring], { ...opts, skipCrowded: true });
+    expect(placed.find((p) => p.id === "brussels")?.hidden).toBe(true);
+  });
+
+  it("placeLabels_hiddenName_doesNotBlockOthers", () => {
+    const placed = placeLabels(
+      [
+        { id: "a", x: 100, y: 100, label: "Aaaaaaaaaaaaaaaaaaaa" },
+        { id: "b", x: 100, y: 300, label: "B" },
+      ],
+      { ...opts, skipCrowded: true },
+    );
+    expect(placed.every((p) => !p.hidden)).toBe(true);
+  });
 });
