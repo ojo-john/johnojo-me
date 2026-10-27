@@ -3,6 +3,22 @@ destination: milan
 order: 3
 arrive: 2026-10-24
 depart: 2026-10-26
+moments:
+  - date: 2026-10-24
+    title: "The Duomo and its rooftop terraces"
+    media: [photos/img-0995, photos/img-1087, photos/img-1006, photos/img-1009, photos/img-1012, photos/img-1026, photos/img-1035]
+  - date: 2026-10-24
+    title: "Inside the Duomo"
+    media: [photos/img-1043, photos/img-1044, photos/img-1069, photos/img-1080]
+  - date: 2026-10-24
+    title: "Cannoli and pizza"
+    media: [photos/img-1100, photos/img-1110]
+  - date: 2026-10-25
+    title: "Inter v Fiorentina at San Siro"
+    media: [videos/img-1154, photos/img-1155, photos/img-1163, photos/img-1173, photos/img-1174, photos/img-1221, photos/img-1225]
+  - date: 2026-10-25
+    title: "Castello Sforzesco"
+    media: [photos/img-1236, photos/img-1241]
 matches:
   - home: Inter
     away: Fiorentina

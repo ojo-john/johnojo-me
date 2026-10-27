@@ -98,6 +98,11 @@ export const visit = z.object({
   disliked: z.string().optional(),
   wouldReturn: z.object({ answer: z.enum(["yes", "no", "maybe"]), why: z.string().optional() }).optional(),
   verdict: z.string().optional(),
+  /**
+   * "What I did", in order: each thing done, with the photos and clips that show it ("photos/img-0660",
+   * "videos/img-0489", as in mediaMeta). Hidden or missing media are skipped.
+   */
+  moments: z.array(z.object({ date: isoDate.optional(), title: z.string(), note: z.string().optional(), media: z.array(z.string()).default([]) })).default([]),
   /** Set when a stop is deliberately left unscored (e.g. "I barely saw the city"): kept out of the rankings, with this as the reason. */
   notRanked: z.string().optional(),
   rating: rating.optional(),

@@ -23,6 +23,8 @@ export interface VisitView {
   wouldReturn: { answer: "yes" | "no" | "maybe"; why?: string } | null;
   verdict: string | null;
   notRanked: string | null;
+  /** "What I did", day by day, each with its own media. */
+  moments: { when: string | null; title: string; note: string | null; media: MediaItem[] }[];
   score: ScoreState;
   scores: Record<string, number | null>;
   /** Context for individual scores, keyed like `scores`. */

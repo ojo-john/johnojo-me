@@ -140,6 +140,18 @@ collections:
         value_label: Text
         label_singular: highlight
         hint: "Label on the left (Food, Football, Architecture…), a short line on the right."
+      - name: moments
+        label: What I did (day by day)
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.date}} · {{fields.title}}"
+        hint: "One row per thing you did, in order. Media: the photos/clips that show it, written like photos/img-0660 or videos/img-0489 (the names in Photos & videos)."
+        fields:
+          - { name: date, label: Date, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+          - { name: title, label: What, hint: "e.g. Flamenco show" }
+          - { name: note, label: Short note, required: false }
+          - { name: media, label: Photos and clips, widget: list, required: false, field: { name: ref, label: Photo or clip, widget: string } }
       - { name: liked, label: Liked, widget: text, required: false }
       - { name: disliked, label: Didn't like, widget: text, required: false }
       - name: wouldReturn

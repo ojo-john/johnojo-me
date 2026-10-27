@@ -8,6 +8,30 @@ highlights:
   Culture: A flamenco show on my first night
   Food: Learning to make paella at a cooking class
   Sights: Park Güell and the Sagrada Família
+moments:
+  - date: 2026-10-16
+    title: "Flamenco show"
+    note: "My first night, at Theatre Flamenco Barcelona City Hall."
+    media: [videos/img-0489, videos/img-0491, videos/img-0493, videos/img-0494]
+  - date: 2026-10-17
+    title: "Espanyol v Atlético Madrid"
+    media: [videos/img-0555, photos/img-0532, photos/img-0537, photos/img-0543, photos/img-0565, photos/img-0571]
+  - date: 2026-10-17
+    title: "Dinner at Besta"
+    media: [photos/img-0578, photos/img-0586]
+  - date: 2026-10-18
+    title: "Park Güell"
+    media: [photos/img-0660]
+  - date: 2026-10-18
+    title: "Sagrada Família"
+    note: "From the outside."
+    media: [photos/img-0803, photos/img-0805, photos/img-0816, photos/img-0820]
+  - date: 2026-10-18
+    title: "99 Cheesecake"
+    media: [photos/img-0832, photos/img-0837]
+  - date: 2026-10-19
+    title: "Paella cooking class"
+    media: [photos/img-0860, photos/img-0893, photos/img-0897]
 liked: "Good food, friendly people and how walkable it is."
 disliked: "Getting lost a couple of times early on, and a very boring Espanyol game."
 matches:
