@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { MapGeometry } from "@/lib/geo";
-import { spreadPins } from "@/lib/pin-spread";
+import { nearestGap, spreadPins } from "@/lib/pin-spread";
+import { usePanZoom } from "@/lib/usePanZoom";
 
 /** One stop someone can jump to: a city on a particular trip. */
 export interface MapStop {
@@ -15,9 +16,10 @@ export interface MapStop {
 }
 
 interface Picker {
+  region: string;
   title: string;
   stops: MapStop[];
-  /** Position as a percentage of the map, so it stays put when the map scales. */
+  /** Where it was opened, in map units; placed relative to the current zoom when drawn. */
   x: number;
   y: number;
 }
@@ -57,10 +59,6 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
     ro.observe(svg);
     return () => ro.disconnect();
   }, [mapWidth]);
-  const compact = LABEL_SIZE / unitsPerPx < MIN_LABEL_PX;
-  const pinR = compact ? COMPACT_PIN_PX * unitsPerPx : PIN_R;
-  const hitR = compact ? COMPACT_HIT_PX * unitsPerPx : HIT_R;
-
   useEffect(() => {
     if (!picker) return;
     pickerRef.current?.querySelector("a")?.focus();
@@ -69,141 +67,203 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
     return () => window.removeEventListener("keydown", onKey);
   }, [picker]);
 
-  const open = (map: MapGeometry, title: string, list: MapStop[], x: number, y: number) =>
-    setPicker({ title, stops: list, x: (x / map.width) * 100, y: (y / map.height) * 100 });
+  // At full size on a phone every label would be unreadable, so only the compact look is offered there.
+  const compactAtFull = LABEL_SIZE / unitsPerPx < MIN_LABEL_PX;
 
   return (
     <div ref={rootRef}>
-      {regions.map(({ region, map }) => {
-        const forPlace = (id: string) => stops.filter((s) => s.place === id);
-        const forCountry = (name: string) => stops.filter((s) => s.country === name);
-        const placed = compact ? spreadPins(map.points, 2 * pinR + COMPACT_GAP_PX * unitsPerPx) : map.points.map((p) => ({ ...p, px: p.x, py: p.y, moved: false }));
-        return (
-          <figure key={region} style={{ margin: "20px 0 0" }}>
-            {regions.length > 1 ? (
-              <figcaption className="kicker" style={{ color: "var(--ink-2)", marginBottom: 8 }}>
-                {region}
-              </figcaption>
-            ) : null}
-            <div className="card tmap" style={{ overflow: "hidden", position: "relative" }}>
-              <svg viewBox={`0 0 ${map.width} ${map.height}`} role="group" aria-label={`${region}: visited places`} style={{ display: "block", width: "100%", height: "auto" }}>
-                <path d={map.land} fill="#e4e2da" stroke="#cfccc2" />
-                {map.countries.map((c) => {
-                  const list = forCountry(c.name);
-                  const label = `${c.name}: ${list.length === 1 ? list[0].city : `${list.length} stops`}`;
-                  return list.length === 1 ? (
-                    <Link key={c.name} href={list[0].href} className="tmap-country" aria-label={label} prefetch={false}>
-                      <path d={c.d} />
-                    </Link>
-                  ) : (
-                    <path
-                      key={c.name}
-                      d={c.d}
-                      className="tmap-country"
-                      role="button"
-                      tabIndex={0}
-                      aria-label={label}
-                      onClick={(e) => {
-                        const r = (e.currentTarget.ownerSVGElement as SVGSVGElement).getBoundingClientRect();
-                        open(map, c.name, list, ((e.clientX - r.left) / r.width) * map.width, ((e.clientY - r.top) / r.height) * map.height);
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key !== "Enter" && e.key !== " ") return;
-                        e.preventDefault();
-                        const b = (e.currentTarget as SVGPathElement).getBBox();
-                        open(map, c.name, list, b.x + b.width / 2, b.y + b.height / 2);
-                      }}
-                    />
-                  );
-                })}
-                {/* A pin fanned out of a crowd keeps a thin line back to the city's true spot. */}
-                {placed
-                  .filter((p) => p.moved)
-                  .map((p) => (
-                    <line key={`lead-${p.id}`} x1={p.x} y1={p.y} x2={p.px} y2={p.py} stroke="var(--travel)" strokeWidth={1.5 * unitsPerPx} aria-hidden="true" />
-                  ))}
-                {map.points.map((p) => {
-                  const list = forPlace(p.id);
-                  const at = placed.find((q) => q.id === p.id) ?? { px: p.x, py: p.y };
-                  const pin = (
-                    <>
-                      <circle cx={at.px} cy={at.py} r={hitR} fill="transparent" />
-                      <circle cx={at.px} cy={at.py} r={pinR} fill="var(--travel)" stroke="var(--paper)" strokeWidth={compact ? 2 * unitsPerPx : 2} />
-                      {compact ? null : (
-                        <text
-                          x={p.labelSide === "right" ? p.x + 11 : p.labelSide === "left" ? p.x - 11 : p.x}
-                          y={p.labelSide === "below" ? p.y + 22 : p.labelSide === "above" ? p.y - 12 : p.y + 4}
-                          textAnchor={p.labelSide === "right" ? "start" : p.labelSide === "left" ? "end" : "middle"}
-                          fontSize={LABEL_SIZE}
-                          fontWeight={700}
-                          fontFamily="var(--f-ui)"
-                          fill="var(--ink)"
-                        >
-                          {p.label}
-                        </text>
-                      )}
-                    </>
-                  );
-                  const choose = () => open(map, list[0]?.city ?? p.label, list, at.px, at.py);
-                  return list.length === 1 && !compact ? (
-                    <Link key={p.id} href={list[0].href} className="tmap-pin" aria-label={`${list[0].city}, ${list[0].trip}`} prefetch={false}>
-                      {pin}
-                    </Link>
-                  ) : (
-                    <g
-                      key={p.id}
-                      className="tmap-pin"
-                      role="button"
-                      tabIndex={0}
-                      aria-label={list.length === 1 ? `${list[0].city}, ${list[0].trip}` : `${list[0]?.city ?? p.label}: ${list.length} visits`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        choose();
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key !== "Enter" && e.key !== " ") return;
-                        e.preventDefault();
-                        choose();
-                      }}
-                    >
-                      {pin}
-                    </g>
-                  );
-                })}
-              </svg>
-              {picker && picker.stops.some((s) => map.points.some((p) => p.id === s.place)) ? (
-                <div
-                  ref={pickerRef}
-                  className={`tmap-pick${compact ? " below" : ""}`}
-                  role="dialog"
-                  aria-label={`Choose a stop in ${picker.title}`}
-                  // On a phone the map is too short to float the picker over it, so it sits underneath.
-                  style={compact ? undefined : { left: `${Math.min(picker.x, 70)}%`, top: `${Math.min(picker.y, 70)}%` }}
-                >
-                  <div className="tmap-pick-hd">
-                    <b>{picker.title}</b>
-                    <button type="button" className="circ" onClick={() => setPicker(null)} aria-label="Close">
-                      ✕
-                    </button>
-                  </div>
-                  <ul>
-                    {picker.stops.map((s) => (
-                      <li key={s.href}>
-                        <Link href={s.href} prefetch={false}>
-                          {/* The heading already names a single city, so its one link says where it goes instead. */}
-                          <span>{picker.stops.length === 1 ? "Go to this stop →" : s.city}</span>
-                          <span className="mono">{s.trip}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          </figure>
-        );
-      })}
-      <p style={{ marginTop: 10, fontSize: 14, color: "var(--ink-2)" }}>{compact ? "Tap a pin to see the city, or a country to see its stops." : "Select a country or a city to jump to that stop."}</p>
+      {regions.map(({ region, map }) => (
+        <RegionMap key={region} region={region} map={map} caption={regions.length > 1} stops={stops} unitsPerPx={unitsPerPx} picker={picker?.region === region ? picker : null} setPicker={setPicker} pickerRef={pickerRef} />
+      ))}
+      <p style={{ marginTop: 10, fontSize: 14, color: "var(--ink-2)" }}>
+        {compactAtFull ? "Tap a pin to see the city, or a country to see its stops. Pinch or use + and − to zoom." : "Select a country or a city to jump to that stop. Use + and − to zoom."}
+      </p>
     </div>
   );
 }
+
+/** One region's map (Europe, Americas…), with its own zoom. */
+function RegionMap({
+  region,
+  map,
+  caption,
+  stops,
+  unitsPerPx,
+  picker,
+  setPicker,
+  pickerRef,
+}: {
+  region: string;
+  map: MapGeometry;
+  caption: boolean;
+  stops: MapStop[];
+  unitsPerPx: number;
+  picker: Picker | null;
+  setPicker: (p: Picker | null) => void;
+  pickerRef: React.RefObject<HTMLDivElement | null>;
+}) {
+  const svgRef = useRef<SVGSVGElement>(null);
+  const pz = usePanZoom(svgRef, map.width, map.height);
+  const { view } = pz;
+  // Map units per screen pixel at the current zoom: everything below is sized in these, so it stays the
+  // same size on screen while the map zooms. Zoomed in far enough, the labels become readable again.
+  const u = unitsPerPx * pz.scale;
+  const compact = LABEL_SIZE / u < MIN_LABEL_PX;
+  const k = compact ? 1 : pz.scale;
+  const pinR = compact ? COMPACT_PIN_PX * u : PIN_R * k;
+  const hitR = compact ? COMPACT_HIT_PX * u : HIT_R * k;
+  const forPlace = (id: string) => stops.filter((s) => s.place === id);
+  const forCountry = (name: string) => stops.filter((s) => s.country === name);
+  const placed = compact ? spreadPins(map.points, 2 * pinR + COMPACT_GAP_PX * u) : map.points.map((p) => ({ ...p, px: p.x, py: p.y, moved: false }));
+  // A pin's tap area never reaches past halfway to its nearest neighbour, so a tap lands on the pin you
+  // meant. Crowded pins get a smaller area at full size; zooming in gives them room again.
+  const hitFor = (id: string) => Math.min(hitR, nearestGap(placed, id) / 2);
+  const open = (title: string, list: MapStop[], x: number, y: number) => setPicker({ region, title, stops: list, x, y });
+  // Where a click lands, in map units, allowing for the current zoom.
+  const toMap = (e: React.MouseEvent, svg: SVGSVGElement) => {
+    const r = svg.getBoundingClientRect();
+    return { x: view.x + ((e.clientX - r.left) / r.width) * view.w, y: view.y + ((e.clientY - r.top) / r.height) * view.h };
+  };
+  const pickLeft = picker ? ((picker.x - view.x) / view.w) * 100 : 0;
+  const pickTop = picker ? ((picker.y - view.y) / view.h) * 100 : 0;
+
+  return (
+    <figure style={{ margin: "20px 0 0" }}>
+      {caption ? (
+        <figcaption className="kicker" style={{ color: "var(--ink-2)", marginBottom: 8 }}>
+          {region}
+        </figcaption>
+      ) : null}
+      <div className="card tmap" style={{ overflow: "hidden", position: "relative" }}>
+        <svg ref={svgRef} viewBox={pz.viewBox} role="group" aria-label={`${region}: visited places`} style={{ display: "block", width: "100%", height: "auto", touchAction: pz.touchAction }}>
+          <path d={map.land} fill="#e4e2da" stroke="#cfccc2" strokeWidth={k} />
+          {map.countries.map((c) => {
+            const list = forCountry(c.name);
+            const label = `${c.name}: ${list.length === 1 ? list[0].city : `${list.length} stops`}`;
+            return list.length === 1 ? (
+              <Link key={c.name} href={list[0].href} className="tmap-country" aria-label={label} prefetch={false}>
+                <path d={c.d} strokeWidth={k} />
+              </Link>
+            ) : (
+              <path
+                key={c.name}
+                d={c.d}
+                strokeWidth={k}
+                className="tmap-country"
+                role="button"
+                tabIndex={0}
+                aria-label={label}
+                onClick={(e) => {
+                  const at = toMap(e, e.currentTarget.ownerSVGElement as SVGSVGElement);
+                  open(c.name, list, at.x, at.y);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key !== "Enter" && e.key !== " ") return;
+                  e.preventDefault();
+                  const b = (e.currentTarget as SVGPathElement).getBBox();
+                  open(c.name, list, b.x + b.width / 2, b.y + b.height / 2);
+                }}
+              />
+            );
+          })}
+          {/* A pin fanned out of a crowd keeps a thin line back to the city's true spot. */}
+          {placed
+            .filter((p) => p.moved)
+            .map((p) => (
+              <line key={`lead-${p.id}`} x1={p.x} y1={p.y} x2={p.px} y2={p.py} stroke="var(--travel)" strokeWidth={1.5 * u} aria-hidden="true" />
+            ))}
+          {map.points.map((p) => {
+            const list = forPlace(p.id);
+            const at = placed.find((q) => q.id === p.id) ?? { px: p.x, py: p.y };
+            const pin = (
+              <>
+                <circle cx={at.px} cy={at.py} r={hitFor(p.id)} fill="transparent" />
+                <circle cx={at.px} cy={at.py} r={pinR} fill="var(--travel)" stroke="var(--paper)" strokeWidth={compact ? 2 * u : 2 * k} />
+                {compact ? null : (
+                  <text
+                    x={p.labelSide === "right" ? p.x + 11 * k : p.labelSide === "left" ? p.x - 11 * k : p.x}
+                    y={p.labelSide === "below" ? p.y + 22 * k : p.labelSide === "above" ? p.y - 12 * k : p.y + 4 * k}
+                    textAnchor={p.labelSide === "right" ? "start" : p.labelSide === "left" ? "end" : "middle"}
+                    fontSize={LABEL_SIZE * k}
+                    fontWeight={700}
+                    fontFamily="var(--f-ui)"
+                    fill="var(--ink)"
+                  >
+                    {p.label}
+                  </text>
+                )}
+              </>
+            );
+            const choose = () => open(list[0]?.city ?? p.label, list, at.px, at.py);
+            return list.length === 1 && !compact ? (
+              <Link key={p.id} href={list[0].href} className="tmap-pin" aria-label={`${list[0].city}, ${list[0].trip}`} prefetch={false}>
+                {pin}
+              </Link>
+            ) : (
+              <g
+                key={p.id}
+                className="tmap-pin"
+                role="button"
+                tabIndex={0}
+                aria-label={list.length === 1 ? `${list[0].city}, ${list[0].trip}` : `${list[0]?.city ?? p.label}: ${list.length} visits`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  choose();
+                }}
+                onKeyDown={(e) => {
+                  if (e.key !== "Enter" && e.key !== " ") return;
+                  e.preventDefault();
+                  choose();
+                }}
+              >
+                {pin}
+              </g>
+            );
+          })}
+        </svg>
+        {picker ? (
+          <div
+            ref={pickerRef}
+            className={`tmap-pick${compact ? " below" : ""}`}
+            role="dialog"
+            aria-label={`Choose a stop in ${picker.title}`}
+            // On a phone the map is too short to float the picker over it, so it sits underneath.
+            style={compact ? undefined : { left: `${Math.min(Math.max(pickLeft, 0), 70)}%`, top: `${Math.min(Math.max(pickTop, 0), 70)}%` }}
+          >
+            <div className="tmap-pick-hd">
+              <b>{picker.title}</b>
+              <button type="button" className="circ" onClick={() => setPicker(null)} aria-label="Close">
+                ✕
+              </button>
+            </div>
+            <ul>
+              {picker.stops.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href} prefetch={false}>
+                    {/* The heading already names a single city, so its one link says where it goes instead. */}
+                    <span>{picker.stops.length === 1 ? "Go to this stop" : s.city}</span>
+                    <span className="mono">{s.trip}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </div>
+        <div className="zoomctl tmap-zoom" role="group" aria-label={`Zoom ${region}`}>
+          <button type="button" onClick={pz.zoomOut} disabled={!pz.zoomed} aria-label={`Zoom out of ${region}`}>
+            −
+          </button>
+          <button type="button" onClick={pz.zoomIn} aria-label={`Zoom in on ${region}`}>
+            +
+          </button>
+          {pz.zoomed ? (
+            <button type="button" onClick={pz.reset} aria-label={`Show all of ${region}`}>
+              ⤢
+            </button>
+          ) : null}
+        </div>
+    </figure>
+  );
+}
+

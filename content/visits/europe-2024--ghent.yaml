@@ -4,6 +4,11 @@ order: 4
 kind: day-trip
 arrive: 2024-04-09
 summary: "Same story as Bruges: good waffles and chocolate, but nothing that really stood out."
+moments:
+  - date: 2024-04-09
+    title: "Ghent, on a day trip from Brussels"
+    note: "The morning half of a Bruges and Ghent day trip. St Bavo's Cathedral is home to the Van Eyck brothers' Ghent Altarpiece."
+    media: [photos/img-0506, photos/img-0508, photos/img-0512, photos/2e4956d0-94b1-428d-9f33-89ad6edd7f6e, photos/img-0519]
 wouldReturn:
   answer: "yes"
   why: Just for the waffles and chocolate.

@@ -4,6 +4,11 @@ order: 3
 kind: day-trip
 arrive: 2024-04-09
 summary: "Much like Brussels. Great waffles and chocolate, but a bit boring, and nothing really stood out."
+moments:
+  - date: 2024-04-09
+    title: "Bruges, the afternoon half of the day trip"
+    note: "The Church of Our Lady, whose brick tower is one of the tallest in the world and which holds Michelangelo's Madonna and Child. Then a waffle."
+    media: [photos/img-0528, photos/img-0531]
 wouldReturn:
   answer: "yes"
   why: Just for the waffles and chocolate.

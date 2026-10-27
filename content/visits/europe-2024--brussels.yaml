@@ -3,6 +3,11 @@ destination: brussels
 order: 5
 arrive: 2024-04-10
 summary: "Brussels was okay. The city itself was a bit boring and nothing really stood out, but the chocolate and waffles were amazing. Honestly, they were the best thing about Belgium, and I'd go back just for them."
+moments:
+  - date: 2024-04-10
+    title: "Chocolate, beer, waffle and whiskey tour"
+    note: "A small-group walking tour of the old town: chocolate tastings, Manneken Pis (who gets dressed in a different costume several times a week), the Town Hall and the Grand-Place, then Belgian beers."
+    media: [photos/img-0544, videos/img-0547, videos/img-0555, videos/img-0557, videos/img-0565, photos/img-0548, photos/img-0563, photos/img-0587, photos/img-0592, videos/img-0606, videos/img-0619, photos/img-0605, photos/img-0607]
 liked: The chocolate and the waffles.
 disliked: "A bit boring. Nothing really stood out."
 wouldReturn:
@@ -20,6 +25,8 @@ mediaMeta:
   photos/img-0548: { caption: "Manneken Pis in costume", alt: "The Manneken Pis statue dressed in a red hat and white costume" }
   photos/img-0605: { caption: "Beer tasting", alt: "A guide pouring Belgian beers into tasting glasses" }
   photos/img-0607: { caption: "Belgian bites", alt: "A board of bread topped with cheese and spreads" }
+  videos/img-0555: { caption: "Chocolate tasting" }
+  videos/img-0606: { caption: "Belgian beers" }
 photoEdits: |
   photos/img-0589 hide  # near-duplicate of img-0587
   videos/shared-video-dddaa4a6-6df5-4cde-8228-c335361202e3 hide  # same moment as img-0565

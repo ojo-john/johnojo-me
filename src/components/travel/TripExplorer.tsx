@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Picture } from "@/components/Picture";
 import type { MapGeometry } from "@/lib/geo";
-import { spreadPins } from "@/lib/pin-spread";
+import { nearestGap, spreadPins } from "@/lib/pin-spread";
+import { usePanZoom } from "@/lib/usePanZoom";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { Gallery } from "./Gallery";
 import { Lightbox, useLightbox } from "./Lightbox";
@@ -49,8 +50,11 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     ro.observe(svg);
     return () => ro.disconnect();
   }, [map.width]);
-  const pinR = Math.max(PIN_R, MIN_PIN_PX * unitsPerPx);
-  const hitR = Math.max(pinR, (MIN_HIT_PX / 2) * unitsPerPx);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const pz = usePanZoom(svgRef, map.width, map.height);
+  // Sizes are in map units; multiplying by pz.scale keeps them the same on screen as the map zooms.
+  const pinR = Math.max(PIN_R, MIN_PIN_PX * unitsPerPx) * pz.scale;
+  const hitR = Math.max(pinR, (MIN_HIT_PX / 2) * unitsPerPx * pz.scale);
   // On a phone the map sits above the stories rather than beside them, so following the reader with a
   // zoom would only push other pins off the edge. It stays zoomed out there.
   const [stacked, setStacked] = useState(false);
@@ -61,12 +65,13 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
-  const numberSize = Math.max(NUMBER_SIZE, MIN_NUMBER_PX * unitsPerPx);
-  const labelSize = Math.max(LABEL_SIZE, MIN_LABEL_PX * unitsPerPx);
+  const numberSize = Math.max(NUMBER_SIZE, MIN_NUMBER_PX * unitsPerPx) * pz.scale;
+  const labelSize = Math.max(LABEL_SIZE, MIN_LABEL_PX * unitsPerPx) * pz.scale;
   const lb = useLightbox();
   const pins = new Map(map.points.map((p) => [p.id, p]));
   // Crowded stops (Bruges, Ghent, Brussels) fan out so every number stays readable and tappable.
   const placed = new Map(spreadPins(map.points, 2 * pinR + PIN_GAP).map((p) => [p.id, p]));
+  const hitFor = (id: string) => Math.min(hitR, nearestGap([...placed.values()], id) / 2);
   const route = visits.map((v) => pins.get(v.slug)).filter(Boolean) as MapGeometry["points"];
 
   useEffect(() => {
@@ -97,7 +102,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     <div className="explore">
       <div className="map-col">
         <div ref={mapRef} className={`bigmap${drawn ? " in" : ""}`}>
-          <svg viewBox={`0 0 ${map.width} ${map.height}`} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
+          <svg ref={svgRef} viewBox={pz.viewBox} style={{ touchAction: pz.touchAction }} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
             <g className="cam" style={{ transform: camera }}>
               <path className="land" d={map.land} />
               {route.length > 1 ? <path className="rt" d={"M" + route.map((p) => `${p.x} ${p.y}`).join(" L")} /> : null}
@@ -123,7 +128,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                     onClick={() => jump(v.slug)}
                     onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), jump(v.slug))}
                   >
-                    <circle className="hit" cx={p.x} cy={p.y} r={hitR} />
+                    <circle className="hit" cx={p.x} cy={p.y} r={hitFor(v.slug)} />
                     <circle cx={p.x} cy={p.y} r={pinR} strokeWidth={Math.max(3, pinR / 5)} />
                     <text x={p.x} y={p.y} style={{ fontSize: numberSize }}>
                       {v.number}
@@ -138,10 +143,24 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
           </svg>
         </div>
         <div className="map-legend">
-          <span>Pins mark city centres. Select one to jump to that stop.</span>
-          <button type="button" onClick={() => setActive(null)}>
-            Reset view
-          </button>
+          <span>Pinch or use + and − to zoom. Select a pin to jump to that stop.</span>
+          <span className="zoomctl">
+            <button type="button" onClick={pz.zoomOut} disabled={!pz.zoomed} aria-label="Zoom out">
+              −
+            </button>
+            <button type="button" onClick={pz.zoomIn} aria-label="Zoom in">
+              +
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setActive(null);
+                pz.reset();
+              }}
+            >
+              Reset view
+            </button>
+          </span>
         </div>
       </div>
 

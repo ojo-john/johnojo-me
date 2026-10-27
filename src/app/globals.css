@@ -263,10 +263,15 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .tmap-pick a:hover, .tmap-pick a:focus-visible { background: var(--card); outline: 2px solid var(--sun); }
 .tmap-pick .mono { font-size: 12px; color: var(--ink-2); font-weight: 400; }
 .map-legend button { border: 0; background: none; text-decoration: underline; cursor: pointer; padding: 0; font-weight: 600; }
+.tmap-zoom { display: flex; justify-content: flex-end; margin-top: 8px; }
+.zoomctl { display: inline-flex; align-items: center; gap: 6px; }
+.zoomctl button[aria-label] { width: 36px; height: 36px; min-height: 36px; border: 2px solid var(--ink); border-radius: 50%; text-decoration: none; font-size: 18px; line-height: 1; display: inline-grid; place-items: center; background: var(--paper); color: var(--ink); }
+.zoomctl button:disabled { opacity: .35; cursor: default; }
 /* Phones: small text links and buttons get a finger-sized hit area (WCAG 2.5.8 asks for 24px; 44px is comfortable). */
 @media (max-width: 767px) {
   .map-legend button, a.tap { display: inline-flex; align-items: center; min-height: 44px; }
   .map-legend button { padding: 0 6px; }
+  .zoomctl button[aria-label] { width: 44px; height: 44px; min-height: 44px; padding: 0; }
 }
 .cities { display: flex; flex-direction: column; gap: 20px; }
 .ccard { padding: 22px; display: flex; flex-direction: column; gap: 14px; transition: box-shadow 400ms, transform 500ms var(--spring); scroll-margin-top: calc(var(--header-h) + 24px); }

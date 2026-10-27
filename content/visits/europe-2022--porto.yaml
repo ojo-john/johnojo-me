@@ -8,6 +8,21 @@ highlights:
   Food: Amazing, and very cheap
   Activities: Douro Valley wine tasting and an ATV ride
   Standout moment: One of the ATVs caught fire
+moments:
+  - date: 2022-03-14
+    title: "First night in Porto"
+    media: [photos/img-0422]
+  - date: 2022-03-15
+    title: "Douro Valley tour"
+    note: "A day in the valley east of Porto where port wine comes from: wine tastings, lunch and a cruise on the river."
+    media: [photos/img-0445, videos/c01ef0bc-f889-4b67-9c72-ed9b7b7488aa]
+  - date: 2022-03-16
+    title: "Views over the Douro"
+    media: [photos/img-0547, photos/img-0554]
+  - date: 2022-03-16
+    title: "Buggy adventure"
+    note: "Out to old ruins and a traditional village. This is the ride where one of the buggies caught fire."
+    media: [photos/0d960d93-b257-4933-ab17-22bd4b344df9, videos/86b63226-aa47-44e7-9841-61700f8b5a14, videos/8db34f3d-2baa-4951-a0b3-6d652a67aa31]
 liked: "The people most of all: so loving and welcoming. The food, the weather and the public transport were great too."
 wouldReturn:
   answer: "yes"
@@ -22,3 +37,5 @@ mediaMeta:
   photos/img-0422: { caption: Dinner in Porto, alt: "A table with steak, chips, rice and a bottle of red wine" }
   photos/img-1142: { caption: Pastel de nata and a coffee, alt: "A pastel de nata, a toasted sandwich and a cappuccino" }
   photos/img-1143: { caption: Gelato shaped like a rose, alt: "A gelato cone shaped like a rose" }
+  photos/0d960d93-b257-4933-ab17-22bd4b344df9: { caption: "The buggy adventure", alt: "John sitting on an off-road buggy on a dirt track" }
+  videos/86b63226-aa47-44e7-9841-61700f8b5a14: { caption: "The buggy that caught fire", alt: "An off-road buggy engulfed in flames on a forest track" }

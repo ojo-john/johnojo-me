@@ -8,6 +8,25 @@ summary: "Nice is one of my top three cities. The food was amazing, and it's a r
 highlights:
   Day trip: Èze and Monaco on the French Riviera
   Food: No Diet Club food tour
+moments:
+  - date: 2024-04-03
+    title: "First evening in Nice"
+    media: [photos/img-0116, photos/b7624b06-3272-440b-a12b-c883d03bbf15]
+  - date: 2024-04-04
+    title: "The French Riviera in one day"
+    note: "A shared tour along the coast from Nice: the hilltop village of Èze, then Monaco and Monte-Carlo, with the casino and the F1 circuit."
+    media: [videos/img-0120, videos/img-0126, videos/img-0156, videos/img-0172, photos/img-0159, photos/img-0162, photos/img-0179, videos/img-0199, photos/img-0195, videos/4dcae28a471643fbbc2aa0c8302d91f7, videos/d6788468aa654a42a3b8ff872e8da361, photos/img-0223, photos/img-0232, photos/img-0246, photos/img-0251]
+  - date: 2024-04-04
+    title: "Back in Nice"
+    note: "An evening walk to Place Masséna."
+    media: [photos/img-0273]
+  - date: 2024-04-05
+    title: "No Diet Club food tour"
+    note: "Tasting our way around Nice, from shop to shop."
+    media: [videos/img-0307, videos/img-0309, videos/img-0313, photos/img-0308, photos/img-0312]
+  - date: 2024-04-05
+    title: "The beach"
+    media: [photos/img-0326]
 wouldReturn:
   answer: "yes"
   why: Definitely, but next time with a significant other.
@@ -25,5 +44,6 @@ mediaMeta:
   photos/img-0251: { caption: Outside the Casino de Monte-Carlo, alt: "John standing beside a red and black supercar outside the casino" }
   photos/img-0116: { caption: Dinner in Nice, alt: "A plated steak with a creamy topping and red wine sauce" }
   photos/img-0326: { caption: The beach at Nice, alt: "A pebble beach and the Mediterranean in Nice" }
+  photos/img-0308: { caption: "Sini & Jiji, a stop on the food tour", alt: "The shopfront of Sini & Jiji with a tour guide standing in the doorway" }
 photoEdits: |
   photos/img-0335 hide

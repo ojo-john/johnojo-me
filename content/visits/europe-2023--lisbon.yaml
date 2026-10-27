@@ -7,6 +7,18 @@ summary: "Lisbon was amazing. Good food, good weather, transport that was easy t
 highlights:
   Food: Good food, plus a Portuguese food and wine tour
   Standout moment: Lost at 2am until a stranger helped me find my Airbnb
+moments:
+  - date: 2023-05-24
+    title: "Pub crawl"
+    note: "With an open bar and VIP entry to a club at the end."
+    media: []
+  - date: 2023-05-25
+    title: "Another pub crawl"
+    media: []
+  - date: 2023-05-26
+    title: "Portuguese food and wine tour"
+    note: "A small-group tasting tour around the city."
+    media: []
 liked: "Good food, good weather, easy transport and welcoming people."
 wouldReturn:
   answer: "yes"

@@ -41,3 +41,13 @@ export function spreadPins(pins: Pin[], minDistance: number): PlacedPin[] {
   }
   return out;
 }
+
+/**
+ * Distance from one placed pin to its nearest neighbour (Infinity when it's alone). Tap areas are capped
+ * at half of it, so two pins' tap areas never overlap and a tap always reaches the pin under the finger.
+ */
+export function nearestGap(pins: readonly { id: string; px: number; py: number }[], id: string): number {
+  const me = pins.find((p) => p.id === id);
+  if (!me) return Infinity;
+  return pins.reduce((best, p) => (p.id === id ? best : Math.min(best, Math.hypot(p.px - me.px, p.py - me.py))), Infinity);
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { spreadPins } from "@/lib/pin-spread";
+import { nearestGap, spreadPins } from "@/lib/pin-spread";
 
 const gap = (a: { px: number; py: number }, b: { px: number; py: number }) => Math.hypot(a.px - b.px, a.py - b.py);
 
@@ -26,5 +26,25 @@ describe("spreadPins", () => {
   it("spreadPins_crowdNextToLonePin_leavesTheLonePinAlone", () => {
     const out = spreadPins([{ id: "a", x: 0, y: 0 }, { id: "b", x: 5, y: 0 }, { id: "far", x: 500, y: 500 }], 30);
     expect(out[2]).toMatchObject({ px: 500, py: 500, moved: false });
+  });
+});
+
+describe("nearestGap", () => {
+  const pins = [
+    { id: "bruges", px: 0, py: 0 },
+    { id: "ghent", px: 30, py: 40 },
+    { id: "brussels", px: 100, py: 0 },
+  ];
+
+  it("nearestGap_crowdedPin_isDistanceToClosestNeighbour", () => {
+    expect(nearestGap(pins, "bruges")).toBe(50);
+  });
+
+  it("nearestGap_onlyPin_isInfinite", () => {
+    expect(nearestGap([{ id: "porto", px: 5, py: 5 }], "porto")).toBe(Infinity);
+  });
+
+  it("nearestGap_unknownId_isInfinite", () => {
+    expect(nearestGap(pins, "nowhere")).toBe(Infinity);
   });
 });
