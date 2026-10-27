@@ -3,6 +3,8 @@ destination: donut-falls
 order: 2
 kind: day-trip
 summary: "We hiked to Donut Falls."
+wouldReturn:
+  answer: "no"
 cover: photos/img-6867
 mediaMeta:
   photos/100-0087: { caption: "At the trailhead", alt: "John and friends standing by the cars at the trailhead" }

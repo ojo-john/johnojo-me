@@ -5,6 +5,9 @@ arrive: 2021-12-20
 summary: "I only had two days in London, so I booked the Chelsea stadium tour. The plan was to catch Chelsea v Brighton that month, but Covid wrecked December's fixtures and it never happened. Walking into Stamford Bridge for the first time still ticked off a life goal."
 highlights:
   Football: Stamford Bridge stadium tour
+wouldReturn:
+  answer: "maybe"
+  why: "Only for family and Chelsea."
 rating:
   ratedOn: 2026-10-27
   scores: { food: 6, value: 6, transport: 7, walkability: 6, architecture: 6, culture: 6, people: 6, attractions: 6, safety: 6, enjoyment: 6 }

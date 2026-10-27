@@ -150,6 +150,7 @@ collections:
           - { name: answer, label: Answer, widget: select, options: [yes, no, maybe] }
           - { name: why, label: Why, required: false }
       - { name: verdict, label: One-line verdict, required: false }
+      - { name: notRanked, label: "Not ranked (why)", required: false, hint: "Only to leave this stop out of the rankings on purpose, e.g. I barely saw the city. Leave blank otherwise." }
       - name: rating
         label: Scores (0–10, leave blank if unsure)
         widget: object

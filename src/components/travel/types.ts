@@ -22,6 +22,7 @@ export interface VisitView {
   disliked: string | null;
   wouldReturn: { answer: "yes" | "no" | "maybe"; why?: string } | null;
   verdict: string | null;
+  notRanked: string | null;
   score: ScoreState;
   scores: Record<string, number | null>;
   matches: Match[];

@@ -65,7 +65,7 @@ for (const [trip, list] of [...byTrip.entries()].sort()) {
       const scoresObj = ((v.rating as { scores?: Record<string, unknown> } | undefined)?.scores ?? {}) as Record<string, unknown>;
       const inContent = Object.values(scoresObj).filter((x) => typeof x === "number").length;
       const scores = Math.max(inNotes, inContent);
-      if (scores < 10) missing.push(`scores: ${scores} of 10`);
+      if (scores < 10 && !v.notRanked) missing.push(`scores: ${scores} of 10`);
       if (!section(md, "Would I return") && !v.wouldReturn) missing.push("would you return?");
     }
     todo += missing.length;

@@ -2,6 +2,8 @@ trip: utah-2025
 destination: salt-lake-city
 order: 1
 summary: "We went to the Church History Museum in Salt Lake City, and to the Loveland Living Planet Aquarium in Draper, just south of the city."
+wouldReturn:
+  answer: "no"
 rating:
   ratedOn: 2026-10-27
   scores: { food: 4, value: 6, transport: 5, walkability: 0, architecture: 6, culture: 3, people: 4, attractions: 7, safety: 7, enjoyment: 7 }

@@ -1,7 +1,9 @@
 trip: aruba-2026
 destination: aruba
 order: 1
-summary: "Aruba is my prayer retreat. I don't go for sightseeing: I go to rest, sleep, pray and come back refreshed. These photos are from my 2026 visit."
+summary: "Aruba is my prayer retreat. I don't go to sightsee. I go to rest, sleep, pray and come home refreshed. The photos here are from 2026."
+wouldReturn:
+  answer: "yes"
 rating:
   ratedOn: 2026-10-27
   scores: { food: 8, value: 7, transport: 0, walkability: 9, architecture: 8, culture: 8, people: 8, attractions: 8, safety: 8, enjoyment: 8 }

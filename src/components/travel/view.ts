@@ -25,6 +25,7 @@ export function toView(v: VisitEntry, trip: TripEntry, number: number): VisitVie
     disliked: v.disliked ?? null,
     wouldReturn: v.wouldReturn ?? null,
     verdict: v.verdict ?? null,
+    notRanked: v.notRanked ?? null,
     score: v.score,
     scores: Object.fromEntries(CATEGORIES.map((c) => [c.key, v.rating?.scores[c.key] ?? null])),
     matches: v.matches,

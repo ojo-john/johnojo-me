@@ -97,6 +97,8 @@ export const visit = z.object({
   disliked: z.string().optional(),
   wouldReturn: z.object({ answer: z.enum(["yes", "no", "maybe"]), why: z.string().optional() }).optional(),
   verdict: z.string().optional(),
+  /** Set when a stop is deliberately left unscored (e.g. "I barely saw the city"): kept out of the rankings, with this as the reason. */
+  notRanked: z.string().optional(),
   rating: rating.optional(),
   matches: z.array(match).default([]),
   /** Ordered media ids ("photos/IMG_1234"). Omit to show every processed photo for this city by date. */

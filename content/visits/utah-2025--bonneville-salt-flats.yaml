@@ -3,6 +3,8 @@ destination: bonneville-salt-flats
 order: 3
 kind: day-trip
 summary: "We drove two hours out to the salt flats, and honestly, it wasn't all that. We stayed ten minutes, max, then drove two hours back. Four hours in the car for ten minutes of salt."
+wouldReturn:
+  answer: "no"
 cover: photos/img-1779
 mediaMeta:
   photos/img-1779: { caption: "Bonneville Salt Flats", alt: "Flat white salt crust stretching to the horizon under a deep blue sky" }

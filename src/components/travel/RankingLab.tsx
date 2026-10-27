@@ -15,7 +15,8 @@ type Tab = "list" | "compare" | "then-now";
 export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; scope: "trip" | "all"; allVisits?: VisitView[] }) {
   const [tab, setTab] = useState<Tab>("list");
   const [mode, setMode] = useState<Aggregation>("latest");
-  const rateable = visits.filter((v) => v.kind !== "match-only");
+  // Match days and stops left unscored on purpose aren't ranked as cities.
+  const rateable = visits.filter((v) => v.kind !== "match-only" && !v.notRanked);
 
   const rows = useMemo(() => {
     if (scope === "trip") return rateable.map((v) => ({ id: v.id, label: v.city, sub: v.tripTitle, total: v.score.total, v }));
@@ -30,7 +31,7 @@ export function RankingLab({ visits, scope, allVisits }: { visits: VisitView[]; 
 
   const { ranked, unranked } = rank(rows);
   const repeat = useMemo(() => {
-    const pool = (allVisits ?? visits).filter((v) => v.kind !== "match-only");
+    const pool = (allVisits ?? visits).filter((v) => v.kind !== "match-only" && !v.notRanked);
     const by = new Map<string, VisitView[]>();
     for (const v of pool) by.set(v.destination, [...(by.get(v.destination) ?? []), v]);
     return [...by.values()].filter((vs) => vs.length > 1).map((vs) => [...vs].sort((a, b) => a.year - b.year));

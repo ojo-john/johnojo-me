@@ -240,7 +240,13 @@ function Score({ v }: { v: VisitView }) {
         {total !== null ? <circle className="val" cx="23" cy="23" r="18" strokeDasharray={`${(total / 100) * c} ${c}`} /> : null}
       </svg>
       <span>
-        <b>{total !== null ? `${total} / 100` : v.score.state === "incomplete" ? `Incomplete · ${v.score.rated}/10` : "Not yet rated"}</b>
+        <b>{v.notRanked ? "Not ranked" : total !== null ? `${total} / 100` : v.score.state === "incomplete" ? `Incomplete · ${v.score.rated}/10` : "Not yet rated"}</b>
+        {v.notRanked ? (
+          <>
+            <br />
+            <span className="missing">{v.notRanked}</span>
+          </>
+        ) : null}
         <br />
         <span className="missing">
           Would I return? {v.wouldReturn ? `${v.wouldReturn.answer[0].toUpperCase()}${v.wouldReturn.answer.slice(1)}${v.wouldReturn.why ? `: ${v.wouldReturn.why}` : ""}` : "Not answered yet"}

@@ -3,7 +3,7 @@ destination: barcelona
 order: 1
 arrive: 2026-10-16
 depart: 2026-10-19
-summary: "Barcelona was amazing, way better than Madrid. Good food, friendly people, and it's so walkable. I got lost a couple of times but figured it out quickly. My first night was a flamenco show, which was great. I love learning about other cultures. I also learnt to make paella at a cooking class, which was a really good experience."
+summary: "Barcelona was amazing, way better than Madrid. Good food, friendly people, and it's so walkable. I got lost a couple of times, but I figured it out quickly. On my first night I saw a flamenco show and loved it, because I love learning about other cultures. I also learnt to make paella at a cooking class."
 highlights:
   Culture: A flamenco show on my first night
   Food: Learning to make paella at a cooking class
@@ -17,6 +17,8 @@ matches:
     competition: La Liga
     date: 2026-10-17
     writeUp: "Very boring game. Atlético won it with an 89th-minute goal from Álex Baena off the bench."
+wouldReturn:
+  answer: "yes"
 rating:
   ratedOn: 2026-10-27
   scores: { food: 7, value: 7, transport: 8, walkability: 9, architecture: 9, culture: 9, people: 9, attractions: 9, safety: 8, enjoyment: 9 }
