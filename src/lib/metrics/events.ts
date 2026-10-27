@@ -1,7 +1,7 @@
 /**
- * Site metrics events: the only two shapes the tracker may send to /api/collect, and the server-side
+ * Site metrics events: the only two shapes the tracker may send to /hit, and the server-side
  * check that every field is short, plain and free of personal data before anything is stored.
- * Shared by the tracker (src/lib/metrics/tracker.ts) and the Pages Function (functions/api/collect.ts).
+ * Shared by the tracker (src/lib/metrics/tracker.ts) and the Pages Function (functions/hit.ts).
  */
 
 export interface PageViewEvent {

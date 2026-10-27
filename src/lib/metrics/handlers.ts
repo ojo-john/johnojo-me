@@ -19,7 +19,7 @@ export interface CollectDeps {
 }
 
 /**
- * POST /api/collect. Answers 204 for anything it chooses not to count (metrics off, bots, Do Not Track),
+ * POST /hit. Answers 204 for anything it chooses not to count (metrics off, bots, Do Not Track),
  * so the tracker never needs to care; real input problems get 4xx so they show in the logs.
  */
 export async function handleCollect(req: Request, env: MetricsEnv, deps: CollectDeps = { allow: sharedLimiter }): Promise<Response> {

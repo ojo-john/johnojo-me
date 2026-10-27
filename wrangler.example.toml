@@ -14,7 +14,7 @@ pages_build_output_dir = "out"
 compatibility_date = "2026-10-01"
 
 [vars]
-# "true" turns on collecting (/api/collect) and reading (/api/metrics). Anything else switches both off.
+# "true" turns on collecting (/hit) and reading (/api/metrics). Anything else switches both off.
 METRICS_ENABLED = "true"
 # Must match the dataset below.
 METRICS_DATASET = "johnojo_metrics"

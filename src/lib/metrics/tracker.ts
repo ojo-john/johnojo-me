@@ -6,7 +6,8 @@
 import type { ClickEvent, MetricEvent, PageViewEvent } from "./events";
 import { TRACK_EVENT } from "./track";
 
-export const COLLECT_URL = "/api/collect";
+// Outside /api/* on purpose: Cloudflare Access guards /api/*, and visitors must reach this without a login.
+export const COLLECT_URL = "/hit";
 
 interface PrivacySignals {
   doNotTrack?: string | null;

@@ -16,7 +16,7 @@ function collectEnv(over: Partial<MetricsEnv> = {}) {
   return { env, writes };
 }
 const post = (headers: Record<string, string> = {}, data = body) =>
-  new Request("https://johnojo.me/api/collect", { method: "POST", body: data, headers: { origin: "https://johnojo.me", "user-agent": UA, "content-type": "text/plain", ...headers } });
+  new Request("https://johnojo.me/hit", { method: "POST", body: data, headers: { origin: "https://johnojo.me", "user-agent": UA, "content-type": "text/plain", ...headers } });
 const allowAll = { allow: () => true };
 
 describe("handleCollect", () => {
@@ -38,7 +38,7 @@ describe("handleCollect", () => {
   });
 
   it("handleCollect_noOrigin_isRejected", async () => {
-    const req = new Request("https://johnojo.me/api/collect", { method: "POST", body, headers: { "user-agent": UA } });
+    const req = new Request("https://johnojo.me/hit", { method: "POST", body, headers: { "user-agent": UA } });
     expect((await handleCollect(req, collectEnv().env, allowAll)).status).toBe(403);
   });
 
@@ -82,7 +82,7 @@ describe("handleCollect", () => {
   });
 
   it("handleCollect_wrongMethod_returns405", async () => {
-    expect((await handleCollect(new Request("https://johnojo.me/api/collect"), collectEnv().env, allowAll)).status).toBe(405);
+    expect((await handleCollect(new Request("https://johnojo.me/hit"), collectEnv().env, allowAll)).status).toBe(405);
   });
 
   it("handleCollect_validPageView_isCounted", async () => {

@@ -8,7 +8,7 @@ export interface AnalyticsEngineDataset {
   writeDataPoint(point: { blobs?: string[]; doubles?: number[]; indexes?: string[] }): void;
 }
 
-/** Settings for /api/collect and /api/metrics. Set as Pages environment variables / bindings (see wrangler.example.toml). */
+/** Settings for /hit and /api/metrics. Set as Pages environment variables / bindings (see wrangler.example.toml). */
 export interface MetricsEnv {
   /** "true" turns collection and the metrics API on. Anything else: collect drops events, metrics answers 503. */
   METRICS_ENABLED?: string;

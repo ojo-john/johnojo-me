@@ -1,5 +1,5 @@
 /**
- * Best-effort rate limit for /api/collect: a fixed window per key, held in the worker's memory only.
+ * Best-effort rate limit for /hit: a fixed window per key, held in the worker's memory only.
  * The key (the connecting IP) is never written anywhere and is forgotten when the window ends or the
  * worker restarts. Each Cloudflare location runs its own copy, so this stops floods from one client;
  * the WAF rate-limiting rule in docs/METRICS.md is the hard limit.

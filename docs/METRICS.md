@@ -30,7 +30,7 @@ clicks, links followed and referring sites. The API also returns views per page 
   and the server drops events that arrive with those signals anyway.
 - **Aggregates only, and they expire.** Analytics Engine keeps data for three months, then deletes it.
 - **No third-party script.** The tracker is part of the site's own code (under 1 KB compressed) and
-  talks only to `/api/collect` on the same domain.
+  talks only to `/hit` on the same domain.
 
 Because nothing is stored on the visitor's device and nobody is identified or followed, this needs no
 cookie banner or consent prompt (the ePrivacy "cookie" rule covers storing or reading things on the
@@ -41,7 +41,7 @@ device, and the counts aren't personal data under GDPR). Say so in a short line 
 
 ```
 page (src/components/Metrics.tsx)
-  └─ navigator.sendBeacon → POST /api/collect  (functions/api/collect.ts)
+  └─ navigator.sendBeacon → POST /hit  (functions/hit/index.ts; outside /api/* so Access never blocks visitors)
         checks: metrics on, same-site Origin, not DNT/GPC, not a bot, ≤ 1 KB, rate limit, valid event
         └─ Workers Analytics Engine dataset "johnojo_metrics"
 
@@ -86,7 +86,7 @@ page (src/components/Metrics.tsx)
      | `NEXT_PUBLIC_METRICS` | `1` (switches the tracker on in the build) |
    - Or keep these in a `wrangler.toml` made from [`wrangler.example.toml`](../wrangler.example.toml).
 4. **Hard rate limit (free).** Security → WAF → Rate limiting rules → one rule: URI path equals
-   `/api/collect`, 60 requests per 10 seconds per IP, action Block for 10 seconds. (The function's own
+   `/hit`, 60 requests per 10 seconds per IP, action Block for 10 seconds. (The function's own
    limit is per server, so this is the reliable one.)
 5. Redeploy (Deployments → Retry deployment), visit a few pages, then open
    `https://johnojo.me/admin/metrics/`. Analytics Engine shows new events within a minute or so.
