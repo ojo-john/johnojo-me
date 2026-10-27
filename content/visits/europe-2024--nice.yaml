@@ -45,5 +45,20 @@ mediaMeta:
   photos/img-0116: { caption: Dinner in Nice, alt: "A plated steak with a creamy topping and red wine sauce" }
   photos/img-0326: { caption: The beach at Nice, alt: "A pebble beach and the Mediterranean in Nice" }
   photos/img-0308: { caption: "Sini & Jiji, a stop on the food tour", alt: "The shopfront of Sini & Jiji with a tour guide standing in the doorway" }
+  videos/img-0120: { caption: "Nice from above", alt: "The Bay of Angels and the city of Nice from the hills" }
+  videos/img-0126: { caption: "Above the Bay of Angels", alt: "John in a selfie with Nice and the sea behind him" }
+  videos/img-0156: { caption: "A stop on the Riviera tour", alt: "A shop lined with shelves of small bottles, with a host at the counter" }
+  videos/img-0172: { caption: "The coast road", alt: "Green hills and villas above the Riviera" }
+  videos/img-0199: { caption: "A marching band", alt: "A band in white caps and red epaulettes playing under umbrella pines" }
+  videos/4dcae28a471643fbbc2aa0c8302d91f7: { caption: "Monaco from above", alt: "The towers and harbour of Monaco under low cloud" }
+  videos/d6788468aa654a42a3b8ff872e8da361: { caption: "Monaco from above", alt: "Monaco's skyline and the mountains behind it" }
+  photos/img-0162: { caption: "In Èze", alt: "John in a selfie in the hilltop village of Èze" }
+  photos/img-0179: { caption: "Above the coast", alt: "John in a selfie with the hills of the Riviera behind him" }
+  photos/img-0195: { caption: "Monaco harbour", alt: "Yachts in Monaco's harbour below the city" }
+  photos/img-0272: { caption: "A sculpture between the walls", alt: "A figure suspended between two old stone walls above the town" }
+  videos/img-0307: { caption: "Tasting at a deli counter", alt: "A deli counter of prepared food on the food tour" }
+  videos/img-0309: { caption: "On the food tour", alt: "Tasting food on the No Diet Club tour" }
+  videos/img-0313: { caption: "On the food tour", alt: "A hand holding a tasting fork on the food tour" }
+  photos/img-0312: { caption: "A shopkeeper on the food tour", alt: "A shopkeeper in an apron talking to the group" }
 photoEdits: |
   photos/img-0335 hide

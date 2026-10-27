@@ -9,13 +9,15 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 const SWIPE_PX = 40;
 /** A finger or mouse has to move this far (px) sideways before a press counts as dragging the strip. */
 const DRAG_PX = 6;
+/** Pointer and touch events both report the same swipe; only the first one moves the strip. */
+const STEP_DEBOUNCE_MS = 400;
 
 /**
  * A stop's photos as a swipeable strip: swipe (or scroll) on a phone, the next photo peeking in so the
  * pile is obvious; previous/next buttons and arrow keys elsewhere. Selecting a photo opens it full size.
  * The position is announced politely ("3 of 12") so screen-reader users know where they are.
  */
-export function Gallery({ photos, label, onOpen }: { photos: MediaItem[]; label: string; onOpen: (index: number) => void }) {
+export function Gallery({ photos, label, onOpen, priority = false }: { photos: MediaItem[]; label: string; onOpen: (index: number) => void; priority?: boolean }) {
   const track = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   // The touch handlers read the current slide without re-subscribing on every change.
@@ -66,17 +68,42 @@ export function Gallery({ photos, label, onOpen }: { photos: MediaItem[]; label:
       el.classList.add("dragging");
       el.scrollLeft = drag.left - dx;
     };
+    // Where the swipe started and ended decides it, like the lightbox: iOS doesn't always send the moves
+    // in between, so a swipe can't depend on them.
+    let lastStep = 0;
+    const settle = (dx: number, from: number) => {
+      if (Math.abs(dx) < DRAG_PX) return false;
+      // A drag ends with a click on the photo under the finger; that mustn't open it.
+      suppressClick = true;
+      if (Date.now() - lastStep < STEP_DEBOUNCE_MS) return true;
+      lastStep = Date.now();
+      go(Math.abs(dx) > SWIPE_PX ? from + (dx < 0 ? 1 : -1) : from);
+      return true;
+    };
     const up = (e: PointerEvent) => {
       if (!drag || e.pointerId !== drag.id) return;
       const dx = e.clientX - drag.x;
-      const { from, moved } = drag;
+      const { from } = drag;
       drag = null;
       el.classList.remove("dragging");
-      if (moved < DRAG_PX) return;
-      // A drag ends with a click on the photo under the finger; that mustn't open it.
-      suppressClick = true;
-      go(Math.abs(dx) > SWIPE_PX ? from + (dx < 0 ? 1 : -1) : from);
+      settle(dx, from);
     };
+    // Backup for phones whose pointer events go missing mid-swipe: plain touch start and end positions.
+    let touch: { x: number; y: number; from: number } | null = null;
+    const touchStart = (e: TouchEvent) => {
+      touch = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY, from: indexRef.current } : null;
+    };
+    const touchEnd = (e: TouchEvent) => {
+      const t = e.changedTouches[0];
+      if (!touch || !t) return;
+      const dx = t.clientX - touch.x;
+      const dy = t.clientY - touch.y;
+      const { from } = touch;
+      touch = null;
+      if (Math.abs(dx) > Math.abs(dy)) settle(dx, from);
+    };
+    // A mouse drag on a photo would otherwise start the browser's own "drag this image", cancelling ours.
+    const noNativeDrag = (e: DragEvent) => e.preventDefault();
     // The browser took over (a vertical scroll): put the strip back where it was.
     const cancel = (e: PointerEvent) => {
       if (!drag || e.pointerId !== drag.id) return;
@@ -96,7 +123,13 @@ export function Gallery({ photos, label, onOpen }: { photos: MediaItem[]; label:
     window.addEventListener("pointerup", up);
     window.addEventListener("pointercancel", cancel);
     el.addEventListener("click", click, true);
+    el.addEventListener("touchstart", touchStart, { passive: true });
+    el.addEventListener("touchend", touchEnd, { passive: true });
+    el.addEventListener("dragstart", noNativeDrag);
     return () => {
+      el.removeEventListener("touchstart", touchStart);
+      el.removeEventListener("touchend", touchEnd);
+      el.removeEventListener("dragstart", noNativeDrag);
       el.removeEventListener("scroll", sync);
       el.removeEventListener("pointerdown", down);
       window.removeEventListener("pointermove", move);
@@ -129,7 +162,8 @@ export function Gallery({ photos, label, onOpen }: { photos: MediaItem[]; label:
             onClick={() => onOpen(i)}
             aria-label={`Open photo ${i + 1} of ${photos.length}: ${p.caption ?? p.alt}`}
           >
-            <Picture photo={{ ...p, alt: "" }} sizes="(max-width: 900px) 88vw, 40vw" />
+            {/* The first photo of the first gallery on a page is usually the biggest thing on screen: load it first. */}
+            <Picture photo={{ ...p, alt: "" }} sizes="(max-width: 900px) 88vw, 40vw" priority={priority && i === 0} />
             {p.caption ? <span className="cap">{p.caption}</span> : null}
           </button>
         ))}

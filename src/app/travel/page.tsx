@@ -58,9 +58,9 @@ export default function TravelPage() {
           Trips
         </h2>
         <div className="trip-list">
-          {trips.map((t) => (
+          {trips.map((t, i) => (
             <Link key={t.slug} className="card tcard" href={`/travel/${t.slug}/`} prefetch={false}>
-              <div className="ph">{t.coverPhoto ? <Picture photo={{ ...t.coverPhoto, alt: "" }} sizes="(max-width: 760px) 100vw, 33vw" /> : <span>Photos coming</span>}</div>
+              <div className="ph">{t.coverPhoto ? <Picture photo={{ ...t.coverPhoto, alt: "" }} sizes="(max-width: 760px) 100vw, 33vw" priority={i === 0} /> : <span>Photos coming</span>}</div>
               <div className="bd">
                 <span className="kicker" style={{ color: "var(--ink-2)" }}>
                   {formatRange(t.start, t.end) ?? t.datesNote ?? t.year}

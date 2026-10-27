@@ -40,7 +40,7 @@ export default function MatchDaysPage() {
       </header>
 
       <section className="wrap matchdays" aria-label="Matches, newest first">
-        {days.map((d) => {
+        {days.map((d, i) => {
           const label = `${d.home} ${d.score ?? "v"} ${d.away}`;
           return (
             <article key={d.id} className="card mday" aria-labelledby={`md-${d.id}`}>
@@ -51,7 +51,7 @@ export default function MatchDaysPage() {
                 </h2>
                 <span className="sub">{[d.stadium, d.city, d.country].filter(Boolean).join(" · ")}</span>
               </div>
-              {d.media.length ? <MatchMedia media={d.media} label={label} /> : null}
+              {d.media.length ? <MatchMedia media={d.media} label={label} priority={i === 0} /> : null}
               {d.writeUp ? <p className="sum">{d.writeUp}</p> : null}
               <Link className="tap" href={d.href} prefetch={false}>
                 Part of {d.tripTitle}: see the {d.city} stop

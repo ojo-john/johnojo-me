@@ -27,6 +27,16 @@ mediaMeta:
   photos/img-0607: { caption: "Belgian bites", alt: "A board of bread topped with cheese and spreads" }
   videos/img-0555: { caption: "Chocolate tasting" }
   videos/img-0606: { caption: "Belgian beers" }
+  videos/img-0547: { caption: "Manneken Pis in costume", alt: "The Manneken Pis statue dressed in a red hat and white coat" }
+  videos/img-0565: { caption: "Manneken Pis in glasses", alt: "The Manneken Pis statue wearing yellow glasses" }
+  videos/img-0557: { caption: "Chocolate tasting", alt: "A tray of chocolates on the tasting table" }
+  photos/img-0563: { caption: "Manneken Pis in glasses", alt: "The statue in yellow glasses with plants either side" }
+  photos/img-0570: { caption: "A bronze statue on the tour", alt: "A small bronze statue of a boy against a brick wall" }
+  photos/img-0571: { caption: "A statue on horseback", alt: "A bronze rider on horseback against a blue sky" }
+  videos/img-0619: { caption: "Pouring Belgian beer", alt: "Dark Belgian beer being poured into tasting glasses" }
+  photos/img-0592: { caption: "On the Grand-Place", alt: "John on the Grand-Place among its ornate guildhalls" }
+  photos/img-0599: { caption: "A church in the old town", alt: "A white stone church spire against a blue sky" }
+  photos/img-0601: { caption: "Old town buildings", alt: "An ornate old building on a Brussels street" }
 photoEdits: |
   photos/img-0589 hide  # near-duplicate of img-0587
   videos/shared-video-dddaa4a6-6df5-4cde-8228-c335361202e3 hide  # same moment as img-0565

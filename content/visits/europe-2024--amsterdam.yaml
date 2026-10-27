@@ -16,5 +16,11 @@ mediaMeta:
   photos/img-0645: { caption: "Johan Cruijff ArenA", alt: "Fans gathering outside the Johan Cruijff ArenA under a giant Cruyff mural" }
   photos/dd3cf986-6a23-47fe-908e-41848efad7e2: { caption: "Ajax 2–1 Twente", alt: "The ArenA scoreboard showing Ajax 2, Twente 1" }
   photos/img-0710: { caption: "Ajax", alt: "The Ajax crest on a pillar outside the stadium" }
+  videos/img-0667: { caption: "Ajax v Twente", alt: "Ajax on the attack in front of a packed stand" }
+  videos/img-0677: { caption: "The Ajax fans", alt: "Ajax fans waving flags in the stand" }
+  videos/img-0690: { caption: "A corner at the Johan Cruijff ArenA", alt: "Players waiting for a corner in front of the Ajax fans" }
+  photos/img-0653: { caption: "At the Johan Cruijff ArenA", alt: "John in a selfie in the stands" }
+  photos/img-0673: { caption: "The stands", alt: "The packed stands of the Johan Cruijff ArenA" }
+  photos/img-0674: { caption: "A full house", alt: "A sold-out crowd at the Johan Cruijff ArenA" }
 photoEdits: |
   photos/img-0643 hide  # near-duplicate of img-0645

@@ -17,5 +17,9 @@ mediaMeta:
   photos/img-7494: { caption: "The white wedding", alt: "John standing in a burgundy suit by the garden" }
   photos/img-7512: { caption: "The reception", alt: "A server offering a tray of canapés to guests in the courtyard" }
   photos/img-7532: { caption: "A live painter at the reception", alt: "An artist painting the wedding scene on an easel" }
+  videos/img-7216: { caption: "A boat party in white", alt: "Guests dressed in white on a boat in the harbour at sunset" }
+  videos/93e525c2-4830-4a7f-9c80-2286803229ea: { caption: "The traditional ceremony", alt: "Guests in traditional dress and headwraps celebrating" }
+  videos/d55d49f9-a3c1-42d1-98aa-1527cf360299: { caption: "Celebrating at the wedding", alt: "Guests in suits dancing with drinks in hand" }
+  videos/img-7551: { caption: "At the reception", alt: "Guests in formal wear at the doors of the reception" }
 photoEdits: |
   photos/img-7348 hide  # welcome sign shows the couple's names and date

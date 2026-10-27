@@ -5,13 +5,13 @@ import { Gallery } from "./Gallery";
 import { Lightbox, useLightbox } from "./Lightbox";
 
 /** One game's photos (swipeable) and clips, opening full size in the lightbox. */
-export function MatchMedia({ media, label }: { media: MediaItem[]; label: string }) {
+export function MatchMedia({ media, label, priority = false }: { media: MediaItem[]; label: string; priority?: boolean }) {
   const lb = useLightbox();
   const photos = media.filter((m) => m.type === "photo");
   const clips = media.filter((m) => m.type === "video");
   return (
     <>
-      {photos.length ? <Gallery photos={photos} label={`Photos: ${label}`} onOpen={(i) => lb.open(photos, i)} /> : null}
+      {photos.length ? <Gallery photos={photos} label={`Photos: ${label}`} onOpen={(i) => lb.open(photos, i)} priority={priority} /> : null}
       {clips.length ? (
         <div className="clips" role="group" aria-label={`${clips.length} ${clips.length === 1 ? "clip" : "clips"}: ${label}`}>
           {clips.map((clip, i) => (

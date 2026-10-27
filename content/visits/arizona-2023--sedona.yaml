@@ -16,3 +16,5 @@ cover: photos/img-1605
 mediaMeta:
   photos/img-1605: { caption: "ATV riding", alt: "John and four friends in helmets standing by their ATVs on a dirt track" }
   photos/img-2079: { caption: "Red rocks from the Chapel of the Holy Cross", alt: "Four friends posing on a lookout with red rock formations behind them" }
+  videos/1c067010-59f9-4b40-98f7-c1a05bb483ee: { caption: "On the ATV", alt: "John in a helmet and goggles riding an ATV along a dusty trail" }
+  videos/245890ac-7ded-49ce-aa40-8a6a679ad7ca: { caption: "Friends by the red rocks", alt: "Friends taking a selfie with Sedona's red rock behind them" }

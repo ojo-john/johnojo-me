@@ -21,5 +21,8 @@ mediaMeta:
   photos/img-3968: { caption: "Trevoh Chalobah on the ball", alt: "Chelsea's Chalobah, number 23, plays a pass in front of the Flamengo fans' banner" }
   photos/img-3971: { caption: "Cole Palmer by the touchline", alt: "Cole Palmer, number 10, walks along the touchline near a linesman with his flag" }
   photos/img-3987: { caption: "Moisés Caicedo, with Chelsea still 1–0 up", alt: "Chelsea's Caicedo, number 25, near halfway as a Flamengo player walks past, with the scoreboard showing 0–1" }
+  videos/img-3960: { caption: "Chelsea fans celebrating", alt: "Chelsea fans with their hands in the air at Lincoln Financial Field" }
+  videos/img-3975: { caption: "Chelsea 1–0 up", alt: "The big screen showing Chelsea leading 1–0" }
+  videos/img-4016: { caption: "Chelsea 1–0 up", alt: "Lincoln Financial Field with the score on the big screen" }
 photoEdits: |
   videos/img-3976 hide  # repeat of img-3975

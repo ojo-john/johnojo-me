@@ -27,5 +27,12 @@ mediaMeta:
   photos/img-1020: { caption: "Pyro at the Allianz Arena", alt: "Red flares lighting up the Bayern fans before kick-off" }
   photos/img-1066: { caption: "Marienplatz", alt: "John in front of the New Town Hall on Marienplatz" }
   photos/img-1061: { caption: "New Town Hall, Munich", alt: "The Gothic tower of Munich's New Town Hall" }
+  videos/img-1010: { caption: "The Bayern end", alt: "Bayern fans and their banners behind the goal" }
+  videos/img-1018: { caption: "Pyro before kick-off", alt: "Flares lighting up the Bayern end before the game" }
+  photos/img-0992: { caption: "Inside the Allianz Arena", alt: "The pitch and stands of the Allianz Arena from high up" }
+  photos/img-1001: { caption: "At the Allianz Arena", alt: "John in the stands with the pitch behind him" }
+  videos/img-1025: { caption: "The teams line up", alt: "Players lining up on the Champions League logo as flares burn in the stands" }
+  photos/img-1026: { caption: "Pyro in the Bayern end", alt: "Red flares and smoke across the Bayern end" }
+  photos/img-1068: { caption: "A church tower in Munich", alt: "A church tower above old buildings in Munich" }
 photoEdits: |
   photos/img-1024 hide  # near-duplicate of img-1020

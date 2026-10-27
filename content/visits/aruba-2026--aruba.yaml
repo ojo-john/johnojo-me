@@ -18,3 +18,7 @@ mediaMeta:
   photos/img-0361: { caption: "Oranjestad at night", alt: "A pastel Dutch-colonial building lit up at night" }
   photos/img-0399: { caption: "Sunset", alt: "Two flamingo statues silhouetted against a pink sky" }
   photos/img-0404: { caption: "The harbour", alt: "Boats moored in a harbour at dusk" }
+  videos/img-0345: { caption: "Palms by the water", alt: "A palm-lined path down to the sea under a blue sky" }
+  videos/img-0346: { caption: "The pier at sunset", alt: "A wooden pier and palm trees by calm water at dusk" }
+  videos/img-0355: { caption: "Calm water and a sailboat", alt: "Clear, calm sea with a sailboat moored offshore" }
+  videos/img-0365: { caption: "The view from the hotel", alt: "Palm trees and the sea seen from a hotel balcony" }
