@@ -4,6 +4,9 @@ order: 1
 summary: "We stayed in Sedona for spring break and went ATV riding."
 highlights:
   Activities: ATV riding
+rating:
+  ratedOn: 2026-10-27
+  scores: { food: 6, value: 7, transport: 3, walkability: 0, architecture: 5, culture: 5, people: 6, attractions: 7, safety: 7, enjoyment: 7 }
 cover: photos/img-1605
 mediaMeta:
   photos/img-1605: { caption: "ATV riding", alt: "John and four friends in helmets standing by their ATVs on a dirt track" }

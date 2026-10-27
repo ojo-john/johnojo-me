@@ -7,7 +7,7 @@ trip.md also gets an "On the site" section listing dates, type of stop and hidde
 import os, re, yaml, glob, datetime
 INBOX = os.path.expanduser("~/workspace/johnojo-media")
 CONTENT = os.path.expanduser("~/workspace/portfolio/content")
-LABELS = {"food": "Food & Desserts", "value": "Affordability & Value", "transport": "Public Transportation", "walkability": "Walkability",
+LABELS = {"food": "Food & Desserts", "value": "Affordability & Value", "transport": "Public Transport (buses, trains, trams)", "walkability": "Walkability",
           "architecture": "Architecture & Beauty", "culture": "Culture & Atmosphere", "people": "People & Hospitality",
           "attractions": "Attractions & Experiences", "safety": "Safety & Comfort", "enjoyment": "Overall Enjoyment"}
 slug = lambda s: re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")

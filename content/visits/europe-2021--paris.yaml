@@ -8,6 +8,9 @@ disliked: "It felt dirty and smelly, nothing like the Paris I'd pictured."
 highlights:
   Disneyland Paris: Sleeping Beauty Castle at Christmas
   Eiffel Tower: A clear blue December day on the Champ de Mars
+rating:
+  ratedOn: 2026-10-27
+  scores: { food: 6, value: 6, transport: 7, walkability: 7, architecture: 7, culture: 7, people: 4, attractions: 6, safety: 6, enjoyment: 6 }
 cover: photos/img-2100
 mediaMeta:
   photos/img-1957: { caption: Disneyland Paris at Christmas, alt: "John standing by a bench at Disneyland Paris with Christmas trees and decorations behind him" }

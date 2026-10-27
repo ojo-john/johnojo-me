@@ -1,7 +1,9 @@
 trip: cape-town-2026
 destination: cape-town
 order: 1
-summary: "I went to Cape Town for my cousin's wedding."
+summary: "I came for my cousin's wedding and spent most of the trip in Stellenbosch. The plan was to land a few days early and see Cape Town itself, but United delayed and then cancelled my flight, and there wasn't another one for two days. By the time I landed it was time for the wedding, so I haven't ranked the city."
+liked: "The vineyards around Stellenbosch."
+disliked: "It didn't feel safe: my cousins had things stolen from their hotel, and someone was robbed at knifepoint."
 cover: photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7
 mediaMeta:
   photos/73ad3d59-9355-4b4f-b251-042f18b8e2a7: { caption: "Family at the wedding", alt: "John and family in matching green traditional outfits" }

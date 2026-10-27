@@ -5,7 +5,7 @@
 export const CATEGORIES = [
   { key: "food", label: "Food & Desserts" },
   { key: "value", label: "Affordability & Value" },
-  { key: "transport", label: "Public Transportation" },
+  { key: "transport", label: "Public Transport (buses, trains, trams)" },
   { key: "walkability", label: "Walkability" },
   { key: "architecture", label: "Architecture & Beauty" },
   { key: "culture", label: "Culture & Atmosphere" },

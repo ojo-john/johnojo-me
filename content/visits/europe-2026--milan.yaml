@@ -11,6 +11,9 @@ matches:
     date: 2026-10-25
     stadium: San Siro
     writeUp: "Fiorentina led from the 65th minute. Thuram equalised in the 91st, and Zieliński scored a 98th-minute penalty to win it and put Inter top of the table."
+rating:
+  ratedOn: 2026-10-27
+  scores: { food: 8, value: 9, transport: 9, walkability: 9, architecture: 9, culture: 9, people: 8, attractions: 9, safety: 8, enjoyment: 9 }
 cover: photos/img-0995
 mediaMeta:
   photos/img-0995: { caption: "The Duomo", alt: "John taking a selfie in Piazza del Duomo with the cathedral behind him" }

@@ -164,7 +164,7 @@ collections:
             fields:
               - { name: food, label: Food & Desserts, widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: value, label: Affordability & Value, widget: number, value_type: int, min: 0, max: 10, required: false }
-              - { name: transport, label: Public Transportation, widget: number, value_type: int, min: 0, max: 10, required: false }
+              - { name: transport, label: "Public Transport (buses, trains, trams)", widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: walkability, label: Walkability, widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: architecture, label: Architecture & Beauty, widget: number, value_type: int, min: 0, max: 10, required: false }
               - { name: culture, label: Culture & Atmosphere, widget: number, value_type: int, min: 0, max: 10, required: false }
