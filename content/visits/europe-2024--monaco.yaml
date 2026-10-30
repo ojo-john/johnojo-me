@@ -1,0 +1,24 @@
+trip: europe-2024
+destination: monaco
+order: 3
+kind: day-trip
+arrive: 2024-04-04
+moments:
+  - date: 2024-04-04
+    title: "Monaco-Ville and the harbour"
+    note: "Up on the Rock by the Prince's Palace, looking down over the yachts in Port Hercule."
+    media: [photos/img-0195, videos/img-0199, photos/img-0223, photos/img-0232, videos/4dcae28a471643fbbc2aa0c8302d91f7, videos/d6788468aa654a42a3b8ff872e8da361]
+  - date: 2024-04-04
+    title: "Monte-Carlo and the F1 circuit"
+    note: "The Casino de Monte-Carlo, the supercars outside it, and the streets the Monaco Grand Prix races on."
+    media: [photos/img-0246, photos/img-0251]
+cover: photos/img-0223
+mediaMeta:
+  photos/img-0195: { caption: "Monaco harbour", alt: "Yachts in Monaco's harbour below the city" }
+  videos/img-0199: { caption: "A band by the Prince's Palace", alt: "A band in white caps and red epaulettes playing under umbrella pines" }
+  photos/img-0223: { caption: "Monte-Carlo from above", alt: "Monaco's harbour packed with yachts below the city" }
+  photos/img-0232: { caption: "Monaco harbour", alt: "John standing above Monaco's harbour" }
+  videos/4dcae28a471643fbbc2aa0c8302d91f7: { caption: "Monaco from above", alt: "The towers and harbour of Monaco under low cloud" }
+  videos/d6788468aa654a42a3b8ff872e8da361: { caption: "The skyline", alt: "Monaco's skyline and the mountains behind it" }
+  photos/img-0246: { caption: "Casino de Monte-Carlo", alt: "A red supercar parked outside the Casino de Monte-Carlo" }
+  photos/img-0251: { caption: "Outside the casino", alt: "John standing beside a red and black supercar outside the casino" }

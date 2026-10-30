@@ -1,0 +1,14 @@
+trip: europe-2024
+destination: saint-paul-de-vence
+order: 5
+kind: day-trip
+arrive: 2024-04-04
+moments:
+  - date: 2024-04-04
+    title: "The walled village"
+    note: "Last stop of the day tour: a medieval village inside its old ramparts, known for its art galleries."
+    media: [videos/img-0270, photos/img-0272]
+cover: photos/img-0272
+mediaMeta:
+  videos/img-0270: { caption: "The view from the ramparts", alt: "Villas, cypress trees and green hills below the village" }
+  photos/img-0272: { caption: "Saint-Paul-de-Vence", alt: "A figure suspended between two old stone walls above the town" }

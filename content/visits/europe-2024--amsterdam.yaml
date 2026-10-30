@@ -1,6 +1,6 @@
 trip: europe-2024
 destination: amsterdam
-order: 6
+order: 10
 kind: match-only
 arrive: 2024-04-14
 matches:

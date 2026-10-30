@@ -1,0 +1,13 @@
+trip: europe-2024
+destination: antibes
+order: 4
+kind: day-trip
+arrive: 2024-04-04
+moments:
+  - date: 2024-04-04
+    title: "Antibes old town"
+    note: "A lunchtime stop on the Riviera day tour, in the old town by the port."
+    media: [photos/img-0261]
+cover: photos/img-0261
+mediaMeta:
+  photos/img-0261: { caption: "Gelateria del Porto, Antibes", alt: "People queuing outside an ice cream shop with a red awning in a yellow building" }

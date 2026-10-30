@@ -1,0 +1,18 @@
+trip: europe-2024
+destination: eze
+order: 2
+kind: day-trip
+arrive: 2024-04-04
+moments:
+  - date: 2024-04-04
+    title: "The hilltop village"
+    note: "First stop on the French Riviera day tour from Nice: a medieval village perched on a rock high above the sea."
+    media: [photos/img-0159, photos/img-0191, photos/img-0162, photos/img-0179, videos/img-0172, videos/img-0156]
+cover: photos/img-0159
+mediaMeta:
+  photos/img-0159: { caption: Èze, alt: "The hilltop village of Èze above the trees" }
+  photos/img-0191: { caption: "The village of Èze", alt: "A small white car with the Èze logo parked under palm trees on a sunny street" }
+  photos/img-0162: { caption: "In Èze", alt: "John in a selfie in the hilltop village of Èze" }
+  photos/img-0179: { caption: "Above the coast", alt: "John in a selfie with the hills of the Riviera behind him" }
+  videos/img-0172: { caption: "The view from Èze", alt: "Green hills and villas above the Riviera" }
+  videos/img-0156: { caption: "A shop in Èze", alt: "A shop lined with shelves of small bottles, with a host at the counter" }

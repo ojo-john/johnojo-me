@@ -1,6 +1,6 @@
 trip: europe-2024
 destination: munich
-order: 8
+order: 12
 arrive: 2024-04-17
 matches:
   - home: Bayern Munich
