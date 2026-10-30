@@ -186,8 +186,9 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .ctl-card { padding: 18px 20px; margin-top: 14px; }
 .ctl-card h3 { font-size: 32px; margin-bottom: 12px; }
 .skills-filter { padding-block: 40px 8px; display: flex; flex-direction: column; gap: 14px; }
-.skills-filter .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.skills-filter .row .kicker { width: 170px; color: var(--ink-2); }
+.skills-filter .row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px; align-items: start; }
+.skills-filter .row .kicker { color: var(--ink-2); padding-top: 10px; }
+.skills-filter .row .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .fstat { font-family: var(--f-mono); font-size: 13px; color: var(--ink-2); min-height: 20px; }
 .projgrid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 16px; margin-top: 32px; }
 .pcard { padding: 24px; display: flex; flex-direction: column; gap: 14px; transition: opacity 400ms, transform 500ms var(--spring), box-shadow 400ms; }
@@ -504,7 +505,8 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
   .tnav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; }
   .tnav a { flex: 1; justify-content: center; padding: 0 8px; }
   .top-r .gh, .find .t, .find kbd { display: none; }
-  .skills-filter .row .kicker { width: 100%; }
+  .skills-filter .row { grid-template-columns: minmax(0, 1fr); }
+  .skills-filter .row .kicker { padding-top: 0; }
   .cmp-row { grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr); }
   .ld { grid-template-columns: minmax(0, 1fr); }
   .board .bd { padding-left: 16px; grid-template-columns: minmax(0, 1fr); }
@@ -579,3 +581,18 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 /* A project's "What it does" list on the Work page. */
 .pcard .feats { margin: 4px 0 0; padding-left: 1.1em; display: grid; gap: 4px; }
 .pcard .feats li { line-height: 1.45; }
+/* Recipe posts: the card above the story. */
+.recipe { padding: 24px; margin-bottom: 32px; }
+.recipe h2 { font-size: 26px; }
+.recipe h3 { font-size: 15px; font-family: var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); margin-bottom: 10px; }
+.recipe-facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 14px 0 20px; }
+.recipe-facts dt { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); }
+.recipe-facts dd { margin: 2px 0 0; font-weight: 700; }
+.recipe-cols { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 28px; }
+.recipe-ingredients { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.recipe-ingredients label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.recipe-ingredients input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--journal); flex: none; }
+.recipe-ingredients input:checked + span { text-decoration: line-through; color: var(--ink-2); }
+.recipe-steps { margin: 0; padding-left: 1.4em; list-style: decimal outside; display: grid; gap: 12px; font-family: var(--f-read); font-size: 18px; line-height: 1.55; }
+@media (max-width: 700px) { .recipe-cols { grid-template-columns: minmax(0, 1fr); } }
+

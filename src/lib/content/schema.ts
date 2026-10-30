@@ -245,7 +245,22 @@ export type Project = z.infer<typeof project>;
 
 export const VISIBILITY = ["public", "free", "paid", "private"] as const;
 /** Journal categories, in the order the site lists them. */
-export const POST_CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Essays", "Engineering", "Travel Reflections"] as const;
+export const POST_CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Recipes", "Essays", "Engineering", "Travel Reflections"] as const;
+export const RECIPE_CATEGORY = "Recipes";
+/** The card at the top of a recipe post. Times are whole minutes; everything else is plain text. */
+export const recipe = z.object({
+  /** e.g. "4" or "6 to 8". */
+  servings: z.string().optional(),
+  prepMinutes: z.number().int().min(0).optional(),
+  cookMinutes: z.number().int().min(0).optional(),
+  /** e.g. "Nigerian", "Italian". */
+  cuisine: z.string().optional(),
+  /** One per line, with the amount: "2 cups long-grain rice". */
+  ingredients: z.array(z.string().min(1)).min(1),
+  /** One per step, in order. */
+  steps: z.array(z.string().min(1)).min(1),
+});
+export type Recipe = z.infer<typeof recipe>;
 export const post = z.object({
   title: z.string(),
   dek: z.string(),
@@ -263,5 +278,10 @@ export const post = z.object({
   sample: z.boolean().default(false),
   footnotes: z.array(z.string()).default([]),
   questions: z.array(z.string()).default([]),
+  /** Only on Recipes posts, where it's required: the ingredients and steps card. */
+  recipe: recipe.optional(),
+}).superRefine((p, ctx) => {
+  if (p.category === RECIPE_CATEGORY && !p.recipe) ctx.addIssue({ code: "custom", path: ["recipe"], message: "A Recipes post needs a recipe (ingredients and steps)." });
+  if (p.category !== RECIPE_CATEGORY && p.recipe) ctx.addIssue({ code: "custom", path: ["recipe"], message: "Only Recipes posts can have a recipe card; change the category or remove it." });
 });
 export type PostFrontmatter = z.infer<typeof post>;

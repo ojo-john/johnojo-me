@@ -289,7 +289,8 @@ collections:
       - name: category
         label: Category
         widget: select
-        options: [Bible Study, Faith, Life Lessons, Essays, Engineering, Travel Reflections]
+        options: [Bible Study, Faith, Life Lessons, Recipes, Essays, Engineering, Travel Reflections]
+        hint: "Recipes posts need the Recipe box below filled in; other categories leave it empty."
       - { name: series, label: Series, required: false, hint: "e.g. Strangers and pilgrims · Part 1" }
       - { name: tags, label: Tags, widget: list, required: false }
       - name: status
@@ -310,6 +311,19 @@ collections:
       - { name: sample, label: Sample post, widget: boolean, required: false, hint: "Marks a placeholder post with a Sample label. Leave off for real posts." }
       - { name: footnotes, label: Footnotes, widget: list, required: false, hint: "Mark them in the text with <Fn n={1} />" }
       - { name: questions, label: Study questions, widget: list, required: false }
+      - name: recipe
+        label: Recipe (Recipes posts only)
+        widget: object
+        required: false
+        collapsed: true
+        hint: "Shown as a card above the post, and tells Google it's a recipe."
+        fields:
+          - { name: servings, label: Serves, required: false, hint: "e.g. 4, or 6 to 8" }
+          - { name: prepMinutes, label: Prep time (minutes), widget: number, value_type: int, min: 0, required: false }
+          - { name: cookMinutes, label: Cook time (minutes), widget: number, value_type: int, min: 0, required: false }
+          - { name: cuisine, label: Cuisine, required: false, hint: "e.g. Nigerian" }
+          - { name: ingredients, label: Ingredients, widget: list, hint: "One per line, with the amount: 2 cups long-grain rice" }
+          - { name: steps, label: Steps, widget: list, hint: "One step per item, in order" }
       - name: body
         label: Post
         widget: text

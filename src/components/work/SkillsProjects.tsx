@@ -44,11 +44,14 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
         {Object.entries(skills).map(([group, items]) => (
           <div className="row" role="group" aria-label={group} key={group}>
             <span className="kicker">{group}</span>
-            {items.map((s) => (
-              <button key={s} className="chip" type="button" data-track={`skill: ${s}`} style={{ ["--pill" as string]: "var(--work)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
-                {s}
-              </button>
-            ))}
+            {/* The chips wrap inside their own column, so a second line lines up with the first, not under the label. */}
+            <div className="chips">
+              {items.map((s) => (
+                <button key={s} className="chip" type="button" data-track={`skill: ${s}`} style={{ ["--pill" as string]: "var(--work)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
+                  {s}
+                </button>
+              ))}
+            </div>
           </div>
         ))}
         <p className="fstat" aria-live="polite">

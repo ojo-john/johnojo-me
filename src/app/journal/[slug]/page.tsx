@@ -4,6 +4,8 @@ import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reader } from "@/components/journal/Reader";
+import { RecipeCard } from "@/components/journal/RecipeCard";
+import { recipeJsonLd } from "@/lib/content/recipe";
 import { getPost, getPosts, getSite } from "@/lib/content/load";
 import { formatDate } from "@/lib/format";
 import { headingsOf, renderPost, scriptureKeysOf } from "@/lib/mdx";
@@ -40,15 +42,18 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
   const site = getSite();
   const content = await renderPost(post.body);
   const passages = scriptureKeysOf(post.body).map((k) => ({ key: k, ...passage(k), url: passageUrl(k) }));
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.dek,
-    author: { "@type": "Person", name: site.name },
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt ?? post.publishedAt,
-  };
+  // Recipe posts describe themselves as recipes, so search results can show cooking time and ingredients.
+  const jsonLd = post.recipe
+    ? recipeJsonLd({ ...post, recipe: post.recipe }, site.name, `https://${site.domain}/journal/${post.slug}/`)
+    : {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.dek,
+        author: { "@type": "Person", name: site.name },
+        datePublished: post.publishedAt,
+        dateModified: post.updatedAt ?? post.publishedAt,
+      };
   return (
     <article>
       <JsonLd data={jsonLd} />
@@ -74,6 +79,7 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
         </div>
       </header>
       <Reader headings={headingsOf(post.body)} passages={passages} footnotes={post.footnotes} minutes={post.minutes}>
+        {post.recipe ? <RecipeCard recipe={post.recipe} title={post.title} /> : null}
         {content}
         {post.questions.length ? (
           <section className="card qs" aria-labelledby="qh">
