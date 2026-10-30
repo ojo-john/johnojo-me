@@ -118,6 +118,11 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
           <svg ref={svgRef} viewBox={pz.viewBox} style={{ touchAction: pz.touchAction }} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
             <g className="cam" style={{ transform: camera }}>
               <path className="land" d={map.land} />
+              {map.countries.map((c) => (
+                <path key={c.name} className="visited" d={c.d}>
+                  <title>{c.name}</title>
+                </path>
+              ))}
               {route.length > 1 ? <path className="rt" d={"M" + route.map((p) => `${p.x} ${p.y}`).join(" L")} /> : null}
               {/* A moved pin keeps a thin line and dot back to the city's true position. */}
               {[...placed.values()].filter((p) => p.moved).map((p) => (

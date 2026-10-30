@@ -234,6 +234,8 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .bigmap svg { width: 100%; height: 100%; display: block; }
 .bigmap .cam { transition: transform 900ms var(--snap); }
 .bigmap .land { fill: #e4e2da; stroke: #cfccc2; stroke-width: 1; }
+/* Countries this trip went to, shaded like the Travel page overview. */
+.bigmap .visited { fill: var(--travel); fill-opacity: .12; stroke: var(--travel); stroke-opacity: .35; stroke-width: 1; }
 .bigmap .rt { fill: none; stroke: var(--travel); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 3000; stroke-dashoffset: 3000; }
 .bigmap.in .rt { stroke-dashoffset: 0; transition: stroke-dashoffset 2200ms var(--snap); }
 .bigmap .pin { cursor: pointer; outline: none; }

@@ -1,0 +1,34 @@
+trip: europe-2026
+destination: amalfi
+order: 6
+kind: day-trip
+arrive: 2026-10-29
+summary: "A day trip from Rome, and it was alright. I spent about two hours each in Amalfi and Positano. They're small towns built into the cliffs, and beyond walking around and taking in the view there isn't much to do."
+liked: The boat along the coast and the views of the towns from the water.
+disliked: Not much to do.
+moments:
+  - date: 2026-10-29
+    title: "By boat from Salerno"
+    note: "A coach from Rome down to Salerno, then a boat along the coast. The Amalfi Coast is a UNESCO World Heritage Site."
+    media: [photos/img-1636, photos/img-1642]
+  - date: 2026-10-29
+    title: "Amalfi"
+    media: [photos/img-1663, photos/img-1655, videos/img-1657, videos/img-1668]
+  - date: 2026-10-29
+    title: "Back in Amalfi at dusk"
+    media: [photos/img-1703]
+cover: photos/img-1663
+mediaMeta:
+  photos/img-1636: { caption: "Salerno harbour", alt: "Boats moored in the harbour with the town and hills behind" }
+  photos/img-1642: { caption: "Along the coast", alt: "A town spilling down steep green mountains to the sea" }
+  photos/img-1663: { caption: "Amalfi", alt: "Pastel houses stacked up the cliff below a church bell tower" }
+  photos/img-1655: { caption: "Cliffs above Amalfi", alt: "White houses at the foot of tall, green limestone cliffs" }
+  videos/img-1657: { caption: "Sailing into Amalfi", alt: "The town and its harbour coming into view from the boat" }
+  videos/img-1668: { caption: "On the boat", alt: "John relaxing in the sun on the boat, the coast behind him" }
+  photos/img-1703: { caption: "Amalfi at dusk", alt: "Amalfi's lights coming on below the dark mountains" }
+photoEdits: |
+  videos/img-1639 hide  # same view as img-1636
+  photos/img-1650 hide  # similar to img-1655
+  videos/img-1649 hide  # same approach as img-1657
+  videos/img-1656 hide  # same approach as img-1657
+  photos/img-1699 hide  # similar to img-1703

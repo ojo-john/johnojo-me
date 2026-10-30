@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T07:57:04.752Z",
+ "generatedAt": "2026-10-30T08:03:30.760Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -9094,236 +9094,6 @@
    "hash": "e438234949b49490",
    "focusBy": "attention"
   },
-  "europe-2026/positano/photos/img-1636": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1636-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1636-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1636-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1636-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1636-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoUABsAPu1eq1AppKOisBgIATAdiWYAtsg0auBtpWNNGS1YY2uyEDa+wQ6EoAD+693Ki8+k7vqTP+g2UKwfbjtETLR/bb34af9PnHxF09i9oHfyC5Xa9iLbxC5PCM2+ZVNcsKtUdKdkswOxK3vDKsv+SsZgGIbRYQOuFB3Z2qf+I6g5s36nLklX8P+zVZ8pSPt67gWPbsvIB7WFKAAAAA==",
-   "takenAt": "2026-10-29T11:02:27",
-   "focus": {
-    "x": 0,
-    "y": 100
-   },
-   "source": "1875014:5422554307dd295373a6d6d52d88825b",
-   "hash": "0000c0c00e490c3e",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1642": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1642-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1642-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1642-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1642-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1642-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JZACpJ2QDTgwi4fjbjb5uSSGBhivzzAD9yyVILu5biMDuUayw6Ge/WuCxEaXh2k/ZepNLMQhJvwnKUostscAsWGgB5sEMrJOHkC+Nu5dlB30rWVRb81QzjZxQdaMts7yDwh2pKSdQwbi0DdrXC8oR/sCmgAAA",
-   "takenAt": "2026-10-29T11:21:03",
-   "focus": {
-    "x": 0,
-    "y": 77
-   },
-   "source": "5490435:39321418e81a97e2ee88c8d90ca92aa9",
-   "hash": "b48f78708f2e6330",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1650": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1650-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1650-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1650-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1650-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1650-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1irVAppSQisBgIATAdiUAVgj/8Wz4LJVAOaCl/pwsHXrnJqQW1QAD4WxNphtWsmHVwl9TRM0wEFyqAZp0Bne2MqWB2S/Fw1yuGmZT1KQ5NlA9p64Aoev05RiTsR8vE/IQigRJg1Q3oFk5s43NuMjmDuZHQbRNpA8QkJqqG499LdaG3EffAnE2o1UWv1fJHhjQsKMyTz35JHGuSygLHzx8QrRXf+xufG0eeQubx+ph6CrAAvsp0ZYUqQYwAAA==",
-   "takenAt": "2026-10-29T11:48:11",
-   "focus": {
-    "x": 0,
-    "y": 77
-   },
-   "source": "8185094:1d25665b2d395a481dc3e5229b2df0c8",
-   "hash": "e2a2a45e1d2c4e5e",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1655": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1655-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1655-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1655-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1655-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1655-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBgCdASoUABsAPu1orlCppaQiqAqpMB2JZgCxH5H+Zn/UryyB72CFessOMT4oZFMt2gkbBMMveklgAP3LUCmPmLtgu1K6aB617lg1BCHIEeM7oOzzJqB9pDvwPAnrCl6jL7DhlOAMnwdjDzDrT/LJ8G4cUza4Hki31VQznxs8ios189AsPQ4xMB/dQQZhJZV3i+Jl1kvL/uM0Ha+mZjMsjXPjZaFP4yZRKRNuzawH8huU2EF7C6NS6/eXIORbtdYWsM64oWAdHZtbLSVBvAAA",
-   "takenAt": "2026-10-29T11:49:13",
-   "focus": {
-    "x": 0,
-    "y": 83
-   },
-   "source": "6868080:b6ce034e87f219e225148764c6e29f64",
-   "hash": "8b69e0949acf43e2",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1663": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1663-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1663-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1663-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1663-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1663-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWIAuzlBNKxdgaYEa6/kWZ/7IzgwUbMblLj8BMIwAAD+uNsljloqRFQMEpEiPpbFJ+ESb2WHFDJz+kIVfduM75koky8h5KazSzPZ7eehsYvPPD1gJWA0ewMIeSFEtu6ehBElT3cBZDnRtYQUoZKMEUsZf8IxVMuvSUlNaYZjikxF7uRbxXmmQDHdPQl/cnuM+xdL7LWDSwChVt3n0dsKaXKtIuvIZmc/+haiz3xOUkIYw1IciR8UHJ/gAA==",
-   "takenAt": "2026-10-29T11:57:23",
-   "focus": {
-    "x": 100,
-    "y": 82
-   },
-   "source": "2711460:5cc4deca4e7bc87f898157903a5b72ee",
-   "hash": "4083bf3f877071b1",
-   "focusBy": "attention"
-  },
   "europe-2026/positano/photos/img-1669": {
    "type": "photo",
    "w": 3024,
@@ -9415,158 +9185,6 @@
    "source": "4343680:2ecf6cce64cad37d79f1cdaf51445211",
    "hash": "2009034e0c7c2d09",
    "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1699": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1699-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1699-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1699-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1699-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1699-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoUABsAPu1kq06ppaOiKA1RMB2JZwDG9A4ouaUi9wBACUbN5wnJ2j/F0AAA/tXE9uD0LbYgCq+qSbcK5T03nQ3ty3vXssH2QL+hTd3iqfl94gmD1J+tnnkX0eS5dfmoEKLJJKQRWgyR7ldHOWR/ny+r/dit40C1EQOV8Q/+vQood+zD0hdHgAAA",
-   "takenAt": "2026-10-29T17:22:00",
-   "focus": {
-    "x": 0,
-    "y": 0
-   },
-   "source": "5045539:ff830b78ca3f372c2022fafd712bb63e",
-   "hash": "f3eb3b729f9c5dd1",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1703": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1703-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1703-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1703-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1703-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1703-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBQCdASoUABsAPu1grFAppSQisBgIATAdiWMAxNg0aCA1In0tHRTSY2sKD7nQ+ZnJAAD+uR4BrgYXV2xxOOXgjCPHZ0/KWfe+b0aH6E+Ro6XNmpYpWtGWmue+dxHcvrXI6LQRWhT9LnBlRdbzj0HaJ9qBACL5KNP3NtvO8E10GRYLfusCuIhaBzTYEwvAZeygAA==",
-   "takenAt": "2026-10-29T17:25:17",
-   "focus": {
-    "x": 37,
-    "y": 100
-   },
-   "source": "1496622:c8154571fa2632f4576336fcebf86d60",
-   "hash": "ff0f02a2c59049cc",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/videos/img-1639": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1639.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1639-poster.jpg",
-   "takenAt": "2026-10-29T11:13:12",
-   "duration": 2.67,
-   "source": "8777629:b29cc9c8e7b2f00ef9670c201a970e9c",
-   "hash": "80291d1bba1d1912",
-   "bytes": 1081662
-  },
-  "europe-2026/positano/videos/img-1649": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1649.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1649-poster.jpg",
-   "takenAt": "2026-10-29T11:47:30",
-   "duration": 28.24,
-   "source": "91405356:28f421d837f22b4be55cd34c42bd8fb0",
-   "hash": "24d1e52a84500034",
-   "bytes": 11723209
-  },
-  "europe-2026/positano/videos/img-1656": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1656.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1656-poster.jpg",
-   "takenAt": "2026-10-29T11:49:27",
-   "duration": 6.73,
-   "source": "21708305:251af285320536623a4480683b014df9",
-   "hash": "8f8a0ed6054f0b19",
-   "bytes": 3047238
-  },
-  "europe-2026/positano/videos/img-1657": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1657.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1657-poster.jpg",
-   "takenAt": "2026-10-29T11:51:18",
-   "duration": 12.6,
-   "source": "40973665:11c491646dbfe005dc0157dd4dc3ab99",
-   "hash": "506c2f438123030f",
-   "bytes": 6175325
-  },
-  "europe-2026/positano/videos/img-1668": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1668.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1668-poster.jpg",
-   "takenAt": "2026-10-29T12:08:00",
-   "duration": 3.47,
-   "source": "11589139:38d84de83bc79663dd28ba86be70dc3f",
-   "hash": "67a6a5ee4ec836fb",
-   "bytes": 1208050
   },
   "europe-2026/positano/videos/img-1670": {
    "type": "video",
@@ -13161,6 +12779,388 @@
    "source": "8482590:61feafb02ab66cd4107e4d08cdda64b9",
    "hash": "070e83418c61a160",
    "bytes": 1499078
+  },
+  "europe-2026/amalfi/photos/img-1636": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1636-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1636-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1636-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1636-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1636-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1636-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1636-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1636-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1636-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1636-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1636-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1636-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1636-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1636-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1636-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoUABsAPu1eq1AppKOisBgIATAdiWYAtsg0auBtpWNNGS1YY2uyEDa+wQ6EoAD+693Ki8+k7vqTP+g2UKwfbjtETLR/bb34af9PnHxF09i9oHfyC5Xa9iLbxC5PCM2+ZVNcsKtUdKdkswOxK3vDKsv+SsZgGIbRYQOuFB3Z2qf+I6g5s36nLklX8P+zVZ8pSPt67gWPbsvIB7WFKAAAAA==",
+   "takenAt": "2026-10-29T11:02:27",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "1875014:5422554307dd295373a6d6d52d88825b",
+   "hash": "0000c0c00e490c3e",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1642": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1642-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1642-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1642-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1642-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1642-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1642-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1642-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1642-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1642-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1642-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1642-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1642-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1642-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1642-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1642-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JZACpJ2QDTgwi4fjbjb5uSSGBhivzzAD9yyVILu5biMDuUayw6Ge/WuCxEaXh2k/ZepNLMQhJvwnKUostscAsWGgB5sEMrJOHkC+Nu5dlB30rWVRb81QzjZxQdaMts7yDwh2pKSdQwbi0DdrXC8oR/sCmgAAA",
+   "takenAt": "2026-10-29T11:21:03",
+   "focus": {
+    "x": 0,
+    "y": 77
+   },
+   "source": "5490435:39321418e81a97e2ee88c8d90ca92aa9",
+   "hash": "b48f78708f2e6330",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1650": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1650-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1650-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1650-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1650-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1650-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1650-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1650-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1650-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1650-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1650-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1650-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1650-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1650-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1650-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1650-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1irVAppSQisBgIATAdiUAVgj/8Wz4LJVAOaCl/pwsHXrnJqQW1QAD4WxNphtWsmHVwl9TRM0wEFyqAZp0Bne2MqWB2S/Fw1yuGmZT1KQ5NlA9p64Aoev05RiTsR8vE/IQigRJg1Q3oFk5s43NuMjmDuZHQbRNpA8QkJqqG499LdaG3EffAnE2o1UWv1fJHhjQsKMyTz35JHGuSygLHzx8QrRXf+xufG0eeQubx+ph6CrAAvsp0ZYUqQYwAAA==",
+   "takenAt": "2026-10-29T11:48:11",
+   "focus": {
+    "x": 0,
+    "y": 77
+   },
+   "source": "8185094:1d25665b2d395a481dc3e5229b2df0c8",
+   "hash": "e2a2a45e1d2c4e5e",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1655": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1655-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1655-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1655-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1655-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1655-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1655-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1655-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1655-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1655-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1655-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1655-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1655-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1655-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1655-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1655-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBgCdASoUABsAPu1orlCppaQiqAqpMB2JZgCxH5H+Zn/UryyB72CFessOMT4oZFMt2gkbBMMveklgAP3LUCmPmLtgu1K6aB617lg1BCHIEeM7oOzzJqB9pDvwPAnrCl6jL7DhlOAMnwdjDzDrT/LJ8G4cUza4Hki31VQznxs8ios189AsPQ4xMB/dQQZhJZV3i+Jl1kvL/uM0Ha+mZjMsjXPjZaFP4yZRKRNuzawH8huU2EF7C6NS6/eXIORbtdYWsM64oWAdHZtbLSVBvAAA",
+   "takenAt": "2026-10-29T11:49:13",
+   "focus": {
+    "x": 0,
+    "y": 83
+   },
+   "source": "6868080:b6ce034e87f219e225148764c6e29f64",
+   "hash": "8b69e0949acf43e2",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1663": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1663-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1663-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1663-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1663-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1663-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1663-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1663-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1663-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1663-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1663-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1663-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1663-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1663-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1663-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1663-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWIAuzlBNKxdgaYEa6/kWZ/7IzgwUbMblLj8BMIwAAD+uNsljloqRFQMEpEiPpbFJ+ESb2WHFDJz+kIVfduM75koky8h5KazSzPZ7eehsYvPPD1gJWA0ewMIeSFEtu6ehBElT3cBZDnRtYQUoZKMEUsZf8IxVMuvSUlNaYZjikxF7uRbxXmmQDHdPQl/cnuM+xdL7LWDSwChVt3n0dsKaXKtIuvIZmc/+haiz3xOUkIYw1IciR8UHJ/gAA==",
+   "takenAt": "2026-10-29T11:57:23",
+   "focus": {
+    "x": 100,
+    "y": 82
+   },
+   "source": "2711460:5cc4deca4e7bc87f898157903a5b72ee",
+   "hash": "4083bf3f877071b1",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1699": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1699-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1699-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1699-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1699-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1699-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1699-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1699-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1699-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1699-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1699-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1699-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1699-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1699-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1699-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1699-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoUABsAPu1kq06ppaOiKA1RMB2JZwDG9A4ouaUi9wBACUbN5wnJ2j/F0AAA/tXE9uD0LbYgCq+qSbcK5T03nQ3ty3vXssH2QL+hTd3iqfl94gmD1J+tnnkX0eS5dfmoEKLJJKQRWgyR7ldHOWR/ny+r/dit40C1EQOV8Q/+vQood+zD0hdHgAAA",
+   "takenAt": "2026-10-29T17:22:00",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "source": "5045539:ff830b78ca3f372c2022fafd712bb63e",
+   "hash": "f3eb3b729f9c5dd1",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/photos/img-1703": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/amalfi/photos/img-1703-160.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1703-160.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1703-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/amalfi/photos/img-1703-480.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1703-480.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1703-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/amalfi/photos/img-1703-960.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1703-960.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1703-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/amalfi/photos/img-1703-1600.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1703-1600.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1703-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/amalfi/photos/img-1703-2400.avif",
+     "webp": "/media/europe-2026/amalfi/photos/img-1703-2400.webp",
+     "jpg": "/media/europe-2026/amalfi/photos/img-1703-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBQCdASoUABsAPu1grFAppSQisBgIATAdiWMAxNg0aCA1In0tHRTSY2sKD7nQ+ZnJAAD+uR4BrgYXV2xxOOXgjCPHZ0/KWfe+b0aH6E+Ro6XNmpYpWtGWmue+dxHcvrXI6LQRWhT9LnBlRdbzj0HaJ9qBACL5KNP3NtvO8E10GRYLfusCuIhaBzTYEwvAZeygAA==",
+   "takenAt": "2026-10-29T17:25:17",
+   "focus": {
+    "x": 37,
+    "y": 100
+   },
+   "source": "1496622:c8154571fa2632f4576336fcebf86d60",
+   "hash": "ff0f02a2c59049cc",
+   "focusBy": "attention"
+  },
+  "europe-2026/amalfi/videos/img-1639": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/amalfi/videos/img-1639.mp4",
+   "poster": "/media/europe-2026/amalfi/videos/img-1639-poster.jpg",
+   "takenAt": "2026-10-29T11:13:12",
+   "duration": 2.67,
+   "source": "8777629:b29cc9c8e7b2f00ef9670c201a970e9c",
+   "hash": "80291d1bba1d1912",
+   "bytes": 1081662
+  },
+  "europe-2026/amalfi/videos/img-1649": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/amalfi/videos/img-1649.mp4",
+   "poster": "/media/europe-2026/amalfi/videos/img-1649-poster.jpg",
+   "takenAt": "2026-10-29T11:47:30",
+   "duration": 28.24,
+   "source": "91405356:28f421d837f22b4be55cd34c42bd8fb0",
+   "hash": "24d1e52a84500034",
+   "bytes": 11723209
+  },
+  "europe-2026/amalfi/videos/img-1656": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/amalfi/videos/img-1656.mp4",
+   "poster": "/media/europe-2026/amalfi/videos/img-1656-poster.jpg",
+   "takenAt": "2026-10-29T11:49:27",
+   "duration": 6.73,
+   "source": "21708305:251af285320536623a4480683b014df9",
+   "hash": "8f8a0ed6054f0b19",
+   "bytes": 3047238
+  },
+  "europe-2026/amalfi/videos/img-1657": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/amalfi/videos/img-1657.mp4",
+   "poster": "/media/europe-2026/amalfi/videos/img-1657-poster.jpg",
+   "takenAt": "2026-10-29T11:51:18",
+   "duration": 12.6,
+   "source": "40973665:11c491646dbfe005dc0157dd4dc3ab99",
+   "hash": "506c2f438123030f",
+   "bytes": 6175325
+  },
+  "europe-2026/amalfi/videos/img-1668": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/amalfi/videos/img-1668.mp4",
+   "poster": "/media/europe-2026/amalfi/videos/img-1668-poster.jpg",
+   "takenAt": "2026-10-29T12:08:00",
+   "duration": 3.47,
+   "source": "11589139:38d84de83bc79663dd28ba86be70dc3f",
+   "hash": "67a6a5ee4ec836fb",
+   "bytes": 1208050
   }
  }
 }

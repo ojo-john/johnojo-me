@@ -43,7 +43,8 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
   const trips = getTrips();
   const visits = tripViews(trip);
   const allVisits = trips.flatMap((t) => t.visits.map((v, i) => slim(toView(v, t, i + 1))));
-  const map = mapFor(trip.visits.map((v) => ({ id: v.slug, label: v.place.city, lat: v.place.lat, lng: v.place.lng })));
+  // Country names let the map shade the countries this trip went to, like the Travel page's overview.
+  const map = mapFor(trip.visits.map((v) => ({ id: v.slug, label: v.place.city, lat: v.place.lat, lng: v.place.lng, country: v.place.country })));
   const days = durationDays(trip.start, trip.end);
   const dates = formatRange(trip.start, trip.end) ?? trip.datesNote;
   const photos = trip.visits.flatMap((v) => v.photos);
