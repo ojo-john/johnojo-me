@@ -115,7 +115,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     <div className="explore">
       <div className="map-col">
         <div ref={mapRef} className={`bigmap${drawn ? " in" : ""}`}>
-          <svg ref={svgRef} viewBox={pz.viewBox} style={{ touchAction: pz.touchAction }} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
+          <svg ref={svgRef} viewBox={pz.viewBox} style={{ touchAction: pz.touchAction, cursor: pz.cursor }} role="group" aria-label={`Route map: ${route.map((p) => p.label).join(", ")}. Each pin jumps to its city below.`}>
             <g className="cam" style={{ transform: camera }}>
               <path className="land" d={map.land} />
               {map.countries.map((c) => (
@@ -162,7 +162,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
           </svg>
         </div>
         <div className="map-legend">
-          <span>Pinch or use + and − to zoom. Select a pin to jump to that stop.</span>
+          <span>Pinch, double-click or use + and − to zoom, then drag to look around. Select a pin to jump to that stop.</span>
           <span className="zoomctl">
             <button type="button" onClick={pz.zoomOut} disabled={!pz.zoomed} aria-label="Zoom out">
               −

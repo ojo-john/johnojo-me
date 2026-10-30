@@ -79,7 +79,7 @@ export function TravelMap({ regions, stops }: { regions: { region: string; map: 
         <RegionMap key={region} region={region} map={map} caption={regions.length > 1} stops={stops} unitsPerPx={unitsPerPx} picker={picker?.region === region ? picker : null} setPicker={setPicker} pickerRef={pickerRef} />
       ))}
       <p style={{ marginTop: 10, fontSize: 14, color: "var(--ink-2)" }}>
-        {compactAtFull ? "Tap a pin or a country to see its stops. Pinch or use + and − to zoom in and see more city names." : "Select a country or a city to jump to that stop. Use + and − to zoom."}
+        {compactAtFull ? "Tap a pin or a country to see its stops. Pinch or use + and − to zoom in and see more city names." : "Select a country or a city to jump to that stop. Double-click or use + and − to zoom, then drag to look around."}
       </p>
     </div>
   );
@@ -148,7 +148,7 @@ function RegionMap({
         </figcaption>
       ) : null}
       <div className="card tmap" style={{ overflow: "hidden", position: "relative" }}>
-        <svg ref={svgRef} viewBox={pz.viewBox} role="group" aria-label={`${region}: visited places`} style={{ display: "block", width: "100%", height: "auto", touchAction: pz.touchAction }}>
+        <svg ref={svgRef} viewBox={pz.viewBox} role="group" aria-label={`${region}: visited places`} style={{ display: "block", width: "100%", height: "auto", touchAction: pz.touchAction, cursor: pz.cursor }}>
           <path d={map.land} fill="#e4e2da" stroke="#cfccc2" strokeWidth={k} />
           {map.countries.map((c) => {
             const list = forCountry(c.name);

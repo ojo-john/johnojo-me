@@ -233,6 +233,8 @@ footer.foot { background: var(--ink); color: var(--paper); padding-block: 56px; 
 .map-col { position: sticky; top: calc(var(--header-h) + 20px); align-self: start; }
 .bigmap { background: var(--paper); border: 2px solid var(--ink); overflow: hidden; aspect-ratio: 1 / 1; max-height: calc(100vh - var(--header-h) - 90px); width: 100%; }
 .bigmap svg { width: 100%; height: 100%; display: block; }
+/* Map links (pins, countries) must not start a browser drag; the map pans instead. */
+.bigmap svg a, .tmap svg a { -webkit-user-drag: none; }
 .bigmap .cam { transition: transform 900ms var(--snap); }
 .bigmap .land { fill: #e4e2da; stroke: #cfccc2; stroke-width: 1; }
 /* Countries this trip went to, shaded like the Travel page overview. */

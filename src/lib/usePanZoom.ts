@@ -6,7 +6,7 @@ import { fullView, panBy, zoomAt, zoomLevel, type View } from "./pan-zoom";
 
 /** How far a finger may move before a touch counts as a drag rather than a tap on a pin. */
 const DRAG_THRESHOLD_PX = 6;
-/** Each press of + or − zooms by this much. */
+/** Each press of + or −, or a double-click, zooms by this much. */
 const STEP = 1.6;
 
 /**
@@ -73,6 +73,15 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
       swallowClick(e);
       dragged = false;
     };
+    // Pressing on a pin or a country (both links) and moving would start the browser's own "drag this
+    // link" gesture, which cancels the pointer and stops the pan. The map never needs native drags.
+    const noNativeDrag = (e: DragEvent) => e.preventDefault();
+    // Double-click zooms in around the cursor, the usual map shortcut on a desktop.
+    const dblclick = (e: MouseEvent) => {
+      e.preventDefault();
+      const { fx, fy } = fraction(e.clientX, e.clientY);
+      setView((v) => zoomAt(v, STEP, fx, fy, width, height));
+    };
     // Trackpad pinch and Ctrl+scroll zoom the map rather than the page.
     const wheel = (e: WheelEvent) => {
       if (!e.ctrlKey) return;
@@ -87,7 +96,11 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
     svg.addEventListener("pointerleave", up);
     svg.addEventListener("click", click, true);
     svg.addEventListener("wheel", wheel, { passive: false });
+    svg.addEventListener("dragstart", noNativeDrag);
+    svg.addEventListener("dblclick", dblclick);
     return () => {
+      svg.removeEventListener("dragstart", noNativeDrag);
+      svg.removeEventListener("dblclick", dblclick);
       svg.removeEventListener("pointerdown", down);
       svg.removeEventListener("pointermove", move);
       svg.removeEventListener("pointerup", up);
@@ -114,5 +127,7 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
     zoomOut,
     reset,
     touchAction: zoom > 1.01 ? "none" : "pan-y",
+    /** A grab hand once there's somewhere to drag to. */
+    cursor: zoom > 1.01 ? "grab" : undefined,
   } as const;
 }
