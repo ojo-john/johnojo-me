@@ -79,9 +79,10 @@ nothing leaves your machine.
 
 ### Layer 2: signing in to the editor
 
-The editor offers two ways in. Either works; you only need one.
-
-**Option A: personal access token (simplest, nothing to host).**
+Sign in with a personal access token. (There's deliberately no "Sign in with GitHub" button: the site
+used to host its own OAuth relay at `/oauth/callback`, and Chrome flagged that page as phishing in
+October 2026, because a page that receives a GitHub token and posts it to another window is exactly what
+token-stealing pages do. One flagged page can get the whole domain blocked, so the relay was removed.)
 
 1. GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens** →
    Generate new token.
@@ -92,23 +93,6 @@ The editor offers two ways in. Either works; you only need one.
 5. Generate, copy the token, open `https://johnojo.me/admin/`, choose **Sign In Using Access Token**
    and paste it. It's kept in that browser only. Never put the token in the repo or in chat.
 6. Lost the laptop or think the token leaked? Delete it on the same GitHub page; it stops working at once.
-
-**Option B: "Sign in with GitHub" button (built into the site).**
-
-GitHub's sign-in needs a server that holds a client secret. The site has one: `functions/oauth/` (logic in
-`src/lib/oauth/relay.ts`, ported from [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth)). It only
-ever hands a token to a window on `SITE_HOST`, and `/oauth/*` is outside Access so the popup can reach it.
-
-1. GitHub → Settings → Developer settings → **OAuth Apps** → New OAuth App:
-   - Application name: `johnojo.me editor`
-   - Homepage URL: `https://johnojo.me`
-   - Authorization callback URL: `https://johnojo.me/oauth/callback`
-   Register, copy the **Client ID**, generate a **Client secret**.
-2. In your own terminal (each asks for the value, hidden):
-   `npx wrangler@4.153.0 pages secret put GITHUB_CLIENT_ID --project-name johnojo-me`
-   `npx wrangler@4.153.0 pages secret put GITHUB_CLIENT_SECRET --project-name johnojo-me`
-3. Redeploy (any push, or Deployments → Retry). `public/admin/config.yml` already points at
-   `base_url: https://johnojo.me` with `auth_endpoint: oauth/auth`.
 
 ### Layer 1: Cloudflare Access in front of /admin/ (recommended)
 
