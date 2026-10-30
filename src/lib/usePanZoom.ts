@@ -89,6 +89,12 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
     // Pressing on a pin or a country (both links) and moving would start the browser's own "drag this
     // link" gesture, which cancels the pointer and stops the pan. The map never needs native drags.
     const noNativeDrag = (e: DragEvent) => e.preventDefault();
+    // A mouse press on a pin or country would focus it, and Chrome then scrolls the page to keep the
+    // focused element in view while the map moves under it, so the map slides off screen mid-drag.
+    // Clicks still work; keyboard users still focus pins with Tab.
+    const noFocusOnPress = (e: MouseEvent) => {
+      if (e.button === 0) e.preventDefault();
+    };
     // Double-click zooms in around the cursor, the usual map shortcut on a desktop.
     const dblclick = (e: MouseEvent) => {
       e.preventDefault();
@@ -110,8 +116,10 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
     svg.addEventListener("click", click, true);
     svg.addEventListener("wheel", wheel, { passive: false });
     svg.addEventListener("dragstart", noNativeDrag);
+    svg.addEventListener("mousedown", noFocusOnPress);
     svg.addEventListener("dblclick", dblclick);
     return () => {
+      svg.removeEventListener("mousedown", noFocusOnPress);
       svg.removeEventListener("dragstart", noNativeDrag);
       svg.removeEventListener("dblclick", dblclick);
       svg.removeEventListener("pointerdown", down);
