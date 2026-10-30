@@ -5,13 +5,20 @@ arrive: 2026-10-27
 depart: 2026-10-29
 summary: "I didn't enjoy Rome as much as Milan. Part of that is probably where I stayed: San Giovanni, outside the centre. In Milan I got everywhere on the metro. In Rome it was mostly buses, and it's the only city so far where I've had to take Ubers and taxis, which I normally try to avoid. The days were still full: Roma beat Cagliari 4–2 at the Olimpico, then the Vatican, the Colosseum and a food tour through Trastevere."
 highlights:
-  Football: Roma 4–2 Cagliari at the Stadio Olimpico
+  Football: "Roma 4–2 Cagliari at the Stadio Olimpico, the best game I've been to for goals and action"
   History: The Vatican, the Colosseum and the Roman Forum
   Food: A food tour through Trastevere
 disliked: Staying outside the centre, and needing buses, Ubers and taxis to get around.
+wouldReturn:
+  answer: "yes"
+  why: "And I'd stay near the centre next time. I feel like I missed some things by staying out in San Giovanni."
+rating:
+  ratedOn: 2026-10-30
+  scores: { food: 7, value: 6, transport: 6, walkability: 8, architecture: 10, culture: 6, people: 7, attractions: 8, safety: 8, enjoyment: 8 }
 moments:
   - date: 2026-10-27
     title: "Roma v Cagliari"
+    note: "At the Stadio Olimpico, home to both Roma and Lazio. It opened in 1953, holds about 70,000, and has hosted the 1960 Olympics, the 1990 World Cup final and four European Cup and Champions League finals."
     media: [photos/img-1403, videos/img-1381, videos/img-1391, photos/img-1424]
   - date: 2026-10-28
     title: "The Vatican"
@@ -36,6 +43,7 @@ matches:
     competition: Serie A
     date: 2026-10-27
     stadium: Stadio Olimpico
+    writeUp: "The best game I've been to so far for goals and action. Cagliari went ahead in the 8th minute: VAR spotted a Pisilli handball and Nzola scored the penalty. Lulli headed Roma level, and Pisilli made up for it by turning in Lulli's cross to make it 2–1 inside 21 minutes. Maldini equalised in the 81st, then two of Roma's subs won it late: Mora with a header in the 85th and Malen in the 87th. I absolutely loved the football Cagliari played, and Roma's number 3 caught my eye: one to watch."
 cover: photos/img-1565
 mediaMeta:
   photos/img-1403: { caption: "Roma v Cagliari", alt: "John's selfie in the stands of the Stadio Olimpico under the floodlights" }
