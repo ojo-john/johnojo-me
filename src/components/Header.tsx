@@ -36,7 +36,8 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
   const cvRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    document.documentElement.style.setProperty("--pillar", active?.color ?? "var(--ink)");
+    // Tints the logo's square: the section's colour, or the brand cobalt on pages outside a section.
+    document.documentElement.style.setProperty("--pillar", active?.color ?? "var(--work)");
   }, [active]);
 
   useEffect(() => {
@@ -66,7 +67,13 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
       <header className="top">
         <div className="wrap top-in">
           <Link className="logo" href="/">
-            <i aria-hidden="true" />
+            {/* The "Jo" mark from the favicon; its square takes the colour of the section you're in. */}
+            <svg className="mark" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" />
+              <path d="M26 15 V37 A6 6 0 0 1 14 37" fill="none" stroke="#fbfaf7" strokeWidth="6.5" strokeLinecap="round" />
+              <circle cx="43" cy="34" r="9.5" fill="none" stroke="#fbfaf7" strokeWidth="6.5" />
+              <circle cx="52" cy="12" r="4.5" fill="#f3c64b" />
+            </svg>
             {site.name}
           </Link>
           <nav className="tnav" aria-label="Main">

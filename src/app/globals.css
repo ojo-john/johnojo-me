@@ -77,7 +77,8 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .top { position: fixed; inset: 0 0 auto 0; z-index: 45; transform: translateZ(0); padding-top: env(safe-area-inset-top, 0px); background: color-mix(in srgb, var(--chalk) 94%, transparent); border-bottom: 1.5px solid var(--rule); }
 .top-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; height: var(--header-h); }
 .logo { font-family: var(--f-display); font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.03em; display: inline-flex; align-items: center; gap: 10px; }
-.logo i { width: 14px; height: 14px; border-radius: 50%; background: var(--pillar, var(--ink)); transition: background-color 400ms; }
+.logo .mark { width: 28px; height: 28px; flex: none; }
+.logo .mark rect { fill: var(--pillar, var(--work)); transition: fill 400ms; }
 .tnav { display: flex; gap: 4px; background: var(--paper); border: 2px solid var(--ink); border-radius: 99px; padding: 4px; }
 .tnav a { text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 0 18px; min-height: 38px; display: flex; align-items: center; border-radius: 99px; transition: background-color 300ms, color 300ms, transform var(--t-quick) var(--spring); }
 .tnav a:hover { transform: translateY(-1px); background: var(--chalk); }
