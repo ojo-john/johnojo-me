@@ -576,3 +576,6 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 .mday .fixture { font-family: var(--f-display); font-size: clamp(24px, 3vw, 30px); line-height: 1.1; }
 .mday .sub { font-size: 14px; color: var(--ink-2); }
 .mday .sum { margin: 0; font-family: var(--f-read); font-size: 17px; }
+/* A project's "What it does" list on the Work page. */
+.pcard .feats { margin: 4px 0 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.pcard .feats li { line-height: 1.45; }

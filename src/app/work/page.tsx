@@ -108,6 +108,7 @@ export default function WorkPage() {
           problem: p.problem,
           approach: p.approach,
           stack: p.stack,
+          features: p.features,
           repo: p.repo,
           repoNote: p.repoNote,
           demo: p.demo,

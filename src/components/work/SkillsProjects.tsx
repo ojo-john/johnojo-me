@@ -13,6 +13,7 @@ export interface ProjectView {
   problem: string;
   approach: string;
   stack: string[];
+  features: string[];
   repo: string | null;
   repoNote?: string;
   demo: string | null;
@@ -80,6 +81,18 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
                     <dd>{p.problem}</dd>
                     <dt>Approach</dt>
                     <dd>{p.approach}</dd>
+                    {p.features.length ? (
+                      <>
+                        <dt>What it does</dt>
+                        <dd>
+                          <ul className="feats">
+                            {p.features.map((f) => (
+                              <li key={f}>{f}</li>
+                            ))}
+                          </ul>
+                        </dd>
+                      </>
+                    ) : null}
                     <dt>Code</dt>
                     <dd>
                       {p.repo ? (

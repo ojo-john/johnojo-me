@@ -56,4 +56,4 @@ Nothing needs to stay on your Mac. Folders whose names start with `_` are never 
 - The "Process media" job runs on every visit save (to catch rotate/crop/trim edits). A save with nothing to process
   finishes in about a minute.
 - The Cloudflare Pages build fails on purpose if `MEDIA_BASE_URL` isn't set, rather than publishing broken images.
-- GitHub Actions on a private repo: 2,000 free minutes a month; a run takes a few minutes.
+- GitHub Actions: free and unlimited, since the repo is public; a run takes a few minutes.

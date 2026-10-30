@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: ojo-john/johnojo-me # private GitHub repository holding this site; only people with write access can save
+  repo: ojo-john/johnojo-me # public GitHub repository; only John can save (through the site proxy, see below)
   branch: main
   # The only login is Cloudflare Access (email + one-time code). The editor reaches GitHub through the site's
   # own proxy, which adds the site's token on the server (src/lib/github-proxy/, docs/DEPLOY.md), and
@@ -345,6 +345,7 @@ collections:
       - { name: approach, label: Approach, widget: text }
       - { name: stack, label: Tech stack, widget: list, hint: "One technology per item, e.g. Next.js 16" }
       - { name: repo, label: GitHub link, type: url, required: false, hint: "Full link, e.g. https://github.com/ojo-john/codequest. Leave blank if the code is private." }
+      - { name: features, label: What it does, widget: list, required: false, hint: "One short line per feature or capability" }
       - { name: repoNote, label: Note when there's no public link, required: false, hint: "e.g. Private repository" }
       - { name: demo, label: Live app link, type: url, required: false, hint: "Full link starting with https://" }
       - { name: demoNote, label: Note next to the live link, required: false, hint: "e.g. Sign-in required" }

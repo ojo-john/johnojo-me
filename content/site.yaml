@@ -3,8 +3,8 @@ name: John Ojo
 role: Software Development Engineer II
 company: Amazon
 level: L5
-seoDescription: John Ojo, software engineer at Amazon building distributed systems on AWS. Projects, career, and travel with honest city rankings and match days.
-intro: I'm a software engineer at Amazon, building distributed, event-driven systems on AWS. Away from work I travel for football and food, rank every city I visit, and write about faith and the lessons I'm learning along the way.
+seoDescription: John Ojo, full-stack software engineer at Amazon, from React front ends to event-driven systems on AWS. Projects, travel, city rankings and match days.
+intro: "I'm a full-stack software engineer at Amazon. I build the whole thing: React interfaces people use every day, the APIs behind them, and the distributed, event-driven systems on AWS underneath. Away from work I travel for football and food, rank every city I visit, and write about my faith in God and the lessons I'm learning along the way."
 github: https://github.com/ojo-john
 linkedin: https://www.linkedin.com/in/john-ojo-573717217
 email: hello@johnojo.me # public address; Cloudflare Email Routing forwards it to a private inbox

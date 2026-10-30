@@ -3,12 +3,24 @@ order: 3
 status: published
 kind: project
 stage: Live
-summary: This site. A static personal site for my work, travel and journal, with a private admin where I upload photos from my phone, edit trips and see visitor stats, all on free tiers.
+summary: This site. A personal site for my work, travel and journal, with a private admin where I upload photos from my phone, edit trips, schedule posts and see visitor stats, all on free tiers.
 problem: I wanted one place for my career, my travels and my writing that loads fast, costs almost nothing to run, and that I can update from my phone without touching code.
-approach: Pages are built ahead of time from YAML and Markdown in Git, so there's no database to run. Photos go through a pipeline that finds faces for cropping, and a storage budget keeps it inside the free tier. The admin sits behind two locks, Cloudflare Access and the site checking the login itself.
-stack: [Next.js 16, TypeScript, Cloudflare Pages, Cloudflare R2, Pages Functions, Sveltia CMS, sharp, ffmpeg, Vitest]
-repo: null
-repoNote: Private, because it holds unpublished drafts
+approach: Pages are built ahead of time from YAML and Markdown in Git, so there's no database to run. Photos go through a pipeline that crops around faces and strips location data, and a storage budget keeps it inside the free tier. The admin has one login, Cloudflare Access, and every server function checks that login again itself.
+stack: [Next.js 16, TypeScript, Cloudflare Pages, Pages Functions, Cloudflare R2, Cloudflare Access, Workers Analytics Engine, Sveltia CMS, Zod, sharp, ffmpeg, Vitest, GitHub Actions]
+features:
+  - "Travel map of every trip, with pinch-to-zoom and city labels placed so they never overlap"
+  - "City rankings from ten scores per city, viewable by latest, best or average visit"
+  - "Match days: every football game I've been to, with scores, write-ups and photos"
+  - "Swipeable photo strips and a shuffleable photo pile, with a full-screen viewer"
+  - "Photo pipeline: face-aware crops, AVIF and WebP sizes, compressed clips, location data stripped, near-duplicates flagged"
+  - "Upload originals from my phone to private storage, with an 8 GB budget guard to stay free"
+  - "Browser editor that saves as Git commits, behind one email login and a GitHub proxy that keeps the token on the server"
+  - "Scheduled publishing for trips, posts and jobs, with a nightly rebuild when something is due"
+  - "Cookie-free visitor stats: visits by source, top pages and clicks, with my own visits left out"
+  - "Search: sitemap, RSS, link previews, and Bing notified of changed pages on every deploy"
+  - "Accessibility: captions and screen-reader descriptions on every photo, full keyboard support, a Lighthouse accessibility score of 100"
+  - "Over 350 unit tests, CI on every push, and secret scanning"
+repo: https://github.com/ojo-john/johnojo-me
 demo: https://johnojo.me
 diagram:
   - { label: Phone upload, note: "I upload originals from my phone to a login-protected page." }
@@ -16,4 +28,4 @@ diagram:
   - { label: Media pipeline, note: "Rotates, crops around faces, makes small web copies and compressed clips, and strips location data." }
   - { label: Git content, note: "Trips, scores and notes are YAML and Markdown, edited in the browser and saved as commits." }
   - { label: Static build, note: "Every page is built ahead of time, so visitors never wait on a database." }
-  - { label: Cloudflare edge, note: "Pages and photos are served from Cloudflare's cache, with the admin behind two locks." }
+  - { label: Cloudflare edge, note: "Pages and photos are served from Cloudflare's cache, with the admin behind one login checked twice." }

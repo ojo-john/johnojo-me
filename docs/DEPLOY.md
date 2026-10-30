@@ -5,7 +5,7 @@ Static build on **Cloudflare Pages** (free), photos and clips on **Cloudflare R2
 
 ## One-time setup
 
-1. **GitHub**: push this repo to a private repository (e.g. `ojo-john/johnojo-me`). The editor's
+1. **GitHub**: push this repo to GitHub (`ojo-john/johnojo-me`, public since 30 Oct 2026). The editor's
    `public/admin/config.yml` points at that name.
 2. **R2 bucket for media**: Cloudflare dashboard → R2 → Create bucket `johnojo-media` →
    Settings → Custom domains → connect `media.johnojo.me`.
@@ -65,7 +65,7 @@ a mistake in one doesn't open the door.
 |---|---|---|
 | 1. Cloudflare Access | Nobody but you can even load `/admin/` (or `/api/metrics`) | Cloudflare Zero Trust |
 | 2. GitHub sign-in | The editor can read and save only with a GitHub login that has write access | Sveltia + GitHub |
-| 3. Private repo, one collaborator | Even a GitHub login can't save unless it's yours | GitHub repo settings |
+| 3. One collaborator | Even a GitHub login can't save unless it's yours | GitHub repo settings |
 
 On your own computer none of this applies: `npm run dev`, open <http://localhost:3000/admin/> in Chrome
 and choose **Work with Local Repository**. It edits the files on your disk and needs no login, because
@@ -73,7 +73,7 @@ nothing leaves your machine.
 
 ### Layer 3: the repository
 
-- Keep `ojo-john/johnojo-me` **private**, with you as the only collaborator
+- The repo is public (anyone can read the code and drafts), with you as the only collaborator
   (Settings → Collaborators should list nobody else).
 - Turn on two-factor authentication for your GitHub account.
 

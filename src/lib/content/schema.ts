@@ -232,6 +232,8 @@ export const project = z.object({
   problem: z.string(),
   approach: z.string(),
   stack: z.array(z.string()),
+  /** "What it does": short lines, one per feature or capability, shown as a list on the Work page. */
+  features: z.array(z.string()).default([]),
   repo: z.string().url().nullable().default(null),
   repoNote: z.string().optional(),
   demo: z.string().url().nullable().default(null),
