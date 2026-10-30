@@ -22,11 +22,11 @@ moments:
     media: [photos/img-1403, videos/img-1381, videos/img-1391, photos/img-1424]
   - date: 2026-10-28
     title: "The Vatican"
-    note: "A guided tour of the Vatican Museums, the Raphael Rooms and St. Peter's Basilica."
+    note: "A guided tour of the Vatican Museums, the Raphael Rooms and St. Peter's Basilica. Vatican City is the smallest country in the world."
     media: [photos/img-1440, photos/img-1434, photos/img-1445, photos/img-1454, photos/img-1460, photos/img-1461, photos/img-1474, photos/img-1475, photos/img-1489, photos/img-1510, videos/img-1514, photos/img-1523, photos/img-1524]
   - date: 2026-10-28
     title: "The Roman Forum and the Colosseum"
-    note: "A guided visit in the afternoon, down into the arena and across the Forum."
+    note: "A guided visit in the afternoon, down into the arena and across the Forum. The Colosseum opened in AD 80 and could hold around 50,000 spectators."
     media: [photos/img-1542, photos/img-1546, photos/img-1565, photos/img-1596, videos/img-1593]
   - date: 2026-10-28
     title: "Trastevere food tour"
@@ -34,7 +34,7 @@ moments:
     media: [photos/img-1606, photos/img-1603, photos/img-1608, photos/img-1614, photos/img-1615]
   - date: 2026-10-29
     title: "Early morning in Piazza del Popolo"
-    note: "Before the day trip to the Amalfi Coast."
+    note: "Before the day trip to the Amalfi Coast. The obelisk in the middle is over 3,000 years old. Emperor Augustus brought it from Egypt."
     media: [photos/img-1622, photos/img-1628]
 matches:
   - home: Roma

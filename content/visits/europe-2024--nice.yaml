@@ -27,7 +27,7 @@ moments:
     media: [videos/img-0307, videos/img-0309, videos/img-0313, photos/img-0308, photos/img-0312]
   - date: 2024-04-05
     title: "The beach"
-    note: "Like most of Nice's beaches, it's pebbles, not sand, along the Promenade des Anglais."
+    note: "Like most of Nice's beaches, it's pebbles, not sand, along the Promenade des Anglais. The promenade is named after the English visitors who paid for the first path along the sea in the 1820s."
     media: [photos/img-0326]
 wouldReturn:
   answer: "yes"
