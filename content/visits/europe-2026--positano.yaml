@@ -3,15 +3,20 @@ destination: positano
 order: 6
 kind: day-trip
 arrive: 2026-10-29
+summary: "A day trip from Rome, and it was alright. I spent about two hours each in Amalfi and Positano. They're small towns built into the cliffs, and beyond walking around and taking in the view there isn't much to do. Positano's beach also wasn't the beach I expected: it's pebbles, not sand."
+liked: The boat along the coast and the views of the towns from the water.
+disliked: Not much to do, and a pebble beach instead of sand.
 moments:
   - date: 2026-10-29
     title: "By boat from Salerno"
+    note: "A coach from Rome down to Salerno, then a boat along the coast. The Amalfi Coast is a UNESCO World Heritage Site."
     media: [photos/img-1636, photos/img-1642]
   - date: 2026-10-29
     title: "Amalfi"
     media: [photos/img-1663, photos/img-1655, videos/img-1657, videos/img-1668]
   - date: 2026-10-29
     title: "Positano"
+    note: "Spiaggia Grande, the main beach, is grey pebbles rather than sand."
     media: [photos/img-1669, photos/img-1675, videos/img-1672]
   - date: 2026-10-29
     title: "Back in Amalfi at dusk"

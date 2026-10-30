@@ -3,6 +3,12 @@ destination: rome
 order: 5
 arrive: 2026-10-27
 depart: 2026-10-29
+summary: "I didn't enjoy Rome as much as Milan. Part of that is probably where I stayed: San Giovanni, outside the centre. In Milan I got everywhere on the metro. In Rome it was mostly buses, and it's the only city so far where I've had to take Ubers and taxis, which I normally try to avoid. The days were still full: Roma beat Cagliari 4–2 at the Olimpico, then the Vatican, the Colosseum and a food tour through Trastevere."
+highlights:
+  Football: Roma 4–2 Cagliari at the Stadio Olimpico
+  History: The Vatican, the Colosseum and the Roman Forum
+  Food: A food tour through Trastevere
+disliked: Staying outside the centre, and needing buses, Ubers and taxis to get around.
 moments:
   - date: 2026-10-27
     title: "Roma v Cagliari"
@@ -13,9 +19,11 @@ moments:
     media: [photos/img-1440, photos/img-1434, photos/img-1445, photos/img-1454, photos/img-1460, photos/img-1461, photos/img-1474, photos/img-1475, photos/img-1489, photos/img-1510, videos/img-1514, photos/img-1523, photos/img-1524]
   - date: 2026-10-28
     title: "The Roman Forum and the Colosseum"
+    note: "A guided visit in the afternoon, down into the arena and across the Forum."
     media: [photos/img-1542, photos/img-1546, photos/img-1565, photos/img-1596, videos/img-1593]
   - date: 2026-10-28
     title: "Trastevere food tour"
+    note: "An evening walking and eating through Trastevere, with a stop at La Renella, a bakery that's been there for generations."
     media: [photos/img-1606, photos/img-1603, photos/img-1608, photos/img-1614, photos/img-1615]
   - date: 2026-10-29
     title: "Early morning in Piazza del Popolo"

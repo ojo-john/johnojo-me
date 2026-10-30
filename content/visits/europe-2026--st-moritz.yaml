@@ -3,6 +3,12 @@ destination: st-moritz
 order: 4
 kind: day-trip
 arrive: 2026-10-26
+summary: "St. Moritz was great. The food was expensive, though: I paid $50 for burgers and fries, which I never imagined. The highlight was the train over the Bernina Pass. The mountain views were amazing, but all I could think about was the engineering. The line was finished in 1910, long before today's technology, and it's now a UNESCO World Heritage Site. That they built it at all is astonishing."
+highlights:
+  Activities: The Bernina train over the Alps
+  Views: Lake St. Moritz and the snowy peaks
+liked: The train ride, the mountain views and the engineering behind the railway.
+disliked: "Expensive food: $50 for burgers and fries."
 moments:
   - date: 2026-10-26
     title: "The way up from Italy"
@@ -15,7 +21,7 @@ moments:
     media: [photos/img-1321, videos/img-1329]
   - date: 2026-10-26
     title: "The train over the Bernina Pass"
-    note: "The railway climbs past glaciers to Lago Bianco at the top of the pass, then winds down through Brusio towards Italy."
+    note: "The Bernina line was finished in 1910 and is part of a UNESCO World Heritage Site. It climbs past glaciers to Lago Bianco, at 2,253 metres the highest point on the line, then winds down through Brusio towards Italy."
     media: [videos/img-1350, videos/img-1339, videos/img-1371]
 rating:
   ratedOn: 2026-10-27
