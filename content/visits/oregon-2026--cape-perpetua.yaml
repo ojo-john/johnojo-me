@@ -6,6 +6,7 @@ arrive: 2026-09-25
 moments:
   - date: 2026-09-25
     title: "Breakfast in Lincoln City"
+    note: "Lincoln City is home to the D River, often called one of the shortest rivers in the world at about 440 feet."
     media: [photos/img-0383]
   - date: 2026-09-25
     title: "Cape Perpetua"
@@ -13,6 +14,7 @@ moments:
     media: [photos/img-0449, photos/img-0469, videos/img-6709, videos/img-6706]
   - date: 2026-09-25
     title: "Heceta Head Lighthouse"
+    note: "First lit in 1894, it has the strongest light on the Oregon coast, visible more than 20 miles out to sea."
     media: [photos/img-0593, photos/img-3397, videos/img-0594]
 cover: photos/img-0449
 mediaMeta:

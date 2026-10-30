@@ -12,12 +12,15 @@ disliked: "Expensive food: $50 for burgers and fries."
 moments:
   - date: 2026-10-26
     title: "The way up from Italy"
+    note: "By coach from Milan through Chiavenna, then up over the Maloja Pass into Switzerland."
     media: [photos/img-1269]
   - date: 2026-10-26
     title: "Lake St. Moritz"
+    note: "St. Moritz has hosted the Winter Olympics twice, in 1928 and 1948. In winter the lake freezes hard enough for horse racing and polo on the ice."
     media: [photos/img-1299, videos/img-1292, photos/img-1302]
   - date: 2026-10-26
     title: "Above the town"
+    note: "The town sits at about 1,800 metres, and in late October the larch trees turn gold."
     media: [photos/img-1321, videos/img-1329]
   - date: 2026-10-26
     title: "The train over the Bernina Pass"

@@ -11,6 +11,7 @@ highlights:
 moments:
   - date: 2024-04-03
     title: "First evening in Nice"
+    note: "Dinner, then the Basilica of Notre-Dame, the largest church in Nice. Building started in 1864, and its twin towers were inspired by Notre-Dame de Paris."
     media: [photos/img-0116, photos/b7624b06-3272-440b-a12b-c883d03bbf15]
   - date: 2024-04-04
     title: "The French Riviera in one day"
@@ -26,6 +27,7 @@ moments:
     media: [videos/img-0307, videos/img-0309, videos/img-0313, photos/img-0308, photos/img-0312]
   - date: 2024-04-05
     title: "The beach"
+    note: "Like most of Nice's beaches, it's pebbles, not sand, along the Promenade des Anglais."
     media: [photos/img-0326]
 wouldReturn:
   answer: "yes"

@@ -6,10 +6,11 @@ arrive: 2026-09-26
 moments:
   - date: 2026-09-26
     title: "The drive in"
+    note: "Highway 138 through the Umpqua National Forest."
     media: [videos/img-0627]
   - date: 2026-09-26
     title: "Crater Lake"
-    note: "The lake fills the crater of a collapsed volcano, with Wizard Island, a smaller cone, rising out of the water."
+    note: "The lake fills the crater left when Mount Mazama erupted and collapsed about 7,700 years ago. At 1,943 feet deep, it's the deepest lake in the United States. Wizard Island, a smaller volcanic cone, rises out of the water."
     media: [photos/img-0192, photos/img-0712, videos/img-0795, videos/img-0632]
 cover: photos/img-0192
 mediaMeta:

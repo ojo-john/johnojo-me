@@ -13,9 +13,11 @@ moments:
     media: [photos/img-1636, photos/img-1642]
   - date: 2026-10-29
     title: "Amalfi"
+    note: "In the Middle Ages, Amalfi was a powerful sea republic trading across the Mediterranean. Today the coast is better known for its lemons and limoncello."
     media: [photos/img-1663, photos/img-1655, videos/img-1657, videos/img-1668]
   - date: 2026-10-29
     title: "Back in Amalfi at dusk"
+    note: "The lights coming on before the trip back to Rome."
     media: [photos/img-1703]
 cover: photos/img-1663
 mediaMeta:
