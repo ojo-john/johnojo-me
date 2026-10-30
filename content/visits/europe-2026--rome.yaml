@@ -1,6 +1,75 @@
 trip: europe-2026
 destination: rome
-status: draft # upcoming; publish once it's done
 order: 5
 arrive: 2026-10-27
 depart: 2026-10-29
+moments:
+  - date: 2026-10-27
+    title: "Roma v Cagliari"
+    media: [photos/img-1403, videos/img-1381, videos/img-1391, photos/img-1424]
+  - date: 2026-10-28
+    title: "The Vatican"
+    note: "A guided tour of the Vatican Museums, the Raphael Rooms and St. Peter's Basilica."
+    media: [photos/img-1440, photos/img-1434, photos/img-1445, photos/img-1454, photos/img-1460, photos/img-1461, photos/img-1474, photos/img-1475, photos/img-1489, photos/img-1510, videos/img-1514, photos/img-1523, photos/img-1524]
+  - date: 2026-10-28
+    title: "The Roman Forum and the Colosseum"
+    media: [photos/img-1542, photos/img-1546, photos/img-1565, photos/img-1596, videos/img-1593]
+  - date: 2026-10-28
+    title: "Trastevere food tour"
+    media: [photos/img-1606, photos/img-1603, photos/img-1608, photos/img-1614, photos/img-1615]
+  - date: 2026-10-29
+    title: "Early morning in Piazza del Popolo"
+    note: "Before the day trip to the Amalfi Coast."
+    media: [photos/img-1622, photos/img-1628]
+matches:
+  - home: Roma
+    away: Cagliari
+    score: 4–2
+    competition: Serie A
+    date: 2026-10-27
+    stadium: Stadio Olimpico
+cover: photos/img-1565
+mediaMeta:
+  photos/img-1403: { caption: "Roma v Cagliari", alt: "John's selfie in the stands of the Stadio Olimpico under the floodlights" }
+  videos/img-1381: { caption: "The Olimpico crowd", alt: "Roma fans on their feet in the stands before the game" }
+  videos/img-1391: { caption: "Roma celebrate", alt: "Play near the Cagliari goal, then Roma players celebrating together" }
+  photos/img-1424: { caption: "Full time: Roma 4–2 Cagliari", alt: "The stadium screen reading Grazie Roma, with the 4–2 score, above the fans" }
+  photos/img-1440: { caption: "The Vatican Museums", alt: "John's selfie under a glass dome in the museum's entrance hall" }
+  photos/img-1434: { caption: "A wooden boat on display", alt: "An old wooden boat inside the museum, by a curved staircase" }
+  photos/img-1445: { caption: "The dome of St. Peter's", alt: "The great grey dome of St. Peter's Basilica above the trees" }
+  photos/img-1454: { caption: "The Pine Cone Courtyard", alt: "John's selfie in front of the giant bronze pine cone in its niche" }
+  photos/img-1460: { caption: "Apollo Belvedere", alt: "The white marble statue of Apollo with a cloak over his arm" }
+  photos/img-1461: { caption: "A river god", alt: "A reclining marble river god against a red wall" }
+  photos/img-1474: { caption: "A bearded marble bust", alt: "A marble head with a long curly beard against a red wall" }
+  photos/img-1475: { caption: "Raising the grapes", alt: "A marble statue holding up a bunch of grapes and a cup" }
+  photos/img-1489: { caption: "An Egyptian statue", alt: "A speckled granite figure with a pharaoh's headdress in a museum gallery" }
+  photos/img-1510: { caption: "Frescoes", alt: "A painted wall with a figure in a blue robe among a crowd of saints" }
+  videos/img-1514: { caption: "The Raphael Rooms", alt: "A pan across painted walls and ceilings covered in Renaissance battle scenes" }
+  photos/img-1523: { caption: "Inside St. Peter's", alt: "A white marble statue of a pope wearing a tall crown" }
+  photos/img-1524: { caption: "A gilded bust", alt: "A gold bust of a pope in a mitre, in an ornate niche" }
+  photos/img-1542: { caption: "The Arch of Septimius Severus", alt: "The triple Roman arch in the Forum under a blue sky" }
+  photos/img-1546: { caption: "The Roman Forum", alt: "Ruins and columns of the Forum stretching out under big clouds" }
+  photos/img-1565: { caption: "The Colosseum", alt: "John's selfie in front of the Colosseum's arches with crowds below" }
+  photos/img-1596: { caption: "Inside the Colosseum", alt: "John's selfie above the arena floor and its underground passages" }
+  videos/img-1593: { caption: "The arena", alt: "A sweep around the inside of the Colosseum under a rippled sky" }
+  photos/img-1606: { caption: "Santa Maria in Trastevere", alt: "The church's medieval bell tower and clock lit up at night" }
+  photos/img-1603: { caption: "Roman biscuits", alt: "A paper tray of ring-shaped biscuits on the cobbles" }
+  photos/img-1608: { caption: "La Renella", alt: "The bakery's arched sign, Pane Pizza Dolci, under fairy lights" }
+  photos/img-1614: { caption: "Last stop of the night", alt: "A metal rooster sculpture beside the restaurant counter" }
+  photos/img-1615: { caption: "Rigatoni", alt: "A small pan of rigatoni in a creamy sauce" }
+  photos/img-1622: { caption: "Piazza del Popolo", alt: "The church of Santa Maria del Popolo and its bell tower in early light" }
+  photos/img-1628: { caption: "The twin churches", alt: "One of the matching domed churches at the end of Via del Corso" }
+photoEdits: |
+  photos/img-1404 hide  # near-duplicate of img-1403
+  photos/img-1405 hide  # near-duplicate of img-1403
+  photos/img-1417 hide  # same selfie as img-1403
+  videos/img-1411 hide  # same view of the pitch as img-1391
+  photos/img-1458 hide  # similar to img-1460
+  photos/img-1486 hide  # similar to img-1474
+  photos/img-1488 hide  # similar to img-1474
+  photos/img-1521 hide  # similar to img-1510
+  photos/img-1527 hide  # similar to img-1475
+  photos/img-1555 hide  # similar to img-1565
+  photos/img-1567 hide  # near-duplicate of img-1565
+  photos/img-1598 hide  # near-duplicate of img-1596
+  photos/img-1629 hide  # near-duplicate of img-1628

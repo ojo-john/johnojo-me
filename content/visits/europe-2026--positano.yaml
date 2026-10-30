@@ -1,6 +1,37 @@
 trip: europe-2026
 destination: positano
-status: draft # upcoming; publish once it's done
 order: 6
 kind: day-trip
 arrive: 2026-10-29
+moments:
+  - date: 2026-10-29
+    title: "By boat from Salerno"
+    media: [photos/img-1636, photos/img-1642]
+  - date: 2026-10-29
+    title: "Amalfi"
+    media: [photos/img-1663, photos/img-1655, videos/img-1657, videos/img-1668]
+  - date: 2026-10-29
+    title: "Positano"
+    media: [photos/img-1669, photos/img-1675, videos/img-1672]
+  - date: 2026-10-29
+    title: "Back in Amalfi at dusk"
+    media: [photos/img-1703]
+cover: photos/img-1663
+mediaMeta:
+  photos/img-1636: { caption: "Salerno harbour", alt: "Boats moored in the harbour with the town and hills behind" }
+  photos/img-1642: { caption: "Along the coast", alt: "A town spilling down steep green mountains to the sea" }
+  photos/img-1663: { caption: "Amalfi", alt: "Pastel houses stacked up the cliff below a church bell tower" }
+  photos/img-1655: { caption: "Cliffs above Amalfi", alt: "White houses at the foot of tall, green limestone cliffs" }
+  videos/img-1657: { caption: "Sailing into Amalfi", alt: "The town and its harbour coming into view from the boat" }
+  videos/img-1668: { caption: "On the boat", alt: "John relaxing in the sun on the boat, the coast behind him" }
+  photos/img-1669: { caption: "Positano from the water", alt: "Positano's houses climbing the hillside above the sea" }
+  photos/img-1675: { caption: "Santa Maria Assunta", alt: "The yellow church and its dome among Positano's buildings" }
+  videos/img-1672: { caption: "Positano", alt: "Looking up from the beach at the town stacked on the cliff" }
+  photos/img-1703: { caption: "Amalfi at dusk", alt: "Amalfi's lights coming on below the dark mountains" }
+photoEdits: |
+  videos/img-1639 hide  # same view as img-1636
+  photos/img-1650 hide  # similar to img-1655
+  videos/img-1649 hide  # same approach as img-1657
+  videos/img-1656 hide  # same approach as img-1657
+  videos/img-1670 hide  # same view as img-1669
+  photos/img-1699 hide  # similar to img-1703

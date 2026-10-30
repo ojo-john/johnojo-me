@@ -1,0 +1,16 @@
+trip: oregon-2026
+destination: silver-falls
+order: 4
+kind: day-trip
+arrive: 2026-09-26
+moments:
+  - date: 2026-09-26
+    title: "South Falls"
+    note: "Silver Falls State Park, on the drive back north. The trail at South Falls goes right behind the waterfall."
+    media: [photos/img-6913, photos/img-0818, videos/img-6914, photos/img-6912]
+cover: photos/img-6913
+mediaMeta:
+  photos/img-6913: { caption: "South Falls", alt: "A tall waterfall dropping into a forested canyon" }
+  photos/img-0818: { caption: "At the falls", alt: "John and a friend smiling in a selfie with the waterfall behind them" }
+  videos/img-6914: { caption: "Behind South Falls", alt: "The waterfall pouring down past the rock wall into the pool below" }
+  photos/img-6912: { caption: "South Falls Historic District", alt: "A wooden sign reading Entering South Falls Historic District, among tall firs" }

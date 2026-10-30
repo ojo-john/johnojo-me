@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T05:38:30.021Z",
+ "generatedAt": "2026-10-30T06:35:09.753Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -9521,6 +9521,3542 @@
    "source": "3251503:0b99fa46b7ab34b1d1709b3258a17071",
    "hash": "7d2120a949c9275d",
    "focusBy": "faces"
+  },
+  "europe-2026/milan/photos/img-1376": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/milan/photos/img-1376-160.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1376-160.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1376-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/milan/photos/img-1376-480.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1376-480.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1376-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/milan/photos/img-1376-960.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1376-960.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1376-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/milan/photos/img-1376-1600.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1376-1600.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1376-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/milan/photos/img-1376-2400.avif",
+     "webp": "/media/europe-2026/milan/photos/img-1376-2400.webp",
+     "jpg": "/media/europe-2026/milan/photos/img-1376-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAACQBgCdASoUABsAPu1srFEppaQiqAqpMB2JYgCxAQA5/8u/n4GkyZ9CBg/cFy+ZHKE6nIRjps2ja/fqTb8AAP1PBZO/fU/ch5zes9429TRm3P0QbDbxi24/k1pJ3KIvFZ0tCXlTBaqRFVEacsSFFIvlivrbz1e2w6b/Ots6z8DIXKiEXDQsZYms31i9apOKbMeXfwm6Cvqa2jt6Q/GOUBRtF0sOhj2gvtTNg7Sy5H9kVUWbEhkX7CGqBjF7G5Rbma97q7AnufeyTAQ4AYYtOYT7me9C4w45lRgHFiztCTa5nw/ainKAkVFKmRXDKl96CMrJPTpR+9aXG6OiIjMwAA==",
+   "takenAt": "2026-10-27T08:34:42",
+   "focus": {
+    "x": 100,
+    "y": 50
+   },
+   "source": "5499395:7a07ad30e95588c442eb6db21f235a4c",
+   "hash": "e438234949b49490",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1636": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1636-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1636-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1636-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1636-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1636-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1636-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1636-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1636-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1636-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1636-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1636-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1636-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1636-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1636-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1636-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoUABsAPu1eq1AppKOisBgIATAdiWYAtsg0auBtpWNNGS1YY2uyEDa+wQ6EoAD+693Ki8+k7vqTP+g2UKwfbjtETLR/bb34af9PnHxF09i9oHfyC5Xa9iLbxC5PCM2+ZVNcsKtUdKdkswOxK3vDKsv+SsZgGIbRYQOuFB3Z2qf+I6g5s36nLklX8P+zVZ8pSPt67gWPbsvIB7WFKAAAAA==",
+   "takenAt": "2026-10-29T11:02:27",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "1875014:5422554307dd295373a6d6d52d88825b",
+   "hash": "0000c0c00e490c3e",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1642": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1642-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1642-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1642-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1642-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1642-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1642-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1642-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1642-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1642-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1642-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1642-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1642-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1642-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1642-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1642-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JZACpJ2QDTgwi4fjbjb5uSSGBhivzzAD9yyVILu5biMDuUayw6Ge/WuCxEaXh2k/ZepNLMQhJvwnKUostscAsWGgB5sEMrJOHkC+Nu5dlB30rWVRb81QzjZxQdaMts7yDwh2pKSdQwbi0DdrXC8oR/sCmgAAA",
+   "takenAt": "2026-10-29T11:21:03",
+   "focus": {
+    "x": 0,
+    "y": 77
+   },
+   "source": "5490435:39321418e81a97e2ee88c8d90ca92aa9",
+   "hash": "b48f78708f2e6330",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1650": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1650-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1650-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1650-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1650-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1650-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1650-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1650-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1650-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1650-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1650-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1650-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1650-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1650-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1650-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1650-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1irVAppSQisBgIATAdiUAVgj/8Wz4LJVAOaCl/pwsHXrnJqQW1QAD4WxNphtWsmHVwl9TRM0wEFyqAZp0Bne2MqWB2S/Fw1yuGmZT1KQ5NlA9p64Aoev05RiTsR8vE/IQigRJg1Q3oFk5s43NuMjmDuZHQbRNpA8QkJqqG499LdaG3EffAnE2o1UWv1fJHhjQsKMyTz35JHGuSygLHzx8QrRXf+xufG0eeQubx+ph6CrAAvsp0ZYUqQYwAAA==",
+   "takenAt": "2026-10-29T11:48:11",
+   "focus": {
+    "x": 0,
+    "y": 77
+   },
+   "source": "8185094:1d25665b2d395a481dc3e5229b2df0c8",
+   "hash": "e2a2a45e1d2c4e5e",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1655": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1655-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1655-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1655-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1655-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1655-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1655-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1655-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1655-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1655-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1655-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1655-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1655-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1655-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1655-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1655-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBgCdASoUABsAPu1orlCppaQiqAqpMB2JZgCxH5H+Zn/UryyB72CFessOMT4oZFMt2gkbBMMveklgAP3LUCmPmLtgu1K6aB617lg1BCHIEeM7oOzzJqB9pDvwPAnrCl6jL7DhlOAMnwdjDzDrT/LJ8G4cUza4Hki31VQznxs8ios189AsPQ4xMB/dQQZhJZV3i+Jl1kvL/uM0Ha+mZjMsjXPjZaFP4yZRKRNuzawH8huU2EF7C6NS6/eXIORbtdYWsM64oWAdHZtbLSVBvAAA",
+   "takenAt": "2026-10-29T11:49:13",
+   "focus": {
+    "x": 0,
+    "y": 83
+   },
+   "source": "6868080:b6ce034e87f219e225148764c6e29f64",
+   "hash": "8b69e0949acf43e2",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1663": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1663-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1663-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1663-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1663-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1663-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1663-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1663-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1663-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1663-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1663-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1663-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1663-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1663-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1663-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1663-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWIAuzlBNKxdgaYEa6/kWZ/7IzgwUbMblLj8BMIwAAD+uNsljloqRFQMEpEiPpbFJ+ESb2WHFDJz+kIVfduM75koky8h5KazSzPZ7eehsYvPPD1gJWA0ewMIeSFEtu6ehBElT3cBZDnRtYQUoZKMEUsZf8IxVMuvSUlNaYZjikxF7uRbxXmmQDHdPQl/cnuM+xdL7LWDSwChVt3n0dsKaXKtIuvIZmc/+haiz3xOUkIYw1IciR8UHJ/gAA==",
+   "takenAt": "2026-10-29T11:57:23",
+   "focus": {
+    "x": 100,
+    "y": 82
+   },
+   "source": "2711460:5cc4deca4e7bc87f898157903a5b72ee",
+   "hash": "4083bf3f877071b1",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1669": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1669-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1669-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1669-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1669-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1669-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1669-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1669-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1669-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1669-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1669-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1669-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1669-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1669-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1669-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1669-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBQCdASoUABsAPu1sq1EppaOiqAqpMB2JZQDIXYyURuYtxCSJHQFWl1BkT0NII52AAPJTn/tb4Pg0CjULlpVhsbx3oQZUevbgzqo+xuAxd+1O0PUXKeJMZ2Ij0v9ZAxYDfmH76w9F3xLylgBROG07Syjed+p7Ur2iTW1rlZ2fYwADQmfrAEj6WvIwf+KhXvrWj6svZ28ExrXvygff68hlGPw8P0NKkCdvJ7V6fLFK+nthhQAAAA==",
+   "takenAt": "2026-10-29T12:33:17",
+   "focus": {
+    "x": 0,
+    "y": 66
+   },
+   "source": "3759978:7f92223316b46691d0cbde22be7affb3",
+   "hash": "ee5e58c973f623c3",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1675": {
+   "type": "photo",
+   "w": 5712,
+   "h": 4284,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1675-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1675-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1675-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1675-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1675-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1675-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1675-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1675-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1675-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1675-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1675-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1675-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1675-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1675-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1675-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOgA7QNo6gzX+9cdnVAAPfMzdLgyaeF9BWfgSKZRGd4VlOsw7N2f1qNgWq1ghPR/TnpjDlLIMVoWzvwsk2caYTkPeTGgkrAMZFPPtXrNzVA6HriEBKN7DhiSe3hgnM+/qhhXtGlTCKRcytEAA==",
+   "takenAt": "2026-10-29T14:47:58",
+   "focus": {
+    "x": 23,
+    "y": 100
+   },
+   "source": "4343680:2ecf6cce64cad37d79f1cdaf51445211",
+   "hash": "2009034e0c7c2d09",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1699": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1699-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1699-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1699-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1699-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1699-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1699-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1699-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1699-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1699-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1699-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1699-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1699-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1699-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1699-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1699-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoUABsAPu1kq06ppaOiKA1RMB2JZwDG9A4ouaUi9wBACUbN5wnJ2j/F0AAA/tXE9uD0LbYgCq+qSbcK5T03nQ3ty3vXssH2QL+hTd3iqfl94gmD1J+tnnkX0eS5dfmoEKLJJKQRWgyR7ldHOWR/ny+r/dit40C1EQOV8Q/+vQood+zD0hdHgAAA",
+   "takenAt": "2026-10-29T17:22:00",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "source": "5045539:ff830b78ca3f372c2022fafd712bb63e",
+   "hash": "f3eb3b729f9c5dd1",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/photos/img-1703": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/positano/photos/img-1703-160.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1703-160.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1703-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/positano/photos/img-1703-480.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1703-480.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1703-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/positano/photos/img-1703-960.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1703-960.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1703-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/positano/photos/img-1703-1600.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1703-1600.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1703-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/positano/photos/img-1703-2400.avif",
+     "webp": "/media/europe-2026/positano/photos/img-1703-2400.webp",
+     "jpg": "/media/europe-2026/positano/photos/img-1703-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBQCdASoUABsAPu1grFAppSQisBgIATAdiWMAxNg0aCA1In0tHRTSY2sKD7nQ+ZnJAAD+uR4BrgYXV2xxOOXgjCPHZ0/KWfe+b0aH6E+Ro6XNmpYpWtGWmue+dxHcvrXI6LQRWhT9LnBlRdbzj0HaJ9qBACL5KNP3NtvO8E10GRYLfusCuIhaBzTYEwvAZeygAA==",
+   "takenAt": "2026-10-29T17:25:17",
+   "focus": {
+    "x": 37,
+    "y": 100
+   },
+   "source": "1496622:c8154571fa2632f4576336fcebf86d60",
+   "hash": "ff0f02a2c59049cc",
+   "focusBy": "attention"
+  },
+  "europe-2026/positano/videos/img-1639": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1639.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1639-poster.jpg",
+   "takenAt": "2026-10-29T11:13:12",
+   "duration": 2.67,
+   "source": "8777629:b29cc9c8e7b2f00ef9670c201a970e9c",
+   "hash": "80291d1bba1d1912",
+   "bytes": 1081662
+  },
+  "europe-2026/positano/videos/img-1649": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1649.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1649-poster.jpg",
+   "takenAt": "2026-10-29T11:47:30",
+   "duration": 28.24,
+   "source": "91405356:28f421d837f22b4be55cd34c42bd8fb0",
+   "hash": "24d1e52a84500034",
+   "bytes": 11723209
+  },
+  "europe-2026/positano/videos/img-1656": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1656.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1656-poster.jpg",
+   "takenAt": "2026-10-29T11:49:27",
+   "duration": 6.73,
+   "source": "21708305:251af285320536623a4480683b014df9",
+   "hash": "8f8a0ed6054f0b19",
+   "bytes": 3047238
+  },
+  "europe-2026/positano/videos/img-1657": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1657.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1657-poster.jpg",
+   "takenAt": "2026-10-29T11:51:18",
+   "duration": 12.6,
+   "source": "40973665:11c491646dbfe005dc0157dd4dc3ab99",
+   "hash": "506c2f438123030f",
+   "bytes": 6175325
+  },
+  "europe-2026/positano/videos/img-1668": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1668.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1668-poster.jpg",
+   "takenAt": "2026-10-29T12:08:00",
+   "duration": 3.47,
+   "source": "11589139:38d84de83bc79663dd28ba86be70dc3f",
+   "hash": "67a6a5ee4ec836fb",
+   "bytes": 1208050
+  },
+  "europe-2026/positano/videos/img-1670": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1670.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1670-poster.jpg",
+   "takenAt": "2026-10-29T12:33:21",
+   "duration": 7.97,
+   "source": "26103188:455acd4bcee144880fc5e6fa68a2f6d7",
+   "hash": "d8696df989041f23",
+   "bytes": 5230012
+  },
+  "europe-2026/positano/videos/img-1672": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/positano/videos/img-1672.mp4",
+   "poster": "/media/europe-2026/positano/videos/img-1672-poster.jpg",
+   "takenAt": "2026-10-29T12:43:20",
+   "duration": 2.9,
+   "source": "9729902:a7107ea70a36b067c0f49524cb390728",
+   "hash": "1999c9b5d31141f3",
+   "bytes": 1060282
+  },
+  "europe-2026/rome/photos/img-1403": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1403-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1403-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1403-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1403-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1403-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1403-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1403-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1403-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1403-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1403-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1403-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1403-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1403-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1403-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1403-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdACHZ3SUNbWDD+eaAAPKf2NILG5zNRIzaZLW+2r4zkrSY7CEzTQKWu8+zeSc3zFCP2Un2Fe8N8yRaNuNxp/j18Zb+D5VslPgZzRNqjtc5MvSUYJ0X7LHgQT6ZpeJ2GKCxjQg8qHhfdZd1fEAA",
+   "takenAt": "2026-10-27T21:44:51",
+   "focus": {
+    "x": 58,
+    "y": 51
+   },
+   "source": "3741702:85b1f4284804c4fb268200433808e6b6",
+   "hash": "d1951b19d9591c9c",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1404": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1404-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1404-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1404-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1404-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1404-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1404-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1404-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1404-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1404-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1404-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1404-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1404-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1404-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1404-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1404-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdEfql2Dy+z81HVzD9Oxjk2fjAANwM/83NsdQZ2fMEYT53esPZV3cBbS2R6ODERYUxLYxZaDx0GkgHQ4xcQ6/JNj8mZFtdXH+MM8y/10Wqtehf48MLmcLnwoKDR0HLMKBtaIQJC7cXC8pPpMG4I/AAAA==",
+   "takenAt": "2026-10-27T21:44:52",
+   "focus": {
+    "x": 59,
+    "y": 47
+   },
+   "source": "4064751:0c63e313f00b113c8c77d218e041722b",
+   "hash": "dd8f59d9d9591c9c",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1405": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1405-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1405-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1405-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1405-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1405-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1405-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1405-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1405-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1405-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1405-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1405-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1405-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1405-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1405-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1405-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgC1CBmJ/gPIFa8NCn5fl3QAAP5+rFue2Pkts98O0PcdFTD2/0dyaoLMil32YfRhcTcOiuJAYkko8DgXDmArfSgvt1Xhd3RGHYw4KcI7BPnio1y1y/TWx8sRUAWlP9AvnlLXX9NGuYtI4AA=",
+   "takenAt": "2026-10-27T21:44:54",
+   "focus": {
+    "x": 62,
+    "y": 53
+   },
+   "source": "3902603:9a54dd75a42607dc587c2a491dc4385e",
+   "hash": "c8e84e19d9482c1c",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1417": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1417-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1417-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1417-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1417-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1417-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1417-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1417-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1417-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1417-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1417-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1417-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1417-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1417-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1417-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1417-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgC7ICXCu+DhmWTVMSdQAP7lOW+02bZH38AvObjDzykgBn/73N9bvaOmrZJPbHZxUYUhSQFUB/k9dAVhcmk0HYSOHj4OcqQZo7ZUyqI3MErq7u0cLEGGYV7HXmpIN1t4LicZjtff2hgMFui2mAAA",
+   "takenAt": "2026-10-27T22:38:09",
+   "focus": {
+    "x": 31,
+    "y": 62
+   },
+   "source": "3826950:54aa5f5565328d9ba69096e22c08906b",
+   "hash": "00ccc8cbcccc5a36",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1424": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1424-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1424-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1424-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1424-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1424-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1424-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1424-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1424-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1424-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1424-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1424-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1424-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1424-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1424-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1424-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBQCdASoUABsAPu1kqk2ppaQiMAgBMB2JbACw7CFeOh59l9utrTKcFyE3N+N8OfL4AP65MaMXVLtpx8qA8/zC0NU0WsSHOZXOp9y6eoHoXMyEzH1E1Of/Jk+c6tsfUwY+7t7FPkUi7ooa6ROELcRAWNrOAfwraautHkD0T8lbI4fmzRhertJNa7zyUO/DWc7wNVZHp7R99tXhGToBCdtYp87Hs2zo4WDhSphg+sIQwusayFAAAA==",
+   "takenAt": "2026-10-27T22:40:12",
+   "focus": {
+    "x": 51,
+    "y": 40
+   },
+   "source": "4018629:d2b56bc2838835f205226fcd22bb26bf",
+   "hash": "0f8c134b1e1f7068",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1434": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1434-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1434-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1434-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1434-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1434-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1434-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1434-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1434-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1434-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1434-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1434-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1434-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1434-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1434-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1434-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACwBQCdASoUABsAPu1qrlCppaQiqAqpMB2JaACdMoPKgBLXq3fBe+QQcUsa5OX2r4QLsCRoCAAA+eLkAvp4wibA8EEe67BU9TajrsC5yZHrsQNiYbTpVtEHnf2kReM0hIRTiWJhE5JEe3YvPsblgIdTYtSUJBWp+2owlB6nHfHU/+CJZM10piFSlP2/u3dqgqe4SdAJeB8czFw8THls4v6pjRS/Ob1ZY2HMmVbB6D/WbH8pgVnVGE679/ojrpyxKDLIvgookrHVYYgdl/WSLZF5YN+1YalfkAA=",
+   "takenAt": "2026-10-28T10:29:50",
+   "focus": {
+    "x": 63,
+    "y": 18
+   },
+   "source": "2079412:63d6be699e6f993239a23d368696851b",
+   "hash": "80091ad28286ece8",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1440": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1440-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1440-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1440-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1440-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1440-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1440-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1440-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1440-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1440-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1440-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1440-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1440-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1440-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1440-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1440-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAAAQBQCdASoUABsAPu1qr1AppaSiqAqpMB2JQBOmae8FWAAOKyHd6iS5bAJP1m+QmEIAAO6BJT6aiPBUDMcy8fPZ+8MjuYm54vihfSWpCQc7rZiARHuUa4x2fpgkMNir8EMZodjHwFkQK3cu/k80JaT2WcvdFZR7k0ywyf55ilkCDeEl4mLdD4WkE4WLkWCbCnamXexDr0mNhQEU/n7fN7TblXE3oBT0tc1tQQxPZ3FIUogtcaVG5M2b6u0kX/9UB0tj/Nz0QzTq6eGMxeuBgTcAAAA=",
+   "takenAt": "2026-10-28T10:32:19",
+   "focus": {
+    "x": 47,
+    "y": 58
+   },
+   "source": "4755056:1443a92eeb37dbdac1e55d5375a768e2",
+   "hash": "c5956f1732316191",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1445": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1445-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1445-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1445-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1445-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1445-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1445-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1445-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1445-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1445-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1445-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1445-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1445-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1445-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1445-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1445-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoUABsAPu1iqU4ppaOiMAgBMB2JZwC/7CHfjQ/Mi/4VPG9aHmp0PFvAojdQAP7tWBgVcH6C14XDJ/qPPFZY8Xt7FkGU2lwl3wjJJy+v/BjrknKGOfK/wZRkVzgUjwfNq1XhEGn2PrVaoHefmS9ah8+jdfMiyydPu4/zaawUexUAAA==",
+   "takenAt": "2026-10-28T10:35:14",
+   "focus": {
+    "x": 0,
+    "y": 39
+   },
+   "source": "3849602:ff3579816540a67e408b9818b6e41081",
+   "hash": "ffffb773698dcdbc",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1454": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1454-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1454-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1454-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1454-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1454-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1454-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1454-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1454-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1454-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1454-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1454-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1454-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1454-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1454-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1454-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAAAwBgCdASoUABsAPu1sqlEppaOiqAqpMB2JZACdMw5FFf/i2gSYmtSo3IvcvL/YyuetIKlh5J18zo0AAMv2pVjxGBbFIaTl2wnzSDyNw4xNwN37wovGF7Prr9XO3uvo9kSf8kc9L8aplbg/LN7t9CezOkf92nqqQ8rm3zn3R0TS1T6SUxFdbveRhNGgDFwsBZhqBkbSWZgId6cKonbqQRztn+t/5wPbP1RFKLpKy2ax1SEDDfmky0kpDOHyYHAos1ZZKhPFm3bqK6LwD6Drf9wArxmhtkNUIzeHq3ScUaYEy96OK2vEfd8WmEAAAA==",
+   "takenAt": "2026-10-28T10:41:42",
+   "focus": {
+    "x": 49,
+    "y": 56
+   },
+   "source": "4536468:cae8c4fc1db86212be3ead973bafe62b",
+   "hash": "b3431131b333e39b",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1458": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1458-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1458-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1458-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1458-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1458-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1458-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1458-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1458-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1458-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1458-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1458-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1458-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1458-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1458-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1458-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoUABsAPu1iq1AppSOisBgIATAdiWMAvkndGHgGvq+9qgUWX2QXZGfcAH6nK7mQ4AAA/pbTmw5uRhuW26VYM4d3/RhFe1vS+KxjlkfyGH4v6IgH120aJAIZmaZFKVvlOmN2rYNGhqJnaFwsFdYXuIfyyYsvxR/AqJy0ykl27Trlr9x9/9oJpP2gMCsL4/DTKzxrb8J6mjEXrm8NyB+Gk4O3lrfAFK4AAAA=",
+   "takenAt": "2026-10-28T10:47:37",
+   "focus": {
+    "x": 50,
+    "y": 22
+   },
+   "source": "3022560:fb8cac57ed6f32a02da4c0cf55f174af",
+   "hash": "3636366e4f5f4636",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1460": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1460-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1460-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1460-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1460-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1460-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1460-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1460-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1460-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1460-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1460-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1460-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1460-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1460-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1460-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1460-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADwBACdASoUABsAPu1qrVEppaQiqAqpMB2JZQC+SBE0x6R/3SRsDxdWyaYb+btZMkAA/rvHa51UH55F4S/PhzXRWk2TkRr2QzvSkDdDjV6D4ycx0H7lApszSS2TFk2k+tBxrhg48psuG8n8J0G3UT9GfmZEX/Baip52HM24m2Z0cO3JR/lFqn2ajNK06WSOlK1WlI18gAA=",
+   "takenAt": "2026-10-28T10:48:27",
+   "focus": {
+    "x": 43,
+    "y": 19
+   },
+   "source": "3319176:b84528d2cf23c3d774ce0d5cbb14366a",
+   "hash": "1e5f8d0b0fb7bdbd",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1461": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1461-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1461-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1461-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1461-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1461-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1461-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1461-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1461-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1461-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1461-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1461-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1461-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1461-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1461-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1461-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABQBQCdASoUABsAPu1mq0+ppSOiMBgIATAdiWMAuwAR+G5gExqB8ry4ArP5AJY1hiNwKAAA/opf7jR+0Kz14fTbzP9TF09sGv2fBJe/c/K2BOBNnKNk45nwoqjliKSETIT9B6JmlWxpNy51+LPEya0tGE4qTSWizhGqe1r+vQ1yX5yJ0BoMK5XvT586IRJWQqex8S6RIsUmG9tJndK3LSLd/Ug4zvgA",
+   "takenAt": "2026-10-28T10:49:07",
+   "focus": {
+    "x": 0,
+    "y": 56
+   },
+   "source": "2412829:6ca292355157b3d1ad36b019def83060",
+   "hash": "a1b1b1918b0b1912",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1474": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1474-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1474-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1474-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1474-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1474-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1474-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1474-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1474-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1474-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1474-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1474-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1474-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1474-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1474-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1474-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABQBQCdASoUABsAPu1iqE2ppaOpMBgMATAdiWQAvzncAHmbzTGJkDsTjps/Neh1mKUAOoAA/ujPlCgRk/T3U3+pZ8bSDqWjTHUSSKz2qpJQGP1a/jvH4v7npK6Dt0+81NOOt9fb54YYXY/p5jdS1T9wGPTTIwMkHao6SwqWX+OO2wxom6t3a5BLQjrqapUDKf6HW1Cmp7zdtkYk1y3yw9ihaQakSoRvYp5D8p9aWtbjfQ7CW+/4luQAAAA=",
+   "takenAt": "2026-10-28T10:57:19",
+   "focus": {
+    "x": 51,
+    "y": 40
+   },
+   "source": "2218655:73fa37181c7ec3596e7eb54a270e3f30",
+   "hash": "4d8e9e9e9f193333",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1475": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1475-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1475-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1475-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1475-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1475-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1475-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1475-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1475-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1475-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1475-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1475-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1475-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1475-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1475-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1475-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAACwBQCdASoUABsAPu1gq1AppSOisBgIATAdiWgAeBoynI1bfDCz+vo84Zi3QmBXqdT+oUCzU0AA/tPo/GG4QH9BA0Pu0P2UxWadz/dDeIwi90/Z+We1g1U+kuVomFO17v9L2bay95kX0XbuLwLCF2/NOCney5FdsQ+a0H/6GQc73H6/6OKWkUvmDWJ0qQ9Pbl+PaRpHz7iMHdbW7JvCUqroV7zK58qQyfF7u7wbpc1x5TIMRDLm7kFa+IG3q56x2DSoC/oUaK6FjZatkzJ4FMSSNTCGqiXOBZM6EQOOk1303+O6wtW6967uBu/NVzgoK4oS07durJ4SIie/FuAAAA==",
+   "takenAt": "2026-10-28T10:57:22",
+   "focus": {
+    "x": 0,
+    "y": 61
+   },
+   "source": "2067072:619a6f71fbc1ea80a9a07a1c84188cfd",
+   "hash": "fa9b18030f0f1b3e",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1486": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1486-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1486-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1486-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1486-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1486-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1486-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1486-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1486-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1486-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1486-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1486-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1486-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1486-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1486-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1486-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoUABsAPu1mqU2ppaOiMAgBMB2JZQDE2BZU1P41kNvEA/H73gSLLHEhRtG5AAD3IY/LDKCrtNw3CHJVnXgbFirtcK4J9Gt+FkqEDakTRUx8+El5lvry6OMKcZsJJkmnr7/x4t4htydgG714fsAy1Sd7VsfDXcXZANef8t8MEZipy9SjFVuWcgAA",
+   "takenAt": "2026-10-28T11:01:28",
+   "focus": {
+    "x": 42,
+    "y": 36
+   },
+   "source": "2425698:f4d3df8fc2733dd41ecd55113dba880c",
+   "hash": "15193bb3f3f32737",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1488": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1488-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1488-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1488-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1488-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1488-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1488-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1488-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1488-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1488-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1488-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1488-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1488-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1488-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1488-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1488-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQBACdASoUABsAPu1oqk4ppiQiMAgBMB2JaQAAW4hHj59A8KBVeJi/ilauPc5joAD+yZgvKRk51h/oVJ6kL66j7L2sJi1fPpKI24b6jUe/rZSUS5/BspJ1hqcfON5RDyxPK0TkTk0WoV4NjlDhdhki4V9IvfR/ztzmzs9V7YQAAA==",
+   "takenAt": "2026-10-28T11:01:40",
+   "focus": {
+    "x": 43,
+    "y": 33
+   },
+   "source": "3220245:4826b2a85708bf2066eeb9f69002afc7",
+   "hash": "1e6e5666273f174b",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1489": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1489-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1489-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1489-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1489-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1489-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1489-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1489-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1489-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1489-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1489-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1489-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1489-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1489-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1489-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1489-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAAAwBQCdASoUABsAPu1qq1EppaOiqAqpMB2JQBYdzYAH9YJMUoIRzLC1DWnmnrMg8akBgAD9x0HU8JnN84yA/eiMwsNOXySiWAxuw6KcoQskgE20W7yI7HbhjerAha+D3b1xPbpNbSmxQ18GI9mi1NCvfY1ZS4M6KVcMZ+20dvwJhcYT17JtAvElip2K11JpTGZAwF1AlF2A91KbHqpA3Ge+UI4zN5xohmxiIMfgcJwCnS610TruDJNtBQxC4+FV16HKahoCDsfPbQuV5012LygToIAAAA==",
+   "takenAt": "2026-10-28T11:03:42",
+   "focus": {
+    "x": 79,
+    "y": 28
+   },
+   "source": "7145206:ff93141d699d32633e99ac9feeededd5",
+   "hash": "576224964af313ca",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1510": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1510-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1510-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1510-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1510-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1510-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1510-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1510-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1510-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1510-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1510-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1510-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1510-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1510-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1510-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1510-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAAAwBgCdASoUABsAPu1qq08ppiOiMBgIATAdiWIAnTLgr2d23IcAGp6HWsCjY1rLsRM/35ZIIqkTZkIcAPo0WOAbqIHgrV48Loubyn/jQUf8ERXEnAXM9hHE1CxfhYDMaW3ZIvQEijskGwU09TOqwopowWzSE/wndJqztnmzAh9uo6eXn0bdsQSnyT0dmqLsUxki+HTBjfga/lFsZ7rPR/0/ue8V9bmZAVT/f3oINoX4r7YGmCJgZvgCvSzN0ZDRVqolds6sI7qGLALKwrLT4UrKcPNBTQx4BTws+vd+7RmG/sEMNWDlfo0VwCq4Lq853rf//R+AAAA=",
+   "takenAt": "2026-10-28T11:29:33",
+   "focus": {
+    "x": 65,
+    "y": 18
+   },
+   "source": "2663107:cdb3f33ea5d0781535853e97130dd4c5",
+   "hash": "2e9e6bf1335a5a68",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1521": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1521-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1521-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1521-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1521-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1521-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1521-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1521-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1521-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1521-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1521-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1521-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1521-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1521-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1521-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1521-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAABwBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JQBXD5YA3y8KyUhzs185rQIAk759im9CoGVFgAMtEfmQc5aVJ9aY5liouavlmzXTIk/f8EX+l86/jvm5wnAMkFiMNBh8UOWT7wbRqYPNrvMj21XFicSI6IDL1kLnv/VPV0jmsa1qPJtqWAnwkX7iw1ngKH8Jimm9kMqnsHP1Ss8/Rj1HDBHwsUTGt4b4rthUTF2GOMzhO3BxXrWTQuaAA",
+   "takenAt": "2026-10-28T11:47:56",
+   "focus": {
+    "x": 46,
+    "y": 48
+   },
+   "source": "2608322:dc9caf6fc3ccea41b3ef6a856feffbc8",
+   "hash": "fee6e7e6dc9c9cb4",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1523": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1523-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1523-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1523-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1523-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1523-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1523-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1523-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1523-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1523-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1523-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1523-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1523-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1523-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1523-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1523-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAAAwBQCdASoUABsAPu1gqk2ppSQiMBgMATAdiWIAuyDmRKoYJnx7sUq/YaGg1eMIrWQSAAD+uUhjiB7sH+PbRsdQMAJvnOKJizSaaIOS8St+UYx4umwa5dSFRGkqNh/Kcvl9tMlwknbGWtyoxn4YPqZKfFMwOmG9cCWJE1ZDSZdW8YTIjeAbDMEmCPLbbDW+vHPLvMSg2Q9XPpBChH0VbAAA",
+   "takenAt": "2026-10-28T11:55:38",
+   "focus": {
+    "x": 49,
+    "y": 37
+   },
+   "source": "1751625:930acf4959845b0ead0f862f820713a7",
+   "hash": "80160f0b1f272d30",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1524": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1524-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1524-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1524-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1524-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1524-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1524-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1524-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1524-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1524-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1524-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1524-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1524-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1524-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1524-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1524-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABQBQCdASoUABsAPu1gqlAppSOisBgIATAdiWQAnTLfATWj+XkGdeJ1C8qdJoCArpLZyAAA+O2DbpZHINj3aGi80HzVqP35iFGhzNEL6VtFEpMdFDMqzjGjF0CBIsbImWo1ccv6JGnbc6Tp6LIYpZazbIZ8Vj0AcOW7+st4HuOgmEJixNKlWgiO71OO5IRm2ut+tiQXtNAXubCZgCGZofjoGScg6oAA",
+   "takenAt": "2026-10-28T12:05:01",
+   "focus": {
+    "x": 51,
+    "y": 34
+   },
+   "source": "5790551:fb2a036e09c043a58d478aacff5f1986",
+   "hash": "dccccccc864c0e06",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1527": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1527-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1527-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1527-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1527-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1527-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1527-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1527-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1527-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1527-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1527-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1527-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1527-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1527-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1527-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1527-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAABQBgCdASoUABsAPu1osFAppaSiqAqpMB2JbACdMzQ7X6AAM4ESogVA/LJkW/HVtU6ZVp+/KxXXkX0yAAD+3Lym3Cipk9gXNb+Dt1Gd7quj9xRKADcTXnL01NTYIXe2th8X4wjjZAOorreQNEZwtKPYcc30UvJWFxVhyS0eEnIvynSoyIDxJaArkh5wLusX/P7upDUXVvxoLa9jRVtSNTGEMvz1xOnmf8val+yHPufZEyjiOPu66OiyRILoxg3BvQRMEW0KcMGscXrqAAA=",
+   "takenAt": "2026-10-28T12:11:52",
+   "focus": {
+    "x": 57,
+    "y": 15
+   },
+   "source": "3677864:0a2cbd6ff663146cdd07a52e4635a98d",
+   "hash": "1347312565333333",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1542": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1542-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1542-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1542-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1542-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1542-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1542-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1542-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1542-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1542-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1542-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1542-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1542-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1542-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1542-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1542-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAADQBACdASoUABsAPu1orE+ppiQiMBgIATAdiWMAqlwQPtLKeQrFNUHwsvsw+jCQAADyofV+gU0qvn+7GjDDRkw1wfhhAm3euwk+DJGYKfvkIJjoqo6yd3oJW3qvi+12R6Bmy7Hk0bezG0f4qT1ueRq627DiihVXIwgi7h3npDExk9ZkZqUsxLqFA/BiwaIMx8MdOLu8wI7gjeuW4g5XxGRHhc/UTTvOJxHIdy003iNnp1uHeG5+PaFNVj7mTOeAAAA=",
+   "takenAt": "2026-10-28T14:23:02",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "source": "6870578:a2077321f6751bdeaf1146cf2a89e7bc",
+   "hash": "0f33736a30d69df4",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1546": {
+   "type": "photo",
+   "w": 5712,
+   "h": 4284,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1546-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1546-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1546-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1546-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1546-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1546-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1546-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1546-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1546-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1546-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1546-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1546-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1546-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1546-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1546-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JQBOgA79Rvs7K/iCxzUQA/fAIEDR3NTmO4+8m8Y08opG5TSqmvmJhN5NqcWzztrvAgIlVvgyt1E+AqG9prem61Q34uaPwxqlIKB6l/2uYifgBfYAHc1gAAAA=",
+   "takenAt": "2026-10-28T14:42:56",
+   "focus": {
+    "x": 93,
+    "y": 37
+   },
+   "source": "4733501:38b3dce4d4a9eda939a2da806288f909",
+   "hash": "f1d96303885a0b45",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1555": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1555-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1555-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1555-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1555-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1555-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1555-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1555-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1555-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1555-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1555-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1555-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1555-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1555-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1555-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1555-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBQCdASoUABsAPu1iq1AppSOisBgIATAdiWIArAKuwFXXowRzSJc1DEgHuM5k3FWJKAAA9x8YtE0EunUgHpal8AJ8pIDLL+ymdH2KVrlO6OKPmeWBxsg/Uhd2irDcp0NV0lNGkl9MwifqPtk5bFVQHUvM0ZS67ED78yU43H8uuWpLTHGuTOafNjpotooSbAEdj56uDb0RUwXSKli6NEYuEXMIcjOnAAA=",
+   "takenAt": "2026-10-28T15:00:01",
+   "focus": {
+    "x": 12,
+    "y": 56
+   },
+   "source": "2239282:6d84b1f1a3f51680f8aa3940c95857d8",
+   "hash": "24605109101821e2",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1565": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1565-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1565-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1565-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1565-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1565-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1565-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1565-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1565-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1565-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1565-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1565-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1565-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1565-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1565-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1565-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JZACsMoRgAAlRSKYW3pLa7fNZ6hAAAP6z7mBePY0vL7DNBkcHmRgDZ1HKnkyWw49uCHIkfTwe4g19GdWLp6J78kdDH/dxhBpJ9DxURS6xvk6b1LghM5nW3Z43EJG922XzcfSe2uJOROxuUIvqIFTPLFGEuBKhE1fEr0K+JXcAAA==",
+   "takenAt": "2026-10-28T15:03:11",
+   "focus": {
+    "x": 50,
+    "y": 62
+   },
+   "source": "4264804:fa971136f3b4370f3ed204c928be3688",
+   "hash": "c4cc4ef892727070",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1567": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1567-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1567-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1567-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1567-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1567-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1567-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1567-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1567-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1567-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1567-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1567-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1567-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1567-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1567-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1567-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAwBQCdASoUABsAPu1opk4ppiMiMBgMATAdiWYAuwGMTimCpSoGLmlcC/iXxNEsOczNmACreksl6j+hQ9VF/85WGakUrTSMiKIVkqydfMXnO6paTKAXs+fahFLf69gkqv+Tw/BRgphXGO40qPXorqaFNnnWUJFOKxLfNEt3rfd6eqTvGrBrsxJTudjNrUcWxfCcUk5xVW239+pOXTSPRtMzotKbGe571pNlesgaRKhhWYGIjvh9KYAA",
+   "takenAt": "2026-10-28T15:03:19",
+   "focus": {
+    "x": 51,
+    "y": 60
+   },
+   "source": "3621296:9c6755edb9b6038dc59fff3aea84d1c0",
+   "hash": "06818cdc7232f0e8",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1596": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1596-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1596-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1596-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1596-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1596-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1596-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1596-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1596-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1596-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1596-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1596-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1596-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1596-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1596-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1596-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACQBQCdASoUABsAPu1sq08ppiOiMBgIATAdiUAWoSDBP8C8IYahUVHKtiGuRNn2pgFcX5rcAAD+7TlNsoRfiNlaBGuCBBN7+sS2IOuWrjYj2oNFQ4uNnyBEKIZSPzEfngdN/NX1b1SXJAvCmpdhrSBJSvqYhJu8pNoSAfWww4Wkq2if2V6elnyWx7EZUKD2Sa7BaDFd/tIHDw1tu+nIT0yuV3+3zT+VFkm6dF2mC6eAUnjY8gAAAA==",
+   "takenAt": "2026-10-28T16:09:12",
+   "focus": {
+    "x": 58,
+    "y": 57
+   },
+   "source": "4482680:ce71ebe7d9f39655d950c00aa15dd1fd",
+   "hash": "707b1b02d93974e8",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1598": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1598-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1598-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1598-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1598-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1598-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1598-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1598-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1598-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1598-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1598-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1598-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1598-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1598-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1598-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1598-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACQBQCdASoUABsAPu1kqU2ppaQiMAgBMB2JQBWEH+BgWhnjOnTNLmHLx1wI4/XMrbFcBwtEAAD+7TiGoyTltuhH2UxzwQz8fz1cwMWHu7lwmQYuaMAN3jgrPlabmglHurnJ3WAJIxdJDsqDwVUwuBdl5D4eTbd2HsXV59CL5M+HB2QRAMNlwW8Kq7/tg1NCDuErWr/b0UNeun2wucSx66bkGd62Nf7NRfIlsZhEENVVhScUAAA=",
+   "takenAt": "2026-10-28T16:09:17",
+   "focus": {
+    "x": 59,
+    "y": 56
+   },
+   "source": "4904490:e6e4dfd117ebfc2dff668c58568b47b1",
+   "hash": "b10f0b41593870e4",
+   "focusBy": "faces"
+  },
+  "europe-2026/rome/photos/img-1603": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1603-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1603-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1603-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1603-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1603-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1603-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1603-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1603-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1603-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1603-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1603-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1603-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1603-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1603-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1603-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoUABsAPu1srlIppaQiqAgBMB2JYgCw7Fbekvo//5oqW0wixSm5IyKz9iKk3wAA/vV6mrx1cpyk2qz/yy94J1vEljcsu9IOMlRrApmDQdW6fxdrclwczFOABvwAU9njv2HHO1OmtNtoIfFuhRhiyhDS7fNWc8skFWVfMAwcl1XG1QsJ8qOy/iNc9ikCE5JgguYvFdzIAAA=",
+   "takenAt": "2026-10-28T17:23:00",
+   "focus": {
+    "x": 51,
+    "y": 88
+   },
+   "source": "5354519:b60003838be6bbb89008be1e0de14cff",
+   "hash": "6e291109961b0f0c",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1606": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1606-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1606-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1606-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1606-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1606-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1606-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1606-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1606-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1606-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1606-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1606-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1606-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1606-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1606-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1606-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADwBACdASoUABsAPulcp02pJKOiN/VYASAdCUAWo1tI19XiSRQeyZ5jvDf1UeXXDgAA/vhJTblQTeHGGIQ1KIj2Hvw2ETsdMaXkfYk3OEORIlWBFfHnHiUYMizEPpq6LR8uxTybO62c/HV/HhoK8cJXD8zt8XVy2fbcglhMUAC+pW9BK2z1GAAA",
+   "takenAt": "2026-10-28T18:06:02",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "4124384:05170d15dbde47d625323b6d8c0f5431",
+   "hash": "608c8e8e9e8e8efd",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1608": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1608-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1608-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1608-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1608-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1608-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1608-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1608-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1608-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1608-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1608-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1608-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1608-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1608-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1608-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1608-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADwBQCdASoUABsAPu1orVCppaQiqAqpMB2JagCdMoR1cNRxoAJ9+sfuul0JlegZNccbRULk5PMIgAD+7EROG3Gi8T230FPToWaAX2OZCptiCOqn2BnlbIJskaFDp2ScajM94pLOy2I7UiuT0axw5Le90sWZWSwoIWKPTBYInqm6xQZamRIW+Agxzy+sKXHlk9nA0fr4Unx4Ulj9CYOnNhjph3uYzKe6BiEmC540ZY3+2EJcQtPBijiDYkooCvgg9pIQsFjOslNRASVZBehYyawLobc5C5tfl71CooYAAAA=",
+   "takenAt": "2026-10-28T18:12:02",
+   "focus": {
+    "x": 88,
+    "y": 100
+   },
+   "source": "5289616:a986a2772a0b00578eb53ec6375de567",
+   "hash": "63af41b0a0c01c23",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1614": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1614-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1614-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1614-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1614-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1614-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1614-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1614-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1614-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1614-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1614-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1614-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1614-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1614-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1614-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1614-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAADQBQCdASoUABsAPu1krE+ppSQiMBgIATAdiUAVhnHYNx/2HYnQx3LUnkfv3UOI7Z7GhYTh9DGQAP7nPybuMjBtvoZq86a8sfosVTsPW9yl04IeqXcSFT1pZaF4Q7Ubrji224I3yNg4jnXkwg7cH4miAaxfEQ29SoDF5/UYs7O0/iOqynsIDeo9zJ+otsFv5X7KpKbop1tG4RCjYkfxZ5hMp3DGPh1Ox2k1+uDVDV+2XxH3hIITJND3pmP0TFAV4AA=",
+   "takenAt": "2026-10-28T19:04:26",
+   "focus": {
+    "x": 88,
+    "y": 0
+   },
+   "source": "4118583:1932f4dc83c83eed316bc8b0f77bd7f3",
+   "hash": "625252d1e1b6b381",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1615": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1615-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1615-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1615-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1615-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1615-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1615-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1615-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1615-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1615-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1615-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1615-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1615-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1615-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1615-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1615-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JaACdMw6vQAfJoimlw8dmnrCMDv/5Q0oLxXsQAADgllm6s5cUo+cAk+AVap2Pe46jTSJIF6yYtH04+AG9awy+Ab5I61Lbso43Lo6qEZRptL/jX9SW3Ofs4GypO8QeGujOFYgFXee8utV1EatkC/zF386avYQgqnhw0Zz/xgRznoQ2X8ebN9pNK2OUhuerjpRcmcPRAknKOFjQYOQU3HjjgLQAAAAA",
+   "takenAt": "2026-10-28T19:21:04",
+   "focus": {
+    "x": 0,
+    "y": 56
+   },
+   "source": "2177751:3b915a0adc75a35860220aa98b26c5bc",
+   "hash": "2e7e8c36328cc8f1",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1622": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1622-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1622-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1622-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1622-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1622-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1622-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1622-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1622-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1622-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1622-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1622-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1622-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1622-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1622-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1622-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwBACdASoUABsAPuVgpk2pJaOiMAwBIByJYwDCgCHfTn8PlpmAiFkxnkHFgj2DK0AA/sL7QGjfPecgwTEqNICcPOyzfKLj3S87HN+pH+9y0cWHqjYwst8XsVfehyRE2VV0IbziBSNAY+PforkJkDPvtcDfSPLdPPw3rlF/u3Dq9I2cY73qSnYxnxYdB00fTC6mgAAA",
+   "takenAt": "2026-10-29T06:53:46",
+   "focus": {
+    "x": 51,
+    "y": 61
+   },
+   "source": "3304229:1ae228fca0bc7dded7709b53509c94d3",
+   "hash": "0000b07261a591e3",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1628": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1628-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1628-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1628-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1628-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1628-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1628-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1628-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1628-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1628-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1628-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1628-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1628-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1628-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1628-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1628-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACwBQCdASoUABsAPu1qrlCppaQiqAqpMB2JYwDE2BEh2lFjGuGVhT9rqkeL12DA+R8ny+/DfAAA/t6VVJpV+oSEbRp/kaOBALMkPGH5M8boppmjMN3Utd+74g7+3Sw4Eyq9JcTO0RJJUoOtQWJ4LS//RXaEvXbHfG0X5bteKHQDcEXWsnPOuvUAAEvSylZoXvZYRRgYXDQFYyjYlXfIXZkVRyce1e8qgxNDmBRlJ47Rv/IAAAA=",
+   "takenAt": "2026-10-29T06:59:28",
+   "focus": {
+    "x": 100,
+    "y": 39
+   },
+   "source": "4803990:e2bb8c1072dce94bee83bd9c0da9757f",
+   "hash": "f5b2f2d4969cb1b5",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/photos/img-1629": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/rome/photos/img-1629-160.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1629-160.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1629-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/rome/photos/img-1629-480.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1629-480.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1629-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/rome/photos/img-1629-960.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1629-960.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1629-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/rome/photos/img-1629-1600.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1629-1600.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1629-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/rome/photos/img-1629-2400.avif",
+     "webp": "/media/europe-2026/rome/photos/img-1629-2400.webp",
+     "jpg": "/media/europe-2026/rome/photos/img-1629-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoUABsAPu1qsFAppiSiqAqpMB2JYwC7ABEcfSkR/JAkAIHP8cDsK0x0vzjB+AAA/tMkGAPaitmF7daCRW4pFSFRxpYMW7Zn8yyBr5SC0d3esg192Mbx4uIyRq+klRia1X5lMXqS1nkvDSLinaja9eDl9f8aVcbM6DHRRFKIICfxGO640w9u9N6L2fD0+YxyM3KFjFpgEAA=",
+   "takenAt": "2026-10-29T06:59:48",
+   "focus": {
+    "x": 100,
+    "y": 77
+   },
+   "source": "1807222:d8f4054e7f6be4bdc61fa49a688fc733",
+   "hash": "efd272ecce5212d2",
+   "focusBy": "attention"
+  },
+  "europe-2026/rome/videos/img-1381": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/rome/videos/img-1381.mp4",
+   "poster": "/media/europe-2026/rome/videos/img-1381-poster.jpg",
+   "takenAt": "2026-10-27T20:42:35",
+   "duration": 9.87,
+   "source": "32550053:561e44398a385d496918c3b9da0cd059",
+   "hash": "5b6bf44c04604068",
+   "bytes": 3212853
+  },
+  "europe-2026/rome/videos/img-1391": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/rome/videos/img-1391.mp4",
+   "poster": "/media/europe-2026/rome/videos/img-1391-poster.jpg",
+   "takenAt": "2026-10-27T20:54:46",
+   "duration": 26.71,
+   "source": "86183840:673458ec51c74e2b4aef091b33a60c2c",
+   "hash": "981864943301ee82",
+   "bytes": 6530090
+  },
+  "europe-2026/rome/videos/img-1411": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/rome/videos/img-1411.mp4",
+   "poster": "/media/europe-2026/rome/videos/img-1411-poster.jpg",
+   "takenAt": "2026-10-27T22:27:26",
+   "duration": 26.07,
+   "source": "84644782:85807fa70bfc6526b656f3e0e49a693e",
+   "hash": "642390c88d23fc86",
+   "bytes": 10111114
+  },
+  "europe-2026/rome/videos/img-1514": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/rome/videos/img-1514.mp4",
+   "poster": "/media/europe-2026/rome/videos/img-1514-poster.jpg",
+   "takenAt": "2026-10-28T11:36:55",
+   "duration": 8.7,
+   "source": "28908180:6a0de9fc95f60f3041b02f613353620a",
+   "hash": "c180cccdc64c1547",
+   "bytes": 2314079
+  },
+  "europe-2026/rome/videos/img-1593": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/rome/videos/img-1593.mp4",
+   "poster": "/media/europe-2026/rome/videos/img-1593-poster.jpg",
+   "takenAt": "2026-10-28T16:07:23",
+   "duration": 6.77,
+   "source": "22668039:4c28e8bd8146ab4546a9f9f1fa8899d7",
+   "hash": "8e9f110218968bda",
+   "bytes": 1434879
+  },
+  "europe-2026/st-moritz/photos/img-1267": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1267-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1267-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1267-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1267-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1267-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1267-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1267-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1267-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1267-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1267-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1267-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1267-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1267-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1267-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1267-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACQBACdASoUABsAPu1krE6ppaQiKA1RMB2JaAC1G2QH+Iuue/ssDrjvTK+GEAAA/pwf7g6gfrWtlfzn8d/klys6kg/+cNPdAvsm8vvIQoKV963Cyr2ec8BlBR/AUoewvvMQtkiP6siL/icxSHM2YorIwfmtrQ66h6pbA/c4Fom/Zr8lMzxySujLLgAAAA==",
+   "takenAt": "2026-10-26T10:10:09",
+   "focus": {
+    "x": 0,
+    "y": 72
+   },
+   "source": "4624764:5586a92faf48ae898aa822a6c30eb895",
+   "hash": "d0c0c080db3f778d",
+   "focusBy": "attention"
+  },
+  "europe-2026/st-moritz/photos/img-1269": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1269-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1269-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1269-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1269-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1269-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1269-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1269-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1269-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1269-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1269-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1269-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1269-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1269-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1269-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1269-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACwBACdASoUABsAPu1eqU4ppKOiMBgMATAdiWgAuwBOWiTZjnA/11uN2LJ+e9MAAP0cDJgnfOi9LcbbP2/0f93/qSoj9CvWX6s8057ihSbicpzk+1GkcxLUbOvRvfJdfu/MYcK0/HeHNw6d8UAevLNkBOtCff8YNNujk6JY8mTFWMaAAAA=",
+   "takenAt": "2026-10-26T10:10:27",
+   "focus": {
+    "x": 100,
+    "y": 66
+   },
+   "source": "2101398:279e8cb7e70a21054cc473108d2621e1",
+   "hash": "0490017752f7ef99",
+   "focusBy": "attention"
+  },
+  "europe-2026/st-moritz/photos/img-1299": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1299-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1299-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1299-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1299-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1299-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1299-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1299-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1299-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1299-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1299-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1299-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1299-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1299-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1299-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1299-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdL11s/wHoUX+xl8s+pkUJwAD+lxukEUGpiCOcU+8FAwfD+XA7l/gGUIMlt6MEw7y1to49NJlZPSJp0DHGf6Nkw3CVmGH/I9iVEVyoesjwNlZ3j7eva38vMs+otR3mu0d5rrlXI8AA",
+   "takenAt": "2026-10-26T11:42:05",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "4332579:1c507e46d58ce6d8e8af3ed4bd2e4598",
+   "hash": "6f3e36cfef337360",
+   "focusBy": "attention"
+  },
+  "europe-2026/st-moritz/photos/img-1302": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1302-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1302-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1302-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1302-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1302-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1302-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1302-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1302-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1302-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1302-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1302-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1302-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1302-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1302-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1302-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACwBQCdASoUABsAPu1qqk8ppiOiMBgIATAdiWIAqQX/4B6oJKzKiXKhpscOacbcLLBEivcsDPAA+mm435zerE/7PvLTK2n5NspbnQEc3cXAvRIatvPHgPi6vEC6qHclTKG+LmB9RKowfypRbMtAUUIWGB+nyyX6eX5P+MefXzByN8KKvLqZkOWN/uWww2QyurmzqDkiOIbZ/HLXcuL0G/Xv3kMW9GFwa5AYkLm9jvnhFDslOomAg56LNbkNBLNafCJrrYwAAAA=",
+   "takenAt": "2026-10-26T12:06:22",
+   "focus": {
+    "x": 74,
+    "y": 50
+   },
+   "source": "3009633:bc97012becd956c2c432e6180519bd8f",
+   "hash": "c2d22cad891b1b0c",
+   "focusBy": "attention"
+  },
+  "europe-2026/st-moritz/photos/img-1318": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1318-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1318-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1318-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1318-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1318-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1318-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1318-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1318-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1318-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1318-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1318-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1318-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1318-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1318-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1318-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAQBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JYgCw7BVHaSg7u8U/RGByIUuIqeFtW/58AP4ZxBxUoBmLYSXeZOQzijtJuZ7iV3axAA4w+dtPRma0Dh5LZP7YSDwivTG6DAq9ktJOApEvG0lYUpTE30yWGO5IrMVqceLdHbyw+0re+xr3ztpoRA0y4k9A3Bt8LcxecHI9kSXeo8i5eeRYCsKLm0auHyJcylMSb1NgcVmOHGLHiA8QlFAA",
+   "takenAt": "2026-10-26T13:15:08",
+   "focus": {
+    "x": 38,
+    "y": 62
+   },
+   "source": "2281245:bdc8457c22d5a4332f1bf277d4932819",
+   "hash": "61d2982a60c7c36c",
+   "focusBy": "faces"
+  },
+  "europe-2026/st-moritz/photos/img-1321": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1321-160.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1321-160.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1321-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1321-480.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1321-480.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1321-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1321-960.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1321-960.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1321-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1321-1600.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1321-1600.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1321-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/st-moritz/photos/img-1321-2400.avif",
+     "webp": "/media/europe-2026/st-moritz/photos/img-1321-2400.webp",
+     "jpg": "/media/europe-2026/st-moritz/photos/img-1321-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoUABsAPu1qq08ppiOiMBgIATAdiWIArBH/5dgAxUZBuBsGR0/jcaQYBNfF2lFigADKSQF5u498p5Nj4N4syuQN3tQ566A/EqDpLjSRzqLUXEulTBLmsg8PJWtUXI5J2Vs1EHfpzqg0yXWBgh5NQV1Bv+7CNVBpdSJw7vvp/4rML7xMzFazFB8PZUi/JP+4QaAWnTIekKJB76wgOBJgaHR/SZuQewzLHcznrpRpCdNON8miEI7YAAAA",
+   "takenAt": "2026-10-26T13:15:57",
+   "focus": {
+    "x": 14,
+    "y": 50
+   },
+   "source": "2496550:f5ed270558089fa21e51f33e5f216368",
+   "hash": "b04c4ca0a3433c25",
+   "focusBy": "faces"
+  },
+  "europe-2026/st-moritz/videos/img-1291": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1291.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1291-poster.jpg",
+   "takenAt": "2026-10-26T11:37:19",
+   "duration": 8.17,
+   "source": "26616491:264ef0e2e5473a3c8e88bf7e90a517f2",
+   "hash": "000241b80f273ea4",
+   "bytes": 1756707
+  },
+  "europe-2026/st-moritz/videos/img-1292": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1292.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1292-poster.jpg",
+   "takenAt": "2026-10-26T11:37:41",
+   "duration": 7.6,
+   "source": "24786674:42481305ccc7e3cbfc01ba1b493d69e6",
+   "hash": "fffefe1f03308104",
+   "bytes": 1947996
+  },
+  "europe-2026/st-moritz/videos/img-1329": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1329.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1329-poster.jpg",
+   "takenAt": "2026-10-26T13:18:28",
+   "duration": 34.87,
+   "source": "113054448:7c0db0f120c4e6b07f7170df0880e16e",
+   "hash": "f1738c0003e77ca7",
+   "bytes": 10053245
+  },
+  "europe-2026/st-moritz/videos/img-1339": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1339.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1339-poster.jpg",
+   "takenAt": "2026-10-26T14:21:25",
+   "duration": 14.17,
+   "source": "46011498:17b920d2ae09f6cfab4ce168b9035498",
+   "hash": "faf12fffdfbf2b23",
+   "bytes": 4626079
+  },
+  "europe-2026/st-moritz/videos/img-1350": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1350.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1350-poster.jpg",
+   "takenAt": "2026-10-26T14:40:51",
+   "duration": 10,
+   "source": "33043303:692d42e08dbf7a6ca043bb9f4f2fdc0b",
+   "hash": "d3e79e9cbf9ee60e",
+   "bytes": 3791617
+  },
+  "europe-2026/st-moritz/videos/img-1351": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1351.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1351-poster.jpg",
+   "takenAt": "2026-10-26T14:41:07",
+   "duration": 10.67,
+   "source": "34735768:e2468cb04d8db62d351e32ad2a87492f",
+   "hash": "a05967708f634140",
+   "bytes": 3280738
+  },
+  "europe-2026/st-moritz/videos/img-1362": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1362.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1362-poster.jpg",
+   "takenAt": "2026-10-26T15:18:56",
+   "duration": 8.93,
+   "source": "29244579:23bacd6f0ade4265844c6e7db8e9756a",
+   "hash": "301dc3b33f77ff76",
+   "bytes": 4851868
+  },
+  "europe-2026/st-moritz/videos/img-1371": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/st-moritz/videos/img-1371.mp4",
+   "poster": "/media/europe-2026/st-moritz/videos/img-1371-poster.jpg",
+   "takenAt": "2026-10-26T16:08:25",
+   "duration": 9.9,
+   "source": "32586015:0e0642ccdcbd973cc18600db59db86ac",
+   "hash": "b9533ea6a6b2fbe1",
+   "bytes": 5343457
+  },
+  "oregon-2026/cannon-beach/photos/img-0096": {
+   "type": "photo",
+   "w": 3672,
+   "h": 4896,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0096-160.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0096-160.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0096-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0096-480.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0096-480.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0096-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0096-960.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0096-960.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0096-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0096-1600.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0096-1600.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0096-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0096-2400.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0096-2400.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0096-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQBQCdASoUABsAPu1iq02ppaQiMBgMATAdiWUAsOw0a6tSmuFrwixJZCqSw17Hr+SAAP7x8NjiHci5Gv2g/x+8ajCSACBpFk/GY0W8POJa2Hx20ja1rDUzVrKF6pymwelOAhODvzuUQwhe+NC9j485WIPVTa8U2oAAAA==",
+   "takenAt": "2026-09-24T16:10:27",
+   "focus": {
+    "x": 48,
+    "y": 58
+   },
+   "source": "2166081:f2199984aa1aa5ff7be3eef0d8bd14de",
+   "hash": "f7ffc9b3e3e3f2c2",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cannon-beach/photos/img-0352": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0352-160.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0352-160.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0352-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0352-480.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0352-480.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0352-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0352-960.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0352-960.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0352-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0352-1600.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0352-1600.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0352-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-0352-2400.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-0352-2400.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-0352-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoUABsAPuFgqE2opaQiMAwBEBwJZwDNhCHZ4CwrtNtElcA28LC2lB758WQrOkAA/u+7mLKOcylmO5ClLYwGdTYO7OVDf61EuCGFk/wCk0Rao9KYdJ+DmvJMGeK6haEkjslcdZ0uIYpdydNIfbgK1sTUR/o6I95pnPKfc5KP5BUkeSiS1XCYbfoZuUwKYKM5AAA=",
+   "takenAt": "2026-09-24T16:22:03",
+   "focus": {
+    "x": 100,
+    "y": 56
+   },
+   "source": "1338682:13fc9a6cc0b395b1be4c50b7997c9d9d",
+   "hash": "9e67f1f3f1b4b634",
+   "focusBy": "attention"
+  },
+  "oregon-2026/cannon-beach/photos/img-3128": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3128-160.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3128-160.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3128-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3128-480.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3128-480.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3128-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3128-960.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3128-960.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3128-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3128-1536.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3128-1536.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3128-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhYBAABXRUJQVlA4IAoBAAAwBgCdASoUABsAPu1kqE2ppaOiMAgBMB2JbACdOUFS3gf9Vpmw2aoj6WGBqIHtYNTn1uwVbvckb3oAAP2rETROO0YXClKiR/2eG4tZ1iLg1sxjgSLJ5MXaO56UgIL1sZ5dswFnneTfXW9LV0cIPXLnkK4ZgbgObJr2TBZhNXCaMU6fzrpMpvOwcOHLn9G4T8177DT4ULP6yUCiS60uD3q5lgfQ3qvjMgpIpk9R688+JwdkzxUN4EOfOgIpobMfbL3+Bl/VHm2ixnmQBuE7B4Ts9+UEsCsxSVXf3ST9WG4wg8RELeSoSMz+A1F+9GSQxSMCvLnbK93TZp5lmWF5oVWPQWx5tuxy39FwAA==",
+   "takenAt": "2026-09-24T15:01:23",
+   "focus": {
+    "x": 42,
+    "y": 56
+   },
+   "source": "874023:db6ed9914aea72f5c55045a9e38e722b",
+   "hash": "03065c8463e1e1cd",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cannon-beach/photos/img-3129": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3129-160.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3129-160.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3129-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3129-480.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3129-480.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3129-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3129-960.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3129-960.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3129-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cannon-beach/photos/img-3129-1536.avif",
+     "webp": "/media/oregon-2026/cannon-beach/photos/img-3129-1536.webp",
+     "jpg": "/media/oregon-2026/cannon-beach/photos/img-3129-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAACQBQCdASoUABsAPu1sqk8ppiOiMBgIATAdiWoAnTKAL180ICIqeAtXA5loDuB0Z9o23zMfZADOI072dzIsa1WdEtqIunKzJHbeOowjJxqiM8qSO13NHjXOTIWQMejzCpxNEIBSGODeYFuwQO4+Q5U30590WpP2XwV3Mw2153gYLRQFJtzRY+aUokCTPbQ5AYu8YgWAy3RwQpOCm+EsIZg67AXEBe02HOPx9rYuQL3ygRz5d+twMzikilMF/UyMZ8HEhhPuCd5h+yIikrVvf9mCWBZ0mSiTGxbKfNJUXToDGLv8suCsywaNfuHKP+eUFZjKMFAnY35rF1K1N2ezhMDo+YIyoAAA",
+   "takenAt": "2026-09-24T15:02:10",
+   "focus": {
+    "x": 43,
+    "y": 35
+   },
+   "source": "1069919:67d141eee3341b80dba77f70b203b62a",
+   "hash": "2d29546b2b3bc1c0",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0383": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0383-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0383-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0383-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0383-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0383-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0383-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0383-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0383-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0383-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0383-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0383-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0383-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAABQBgCdASoUABsAPu1mrE+ppaQiMBgIATAdiWoAnTKEdm3/4toYjqkoH8yfjFxPkByL5x+2cjsfKo5HgAD+jGzlHCkIbvNd6feiNi0HG9CIThVrZK8v533ei0lxLUuaneRBqHPdnKJShEHhPUjWACl1BAx/qo33DZklRhwzCtGU1AV7AP8Ex5ARBZnbjUXFLhashyBbOKAsEVv28NiyTEqcMLn5Ku5AIZHMnC9GNvJi2U8Pe48tvPeJeELTh6azmqyqtHm1JAJElqpg9hrVAXO34tV6K911AB8rInWGoLSrWsCcUCOFd8kEfcA2VlcX+0/PQi5+0IdQAA==",
+   "takenAt": "2026-09-25T09:27:07",
+   "focus": {
+    "x": 0,
+    "y": 28
+   },
+   "source": "998318:afd0533abb807ff9ce9dfc0770f781ac",
+   "hash": "b5cf6d7979318ccd",
+   "focusBy": "attention"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0445": {
+   "type": "photo",
+   "w": 2048,
+   "h": 1536,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0445-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0445-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0445-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0445-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0445-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0445-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0445-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0445-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0445-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0445-1600.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0445-1600.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0445-1600.jpg"
+    },
+    {
+     "w": 2048,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0445-2048.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0445-2048.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0445-2048.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdMoMuun/Ae8fd2hy2zkvnv18AAAD+6ru2t0etlz++hs0v1hTu/EGr+c0x0WeSSpdSEv0cuGCMycgYqTG2JUKlEiESh3HaBGO0i3d3nbyFpHw6pr3kloqRBGHh9Lo4VCUFkk7kv3f8iBLk5kYAAAA=",
+   "takenAt": "2026-09-25T12:42:55",
+   "focus": {
+    "x": 57,
+    "y": 33
+   },
+   "source": "1198726:bd5eada54a279470ee7942fe824d758f",
+   "hash": "eccd7cbc2c6c24f1",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0449": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0449-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0449-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0449-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0449-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0449-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0449-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0449-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0449-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0449-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0449-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0449-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0449-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABQBQCdASoUABsAPu1urlKppiQiqAgBMB2JQBOmWOy4IVSfCZx1KmGKfmyxYe5NaL1g7EAA/u1hauYqjgM9C+b2KTVjLEHowM9EWjeqWjB489KyAd9vrfIDuyXIBVO52Vd1WIQamksw9pLZ1cwsD1P/snzjqZwTwY0wNcdXQu38NbvmqKcwqMtpai8Thc6g6cHw+NkktBOXMgAgWbNiY0dAwbirfpMddX6MxQzMno9a8rqfj07fe7tAAAA=",
+   "takenAt": "2026-09-25T12:43:05",
+   "focus": {
+    "x": 53,
+    "y": 35
+   },
+   "source": "1298101:2eae7257991ffdfc7b2207bb4a3e991f",
+   "hash": "ee8cdf5eec6cf166",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0469": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0469-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0469-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0469-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0469-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0469-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0469-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0469-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0469-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0469-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0469-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0469-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0469-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACQBQCdASoUABsAPu1mrE+ppaQiMBgIATAdiWcAvVgL2HuMma4rFaGBoc1Wf0RL9d9vSBrAAADN8m58JY3q2HWPEV+mnAx1pT0R4eclLgDJddEBzNCSOwMoK8HPt6k2FF2AYwVYOpHL89r0r2XYt4fXhp/u3tdg6qDk/W/yZ2uI4s3EFkbhUevURFTBx0J83zsg20ro4heTDQRPfMlYC/NFjgPUgtcTRcKxX2OW9NmUTF9hh5AAAA==",
+   "takenAt": "2026-09-25T12:47:54",
+   "focus": {
+    "x": 58,
+    "y": 46
+   },
+   "source": "1287399:31e8bc39ef3e67adb3fb2dff4026d339",
+   "hash": "000301a3f1d0f3d9",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0509": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0509-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0509-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0509-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0509-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0509-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0509-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0509-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0509-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0509-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0509-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0509-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0509-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADwBACdASoUABsAPu1qr1CppaQiqAqpMB2JZwDOdAzaF/zHXt3U3XtEfQeP0JNYNQAA/M8Pnv26wp8ELnYEqvF1098CZfldGpy3XAQ4lqst/OHqZa0RKxdhhp2RmAvG86B3j+l/dFgb6Y2+u/KA4n9xFvROxYGEJPej8lnMa++VaDanbGnfYaqcwQsrebRarOoI4W6CsB01hEGBkrckAA==",
+   "takenAt": "2026-09-25T12:53:19",
+   "focus": {
+    "x": 50,
+    "y": 57
+   },
+   "source": "683615:a364119a022c2c0a9eca65dbf49f3ab4",
+   "hash": "0d070b039093d034",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-0593": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0593-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0593-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0593-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0593-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0593-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0593-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0593-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0593-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0593-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-0593-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-0593-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-0593-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JYgC7ABGcfVgFiZ8LMWKDwepdP/w7KyMOwAD7oUXN9gj7on1H0LiSIrcFcqHMX7Wl1KV4gu2MEcD+uuOLas/Ocs2s10zeingRhcRlF0ShFcnygwVGChmwcRjEU4EkuBvSeUUtNNAR4ao0HC4Inv9T8hGLRFfjkwQENTnRfQcCTRMVOEHMt25eWBb37mh04khix70zcvn0iie9d6U1ho4eNBNvyeZkTKbmeyKnEzMV3rVPZHwmAAAA",
+   "takenAt": "2026-09-25T14:34:11",
+   "focus": {
+    "x": 52,
+    "y": 59
+   },
+   "source": "1677633:a5562b0c87ea3f54e61c137d2b3817dd",
+   "hash": "7e6d676dbd6362e8",
+   "focusBy": "faces"
+  },
+  "oregon-2026/cape-perpetua/photos/img-3397": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-3397-160.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-3397-160.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-3397-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-3397-480.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-3397-480.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-3397-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-3397-960.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-3397-960.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-3397-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/cape-perpetua/photos/img-3397-1536.avif",
+     "webp": "/media/oregon-2026/cape-perpetua/photos/img-3397-1536.webp",
+     "jpg": "/media/oregon-2026/cape-perpetua/photos/img-3397-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBQCdASoUABsAPu1oqU+ppiOiKA1RMB2JbACdIOZFJ/mQEPAYmhW82nHRVcAT4KxgANjCMPSvvXcj01BgxfEExC8PK9jHOk/RfD/9qfvZ3MDTUvm3yhstqCfhKsTAuJvYM3jOb6KB1E3ZF1hOs/oY11+spImvFtk5RDtfiOQWxEW6JDn9TEYOWUWWFsQpQZjtOvAZHjI3YPCsG92n+HPbpaHgagB5FcU8OQM62ER4JQDwd6AAAA==",
+   "takenAt": "2026-09-25T14:14:53",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "source": "464044:0426ab330e6d607564d96b817d47d235",
+   "hash": "f8f8f4f818197cf2",
+   "focusBy": "attention"
+  },
+  "oregon-2026/cape-perpetua/videos/img-0594": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/cape-perpetua/videos/img-0594.mp4",
+   "poster": "/media/oregon-2026/cape-perpetua/videos/img-0594-poster.jpg",
+   "takenAt": "2026-09-25T14:35:38",
+   "duration": 17.17,
+   "source": "6874803:82762b47d8c52e319481b3583f1874b2",
+   "hash": "fffdcee4ec4ece8c",
+   "bytes": 6206419
+  },
+  "oregon-2026/cape-perpetua/videos/img-6706": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/cape-perpetua/videos/img-6706.mp4",
+   "poster": "/media/oregon-2026/cape-perpetua/videos/img-6706-poster.jpg",
+   "takenAt": "2026-09-25T12:33:52",
+   "duration": 19.87,
+   "source": "7808192:6938f02d8a8e8a862022362a3894e1a7",
+   "hash": "9515941009cce4b4",
+   "bytes": 9982201
+  },
+  "oregon-2026/cape-perpetua/videos/img-6709": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/cape-perpetua/videos/img-6709.mp4",
+   "poster": "/media/oregon-2026/cape-perpetua/videos/img-6709-poster.jpg",
+   "takenAt": "2026-09-25T12:37:22",
+   "duration": 25.69,
+   "source": "10184871:7554e5015ad90185d6adfa0e555af48b",
+   "hash": "1c93aff733373325",
+   "bytes": 7220720
+  },
+  "oregon-2026/crater-lake/photos/img-0180": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0180-160.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0180-160.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0180-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0180-480.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0180-480.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0180-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0180-960.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0180-960.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0180-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0180-1600.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0180-1600.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0180-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0180-2400.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0180-2400.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0180-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADwBACdASoUABsAPu1krVAppSQisBgIATAdiWcAwoAxTm8J0WCjMp1S4var2N8A3gAA/u4swu+Mz8mWc8ywa6Zked/sBK7FwQUby0AtduxgqPdw0n6JoWuoXPRU0SYxtEbvEpXw7X8UE6X+8s0d9AAA",
+   "takenAt": "2026-09-26T08:17:03",
+   "focus": {
+    "x": 38,
+    "y": 77
+   },
+   "source": "3230859:ee9b922819916f374f0aa08f785b50d0",
+   "hash": "c0e4e0e8f0f0e8e0",
+   "focusBy": "attention"
+  },
+  "oregon-2026/crater-lake/photos/img-0192": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0192-160.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0192-160.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0192-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0192-480.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0192-480.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0192-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0192-960.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0192-960.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0192-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0192-1600.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0192-1600.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0192-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0192-2400.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0192-2400.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0192-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JbACdMoRwACnao2+WlwF3NoAA/dzQTLr2G6ZJZMHE1CaeReaMUzavJCdDCl8cibcIKFQRsc6CA467kC/vxzbLdXG5DfELBPelJPrn1rOE5N85hdUZAQiQ+I2eRNAA",
+   "takenAt": "2026-09-26T11:03:25",
+   "focus": {
+    "x": 49,
+    "y": 58
+   },
+   "source": "3261844:e2c0d6d4067fe64ba571495c61cffa7c",
+   "hash": "1fbf6e9230323269",
+   "focusBy": "faces"
+  },
+  "oregon-2026/crater-lake/photos/img-0695": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0695-160.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0695-160.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0695-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0695-480.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0695-480.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0695-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0695-960.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0695-960.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0695-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0695-1536.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0695-1536.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0695-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAQBQCdASoUABsAPu1qqlEppaOiqAqpMB2JaACCSQ2d+lrjdfsYd3i5m4VIW2wNnvYAAMphq9xfS5nyEaHHqcUb8hNuXGr//anu/snpTP/xFlCf1Wo2bYJbsS3jCx9ZvurlfWBdhaaiVBwiUxY3n53UqJ5AOB383geAAMjriXuFZqQqfNA8WXvMIwixTplvy4vPWk7QLqSfSJZpTmwl4qW4/dHPuAAA",
+   "takenAt": "2026-09-26T11:18:53",
+   "focus": {
+    "x": 57,
+    "y": 60
+   },
+   "source": "576086:48cfd31ffa8acdee84ee473134a7bb40",
+   "hash": "0000000852f2b6b1",
+   "focusBy": "faces"
+  },
+  "oregon-2026/crater-lake/photos/img-0712": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2048,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0712-160.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0712-160.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0712-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0712-480.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0712-480.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0712-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0712-960.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0712-960.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0712-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/crater-lake/photos/img-0712-1536.avif",
+     "webp": "/media/oregon-2026/crater-lake/photos/img-0712-1536.webp",
+     "jpg": "/media/oregon-2026/crater-lake/photos/img-0712-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAABQBgCdASoUABsAPu1iqE2ppaOiMAgBMB2JaACdMuu6LJ3z/4DyJc2Grj/g1u0diL94+HAXCybDlOI2AAD+WVx8ZmwJt7WrcKYeW+11P5WkN0fXkNNQJGWxbtQ6czpJMpfqyuA8ZsTWMbhrGSyjpymYufUrhVTxyUVcSn/4JBqbvFSJ9XQ8e3acDVtgdqOWYC673bWxpO2lvmduLzxt7qZWuad0viG485xQjL6Hyn0c5q0NKS7FGBORAN8XWUJflqmlkAMH7wdBoJCML9KXyCkHlI+iLsWtKCNUJ/yalJswblMcrc3JlNO8HgnFXfh2f0ls4Ce2lXJAAA==",
+   "takenAt": "2026-09-26T11:21:16",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "898348:5c398037fa82ab9a0bd6ad4e8515078b",
+   "hash": "40dc7672b3b3f590",
+   "focusBy": "attention"
+  },
+  "oregon-2026/crater-lake/videos/img-0626": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/crater-lake/videos/img-0626.mp4",
+   "poster": "/media/oregon-2026/crater-lake/videos/img-0626-poster.jpg",
+   "takenAt": "2026-09-26T09:20:36",
+   "duration": 8.47,
+   "source": "3291324:babe4e70591a1c7d9f8fa285db24d82b",
+   "hash": "8d436b0c17266145",
+   "bytes": 2945133
+  },
+  "oregon-2026/crater-lake/videos/img-0627": {
+   "type": "video",
+   "w": 960,
+   "h": 540,
+   "src": "/media/oregon-2026/crater-lake/videos/img-0627.mp4",
+   "poster": "/media/oregon-2026/crater-lake/videos/img-0627-poster.jpg",
+   "takenAt": "2026-09-26T09:28:44",
+   "duration": 20.14,
+   "source": "46374348:21c2e4755946653fc5694670c83263b7",
+   "hash": "90cccecece96327a",
+   "bytes": 14441650
+  },
+  "oregon-2026/crater-lake/videos/img-0632": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/crater-lake/videos/img-0632.mp4",
+   "poster": "/media/oregon-2026/crater-lake/videos/img-0632-poster.jpg",
+   "takenAt": "2026-09-26T10:20:46",
+   "duration": 11.27,
+   "source": "4467351:372df0d49915a573bc7204d6c201abf5",
+   "hash": "48b030e4ec5877f7",
+   "bytes": 4488425
+  },
+  "oregon-2026/crater-lake/videos/img-0795": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/crater-lake/videos/img-0795.mp4",
+   "poster": "/media/oregon-2026/crater-lake/videos/img-0795-poster.jpg",
+   "takenAt": "2026-09-26T11:42:33",
+   "duration": 14.53,
+   "source": "5605538:d6ef026e57986e31017847c6ae367350",
+   "hash": "1f0f10077f78cc0d",
+   "bytes": 1858427
+  },
+  "oregon-2026/crater-lake/videos/b7d24292a7ed454d81d2a87c04225538": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/crater-lake/videos/b7d24292a7ed454d81d2a87c04225538.mp4",
+   "poster": "/media/oregon-2026/crater-lake/videos/b7d24292a7ed454d81d2a87c04225538-poster.jpg",
+   "takenAt": "2026-09-30T16:47:27",
+   "duration": 10.6,
+   "source": "3938577:87d99df1df30d99ab143f99ba7bcd481",
+   "hash": "237bf2f28c853b1f",
+   "bytes": 1741166
+  },
+  "oregon-2026/silver-falls/photos/img-0818": {
+   "type": "photo",
+   "w": 1158,
+   "h": 1544,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-0818-160.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-0818-160.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-0818-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-0818-480.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-0818-480.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-0818-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-0818-960.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-0818-960.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-0818-960.jpg"
+    },
+    {
+     "w": 1158,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-0818-1158.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-0818-1158.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-0818-1158.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAACwBQCdASoUABsAPu1sq1EppaOiqAqpMB2JZAC26NCDtjWcWlXwlsWBiSudNIgMBzg9rmWYCQgA/qkAB+6Q0U+J0UA3DhGikw0ohf6DZtVK9npw3l2rGz/mdiMzPOZMFbpb/blwWHfEEQCkIV/Kkiw6KFZ+mQ9lx/4DiAFnt/+bm0jFU81Gi66C5gy53M96OGQ8PY3d5eA8dfdY8BfO6VHhS/sh5c+MLf3437+i936bxObJGHNoINW+Uva34ViVeGRHacs/ETzMa8wIhBW4lKje5544/6SvqiXiiiLlJe/AWrZqJwzG0ueSsHhGJtAA",
+   "takenAt": "2026-09-26T18:57:19",
+   "focus": {
+    "x": 49,
+    "y": 51
+   },
+   "source": "500953:bea4572501fc857777d48ac319861c62",
+   "hash": "25397bd6c6e6e563",
+   "focusBy": "faces"
+  },
+  "oregon-2026/silver-falls/photos/img-6912": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2730,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6912-160.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6912-160.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6912-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6912-480.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6912-480.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6912-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6912-960.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6912-960.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6912-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6912-1536.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6912-1536.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6912-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAACQBgCdASoUACQAPu1sr1IppaQiqrgIATAdiWUAygAL6Gs30SbP6vlDdJDl1IPx8b2JJUvei7g6PEOw/NfwAP7p7TKLuuHyFhLwI/YsYo6aNAJgnr0PdHz7TYMySX1wffhvNAitHTk1IZKBMAFX/3sQukio5yyRtuBAPRRI99SlBkyCEKZo5P0zJt5tiJrKQ+0PGN1Xm5IETjwsGweZUVVLjimVLJwqV9lI3lMHzHkcakFjwO9XCjgzNvR5kfNiZf/7HT05Uw5mHsWa23UvUlKbcOa9wAAA",
+   "takenAt": "2026-09-26T17:57:22",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "source": "1861692:dbfdea624c4de1ea564c4aa2b9a737bb",
+   "hash": "67662d0ecce6e6cc",
+   "focusBy": "attention"
+  },
+  "oregon-2026/silver-falls/photos/img-6913": {
+   "type": "photo",
+   "w": 1536,
+   "h": 2730,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6913-160.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6913-160.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6913-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6913-480.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6913-480.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6913-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6913-960.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6913-960.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6913-960.jpg"
+    },
+    {
+     "w": 1536,
+     "avif": "/media/oregon-2026/silver-falls/photos/img-6913-1536.avif",
+     "webp": "/media/oregon-2026/silver-falls/photos/img-6913-1536.webp",
+     "jpg": "/media/oregon-2026/silver-falls/photos/img-6913-1536.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBgCdASoUACQAPu1srVEppaQipWzJMB2JZQDL4Aooqu7+i4sS73GiCnBPIVUNhiHYNXCvT/JNhAAAzj8RoIab38Wj+Kk7l6LbyHsu84JGQHHBbm06/YNO1kzrEIqGMbegHu+XC/JivuiSBDc8mgQu8v57oXbG5Tv2qPgi5u9VNve0GU89qO70RA0V+sxjJElORCmC1x/7IkOcODMsJmgAAAA=",
+   "takenAt": "2026-09-26T18:03:05",
+   "focus": {
+    "x": 0,
+    "y": 0
+   },
+   "source": "1927758:d86d90b829ae4eafcc3af95c80d71cb3",
+   "hash": "0d0b52a66828a1c3",
+   "focusBy": "attention"
+  },
+  "oregon-2026/silver-falls/videos/img-6914": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/oregon-2026/silver-falls/videos/img-6914.mp4",
+   "poster": "/media/oregon-2026/silver-falls/videos/img-6914-poster.jpg",
+   "takenAt": "2026-09-26T18:11:20",
+   "duration": 22.9,
+   "source": "9108149:30bc90971020f4997eccf007091e8c65",
+   "hash": "f272e33332327339",
+   "bytes": 7954241
   }
  }
 }

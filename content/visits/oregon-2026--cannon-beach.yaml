@@ -2,3 +2,17 @@ trip: oregon-2026
 destination: cannon-beach
 order: 1
 arrive: 2026-09-24
+moments:
+  - date: 2026-09-24
+    title: "Haystack Rock"
+    media: [photos/img-0352, photos/img-0096]
+  - date: 2026-09-24
+    title: "Lunch in town"
+    media: [photos/img-3129]
+cover: photos/img-0352
+mediaMeta:
+  photos/img-0352: { caption: "Haystack Rock", alt: "Two people hugging on the wet sand with Haystack Rock behind them" }
+  photos/img-0096: { caption: "Cannon Beach", alt: "John in a hoodie on the beach under a grey sky" }
+  photos/img-3129: { caption: "Lunch in Cannon Beach", alt: "Three friends smiling at a wooden table in a restaurant" }
+photoEdits: |
+  photos/img-3128 hide  # near-duplicate of img-3129

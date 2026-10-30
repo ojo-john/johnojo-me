@@ -1,9 +1,39 @@
 trip: europe-2026
 destination: st-moritz
-status: draft # upcoming; publish once it's done
 order: 4
 kind: day-trip
 arrive: 2026-10-26
+moments:
+  - date: 2026-10-26
+    title: "The way up from Italy"
+    media: [photos/img-1269]
+  - date: 2026-10-26
+    title: "Lake St. Moritz"
+    media: [photos/img-1299, videos/img-1292, photos/img-1302]
+  - date: 2026-10-26
+    title: "Above the town"
+    media: [photos/img-1321, videos/img-1329]
+  - date: 2026-10-26
+    title: "The train over the Bernina Pass"
+    note: "The railway climbs past glaciers to Lago Bianco at the top of the pass, then winds down through Brusio towards Italy."
+    media: [videos/img-1350, videos/img-1339, videos/img-1371]
 rating:
   ratedOn: 2026-10-27
   scores: { food: 3, value: 3, transport: 7, walkability: 8, architecture: 5, culture: 6, people: 6, attractions: 9, safety: 8, enjoyment: 7 }
+cover: photos/img-1299
+mediaMeta:
+  photos/img-1269: { caption: "Snow on the peaks", alt: "A snow-capped mountain peak above autumn trees under a blue sky" }
+  photos/img-1299: { caption: "Lake St. Moritz", alt: "John's selfie by the lake, with a snowy mountain and golden larches reflected in the water" }
+  videos/img-1292: { caption: "The lake", alt: "A pan across the still lake, the town and the mountains" }
+  photos/img-1302: { caption: "St. Moritz Dorf", alt: "A grand building with a clock tower in the village centre" }
+  photos/img-1321: { caption: "Above the town", alt: "John with his arm out, snowy peaks and yellow larches behind him" }
+  videos/img-1329: { caption: "On the hillside", alt: "John walking across the grass on a hill above town, then turning to make a heart with his hands" }
+  videos/img-1350: { caption: "Lago Bianco", alt: "A grey-green lake under fresh snow at the top of the Bernina Pass" }
+  videos/img-1339: { caption: "Glaciers from the train", alt: "Snowy peaks and glaciers above autumn larches, seen from the train" }
+  videos/img-1371: { caption: "Down through Brusio", alt: "The red train curving through a green valley, filmed from a carriage window" }
+photoEdits: |
+  photos/img-1267 hide  # near-duplicate of img-1269
+  photos/img-1318 hide  # near-duplicate of img-1321
+  videos/img-1291 hide  # same view as img-1292
+  videos/img-1351 hide  # same view as img-1350
+  videos/img-1362 hide  # same kind of train shot as img-1371

@@ -2,7 +2,7 @@ trip: europe-2026
 destination: milan
 order: 3
 arrive: 2026-10-24
-depart: 2026-10-26
+depart: 2026-10-27
 moments:
   - date: 2026-10-24
     title: "The Duomo and its rooftop terraces"
@@ -22,6 +22,10 @@ moments:
     title: "Castello Sforzesco"
     note: "The 15th-century castle of the Sforza family, who once ruled Milan."
     media: [photos/img-1236, photos/img-1241]
+  - date: 2026-10-27
+    title: "Breakfast at Boscovich"
+    note: "French toast with berries and pistachios, and a hot chocolate, before leaving for Rome."
+    media: [photos/img-1376]
 matches:
   - home: Inter
     away: Fiorentina
@@ -37,6 +41,7 @@ rating:
   scores: { food: 8, value: 9, transport: 9, walkability: 9, architecture: 9, culture: 9, people: 8, attractions: 9, safety: 8, enjoyment: 9 }
 cover: photos/img-0995
 mediaMeta:
+  photos/img-1376: { caption: "Breakfast at Boscovich", alt: "French toast topped with cream, berries and pistachios, with a hot chocolate" }
   photos/img-0995: { caption: "The Duomo", alt: "John taking a selfie in Piazza del Duomo with the cathedral behind him" }
   photos/img-1035: { caption: "Up on the Duomo", alt: "John framed by a stone arch with the Milan skyline behind him" }
   photos/img-1069: { caption: "Inside the Duomo", alt: "John standing among the cathedral's tall columns and patterned marble floor" }

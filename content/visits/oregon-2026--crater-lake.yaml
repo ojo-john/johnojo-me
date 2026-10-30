@@ -2,3 +2,23 @@ trip: oregon-2026
 destination: crater-lake
 order: 3
 arrive: 2026-09-26
+moments:
+  - date: 2026-09-26
+    title: "The drive in"
+    media: [videos/img-0627]
+  - date: 2026-09-26
+    title: "Crater Lake"
+    note: "The lake fills the crater of a collapsed volcano, with Wizard Island, a smaller cone, rising out of the water."
+    media: [photos/img-0192, photos/img-0712, videos/img-0795, videos/img-0632]
+cover: photos/img-0192
+mediaMeta:
+  videos/img-0627: { caption: "Driving in through the forest", alt: "A selfie from the car, then the road through tall pines towards Crater Lake" }
+  photos/img-0192: { caption: "Wizard Island", alt: "John's selfie on the rim with the deep blue lake and Wizard Island behind him" }
+  photos/img-0712: { caption: "On the rim", alt: "John sitting on the rocks at the crater's edge with the lake below" }
+  videos/img-0795: { caption: "Crater Lake from the rim", alt: "A slow pan across the blue lake, Wizard Island and the crater walls" }
+  videos/img-0632: { caption: "Along the rim", alt: "Friends walking along the rim road with the lake to one side" }
+photoEdits: |
+  photos/img-0180 hide  # inside where we stayed
+  photos/img-0695 hide  # near-duplicate of img-0712
+  videos/img-0626 hide  # same drive as img-0627
+  videos/b7d24292a7ed454d81d2a87c04225538 hide  # same view as img-0795

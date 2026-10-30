@@ -2,3 +2,27 @@ trip: oregon-2026
 destination: cape-perpetua
 order: 2
 arrive: 2026-09-25
+moments:
+  - date: 2026-09-25
+    title: "Breakfast in Lincoln City"
+    media: [photos/img-0383]
+  - date: 2026-09-25
+    title: "Cape Perpetua"
+    note: "The rocky shore around Thor's Well and Cooks Chasm, where the waves blast up through the lava rock under the Highway 101 bridge."
+    media: [photos/img-0449, photos/img-0469, videos/img-6709, videos/img-6706]
+  - date: 2026-09-25
+    title: "Heceta Head Lighthouse"
+    media: [photos/img-0593, photos/img-3397, videos/img-0594]
+cover: photos/img-0449
+mediaMeta:
+  photos/img-0383: { caption: "Breakfast in Lincoln City", alt: "A breakfast table with pancakes, fruit, eggs and juice" }
+  photos/img-0449: { caption: "Cape Perpetua", alt: "Five friends cheering on a viewpoint above the rocky coast" }
+  photos/img-0469: { caption: "Cooks Chasm", alt: "John waving on the black rocks, with the Highway 101 bridge and sea spray behind him" }
+  videos/img-6709: { caption: "Walking out to the shore", alt: "Following a path through the grass towards the rocks and the crashing waves" }
+  videos/img-6706: { caption: "The trail through the trees", alt: "Friends walking along a shaded forest path near the coast" }
+  photos/img-0593: { caption: "Heceta Head Lighthouse", alt: "Friends posing at a picnic table in front of the white lighthouse and its red-roofed building" }
+  photos/img-3397: { caption: "Looking out to sea", alt: "John on a grassy headland looking out over the Pacific" }
+  videos/img-0594: { caption: "At Heceta Head", alt: "A smiling selfie video with the ocean and friends behind" }
+photoEdits: |
+  photos/img-0445 hide  # near-duplicate of img-0449
+  photos/img-0509 hide  # same spot as img-0469
