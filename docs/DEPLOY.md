@@ -77,22 +77,28 @@ nothing leaves your machine.
   (Settings → Collaborators should list nobody else).
 - Turn on two-factor authentication for your GitHub account.
 
-### Layer 2: signing in to the editor
+### Layer 2: the editor's GitHub access (one token, on the server)
 
-Sign in with a personal access token. (There's deliberately no "Sign in with GitHub" button: the site
-used to host its own OAuth relay at `/oauth/callback`, and Chrome flagged that page as phishing in
-October 2026, because a page that receives a GitHub token and posts it to another window is exactly what
-token-stealing pages do. One flagged page can get the whole domain blocked, so the relay was removed.)
+You only ever sign in once: Cloudflare Access (email + one-time code). The editor reads and saves through
+`/api/github` (`src/lib/github-proxy/handler.ts`), which checks the Access token, accepts only same-site
+requests for this repository, and adds the site's own GitHub token on the server. `/admin/editor/signin.js`
+signs the editor in automatically, so there's no GitHub login screen and the token never reaches a browser.
+(There's deliberately no "Sign in with GitHub" button: the OAuth relay it needed was flagged by Chrome as
+phishing in October 2026 and removed.)
+
+Set the token up once:
 
 1. GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens** →
-   Generate new token.
-2. Name `johnojo.me editor`, expiry 90 days (set a reminder to renew), Resource owner: you.
-3. Repository access: **Only select repositories** → `ojo-john/johnojo-me`.
-4. Repository permissions: **Contents: Read and write**. Leave everything else at *No access*
-   (Metadata: read is added automatically).
-5. Generate, copy the token, open `https://johnojo.me/admin/`, choose **Sign In Using Access Token**
-   and paste it. It's kept in that browser only. Never put the token in the repo or in chat.
-6. Lost the laptop or think the token leaked? Delete it on the same GitHub page; it stops working at once.
+   Generate new token. Name `johnojo.me site`, Resource owner: you, expiry up to a year (set a reminder).
+2. Repository access: **Only select repositories** → `ojo-john/johnojo-me`.
+3. Repository permissions: **Contents: Read and write**. Everything else *No access*.
+4. In your own terminal (it asks for the value, hidden; never paste it in chat):
+   `npx --yes wrangler@4.153.0 pages secret put GITHUB_DISPATCH_TOKEN --project-name johnojo-me`
+   The same token also lets the upload page start the media job (`/api/process`).
+5. Redeploy (any push, or Deployments → Retry). Open `https://johnojo.me/admin/editor/`.
+
+Lost a device? Nothing to revoke there: the browser holds no GitHub token, only the Cloudflare login,
+which expires on its own. If the token itself ever leaks, delete it on GitHub and set a new one.
 
 ### Layer 1: Cloudflare Access in front of /admin/ (recommended)
 

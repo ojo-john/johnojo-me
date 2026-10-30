@@ -20,7 +20,9 @@
     </style>
   </head>
   <body>
-    <!-- Sveltia CMS: a Git-based editor. Only accounts with write access to the GitHub repo can save. -->
+    <!-- Signs the editor in with your Cloudflare login (email + code); saves go through /api/github. -->
+    <script src="/admin/editor/signin.js"></script>
+    <!-- Sveltia CMS: a Git-based editor. Saves are commits to the GitHub repo, made with the site's token. -->
     <!-- Pinned to an exact version so an upstream release can't change the editor without a commit here. -->
     <script src="https://unpkg.com/@sveltia/cms@0.252.0/dist/sveltia-cms.js"></script>
     <!-- Toolbar links and the custom fields (cover picker, framing, photo editor). -->

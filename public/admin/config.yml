@@ -2,7 +2,7 @@
 # Editor configuration for johnojo.me (Sveltia CMS).
 # Every form below writes the same YAML / MDX files the site builds from, so nothing here is a separate database.
 # Locally: run `npm run dev`, open http://localhost:3000/admin/editor/ in Chrome and choose
-# "Work with Local Repository". Online: "Sign In Using Access Token" (see docs/DEPLOY.md, "The editor online").
+# "Work with Local Repository". Online: just open https://johnojo.me/admin/editor/ and sign in to Cloudflare (see docs/DEPLOY.md).
 #
 # The fields mirror src/lib/content/schema.ts. tests/admin-config.test.ts fails the test run if the two
 # drift apart (a field missing here, a field the schema doesn't know, required/optional or options that
@@ -12,9 +12,14 @@ backend:
   name: github
   repo: ojo-john/johnojo-me # private GitHub repository holding this site; only people with write access can save
   branch: main
-  # Sign in with "Sign In Using Access Token" and a fine-grained GitHub token (docs/DEPLOY.md). There's
-  # deliberately no OAuth relay: a page that receives a GitHub token and passes it to another window looks
-  # like token phishing to Chrome's Safe Browsing, and one flagged page can get the whole domain blocked.
+  # The only login is Cloudflare Access (email + one-time code). The editor reaches GitHub through the site's
+  # own proxy, which adds the site's token on the server (src/lib/github-proxy/, docs/DEPLOY.md), and
+  # /admin/editor/signin.js signs the editor in automatically. There's deliberately no OAuth relay: a page
+  # that receives a GitHub token and passes it to another window looks like phishing to Safe Browsing.
+  # The editor adds /api/v3 to any custom address (it assumes GitHub Enterprise), so it's spelled out here.
+  api_root: https://johnojo.me/api/github/api/v3
+  graphql_api_root: https://johnojo.me/api/github/graphql
+  include_credentials: true # send the Cloudflare login cookie with every editor request
 
 app_title: johnojo.me · Editor
 logo:
