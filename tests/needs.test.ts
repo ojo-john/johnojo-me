@@ -3,7 +3,7 @@ import { buildNeeds, needsFor, type NeedsInput } from "@/lib/content/needs";
 
 const stop = (over: Partial<NeedsInput> = {}): NeedsInput => ({
   trip: "europe-2026", tripTitle: "Europe 2026", tripPublished: true, visit: "milan", city: "Milan", kind: "city",
-  hasSummary: true, scoresGiven: 10, hasWouldReturn: true, photos: 5, matches: 0, ...over,
+  hasSummary: true, ranked: true, scoresGiven: 10, hasWouldReturn: true, photos: 5, matches: 0, ...over,
 });
 
 describe("needsFor", () => {
@@ -21,6 +21,10 @@ describe("needsFor", () => {
 
   it("needsFor_dayTrip_isNeverAskedForScores", () => {
     expect(needsFor(stop({ kind: "day-trip", scoresGiven: 0, hasWouldReturn: false }))).toEqual([]);
+  });
+
+  it("needsFor_cityMarkedNotRanked_isNotAskedForScores", () => {
+    expect(needsFor(stop({ ranked: false, scoresGiven: 0 }))).toEqual([]);
   });
 
   it("needsFor_matchDayWithoutMatch_needsMatchDetailsNotNotes", () => {

@@ -1,6 +1,7 @@
 trip: oregon-2026
 destination: cape-perpetua
 order: 2
+kind: day-trip
 arrive: 2026-09-25
 moments:
   - date: 2026-09-25

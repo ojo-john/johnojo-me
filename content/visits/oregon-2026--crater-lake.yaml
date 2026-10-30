@@ -1,6 +1,7 @@
 trip: oregon-2026
 destination: crater-lake
 order: 3
+kind: day-trip
 arrive: 2026-09-26
 moments:
   - date: 2026-09-26

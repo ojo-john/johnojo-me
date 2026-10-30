@@ -273,6 +273,7 @@ export function getAdminDashboard() {
       city: places[v.destination]?.city ?? visitSlug,
       kind: v.kind,
       hasSummary: Boolean(v.summary?.trim()),
+      ranked: !v.notRanked,
       scoresGiven: Object.values(v.rating?.scores ?? {}).filter((n) => typeof n === "number").length,
       hasWouldReturn: Boolean(v.wouldReturn),
       photos: (media.visits[`${v.trip}--${visitSlug}`] ?? []).filter((p) => !p.hidden && !p.duplicate).length,

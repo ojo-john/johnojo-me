@@ -3,6 +3,8 @@ destination: milan
 order: 3
 arrive: 2026-10-24
 depart: 2026-10-27
+highlights:
+  Football: "Inter v Fiorentina at San Siro, the best atmosphere of any game I've been to"
 moments:
   - date: 2026-10-24
     title: "The Duomo and its rooftop terraces"
@@ -33,7 +35,7 @@ matches:
     competition: Serie A
     date: 2026-10-25
     stadium: San Siro
-    writeUp: "Fiorentina led from the 65th minute. Thuram equalised in the 91st, and Zieliński scored a 98th-minute penalty to win it and put Inter top of the table."
+    writeUp: "Fiorentina led from the 65th minute. Thuram equalised in the 91st, and Zieliński scored a 98th-minute penalty to win it and put Inter top of the table. The best atmosphere of any game I've been to."
 wouldReturn:
   answer: "yes"
 rating:

@@ -13,6 +13,8 @@ export interface NeedsInput {
   kind: "city" | "match-only" | "day-trip";
   hasSummary: boolean;
   scoresGiven: number;
+  /** False for a stop deliberately kept out of the rankings (notRanked), which then needs no scores. */
+  ranked: boolean;
   hasWouldReturn: boolean;
   photos: number;
   matches: number;
@@ -36,8 +38,8 @@ export function needsFor(v: NeedsInput): Need[] {
   // Photos are what lets a draft go live. A published stop without any (Lisbon, Madrid) is deliberate.
   if (v.photos === 0 && !v.tripPublished) out.push("photos");
   if (!v.hasSummary && v.kind !== "match-only") out.push("notes");
-  // Only full city stops are ranked; day trips and match days aren't scored.
-  if (v.kind === "city" && v.scoresGiven < TOTAL_SCORES) out.push("scores");
+  // Only full city stops are ranked; day trips, match days and stops marked "not ranked" aren't scored.
+  if (v.kind === "city" && v.ranked && v.scoresGiven < TOTAL_SCORES) out.push("scores");
   if (v.kind === "city" && !v.hasWouldReturn) out.push("would-return");
   if (v.kind === "match-only" && v.matches === 0) out.push("match");
   return out;
