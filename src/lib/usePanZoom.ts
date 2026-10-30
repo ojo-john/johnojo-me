@@ -60,11 +60,24 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
         const { pxWidth } = fraction(cur.x, cur.y);
         setView((v) => panBy(v, cur.x - prev.x, cur.y - prev.y, pxWidth, width, height));
         moved += Math.hypot(cur.x - prev.x, cur.y - prev.y);
-        if (moved > DRAG_THRESHOLD_PX) dragged = true;
+        if (moved > DRAG_THRESHOLD_PX && !dragged) {
+          dragged = true;
+          // Keep the drag going when the pointer leaves the map's edge. Only from here on: capturing on
+          // press would retarget a plain click away from the pin under it.
+          try {
+            svg.setPointerCapture(e.pointerId);
+          } catch {
+            // The pointer is already gone (released between events); nothing to keep.
+          }
+        }
       }
       pointers.set(e.pointerId, cur);
     };
     const up = (e: PointerEvent) => pointers.delete(e.pointerId);
+    // Leaving the map ends a press, unless the drag is captured (then it ends on release).
+    const leave = (e: PointerEvent) => {
+      if (!svg.hasPointerCapture(e.pointerId)) pointers.delete(e.pointerId);
+    };
     // A drag or pinch ends with a click on whatever is under the finger: swallow it.
     const click = (e: MouseEvent) => {
       if (!dragged) return;
@@ -93,7 +106,7 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
     svg.addEventListener("pointermove", move);
     svg.addEventListener("pointerup", up);
     svg.addEventListener("pointercancel", up);
-    svg.addEventListener("pointerleave", up);
+    svg.addEventListener("pointerleave", leave);
     svg.addEventListener("click", click, true);
     svg.addEventListener("wheel", wheel, { passive: false });
     svg.addEventListener("dragstart", noNativeDrag);
@@ -105,7 +118,7 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
       svg.removeEventListener("pointermove", move);
       svg.removeEventListener("pointerup", up);
       svg.removeEventListener("pointercancel", up);
-      svg.removeEventListener("pointerleave", up);
+      svg.removeEventListener("pointerleave", leave);
       svg.removeEventListener("click", click, true);
       svg.removeEventListener("wheel", wheel);
     };

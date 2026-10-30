@@ -108,7 +108,9 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
     document.getElementById(slug)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
   }, [reducedMotion]);
 
-  const focus = active && !stacked ? pins.get(active) : null;
+  // Once you zoom or pan yourself, the map stops following the reader: the two zooms would stack and
+  // leave parts of the map out of reach of a drag.
+  const focus = active && !stacked && !pz.zoomed ? pins.get(active) : null;
   const camera = focus ? `translate(${(map.width / 2 - focus.x * ZOOM).toFixed(1)}px, ${(map.height / 2 - focus.y * ZOOM).toFixed(1)}px) scale(${ZOOM})` : undefined;
 
   return (
