@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { AnalyticsUnavailable, buildQueries, parseRange, runQueries, shapeMetrics, type QueryName, type Rows } from "./query";
+import { AnalyticsUnavailable, buildQueries, DIRECT_LABEL, parseRange, runQueries, shapeMetrics, type QueryName, type Rows } from "./query";
 
 const NOW = new Date("2026-10-25T12:00:00Z");
 const empty: Record<QueryName, Rows> = { viewsByDay: [], clicks: [], links: [], referrers: [] };
@@ -35,7 +35,7 @@ describe("buildQueries", () => {
 describe("shapeMetrics", () => {
   it("shapeMetrics_noRows_givesZeroFilledDaysAndEmptyTables", () => {
     const m = shapeMetrics(empty, 7, NOW);
-    expect([m.daily.length, m.daily.every((d) => d.views === 0), m.daily[6].day, m.totals, m.pages, m.clicks]).toEqual([7, true, "2026-10-25", { views: 0, clicks: 0 }, [], []]);
+    expect([m.daily.length, m.daily.every((d) => d.views === 0), m.daily[6].day, m.totals, m.pages, m.clicks]).toEqual([7, true, "2026-10-25", { views: 0, clicks: 0, visits: 0 }, [], []]);
   });
 
   it("shapeMetrics_viewsAcrossPagesAndDays_sumsPerDayAndPerPage", () => {
@@ -98,5 +98,31 @@ describe("runQueries", () => {
   it("runQueries_success_returnsRowsPerQuery", async () => {
     const f = (async (_u: string, init: RequestInit) => Response.json({ data: String(init.body).includes("blob4") ? [{ target: "github.com", n: "1" }] : [] })) as unknown as typeof fetch;
     expect((await runQueries(queries, "acct", "token", f)).links).toEqual([{ target: "github.com", n: "1" }]);
+  });
+});
+
+describe("shapeMetrics referrers", () => {
+  it("shapeMetrics_visitWithoutSource_isListedAsDirect", () => {
+    const m = shapeMetrics({ ...empty, referrers: [{ host: "", n: "4" }, { host: "linkedin", n: "2" }] }, 7, NOW);
+    expect(m.referrers).toEqual([
+      { host: DIRECT_LABEL, count: 4 },
+      { host: "linkedin", count: 2 },
+    ]);
+  });
+
+  it("shapeMetrics_visits_totalMatchesSources", () => {
+    const m = shapeMetrics({ ...empty, referrers: [{ host: "", n: "4" }, { host: "google.com", n: "3" }] }, 7, NOW);
+    expect(m.totals.visits).toBe(7);
+  });
+
+  it("shapeMetrics_garbageReferrerRows_areIgnored", () => {
+    const m = shapeMetrics({ ...empty, referrers: [{ host: 3, n: "4" }, { host: "google.com", n: "NaN" }] }, 7, NOW);
+    expect(m.referrers).toEqual([]);
+  });
+});
+
+describe("buildQueries referrers", () => {
+  it("buildQueries_referrers_countOnlyFirstPageOfEachVisit", () => {
+    expect(buildQueries("johnojo_metrics", 7).referrers).toContain("blob5 = 'entry'");
   });
 });

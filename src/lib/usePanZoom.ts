@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type RefObject } from "react";
+import { swallowClick } from "./metrics/track";
 import { fullView, panBy, zoomAt, zoomLevel, type View } from "./pan-zoom";
 
 /** How far a finger may move before a touch counts as a drag rather than a tap on a pin. */
@@ -69,6 +70,7 @@ export function usePanZoom(svgRef: RefObject<SVGSVGElement | null>, width: numbe
       if (!dragged) return;
       e.stopPropagation();
       e.preventDefault();
+      swallowClick(e);
       dragged = false;
     };
     // Trackpad pinch and Ctrl+scroll zoom the map rather than the page.

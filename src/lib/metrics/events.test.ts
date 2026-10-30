@@ -34,7 +34,7 @@ describe("parseEvent", () => {
   });
 
   it("parseEvent_pathWithQueryAndHash_keepsPathOnly", () => {
-    expect(parseEvent(view({ path: "/travel/?utm_source=x&email=a#top" }))).toEqual({ type: "page_view", path: "/travel/", ref: "" });
+    expect(parseEvent(view({ path: "/travel/?utm_source=x&email=a#top" }))).toEqual({ type: "page_view", path: "/travel/", ref: "", entry: false });
   });
 
   it("parseEvent_pathAtLimit_isAccepted", () => {
@@ -54,7 +54,7 @@ describe("parseEvent", () => {
   });
 
   it("parseEvent_missingReferrer_isEmpty", () => {
-    expect(parseEvent(JSON.stringify({ type: "page_view", path: "/" }))).toEqual({ type: "page_view", path: "/", ref: "" });
+    expect(parseEvent(JSON.stringify({ type: "page_view", path: "/" }))).toEqual({ type: "page_view", path: "/", ref: "", entry: false });
   });
 
   it("parseEvent_clickWithoutLabel_returnsNull", () => {
@@ -97,5 +97,33 @@ describe("parseEvent", () => {
 describe("toDataPoint", () => {
   it("toDataPoint_click_usesStableColumnOrder", () => {
     expect(toDataPoint({ type: "click", path: "/work/", label: "year: 2024", to: "" })).toEqual({ blobs: ["click", "/work/", "year: 2024", ""], doubles: [1], indexes: ["click"] });
+  });
+});
+
+describe("parseEvent sources and entries", () => {
+  it("parseEvent_sourceTag_isAccepted", () => {
+    expect(parseEvent(view({ ref: "linkedin" }))).toMatchObject({ ref: "linkedin" });
+  });
+
+  it("parseEvent_sourceTagWithSpaces_returnsNull", () => {
+    expect(parseEvent(view({ ref: "linked in" }))).toBeNull();
+  });
+
+  it("parseEvent_entryTrue_isKept", () => {
+    expect(parseEvent(view({ entry: true }))).toMatchObject({ entry: true });
+  });
+
+  it("parseEvent_entryNotBoolean_isFalse", () => {
+    expect(parseEvent(view({ entry: "yes" }))).toMatchObject({ entry: false });
+  });
+});
+
+describe("toDataPoint page views", () => {
+  it("toDataPoint_entryPageView_marksBlob5", () => {
+    expect(toDataPoint({ type: "page_view", path: "/", ref: "google.com", entry: true }).blobs).toEqual(["page_view", "/", "google.com", "", "entry"]);
+  });
+
+  it("toDataPoint_laterPageView_leavesBlob5Empty", () => {
+    expect(toDataPoint({ type: "page_view", path: "/work/", ref: "", entry: false }).blobs[4]).toBe("");
   });
 });

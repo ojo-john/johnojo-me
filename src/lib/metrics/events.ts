@@ -8,8 +8,14 @@ export interface PageViewEvent {
   type: "page_view";
   /** Page path without query or hash, e.g. "/travel/europe-2024/". */
   path: string;
-  /** Host of the site the visitor came from, e.g. "google.com", or "" for direct/internal. Never a full URL. */
+  /**
+   * Where the visitor came from: another site's host ("google.com"), a source tag from a shared link
+   * (?ref=linkedin → "linkedin"), or "" for direct visits, apps that hide the referrer, and in-site moves.
+   * Never a full URL.
+   */
   ref: string;
+  /** True for the first page of a visit, so visits and their sources can be counted. */
+  entry: boolean;
 }
 
 export interface ClickEvent {
@@ -24,6 +30,9 @@ export interface ClickEvent {
 export type MetricEvent = PageViewEvent | ClickEvent;
 
 export const LIMITS = { bodyBytes: 1024, path: 200, label: 80, host: 100 } as const;
+
+/** A source tag from a shared link: short, lowercase letters, digits and dashes. */
+export const SOURCE_TAG = /^[a-z0-9][a-z0-9-]{0,29}$/;
 
 const PATH = /^\/(?!\/)[A-Za-z0-9\-._~/%]*$/;
 const HOST = /^(?=.{1,100}$)[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/;
@@ -53,6 +62,12 @@ export function cleanLabel(value: unknown): string | null {
   return label || null;
 }
 
+/** A referrer is a host, or a source tag from a shared link. */
+export function cleanSource(value: unknown): string | null {
+  if (typeof value === "string" && SOURCE_TAG.test(value)) return value;
+  return cleanHost(value);
+}
+
 /** A link target is either an internal path or an external host. */
 function cleanTarget(value: unknown): string | null {
   if (value === "" || value === undefined) return "";
@@ -76,8 +91,8 @@ export function parseEvent(body: string): MetricEvent | null {
   const path = cleanPath(d.path);
   if (path === null) return null;
   if (d.type === "page_view") {
-    const ref = cleanHost(d.ref);
-    return ref === null ? null : { type: "page_view", path, ref };
+    const ref = cleanSource(d.ref);
+    return ref === null ? null : { type: "page_view", path, ref, entry: d.entry === true };
   }
   if (d.type === "click") {
     const label = cleanLabel(d.label);
@@ -87,9 +102,12 @@ export function parseEvent(body: string): MetricEvent | null {
   return null;
 }
 
+/** blob5 on the first page view of a visit. */
+export const ENTRY = "entry";
+
 /** Column layout in Workers Analytics Engine. Changing the order breaks old rows, so only append. */
 export function toDataPoint(e: MetricEvent): { blobs: string[]; doubles: number[]; indexes: string[] } {
   return e.type === "page_view"
-    ? { blobs: [e.type, e.path, e.ref, ""], doubles: [1], indexes: [e.type] }
+    ? { blobs: [e.type, e.path, e.ref, "", e.entry ? ENTRY : ""], doubles: [1], indexes: [e.type] }
     : { blobs: [e.type, e.path, e.label, e.to], doubles: [1], indexes: [e.type] };
 }

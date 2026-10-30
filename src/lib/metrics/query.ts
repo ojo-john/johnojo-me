@@ -5,6 +5,11 @@
  * https://developers.cloudflare.com/analytics/analytics-engine/sql-api/
  */
 
+import { ENTRY } from "./events";
+
+/** How visits with no referrer and no source tag are listed. */
+export const DIRECT_LABEL = "Direct, bookmark or app";
+
 export const RANGES = [7, 30] as const;
 export type Range = (typeof RANGES)[number];
 
@@ -27,7 +32,8 @@ export function buildQueries(dataset: string, days: Range) {
     viewsByDay: `SELECT toStartOfInterval(timestamp, INTERVAL '1' DAY) AS day, blob2 AS path, SUM(_sample_interval) AS n FROM ${dataset} WHERE blob1 = 'page_view' AND ${since} GROUP BY day, path ORDER BY day ASC LIMIT 10000 FORMAT JSON`,
     clicks: `SELECT blob3 AS label, SUM(_sample_interval) AS n FROM ${dataset} WHERE blob1 = 'click' AND ${since} GROUP BY label ORDER BY n DESC LIMIT ${TOP} FORMAT JSON`,
     links: `SELECT blob4 AS target, SUM(_sample_interval) AS n FROM ${dataset} WHERE blob1 = 'click' AND blob4 != '' AND ${since} GROUP BY target ORDER BY n DESC LIMIT ${TOP} FORMAT JSON`,
-    referrers: `SELECT blob3 AS host, SUM(_sample_interval) AS n FROM ${dataset} WHERE blob1 = 'page_view' AND blob3 != '' AND ${since} GROUP BY host ORDER BY n DESC LIMIT ${TOP} FORMAT JSON`,
+    // Visits (first page views) by source; "" means direct, a bookmark, or an app that hides where it came from.
+    referrers: `SELECT blob3 AS host, SUM(_sample_interval) AS n FROM ${dataset} WHERE blob1 = 'page_view' AND blob5 = '${ENTRY}' AND ${since} GROUP BY host ORDER BY n DESC LIMIT ${TOP} FORMAT JSON`,
   };
 }
 export type QueryName = keyof ReturnType<typeof buildQueries>;
@@ -36,7 +42,8 @@ export type Rows = Record<string, unknown>[];
 export interface Metrics {
   days: Range;
   generatedAt: string;
-  totals: { views: number; clicks: number };
+  /** visits: first page views, so one person reading three pages counts once. */
+  totals: { views: number; clicks: number; visits: number };
   /** Views per day for the whole site, every day in the range (0 when there were none). */
   daily: { day: string; views: number }[];
   /** Views per page per day, as stored. */
@@ -71,17 +78,18 @@ export function shapeMetrics(rows: Record<QueryName, Rows>, days: Range, now: Da
     const day = new Date(now.getTime() - i * 86_400_000).toISOString().slice(0, 10);
     daily.push({ day, views: perDay.get(day) ?? 0 });
   }
+  const referrers = rows.referrers.map((r) => ({ host: typeof r.host === "string" ? r.host || DIRECT_LABEL : "", count: num(r.n) })).filter((r) => r.host && r.count);
   const clicks = rows.clicks.map((r) => ({ label: str(r.label), count: num(r.n) })).filter((r) => r.label);
   return {
     days,
     generatedAt: now.toISOString(),
-    totals: { views: pagesByDay.reduce((a, r) => a + r.views, 0), clicks: clicks.reduce((a, r) => a + r.count, 0) },
+    totals: { views: pagesByDay.reduce((a, r) => a + r.views, 0), clicks: clicks.reduce((a, r) => a + r.count, 0), visits: referrers.reduce((a, r) => a + r.count, 0) },
     daily,
     pagesByDay,
     pages: [...perPage].map(([path, views]) => ({ path, views })).sort((a, b) => b.views - a.views || a.path.localeCompare(b.path)),
     clicks,
     links: rows.links.map((r) => ({ target: str(r.target), count: num(r.n) })).filter((r) => r.target),
-    referrers: rows.referrers.map((r) => ({ host: str(r.host), count: num(r.n) })).filter((r) => r.host),
+    referrers,
   };
 }
 

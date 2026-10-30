@@ -42,10 +42,11 @@
           <button type="button" data-days="30" aria-pressed="true">Last 30 days</button>
         </div>
       </header>
-      <p class="muted">Counts only: no cookies, no personal data. Visitors with Do Not Track or Global Privacy Control are never counted. <a href="/admin/">Back to the editor</a></p>
+      <p class="muted">Counts only: no cookies, no personal data. Visitors with Do Not Track or Global Privacy Control are never counted, and neither is any browser you've opened this page in. <a href="/admin/">Back to the editor</a></p>
       <div id="status" class="card notice" hidden></div>
       <div id="report" hidden>
         <div class="tiles">
+          <div class="card tile"><b id="t-visits">0</b><span>visits</span></div>
           <div class="card tile"><b id="t-views">0</b><span>page views</span></div>
           <div class="card tile"><b id="t-clicks">0</b><span>clicks</span></div>
           <div class="card tile"><b id="t-pages">0</b><span>pages viewed</span></div>
@@ -59,7 +60,7 @@
           <section class="card"><h2>Top pages</h2><table id="pages"></table></section>
           <section class="card"><h2>Buttons and links clicked</h2><table id="clicks"></table></section>
           <section class="card"><h2>Links followed</h2><table id="links"></table></section>
-          <section class="card"><h2>Where visitors came from</h2><table id="referrers"></table></section>
+          <section class="card"><h2>Where visitors came from</h2><table id="referrers"></table><p class="muted">Apps like WhatsApp, Instagram and LinkedIn's app often hide where a visit came from. Share links ending in <code>?ref=linkedin</code> (or any short name) to see them here.</p></section>
         </div>
         <p class="muted" id="generated"></p>
       </div>

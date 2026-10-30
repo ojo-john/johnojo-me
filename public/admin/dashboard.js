@@ -2,6 +2,12 @@
 // the stats, the "needs you" checklist (each item opens that stop in the editor) and the trip cards.
 (function () {
   "use strict";
+  // This browser belongs to the site owner: the site's visitor counter skips it (src/lib/metrics/tracker.ts).
+  try {
+    localStorage.setItem("metrics:owner", "1");
+  } catch {
+    // Storage blocked (private mode): this visit to the site may be counted, nothing else breaks.
+  }
   const $ = (id) => document.getElementById(id);
   const EDITOR = "/admin/editor/#/collections";
   const visitUrl = (n) => `${EDITOR}/visits/entries/${n.trip}--${n.visit}`;

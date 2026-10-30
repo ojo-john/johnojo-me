@@ -8,7 +8,7 @@ deployed and the steps below are done.
 
 | Event | What's stored | Example |
 |---|---|---|
-| Page view | the page path, and the host of the site the visitor came from (first page only) | `/travel/europe-2024/`, `google.com` |
+| Page view | the page path; on the first page of a visit, a visit marker and where it came from: another site's host, or the `?ref=` tag of a shared link | `/travel/europe-2024/`, `google.com`, `linkedin` |
 | Click | the page, the name of the button or link, and where a link goes (a path on this site or another site's host) | `/work/`, `year: 2024`; `/`, `GitHub ↗`, `github.com` |
 
 Named clicks include: `résumé: open`, `jump to: open` and each **Jump to** choice (`jump to: Trip · Europe 2024`,
@@ -19,9 +19,22 @@ counted by their visible name. Downloads such as `/resume.pdf` show up under **L
 The admin page shows, for the last 7 or 30 days: total views and clicks, views per day, top pages, top
 clicks, links followed and referring sites. The API also returns views per page per day.
 
+## Accuracy
+
+- **Your own visits aren't counted.** Opening any admin page marks that browser as yours. Do it once on
+  each phone and computer you use (and in each browser on them).
+- **Automated browsers aren't counted** (tests, scrapers: `navigator.webdriver`), nor known bots by user agent.
+- **Clicks that end a swipe, drag or pinch aren't counted** as clicks on the photo or pin underneath.
+- **Visits** are first page views. "Where visitors came from" counts visits: another site's host, the
+  `?ref=` tag of a shared link (`johnojo.me/?ref=linkedin`), or "Direct, bookmark or app". Apps such as
+  WhatsApp, Instagram and LinkedIn's app usually hide where a visit came from, so tag links you share.
+  The tag is removed from the address bar once the page has loaded, so copies don't carry it on.
+- Rows can't be deleted from Analytics Engine; anything counted before these rules (such as test runs on
+  27 Oct 2026) ages out of the 30-day view on its own.
+
 ## Privacy
 
-- **No cookies, no browser storage, no identifiers.** Each event is a path or a button name. There is
+- **No cookies, nothing stored on a visitor's device, no identifiers.** (The admin pages leave a `metrics:owner` flag on your own browsers so your visits aren't counted; visitors never get it.) Each event is a path or a button name. There is
   nothing that ties two events to the same person.
 - **No personal data.** No IP addresses are stored (the IP is used only in memory to slow down floods,
   then forgotten), no full referrer URLs or query strings, no form contents, no user agents. Labels

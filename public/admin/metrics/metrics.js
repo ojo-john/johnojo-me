@@ -5,6 +5,12 @@
   const $ = (id) => document.getElementById(id);
   const SVG = "http://www.w3.org/2000/svg";
   const nf = new Intl.NumberFormat("en-US");
+  // This browser belongs to the site owner: the site's counter skips it from now on (src/lib/metrics/tracker.ts).
+  try {
+    localStorage.setItem("metrics:owner", "1");
+  } catch {
+    // Storage blocked (private mode): this visit to the site may be counted, nothing else breaks.
+  }
 
   /** Plain-language messages for each way the API can be unavailable. */
   const REASONS = {
@@ -84,6 +90,7 @@
     $("report").hidden = false;
     $("t-views").textContent = nf.format(m.totals.views);
     $("t-clicks").textContent = nf.format(m.totals.clicks);
+    $("t-visits").textContent = nf.format(m.totals.visits ?? 0);
     $("t-pages").textContent = nf.format(m.pages.length);
     chart(m.daily);
     table("pages", m.pages, "path", "views");

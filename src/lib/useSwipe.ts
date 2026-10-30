@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type RefObject } from "react";
+import { swallowClick } from "./metrics/track";
 import { DRAG_PX, swipeStep } from "./swipe";
 
 /** Pointer and touch events both report the same swipe; only the first one counts. */
@@ -93,6 +94,7 @@ export function useSwipe(ref: RefObject<HTMLElement | null>, onStep: (step: 1 | 
       if (!suppressClick) return;
       e.stopPropagation();
       e.preventDefault();
+      swallowClick(e);
       suppressClick = false;
     };
     // A mouse drag on a photo would otherwise start the browser's own "drag this image", cancelling ours.

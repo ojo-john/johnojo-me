@@ -4,21 +4,29 @@
  * ask not to be tracked (Do Not Track or Global Privacy Control) send nothing at all.
  */
 import type { ClickEvent, MetricEvent, PageViewEvent } from "./events";
-import { TRACK_EVENT } from "./track";
+import { SOURCE_TAG } from "./events";
+import { TRACK_EVENT, wasSwallowed } from "./track";
 
 // Outside /api/* on purpose: Cloudflare Access guards /api/*, and visitors must reach this without a login.
 const NEW_TAB_NOTE = /\(opens in a new tab\)/g;
 
 export const COLLECT_URL = "/hit";
 
+/** Set by the admin pages, so the site owner's own browsing isn't counted. Visitors never have it. */
+export const OWNER_FLAG = "metrics:owner";
+/** Query parameters a shared link can carry to say where it was posted, e.g. ?ref=linkedin. */
+const SOURCE_PARAMS = ["ref", "utm_source"];
+
 interface PrivacySignals {
   doNotTrack?: string | null;
   globalPrivacyControl?: boolean;
+  /** True in automated browsers (tests, scrapers). */
+  webdriver?: boolean;
 }
 
-/** False when the browser signals Do Not Track or Global Privacy Control. */
+/** False for Do Not Track, Global Privacy Control, and automated browsers. */
 export function trackingAllowed(nav: PrivacySignals, win?: { doNotTrack?: string | null }): boolean {
-  if (nav.globalPrivacyControl === true) return false;
+  if (nav.globalPrivacyControl === true || nav.webdriver === true) return false;
   const dnt = nav.doNotTrack ?? win?.doNotTrack;
   return !(dnt === "1" || dnt === "yes");
 }
@@ -33,7 +41,34 @@ export function referrerHost(referrer: string, selfHost: string): string {
   }
 }
 
-export const pageView = (path: string, ref = ""): PageViewEvent => ({ type: "page_view", path, ref });
+/** True on the site owner's own devices (set when they open an admin page). Unreadable storage means a visitor. */
+export function isOwnerDevice(storage: () => Pick<Storage, "getItem">): boolean {
+  try {
+    return storage().getItem(OWNER_FLAG) === "1";
+  } catch {
+    return false;
+  }
+}
+
+/** The source tag a shared link carries (?ref=linkedin), lowercased, or "" when there's none or it's malformed. */
+export function sourceTag(search: string): string {
+  const params = new URLSearchParams(search);
+  for (const name of SOURCE_PARAMS) {
+    const tag = (params.get(name) ?? "").trim().toLowerCase();
+    if (SOURCE_TAG.test(tag)) return tag;
+  }
+  return "";
+}
+
+/** The URL without its source tags, so a visitor who copies it doesn't pass the tag on. Null when there were none. */
+export function withoutSourceTags(href: string): string | null {
+  const url = new URL(href);
+  if (!SOURCE_PARAMS.some((n) => url.searchParams.has(n))) return null;
+  SOURCE_PARAMS.forEach((n) => url.searchParams.delete(n));
+  return url.pathname + url.search + url.hash;
+}
+
+export const pageView = (path: string, ref = "", entry = false): PageViewEvent => ({ type: "page_view", path, ref, entry });
 
 /** The slice of the DOM the click reader needs, so it can be tested without a browser. */
 export interface TrackableElement {
@@ -75,8 +110,13 @@ export function send(event: MetricEvent, nav: { sendBeacon?: (url: string, data:
 /** Count clicks on links and buttons for the whole page with one listener. Returns the cleanup. */
 export function startClickTracking(doc: Document, win: Window): () => void {
   const onClick = (e: MouseEvent) => {
-    const ev = clickEvent(e.target instanceof Element ? e.target : null, win.location);
-    if (ev) send(ev, win.navigator);
+    const target = e.target instanceof Element ? e.target : null;
+    // Decided once every handler has run: a click that ended a swipe is swallowed further down the page.
+    win.setTimeout(() => {
+      if (wasSwallowed(e)) return;
+      const ev = clickEvent(target, win.location);
+      if (ev) send(ev, win.navigator);
+    }, 0);
   };
   const onTrack = (e: Event) => {
     const label = (e as CustomEvent<string>).detail;

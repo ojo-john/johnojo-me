@@ -88,7 +88,7 @@ describe("handleCollect", () => {
   it("handleCollect_validPageView_isCounted", async () => {
     const { env, writes } = collectEnv();
     const res = await handleCollect(post({ origin: "https://johnojo.me" }), env, allowAll);
-    expect([res.status, writes]).toEqual([204, [{ blobs: ["page_view", "/travel/", "", ""], doubles: [1], indexes: ["page_view"] }]]);
+    expect([res.status, writes]).toEqual([204, [{ blobs: ["page_view", "/travel/", "", "", ""], doubles: [1], indexes: ["page_view"] }]]);
   });
 });
 

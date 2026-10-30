@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clickEvent, referrerHost, trackingAllowed, type TrackableElement } from "./tracker";
+import { clickEvent, isOwnerDevice, OWNER_FLAG, referrerHost, sourceTag, trackingAllowed, withoutSourceTags, type TrackableElement } from "./tracker";
 
 const loc = { pathname: "/work/", origin: "https://johnojo.me", host: "johnojo.me" };
 
@@ -74,5 +74,57 @@ describe("clickEvent", () => {
 
   it("clickEvent_iconButton_usesAriaLabel", () => {
     expect(clicked({ "aria-label": "Close viewer" })).toMatchObject({ label: "Close viewer" });
+  });
+});
+
+describe("trackingAllowed automation", () => {
+  it("trackingAllowed_automatedBrowser_skips", () => {
+    expect(trackingAllowed({ webdriver: true })).toBe(false);
+  });
+});
+
+describe("isOwnerDevice", () => {
+  it("isOwnerDevice_flagSet_isOwner", () => {
+    expect(isOwnerDevice(() => ({ getItem: (k) => (k === OWNER_FLAG ? "1" : null) }))).toBe(true);
+  });
+
+  it("isOwnerDevice_noFlag_isVisitor", () => {
+    expect(isOwnerDevice(() => ({ getItem: () => null }))).toBe(false);
+  });
+
+  it("isOwnerDevice_storageBlocked_isVisitor", () => {
+    expect(
+      isOwnerDevice(() => {
+        throw new DOMException("blocked", "SecurityError");
+      }),
+    ).toBe(false);
+  });
+});
+
+describe("sourceTag", () => {
+  it("sourceTag_refParam_isLowercased", () => {
+    expect(sourceTag("?ref=LinkedIn")).toBe("linkedin");
+  });
+
+  it("sourceTag_utmSource_isUsedWhenNoRef", () => {
+    expect(sourceTag("?utm_source=github")).toBe("github");
+  });
+
+  it("sourceTag_malformedTag_isEmpty", () => {
+    expect(sourceTag("?ref=<script>")).toBe("");
+  });
+
+  it("sourceTag_noParams_isEmpty", () => {
+    expect(sourceTag("")).toBe("");
+  });
+});
+
+describe("withoutSourceTags", () => {
+  it("withoutSourceTags_tagged_removesOnlyTheTags", () => {
+    expect(withoutSourceTags("https://johnojo.me/travel/?ref=linkedin&x=1#porto")).toBe("/travel/?x=1#porto");
+  });
+
+  it("withoutSourceTags_untagged_isNull", () => {
+    expect(withoutSourceTags("https://johnojo.me/travel/")).toBeNull();
   });
 });
