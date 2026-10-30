@@ -1,0 +1,33 @@
+name: Scheduled publish
+
+# Anything with a future publish date (trips, stops, projects, jobs, journal posts) is left out of the
+# build until that day. Once a day this checks whether something became due and, if so, pushes an empty
+# commit so Cloudflare Pages rebuilds the site with it. Days with nothing due cost a few seconds.
+on:
+  schedule:
+    - cron: "15 6 * * *" # 00:15 or 01:15 in Dallas (CST/CDT), after midnight in both
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - id: check
+        run: npm run --silent schedule:due
+      - name: Trigger a rebuild
+        if: steps.check.outputs.due == 'true'
+        run: |
+          git config user.name "John Ojo"
+          git config user.email "62852503+ojo-john@users.noreply.github.com"
+          git commit --allow-empty -m "Scheduled publish: $(date -u +%F)"
+          git push

@@ -59,6 +59,7 @@ collections:
           - { label: "Draft (hidden)", value: draft }
           - { label: Coming soon, value: coming-soon }
           - { label: Published, value: published }
+      - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Set Status to Published and pick a future day: it stays hidden until that morning, then appears on its own." }
       - name: kind
         label: Type
         widget: select
@@ -130,6 +131,7 @@ collections:
         default: published
         hint: "Leave blank to follow the trip. Draft hides just this city, even on a published trip."
         options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+      - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Hides just this stop until that day, then it appears on its own." }
       - { name: photoFolder, label: Photo folder name, required: false, hint: "Only if the media folder isn't named after the city, e.g. nice + french riviera" }
       - { name: arrive, label: Arrived, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: depart, label: Left, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
@@ -299,7 +301,7 @@ collections:
         default: public
         hint: Only Public posts are published for now. The other options are for future memberships.
         options: [{ label: Public, value: public }, { label: Free subscribers (future), value: free }, { label: Paid members (future), value: paid }, { label: Private, value: private }]
-      - { name: publishedAt, label: Published on, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
+      - { name: publishedAt, label: Published on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Pick a future day to schedule it: a Published post stays hidden until that morning, then appears on its own." }
       - { name: updatedAt, label: Updated on, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
       - { name: sample, label: Sample post, widget: boolean, required: false, hint: "Marks a placeholder post with a Sample label. Leave off for real posts." }
       - { name: footnotes, label: Footnotes, widget: list, required: false, hint: "Mark them in the text with <Fn n={1} />" }
@@ -331,6 +333,7 @@ collections:
         widget: select
         default: draft
         options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+      - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Set Status to Published and pick a future day: it stays hidden until that morning, then appears on its own." }
       - { name: kind, label: Type, widget: select, options: [{ label: Case study, value: case-study }, { label: Project, value: project }] }
       - { name: stage, label: Stage, hint: "e.g. In progress" }
       - { name: summary, label: Summary, widget: text }
@@ -370,6 +373,7 @@ collections:
           - { name: resume, label: Résumé PDF, required: false, hint: "Keep as /resume.pdf. The PDF is made from your career timeline by npm run resume:pdf. Leave blank to hide the résumé buttons." }
           - { name: location, label: City on the résumé, required: false, hint: "City and state only, e.g. Dallas, TX. Never a street address." }
           - { name: domain, label: Domain, hint: "johnojo.me" }
+          - { name: timeZone, label: Time zone, required: false, default: America/Chicago, hint: "Publish dates switch on at midnight here. e.g. America/Chicago (Dallas)" }
       - name: experience
         label: Career timeline and skills
         file: content/experience.yaml
@@ -385,6 +389,7 @@ collections:
               - { name: title, label: Title }
               - { name: detail, label: Detail }
               - { name: body, label: More detail, widget: text, required: false, hint: "Shown when that year is picked on the Work page" }
+              - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Hidden until that day, e.g. to announce a promotion on its start date." }
           - { name: achievementsNote, label: Note under the timeline, widget: text }
           - name: roles
             label: Roles (résumé)
@@ -398,6 +403,7 @@ collections:
               - { name: org, label: Company }
               - { name: dates, label: Dates as shown, hint: "e.g. Jul 2023 – Present" }
               - { name: location, label: Location, required: false, hint: "City only, e.g. Dallas, TX" }
+              - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Hidden until that day, e.g. a new job's start date." }
               - { name: note, label: Note, widget: text, required: false, hint: "e.g. Promoted to SDE II Oct 2025" }
               - name: sections
                 label: Sections

@@ -20,6 +20,7 @@
     "media:usage": "tsx scripts/storage-usage.ts",
     "indexnow": "tsx scripts/indexnow.ts",
     "media:pull": "tsx scripts/pull-originals.ts",
+    "schedule:due": "tsx scripts/scheduled-due.ts",
     "media:publish": "npm run media && npm run media:backup && npm run media:upload",
     "perf": "node scripts/perf.mts",
     "resume:pdf": "node scripts/resume-pdf.mts",

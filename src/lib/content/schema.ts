@@ -31,6 +31,8 @@ const slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "lowercase letters, nu
 
 const yearMonth = z.preprocess((v) => (v instanceof Date ? v.toISOString().slice(0, 7) : v), z.string().regex(/^\d{4}-\d{2}$/, "use YYYY-MM"));
 
+import { DEFAULT_TIME_ZONE } from "./schedule";
+
 export const STATUS = ["draft", "coming-soon", "published"] as const;
 export const status = z.enum(STATUS);
 export type Status = z.infer<typeof status>;
@@ -90,6 +92,8 @@ export const visit = z.object({
   order: z.number().int().min(1),
   kind: z.enum(["city", "match-only", "day-trip"]).default("city"),
   status: status.default("published"),
+  /** Scheduled publishing: hidden until this day (site time zone), then the daily rebuild shows it. */
+  publishAt: isoDate.optional(),
   arrive: isoDate.optional(),
   depart: isoDate.optional(),
   summary: z.string().optional(),
@@ -124,6 +128,8 @@ export const trip = z.object({
   kind: z.enum(["trip", "match-day"]).default("trip"),
   year: z.number().int(),
   status: status,
+  /** Scheduled publishing: hidden until this day (site time zone), then the daily rebuild shows it. */
+  publishAt: isoDate.optional(),
   start: isoDate.optional(),
   end: isoDate.optional(),
   datesNote: z.string().optional(),
@@ -172,12 +178,14 @@ export const site = z.object({
   /** City shown on the résumé page. Never a street address. */
   location: z.string().nullable().default(null),
   domain: z.string(),
+  /** IANA time zone that publish dates are read in, e.g. "America/Chicago". */
+  timeZone: z.string().default(DEFAULT_TIME_ZONE),
 });
 export type Site = z.infer<typeof site>;
 
 export const experience = z.object({
   milestones: z.array(
-    z.object({ date: isoDate, label: z.string(), title: z.string(), detail: z.string(), body: z.string().optional() }),
+    z.object({ date: isoDate, label: z.string(), title: z.string(), detail: z.string(), body: z.string().optional(), publishAt: isoDate.optional() }),
   ),
   achievementsNote: z.string(),
   roles: z
@@ -188,6 +196,8 @@ export const experience = z.object({
         dates: z.string(),
         location: z.string().optional(),
         note: z.string().optional(),
+        /** Scheduled publishing for a new job: hidden until this day. */
+        publishAt: isoDate.optional(),
         sections: z
           .array(
             z.object({
@@ -214,6 +224,8 @@ export const project = z.object({
   name: z.string(),
   order: z.number().int(),
   status: status,
+  /** Scheduled publishing: hidden until this day (site time zone), then the daily rebuild shows it. */
+  publishAt: isoDate.optional(),
   kind: z.enum(["case-study", "project"]),
   stage: z.string(),
   summary: z.string(),
@@ -241,6 +253,7 @@ export const post = z.object({
   status: status,
   /** Only "public" ships in V1. The other tiers exist so later versions don't need a content migration. */
   visibility: z.enum(VISIBILITY).default("public"),
+  /** Also the scheduled-publishing date: a published post dated in the future stays hidden until that day. */
   publishedAt: isoDate.optional(),
   updatedAt: isoDate.optional(),
   cover: z.string().optional(),

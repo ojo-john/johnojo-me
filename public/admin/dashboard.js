@@ -85,8 +85,10 @@
           img.addEventListener("error", () => t.cover.placeholder && img.src !== t.cover.placeholder && (img.src = t.cover.placeholder));
           ph.append(img);
         } else ph.append(el("span", { class: "none", text: "no photos yet" }));
-        ph.append(el("span", { class: `badge ${t.status === "published" ? "live" : ""}`, text: t.status === "published" ? "Live" : "Draft" }));
-        const links = el("div", { class: "links" }, el("a", { href: tripUrl(t), text: "Edit" }), t.status === "published" ? el("a", { href: `/travel/${t.slug}/`, target: "_blank", rel: "noopener", text: "View ↗" }) : null);
+        // Scheduled trips are built but hidden until their publish date; the daily rebuild shows them.
+        const badge = t.scheduled ? `Scheduled · ${t.scheduled}` : t.status === "published" ? "Live" : "Draft";
+        ph.append(el("span", { class: `badge ${t.status === "published" && !t.scheduled ? "live" : ""}`, text: badge }));
+        const links = el("div", { class: "links" }, el("a", { href: tripUrl(t), text: "Edit" }), t.status === "published" && !t.scheduled ? el("a", { href: `/travel/${t.slug}/`, target: "_blank", rel: "noopener", text: "View ↗" }) : null);
         const card = el("article", { class: "trip" }, ph, el("div", { class: "bd" }, el("h3", { text: t.title }), el("span", { class: "meta", text: `${t.stops} ${t.stops === 1 ? "stop" : "stops"} · ${t.photos} photos${t.kind === "match-day" ? " · match day" : ""}` }), links));
         card.style.animationDelay = `${Math.min(i, 12) * 40}ms`;
         box.append(card);

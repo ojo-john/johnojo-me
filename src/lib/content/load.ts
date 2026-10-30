@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import type { z } from "zod";
+import { isDue, todayIn } from "./schedule";
 import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
 import { buildNeeds } from "./needs";
 import { applyOrder, parsePhotoEdits } from "./photo-edits";
@@ -42,7 +43,11 @@ const CONTENT_DIR = process.env.CONTENT_DIR ?? path.join(process.cwd(), "content
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === "1";
 /** A missing photo is fatal only in a real build; while editing locally it's skipped until `npm run media` runs. */
 const LENIENT_MEDIA = process.env.NODE_ENV !== "production" || SHOW_DRAFTS;
-const visible = (s: Status) => s !== "draft" || SHOW_DRAFTS;
+/**
+ * Not a draft, and its publish date (if any) has arrived. SHOW_DRAFTS shows scheduled things too, so they
+ * can be checked ahead of time.
+ */
+const visible = (s: Status, publishAt?: string) => SHOW_DRAFTS || (s !== "draft" && isDue(publishAt, today()));
 
 class ContentError extends Error {
   constructor(file: string, detail: string) {
@@ -83,7 +88,16 @@ const dir = (...p: string[]) => path.join(CONTENT_DIR, ...p);
 const list = (d: string, ext: string) => (fs.existsSync(d) ? fs.readdirSync(d).filter((f) => f.endsWith(ext)).sort() : []);
 
 export const getSite = memo(() => parseFile(dir("site.yaml"), siteSchema));
-export const getExperience = memo(() => parseFile(dir("experience.yaml"), experienceSchema));
+/**
+ * The build's "today" for scheduled publishing, in the site's time zone. CONTENT_TODAY=YYYY-MM-DD previews the
+ * site as it will look on that day.
+ */
+const today = memo(() => process.env.CONTENT_TODAY || todayIn(getSite().timeZone, new Date()));
+/** Jobs and milestones with a future publish date are left out until that day. */
+export const getExperience = memo(() => {
+  const e = parseFile(dir("experience.yaml"), experienceSchema);
+  return { ...e, roles: e.roles.filter((r) => visible("published", r.publishAt)), milestones: e.milestones.filter((m) => visible("published", m.publishAt)) };
+});
 /** One file per place in content/destinations; the file name is the place's id (e.g. porto.yaml). */
 export const getDestinations = memo(() =>
   destinationsSchema.parse(Object.fromEntries(list(dir("destinations"), ".yaml").map((f) => [f.replace(/\.yaml$/, ""), parseFile(dir("destinations", f), destinationSchema)]))),
@@ -112,7 +126,7 @@ export type ProjectEntry = Project & { slug: string };
 export const getProjects = memo((): ProjectEntry[] =>
   list(dir("projects"), ".yaml")
     .map((f) => ({ slug: f.replace(/\.yaml$/, ""), ...parseFile(dir("projects", f), projectSchema) }))
-    .filter((p) => visible(p.status))
+    .filter((p) => visible(p.status, p.publishAt))
     .sort((a, b) => a.order - b.order),
 );
 
@@ -210,13 +224,13 @@ export const getTrips = memo((): TripEntry[] => {
             coverPhoto,
           } satisfies VisitEntry;
         })
-        .filter((v) => visible(v.status))
+        .filter((v) => visible(v.status, v.publishAt))
         .sort((a, b) => a.order - b.order);
       const allPhotos = visits.flatMap((v) => v.photos);
       const coverPhoto = withFocus((trip.cover && allPhotos.find((p) => p.id.endsWith(trip.cover as string))) || visits.find((v) => v.coverPhoto)?.coverPhoto || null, trip.coverFocus);
       return { ...trip, slug: tripSlug, visits, coverPhoto } satisfies TripEntry;
     })
-    .filter((t) => visible(t.status))
+    .filter((t) => visible(t.status, t.publishAt))
     .sort((a, b) => b.year - a.year || (b.start ?? "").localeCompare(a.start ?? ""));
 });
 
@@ -276,6 +290,8 @@ export function getAdminDashboard() {
       title: t.title,
       year: t.year,
       status: t.status,
+      /** Set when it's scheduled: the dashboard shows "Scheduled for …" until the day comes. */
+      scheduled: t.status !== "draft" && t.publishAt && !isDue(t.publishAt, today()) ? t.publishAt : null,
       kind: t.kind,
       stops: visits.filter(({ v }) => v.trip === slug).length,
       photos: photos.length,
@@ -327,7 +343,7 @@ export const getPosts = memo((): PostEntry[] =>
       return { ...result.data, slug: f.replace(/\.mdx$/, ""), body, minutes: Math.max(1, Math.round(words / 220)) };
     })
     // V1 publishes public posts only; other visibility tiers are modelled but never built.
-    .filter((p) => visible(p.status) && (p.visibility === "public" || SHOW_DRAFTS))
+    .filter((p) => visible(p.status, p.publishedAt) && (p.visibility === "public" || SHOW_DRAFTS))
     .sort((a, b) => (b.publishedAt ?? "9999").localeCompare(a.publishedAt ?? "9999")),
 );
 

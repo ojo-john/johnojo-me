@@ -4,8 +4,10 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const FIXTURES = path.resolve(__dirname, "fixtures/content");
 
 /** Load the content module fresh with a given environment (drafts on/off, dev server or real build). */
-async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production" }) {
+async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production"; today?: string }) {
   vi.resetModules();
+  // A fixed "today" keeps the scheduled fixtures (publish date 2027-01-15) independent of the real date.
+  vi.stubEnv("CONTENT_TODAY", env.today ?? "2026-10-30");
   vi.stubEnv("CONTENT_DIR", FIXTURES);
   vi.stubEnv("NODE_ENV", env.nodeEnv ?? "production");
   vi.stubEnv("SHOW_DRAFTS", env.showDrafts ? "1" : "");
@@ -70,5 +72,46 @@ describe("editor list formats", () => {
     const { getTrip } = await import("@/lib/content/load");
     const porto = getTrip("trip-b")?.visits.find((v) => v.slug === "porto");
     expect([porto?.highlights, porto?.mediaMeta]).toEqual([{ Food: "Bifana" }, { "photos/a": { caption: "Hi" } }]);
+  });
+
+  it("getTrips_publishDateInFuture_hidesTrip", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false });
+    expect(getTrips().map((t) => t.slug)).not.toContain("scheduled");
+  });
+
+  it("getTrips_publishDateToday_showsTrip", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, today: "2027-01-15" });
+    expect(getTrips().map((t) => t.slug)).toContain("scheduled");
+  });
+
+  it("getTrips_showDraftsFlag_previewsScheduledTrip", async () => {
+    const { getTrips } = await loadWith({ showDrafts: true });
+    expect(getTrips().map((t) => t.slug)).toContain("scheduled");
+  });
+
+  it("getPosts_publishedAtInFuture_hidesPost", async () => {
+    const { getPosts } = await loadWith({ showDrafts: false });
+    expect(getPosts().map((p) => p.slug)).not.toContain("scheduled");
+  });
+
+  it("getPosts_publishedAtReached_showsPost", async () => {
+    const { getPosts } = await loadWith({ showDrafts: false, today: "2027-01-16" });
+    expect(getPosts().map((p) => p.slug)).toContain("scheduled");
+  });
+
+  it("getExperience_jobScheduled_hiddenUntilItsDay", async () => {
+    const { getExperience } = await loadWith({ showDrafts: false });
+    const e = getExperience();
+    expect([e.roles.map((r) => r.title), e.milestones.map((m) => m.title)]).toEqual([["Engineer"], ["Joined"]]);
+  });
+
+  it("getExperience_jobScheduledDayArrives_shown", async () => {
+    const { getExperience } = await loadWith({ showDrafts: false, today: "2027-01-15" });
+    expect(getExperience().roles.map((r) => r.title)).toEqual(["Engineer", "Senior engineer"]);
+  });
+
+  it("getAdminDashboard_scheduledTrip_reportsItsDate", async () => {
+    const { getAdminDashboard } = await loadWith({ showDrafts: false });
+    expect(getAdminDashboard().trips.find((t) => t.slug === "scheduled")?.scheduled).toBe("2027-01-15");
   });
 });

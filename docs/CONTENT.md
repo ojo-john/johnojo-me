@@ -146,3 +146,20 @@ To preview a production build with drafts: `SHOW_DRAFTS=1 npm run build && npm s
 
 `npm run notes:sync` copies everything on the site back into the notes files in `~/workspace/johnojo-media`,
 filling only empty sections, so details given in chat or the editor are also kept in your own notes.
+
+## Scheduled publishing
+
+Trips, stops, projects, jobs (résumé roles), career milestones and journal posts can be scheduled:
+
+- **Trips, stops, projects, jobs, milestones:** set Status to Published and fill **Publish on** (`publishAt: 2027-01-15`).
+- **Journal posts:** set Status to Published and put the future day in **Published on** (`publishedAt`).
+
+Until that day starts (midnight in `timeZone` from `site.yaml`, America/Chicago by default) it's left out of
+the build entirely, like a draft: no page, no sitemap or RSS entry, no map pin. The admin dashboard shows
+"Scheduled · date". Every night at about 00:15 Dallas time, `.github/workflows/scheduled-publish.yml` runs
+`npm run schedule:due`; if something became due that day (or the day before, in case a run was missed) it
+pushes an empty "Scheduled publish" commit and Cloudflare Pages rebuilds the site with it.
+
+- Preview the site as it will look on a given day: `CONTENT_TODAY=2027-01-15 npm run build`.
+- `npm run dev:drafts` shows scheduled things alongside drafts.
+- Dates only, no times: the site is rebuilt once a day.

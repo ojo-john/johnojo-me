@@ -1,3 +1,8 @@
-milestones: [{ date: 2023-07, label: Jul 2023, title: Joined, detail: Engineer }]
+milestones:
+  - { date: 2023-07, label: Jul 2023, title: Joined, detail: Engineer }
+  - { date: 2027-01, label: Jan 2027, title: Promoted, detail: Senior engineer, publishAt: 2027-01-15 }
 achievementsNote: none
+roles:
+  - { title: Engineer, org: Acme, dates: "Jul 2023 – Present" }
+  - { title: Senior engineer, org: Acme, dates: "Jan 2027 – Present", publishAt: 2027-01-15 }
 skills: { Languages: [Java] }
