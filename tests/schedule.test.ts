@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isDue, somethingDue, todayIn } from "@/lib/content/schedule";
+import { hiddenNote, isDue, somethingDue, todayIn } from "@/lib/content/schedule";
 
 describe("todayIn", () => {
   it("todayIn_justAfterMidnightUtc_isStillYesterdayInDallas", () => {
@@ -48,5 +48,27 @@ describe("somethingDue", () => {
 
   it("somethingDue_nothingScheduled_doesNothing", () => {
     expect(somethingDue([], "2026-10-30", "2026-10-29")).toBe(false);
+  });
+});
+
+describe("hiddenNote", () => {
+  it("hiddenNote_draft_saysNotPublic", () => {
+    expect(hiddenNote("draft", undefined, "2026-10-31")).toBe("Draft · not public");
+  });
+
+  it("hiddenNote_scheduledLater_givesTheDate", () => {
+    expect(hiddenNote("published", "2026-11-04", "2026-10-31")).toBe("Hidden until 4 Nov 2026");
+  });
+
+  it("hiddenNote_dueToday_isPublic", () => {
+    expect(hiddenNote("published", "2026-11-04", "2026-11-04")).toBeNull();
+  });
+
+  it("hiddenNote_monthOnly_usesTheFirst", () => {
+    expect(hiddenNote("published", "2026-12", "2026-10-31")).toBe("Hidden until 1 Dec 2026");
+  });
+
+  it("hiddenNote_noDate_isPublic", () => {
+    expect(hiddenNote("published", undefined, "2026-10-31")).toBeNull();
   });
 });

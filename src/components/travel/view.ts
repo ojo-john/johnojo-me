@@ -1,5 +1,5 @@
 import "server-only";
-import type { TripEntry, VisitEntry } from "@/lib/content/load";
+import { hiddenOnSite, type TripEntry, type VisitEntry } from "@/lib/content/load";
 import { CATEGORIES } from "@/lib/content/categories";
 import { formatRange } from "@/lib/format";
 import type { VisitView } from "./types";
@@ -27,6 +27,7 @@ function baseView(v: VisitEntry, trip: TripEntry, number: number): Omit<VisitVie
     country: v.place.country,
     destination: v.destination,
     kind: v.kind,
+    hidden: hiddenOnSite(v.status, v.publishAt),
     dates: formatRange(v.arrive, v.depart),
     summary: v.summary ?? null,
     highlights: Object.entries(v.highlights ?? {}),

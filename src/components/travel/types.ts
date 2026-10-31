@@ -15,6 +15,8 @@ export interface VisitView {
   country: string;
   destination: string;
   kind: "city" | "match-only" | "day-trip";
+  /** Preview site only: why this stop isn't public yet ("Hidden until 4 Nov 2026"); null when it is. */
+  hidden: string | null;
   dates: string | null;
   summary: string | null;
   highlights: [string, string][];

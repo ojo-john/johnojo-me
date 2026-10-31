@@ -107,6 +107,8 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .find:hover { background: var(--paper); }
 .find kbd { font-family: var(--f-mono); font-size: 11px; border: 1.5px solid var(--rule); border-radius: 4px; padding: 1px 5px; }
 .find .ico { font-size: 19px; line-height: 1; }
+/* Preview site only: a fixed reminder that this isn't what visitors see. */
+.preview-bar { position: fixed; left: 12px; bottom: 12px; z-index: 60; margin: 0; padding: 8px 14px; border-radius: 99px; background: var(--sun); color: var(--on-sun); font: 700 13px var(--f-ui); box-shadow: 0 6px 18px color-mix(in srgb, var(--night) 30%, transparent); pointer-events: none; }
 .theme-btn { width: 44px; min-height: 44px; padding: 0; justify-content: center; display: inline-flex; flex: none; }
 
 /* ---------- reveal on scroll (content is visible without JS) ---------- */

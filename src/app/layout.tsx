@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header, type JumpItem } from "@/components/Header";
 import { Metrics } from "@/components/Metrics";
 import { Reveal } from "@/components/Reveal";
-import { getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { getPosts, getSite, getTrips, IS_PREVIEW, journalIsOpen } from "@/lib/content/load";
 import { THEME_COLOR, THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/", ...(journal ? { types: { "application/rss+xml": [{ url: "/journal/feed.xml", title: `${site.name} · Journal` }] } } : {}) },
   openGraph: { type: "website", siteName: site.name, url: "/", locale: "en_US", images: [{ url: "/og.png", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image" },
+  // The preview site shows unpublished content: never indexed (Cloudflare also marks pages.dev previews noindex).
+  ...(IS_PREVIEW ? { robots: { index: false, follow: false } } : {}),
 };
 
 // The browser bar matches the page background in each mode (the toggle updates it after a manual switch).
@@ -72,9 +74,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer site={site} journal={journal} />
         <Reveal />
-        <Analytics />
-        {/* Own page-view and click counts (docs/METRICS.md). Off unless the build sets NEXT_PUBLIC_METRICS=1. */}
-        {process.env.NEXT_PUBLIC_METRICS === "1" ? <Metrics /> : null}
+        {/* The preview site isn't counted: its views are John checking his own drafts. */}
+        {IS_PREVIEW ? (
+          <p className="preview-bar" role="status">
+            Preview · includes hidden and scheduled content
+          </p>
+        ) : (
+          <>
+            <Analytics />
+            {/* Own page-view and click counts (docs/METRICS.md). Off unless the build sets NEXT_PUBLIC_METRICS=1. */}
+            {process.env.NEXT_PUBLIC_METRICS === "1" ? <Metrics /> : null}
+          </>
+        )}
       </body>
     </html>
   );

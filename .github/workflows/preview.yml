@@ -1,0 +1,31 @@
+# Private preview site: Cloudflare Pages builds the "preview" branch with every draft and scheduled item
+# showing (src/lib/content/load.ts, IS_PREVIEW) at https://preview.johnojo-me.pages.dev, which Cloudflare
+# Access keeps to John. This copies main to that branch after every push.
+#
+# Off until the repository variable PREVIEW_ENABLED is "true". Set it only after the Access policy for
+# preview deployments is on (docs/DEPLOY.md, "Preview site"); without it the preview would be public.
+name: Preview site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: preview
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    if: vars.PREVIEW_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Point the preview branch at main
+        run: git push --force origin HEAD:refs/heads/preview

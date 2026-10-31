@@ -199,6 +199,7 @@ export function TripExplorer({ visits, map }: { visits: VisitView[]; map: MapGeo
                 </span>
               </div>
               {KIND_LABEL[v.kind] ? <span className="flag muted">{KIND_LABEL[v.kind]}</span> : null}
+              {v.hidden ? <span className="flag">{v.hidden}</span> : null}
             </div>
 
             {v.photos.length ? (

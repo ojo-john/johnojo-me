@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import type { z } from "zod";
-import { isDue, todayIn } from "./schedule";
+import { hiddenNote, isDue, todayIn } from "./schedule";
 import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
 import { buildNeeds } from "./needs";
 import { applyOrder, parsePhotoEdits } from "./photo-edits";
@@ -37,10 +37,16 @@ import {
 const CONTENT_DIR = process.env.CONTENT_DIR ?? path.join(process.cwd(), "content");
 
 /**
- * Drafts are opt-in: only `npm run dev:drafts` (or any build with SHOW_DRAFTS=1) shows them. Plain
- * `npm run dev` matches the live site exactly.
+ * The Cloudflare Pages branch built as the private preview site: everything, including drafts and
+ * scheduled content, behind the admin login (docs/DEPLOY.md, "Preview site").
  */
-export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === "1";
+const PREVIEW_BRANCH = "preview";
+export const IS_PREVIEW = process.env.CF_PAGES === "1" && process.env.CF_PAGES_BRANCH === PREVIEW_BRANCH;
+/**
+ * Drafts are opt-in: only `npm run dev:drafts`, a build with SHOW_DRAFTS=1, or the preview site shows them.
+ * Plain `npm run dev` matches the live site exactly.
+ */
+export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === "1" || IS_PREVIEW;
 /** A missing photo is fatal only in a real build; while editing locally it's skipped until `npm run media` runs. */
 const LENIENT_MEDIA = process.env.NODE_ENV !== "production" || SHOW_DRAFTS;
 /**
@@ -93,6 +99,10 @@ export const getSite = memo(() => parseFile(dir("site.yaml"), siteSchema));
  * site as it will look on that day.
  */
 const today = memo(() => process.env.CONTENT_TODAY || todayIn(getSite().timeZone, new Date()));
+/** Why something isn't public yet (for preview labels), or null when visitors can see it. */
+export function hiddenOnSite(status: Status, publishAt?: string): string | null {
+  return hiddenNote(status, publishAt, today());
+}
 /** Jobs and milestones with a future publish date are left out until that day. */
 export const getExperience = memo(() => {
   const e = parseFile(dir("experience.yaml"), experienceSchema);

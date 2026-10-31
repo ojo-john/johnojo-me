@@ -8,7 +8,7 @@ import { PhotoPile } from "@/components/travel/PhotoPile";
 import { RankingLab } from "@/components/travel/RankingLab";
 import { TripExplorer } from "@/components/travel/TripExplorer";
 import { slim, toView, tripViews } from "@/components/travel/view";
-import { getSite, getTrip, getTrips } from "@/lib/content/load";
+import { getSite, getTrip, getTrips, hiddenOnSite } from "@/lib/content/load";
 import { durationDays, formatRange } from "@/lib/format";
 import { mapFor } from "@/lib/geo";
 
@@ -77,7 +77,7 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
               {days ? <span>{days} days</span> : null}
               {trip.style ? <span>{trip.style}</span> : null}
               {matchCount ? <span>{matchCount} {matchCount === 1 ? "match" : "matches"}</span> : null}
-              {trip.status === "draft" ? <span>Draft · not public</span> : null}
+              {hiddenOnSite(trip.status, trip.publishAt) ? <span>{hiddenOnSite(trip.status, trip.publishAt)}</span> : null}
             </div>
           </div>
         </div>

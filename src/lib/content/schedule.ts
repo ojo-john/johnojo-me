@@ -28,3 +28,15 @@ export function somethingDue(publishDates: string[], today: string, yesterday: s
     return day === today || day === yesterday;
   });
 }
+
+/**
+ * Why something isn't on the live site yet, for the preview build's labels: "Draft · not public",
+ * "Hidden until 4 Nov 2026", or null when visitors can see it.
+ */
+export function hiddenNote(status: string, publishOn: string | undefined, today: string): string | null {
+  if (status === "draft") return "Draft · not public";
+  if (isDue(publishOn, today)) return null;
+  const day = publishOn!.length === 7 ? `${publishOn}-01` : publishOn!;
+  const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+  return `Hidden until ${label}`;
+}
