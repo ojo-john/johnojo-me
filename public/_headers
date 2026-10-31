@@ -19,3 +19,9 @@
   ! Content-Security-Policy
   Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; media-src 'self' blob:; frame-src blob:; worker-src blob:; manifest-src blob:; connect-src 'self' blob: data: https://unpkg.com https://api.github.com https://www.githubstatus.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
   X-Robots-Tag: noindex
+
+# The admin preview (/admin/preview/) is the normal site built with drafts showing, so it needs the site's
+# policy (inline scripts) rather than the editor's. Access still guards it through the /admin/* rule.
+/admin/preview/*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.johnojo.me https://i.ytimg.com; media-src 'self' https://media.johnojo.me; font-src 'self'; frame-src https://www.youtube-nocookie.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'

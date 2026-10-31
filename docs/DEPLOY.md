@@ -145,25 +145,16 @@ reach it anyway.
 - `/api/metrics` sits behind the same Cloudflare Access application as `/admin/*`, and checks the Access
   token itself, so it stays closed even if the Access app were removed (see [METRICS.md](METRICS.md)).
 
-## Preview site (hidden and scheduled content)
+## Admin preview (hidden and scheduled content)
 
-A private copy of the site that shows everything: drafts, scheduled trips and stops ("Hidden until …"
-labels mark them), at **https://preview.johnojo-me.pages.dev**. The admin header links to it as
-"Preview hidden".
+**https://johnojo.me/admin/preview/** is the whole site with every draft and scheduled item showing
+("Hidden until …" labels mark them). The admin header links to it as "Preview hidden". It sits under
+`/admin/`, so the same Cloudflare Access login guards it and there is nothing to set up.
 
-How it works: the "Preview site" workflow copies `main` to the `preview` branch after every push.
-Cloudflare Pages builds that branch like any other, and the build turns on drafts when it sees
-`CF_PAGES_BRANCH=preview` (`IS_PREVIEW` in `src/lib/content/load.ts`). The preview isn't indexed and
-isn't counted in metrics or analytics.
-
-One-time set-up (in this order, so the preview is never public):
-
-1. Cloudflare dashboard → Workers & Pages → **johnojo-me** → Settings → General → **Access policy**
-   → *Enable access policy* for preview deployments. Then in Zero Trust → Access → Applications, open the
-   new `johnojo-me` preview application and give it the same policy as the admin (your email only).
-2. Check it: open https://preview.johnojo-me.pages.dev in a private window. It must ask you to sign in.
-   Before step 3 it shows "not found", since the branch doesn't exist yet.
-3. Turn the workflow on: `gh variable set PREVIEW_ENABLED --body true --repo ojo-john/johnojo-me`,
-   then run it once: `gh workflow run preview.yml --repo ojo-john/johnojo-me`.
+How it works: `npm run build` first runs `build:preview` (a second static export with
+`PREVIEW_BUILD=1` and `basePath: "/admin/preview"`; `IS_PREVIEW` in `src/lib/content/load.ts` turns on
+drafts, the banner and noindex, and turns metrics off), stashes it in `.preview-out/`, builds the live
+site, then moves the preview into `out/admin/preview/` (`scripts/place-preview.mjs`). `public/_headers`
+gives the preview the site's CSP rather than the editor's.
 
 Note: the repository is public, so hidden content is readable on GitHub; "hidden" means not on the site.

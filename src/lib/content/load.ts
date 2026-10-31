@@ -37,11 +37,10 @@ import {
 const CONTENT_DIR = process.env.CONTENT_DIR ?? path.join(process.cwd(), "content");
 
 /**
- * The Cloudflare Pages branch built as the private preview site: everything, including drafts and
- * scheduled content, behind the admin login (docs/DEPLOY.md, "Preview site").
+ * The admin preview build (`npm run build:preview`): everything, including drafts and scheduled content,
+ * served at /admin/preview/ behind the admin login (docs/DEPLOY.md, "Admin preview").
  */
-const PREVIEW_BRANCH = "preview";
-export const IS_PREVIEW = process.env.CF_PAGES === "1" && process.env.CF_PAGES_BRANCH === PREVIEW_BRANCH;
+export const IS_PREVIEW = process.env.PREVIEW_BUILD === "1";
 /**
  * Drafts are opt-in: only `npm run dev:drafts`, a build with SHOW_DRAFTS=1, or the preview site shows them.
  * Plain `npm run dev` matches the live site exactly.

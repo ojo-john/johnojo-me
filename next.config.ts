@@ -7,6 +7,8 @@ import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  // The admin preview (drafts and scheduled content) is a second export served under the admin login.
+  ...(process.env.PREVIEW_BUILD === "1" ? { basePath: "/admin/preview" } : {}),
   images: { unoptimized: true },
   // The build cache missed edits to globals.css twice (it shipped the previous stylesheet), so
   // production builds always start clean. Builds take a few seconds longer; correctness wins.

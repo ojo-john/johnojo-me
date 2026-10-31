@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:drafts": "SHOW_DRAFTS=1 next dev",
-    "build": "next build",
+    "build": "npm run build:preview && next build && node scripts/place-preview.mjs --place",
+    "build:preview": "PREVIEW_BUILD=1 next build && node scripts/place-preview.mjs --stash",
     "postbuild": "node scripts/strip-local-media.mjs && tsx scripts/indexnow.ts --on-deploy",
     "start": "npx serve out",
     "lint": "eslint",
