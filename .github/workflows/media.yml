@@ -49,7 +49,11 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libheif-examples
       - run: npm ci
       - name: Download new or edited originals
-        run: npm run media:pull
+        # The folder exists even when nothing new was downloaded (a hide or reorder saved in the editor),
+        # so the next steps apply those edits instead of failing on a missing folder.
+        run: |
+          mkdir -p "$MEDIA_SOURCE"
+          npm run media:pull
       - name: Resize, rotate, crop, find faces
         run: npm run media
       - name: Publish visible photos (and remove hidden ones)

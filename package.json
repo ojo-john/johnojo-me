@@ -9,7 +9,7 @@
     "postbuild": "node scripts/strip-local-media.mjs && tsx scripts/indexnow.ts --on-deploy",
     "start": "npx serve out",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "media": "tsx scripts/media.ts",
     "check": "npm run typecheck && npm run lint && npm run test",
