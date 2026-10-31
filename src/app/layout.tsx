@@ -7,6 +7,7 @@ import { Header, type JumpItem } from "@/components/Header";
 import { Metrics } from "@/components/Metrics";
 import { Reveal } from "@/components/Reveal";
 import { getPosts, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { THEME_COLOR, THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
@@ -28,7 +29,13 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#f1f0eb" };
+// The browser bar matches the page background in each mode (the toggle updates it after a manual switch).
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_COLOR.light },
+    { media: "(prefers-color-scheme: dark)", color: THEME_COLOR.dark },
+  ],
+};
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   // Photos come from their own domain: open that connection while the page is still loading.
@@ -53,8 +60,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     // and in the browser. It only silences attribute mismatches on <html>; the static build has none.
     <html lang="en" className={`${display.variable} ${ui.variable} ${read.variable} ${mono.variable}`} suppressHydrationWarning>
       <body>
-        {/* Marks JS as available before first paint so reveal animations never hide content without it. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* Before first paint: marks JS as available (so reveal animations never hide content without it) and
+            applies a saved light/dark choice, so the page never flashes the other mode. */}
+        <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('js');${THEME_INIT_SCRIPT}` }} />
         <a className="skip" href="#main">
           Skip to content
         </a>

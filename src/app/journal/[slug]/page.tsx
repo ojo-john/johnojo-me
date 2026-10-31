@@ -60,7 +60,7 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
       <header className="wrap ahead">
         <div>
           {post.status === "draft" ? <span className="flag">{post.sample ? "Sample · draft, not public" : "Draft · not public"}</span> : null}
-          <p className="kicker" style={{ color: "var(--journal)", marginTop: 16 }}>
+          <p className="kicker" style={{ color: "var(--journal-ink)", marginTop: 16 }}>
             <Link href="/journal/" style={{ textDecoration: "none" }}>
               03 · Journal
             </Link>{" "}

@@ -149,7 +149,7 @@ function RegionMap({
       ) : null}
       <div className="card tmap" style={{ overflow: "hidden", position: "relative" }}>
         <svg ref={svgRef} viewBox={pz.viewBox} role="group" aria-label={`${region}: visited places`} style={{ display: "block", width: "100%", height: "auto", touchAction: pz.touchAction, cursor: pz.cursor }}>
-          <path d={map.land} fill="#e4e2da" stroke="#cfccc2" strokeWidth={k} />
+          <path d={map.land} fill="var(--land)" stroke="var(--land-edge)" strokeWidth={k} />
           {map.countries.map((c) => {
             const list = forCountry(c.name);
             const label = `${c.name}: ${list.length === 1 ? list[0].city : `${list.length} stops`}`;
@@ -183,7 +183,7 @@ function RegionMap({
           {placed
             .filter((p) => p.moved)
             .map((p) => (
-              <line key={`lead-${p.id}`} x1={p.x} y1={p.y} x2={p.px} y2={p.py} stroke="var(--travel)" strokeWidth={1.5 * u} aria-hidden="true" />
+              <line key={`lead-${p.id}`} x1={p.x} y1={p.y} x2={p.px} y2={p.py} stroke="var(--travel-line)" strokeWidth={1.5 * u} aria-hidden="true" />
             ))}
           {map.points.map((p) => {
             const list = forPlace(p.id);
@@ -191,7 +191,7 @@ function RegionMap({
             const pin = (
               <>
                 <circle cx={at.px} cy={at.py} r={hitFor(p.id)} fill="transparent" />
-                <circle cx={at.px} cy={at.py} r={pinR} fill="var(--travel)" stroke="var(--paper)" strokeWidth={compact ? 2 * u : 2 * k} />
+                <circle cx={at.px} cy={at.py} r={pinR} fill="var(--travel-line)" stroke="var(--paper)" strokeWidth={compact ? 2 * u : 2 * k} />
                 {labels.get(p.id) && !labels.get(p.id)?.hidden ? (
                   <text className="tmap-lbl" x={labels.get(p.id)?.x} y={labels.get(p.id)?.y} textAnchor={labels.get(p.id)?.anchor} fontSize={labelSize} strokeWidth={3 * (compact ? u : k)}>
                     {p.label}

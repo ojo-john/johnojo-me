@@ -147,7 +147,7 @@ export default function Home() {
             <span className="go" aria-hidden="true">→</span>
             <div className="more">
               <svg viewBox={`0 0 ${map.width} ${map.height}`} aria-hidden="true" style={{ width: "100%", maxWidth: 340 }}>
-                <path d={map.land} fill="rgba(251,250,247,.18)" />
+                <path d={map.land} style={{ fill: "color-mix(in srgb, var(--on-fill) 18%, transparent)" }} />
                 {map.points.map((p) => (
                   <circle key={p.id} cx={p.x} cy={p.y} r={6} fill="var(--sun)" />
                 ))}

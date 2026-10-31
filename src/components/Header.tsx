@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { track } from "@/lib/metrics/track";
+import { ThemeToggle } from "./ThemeToggle";
 
 export interface JumpItem {
   label: string;
@@ -70,9 +71,9 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
             {/* The "Jo" mark from the favicon; its square takes the colour of the section you're in. */}
             <svg className="mark" viewBox="0 0 64 64" aria-hidden="true">
               <rect width="64" height="64" rx="14" />
-              <path d="M26 15 V37 A6 6 0 0 1 14 37" fill="none" stroke="#fbfaf7" strokeWidth="6.5" strokeLinecap="round" />
-              <circle cx="43" cy="34" r="9.5" fill="none" stroke="#fbfaf7" strokeWidth="6.5" />
-              <circle cx="52" cy="12" r="4.5" fill="#f3c64b" />
+              <path d="M26 15 V37 A6 6 0 0 1 14 37" fill="none" stroke="var(--on-fill)" strokeWidth="6.5" strokeLinecap="round" />
+              <circle cx="43" cy="34" r="9.5" fill="none" stroke="var(--on-fill)" strokeWidth="6.5" />
+              <circle cx="52" cy="12" r="4.5" fill="var(--sun)" />
             </svg>
             {site.name}
           </Link>
@@ -84,6 +85,7 @@ export function Header({ site, jump, journal }: { site: HeaderSite; jump: JumpIt
             ))}
           </nav>
           <div className="top-r">
+            <ThemeToggle />
             <button className="find" type="button" data-track="jump to: open" onClick={() => setPalOpen(true)} aria-label="Search and jump to (press slash)">
               <span className="ico" aria-hidden="true">
                 ⌕

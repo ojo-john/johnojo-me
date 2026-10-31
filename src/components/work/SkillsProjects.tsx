@@ -47,7 +47,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
             {/* The chips wrap inside their own column, so a second line lines up with the first, not under the label. */}
             <div className="chips">
               {items.map((s) => (
-                <button key={s} className="chip" type="button" data-track={`skill: ${s}`} style={{ ["--pill" as string]: "var(--work)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
+                <button key={s} className="chip" type="button" data-track={`skill: ${s}`} style={{ ["--pill" as string]: "var(--work)", ["--pill-fg" as string]: "var(--on-fill)" }} aria-pressed={skill === s} onClick={() => setSkill(skill === s ? null : s)}>
                   {s}
                 </button>
               ))}
@@ -71,7 +71,7 @@ export function SkillsProjects({ skills, projects }: { skills: Record<string, st
               return (
                 <article key={p.slug} className={`card pcard${hit ? " hit" : ""}${skill && !hit ? " dim" : ""}`} aria-labelledby={`p-${p.slug}`}>
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
-                    <span className="kicker" style={{ color: "var(--work)" }}>
+                    <span className="kicker" style={{ color: "var(--work-ink)" }}>
                       {p.kind === "case-study" ? "Case study" : "Project"} · {p.stage}
                     </span>
                     {p.status === "draft" ? <span className="flag">Draft · not public</span> : null}

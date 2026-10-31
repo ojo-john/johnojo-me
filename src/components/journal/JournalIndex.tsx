@@ -35,7 +35,7 @@ export function JournalIndex({ posts, categories }: { posts: PostCard[]; categor
       <input className="searchbox" id="j-search" type="search" placeholder="Search posts, tags, books of the Bible…" value={q} onChange={(e) => setQ(e.target.value)} />
       <div className="tags" role="group" aria-label="Categories" style={{ margin: "14px 0 24px", gap: 6 }}>
         {["", ...categories].map((c) => (
-          <button key={c || "all"} className="chip" type="button" style={{ ["--pill" as string]: "var(--journal)" }} aria-pressed={cat === c} onClick={() => setCat(c)}>
+          <button key={c || "all"} className="chip" type="button" style={{ ["--pill" as string]: "var(--journal)", ["--pill-fg" as string]: "var(--on-fill)" }} aria-pressed={cat === c} onClick={() => setCat(c)}>
             {c || "All"}
           </button>
         ))}
