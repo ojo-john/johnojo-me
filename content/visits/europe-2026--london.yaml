@@ -3,6 +3,8 @@ destination: london
 order: 8
 publishAt: 2026-10-31 # appears on its own on the day of Chelsea v Manchester United
 arrive: 2026-10-30
+highlights:
+  Football: "Chelsea 2–0 Manchester United at Stamford Bridge, the highlight of the trip"
 matches:
   - home: Chelsea
     away: Manchester United
@@ -10,11 +12,11 @@ matches:
     competition: Premier League
     date: 2026-10-31
     stadium: Stamford Bridge
-    writeUp: "Goalless at half-time. Morgan Rogers scored in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer scored the penalty a minute later. The win put Chelsea back into the top four."
+    writeUp: "The highlight of my trip. We were bad in the first half, and Fofana kept making mistakes, but in the second half we played them off the park. Morgan Rogers scored in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer scored the penalty a minute later. The win put Chelsea back into the top four."
 cover: photos/img-1911
 mediaMeta:
-  photos/img-1723: { caption: "Suuyar, an African charcoal grill", alt: "The lit-up Suuyar shopfront at night" }
-  photos/img-1725: { caption: "A night bus", alt: "A red double-decker on route 63 to Honor Oak under a street lamp" }
+  photos/img-1723: { caption: "Suuyar, a suya spot on Peckham Rye", alt: "The lit-up Suuyar African charcoal grill shopfront at night" }
+  photos/img-1725: { caption: "The 63 bus in Peckham", alt: "A red double-decker on route 63 to Honor Oak under a street lamp" }
   photos/img-1732: { caption: "Ealing Town Hall", alt: "The town hall's stone clock tower against a blue sky, beside a bus stop sign" }
   photos/img-1843: { caption: "The officials", alt: "An assistant referee holding out his arm, with the fourth official at the pitchside monitor" }
   photos/img-1855: { caption: "Chelsea corner", alt: "A Chelsea player, number 41, walking to the corner flag in front of the crowd" }
@@ -29,10 +31,10 @@ mediaMeta:
   photos/img-1931: { caption: "Outside the Bridge", alt: "John and a friend in a hooded top smiling outside the stadium" }
   photos/img-1934: { caption: "Stamford Gate", alt: "The Chelsea FC sign at Stamford Gate listing the stadium's venues" }
   photos/img-1936: { caption: "Heading home", alt: "A fan in a Chelsea number 24 shirt walking down the pavement after the game" }
-  photos/img-1937: { caption: "Chicken, corn and chips", alt: "A plate of grilled chicken, corn on the cob and chips" }
+  photos/img-1937: { caption: "Nando's at Fulham Broadway after the game", alt: "A plate of peri-peri chicken, corn on the cob and chips" }
   photos/img-1949: { caption: "Canary Wharf", alt: "The Canary Wharf Underground roundel" }
-  photos/img-1952: { caption: "Late-night food", alt: "A takeaway tray of rice topped with chicken, sauces and salad" }
-  photos/img-1953: { caption: "Canary Wharf at night", alt: "Lit-up towers in the mist, reflected in the water" }
+  photos/img-1952: { caption: "Late-night food in Surrey Quays", alt: "A takeaway tray of rice and chips topped with grilled chicken, sauces and salad" }
+  photos/img-1953: { caption: "Canary Wharf from Rotherhithe", alt: "Canary Wharf's lit-up towers in the mist, reflected in the Thames" }
   videos/img-1846: { caption: "Stamford Bridge", alt: "Chelsea and Manchester United players near the penalty area, with full stands behind" }
   videos/img-1871: { caption: "Chelsea on the ball", alt: "Chelsea moving the ball forward against Manchester United" }
 photoEdits: |
