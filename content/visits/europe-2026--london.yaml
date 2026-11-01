@@ -2,4 +2,38 @@ trip: europe-2026
 destination: london
 order: 8
 publishAt: 2026-10-31 # appears on its own on the day of Chelsea v Manchester United
-arrive: 2026-10-31
+arrive: 2026-10-30
+matches:
+  - home: Chelsea
+    away: Manchester United
+    score: 2–0
+    stadium: Stamford Bridge
+    date: 2026-10-31
+cover: photos/img-1911
+mediaMeta:
+  photos/img-1723: { caption: "Suuyar, an African charcoal grill", alt: "The lit-up Suuyar shopfront at night" }
+  photos/img-1725: { caption: "A night bus", alt: "A red double-decker on route 63 to Honor Oak under a street lamp" }
+  photos/img-1732: { caption: "Ealing Town Hall", alt: "The town hall's stone clock tower against a blue sky, beside a bus stop sign" }
+  photos/img-1843: { caption: "The officials", alt: "An assistant referee holding out his arm, with the fourth official at the pitchside monitor" }
+  photos/img-1855: { caption: "Chelsea corner", alt: "A Chelsea player, number 41, walking to the corner flag in front of the crowd" }
+  photos/img-1867: { caption: "Chelsea v Manchester United", alt: "Chelsea and Manchester United players spread across the pitch" }
+  photos/img-1880: { caption: "A goal kick", alt: "A goalkeeper in green lining up a goal kick" }
+  photos/img-1886: { caption: "Full time: Chelsea 2–0 Manchester United", alt: "The stadium screen showing the full-time score" }
+  photos/img-1896: { caption: "After the game", alt: "A Chelsea player, number 17, being interviewed on the pitch" }
+  photos/img-1911: { caption: "At Stamford Bridge", alt: "John in a selfie in the stands with the pitch behind him" }
+  photos/img-1917: { caption: "Didier Drogba", alt: "A number 11 panel and a photo of Drogba celebrating with a trophy, on a wall at the stadium" }
+  photos/img-1919: { caption: "John Terry", alt: "A number 26 captain's panel and a photo of Terry lifting a trophy, on a wall at the stadium" }
+  photos/img-1928: { caption: "Outside the Bridge", alt: "John and a friend in a Chelsea scarf smiling outside the stadium" }
+  photos/img-1931: { caption: "Outside the Bridge", alt: "John and a friend in a hooded top smiling outside the stadium" }
+  photos/img-1934: { caption: "Stamford Gate", alt: "The Chelsea FC sign at Stamford Gate listing the stadium's venues" }
+  photos/img-1936: { caption: "Heading home", alt: "A fan in a Chelsea number 24 shirt walking down the pavement after the game" }
+  photos/img-1937: { caption: "Chicken, corn and chips", alt: "A plate of grilled chicken, corn on the cob and chips" }
+  photos/img-1949: { caption: "Canary Wharf", alt: "The Canary Wharf Underground roundel" }
+  photos/img-1952: { caption: "Late-night food", alt: "A takeaway tray of rice topped with chicken, sauces and salad" }
+  photos/img-1953: { caption: "Canary Wharf at night", alt: "Lit-up towers in the mist, reflected in the water" }
+  videos/img-1846: { caption: "Stamford Bridge", alt: "Chelsea and Manchester United players near the penalty area, with full stands behind" }
+  videos/img-1871: { caption: "Chelsea on the ball", alt: "Chelsea moving the ball forward against Manchester United" }
+photoEdits: |
+  photos/img-1856 hide  # near-duplicate of img-1855
+  photos/img-1857 hide  # near-duplicate of img-1855
+  photos/img-1954 hide  # near-duplicate of img-1953

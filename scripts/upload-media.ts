@@ -2,8 +2,8 @@
  * npm run media:upload  (add --dry-run to see the plan without changing the bucket)
  *
  * Makes the public bucket (https://media.johnojo.me) hold exactly what the site shows: visible photos and
- * clips from published trips. New or changed files are uploaded; anything else under media/ (hidden
- * since, duplicates, drafts, removed) is deleted. Works on a machine that only has some of the files
+ * clips from published trips, including ones scheduled to appear later. New or changed files are uploaded;
+ * anything else under media/ (hidden since, duplicates, drafts, removed) is deleted. Works on a machine that only has some of the files
  * (the cloud job): a file already in the bucket doesn't need to be local.
  */
 import crypto from "node:crypto";
@@ -21,8 +21,9 @@ const CACHE_CONTROL = "public, max-age=604800";
 async function main() {
   loadEnvFile();
   const dryRun = process.argv.includes("--dry-run");
-  // Read content exactly as the live build does: no drafts, and local /media paths (not the R2 domain).
-  Object.assign(process.env, { NODE_ENV: "production", SHOW_DRAFTS: "", MEDIA_BASE_URL: "" });
+  // Read content as the live build does (no drafts, local /media paths), plus scheduled content: its photos
+  // must be in place before its publish day, because the scheduled rebuild doesn't upload anything.
+  Object.assign(process.env, { NODE_ENV: "production", SHOW_DRAFTS: "", INCLUDE_SCHEDULED: "1", MEDIA_BASE_URL: "" });
   const { getTrips } = await import("../src/lib/content/load");
   const { publicMediaKeys } = await import("../src/lib/content/public-media");
 
@@ -70,7 +71,7 @@ async function main() {
       console.error(`  ✗ remove ${key}: ${(err as Error).name}: ${(err as Error).message}`);
     }
   }
-  console.log(`${plan.upload.length - failed} uploaded/removed ok, ${failed} failed.`);
+  console.log(`${plan.upload.length + plan.remove.length - failed} uploaded/removed ok, ${failed} failed.`);
   if (failed) process.exitCode = 1;
 }
 

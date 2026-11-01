@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-31T07:12:05.234Z",
+ "generatedAt": "2026-11-01T21:32:59.169Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -13162,861 +13162,1134 @@
    "hash": "67a6a5ee4ec836fb",
    "bytes": 1208050
   },
-  "europe-2024/nice-french-riviera/photos/img-0159": {
+  "europe-2026/london/photos/img-1723": {
    "type": "photo",
    "w": 3024,
    "h": 4032,
    "variants": [
     {
      "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-160.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1723-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1723-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1723-160.jpg"
     },
     {
      "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-480.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1723-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1723-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1723-480.jpg"
     },
     {
      "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-960.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1723-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1723-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1723-960.jpg"
     },
     {
      "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-1600.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1723-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1723-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1723-1600.jpg"
     },
     {
      "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0159-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0159-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0159-2400.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1723-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1723-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1723-2400.jpg"
     }
    ],
-   "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPu1krE4ppaSiKA1RMB2JbACsAEXWkK5O9YdxZ4HuzN6Xo7XIphdJAAD+nQVR95OGwBlN4J1YWHIi0i5bd3+dvxB8QKsBw5yUI/Ff3X9JFt7kL+5plxXJcv01TCWshtVSwDXr0nwQfN5s9ckTby1HLRDHYN6eAP7AcC4aLdQlddYQxr+A9i2WbzQo3Kg8wggPDJS3xAMRbZVk+21Lchde1yawW9cm2/98gAA=",
-   "takenAt": "2024-04-04T10:25:50",
+   "placeholder": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACQBQCdASoUABsAPu1mqk2ppaQiMAgBMB2JZgCxHxgDTozBM1utMxJCx7RWcDKUUyanyWZI8AD+69+hRPwLGUCf2wgZiwIJAZcDxVW/H6MLf/3RpT3v6N3dTCYnQSn1wg+/QT6SwFEL6M29FuPJqcqyZqXXQb/44g/xvPOxaMJ6wEVwG4BALRcInQ6NNDI7cldtDFE4j3oXyoET/zaFBY1g5KKGTH2ieOV5kN0OeeMa4wJg3e062sPxLgX9JHOX2CgNWrtkAKgM6XwWUX4oayMzq97CfSQNTm4AAA==",
+   "takenAt": "2026-10-30T19:24:46",
    "focus": {
-    "x": 100,
-    "y": 100
+    "x": 0,
+    "y": 77
    },
-   "source": "2768196:5740bcc7769fa84ff0252531278b313f",
-   "hash": "90808461d8ec6634",
+   "source": "2433535:c766b4eb83bb71a52da071ad1488e329",
+   "hash": "155946cfe967474d",
    "focusBy": "attention"
   },
-  "europe-2024/nice-french-riviera/photos/img-0162": {
+  "europe-2026/london/photos/img-1725": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1725-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1725-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1725-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1725-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1725-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1725-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1725-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1725-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1725-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1725-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1725-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1725-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1725-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1725-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1725-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAACwBQCdASoUABsAPu1ip02ppaOiMAgBMB2JZgCdMxs0kn/G9GK4BCcn3ugHEDpxtLw/m45AT4QA/uv4zMQiFPjKLWZOktWVsHP2Ptj6xOhmrR3X2L2k8q7MiAijqhZDmdmcJKixkh31oyZmRWZ8/6fhdoPImDpN6ILPw7pWv9guQp3YXEuzgGCo8nYufxi+MMc3Dumqql2hA6B2hyh5tULEok3CLFRQ4BtCckMntE++xKql4kiCw9VX69wMtg1YA5nnhOvUeKdAAA==",
+   "takenAt": "2026-10-30T20:04:06",
+   "focus": {
+    "x": 100,
+    "y": 34
+   },
+   "source": "2275644:ed4179d26feb5a95b1d86ec0172c30d7",
+   "hash": "393909985cc5a397",
+   "focusBy": "attention"
+  },
+  "europe-2026/london/photos/img-1732": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1732-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1732-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1732-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1732-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1732-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1732-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1732-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1732-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1732-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1732-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1732-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1732-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1732-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1732-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1732-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAADQBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWwAsR80Qq37YtKwh9yuLhUT/yoZue72TclfGIUAAP6tww0JxuJV37vxBLsHyslLH/gnvoB5LyVhvRhmkPPERIAnSJiSxXtTKboIvt5IWTIhh8rOHu4kvnbSaMFzrnEE73fyfqdPre/dqF8hI77Xm8QsjLuPafm0vqR20IBR3ZgKsEx0uZ9cRFSZ3de45vjH6mW3Dlv7ainK1eZbEK4kBtwhUbO2OX+wFKSqatTLuDX70JRNQdu0INrZoAAA",
+   "takenAt": "2026-10-31T09:32:02",
+   "focus": {
+    "x": 75,
+    "y": 77
+   },
+   "source": "5015481:37dc5e524b596897345dfbe07c21a655",
+   "hash": "084b370706173345",
+   "focusBy": "attention"
+  },
+  "europe-2026/london/photos/img-1843": {
+   "type": "photo",
+   "w": 2066,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1843-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1843-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1843-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1843-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1843-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1843-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1843-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1843-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1843-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1843-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1843-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1843-1600.jpg"
+    },
+    {
+     "w": 2066,
+     "avif": "/media/europe-2026/london/photos/img-1843-2066.avif",
+     "webp": "/media/europe-2026/london/photos/img-1843-2066.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1843-2066.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAADQBQCdASoUACQAPu1wrlMppiQipWmZMB2JZACuT8sApL6TYjuU8EdxA+QvWEk01Le24HQcEQjgANxhojDTvSI3Imt4vk4OotDb5+vmKkp6HurV4t3/8B93/PJuuQdr6gVx2mLsT1yisfzq70uyfk5unPmrFrUw93i4UmUxryQMzcmwvmA4mnyZLZkvlYf9hoLBQfpN1Lt3Tnp/eQ5aJI7Wu4Ia9PeK4TDkC7eqJUXb5Fcmv5EF2VfXF/cUsadFUN+p47iKNDYLE3/MOJcNya0LhkyOUHcXrI5qhmRjwBx7oxfQ3wAAAA==",
+   "takenAt": "2026-10-31T13:50:51",
+   "focus": {
+    "x": 61,
+    "y": 40
+   },
+   "source": "1748953:d6ef3fdccea034809596d8053bc0be26",
+   "hash": "03d48ce36571401f",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1855": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1855-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1855-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1855-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1855-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1855-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1855-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1855-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1855-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1855-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1855-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1855-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1855-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1855-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1855-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1855-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADQBQCdASoUABsAPu1sqVGppaOiqAqpMB2JZAC7L11s/y7BGCA7gZfI3sQL/r2QLDPSiEkDThAAAP7ZorpNYkeKPCwWf2w6iwx0JNxWFORx8+a9DZ45OevWhKUy0xD7tI3OXAIQy/nEk4W64goDmMFiB9Q71Iy5XW3mWAE1aAzCnDkJJCM5H9SBwEn+zFG232waUyx2iqXAmCPGTW8u7oCfsyCt9+dTI4ERQ7X+VbBauqyM9+ek2ewb+t36Ch0gSSM+zShgXbQ2gHxYToAAAA==",
+   "takenAt": "2026-10-31T13:57:37",
+   "focus": {
+    "x": 49,
+    "y": 15
+   },
+   "source": "3543883:aa857ae274dd7aeb94ab7c4cda86554d",
+   "hash": "8dc2a209272c9104",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1856": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1856-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1856-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1856-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1856-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1856-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1856-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1856-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1856-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1856-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1856-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1856-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1856-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1856-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1856-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1856-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAAAwBQCdASoUABsAPu1qqFAppaOiqA1RMB2JZgC7MoAlxwpSoQ6nW/M5jJN5u9BV36CQAAD+zECodXCJkQ2gzbHmJnOuKJimgq7knZxfMV8YC//93ao/GykJlHOPvJAekIdVXIuy/ew6aMAF/Tdi8usabrF/PZQVQCSd95WnXk5SPxt1jMqIH0LcAD13xblujWDGpmtT7jzJjUOrWRsDurnR0RECjNIz6hWopI6+ya0hrSishBQ6QwLVcHpDsFNwsQrDBWJZT/agAAAA",
+   "takenAt": "2026-10-31T13:57:37",
+   "focus": {
+    "x": 49,
+    "y": 14
+   },
+   "source": "3572895:5c69816b19dc92c417f3e62d2a70b24b",
+   "hash": "0cc2860927249006",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1857": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1857-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1857-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1857-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1857-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1857-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1857-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1857-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1857-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1857-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1857-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1857-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1857-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1857-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1857-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1857-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoUABsAPu1oqk+ppaOiKA1RMB2JZgCzgYyod1jNhFDrTkmOt4KbBl1rESbuEZAA/sxYUdvqIoITivU6FGV+FWHauKwacx998ar0mh2uOj35ZEeRqY0QwzHPS3EsLPqIzZDrAA0aMUys+SaLwWXqQV252Lvz6nQ0peYSMt/sxREwx/KKxTNMsqEW1PHG8kuBr+fekP70ididg+ePlNXIjAMG6cJB994koCxnmNcI5Ea/4EK6LztXigTe6HS954gA",
+   "takenAt": "2026-10-31T13:57:38",
+   "focus": {
+    "x": 44,
+    "y": 14
+   },
+   "source": "3465926:14419d579d267c160cb9cf81b64ab40e",
+   "hash": "0cc2a649cf249004",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1867": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1867-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1867-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1867-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1867-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1867-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1867-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1867-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1867-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1867-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1867-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1867-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1867-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1867-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1867-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1867-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwAwCdASoUABsAPu1krE6ppaQiKA1RMB2JYgC2yAieBM/gzAAA+bnVlpdOwPe5Qh5XIldCGAROcBcXfUyt1X49GP836MU7IYEIw0a9ZNH/+0nrmcWhjS/yI+oHbcehya9W6yQzon1frnAA",
+   "takenAt": "2026-10-31T14:11:58",
+   "focus": {
+    "x": 53,
+    "y": 31
+   },
+   "source": "2325460:65222223559857cccb4c59b2a5e2989e",
+   "hash": "29239fe26a90d010",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1880": {
+   "type": "photo",
+   "w": 2066,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1880-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1880-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1880-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1880-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1880-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1880-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1880-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1880-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1880-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1880-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1880-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1880-1600.jpg"
+    },
+    {
+     "w": 2066,
+     "avif": "/media/europe-2026/london/photos/img-1880-2066.avif",
+     "webp": "/media/europe-2026/london/photos/img-1880-2066.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1880-2066.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACQBACdASoUACQAPu1urlIppiQnpWsxMB2JZAC+Wf/gEo1nAtAYBA/uyD9hiQAA/rpvdweVjAcYCiZJOUIimWbOVzhkQHvaFuG7ljCe7hTcYOOth/cy2HC+OGj3ViDuQhEPcc4ZHRA93czIK9meyBH7LAftzuZr/MVAtDt62VKss1lK1Nf82kCdxBEVpr5dQ/eGLFdif/rcvNmV7WnBrU7T2w6KEKq9ilYhyMSgAAA=",
+   "takenAt": "2026-10-31T14:29:25",
+   "focus": {
+    "x": 73,
+    "y": 37
+   },
+   "source": "2064183:47b83fbd869e5be6341979e87495b10d",
+   "hash": "eed3f3eb5b7f91fe",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1886": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1886-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1886-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1886-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1886-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1886-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1886-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1886-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1886-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1886-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1886-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1886-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1886-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1886-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1886-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1886-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAABQBgCdASoUABsAPu1qrVCppaQiqAqpMB2JaACxHxG0e8AboAWoSLOYct+8+jfkTf3hjlOfZlQ6lrO8+AD+7MWiKG6FyUIjQS3YXZokmunpwiSrSUe1Qr99ug+sdK+sPjAuR5aHPHxwrdmz6USEjFHiJnh6E2t5Cy23pgiN7aK0V+riQdVVoCmRpGPXdOmG8EXSNp4WhyJzNbNI6vkPxBZeQwEoIW43hkimiDlRF+LTpJsNAW1HzTaEGvYDPcVnXqaH23K9o/SNVpFcP+8vT0jQO6jxR1xVHBgvC+6UJudPFVoPSrhAAA==",
+   "takenAt": "2026-10-31T14:29:54",
+   "focus": {
+    "x": 25,
+    "y": 100
+   },
+   "source": "2786616:88710ffd2e5614cb7332c47b4077828c",
+   "hash": "0d4bc2b496e61b9b",
+   "focusBy": "attention"
+  },
+  "europe-2026/london/photos/img-1896": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1896-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1896-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1896-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1896-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1896-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1896-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1896-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1896-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1896-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1896-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1896-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1896-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1896-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1896-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1896-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoUABsAPu1qqk8ppiOiMBgIATAdiUAQSSCH/ScuWRnx4vnsAADJoJK5YaYPqiV0MPcq5D3/w7S1xtWUK9wBf1chu21JjpwMclSLStTut4ObazI+M2yeS7rJpa2lfDl91A3B9hmWee0KAAAA",
+   "takenAt": "2026-10-31T14:33:49",
+   "focus": {
+    "x": 51,
+    "y": 42
+   },
+   "source": "2870170:19216b93a458617673a448a472a8d71e",
+   "hash": "5f3d9461f0e4320c",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1911": {
+   "type": "photo",
+   "w": 4896,
+   "h": 3672,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1911-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1911-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1911-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1911-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1911-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1911-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1911-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1911-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1911-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1911-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1911-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1911-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1911-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1911-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1911-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgA1AADoSrvgRoFq/QTCAAD+ZobqyYSkPkc4z7bvwFV908awEAPNVlyxyMml+7YCK1EFwSX30EJpchiZLw6onW2idXz4O8u2z+L/Imy1gXYfdoReUcqZEf6ZKETTZyjJfx9P9FMUgAAA",
+   "takenAt": "2026-10-31T14:37:00",
+   "focus": {
+    "x": 82,
+    "y": 67
+   },
+   "source": "5488326:480632e7190d52dffa76c8a4293237a6",
+   "hash": "6501132f22968ec2",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1917": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1917-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1917-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1917-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1917-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1917-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1917-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1917-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1917-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1917-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1917-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1917-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1917-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1917-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1917-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1917-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAADQBgCdASoUABsAPu1opU2ppqMiMBgMATAdiWwArDOmSKhjcQHdGHsP0XMnfzFPHtG1ubRN1yDM9uO2hqJsDgAA/rIN3bBnqC4DQTAQXJm4huVGaWNsQ6sQJQT/LVxE+V3NFneuclbJh+vMOtFOhuMVS656Rq1yYv6phm+Plvkqn/SoDhJvG/bqt/YeOLCAkyWTf37bbm8nLR/LDFVGhhjqJWY6fIMEfhcQrsCRyYHkDxMquid4jAXOeeeka0bDyIp/OfFo9A7c2rhA7BUfQUZXAAA=",
+   "takenAt": "2026-10-31T14:57:06",
+   "focus": {
+    "x": 66,
+    "y": 32
+   },
+   "source": "6795894:30d5a99ab91c0627fdead0724225cfbc",
+   "hash": "dda0aee9aac2c218",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1919": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1919-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1919-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1919-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1919-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1919-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1919-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1919-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1919-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1919-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1919-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1919-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1919-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1919-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1919-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1919-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAAAwBgCdASoUABsAPu1qr1CppaQiqAqpMB2JZgCdMt6868PIkF1eW/R34Ylc4jk4sO+N0zxE8Wa6XhCAAPIwudj4rWmDXIP7PdPHXffA2bwREcvvF7+CO2s1gEYA6wgf9AEhRn8hNiNxIqbpqBger+9sq3fZg2cKbnWBScR0Rx02glj3sHCx8ZT8OUL1XXXpFx1h062wjOugCqRsBITiIDMvijJQnNfDoyEdxvkd87Lu9+g+tFo9smsq7ajL030qcvzisc9nSU9C5XItPV8CbCtiZQCJ46nUAAA=",
+   "takenAt": "2026-10-31T14:57:37",
+   "focus": {
+    "x": 64,
+    "y": 45
+   },
+   "source": "6008723:d84d86088b07256e50997965b4620561",
+   "hash": "66a7a125a386f666",
+   "focusBy": "faces"
+  },
+  "europe-2026/london/photos/img-1928": {
    "type": "photo",
    "w": 2316,
    "h": 3088,
    "variants": [
     {
      "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-160.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1928-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1928-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1928-160.jpg"
     },
     {
      "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-480.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1928-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1928-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1928-480.jpg"
     },
     {
      "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-960.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1928-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1928-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1928-960.jpg"
     },
     {
      "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-1600.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1928-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1928-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1928-1600.jpg"
     },
     {
      "w": 2316,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0162-2316.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0162-2316.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0162-2316.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1928-2316.avif",
+     "webp": "/media/europe-2026/london/photos/img-1928-2316.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1928-2316.jpg"
     }
    ],
-   "placeholder": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACQBQCdASoUABsAPu1kq1AppSOisBgIATAdiWwAnTMy+gNJFI6jsUjjwOQucdSanC/237hF4ADKgN+z5m4s+eD8ibFZ2R6z33Y9ABdjTBMbX2NYM/UNZXBs3RtbKtJvK5gGPCyZ6Vxh78BwB06ixqMYdu4Y23se5B4zwsy/mgFzTnNe2nJGWj+7JG6qnV6iOhQUoFDQBRqRDLZ7E7K6hnVj7Eh49PJ2r+HQ1SJBgj7fSs5hPaUE2YQF5G7fN/UPlChm1Yy87dx/wowV5KlJkyzBOojPQU8cOJfwFIo2HsgWn8YF29L/xqBt8Qrw5jLKL2+j/aukDt6posAA",
-   "takenAt": "2024-04-04T10:29:31",
+   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADQBQCdASoUABsAPu1srFEppaQiqAqpMB2JZACdMs9Bc0mg0L2Fh/mV3qnzYTqx44Mx4nYzO6AAAP7UXFS4SUDG4D7PTf8sUKEzsHkM7U7qionamQTNR1ec0H240RFVgBhWrwlCR44eQHuMahyD3K6DjCwqSx6LydLhIf2mPOxPHV6PUlml45bG2GHj5qZdh6XLW+UhphffxZN+fYst5e9nez01stC2dMU5hl41mZX6xuXOl5zUsfn1FKvv9jUvIyB8YAqTirgs+1vaXUZl8/TsahyOAA==",
+   "takenAt": "2026-10-31T15:00:01",
    "focus": {
-    "x": 38,
-    "y": 67
+    "x": 61,
+    "y": 42
    },
-   "source": "2487798:975fbda0adbd157cf5a237a62097e34c",
-   "hash": "33f9f91c3031e5d2",
+   "source": "1998203:0c4f54a3f2e465d79df4257ecd371d24",
+   "hash": "9b7937a73a36e0e1",
    "focusBy": "faces"
   },
-  "europe-2024/nice-french-riviera/photos/img-0179": {
+  "europe-2026/london/photos/img-1931": {
    "type": "photo",
-   "w": 4032,
-   "h": 3024,
+   "w": 2316,
+   "h": 3088,
    "variants": [
     {
      "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-160.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1931-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1931-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1931-160.jpg"
     },
     {
      "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-480.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1931-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1931-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1931-480.jpg"
     },
     {
      "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-960.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1931-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1931-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1931-960.jpg"
     },
     {
      "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-1600.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1931-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1931-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1931-1600.jpg"
     },
     {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0179-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0179-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0179-2400.jpg"
+     "w": 2316,
+     "avif": "/media/europe-2026/london/photos/img-1931-2316.avif",
+     "webp": "/media/europe-2026/london/photos/img-1931-2316.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1931-2316.jpg"
     }
    ],
-   "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdH8AB80h4TUlwVKLAAP3e2RnJ3QskTE7mo/np25InJ0KMtEGrYK7FjxrJCxPumSEizOnXpO+ZajhZuSosCC7fpxu+bcORMwSGAhMZ41BhhNGgb3EghL/gWBiaoulv1gAA",
-   "takenAt": "2024-04-04T10:44:21",
+   "placeholder": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAADwBQCdASoUABsAPu1qrVCppaQiqAqpMB2JagCdKIHSCeUYbrcAEsRPjQ7F/i5E55JqrMdsqymkgADJV9zp7m09COrr6d3L+GqOS5A4w3dYIBZ8x42O3ShZ4440VgHIubDZmBgkZ4v4qa+lFYeQsKfAH+FgSEdzFgG+t1OiJMFrMaA9pnngDNDjvAqlazJ6+0R17IYJRw9BaILh63BctpEisA/RwRQV8gKHAh1xMXKcVqlQTYCPaT11kLsfQt/y00YP7SSW/bZ2ir7FGtSx0iXEeEhfsb8RK8hW6Qo+ryJtY3cSYRQUlla9D0+Gzq4AAAA=",
+   "takenAt": "2026-10-31T15:00:37",
    "focus": {
-    "x": 18,
-    "y": 64
+    "x": 42,
+    "y": 46
    },
-   "source": "3251505:b704d9a7cb52015837d1091aad191cac",
-   "hash": "f2e6e77d89998484",
+   "source": "2651291:e23441cb3d6864bed4566293404c6929",
+   "hash": "9efce6525253c9cc",
    "focusBy": "faces"
   },
-  "europe-2024/nice-french-riviera/photos/img-0195": {
+  "europe-2026/london/photos/img-1934": {
    "type": "photo",
    "w": 4284,
    "h": 5712,
    "variants": [
     {
      "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-160.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1934-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1934-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1934-160.jpg"
     },
     {
      "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-480.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1934-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1934-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1934-480.jpg"
     },
     {
      "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-960.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1934-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1934-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1934-960.jpg"
     },
     {
      "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-1600.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1934-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1934-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1934-1600.jpg"
     },
     {
      "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0195-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0195-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0195-2400.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1934-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1934-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1934-2400.jpg"
     }
    ],
-   "placeholder": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACQBQCdASoUABsAPu1iq0+ppSOiMBgIATAdiUAVhl0QnwklREOQpcmdNzIZ3XUNOx3NjQjAAAD+fgPPzbV9RqX73VD4cooX4vNrpgGFabrrhfSm0lJwTMZImIIh64Qf9et6iNt8u9NsT/ELinT2RpyjLWdr/npy9WtuO7unC1T+Z8y3KBbBIDqNRl3l4ccGCgV6xGP3ac2m6DhGTmBc3z8fPxMn/jM9/LGAUlsbllgAAA==",
-   "takenAt": "2024-04-04T11:38:42",
-   "focus": {
-    "x": 38,
-    "y": 99
-   },
-   "source": "5304089:9f8c08e828ac688e05ced1e6a9a701f3",
-   "hash": "b2f2620d809d0bcb",
-   "focusBy": "attention"
-  },
-  "europe-2024/nice-french-riviera/photos/img-0223": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0223-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0223-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0223-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JYwC7IOZBo6HPphYw7QhYqjY/kwAA34FJ3JL59Vi92dzW+XGleXEmnEtiRf7ZO+iyqwN5zWJKrALlggo/hyvqH28Ezk6isuNIGFxZMuuelBPlGNO9Bk3c7lUO/8062lAO1/jeA8zYsc2waByFqYIiETvKzFm3ykV2mfFMgZOVBF0YtOvKFM4DTrwnk1SqL5JyAAAA",
-   "takenAt": "2024-04-04T12:13:16",
-   "focus": {
-    "x": 0,
-    "y": 72
-   },
-   "source": "6284586:5affbdccc22230d32565f0b0d79dfeab",
-   "hash": "9ad83136d56caa9e",
-   "focusBy": "attention"
-  },
-  "europe-2024/nice-french-riviera/photos/img-0232": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0232-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0232-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0232-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAABQBQCdASoUABsAPu1ip02ppaOiMAgBMB2JYgCdM1XC/wJfp1efswr++O1x0hZbL6D5nQAA/q8e8V1UQsRTJk6jAi4glspUDD0t27qDfQaIM/W9N6h2de02yO9P5iuNZSUOatzpKW25x4CN9clo/QveZXinGcpn7NPq814GuR2RZflBKH4ecRBAYO+gy6JA6S1I42SbFjocPDuXXQ9ZLMAtqo9cccHeb6suA73OnQlto46blzMtPMNvYECAAA==",
-   "takenAt": "2024-04-04T12:14:54",
-   "focus": {
-    "x": 58,
-    "y": 39
-   },
-   "source": "4881445:88864e0bbf8a380241ac3b1805660970",
-   "hash": "e10668997919b979",
-   "focusBy": "faces"
-  },
-  "europe-2024/nice-french-riviera/photos/img-0246": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0246-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0246-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0246-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoUABsAPu1srFEppaQiqAqpMB2JQBZwAgvgSsHt7zU2ueB2TG4B5XvpXWH20srgAPwhCNP+amEf7Mza8GP3MVr+9IfFPoTlWtMuHwuwfkOZpL1e9/46Ht5lSLSY1d5ugNR8op23gctkLWJDBmt5/CdKjoykT2porSIO8ZseSRN6yQ35q11jYyIba+WlN5RJQ4pug0fQktd/Z5iVrYcV2d5tDAA=",
-   "takenAt": "2024-04-04T13:04:54",
-   "focus": {
-    "x": 100,
-    "y": 66
-   },
-   "source": "3387063:a80c774f64b1d471da647b01f76dd6ed",
-   "hash": "39330d6fc59d1f17",
-   "focusBy": "attention"
-  },
-  "europe-2024/nice-french-riviera/photos/img-0251": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0251-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0251-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0251-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAACwBQCdASoUABsAPu1qrVEppaQiqAqpMB2JYgCxHtP6A0nIpX8rdt/t7DRaHf+VScUmlBeCeAAA/oKqKWAwn/fFRCbUxJK7ruF3F/AlEpCXwqkhhg5qa+Yq5kqQWFK3MjT9S9uf6r908R7gDXFgl0icoEWCcgTvoJMXSsdtuAjPIw6EpVLwjn8MagBYsDUrbnHsXnW3NwTVCApFb9YHLdK9aR7kBvWbNVa8KwS7Xy6nze50JWIfsKdDeHSeSU6XMtBTjcW0JYSouP38xRFtxhrq7npwgAAA",
-   "takenAt": "2024-04-04T13:05:31",
-   "focus": {
-    "x": 14,
-    "y": 30
-   },
-   "source": "5203078:e95459dae72065c74fe75e613a89b5ab",
-   "hash": "004848b8a8c2e4f0",
-   "focusBy": "faces"
-  },
-  "europe-2024/nice-french-riviera/photos/img-0272": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-480.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-480.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-960.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-960.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-1600.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-1600.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2024/nice-french-riviera/photos/img-0272-2400.avif",
-     "webp": "/media/europe-2024/nice-french-riviera/photos/img-0272-2400.webp",
-     "jpg": "/media/europe-2024/nice-french-riviera/photos/img-0272-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoUABsAPu1kqU2ppaOiMAgBMB2JZQC7ABK1CEyFljvOA6RTrU/YjmpmAAD+PZk1fYuNgpnRrcFNTURUm0/cIGxewsSCsgqBDl8x9OR9vFw0Jr/ZuJm2W2J2X6NPNWgCuMUJmQvefTyYXZYO+fjKhVO7LvE7W66DQu6EIBV/tEmrDI0ljnJSV0qNvJcbm49wZ3I6lM9B/Bl+D2mqWIACkAAA",
-   "takenAt": "2024-04-04T17:04:48",
-   "focus": {
-    "x": 12,
-    "y": 88
-   },
-   "source": "2933961:e6f2f8e74a35752094933de2ca1d05e8",
-   "hash": "0f0f1f0f13963f3e",
-   "focusBy": "attention"
-  },
-  "europe-2024/nice-french-riviera/videos/4dcae28a471643fbbc2aa0c8302d91f7": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2024/nice-french-riviera/videos/4dcae28a471643fbbc2aa0c8302d91f7.mp4",
-   "poster": "/media/europe-2024/nice-french-riviera/videos/4dcae28a471643fbbc2aa0c8302d91f7-poster.jpg",
-   "takenAt": "2024-04-04T11:51:39",
-   "duration": 5.4,
-   "source": "5097166:2a694178c0584cd98121dcf91cab142b",
-   "hash": "43773f007c493596",
-   "bytes": 1144146
-  },
-  "europe-2024/nice-french-riviera/videos/img-0156": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2024/nice-french-riviera/videos/img-0156.mp4",
-   "poster": "/media/europe-2024/nice-french-riviera/videos/img-0156-poster.jpg",
-   "takenAt": "2024-04-04T10:11:23",
-   "duration": 3.6,
-   "source": "5035257:faf45da7fa9d9481e62fa732daf60007",
-   "hash": "74348d7a4a086469",
-   "bytes": 737984
-  },
-  "europe-2024/nice-french-riviera/videos/img-0172": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2024/nice-french-riviera/videos/img-0172.mp4",
-   "poster": "/media/europe-2024/nice-french-riviera/videos/img-0172-poster.jpg",
-   "takenAt": "2024-04-04T10:41:56",
-   "duration": 4.5,
-   "source": "6268905:48dbcea3a052c05d6b96c9c258c9437c",
-   "hash": "ecce0e012008194d",
-   "bytes": 975610
-  },
-  "europe-2024/nice-french-riviera/videos/img-0199": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2024/nice-french-riviera/videos/img-0199.mp4",
-   "poster": "/media/europe-2024/nice-french-riviera/videos/img-0199-poster.jpg",
-   "takenAt": "2024-04-04T11:47:29",
-   "duration": 14.91,
-   "source": "20213965:5db89e384ab93f99814e8ac73093792e",
-   "hash": "1cf9d16969a6b6e4",
-   "bytes": 6524476
-  },
-  "europe-2024/nice-french-riviera/videos/d6788468aa654a42a3b8ff872e8da361": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2024/nice-french-riviera/videos/d6788468aa654a42a3b8ff872e8da361.mp4",
-   "poster": "/media/europe-2024/nice-french-riviera/videos/d6788468aa654a42a3b8ff872e8da361-poster.jpg",
-   "takenAt": "2024-04-04T12:05:14",
-   "duration": 3.53,
-   "source": "3361803:7eefb8483dfebe01240d1bb2f401b38b",
-   "hash": "32fef60208544367",
-   "bytes": 797508
-  },
-  "europe-2026/positano/photos/img-1636": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1636-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1636-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1636-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1636-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1636-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1636-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1636-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoUABsAPu1eq1AppKOisBgIATAdiWYAtsg0auBtpWNNGS1YY2uyEDa+wQ6EoAD+693Ki8+k7vqTP+g2UKwfbjtETLR/bb34af9PnHxF09i9oHfyC5Xa9iLbxC5PCM2+ZVNcsKtUdKdkswOxK3vDKsv+SsZgGIbRYQOuFB3Z2qf+I6g5s36nLklX8P+zVZ8pSPt67gWPbsvIB7WFKAAAAA==",
-   "takenAt": "2026-10-29T11:02:27",
-   "focus": {
-    "x": 0,
-    "y": 100
-   },
-   "source": "1875014:5422554307dd295373a6d6d52d88825b",
-   "hash": "0000c0c00e490c3e",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1642": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1642-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1642-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1642-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1642-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1642-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1642-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1642-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADQBACdASoUABsAPu1iqE2ppaOiMAgBMB2JZACpJ2QDTgwi4fjbjb5uSSGBhivzzAD9yyVILu5biMDuUayw6Ge/WuCxEaXh2k/ZepNLMQhJvwnKUostscAsWGgB5sEMrJOHkC+Nu5dlB30rWVRb81QzjZxQdaMts7yDwh2pKSdQwbi0DdrXC8oR/sCmgAAA",
-   "takenAt": "2026-10-29T11:21:03",
-   "focus": {
-    "x": 0,
-    "y": 77
-   },
-   "source": "5490435:39321418e81a97e2ee88c8d90ca92aa9",
-   "hash": "b48f78708f2e6330",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1650": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1650-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1650-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1650-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1650-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1650-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1650-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1650-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAAAwBQCdASoUABsAPu1irVAppSQisBgIATAdiUAVgj/8Wz4LJVAOaCl/pwsHXrnJqQW1QAD4WxNphtWsmHVwl9TRM0wEFyqAZp0Bne2MqWB2S/Fw1yuGmZT1KQ5NlA9p64Aoev05RiTsR8vE/IQigRJg1Q3oFk5s43NuMjmDuZHQbRNpA8QkJqqG499LdaG3EffAnE2o1UWv1fJHhjQsKMyTz35JHGuSygLHzx8QrRXf+xufG0eeQubx+ph6CrAAvsp0ZYUqQYwAAA==",
-   "takenAt": "2026-10-29T11:48:11",
-   "focus": {
-    "x": 0,
-    "y": 77
-   },
-   "source": "8185094:1d25665b2d395a481dc3e5229b2df0c8",
-   "hash": "e2a2a45e1d2c4e5e",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1655": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1655-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1655-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1655-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1655-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1655-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1655-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1655-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAAAwBgCdASoUABsAPu1orlCppaQiqAqpMB2JZgCxH5H+Zn/UryyB72CFessOMT4oZFMt2gkbBMMveklgAP3LUCmPmLtgu1K6aB617lg1BCHIEeM7oOzzJqB9pDvwPAnrCl6jL7DhlOAMnwdjDzDrT/LJ8G4cUza4Hki31VQznxs8ios189AsPQ4xMB/dQQZhJZV3i+Jl1kvL/uM0Ha+mZjMsjXPjZaFP4yZRKRNuzawH8huU2EF7C6NS6/eXIORbtdYWsM64oWAdHZtbLSVBvAAA",
-   "takenAt": "2026-10-29T11:49:13",
-   "focus": {
-    "x": 0,
-    "y": 83
-   },
-   "source": "6868080:b6ce034e87f219e225148764c6e29f64",
-   "hash": "8b69e0949acf43e2",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1663": {
-   "type": "photo",
-   "w": 3024,
-   "h": 4032,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1663-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1663-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1663-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1663-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1663-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1663-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1663-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBQCdASoUABsAPu1qqU8ppiOiMBgIATAdiWIAuzlBNKxdgaYEa6/kWZ/7IzgwUbMblLj8BMIwAAD+uNsljloqRFQMEpEiPpbFJ+ESb2WHFDJz+kIVfduM75koky8h5KazSzPZ7eehsYvPPD1gJWA0ewMIeSFEtu6ehBElT3cBZDnRtYQUoZKMEUsZf8IxVMuvSUlNaYZjikxF7uRbxXmmQDHdPQl/cnuM+xdL7LWDSwChVt3n0dsKaXKtIuvIZmc/+haiz3xOUkIYw1IciR8UHJ/gAA==",
-   "takenAt": "2026-10-29T11:57:23",
-   "focus": {
-    "x": 100,
-    "y": 82
-   },
-   "source": "2711460:5cc4deca4e7bc87f898157903a5b72ee",
-   "hash": "4083bf3f877071b1",
-   "focusBy": "attention"
-  },
-  "europe-2026/positano/photos/img-1699": {
-   "type": "photo",
-   "w": 4284,
-   "h": 5712,
-   "variants": [
-    {
-     "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1699-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-160.jpg"
-    },
-    {
-     "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1699-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-480.jpg"
-    },
-    {
-     "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1699-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-960.jpg"
-    },
-    {
-     "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1699-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-1600.jpg"
-    },
-    {
-     "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1699-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1699-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1699-2400.jpg"
-    }
-   ],
-   "placeholder": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAADwBACdASoUABsAPu1kq06ppaOiKA1RMB2JZwDG9A4ouaUi9wBACUbN5wnJ2j/F0AAA/tXE9uD0LbYgCq+qSbcK5T03nQ3ty3vXssH2QL+hTd3iqfl94gmD1J+tnnkX0eS5dfmoEKLJJKQRWgyR7ldHOWR/ny+r/dit40C1EQOV8Q/+vQood+zD0hdHgAAA",
-   "takenAt": "2026-10-29T17:22:00",
+   "placeholder": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACwBQCdASoUABsAPu1ur1KppiQiqAgBMB2JaACdMuN6eIABEzePlAJFv4YODBdJ34AVtDlFxQAA/XBxha3X4iJ74yRisFhVTKRti/EtvZ+16YgNFjvb8QZmoU9mP7A+Vj6gsLZQ8P5SJCtN1SHWkaYJ5BNFtrKmQoA4ZQi3GXFZMCT6qSURMNoAXPIPSgnhHC5dpphyEPOSPVdzbCMAJ34aPqcERLvEi7aPiAHP5f04tyqxzd/h4AgA",
+   "takenAt": "2026-10-31T15:25:41",
    "focus": {
     "x": 0,
     "y": 0
    },
-   "source": "5045539:ff830b78ca3f372c2022fafd712bb63e",
-   "hash": "f3eb3b729f9c5dd1",
+   "source": "3558297:65a234cb07416ce9804b01de6605088e",
+   "hash": "80c4c4d4cccccfcf",
    "focusBy": "attention"
   },
-  "europe-2026/positano/photos/img-1703": {
+  "europe-2026/london/photos/img-1936-2": {
    "type": "photo",
    "w": 3024,
    "h": 4032,
    "variants": [
     {
      "w": 160,
-     "avif": "/media/europe-2026/positano/photos/img-1703-160.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-160.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-160.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1936-2-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2-160.jpg"
     },
     {
      "w": 480,
-     "avif": "/media/europe-2026/positano/photos/img-1703-480.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-480.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-480.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1936-2-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2-480.jpg"
     },
     {
      "w": 960,
-     "avif": "/media/europe-2026/positano/photos/img-1703-960.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-960.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-960.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1936-2-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2-960.jpg"
     },
     {
      "w": 1600,
-     "avif": "/media/europe-2026/positano/photos/img-1703-1600.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-1600.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-1600.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1936-2-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2-1600.jpg"
     },
     {
      "w": 2400,
-     "avif": "/media/europe-2026/positano/photos/img-1703-2400.avif",
-     "webp": "/media/europe-2026/positano/photos/img-1703-2400.webp",
-     "jpg": "/media/europe-2026/positano/photos/img-1703-2400.jpg"
+     "avif": "/media/europe-2026/london/photos/img-1936-2-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2-2400.jpg"
     }
    ],
-   "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAwBQCdASoUABsAPu1grFAppSQisBgIATAdiWMAxNg0aCA1In0tHRTSY2sKD7nQ+ZnJAAD+uR4BrgYXV2xxOOXgjCPHZ0/KWfe+b0aH6E+Ro6XNmpYpWtGWmue+dxHcvrXI6LQRWhT9LnBlRdbzj0HaJ9qBACL5KNP3NtvO8E10GRYLfusCuIhaBzTYEwvAZeygAA==",
-   "takenAt": "2026-10-29T17:25:17",
+   "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoUABsAPu1sq1EppaOiqAqpMB2JZQDA3BIvnnJN2NGU8yz83r7xURWhRdky/AQAAP6yOnL9hv221pJGBGivaHEFpwXNSkFfQ+NefA9o8CCxYxDhBGpFNKu9AIE8jT0bFhNXpygWdfMF+y/+zacKJarQSgKjhI6EZX/7kuRCXC2IzDJQmpvfHEBVfcfoRQhDKttXQ/N8tkiH8fLoT33eycAAAAA=",
+   "takenAt": "2026-10-31T16:14:00",
    "focus": {
-    "x": 37,
-    "y": 100
+    "x": 100,
+    "y": 0
    },
-   "source": "1496622:c8154571fa2632f4576336fcebf86d60",
-   "hash": "ff0f02a2c59049cc",
+   "source": "4093365:8a6466162c28f998fc5648163f3523f3",
+   "hash": "67c1e3d33637377f",
+   "focusBy": "attention",
+   "duplicateOf": "europe-2026/london/photos/img-1936"
+  },
+  "europe-2026/london/photos/img-1936": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1936-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1936-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1936-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1936-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1936-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1936-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1936-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoUABsAPu1sq1EppaOiqAqpMB2JZQDA3BIvnnJN2NGU8yz83r7xURWhRdky/AQAAP6yOnL9hv221pJGBGivaHEFpwXNSkFfQ+NefA9o8CCxYxDhBGpFNKu9AIE8jT0bFhNXpygWdfMF+y/+zacKJarQSgKjhI6EZX/7kuRCXC2IzDJQmpvfHEBVfcfoRQhDKttXQ/N8tkiH8fLoT33eycAAAAA=",
+   "takenAt": "2026-10-31T16:14:00",
+   "focus": {
+    "x": 100,
+    "y": 0
+   },
+   "source": "4093365:b64fe5e59fc64b3e2f5e524d9f493da5",
+   "hash": "67c1e3d33637377f",
    "focusBy": "attention"
   },
-  "europe-2026/positano/videos/img-1639": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1639.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1639-poster.jpg",
-   "takenAt": "2026-10-29T11:13:12",
-   "duration": 2.67,
-   "source": "8777629:b29cc9c8e7b2f00ef9670c201a970e9c",
-   "hash": "00291d1b3a1d1d13",
-   "bytes": 1088890
+  "europe-2026/london/photos/img-1937": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1937-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1937-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1937-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1937-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1937-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1937-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1937-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1937-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1937-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1937-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1937-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1937-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1937-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1937-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1937-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRg4BAABXRUJQVlA4IAIBAABQBgCdASoUABsAPu1mrE+ppaQiMBgIATAdiWwAnTLjdWaB4f4B4MMIcWkXkwZCCgTjXEnfBdngK3dkIADeZEQHxXdi0HOtIC3LKL3cl3Vn8UakKTOADIQoiW2gNAGKYx64k1vNWQG6i/3Ii1n92Gbbg3gje4eHJGBkmxhOdHsKZSNod+fe79mo2EC6DYYJqk04UsPhybHgObaMC8i+QxfBsFDziPSCjWvCNp+HaUcHQ1IUGfGG9pw1vXNimJC/ylh/FGLYeDcxf1kc16mWze6NzK2p2Xaahb7EvyBIXPlkUZIag37ZSk5n6sR+wuEuaikRlnktyOrMuxSuPIz6MQSq0AA=",
+   "takenAt": "2026-10-31T16:35:05",
+   "focus": {
+    "x": 0,
+    "y": 83
+   },
+   "source": "4501132:1c88558193b2431a772a1e08330f996e",
+   "hash": "5b7b7edd3797f67b",
+   "focusBy": "attention"
   },
-  "europe-2026/positano/videos/img-1649": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1649.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1649-poster.jpg",
-   "takenAt": "2026-10-29T11:47:30",
-   "duration": 28.24,
-   "source": "91405356:28f421d837f22b4be55cd34c42bd8fb0",
-   "hash": "24d1e52a84500034",
-   "bytes": 11735389
+  "europe-2026/london/photos/img-1949": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1949-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1949-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1949-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1949-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1949-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1949-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1949-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1949-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1949-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1949-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1949-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1949-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1949-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1949-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1949-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAABQBQCdASoUABsAPu1qrlCppaQiqAqpMB2JbACdMy/BJXli+caJonCiUmPPLwqIuOA1mAAA+ky/5CMPl4e25jIqVNKetM2jB9E0l8ITf2HMHN7uvuUeyFUMBlZHGH3T8ZDHWEMDtlYvKlkyXMVlTL6RKAUhsNC0JC3GnHKGoTZRNdG2059E/bDwXaiwJ6g/l7Gegu+LSMvFyL+xvp2goeovZ4SwFvQtFPluumb8Gv1n5gR8DlZnrbrKktGFxKbNcL/JBmkuize7XUy4/EdbmcZTNR3GDQB007022AJAAAA=",
+   "takenAt": "2026-10-31T20:48:14",
+   "focus": {
+    "x": 100,
+    "y": 77
+   },
+   "source": "4958999:e4b04f8996d67945b502cf9686da7f20",
+   "hash": "c8304c9dcce8e008",
+   "focusBy": "attention"
   },
-  "europe-2026/positano/videos/img-1656": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1656.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1656-poster.jpg",
-   "takenAt": "2026-10-29T11:49:27",
-   "duration": 6.73,
-   "source": "21708305:251af285320536623a4480683b014df9",
-   "hash": "8f8a4ec6050d8919",
-   "bytes": 3072401
+  "europe-2026/london/photos/img-1952": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1952-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1952-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1952-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1952-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1952-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1952-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1952-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1952-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1952-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1952-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1952-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1952-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1952-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1952-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1952-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAADQBQCdASoUABsAPu1mrE+ppSQiMBgIATAdiWoAvdGM7naWMsGEXOZGm20iT4KtRrwWrkIU+K6AAP7y253JPH5Xis3hZXM5U3aamiPGa40/9FbbuR/j/TfWSaNEfvJZgqSFum+sv8oNCnPWPDyVu9j5KQbFX5AKjHaqzfdku+KT3C1sgIoXW5zK+bpkNHWudEWhFP1OXoPP90JJxz3VLFhBogV+bcBkLPZpcUHUm7CvO5Ja4k10TgiwOM/TKxjl8YOStiF65h9PqRIAAAA=",
+   "takenAt": "2026-10-31T22:15:46",
+   "focus": {
+    "x": 88,
+    "y": 50
+   },
+   "source": "3867524:115ada6d1c698789a8b6c45bda1215ef",
+   "hash": "31e527372361413c",
+   "focusBy": "attention"
   },
-  "europe-2026/positano/videos/img-1657": {
-   "type": "video",
-   "w": 720,
-   "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1657.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1657-poster.jpg",
-   "takenAt": "2026-10-29T11:51:18",
-   "duration": 12.6,
-   "source": "40973665:11c491646dbfe005dc0157dd4dc3ab99",
-   "hash": "526c2f438123030f",
-   "bytes": 6189173
+  "europe-2026/london/photos/img-1953": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1953-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1953-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1953-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1953-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1953-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1953-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1953-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1953-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1953-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1953-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1953-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1953-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1953-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1953-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1953-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwBACdASoUABsAPu1srFEppaQiqAqpMB2JZwDLpDTv4O0g/cRBhHSwXavAXYdQAP75v4Ys6cuZHIMoxETO/UyLHR1zc0a7QRx1P6McBfU6gat556wWNmTwFRnYJtd7XdPmLgLGAAA=",
+   "takenAt": "2026-10-31T22:49:13",
+   "focus": {
+    "x": 0,
+    "y": 56
+   },
+   "source": "1219708:2a2426ccc06c3354f1fea119d1125c89",
+   "hash": "0603178f0929330b",
+   "focusBy": "attention"
   },
-  "europe-2026/positano/videos/img-1668": {
+  "europe-2026/london/photos/img-1954": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/london/photos/img-1954-160.avif",
+     "webp": "/media/europe-2026/london/photos/img-1954-160.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1954-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/london/photos/img-1954-480.avif",
+     "webp": "/media/europe-2026/london/photos/img-1954-480.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1954-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/london/photos/img-1954-960.avif",
+     "webp": "/media/europe-2026/london/photos/img-1954-960.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1954-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/london/photos/img-1954-1600.avif",
+     "webp": "/media/europe-2026/london/photos/img-1954-1600.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1954-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/london/photos/img-1954-2400.avif",
+     "webp": "/media/europe-2026/london/photos/img-1954-2400.webp",
+     "jpg": "/media/europe-2026/london/photos/img-1954-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBQCdASoUABsAPu1ep06ppKMiMBgMATAdiWcAzjg0b+NEC9sZv62vOzd6nE/ezSjYAP74Sja3EqJk4+ZE02cmnpRs95ovl40F0qGYRy0rP5NLfO1gaXOlEu0wPD3xjRWAAAAA",
+   "takenAt": "2026-10-31T22:49:17",
+   "focus": {
+    "x": 12,
+    "y": 50
+   },
+   "source": "1314630:bdc54d4e856cab0cc3f0d6bd7d3e6566",
+   "hash": "03030b8d89a9b1ab",
+   "focusBy": "attention"
+  },
+  "europe-2026/london/videos/img-1846": {
    "type": "video",
    "w": 720,
    "h": 1280,
-   "src": "/media/europe-2026/positano/videos/img-1668.mp4",
-   "poster": "/media/europe-2026/positano/videos/img-1668-poster.jpg",
-   "takenAt": "2026-10-29T12:08:00",
-   "duration": 3.47,
-   "source": "11589139:38d84de83bc79663dd28ba86be70dc3f",
-   "hash": "67a6a4ee4ec836fb",
-   "bytes": 1208675
+   "src": "/media/europe-2026/london/videos/img-1846.mp4",
+   "poster": "/media/europe-2026/london/videos/img-1846-poster.jpg",
+   "takenAt": "2026-10-31T13:52:39",
+   "duration": 15.34,
+   "source": "49816876:db548f070162a6ee4fa293800e5da928",
+   "hash": "4d051c4870860004",
+   "bytes": 5727931
+  },
+  "europe-2026/london/videos/img-1871": {
+   "type": "video",
+   "w": 720,
+   "h": 1280,
+   "src": "/media/europe-2026/london/videos/img-1871.mp4",
+   "poster": "/media/europe-2026/london/videos/img-1871-poster.jpg",
+   "takenAt": "2026-10-31T14:14:20",
+   "duration": 13.4,
+   "source": "42907613:d6a48adcff8489ca0cd320aa76bd0696",
+   "hash": "98b04a130800c000",
+   "bytes": 3397782
   }
  }
 }

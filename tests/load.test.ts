@@ -4,13 +4,14 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const FIXTURES = path.resolve(__dirname, "fixtures/content");
 
 /** Load the content module fresh with a given environment (drafts on/off, dev server or real build). */
-async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production"; today?: string }) {
+async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production"; today?: string; includeScheduled?: boolean }) {
   vi.resetModules();
   // A fixed "today" keeps the scheduled fixtures (publish date 2027-01-15) independent of the real date.
   vi.stubEnv("CONTENT_TODAY", env.today ?? "2026-10-30");
   vi.stubEnv("CONTENT_DIR", FIXTURES);
   vi.stubEnv("NODE_ENV", env.nodeEnv ?? "production");
   vi.stubEnv("SHOW_DRAFTS", env.showDrafts ? "1" : "");
+  vi.stubEnv("INCLUDE_SCHEDULED", env.includeScheduled ? "1" : "");
   return import("@/lib/content/load");
 }
 
@@ -87,6 +88,16 @@ describe("editor list formats", () => {
   it("getTrips_showDraftsFlag_previewsScheduledTrip", async () => {
     const { getTrips } = await loadWith({ showDrafts: true });
     expect(getTrips().map((t) => t.slug)).toContain("scheduled");
+  });
+
+  it("getTrips_mediaUploadIncludesScheduled_includesScheduledTrip", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, includeScheduled: true });
+    expect(getTrips().map((t) => t.slug)).toContain("scheduled");
+  });
+
+  it("getTrips_mediaUploadIncludesScheduled_stillHidesDrafts", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, includeScheduled: true });
+    expect(getTrips().map((t) => t.slug)).not.toContain("hidden");
   });
 
   it("getPosts_publishedAtInFuture_hidesPost", async () => {

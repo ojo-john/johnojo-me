@@ -49,10 +49,15 @@ export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === "1" || IS_PREVIEW;
 /** A missing photo is fatal only in a real build; while editing locally it's skipped until `npm run media` runs. */
 const LENIENT_MEDIA = process.env.NODE_ENV !== "production" || SHOW_DRAFTS;
 /**
+ * `npm run media:upload` only: scheduled (not draft) content counts as public, so its photos are already in
+ * the public bucket on publish day. The daily scheduled publish rebuilds the site but doesn't upload media.
+ */
+const INCLUDE_SCHEDULED = process.env.INCLUDE_SCHEDULED === "1";
+/**
  * Not a draft, and its publish date (if any) has arrived. SHOW_DRAFTS shows scheduled things too, so they
  * can be checked ahead of time.
  */
-const visible = (s: Status, publishAt?: string) => SHOW_DRAFTS || (s !== "draft" && isDue(publishAt, today()));
+const visible = (s: Status, publishAt?: string) => SHOW_DRAFTS || (s !== "draft" && (INCLUDE_SCHEDULED || isDue(publishAt, today())));
 
 class ContentError extends Error {
   constructor(file: string, detail: string) {
