@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { mediaId, originalKeyToId, sourceKey } from "../scripts/lib/ids";
-import { planBackup, planDeletes, planPublish, planPull } from "../scripts/lib/sync-plan";
+import { idsMissingWebCopies, planBackup, planDeletes, planPublish, planPull, webCopyOwners } from "../scripts/lib/sync-plan";
 
 const obj = (key: string, etag = "aaa", size = 10) => ({ key, etag, size });
 
@@ -52,6 +52,14 @@ describe("planPull", () => {
     expect(planPull([obj(key, "e1", 5)], { [id]: sourceKey(5, "e1", undefined) }, { [id]: { rotate: 90 } })).toEqual([key]);
   });
 
+  it("planPull_webCopiesMissing_isDownloadedAgainThoughUnchanged", () => {
+    expect(planPull([obj(key, "e1", 5)], { [id]: sourceKey(5, "e1", undefined) }, {}, new Set([id]))).toEqual([key]);
+  });
+
+  it("planPull_webCopiesMissingButDeletedInEditor_isNotDownloaded", () => {
+    expect(planPull([obj(key)], {}, { [id]: { delete: true } }, new Set([id]))).toEqual([]);
+  });
+
   it("planPull_editorPreviewsAndStrayObjects_areIgnored", () => {
     expect(planPull([obj("_previews/x.jpg"), obj("trip/city/photos/notes.txt"), obj("trip/_old/photos/a.jpg")], {}, {})).toEqual([]);
   });
@@ -89,5 +97,26 @@ describe("planDeletes", () => {
 
   it("planPull_videoTrimChanged_isDownloadedAgain", () => {
     expect(planPull([obj(key, "e", 5)], { [id]: sourceKey(5, "e", undefined) }, { [id]: { trim: { start: 1, end: 5 } } })).toEqual([key]);
+  });
+});
+
+describe("idsMissingWebCopies", () => {
+  const owners = webCopyOwners({
+    "t/c/photos/a": { variants: [{ avif: "/media/t/c/photos/a-160.avif", webp: "/media/t/c/photos/a-160.webp", jpg: "/media/t/c/photos/a-160.jpg" }] },
+    "t/c/videos/v": { src: "https://media.example/media/t/c/videos/v.mp4", poster: "/media/t/c/videos/v-poster.jpg" },
+  });
+
+  it("idsMissingWebCopies_oneSizeMissing_remakesThatPhoto", () => {
+    const wanted = ["media/t/c/photos/a-160.avif", "media/t/c/photos/a-160.webp", "media/t/c/photos/a-160.jpg"];
+    expect(idsMissingWebCopies(wanted, new Set(wanted.slice(0, 2)), owners)).toEqual(new Set(["t/c/photos/a"]));
+  });
+
+  it("idsMissingWebCopies_everythingStored_isEmpty", () => {
+    const wanted = ["media/t/c/videos/v.mp4", "media/t/c/videos/v-poster.jpg"];
+    expect(idsMissingWebCopies(wanted, new Set(wanted), owners).size).toBe(0);
+  });
+
+  it("idsMissingWebCopies_keyNotInManifest_isIgnored", () => {
+    expect(idsMissingWebCopies(["media/x/y/photos/z-160.jpg"], new Set(), owners).size).toBe(0);
   });
 });

@@ -27,7 +27,7 @@ permissions:
 jobs:
   media:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120 # a full remake of a trip (photos and clips) after lost web copies can take an hour
     env:
       R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}

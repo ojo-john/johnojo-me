@@ -37,6 +37,11 @@ const CACHE = path.join(ROOT, ".cache", "media.json");
 // 160 px serves thumbnails; the larger sizes serve cards, heroes and the full-screen viewer.
 const WIDTHS = [160, 480, 960, 1600, 2400];
 const KEEP_UNSEEN = process.env.MEDIA_KEEP_UNSEEN === "1";
+/** Whether an entry's first web file exists in public/ (a clip too long to publish has none, which is fine). */
+const webCopiesHere = (e: { type: string; variants?: { jpg: string }[]; src?: string; poster?: string }) => {
+  const first = e.type === "photo" ? e.variants?.[0]?.jpg : e.src || e.poster;
+  return !first || fs.existsSync(path.join(ROOT, "public", first));
+};
 /** Cloudflare Pages rejects files over 25 MiB; larger clips belong on YouTube (unlisted) or R2. */
 const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
 
@@ -336,7 +341,9 @@ async function main() {
           // Before source keys existed, the skip test was size + modified time (+ turn); honour it once.
           const turn = edit?.rotate ?? 0;
           const legacy = !existing?.source && cache[file]?.key === `${stat.size}:${stat.mtimeMs}${turn ? `:r${turn}` : ""}` && !edit?.crop;
-          if (existing && (existing.source === source || legacy)) {
+          // Already made from these bytes, and its web copies are here (the cloud job downloads an original
+          // again when its copies went missing from storage, so they're made again rather than skipped).
+          if (existing && (existing.source === source || legacy) && webCopiesHere(existing)) {
             existing.source = source;
             skipped++;
             // Clips processed before the trim tool: add their length and the editor's untrimmed working copy.

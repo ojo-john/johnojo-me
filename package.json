@@ -20,7 +20,7 @@
     "media:backup": "tsx scripts/backup-originals.ts",
     "media:usage": "tsx scripts/storage-usage.ts",
     "indexnow": "tsx scripts/indexnow.ts",
-    "media:pull": "tsx scripts/pull-originals.ts",
+    "media:pull": "tsx --conditions=react-server scripts/pull-originals.ts",
     "schedule:due": "tsx scripts/scheduled-due.ts",
     "media:publish": "npm run media && npm run media:backup && npm run media:upload",
     "perf": "node scripts/perf.mts",

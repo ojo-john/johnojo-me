@@ -13,9 +13,9 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { accountBytes, assertWithinBudget } from "./lib/budget-guard";
-import { DRAFT_MEDIA_PREFIX } from "../src/lib/media-admin/handlers";
 import { loadEnvFile, r2Store, type ObjectStore } from "./lib/store";
 import { planPublish, type PublishPlan } from "./lib/sync-plan";
+import { DRAFT_MEDIA_PREFIX, wantedMedia } from "./lib/wanted-media";
 
 const ROOT = path.join(process.cwd(), "public");
 const TYPES: Record<string, string> = { ".avif": "image/avif", ".webp": "image/webp", ".jpg": "image/jpeg", ".mp4": "video/mp4" };
@@ -25,18 +25,12 @@ const CACHE_CONTROL = "public, max-age=604800";
 async function main() {
   loadEnvFile();
   const dryRun = process.argv.includes("--dry-run");
-  // Read content as the live build does (no drafts, local /media paths), plus scheduled content: its photos
-  // must be in place before its publish day, because the scheduled rebuild doesn't upload anything.
-  Object.assign(process.env, { NODE_ENV: "production", SHOW_DRAFTS: "", INCLUDE_SCHEDULED: "1", MEDIA_BASE_URL: "" });
-  const { getTrips, getTripsIncludingDrafts } = await import("../src/lib/content/load");
-  const { publicMediaKeys } = await import("../src/lib/content/public-media");
-
+  const { publicKeys, draftKeys } = await wantedMedia();
   const md5 = (file: string) => crypto.createHash("md5").update(fs.readFileSync(file)).digest("hex");
   const local = (key: string) => (fs.existsSync(path.join(ROOT, key)) ? md5(path.join(ROOT, key)) : null);
-  const publicKeys = publicMediaKeys(getTrips());
   const wanted = new Map([...publicKeys].map((key) => [key, local(key)] as const));
   // Bucket key → local key ("_drafts/media/x" is served from public/media/x).
-  const draftWanted = new Map([...publicMediaKeys(getTripsIncludingDrafts())].filter((key) => !publicKeys.has(key)).map((key) => [DRAFT_MEDIA_PREFIX + key, local(key)] as const));
+  const draftWanted = new Map([...draftKeys].map((key) => [DRAFT_MEDIA_PREFIX + key, local(key)] as const));
 
   const store = r2Store("R2_BUCKET");
   const originals = r2Store("R2_ORIGINALS_BUCKET");
