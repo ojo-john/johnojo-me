@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import type { z } from "zod";
-import { hiddenNote, isDue, todayIn } from "./schedule";
+import { comingLabel, hiddenNote, isDue, isTeased, todayIn } from "./schedule";
 import { buildAdminMediaIndex, type AdminMediaIndex } from "./admin-media";
 import { buildNeeds } from "./needs";
 import { applyOrder, parsePhotoEdits } from "./photo-edits";
@@ -155,7 +155,19 @@ export type VisitEntry = Visit & {
   videos: MediaItem[];
   coverPhoto: MediaItem | null;
 };
-export type TripEntry = Trip & { slug: string; visits: VisitEntry[]; coverPhoto: MediaItem | null };
+/**
+ * A trip, stop or post marked Coming soon whose date is still ahead: listed with its name and date only
+ * (no page, photos or details) until that day. Never shown in the preview, which shows the real thing.
+ */
+export interface Teaser {
+  slug: string;
+  title: string;
+  /** "Coming 4 Nov" */
+  label: string;
+}
+const teaser = (s: Status, publishAt?: string) => !SHOW_DRAFTS && isTeased(s, publishAt, today());
+
+export type TripEntry = Trip & { slug: string; visits: VisitEntry[]; coverPhoto: MediaItem | null; comingSoon: Teaser[] };
 
 /** Folder names are slugified by the media script, so "nice + french riviera" becomes "nice-french-riviera". */
 const folderSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -232,6 +244,10 @@ function buildTrips(show: (s: Status, publishAt?: string) => boolean): TripEntry
   return slugs
     .map((tripSlug) => {
       const trip = parseFile(dir("trips", tripSlug, "trip.yaml"), tripSchema);
+      const comingSoon = visitFiles
+        .filter(({ v }) => v.trip === tripSlug && teaser(v.status, v.publishAt))
+        .sort((a, b) => a.v.order - b.v.order)
+        .map(({ v, visitSlug }) => ({ slug: visitSlug, title: places[v.destination]?.city ?? visitSlug, label: comingLabel(v.publishAt!, today()) }));
       const visits = visitFiles
         .filter(({ v }) => v.trip === tripSlug)
         .map(({ file, v, visitSlug }) => {
@@ -256,13 +272,20 @@ function buildTrips(show: (s: Status, publishAt?: string) => boolean): TripEntry
         .sort((a, b) => a.order - b.order);
       const allPhotos = visits.flatMap((v) => v.photos);
       const coverPhoto = withFocus((trip.cover && allPhotos.find((p) => p.id.endsWith(trip.cover as string))) || visits.find((v) => v.coverPhoto)?.coverPhoto || null, trip.coverFocus);
-      return { ...trip, slug: tripSlug, visits, coverPhoto } satisfies TripEntry;
+      return { ...trip, slug: tripSlug, visits, coverPhoto, comingSoon } satisfies TripEntry;
     })
     .filter((t) => show(t.status, t.publishAt))
     .sort((a, b) => b.year - a.year || (b.start ?? "").localeCompare(a.start ?? ""));
 }
 
 export const getTrips = memo((): TripEntry[] => buildTrips(visible));
+/** Trips marked Coming soon, soonest first. */
+export const getTripTeasers = memo((): Teaser[] =>
+  buildTrips((st, publishAt) => teaser(st, publishAt) || st !== "draft")
+    .filter((t) => teaser(t.status, t.publishAt))
+    .sort((a, b) => (a.publishAt ?? "").localeCompare(b.publishAt ?? ""))
+    .map((t) => ({ slug: t.slug, title: t.title, label: comingLabel(t.publishAt!, today()) })),
+);
 /** Drafts included whatever the build: only for `npm run media:upload`, to find drafts' photos. */
 export const getTripsIncludingDrafts = memo((): TripEntry[] => buildTrips(() => true));
 
@@ -365,7 +388,7 @@ function splitFrontmatter(file: string): { data: unknown; body: string } {
   return { data: YAML.parse(m[1]), body: m[2] };
 }
 
-export const getPosts = memo((): PostEntry[] =>
+const getAllPosts = memo((): PostEntry[] =>
   list(dir("journal"), ".mdx")
     .map((f) => {
       const file = dir("journal", f);
@@ -375,9 +398,18 @@ export const getPosts = memo((): PostEntry[] =>
       const words = body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
       return { ...result.data, slug: f.replace(/\.mdx$/, ""), body, minutes: Math.max(1, Math.round(words / 220)) };
     })
-    // V1 publishes public posts only; other visibility tiers are modelled but never built.
-    .filter((p) => visible(p.status, p.publishedAt) && (p.visibility === "public" || SHOW_DRAFTS))
     .sort((a, b) => (b.publishedAt ?? "9999").localeCompare(a.publishedAt ?? "9999")),
+);
+
+// V1 publishes public posts only; other visibility tiers are modelled but never built.
+export const getPosts = memo((): PostEntry[] => getAllPosts().filter((p) => visible(p.status, p.publishedAt) && (p.visibility === "public" || SHOW_DRAFTS)));
+
+/** Public posts marked Coming soon, soonest first. */
+export const getPostTeasers = memo((): (Teaser & { category: string })[] =>
+  getAllPosts()
+    .filter((p) => p.visibility === "public" && teaser(p.status, p.publishedAt))
+    .reverse()
+    .map((p) => ({ slug: p.slug, title: p.title, category: p.category, label: comingLabel(p.publishedAt!, today()) })),
 );
 
 export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug);

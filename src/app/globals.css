@@ -376,6 +376,11 @@ footer.foot { background: var(--media); color: var(--on-fill); padding-block: 56
 /* The photo is pinned to the frame: as a grid item its height:100% has nothing definite to resolve against,
    so it would overflow and show only its top, ignoring the focus point. */
 .tcard .ph { position: relative; }
+/* Coming soon: name and date only. Dashed, flat and not a link, so it reads as "not yet". */
+.card.teaser { border-style: dashed; box-shadow: none; }
+.tcard.teaser:hover { transform: none; box-shadow: none; }
+.tcard.teaser .ph { background: var(--chalk); color: var(--ink-2); border-bottom-style: dashed; }
+.teaser .flag.future { color: var(--ink); align-self: flex-start; }
 .tcard .ph picture { position: absolute; inset: 0; }
 .tcard .ph img { width: 100%; height: 100%; object-fit: cover; }
 .tcard .bd { padding: 18px; display: flex; flex-direction: column; gap: 6px; }

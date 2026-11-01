@@ -15,14 +15,34 @@ export interface PostCard {
   sample: boolean;
 }
 
+/** A post marked Coming soon: title and date only, until it publishes. */
+export interface PostTeaser {
+  slug: string;
+  title: string;
+  category: string;
+  label: string;
+}
+
 /** Search across titles, summaries, categories and tags, plus category filters. Runs in the browser. */
-export function JournalIndex({ posts, categories }: { posts: PostCard[]; categories: string[] }) {
+export function JournalIndex({ posts, categories, teasers = [] }: { posts: PostCard[]; categories: string[]; teasers?: PostTeaser[] }) {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("");
   const list = useMemo(() => {
     const s = q.trim().toLowerCase();
     return posts.filter((p) => (!cat || p.category === cat) && (!s || [p.title, p.dek, p.category, ...p.tags].join(" ").toLowerCase().includes(s)));
   }, [posts, q, cat]);
+  // Teasers sit above the posts while nothing is being searched.
+  const upcoming = q.trim() ? [] : teasers.filter((t) => !cat || t.category === cat);
+  const teaserItems = upcoming.map((t) => (
+    <li key={t.slug}>
+      <div className="card teaser">
+        <span className="k2">
+          {t.category} · <span className="flag future">{t.label}</span>
+        </span>
+        <b>{t.title}</b>
+      </div>
+    </li>
+  ));
 
   return (
     <section className="wrap" style={{ paddingBlock: "32px 96px" }} aria-labelledby="posts-h">
@@ -40,13 +60,16 @@ export function JournalIndex({ posts, categories }: { posts: PostCard[]; categor
           </button>
         ))}
       </div>
-      {posts.length === 0 ? (
+      {posts.length === 0 && upcoming.length ? (
+        <ul className="res">{teaserItems}</ul>
+      ) : posts.length === 0 ? (
         <div className="empty-card">
           <h3>First posts coming soon</h3>
           <p style={{ marginTop: 8, color: "var(--ink-2)" }}>Bible studies, reflections, essays and engineering notes will appear here.</p>
         </div>
       ) : list.length ? (
         <ul className="res" aria-live="polite">
+          {teaserItems}
           {list.map((p) => (
             <li key={p.slug}>
               <Link className="card" href={`/journal/${p.slug}/`}>

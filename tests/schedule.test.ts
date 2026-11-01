@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { hiddenNote, isDue, somethingDue, todayIn } from "@/lib/content/schedule";
+import { comingLabel, hiddenNote, isDue, isTeased, somethingDue, todayIn } from "@/lib/content/schedule";
 
 describe("todayIn", () => {
   it("todayIn_justAfterMidnightUtc_isStillYesterdayInDallas", () => {
@@ -72,3 +72,34 @@ describe("hiddenNote", () => {
     expect(hiddenNote("published", undefined, "2026-10-31")).toBeNull();
   });
 });
+
+describe("coming soon", () => {
+  it("hiddenNote_comingSoonLater_saysTeaser", () => {
+    expect(hiddenNote("coming-soon", "2026-11-04", "2026-11-02")).toBe("Coming-soon teaser until 4 Nov 2026");
+  });
+
+  it("isTeased_comingSoonWithFutureDate_isTeased", () => {
+    expect(isTeased("coming-soon", "2026-11-04", "2026-11-02")).toBe(true);
+  });
+
+  it("isTeased_dateArrived_isPublishedNotTeased", () => {
+    expect(isTeased("coming-soon", "2026-11-04", "2026-11-04")).toBe(false);
+  });
+
+  it("isTeased_noDate_isNotTeased", () => {
+    expect(isTeased("coming-soon", undefined, "2026-11-02")).toBe(false);
+  });
+
+  it("isTeased_publishedWithFutureDate_staysHidden", () => {
+    expect(isTeased("published", "2026-11-04", "2026-11-02")).toBe(false);
+  });
+
+  it("comingLabel_thisYear_leavesYearOut", () => {
+    expect(comingLabel("2026-11-04", "2026-11-02")).toBe("Coming 4 Nov");
+  });
+
+  it("comingLabel_nextYear_includesYear", () => {
+    expect(comingLabel("2027-01", "2026-11-02")).toBe("Coming 1 Jan 2027");
+  });
+});
+

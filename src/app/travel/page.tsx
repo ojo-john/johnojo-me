@@ -6,7 +6,7 @@ import { Picture } from "@/components/Picture";
 import { RankingLab } from "@/components/travel/RankingLab";
 import { TravelMap, type MapStop } from "@/components/travel/TravelMap";
 import { slim, toView } from "@/components/travel/view";
-import { getSite, getTrips } from "@/lib/content/load";
+import { getSite, getTrips, getTripTeasers } from "@/lib/content/load";
 import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
 import { mapFor, regionOf } from "@/lib/geo";
@@ -58,6 +58,18 @@ export default function TravelPage() {
           Trips
         </h2>
         <div className="trip-list">
+          {/* Coming soon: name and date only, not a link, until the trip publishes. */}
+          {getTripTeasers().map((t) => (
+            <div key={t.slug} className="card tcard teaser">
+              <div className="ph">
+                <span>Coming soon</span>
+              </div>
+              <div className="bd">
+                <span className="flag future">{t.label}</span>
+                <h3>{t.title}</h3>
+              </div>
+            </div>
+          ))}
           {trips.map((t, i) => (
             <Link key={t.slug} className="card tcard" href={`/travel/${t.slug}/`} prefetch={false}>
               <div className="ph">{t.coverPhoto ? <Picture photo={{ ...t.coverPhoto, alt: "" }} sizes="(max-width: 760px) 100vw, 33vw" priority={i === 0} /> : <span>Photos coming</span>}</div>

@@ -36,7 +36,26 @@ export function somethingDue(publishDates: string[], today: string, yesterday: s
 export function hiddenNote(status: string, publishOn: string | undefined, today: string): string | null {
   if (status === "draft") return "Draft · not public";
   if (isDue(publishOn, today)) return null;
-  const day = publishOn!.length === 7 ? `${publishOn}-01` : publishOn!;
-  const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-  return `Hidden until ${label}`;
+  const label = dayLabel(publishOn!, true);
+  return status === "coming-soon" ? `Coming-soon teaser until ${label}` : `Hidden until ${label}`;
+}
+
+/** "4 Nov 2026" (or "4 Nov" without the year). A month alone (YYYY-MM) means its first day. */
+function dayLabel(publishOn: string, withYear: boolean): string {
+  const day = publishOn.length === 7 ? `${publishOn}-01` : publishOn;
+  return new Date(`${day}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", ...(withYear ? { year: "numeric" } : {}), timeZone: "UTC" });
+}
+
+/**
+ * Whether something shows as a "Coming soon" teaser today: marked Coming soon, with a publish date still
+ * ahead. Without a date there's nothing to count down to, so it's simply published.
+ */
+export function isTeased(status: string, publishOn: string | undefined, today: string): boolean {
+  return status === "coming-soon" && Boolean(publishOn) && !isDue(publishOn, today);
+}
+
+/** A teaser's label: "Coming 4 Nov", with the year when it isn't this year's. */
+export function comingLabel(publishOn: string, today: string): string {
+  const day = publishOn.length === 7 ? `${publishOn}-01` : publishOn;
+  return `Coming ${dayLabel(day, day.slice(0, 4) !== today.slice(0, 4))}`;
 }

@@ -119,6 +119,36 @@ describe("editor list formats", () => {
     expect(getTripsIncludingDrafts().map((t) => t.slug)).toContain("hidden");
   });
 
+  it("getTripTeasers_comingSoonWithFutureDate_listsNameAndDate", async () => {
+    const { getTripTeasers } = await loadWith({ showDrafts: false });
+    expect(getTripTeasers()).toEqual([{ slug: "teased", title: "Teased", label: "Coming 1 Feb 2027" }]);
+  });
+
+  it("getTrips_comingSoonWithFutureDate_hidesTheTripItself", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false });
+    expect(getTrips().map((t) => t.slug)).not.toContain("teased");
+  });
+
+  it("getTripTeasers_dateArrived_tripIsPublishedInstead", async () => {
+    const { getTrips, getTripTeasers } = await loadWith({ showDrafts: false, today: "2027-02-01" });
+    expect([getTrips().map((t) => t.slug).includes("teased"), getTripTeasers()]).toEqual([true, []]);
+  });
+
+  it("getTripTeasers_previewBuild_showsTheRealTripInstead", async () => {
+    const { getTripTeasers } = await loadWith({ showDrafts: false, preview: true });
+    expect(getTripTeasers()).toEqual([]);
+  });
+
+  it("trip_comingSoonStop_isTeasedOnItsTrip", async () => {
+    const { getTrip } = await loadWith({ showDrafts: false });
+    expect(getTrip("trip-b")?.comingSoon).toEqual([{ slug: "lisbon-later", title: "Lisbon", label: "Coming 1 Mar 2027" }]);
+  });
+
+  it("getPostTeasers_comingSoonPost_listsTitleCategoryAndDate", async () => {
+    const { getPosts, getPostTeasers } = await loadWith({ showDrafts: false });
+    expect([getPosts().some((p) => p.slug === "teased"), getPostTeasers()]).toEqual([false, [{ slug: "teased", title: "Teased post", category: "Essays", label: "Coming 1 Feb 2027" }]]);
+  });
+
   it("getPosts_publishedAtInFuture_hidesPost", async () => {
     const { getPosts } = await loadWith({ showDrafts: false });
     expect(getPosts().map((p) => p.slug)).not.toContain("scheduled");

@@ -78,6 +78,11 @@ export default async function TripPage({ params }: PageProps<"/travel/[trip]">) 
               {trip.style ? <span>{trip.style}</span> : null}
               {matchCount ? <span>{matchCount} {matchCount === 1 ? "match" : "matches"}</span> : null}
               {hiddenOnSite(trip.status, trip.publishAt) ? <span>{hiddenOnSite(trip.status, trip.publishAt)}</span> : null}
+              {trip.comingSoon.map((c) => (
+                <span key={c.slug}>
+                  {c.title}: {c.label.toLowerCase()}
+                </span>
+              ))}
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { JournalIndex } from "@/components/journal/JournalIndex";
-import { getPosts, journalIsOpen } from "@/lib/content/load";
+import { getPosts, getPostTeasers, journalIsOpen } from "@/lib/content/load";
 import { usedCategories } from "@/lib/content/post-categories";
 import { formatDate } from "@/lib/format";
 
@@ -26,6 +26,7 @@ export default function JournalPage() {
       </header>
       <JournalIndex
         categories={usedCategories(posts)}
+        teasers={getPostTeasers()}
         posts={posts.map((p) => ({
           slug: p.slug,
           title: p.title,

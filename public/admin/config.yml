@@ -58,7 +58,7 @@ collections:
         label: Status
         widget: select
         default: draft
-        hint: "Draft: only you see it, on your computer. Published: live for everyone. Coming soon is treated like Published for now."
+        hint: "Draft: only you see it. Published: live for everyone (with a Publish on date, hidden until that day). Coming soon: with a Publish on date, Travel shows a card with just the name and date until that day, then the trip appears."
         options:
           - { label: "Draft (hidden)", value: draft }
           - { label: Coming soon, value: coming-soon }
@@ -133,8 +133,8 @@ collections:
         widget: select
         required: false
         default: published
-        hint: "Leave blank to follow the trip. Draft hides just this city, even on a published trip."
-        options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+        hint: "Leave blank to follow the trip. Draft hides just this city, even on a published trip. Coming soon, with a Publish on date: the trip page shows \"London: coming 31 Oct\" until that day."
+        options: [{ label: "Draft (hidden)", value: draft }, { label: Coming soon, value: coming-soon }, { label: Published, value: published }]
       - { name: publishAt, label: Publish on, widget: datetime, type: date, format: YYYY-MM-DD, required: false, hint: "Optional. Hides just this stop until that day, then it appears on its own." }
       - { name: photoFolder, label: Photo folder name, required: false, hint: "Only if the media folder isn't named after the city, e.g. nice + french riviera" }
       - { name: arrive, label: Arrived, widget: datetime, type: date, format: YYYY-MM-DD, required: false }
@@ -297,8 +297,8 @@ collections:
         label: Status
         widget: select
         default: draft
-        hint: "The Journal stays hidden from the site until at least one post is Published and Public."
-        options: [{ label: "Draft (hidden)", value: draft }, { label: Published, value: published }]
+        hint: "The Journal stays hidden from the site until at least one post is Published and Public. Coming soon, with a future Published on date: the Journal lists just the title and date until that day."
+        options: [{ label: "Draft (hidden)", value: draft }, { label: Coming soon, value: coming-soon }, { label: Published, value: published }]
       - name: visibility
         label: Who can read it
         widget: select
