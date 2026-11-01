@@ -4,6 +4,7 @@ order: 8
 publishAt: 2026-10-31 # appears on its own on the day of Chelsea v Manchester United
 arrive: 2026-10-30
 highlights:
+  Food: "The buffet at Suuyar, a Nigerian suya spot on Peckham Rye. Really good."
   Football: "Chelsea 2–0 Manchester United at Stamford Bridge, the highlight of the trip"
 matches:
   - home: Chelsea
@@ -12,10 +13,10 @@ matches:
     competition: Premier League
     date: 2026-10-31
     stadium: Stamford Bridge
-    writeUp: "The highlight of my trip. We were bad in the first half, and Fofana kept making mistakes, but in the second half we played them off the park. Morgan Rogers scored in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer scored the penalty a minute later. The win put Chelsea back into the top four."
+    writeUp: "The highlight of my whole trip. The first half was a struggle: we couldn't get going, and Fofana kept making mistakes at the back. After the break it was a different team, and we played United off the park. Morgan Rogers broke the deadlock in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer put the penalty away a minute later to send Chelsea back into the top four."
 cover: photos/img-1911
 mediaMeta:
-  photos/img-1723: { caption: "Suuyar, a suya spot on Peckham Rye", alt: "The lit-up Suuyar African charcoal grill shopfront at night" }
+  photos/img-1723: { caption: "Suuyar on Peckham Rye, where I had the buffet", alt: "The lit-up Suuyar African charcoal grill shopfront at night" }
   photos/img-1725: { caption: "The 63 bus in Peckham", alt: "A red double-decker on route 63 to Honor Oak under a street lamp" }
   photos/img-1732: { caption: "Ealing Town Hall", alt: "The town hall's stone clock tower against a blue sky, beside a bus stop sign" }
   photos/img-1843: { caption: "The officials", alt: "An assistant referee holding out his arm, with the fourth official at the pitchside monitor" }
