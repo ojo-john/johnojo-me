@@ -157,4 +157,9 @@ drafts, the banner and noindex, and turns metrics off), stashes it in `.preview-
 site, then moves the preview into `out/admin/preview/` (`scripts/place-preview.mjs`). `public/_headers`
 gives the preview the site's CSP rather than the editor's.
 
+Photos: `npm run media:upload` keeps scheduled content's photos on the public bucket, so they're in place
+on publish day (the daily scheduled publish only rebuilds). Drafts' photos never go public: they go to the
+private bucket under `_drafts/media/`, and the preview loads them through `/admin/draft-media/`
+(`functions/admin/draft-media`, same login), using the `ORIGINALS` binding the upload page already has.
+
 Note: the repository is public, so hidden content is readable on GitHub; "hidden" means not on the site.

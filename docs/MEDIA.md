@@ -13,7 +13,8 @@
    publish). Captions live in "Photo captions"; covers and framing in "Cover photo" / "Cover framing".
    Saving a visit re-runs the job automatically when a photo or clip needs re-making.
 
-Nothing needs to stay on your Mac. Folders whose names start with `_` are never published.
+Scheduled trips' photos are published straight away (the trip itself stays hidden until its date); drafts' photos
+stay private and show only in the admin preview. Nothing needs to stay on your Mac. Folders whose names start with `_` are never published.
 
 ## Local commands (optional)
 

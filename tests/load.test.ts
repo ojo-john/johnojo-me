@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const FIXTURES = path.resolve(__dirname, "fixtures/content");
 
 /** Load the content module fresh with a given environment (drafts on/off, dev server or real build). */
-async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production"; today?: string; includeScheduled?: boolean }) {
+async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "production"; today?: string; includeScheduled?: boolean; preview?: boolean }) {
   vi.resetModules();
   // A fixed "today" keeps the scheduled fixtures (publish date 2027-01-15) independent of the real date.
   vi.stubEnv("CONTENT_TODAY", env.today ?? "2026-10-30");
@@ -12,6 +12,8 @@ async function loadWith(env: { showDrafts: boolean; nodeEnv?: "development" | "p
   vi.stubEnv("NODE_ENV", env.nodeEnv ?? "production");
   vi.stubEnv("SHOW_DRAFTS", env.showDrafts ? "1" : "");
   vi.stubEnv("INCLUDE_SCHEDULED", env.includeScheduled ? "1" : "");
+  vi.stubEnv("PREVIEW_BUILD", env.preview ? "1" : "");
+  vi.stubEnv("MEDIA_BASE_URL", "https://media.example");
   return import("@/lib/content/load");
 }
 
@@ -98,6 +100,23 @@ describe("editor list formats", () => {
   it("getTrips_mediaUploadIncludesScheduled_stillHidesDrafts", async () => {
     const { getTrips } = await loadWith({ showDrafts: false, includeScheduled: true });
     expect(getTrips().map((t) => t.slug)).not.toContain("hidden");
+  });
+
+  it("getTrips_previewBuild_draftPhotosComeFromThePrivateRoute", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, preview: true });
+    const photo = getTrips().find((t) => t.slug === "hidden")?.visits[0].photos[0];
+    expect(photo?.type === "photo" && photo.variants[0].webp).toBe("/admin/draft-media/hidden/lisbon/photos/img-0001-480.webp");
+  });
+
+  it("getTrips_previewBuild_publishedPhotosStayOnPublicStorage", async () => {
+    const { getTrips } = await loadWith({ showDrafts: false, preview: true });
+    const photo = getTrips().find((t) => t.slug === "trip-a")?.visits.find((v) => v.slug === "porto")?.photos[0];
+    expect(photo?.type === "photo" && photo.variants[0].webp).toBe("https://media.example/media/trip-a/porto/photos/img-0001-480.webp");
+  });
+
+  it("getTripsIncludingDrafts_liveBuild_includesDraftTrip", async () => {
+    const { getTripsIncludingDrafts } = await loadWith({ showDrafts: false });
+    expect(getTripsIncludingDrafts().map((t) => t.slug)).toContain("hidden");
   });
 
   it("getPosts_publishedAtInFuture_hidesPost", async () => {

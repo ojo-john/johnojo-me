@@ -210,7 +210,20 @@ const getVisitFiles = memo(() =>
   }),
 );
 
-export const getTrips = memo((): TripEntry[] => {
+/**
+ * In the admin preview, draft trips and stops load their photos from the private bucket through
+ * /admin/draft-media/ (functions/admin/draft-media), behind the admin login; `npm run media:upload` puts
+ * them there. Everything else comes from the public bucket as on the live site.
+ */
+const DRAFT_MEDIA_PATH = "/admin/draft-media/";
+function fromDraftMedia(item: MediaItem): MediaItem {
+  const move = (u: string) => u.replace(`${MEDIA_BASE_URL}/media/`, DRAFT_MEDIA_PATH);
+  if (item.type === "photo") return { ...item, variants: item.variants.map((v) => ({ ...v, avif: move(v.avif), webp: move(v.webp), jpg: move(v.jpg) })) };
+  return { ...item, src: move(item.src), poster: move(item.poster) };
+}
+
+/** Every trip and stop that passes `show`, newest trip first. */
+function buildTrips(show: (s: Status, publishAt?: string) => boolean): TripEntry[] {
   const places = getDestinations();
   const tripsDir = dir("trips");
   const slugs = fs.existsSync(tripsDir) ? fs.readdirSync(tripsDir).filter((d) => fs.existsSync(path.join(tripsDir, d, "trip.yaml"))) : [];
@@ -224,7 +237,8 @@ export const getTrips = memo((): TripEntry[] => {
         .map(({ file, v, visitSlug }) => {
           const place = places[v.destination];
           if (!place) throw new ContentError(file, `  - destination: "${v.destination}" has no content/destinations/<id>.yaml`);
-          const media = resolveMedia(file, visitSlug, v, trip, place);
+          const resolved = resolveMedia(file, visitSlug, v, trip, place);
+          const media = IS_PREVIEW && (trip.status === "draft" || v.status === "draft") ? resolved.map(fromDraftMedia) : resolved;
           const photos = media.filter((m) => m.type === "photo");
           const coverPhoto = withFocus((v.cover && photos.find((p) => p.id.endsWith(v.cover as string))) || photos[0] || null, v.coverFocus);
           return {
@@ -238,15 +252,19 @@ export const getTrips = memo((): TripEntry[] => {
             coverPhoto,
           } satisfies VisitEntry;
         })
-        .filter((v) => visible(v.status, v.publishAt))
+        .filter((v) => show(v.status, v.publishAt))
         .sort((a, b) => a.order - b.order);
       const allPhotos = visits.flatMap((v) => v.photos);
       const coverPhoto = withFocus((trip.cover && allPhotos.find((p) => p.id.endsWith(trip.cover as string))) || visits.find((v) => v.coverPhoto)?.coverPhoto || null, trip.coverFocus);
       return { ...trip, slug: tripSlug, visits, coverPhoto } satisfies TripEntry;
     })
-    .filter((t) => visible(t.status, t.publishAt))
+    .filter((t) => show(t.status, t.publishAt))
     .sort((a, b) => b.year - a.year || (b.start ?? "").localeCompare(a.start ?? ""));
-});
+}
+
+export const getTrips = memo((): TripEntry[] => buildTrips(visible));
+/** Drafts included whatever the build: only for `npm run media:upload`, to find drafts' photos. */
+export const getTripsIncludingDrafts = memo((): TripEntry[] => buildTrips(() => true));
 
 /** Every photo per visit and per trip, hidden ones included, for the editor's cover picker. Drafts too. */
 export function getAdminMediaIndex(): AdminMediaIndex {

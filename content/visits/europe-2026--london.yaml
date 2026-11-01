@@ -7,8 +7,10 @@ matches:
   - home: Chelsea
     away: Manchester United
     score: 2–0
-    stadium: Stamford Bridge
+    competition: Premier League
     date: 2026-10-31
+    stadium: Stamford Bridge
+    writeUp: "Goalless at half-time. Morgan Rogers scored in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer scored the penalty a minute later. The win put Chelsea back into the top four."
 cover: photos/img-1911
 mediaMeta:
   photos/img-1723: { caption: "Suuyar, an African charcoal grill", alt: "The lit-up Suuyar shopfront at night" }
@@ -19,7 +21,7 @@ mediaMeta:
   photos/img-1867: { caption: "Chelsea v Manchester United", alt: "Chelsea and Manchester United players spread across the pitch" }
   photos/img-1880: { caption: "A goal kick", alt: "A goalkeeper in green lining up a goal kick" }
   photos/img-1886: { caption: "Full time: Chelsea 2–0 Manchester United", alt: "The stadium screen showing the full-time score" }
-  photos/img-1896: { caption: "After the game", alt: "A Chelsea player, number 17, being interviewed on the pitch" }
+  photos/img-1896: { caption: "Morgan Rogers after the game", alt: "Morgan Rogers, Chelsea's number 17 and scorer of the first goal, being interviewed on the pitch" }
   photos/img-1911: { caption: "At Stamford Bridge", alt: "John in a selfie in the stands with the pitch behind him" }
   photos/img-1917: { caption: "Didier Drogba", alt: "A number 11 panel and a photo of Drogba celebrating with a trophy, on a wall at the stadium" }
   photos/img-1919: { caption: "John Terry", alt: "A number 26 captain's panel and a photo of Terry lifting a trophy, on a wall at the stadium" }

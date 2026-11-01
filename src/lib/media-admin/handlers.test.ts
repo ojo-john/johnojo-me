@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import type { AccessDeps } from "../metrics/access";
 import { STORAGE_BUDGET_BYTES } from "./budget";
-import { handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, parseRange, validOriginalKey, type BucketBinding, type ListableBucket, type MediaAdminEnv } from "./handlers";
+import { handleDraftMedia, handlePreview, handleProcess, handleUpload, MAX_UPLOAD_BYTES, parseRange, validOriginalKey, type BucketBinding, type ListableBucket, type MediaAdminEnv } from "./handlers";
 
 vi.spyOn(console, "log").mockImplementation(() => {});
 vi.spyOn(console, "warn").mockImplementation(() => {});
@@ -291,5 +291,35 @@ describe("handleUpload storage budget", () => {
     const endless: ListableBucket = { list: async () => ({ objects: [{ size: 1 }], truncated: true, cursor: "again" }) };
     const res = await handleUpload(upload(KEY), env({ MEDIA: endless }), access());
     expect(res.status).toBe(503);
+  });
+});
+
+describe("handleDraftMedia", () => {
+  const get = (path: string, token = goodToken) => new Request(`https://johnojo.me${path}`, { headers: { "cf-access-jwt-assertion": token } });
+
+  it("handleDraftMedia_noAccessToken_isDenied", async () => {
+    expect((await handleDraftMedia(get("/admin/draft-media/t/c/photos/a-480.webp", ""), env(), access())).status).toBe(403);
+  });
+
+  it("handleDraftMedia_pathEscapingTheFolder_is400", async () => {
+    expect((await handleDraftMedia(get("/admin/draft-media/../_previews/t/c/photos/a.jpg"), env(), access())).status).toBe(400);
+  });
+
+  it("handleDraftMedia_notUploaded_is404", async () => {
+    expect((await handleDraftMedia(get("/admin/draft-media/t/c/photos/a-480.webp"), env(), access())).status).toBe(404);
+  });
+
+  it("handleDraftMedia_existingPhotoSize_servesItPrivatelyWithItsType", async () => {
+    const b = bucket();
+    await b.put("_drafts/media/t/c/photos/a-480.avif");
+    const res = await handleDraftMedia(get("/admin/draft-media/t/c/photos/a-480.avif"), env({ ORIGINALS: b }), access());
+    expect([res.status, res.headers.get("content-type"), res.headers.get("cache-control")]).toEqual([200, "image/avif", "private, max-age=300"]);
+  });
+
+  it("handleDraftMedia_clipPoster_isServedAsJpeg", async () => {
+    const b = bucket();
+    await b.put("_drafts/media/t/c/videos/v-poster.jpg");
+    const res = await handleDraftMedia(get("/admin/draft-media/t/c/videos/v-poster.jpg"), env({ ORIGINALS: b }), access());
+    expect(res.headers.get("content-type")).toBe("image/jpeg");
   });
 });

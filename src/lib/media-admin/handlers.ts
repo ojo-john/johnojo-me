@@ -262,18 +262,38 @@ export function parseRange(header: string | null): { offset: number; length?: nu
  * clip), from the private bucket. Clips honour Range requests, which Safari needs to play and seek.
  */
 export async function handlePreview(req: Request, env: MediaAdminEnv, access: AccessDeps): Promise<Response> {
+  const m = new URL(req.url).pathname.match(/^\/api\/preview\/([a-z0-9-]+\/[a-z0-9-]+\/(?:photos\/[a-z0-9-]+\.jpg|videos\/[a-z0-9-]+\.mp4))$/);
+  return servePrivate(req, env, access, "preview", m && `_previews/${m[1]}`);
+}
+
+/** Bucket prefix for the web copies of draft trips and stops: private, so drafts never reach public storage. */
+export const DRAFT_MEDIA_PREFIX = "_drafts/";
+
+/**
+ * GET /admin/draft-media/<trip>/<city>/photos|videos/<file>: a draft's web copy (every photo size, clip and
+ * poster), for the admin preview. Same login as /admin; drafts' photos are never on the public bucket.
+ */
+export async function handleDraftMedia(req: Request, env: MediaAdminEnv, access: AccessDeps): Promise<Response> {
+  const m = new URL(req.url).pathname.match(/^\/admin\/draft-media\/([a-z0-9-]+\/[a-z0-9-]+\/(?:photos\/[a-z0-9-]+\.(?:avif|webp|jpg)|videos\/[a-z0-9-]+\.(?:mp4|jpg)))$/);
+  return servePrivate(req, env, access, "draft-media", m && `${DRAFT_MEDIA_PREFIX}media/${m[1]}`);
+}
+
+const CONTENT_TYPES: Record<string, string> = { avif: "image/avif", webp: "image/webp", jpg: "image/jpeg", mp4: "video/mp4" };
+
+/** Serves one object from the private bucket to a signed-in admin; `key` is null when the path was invalid. */
+async function servePrivate(req: Request, env: MediaAdminEnv, access: AccessDeps, route: string, key: string | null): Promise<Response> {
   const id = requestId(req);
   if (req.method !== "GET") return json(405, { error: "method-not-allowed" }, { Allow: "GET" });
-  const denied = await gate(req, env, access, "preview", id);
+  const denied = await gate(req, env, access, route, id);
   if (denied) return denied;
   if (!env.ORIGINALS) return json(503, { error: "not-configured" });
-  const m = new URL(req.url).pathname.match(/^\/api\/preview\/([a-z0-9-]+\/[a-z0-9-]+\/(?:photos\/[a-z0-9-]+\.jpg|videos\/[a-z0-9-]+\.mp4))$/);
-  if (!m) return json(400, { error: "invalid-path" });
-  const video = m[1].endsWith(".mp4");
+  if (!key) return json(400, { error: "invalid-path" });
+  const contentType = CONTENT_TYPES[key.slice(key.lastIndexOf(".") + 1)];
+  const video = contentType === "video/mp4";
   const range = video ? parseRange(req.headers.get("range")) : null;
-  const obj = await env.ORIGINALS.get(`_previews/${m[1]}`, range ? { range } : undefined);
+  const obj = await env.ORIGINALS.get(key, range ? { range } : undefined);
   if (!obj) return json(404, { error: "not-found" });
-  const headers: Record<string, string> = { "Content-Type": video ? "video/mp4" : "image/jpeg", "Cache-Control": "private, max-age=300", "X-Robots-Tag": "noindex", "Accept-Ranges": "bytes" };
+  const headers: Record<string, string> = { "Content-Type": contentType, "Cache-Control": "private, max-age=300", "X-Robots-Tag": "noindex", "Accept-Ranges": "bytes" };
   if (!range) return new Response(obj.body, { headers: { ...headers, "Content-Length": String(obj.size) } });
   const end = Math.min(obj.size - 1, range.length ? range.offset + range.length - 1 : obj.size - 1);
   return new Response(obj.body, { status: 206, headers: { ...headers, "Content-Range": `bytes ${range.offset}-${end}/${obj.size}`, "Content-Length": String(end - range.offset + 1) } });

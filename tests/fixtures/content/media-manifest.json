@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-11-01T00:00:00Z",
+  "items": {
+    "hidden/lisbon/photos/img-0001": {
+      "type": "photo", "placeholder": "data:image/webp;base64,AA==",
+      "w": 4,
+      "h": 3,
+      "takenAt": "2026-01-01T10:00:00",
+      "variants": [
+        {
+          "w": 480,
+          "avif": "/media/hidden/lisbon/photos/img-0001-480.avif",
+          "webp": "/media/hidden/lisbon/photos/img-0001-480.webp",
+          "jpg": "/media/hidden/lisbon/photos/img-0001-480.jpg"
+        }
+      ]
+    },
+    "trip-a/porto/photos/img-0001": {
+      "type": "photo", "placeholder": "data:image/webp;base64,AA==",
+      "w": 4,
+      "h": 3,
+      "takenAt": "2026-01-01T10:00:00",
+      "variants": [
+        {
+          "w": 480,
+          "avif": "/media/trip-a/porto/photos/img-0001-480.avif",
+          "webp": "/media/trip-a/porto/photos/img-0001-480.webp",
+          "jpg": "/media/trip-a/porto/photos/img-0001-480.jpg"
+        }
+      ]
+    }
+  }
+}
