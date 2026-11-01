@@ -289,7 +289,7 @@ collections:
       - name: category
         label: Category
         widget: select
-        options: [Bible Study, Faith, Life Lessons, Recipes, Essays, Engineering, Travel Reflections]
+        options: [Bible Study, Faith, Life Lessons, Recipes, Essays, Engineering, Travel Reflections, City Guides]
         hint: "Recipes posts need the Recipe box below filled in; other categories leave it empty."
       - { name: series, label: Series, required: false, hint: "e.g. Strangers and pilgrims · Part 1" }
       - { name: tags, label: Tags, widget: list, required: false }

@@ -245,7 +245,7 @@ export type Project = z.infer<typeof project>;
 
 export const VISIBILITY = ["public", "free", "paid", "private"] as const;
 /** Journal categories, in the order the site lists them. */
-export const POST_CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Recipes", "Essays", "Engineering", "Travel Reflections"] as const;
+export const POST_CATEGORIES = ["Bible Study", "Faith", "Life Lessons", "Recipes", "Essays", "Engineering", "Travel Reflections", "City Guides"] as const;
 export const RECIPE_CATEGORY = "Recipes";
 /** The card at the top of a recipe post. Times are whole minutes; everything else is plain text. */
 export const recipe = z.object({
