@@ -37,6 +37,14 @@ const CACHE = path.join(ROOT, ".cache", "media.json");
 // 160 px serves thumbnails; the larger sizes serve cards, heroes and the full-screen viewer.
 const WIDTHS = [160, 480, 960, 1600, 2400];
 const KEEP_UNSEEN = process.env.MEDIA_KEEP_UNSEEN === "1";
+/**
+ * Two clips are the same size within 5%. Compares the originals' sizes (the start of `source`) when both
+ * are known: the web copies' sizes depend on the encoder, so a clip remade on another machine would stop
+ * matching its copy, and the copy would turn up on the site.
+ */
+const originalSize = (e: { source?: string; bytes?: number }) => Number(e.source?.split(":")[0]) || e.bytes || 0;
+const similarSize = (a: { source?: string; bytes?: number }, b: { source?: string; bytes?: number }) =>
+  Math.abs(originalSize(a) - originalSize(b)) <= 0.05 * Math.max(originalSize(a), 1);
 /** Whether an entry's first web file exists in public/ (a clip too long to publish has none, which is fine). */
 const webCopiesHere = (e: { type: string; variants?: { jpg: string }[]; src?: string; poster?: string }) => {
   const first = e.type === "photo" ? e.variants?.[0]?.jpg : e.src || e.poster;
@@ -447,7 +455,7 @@ async function main() {
             const o = manifest.items[k];
             if (!o.hash || o.type !== e.type) return false;
             if (e.type === "photo") return hamming(o.hash, e.hash as string) <= PHOTO_DUPLICATE_BITS;
-            return hamming(o.hash, e.hash as string) <= VIDEO_DUPLICATE_BITS && Math.abs((o.bytes ?? 0) - (e.bytes ?? 0)) <= 0.05 * Math.max(o.bytes ?? 1, 1);
+            return hamming(o.hash, e.hash as string) <= VIDEO_DUPLICATE_BITS && similarSize(o, e);
           })
         : undefined;
       if (match) {

@@ -40,11 +40,9 @@ async function main() {
   const draftPlan = planPublish(draftWanted, draftExisting, `${DRAFT_MEDIA_PREFIX}media/`);
   console.log(`${wanted.size} public files: ${plan.upload.length} to upload, ${plan.remove.length} to remove, ${plan.unchanged} unchanged.`);
   console.log(`${draftWanted.size} draft files (private): ${draftPlan.upload.length} to upload, ${draftPlan.remove.length} to remove, ${draftPlan.unchanged} unchanged.`);
-  if (plan.missing.length) {
-    // Publishing now would leave holes on the site; stop before changing anything.
-    console.error(`${plan.missing.length} file(s) the site shows are neither in the bucket nor here (run npm run media first), e.g. ${plan.missing[0]}`);
-    process.exit(1);
-  }
+  // Files the site shows that are neither in the bucket nor here: everything else still goes up (one gap
+  // must not hold back the rest), and the run fails at the end so the gap gets noticed.
+  if (plan.missing.length) console.error(`${plan.missing.length} file(s) the site shows are neither in the bucket nor here (run npm run media first): ${plan.missing.slice(0, 5).join(", ")}`);
   // A draft's missing photo only leaves a gap in the admin preview, so it doesn't stop the publish.
   if (draftPlan.missing.length) console.warn(`${draftPlan.missing.length} draft file(s) aren't here yet, so the preview will miss them, e.g. ${draftPlan.missing[0]}`);
   // Free-tier guardrail: measured across both buckets, checked before anything changes (a dry run too).
@@ -62,7 +60,7 @@ async function main() {
 
   const failed = (await sync(store, plan, localPath)) + (await sync(originals, draftPlan, localPath));
   console.log(`${plan.upload.length + plan.remove.length + draftPlan.upload.length + draftPlan.remove.length - failed} uploaded/removed ok, ${failed} failed.`);
-  if (failed) process.exitCode = 1;
+  if (failed || plan.missing.length) process.exitCode = 1;
 }
 
 /** Applies one bucket's plan; returns how many files failed. */
