@@ -5,7 +5,7 @@ import { Picture } from "@/components/Picture";
 import { FlowPattern } from "@/components/home/FlowPattern";
 import { Triptych } from "@/components/home/Triptych";
 import { TripYears } from "@/components/home/TripYears";
-import { getExperience, getPosts, getProjects, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
+import { getExperience, getMediaManifest, getPosts, getProjects, getSite, getTrips, journalIsOpen } from "@/lib/content/load";
 import { usedCategories } from "@/lib/content/post-categories";
 import { travelStats } from "@/lib/content/stats";
 import { formatRange } from "@/lib/format";
@@ -30,6 +30,9 @@ export default function Home() {
   // The newest real post; the preview also lists drafts and samples, which have no date and would sort first.
   const featured = posts.find((p) => p.status === "published" && !p.sample) ?? posts[0];
   const journal = journalIsOpen();
+  // The Journal panel's background: the featured post's cover photo (a media id, e.g. europe-2026/milan/photos/img-0995).
+  const coverEntry = featured?.cover ? getMediaManifest().items[featured.cover] : undefined;
+  const journalCover = coverEntry?.type === "photo" && featured?.cover ? { ...coverEntry, id: featured.cover, caption: null, alt: "" } : null;
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   // The home teaser map shows the region with the most places (Europe today).
   const byRegion = Object.groupBy(places, (p) => regionOf(p.lng, p.lat));
@@ -160,6 +163,12 @@ export default function Home() {
           </Link>
           {journal ? (
           <Link className="panel j" href="/journal/" data-i="2">
+            {journalCover ? (
+              <div className="bg" aria-hidden="true">
+                <Picture photo={journalCover} sizes="(max-width: 900px) 100vw, 40vw" />
+              </div>
+            ) : null}
+            <span className="shade" aria-hidden="true" />
             <span className="kicker">03 · Journal</span>
             <h2>What I&apos;m into</h2>
             <span className="go" aria-hidden="true">→</span>
