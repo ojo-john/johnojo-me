@@ -6,7 +6,7 @@ import { usedCategories } from "@/lib/content/post-categories";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
-  ...pageMeta({ title: "Journal", description: "Bible studies, faith, life lessons, essays and engineering notes.", path: "/journal/" }),
+  ...pageMeta({ title: "Journal", description: "City guides, recipes, Bible studies, essays and engineering notes.", path: "/journal/" }),
   // Built but unlinked and kept out of search until the first post is public.
   ...(journalIsOpen() ? {} : { robots: { index: false, follow: false } }),
 };
@@ -20,8 +20,8 @@ export default function JournalPage() {
           <span className="kicker" style={{ opacity: 0.85 }}>
             03 · Journal
           </span>
-          <h1 style={{ marginTop: 10 }}>What I&apos;m learning</h1>
-          <p className="lede">Bible studies, faith, life lessons, essays and engineering notes.</p>
+          <h1 style={{ marginTop: 10 }}>What I&apos;m into</h1>
+          <p className="lede">City guides, recipes, Bible studies, essays and engineering notes.</p>
         </div>
       </header>
       <JournalIndex

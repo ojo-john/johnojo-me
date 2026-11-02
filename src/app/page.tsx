@@ -27,7 +27,8 @@ export default function Home() {
   const latestMilestone = exp.milestones[exp.milestones.length - 1];
   const latestTrip = trips.find((t) => t.status === "published") ?? trips[0];
   const travelCover = trips.find((t) => t.coverPhoto)?.coverPhoto ?? null;
-  const featured = posts[0];
+  // The newest real post; the preview also lists drafts and samples, which have no date and would sort first.
+  const featured = posts.find((p) => p.status === "published" && !p.sample) ?? posts[0];
   const journal = journalIsOpen();
   const places = Array.from(new Map(trips.flatMap((t) => t.visits).map((v) => [v.place.slug, v.place])).values());
   // The home teaser map shows the region with the most places (Europe today).
@@ -160,10 +161,10 @@ export default function Home() {
           {journal ? (
           <Link className="panel j" href="/journal/" data-i="2">
             <span className="kicker">03 · Journal</span>
-            <h2>What I&apos;m learning</h2>
+            <h2>What I&apos;m into</h2>
             <span className="go" aria-hidden="true">→</span>
             <div className="more">
-              <p style={{ fontFamily: "var(--f-read)", fontSize: 22, lineHeight: 1.3 }}>Bible studies, faith, life lessons, essays and engineering notes.</p>
+              <p style={{ fontFamily: "var(--f-read)", fontSize: 22, lineHeight: 1.3 }}>City guides, recipes, Bible studies, essays and engineering notes.</p>
               <div className="tags">
                 {usedCategories(posts.filter((p) => !p.sample)).map((c) => (
                   <span key={c}>{c}</span>
