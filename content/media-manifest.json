@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-01T21:32:59.169Z",
+ "generatedAt": "2026-11-02T22:22:57.134Z",
  "items": {
   "europe-2021/london/photos/img-2294": {
    "type": "photo",
@@ -14290,6 +14290,512 @@
    "source": "42907613:d6a48adcff8489ca0cd320aa76bd0696",
    "hash": "98b04a130800c000",
    "bytes": 3397782
+  },
+  "europe-2026/dublin/photos/img-1963": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1963-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1963-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1963-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1963-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1963-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1963-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1963-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1963-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1963-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1963-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1963-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1963-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1963-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1963-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1963-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQBACdASoUABsAPuFcqU2opSQiMAwBEBwJQBdmab3/wHkDqXygNN57cbRuL97QAAD8fz7wG0RUve7fBHGGA/XvV27rQpnixet3M7DDcnUJRo5btgJ5iotB2nraaRU03Wazl/p89+dipbvyJup4f5XJCfoGIOVc3bagdfQWWcVcAk6ej1miIAAA",
+   "takenAt": "2026-11-02T14:17:27",
+   "focus": {
+    "x": 100,
+    "y": 66
+   },
+   "source": "1842171:af226b5d7e428d293baa4cf08f9d1d16",
+   "hash": "280bfdf8e713dd91",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1967": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1967-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1967-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1967-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1967-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1967-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1967-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1967-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1967-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1967-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1967-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1967-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1967-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1967-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1967-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1967-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAAAQBgCdASoUABsAPu1qrVCppiQiqAqpMB2JQBj8sZPNC4KY3QksV6QzxdFVpxNnW08QtXLA6u7J2kAA/nKCwYKzjtod3D1l93xT6p3hJ5OGzUzSD41yv4pRRIaeYlqXZVsPVtOsuJkxlVf5p1OAINTINZuxz/JGB6sP/T44W/m1OOeiM4KMagL+L8+Kza6NNuev1BqxpSCMH5MX0CA7GkO5T9om8CTDhfH2ILD9nH/T09HHnu6g7YLcoB1NYhfvOe1fRtiezt/2K6QJ19Ad+OfTe+mwAAAA",
+   "takenAt": "2026-11-02T16:10:08",
+   "focus": {
+    "x": 0,
+    "y": 61
+   },
+   "source": "3985382:ca4e301b2c2e17311a487a8f36d66fa6",
+   "hash": "81186ec5adb3162c",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1971": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1971-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1971-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1971-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1971-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1971-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1971-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1971-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1971-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1971-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1971-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1971-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1971-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1971-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1971-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1971-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABwBQCdASoUABsAPu1orlCppaQiqAqpMB2JZQDMc1/DyqjN6oOlsbz/P0EP1dJ4BLe08/kAAP7L/PJr+N3Ck0dYSCU7xJU2Y0iX2tl01tGPdzt81VKlcok5mIOHojrsrvvngit2f2F2mh8GnbXgBdbzr0Kf7PsfgewsWOlr6fxzcjECs0pxJRxoAO/yM3fZq63kpiZfqPJs5R2vInYxud4nU22W/U4wlLKAeO2Um2uLLIt9a4h/gVMRz5K63A+3ximGGb0sxanHj82Nd/DmjIWuLxSqgbSK/e2BlTd7zJ9gAA==",
+   "takenAt": "2026-11-02T16:10:33",
+   "focus": {
+    "x": 65,
+    "y": 52
+   },
+   "source": "3425005:0adecd2331d5d9072eb959431b62193f",
+   "hash": "999ad0d39332e7f0",
+   "focusBy": "faces"
+  },
+  "europe-2026/dublin/photos/img-1974": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1974-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1974-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1974-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1974-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1974-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1974-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1974-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1974-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1974-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1974-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1974-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1974-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1974-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1974-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1974-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAACQBACdASoUABsAPu1mqk2ppaQiMAgBMB2JQBYdg3aGpSpRZhzpp35R/ATPxsAA/Zhad6CzqVx4QxYTbdRkxxtfrKlUbJMGpLPpCUq9XwiFyfpd6t8S6/jfM591Z/Zl1lLSDpzBBjEi1U2k5QO6EW62BkNFOh8c2TUvksvqPtZ5qVlPpfAn/yAJQ/YPIgUlyQgeGrJoaUUElRIFZg5rwWNxAAA=",
+   "takenAt": "2026-11-02T16:10:51",
+   "focus": {
+    "x": 38,
+    "y": 61
+   },
+   "source": "3474770:c2218245be77d72d1c6c75635f54a5fa",
+   "hash": "665453931b0f6e4b",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1979": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1979-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1979-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1979-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1979-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1979-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1979-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1979-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1979-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1979-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1979-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1979-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1979-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1979-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1979-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1979-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACQBQCdASoUABsAPu1kqU2ppaOiMAgBMB2JQBUipDE2wHjzN9O8bZRT3zlhdhZPq50sa/EfAAD+54RrsdGyo1J4DmtMdznezko7H2vHEDnqduJx8njXcMODtsLjaUjcG64/Rp58tl1rpRBk+9Y4dGVKmJk5zlB+Gbrs1ytYRt4ZyTTAnptjBPhQ5ft6kQOYOqywTCGvYPZpJBoGuAQLHFly0m/SGyc/ZSaAAA==",
+   "takenAt": "2026-11-02T16:11:32",
+   "focus": {
+    "x": 58,
+    "y": 51
+   },
+   "source": "6783190:7d071799f53404d64bee2e3172714296",
+   "hash": "9c0721e0e4a4e4e5",
+   "focusBy": "faces"
+  },
+  "europe-2026/dublin/photos/img-1981": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1981-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1981-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1981-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1981-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1981-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1981-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1981-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1981-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1981-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1981-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1981-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1981-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1981-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1981-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1981-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoUABsAPu1iqE2ppaOiMAgBMB2JYwDE2CHhllcMWVxMXRRVnnoEmdEKMEPCFMAA/tNNjGbbzIUwSyJ732VkvRNwEbaei7yiP5Q4jLsNFcjrSCunnZmdcKNgQn8adViRZrm+8f4e+Kc1NVW2C/YrVYRkbCYtpmO0Ak8afPZdyhTjtEblMg/52elEk/2BDFK+IiykBp4RAX1TNQDOFFKrr0LPoKMPchmg0wOVKtogdivUFwIrgoDQjlDJ9pyoGAAA",
+   "takenAt": "2026-11-02T16:42:11",
+   "focus": {
+    "x": 37,
+    "y": 18
+   },
+   "source": "1947228:8c9bcd0bd21a6aeb881d6c0c184899c8",
+   "hash": "071732f0909436a6",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1987": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1987-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1987-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1987-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1987-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1987-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1987-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1987-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1987-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1987-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1987-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1987-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1987-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1987-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1987-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1987-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoUABsAPuVep02pJSOiMAwBIByJQBYj20hWBtCqu1oLxEIl0ZKPJgZXfpBQMIAA/JvP7w7OY5kMIdbvZfxsXhBZNoGRCmK6EzqJDHrFDP5S0WYg+56ANkLp8QWr+mMUrlq0+VuP/AInYe2b89BEkbIktof9TjJEcDdFsUCYeVfTq/hcYU8Db2Izk4lqdB8ceAA=",
+   "takenAt": "2026-11-02T16:46:49",
+   "focus": {
+    "x": 100,
+    "y": 72
+   },
+   "source": "2314632:f31422df7d943cd065198da3c3649874",
+   "hash": "c840300900220930",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1991": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1991-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1991-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1991-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1991-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1991-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1991-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1991-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1991-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1991-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1991-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1991-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1991-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1991-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1991-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1991-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAABQBQCdASoUABsAPu1mrE+ppSQiMBgIATAdiWw8ahjHkLVGSAfQA4Y6YBLR74yz7eKCDigA/u6wYnJiSs5GQ7qWLYYpJuROr4yBxG+4aPBQg3TVP1I+WPmgFDKAKvG9R4lIgjCYRviLDv7XNlrIQWgMF8mgfanWCOZTKPPJURLZ79TYkoxPEx5AB8YJZxycPXfYlF8fmS1YVjTvwfdYfKJ8ESiUalMQ4OrhT8KX0FW3Ku2HVHQi/ZsI4MvPN23vy1LFfdT7fysCvSpk4AA=",
+   "takenAt": "2026-11-02T17:10:47",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "source": "4852333:603f8e2536e520a70fc644b7e844fa95",
+   "hash": "53737311d2d7dac2",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1997": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1997-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1997-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1997-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1997-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1997-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1997-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1997-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1997-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1997-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1997-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1997-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1997-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1997-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1997-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1997-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAABQBgCdASoUABsAPu1qsFAppaSiqAqpMB2JbACdMoR6eNHsK/Ci0QCwOFciVXbCNwMg6hqqQ0DwXBzFwAD+2aTq/bkSjxk8Gc8gE7ul7oj7JbpqZBJ7gen8U5hpHSHcC7nI9OA+LlWodHcnM+wBlp1OjUIyxTbkDL1sVS+gByFWw+KIAHrNnRSDejg4+28LoT0xgXhtRKXiSF8/rnhcWBxuDvuGbR08nEilb4zouNQ7axQvJhzqez/wPg1+fm86q1apV4KFv0m49MvxGsHfynd2GV+UyvH4Opyuui6mg7HqaHA9dW2olyNgDNgAAA==",
+   "takenAt": "2026-11-02T17:36:36",
+   "focus": {
+    "x": 0,
+    "y": 100
+   },
+   "source": "2510429:3120370dab1af87a17cf8f9399b66447",
+   "hash": "e663b0d041c4e4f3",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-1999": {
+   "type": "photo",
+   "w": 4284,
+   "h": 5712,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-1999-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1999-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1999-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-1999-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1999-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1999-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-1999-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1999-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1999-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-1999-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1999-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1999-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-1999-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-1999-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-1999-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAADQBQCdASoUABsAPu1krE+ppSQiMBgIATAdiWQAtujJif4B6vq7aDD29piRJnYYU3RL6m/LPNgAAP7y197Xgd+xSHWdk731rH/DYEJxwzXCt92eV1MriJs8/WAlHWKn7DLqg3tQXBPmx7wOoUhWFlTFvXzmwfz/AF6AvTzJpUf2aUOV2Qj0bAPV2HLZ+UmC+XXFdtKImqZyqO3hOKPXQufcc6m79WlIXSvEqhI7A1VTuN16/8FRJZMfrDkIAA==",
+   "takenAt": "2026-11-02T17:42:36",
+   "focus": {
+    "x": 100,
+    "y": 66
+   },
+   "source": "5271008:1620558768a5ee14b4462293b180a65c",
+   "hash": "8c0f97cb6ba92363",
+   "focusBy": "attention"
+  },
+  "europe-2026/dublin/photos/img-2002": {
+   "type": "photo",
+   "w": 3024,
+   "h": 4032,
+   "variants": [
+    {
+     "w": 160,
+     "avif": "/media/europe-2026/dublin/photos/img-2002-160.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-2002-160.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-2002-160.jpg"
+    },
+    {
+     "w": 480,
+     "avif": "/media/europe-2026/dublin/photos/img-2002-480.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-2002-480.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-2002-480.jpg"
+    },
+    {
+     "w": 960,
+     "avif": "/media/europe-2026/dublin/photos/img-2002-960.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-2002-960.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-2002-960.jpg"
+    },
+    {
+     "w": 1600,
+     "avif": "/media/europe-2026/dublin/photos/img-2002-1600.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-2002-1600.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-2002-1600.jpg"
+    },
+    {
+     "w": 2400,
+     "avif": "/media/europe-2026/dublin/photos/img-2002-2400.avif",
+     "webp": "/media/europe-2026/dublin/photos/img-2002-2400.webp",
+     "jpg": "/media/europe-2026/dublin/photos/img-2002-2400.jpg"
+    }
+   ],
+   "placeholder": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABwBQCdASoUABsAPu1kqU2ppaOiMAgBMB2JaACdMuz8e8ABOhuMn1nV0EqOWzx/82Ah0sfAAP7G9aJbynrUS2qmVOZXh9HsYLpRErTsG0+hXff3kBn+lMOAn3WbAgfXYUWpAwxiK96UC20JR2KGVvnpuGeYY4OAgJeWV4gOFNl3c4nkzHmgsrTHI0z5dXwEq5ITbMtImxvRS6vFamv96WPyoi8AUbT4N69A/VNDEP8mM3tEiUVAOLMXP73+9TSFGIEFVtZGDoBOAAAA",
+   "takenAt": "2026-11-02T17:46:19",
+   "focus": {
+    "x": 100,
+    "y": 100
+   },
+   "source": "2378682:c9014af843335d2744a2fef074962e0f",
+   "hash": "e1e9e9e1e4c6d2da",
+   "focusBy": "attention"
   }
  }
 }

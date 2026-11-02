@@ -1,3 +1,17 @@
 trip: europe-2026
 destination: dublin
 order: 9
+arrive: 2026-11-02 # the day of the first photos; change if you got in earlier
+cover: photos/img-1974
+mediaMeta:
+  photos/img-1963: { caption: "Balbriggan lighthouse", alt: "The white harbour lighthouse at the end of the pier, with the beach and the Irish Sea in front" }
+  photos/img-1967: { caption: "The Portal on O'Connell Street", alt: "The round Portal screen showing a live view of people in another city's street" }
+  photos/img-1971: { caption: "James Joyce on North Earl Street", alt: "The bronze statue of James Joyce with his cane and hat, on a stone plinth" }
+  photos/img-1974: { caption: "The Spire", alt: "The Spire's steel needle rising over O'Connell Street under a blue sky" }
+  photos/img-1979: { caption: "O'Connell Street", alt: "A white stone statue of a robed figure with a raised hand, in front of autumn trees" }
+  photos/img-1981: { caption: "Clock tower", alt: "An ornate stone corner building topped with a clock tower and cupola" }
+  photos/img-1987: { caption: "Winter in Dublin", alt: "Christmas lights spelling Winter in Dublin strung across a street of red-brick buildings at dusk" }
+  photos/img-1991: { caption: "Bowling", alt: "A bowler on a neon-lit lane under purple graffiti walls, with the scoreboard overhead" }
+  photos/img-1997: { caption: "Bowling", alt: "The lane's scoreboard asking players to start a new game, under purple lights" }
+  photos/img-1999: { caption: "Arcade basketball", alt: "Someone shooting at a row of arcade basketball hoops lit up in red" }
+  photos/img-2002: { caption: "Window shopping", alt: "Cartier watches on white stands in a red shop display" }
