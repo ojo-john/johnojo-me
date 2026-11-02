@@ -3,9 +3,9 @@ destination: dublin
 order: 9
 arrive: 2026-11-02 # the day of the first photos; change if you got in earlier
 cover: photos/img-1974
-summary: "I spent two days in Dublin with my cousins, and I liked it. I wish I'd stayed longer to explore, with things like the Guinness Storehouse tour at St. James's Gate, and maybe a drive out west."
+summary: "I spent two days in Dublin with my cousins, and I liked it. I wish I'd stayed longer to explore, with things like the Guinness Storehouse tour at St. James's Gate, and maybe a drive out west to the Atlantic coast: the Cliffs of Moher, Galway and Connemara's mountains and coastline."
 liked: "Spending it with my cousins"
-wouldReturn: { answer: "yes", why: "I wish I'd stayed longer: next time, the Guinness Storehouse and a drive west to Galway, the Cliffs of Moher and Connemara." }
+wouldReturn: { answer: "yes", why: "I wish I'd stayed longer: next time, the Guinness Storehouse and the drive west." }
 mediaMeta:
   photos/img-1963: { caption: "Balbriggan lighthouse", alt: "The white harbour lighthouse at the end of the pier, with the beach and the Irish Sea in front" }
   photos/img-1967: { caption: "The Portal on O'Connell Street", alt: "The round Portal screen showing a live view of people in another city's street" }
