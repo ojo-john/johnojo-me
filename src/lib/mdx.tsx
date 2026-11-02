@@ -1,6 +1,7 @@
 import "server-only";
 import { evaluate } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
+import { Budget, Day, Days, Glance, Photo, Photos, Pick, Picks } from "@/components/journal/Guide";
 import { Fn, Ref } from "@/components/journal/Reader";
 import { passage, passageUrl } from "./scripture";
 
@@ -50,6 +51,14 @@ export async function renderPost(source: string) {
         Ref,
         Fn,
         Pull,
+        Glance,
+        Photo,
+        Photos,
+        Days,
+        Day,
+        Picks,
+        Pick,
+        Budget,
         h2: ({ children }: { children?: React.ReactNode }) => <h2 id={headingId(textOf(children))}>{children}</h2>,
       }}
     />

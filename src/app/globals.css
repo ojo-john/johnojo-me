@@ -108,7 +108,7 @@ main { padding-top: var(--header-h); min-height: 70vh; }
 .find kbd { font-family: var(--f-mono); font-size: 11px; border: 1.5px solid var(--rule); border-radius: 4px; padding: 1px 5px; }
 .find .ico { font-size: 19px; line-height: 1; }
 /* Preview site only: a fixed reminder that this isn't what visitors see. */
-.preview-bar { position: fixed; left: 12px; bottom: 12px; z-index: 60; margin: 0; padding: 8px 14px; border-radius: 99px; background: var(--sun); color: var(--on-sun); font: 700 13px var(--f-ui); box-shadow: 0 6px 18px color-mix(in srgb, var(--night) 30%, transparent); pointer-events: none; }
+.preview-bar { position: fixed; right: 12px; bottom: 12px; z-index: 60; margin: 0; padding: 8px 14px; border-radius: 99px; background: var(--sun); color: var(--on-sun); font: 700 13px var(--f-ui); box-shadow: 0 6px 18px color-mix(in srgb, var(--night) 30%, transparent); pointer-events: none; }
 .theme-btn { width: 44px; min-height: 44px; padding: 0; justify-content: center; display: inline-flex; flex: none; }
 
 /* ---------- reveal on scroll (content is visible without JS) ---------- */
@@ -463,6 +463,45 @@ footer.foot { background: var(--media); color: var(--on-fill); padding-block: 56
 .prose { font-family: var(--f-read); font-size: 20.5px; line-height: 1.7; max-width: 34em; }
 .prose > * + * { margin-top: 1em; }
 .prose h2 { font-family: var(--f-display); font-size: 34px; margin-top: 1.8em; }
+.prose h3 { font-family: var(--f-display); font-size: 24px; letter-spacing: -0.01em; margin-top: 1.5em; }
+.prose a { color: var(--journal-ink); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.prose ul { padding-left: 1.2em; }
+.prose li + li { margin-top: 0.4em; }
+.prose li::marker { color: var(--journal-ink); }
+/* City guides (src/components/journal/Guide.tsx). */
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 0; font-family: var(--f-ui); }
+.glance div { background: var(--paper); border: 2px solid var(--ink); padding: 12px 14px; }
+.glance dt { font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); }
+.glance dd { margin: 4px 0 0; font-weight: 700; font-size: 17px; line-height: 1.3; }
+.g-photo { margin: 1.4em 0; }
+.g-photo img { display: block; width: 100%; height: auto; max-height: 560px; object-fit: cover; border: 2px solid var(--ink); }
+.g-photo figcaption, .g-photos figcaption { margin-top: 6px; font-family: var(--f-mono); font-size: 12px; color: var(--ink-2); }
+.g-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 1.4em 0; }
+.g-photos .g-photo { margin: 0; }
+.g-photos .g-photo img { aspect-ratio: 3 / 4; object-fit: cover; }
+.days { list-style: none; padding: 0 0 0 22px; margin: 1.2em 0; border-left: 3px solid var(--journal); font-family: var(--f-ui); font-size: 16px; }
+.days li { position: relative; padding-bottom: 14px; }
+.days li + li { margin-top: 0; }
+.days li::before { content: ""; position: absolute; left: -30px; top: 4px; width: 13px; height: 13px; border-radius: 50%; background: var(--paper); border: 3px solid var(--journal); }
+.days-n { display: block; font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--journal-ink); }
+.days b { display: block; font-size: 18px; }
+.days-t { display: block; color: var(--ink-2); line-height: 1.5; }
+.picks { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 1.2em 0; }
+.pick { display: flex; flex-direction: column; gap: 8px; background: var(--paper); border: 2px solid var(--ink); padding: 16px; font-family: var(--f-ui); font-size: 15.5px; line-height: 1.5; }
+.pick h3 { margin: 0; font-family: var(--f-display); font-size: 21px; line-height: 1.15; }
+.pick-tag { display: block; font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--journal-ink); margin-bottom: 4px; }
+.pick-body { color: var(--ink-2); flex: 1; }
+.pick-body p { margin: 0; }
+.pick-body p + p { margin-top: 0.5em; }
+.pick footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 4px; }
+.pick-price { font-family: var(--f-mono); font-size: 13px; font-weight: 600; }
+.prose .pick-book { background: var(--journal); color: var(--on-fill); text-decoration: none; font-weight: 700; font-size: 14px; padding: 7px 14px; border-radius: 99px; white-space: nowrap; }
+.prose .pick-book:hover { background: var(--ink); color: var(--paper); }
+.budget { width: 100%; border-collapse: collapse; font-family: var(--f-ui); font-size: 16px; margin: 1em 0; }
+.budget th, .budget td { padding: 10px 0; border-bottom: 1.5px solid var(--rule); vertical-align: top; }
+.budget th { text-align: left; font-weight: 600; padding-right: 16px; }
+.budget th small { display: block; font-weight: 400; font-size: 13.5px; color: var(--ink-2); }
+.budget td { text-align: right; font-family: var(--f-mono); font-weight: 600; white-space: nowrap; }
 .prose .ref { font: inherit; color: var(--journal-ink); background: color-mix(in srgb, var(--journal) 12%, transparent); border: 0; border-radius: 4px; padding: 0 4px; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .verse { margin: 1.6em 0; background: var(--journal); color: var(--on-fill); padding: 26px 28px; }
 .verse .r { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; }
