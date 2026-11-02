@@ -456,6 +456,8 @@ footer.foot { background: var(--media); color: var(--on-fill); padding-block: 56
 .study-toggle input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--on-fill); transition: transform 300ms var(--spring); }
 .study-toggle input:checked { background: var(--journal); }
 .study-toggle input:checked::after { transform: translateX(18px); }
+.study-hint { margin: 8px 0 0; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+.study-hint a { color: var(--journal-ink); font-weight: 600; }
 .prose { font-family: var(--f-read); font-size: 20.5px; line-height: 1.7; max-width: 34em; }
 .prose > * + * { margin-top: 1em; }
 .prose h2 { font-family: var(--f-display); font-size: 34px; margin-top: 1.8em; }
@@ -470,8 +472,7 @@ footer.foot { background: var(--media); color: var(--on-fill); padding-block: 56
 .qs { margin-top: 2.2em; padding: 24px; font-family: var(--f-ui); font-size: 16px; }
 .qs h2 { margin: 0 0 12px; font-size: 28px; }
 .qs ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; }
-.qs textarea { display: none; width: 100%; min-height: 70px; margin-top: 8px; border: 1.5px solid var(--rule); background: var(--chalk); padding: 8px 10px; resize: vertical; }
-.study .qs textarea { display: block; }
+.qs textarea { display: block; width: 100%; min-height: 70px; margin-top: 8px; border: 1.5px solid var(--rule); background: var(--chalk); color: var(--ink); padding: 8px 10px; resize: vertical; font: inherit; }
 .study .qs { box-shadow: 8px 8px 0 var(--journal); }
 .notes { margin-top: 2.2em; font-family: var(--f-ui); font-size: 14px; color: var(--ink-2); border-top: 1.5px solid var(--rule); padding-top: 14px; }
 .notes ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }

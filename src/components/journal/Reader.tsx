@@ -5,8 +5,10 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 interface Ctx {
   show: (key: string) => void;
   footnotes: string[];
+  /** Study mode: every footnote open, and answer boxes under the study questions. */
+  study: boolean;
 }
-const ReaderContext = createContext<Ctx>({ show: () => {}, footnotes: [] });
+const ReaderContext = createContext<Ctx>({ show: () => {}, footnotes: [], study: false });
 
 export interface PassageView {
   key: string;
@@ -17,7 +19,8 @@ export interface PassageView {
 
 /**
  * Article chrome: reading progress, a table of contents that follows the reader, a scripture panel
- * that shows any reference the reader selects, footnote popovers, and an optional study mode.
+ * that shows any reference the reader selects, footnote popovers, and, on posts with study questions,
+ * a study mode.
  */
 export function Reader({
   children,
@@ -25,12 +28,15 @@ export function Reader({
   passages,
   footnotes,
   minutes,
+  hasQuestions,
 }: {
   children: React.ReactNode;
   headings: { id: string; text: string }[];
   passages: PassageView[];
   footnotes: string[];
   minutes: number;
+  /** Study mode only exists for posts with study questions; elsewhere it would change nothing. */
+  hasQuestions: boolean;
 }) {
   const [current, setCurrent] = useState<PassageView | null>(passages[0] ?? null);
   const [onHead, setOnHead] = useState<string | null>(null);
@@ -68,7 +74,7 @@ export function Reader({
   };
 
   return (
-    <ReaderContext.Provider value={{ show, footnotes }}>
+    <ReaderContext.Provider value={{ show, footnotes, study }}>
       <div className="prog" aria-hidden="true">
         <i style={{ transform: `scaleX(${progress})` }} />
       </div>
@@ -85,9 +91,18 @@ export function Reader({
           <span className="mono" style={{ color: "var(--ink-2)", marginTop: 14 }}>
             {progress >= 0.98 ? "Finished" : `${Math.max(1, Math.ceil(minutes * (1 - progress)))} min left`}
           </span>
-          <label className="study-toggle">
-            <input type="checkbox" checked={study} onChange={(e) => setStudy(e.target.checked)} /> Study mode
-          </label>
+          {hasQuestions ? (
+            <>
+              <label className="study-toggle">
+                <input type="checkbox" checked={study} onChange={(e) => setStudy(e.target.checked)} /> Study mode
+              </label>
+              {study ? (
+                <p className="study-hint" aria-live="polite">
+                  Notes are open, and the study questions have space for your answers. <a href="#qh">Jump to the questions</a>
+                </p>
+              ) : null}
+            </>
+          ) : null}
         </nav>
         <div className="prose" ref={bodyRef}>
           {children}
@@ -123,11 +138,13 @@ export function Ref({ k, children }: { k: string; children?: React.ReactNode }) 
 
 /** Footnote marker that opens its note inline. */
 export function Fn({ n }: { n: number }) {
-  const { footnotes } = useContext(ReaderContext);
-  const [open, setOpen] = useState(false);
+  const { footnotes, study } = useContext(ReaderContext);
+  const [toggled, setToggled] = useState(false);
+  // Study mode opens every note; the marker still closes one while studying.
+  const open = study ? !toggled : toggled;
   return (
     <>
-      <button className="fn" type="button" aria-expanded={open} aria-label={`Note ${n}`} onClick={() => setOpen(!open)}>
+      <button className="fn" type="button" aria-expanded={open} aria-label={`Note ${n}`} onClick={() => setToggled(!toggled)}>
         {n}
       </button>
       {open ? (
@@ -136,5 +153,49 @@ export function Fn({ n }: { n: number }) {
         </span>
       ) : null}
     </>
+  );
+}
+
+/** Answers are kept in this browser only (never sent anywhere), one per post and question. */
+const answerKey = (slug: string, i: number) => `study:${slug}:${i}`;
+
+function readAnswer(key: string): string {
+  try {
+    return localStorage.getItem(key) ?? "";
+  } catch {
+    // Private windows and blocked storage: the box still works, it just won't remember.
+    return "";
+  }
+}
+
+function Answer({ id, storageKey }: { id: string; storageKey: string }) {
+  // Only mounted in study mode, after the page has loaded, so reading storage here can't mismatch the server HTML.
+  const [value, setValue] = useState(() => readAnswer(storageKey));
+  const save = (v: string) => {
+    setValue(v);
+    try {
+      localStorage.setItem(storageKey, v);
+    } catch {
+      // Not saved; the text stays in the box for this visit.
+    }
+  };
+  return <textarea id={id} value={value} onChange={(e) => save(e.target.value)} placeholder="Your answer is saved in this browser only." />;
+}
+
+/** The questions at the end of a study post; in study mode each gets an answer box. */
+export function StudyQuestions({ slug, questions }: { slug: string; questions: string[] }) {
+  const { study } = useContext(ReaderContext);
+  return (
+    <section className="card qs" aria-labelledby="qh">
+      <h2 id="qh">Study questions</h2>
+      <ol>
+        {questions.map((q, i) => (
+          <li key={q}>
+            <label htmlFor={`q${i}`}>{q}</label>
+            {study ? <Answer id={`q${i}`} storageKey={answerKey(slug, i)} /> : null}
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Reader } from "@/components/journal/Reader";
+import { Reader, StudyQuestions } from "@/components/journal/Reader";
 import { RecipeCard } from "@/components/journal/RecipeCard";
 import { recipeJsonLd } from "@/lib/content/recipe";
 import { getPost, getPosts, getSite } from "@/lib/content/load";
@@ -78,22 +78,10 @@ export default async function PostPage({ params }: PageProps<"/journal/[slug]">)
           </div>
         </div>
       </header>
-      <Reader headings={headingsOf(post.body)} passages={passages} footnotes={post.footnotes} minutes={post.minutes}>
+      <Reader headings={headingsOf(post.body)} passages={passages} footnotes={post.footnotes} minutes={post.minutes} hasQuestions={post.questions.length > 0}>
         {post.recipe ? <RecipeCard recipe={post.recipe} title={post.title} /> : null}
         {content}
-        {post.questions.length ? (
-          <section className="card qs" aria-labelledby="qh">
-            <h2 id="qh">Study questions</h2>
-            <ol>
-              {post.questions.map((q, i) => (
-                <li key={q}>
-                  <label htmlFor={`q${i}`}>{q}</label>
-                  <textarea id={`q${i}`} placeholder="Your notes stay on this device and aren't saved." />
-                </li>
-              ))}
-            </ol>
-          </section>
-        ) : null}
+        {post.questions.length ? <StudyQuestions slug={post.slug} questions={post.questions} /> : null}
         {post.footnotes.length ? (
           <section className="notes" aria-labelledby="nh">
             <h2 id="nh" className="kicker" style={{ fontSize: 12, margin: 0 }}>
