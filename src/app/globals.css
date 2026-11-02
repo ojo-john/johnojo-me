@@ -458,6 +458,8 @@ footer.foot { background: var(--media); color: var(--on-fill); padding-block: 56
 .study-toggle input:checked::after { transform: translateX(18px); }
 .study-hint { margin: 8px 0 0; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
 .study-hint a { color: var(--journal-ink); font-weight: 600; }
+.study-inline { display: none; font-family: var(--f-ui); padding-bottom: 14px; border-bottom: 1.5px solid var(--rule); }
+.study-inline .study-toggle { margin-top: 0; }
 .prose { font-family: var(--f-read); font-size: 20.5px; line-height: 1.7; max-width: 34em; }
 .prose > * + * { margin-top: 1em; }
 .prose h2 { font-family: var(--f-display); font-size: 34px; margin-top: 1.8em; }
@@ -516,7 +518,7 @@ dialog { border: 0; padding: 0; max-width: none; max-height: none; color: var(--
 .cv-in { padding: 26px; display: flex; flex-direction: column; gap: 16px; }
 
 /* ---------- responsive ---------- */
-@media (max-width: 1100px) { .reader { grid-template-columns: minmax(0, 1fr) 240px; } .toc { display: none; } }
+@media (max-width: 1100px) { .reader { grid-template-columns: minmax(0, 1fr) 240px; } .toc { display: none; } .study-inline { display: block; } }
 @media (max-width: 900px) {
   .intro, .projgrid, .explore, .lab-grid, .stackwrap, .ahead, .foot-in { grid-template-columns: minmax(0, 1fr); }
   .tri, .tri.two { grid-template-columns: minmax(0, 1fr); height: auto; }

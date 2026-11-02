@@ -91,20 +91,15 @@ export function Reader({
           <span className="mono" style={{ color: "var(--ink-2)", marginTop: 14 }}>
             {progress >= 0.98 ? "Finished" : `${Math.max(1, Math.ceil(minutes * (1 - progress)))} min left`}
           </span>
-          {hasQuestions ? (
-            <>
-              <label className="study-toggle">
-                <input type="checkbox" checked={study} onChange={(e) => setStudy(e.target.checked)} /> Study mode
-              </label>
-              {study ? (
-                <p className="study-hint" aria-live="polite">
-                  Notes are open, and the study questions have space for your answers. <a href="#qh">Jump to the questions</a>
-                </p>
-              ) : null}
-            </>
-          ) : null}
+          {hasQuestions ? <StudySwitch study={study} setStudy={setStudy} /> : null}
         </nav>
         <div className="prose" ref={bodyRef}>
+          {/* The sidebar is hidden on narrower screens, so the switch also sits above the text there. */}
+          {hasQuestions ? (
+            <div className="study-inline">
+              <StudySwitch study={study} setStudy={setStudy} />
+            </div>
+          ) : null}
           {children}
         </div>
         <aside className="drawer" aria-label="Scripture reference" ref={drawerRef}>
@@ -123,6 +118,21 @@ export function Reader({
         </aside>
       </div>
     </ReaderContext.Provider>
+  );
+}
+
+function StudySwitch({ study, setStudy }: { study: boolean; setStudy: (on: boolean) => void }) {
+  return (
+    <>
+      <label className="study-toggle">
+        <input type="checkbox" checked={study} onChange={(e) => setStudy(e.target.checked)} /> Study mode
+      </label>
+      {study ? (
+        <p className="study-hint" aria-live="polite">
+          Notes are open, and the study questions have space for your answers. <a href="#qh">Jump to the questions</a>
+        </p>
+      ) : null}
+    </>
   );
 }
 
