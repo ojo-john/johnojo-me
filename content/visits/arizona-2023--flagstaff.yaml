@@ -5,6 +5,11 @@ kind: day-trip
 summary: "We did the Flagstaff Extreme Adventure Course at Fort Tuthill County Park, a mix of ropes and zip lines up in the pines. There was snow on the ground, but it wasn't too cold, which made it perfect weather for the course. I was definitely the best on it. I won't say who was the worst. I'd love to do another one in a different city or country."
 highlights:
   Activities: Ropes and zip lines at Flagstaff Extreme
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 7, transport: 3, walkability: 0, architecture: 5, culture: 5, people: 6, attractions: 7, safety: 7, enjoyment: 7 }
+  notes:
+    walkability: "Had to drive everywhere."
 cover: photos/img-1669
 mediaMeta:
   photos/img-1669: { caption: "The outdoor course", alt: "John and friends taking a selfie in the snow by the course entrance" }

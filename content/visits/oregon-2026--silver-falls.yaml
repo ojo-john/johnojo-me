@@ -8,6 +8,9 @@ moments:
     title: "South Falls"
     note: "Silver Falls State Park, on the drive back north. The trail goes right behind South Falls, which drops 177 feet."
     media: [photos/img-6913, photos/img-0818, videos/img-6914, photos/img-6912]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 3, walkability: 4, architecture: 7, culture: 5, people: 6, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-6913
 mediaMeta:
   photos/img-6913: { caption: "South Falls", alt: "A tall waterfall dropping into a forested canyon" }

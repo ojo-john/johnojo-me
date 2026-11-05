@@ -12,6 +12,9 @@ moments:
     title: "Crater Lake"
     note: "The lake fills the crater left when Mount Mazama erupted and collapsed about 7,700 years ago. At 1,943 feet deep, it's the deepest lake in the United States. Wizard Island, a smaller volcanic cone, rises out of the water."
     media: [photos/img-0192, photos/img-0712, videos/img-0795, videos/img-0632]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 3, walkability: 4, architecture: 7, culture: 5, people: 6, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-0192
 mediaMeta:
   videos/img-0627: { caption: "Driving in through the forest", alt: "A selfie from the car, then the road through tall pines towards Crater Lake" }

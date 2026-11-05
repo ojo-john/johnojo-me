@@ -5,6 +5,11 @@ kind: day-trip
 summary: "We hiked to Donut Falls with friends. The hike was nice and the views were cool. I'm not the biggest nature guy, but I love the exercise and the community side of hiking together."
 wouldReturn:
   answer: "no"
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 4, value: 6, transport: 5, walkability: 0, architecture: 6, culture: 3, people: 4, attractions: 7, safety: 7, enjoyment: 7 }
+  notes:
+    walkability: "Had to drive everywhere."
 cover: photos/img-6867
 mediaMeta:
   photos/100-0087: { caption: "At the trailhead", alt: "John and friends standing by the cars at the trailhead" }

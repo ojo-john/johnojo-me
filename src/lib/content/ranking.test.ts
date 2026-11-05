@@ -27,6 +27,12 @@ describe("scoreState", () => {
     expect(scoreState(r)).toEqual({ state: "complete", total: 45, rated: 10 });
   });
 
+  it("scoreState_halfPoints_totalKeepsTheHalf", () => {
+    const r = full(7);
+    r.scores.culture = 6.5;
+    expect(scoreState(r)).toEqual({ state: "complete", total: 69.5, rated: 10 });
+  });
+
   it("scoreState_allTenScored_totalsOutOf100", () => {
     expect(scoreState(full(10))).toEqual({ state: "complete", total: 100, rated: 10 });
   });

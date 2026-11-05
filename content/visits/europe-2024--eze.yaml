@@ -8,6 +8,9 @@ moments:
     title: "The hilltop village"
     note: "First stop on the French Riviera day tour from Nice: a medieval village perched on a rock high above the sea. The path down to the sea is named after Friedrich Nietzsche, who walked it while writing Thus Spoke Zarathustra."
     media: [photos/img-0159, photos/img-0191, photos/img-0162, photos/img-0179, videos/img-0172, videos/img-0156]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 6, walkability: 8, architecture: 8, culture: 7, people: 8, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-0159
 mediaMeta:
   photos/img-0159: { caption: Èze, alt: "The hilltop village of Èze above the trees" }

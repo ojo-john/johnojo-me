@@ -5,6 +5,11 @@ kind: day-trip
 summary: "We drove two hours out to the salt flats, and honestly, it wasn't all that. We stayed ten minutes, max, then drove two hours back. Four hours in the car for ten minutes of salt."
 wouldReturn:
   answer: "no"
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 4, value: 6, transport: 5, walkability: 0, architecture: 6, culture: 3, people: 4, attractions: 7, safety: 7, enjoyment: 7 }
+  notes:
+    walkability: "Had to drive everywhere."
 cover: photos/img-1779
 mediaMeta:
   photos/img-1779: { caption: "Bonneville Salt Flats", alt: "Flat white salt crust stretching to the horizon under a deep blue sky" }

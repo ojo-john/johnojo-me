@@ -40,7 +40,8 @@ export type Status = z.infer<typeof status>;
 import { CATEGORIES, type CategoryKey } from "./categories";
 export { CATEGORIES, type CategoryKey };
 
-const score = z.number().int().min(0).max(10).nullable();
+/** 0–10 in half points (6.5 is fine, 6.3 isn't), so a total out of 100 can end in .5. */
+const score = z.number().min(0).max(10).multipleOf(0.5).nullable();
 export const rating = z.object({
   ratedOn: isoDate.optional(),
   /** No scores yet is the same as "not rated"; the editor leaves the block out when every score is blank. */

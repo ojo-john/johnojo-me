@@ -19,6 +19,11 @@ moments:
     title: "Back in Amalfi at dusk"
     note: "The lights coming on before the trip back to Rome."
     media: [photos/img-1703]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 7, value: 5, transport: 4, walkability: 6, architecture: 7, culture: 7, people: 7, attractions: 8, safety: 8, enjoyment: 6.5 }
+  notes:
+    enjoyment: "There was really nothing to do."
 cover: photos/img-1663
 mediaMeta:
   photos/img-1636: { caption: "Salerno harbour", alt: "Boats moored in the harbour with the town and hills behind" }

@@ -2,6 +2,11 @@ trip: europe-2026
 destination: dublin
 order: 9
 arrive: 2026-11-02 # the day of the first photos; change if you got in earlier
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 7, value: 7, transport: 7, walkability: 7, architecture: 7, culture: 7, people: 9, attractions: 6, safety: 8, enjoyment: 8 }
+  notes:
+    enjoyment: "Really enjoyed the time with my cousins."
 cover: photos/img-1974
 summary: "I spent two days in Dublin with my cousins, and I liked it. I wish I'd stayed longer to explore, with things like the Guinness Storehouse tour at St. James's Gate, and maybe a drive out west to the Atlantic coast: the Cliffs of Moher, Galway and Connemara's mountains and coastline."
 liked: "Spending it with my cousins"

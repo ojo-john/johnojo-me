@@ -11,6 +11,9 @@ moments:
   - date: 2026-09-24
     title: "Lunch in town"
     media: [photos/img-3129]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 3, walkability: 4, architecture: 7, culture: 5, people: 6, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-0352
 mediaMeta:
   photos/img-0352: { caption: "Haystack Rock", alt: "Two people hugging on the wet sand with Haystack Rock behind them" }

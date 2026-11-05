@@ -4,7 +4,7 @@ import { CATEGORIES, type CategoryKey, type Rating } from "./categories";
  * Scorecard maths. Pure functions with no I/O so they can be unit-tested exhaustively.
  *
  * Rules (methodology v1):
- *  - Ten categories, 0–10 each, equal weights, total out of 100.
+ *  - Ten categories, 0–10 each in half points, equal weights, total out of 100.
  *  - A total exists only when all ten categories are scored. Missing scores are never treated as zero.
  *  - Partially scored visits are "incomplete" and are excluded from ranked order.
  *  - Ties share a rank (standard competition ranking: 1, 1, 3).

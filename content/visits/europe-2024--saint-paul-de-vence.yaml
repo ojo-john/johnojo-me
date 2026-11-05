@@ -8,6 +8,9 @@ moments:
     title: "The walled village"
     note: "Last stop of the day tour: a medieval village inside its old ramparts, known for its art galleries. Marc Chagall lived here for the last 19 years of his life and is buried in the village cemetery."
     media: [videos/img-0270, photos/img-0272]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 6, walkability: 8, architecture: 8, culture: 7, people: 8, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-0272
 mediaMeta:
   videos/img-0270: { caption: "The view from the ramparts", alt: "Villas, cypress trees and green hills below the village" }

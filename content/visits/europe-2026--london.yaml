@@ -14,6 +14,9 @@ matches:
     date: 2026-10-31
     stadium: Stamford Bridge
     writeUp: "The highlight of my whole trip. The first half was a struggle: we couldn't get going, and Fofana kept making mistakes at the back. After the break it was a different team, and we played United off the park. Morgan Rogers broke the deadlock in the 50th minute, Lisandro Martínez was sent off in the 63rd, and Cole Palmer put the penalty away a minute later to send Chelsea back into the top four."
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 7, value: 7, transport: 9, walkability: 7, architecture: 6, culture: 6.5, people: 7, attractions: 7, safety: 7, enjoyment: 7 }
 cover: photos/img-1911
 mediaMeta:
   photos/img-1723: { caption: "Suuyar on Peckham Rye, where I had the buffet", alt: "The lit-up Suuyar African charcoal grill shopfront at night" }

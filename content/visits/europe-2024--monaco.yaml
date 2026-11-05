@@ -12,6 +12,9 @@ moments:
     title: "Monte-Carlo and the F1 circuit"
     note: "The Casino de Monte-Carlo, the supercars outside it, and the streets the Monaco Grand Prix races on. The Grand Prix has raced through these streets since 1929."
     media: [photos/img-0246, photos/img-0251]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 6, value: 6, transport: 6, walkability: 8, architecture: 8, culture: 7, people: 8, attractions: 8, safety: 8, enjoyment: 7 }
 cover: photos/img-0223
 mediaMeta:
   photos/img-0195: { caption: "Monaco harbour", alt: "Yachts in Monaco's harbour below the city" }

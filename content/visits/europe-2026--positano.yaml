@@ -10,6 +10,11 @@ moments:
     title: "Positano"
     note: "Spiaggia Grande, the main beach, is grey pebbles rather than sand."
     media: [photos/img-1669, photos/img-1675, videos/img-1672]
+rating:
+  ratedOn: 2026-11-05
+  scores: { food: 7, value: 5, transport: 4, walkability: 6, architecture: 7, culture: 7, people: 7, attractions: 8, safety: 8, enjoyment: 6.5 }
+  notes:
+    enjoyment: "There was really nothing to do."
 cover: photos/img-1669
 mediaMeta:
   photos/img-1669: { caption: "Positano from the water", alt: "Positano's houses climbing the hillside above the sea" }
